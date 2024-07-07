@@ -3,28 +3,28 @@
 
 #include <stdint.h>
 
-#define STORM_TS_BASE_ARRAY(type) typedef struct TSBaseArray_##type TSBaseArray_##type; \
-struct TSBaseArray_##type { \
+#define STORM_TS_BASE_ARRAY(T) typedef struct TSBaseArray_##T TSBaseArray_##T; \
+struct TSBaseArray_##T { \
   void** vtable; \
   uint32_t m_alloc; \
   uint32_t m_count; \
-  type* m_data; \
+  T* m_data; \
 };
 
-#define STORM_TS_FIXED_ARRAY(type) typedef struct TSFixedArray_##type TSFixedArray_##type; \
-struct TSFixedArray_##type { \
+#define STORM_TS_FIXED_ARRAY(T) typedef struct TSFixedArray_##T TSFixedArray_##T; \
+struct TSFixedArray_##T { \
   void** vtable; \
   uint32_t m_alloc; \
   uint32_t m_count; \
-  type* m_data; \
+  T* m_data; \
 };
 
-#define STORM_TS_GROWABLE_ARRAY(type) typedef struct TSGrowableArray_##type TSGrowableArray_##type; \
-struct TSGrowableArray_##type { \
+#define STORM_TS_GROWABLE_ARRAY(T) typedef struct TSGrowableArray_##T TSGrowableArray_##T; \
+struct TSGrowableArray_##T { \
   void** vtable; \
   uint32_t m_alloc; \
   uint32_t m_count; \
-  type* m_data; \
+  T* m_data; \
   uint32_t m_chunk; \
 };
 
