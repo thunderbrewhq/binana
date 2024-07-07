@@ -3,6 +3,8 @@
 
 #include "tempest/vector.h"
 
+typedef struct CAaSphere CAaSphere;
+
 struct CAaSphere {
   C3Vector n;
   float d;

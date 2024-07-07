@@ -3,6 +3,9 @@
 
 #include <stdint.h>
 
+typedef struct CRect CRect;
+typedef struct CiRect CiRect;
+
 struct CRect {
   float minY; // t
   float minX; // l
