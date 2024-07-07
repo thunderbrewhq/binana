@@ -1,6 +1,8 @@
 #ifndef STORM_ARRAY_H
 #define STORM_ARRAY_H
 
+#include <stdint.h>
+
 #define STORM_TS_BASE_ARRAY(type) typedef struct TSBaseArray_##type TSBaseArray_##type; \
 struct TSBaseArray_##type { \
   void** vtable; \
