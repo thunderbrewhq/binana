@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# this script just collects symbols into one file for convenience
+
+if [ $# -eq 0 ]
+  then
+    echo "Select a version to use"
+    exit 1
+fi
+
+cat $1/symbol/*/*.sym | sort > $1/symbol/main.sym
