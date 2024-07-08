@@ -37,4 +37,18 @@ void Name__Space__Thing();
 
 # Symbol files
 
-Symbol files are text files that map function names and data labels to addresses. 
+Symbol files are text files that map function names and data labels to addresses.
+
+In this repo, `script/compile-symbols` is used to concatenate our organized symbol files into one big file (`<game version>/symbol/main.sym`).
+
+To import this file to your Ghidra project,
+
+  1. go to `Window` > `Script Manager`
+  2. In the table view, lookup `ImportSymbolsScript.py`
+  3. Run the script
+  4. Enter the path to `<game version>/symbol/main.sym`
+
+To refresh the `main.sym` file after changing one of the constituent symbol files:
+
+```bash
+script/compile-symbols <game version>
