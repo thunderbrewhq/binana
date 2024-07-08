@@ -15,7 +15,8 @@ To use these headers in Ghidra,
   1. go to `File` > `Parse C Source...`. 
   2. Select `clib.prf` as your parse configuration, and clear all source files and input paths.
   3. Add the header `<game version>/include/main.h` to the `Source files to parse` combo box.
-  4. press `Parse to Program`.
+  4. Add the path to `<game version>/include` to the `Include paths` combo box.
+  5. press `Parse to Program`.
 
 TODO: equivalent guide for IDA Pro.
 
@@ -52,3 +53,4 @@ To refresh the `main.sym` file after changing one of the constituent symbol file
 
 ```bash
 script/compile-symbols <game version>
+```

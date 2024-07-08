@@ -5,6 +5,6 @@
 
 #include "storm/array.h"
 
-STORM_TS_GROWABLE_ARRAY(uint32_t)
+STORM_TS_GROWABLE_ARRAY(uint32_t);
 
 #endif

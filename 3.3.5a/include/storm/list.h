@@ -14,17 +14,18 @@ struct TSLink_##T { \
   T* m_next; \
 };
 
-// TSLinkedNode<T>
-#define STORM_TS_LINKED_NODE(T) typedef struct TSLinkedNode_##T TSLinkedNode_##T; \
-struct TSLinkedNode_##T { \
-  TSLink_##T m_link; \
-};
-
 // TSList<T>
-#define STORM_TS_LIST(T) typedef struct TSList_##T TSList_##T##; \
+// TSLinkedNode<T>
+#define STORM_TS_LIST(T) \
+STORM_TS_LINK(T) \
+typedef struct TSList_##T TSList_##T##; \
+typedef struct TSLinkedNode_##T TSLinkedNode_##T; \
 struct TSList_##T { \
   ptrdiff_t m_linkoffset; \
   TSLink_##T m_terminator; \
+}; \
+struct TSLinkedNode_##T { \
+  TSLink_##T m_link; \
 };
 
 #endif
