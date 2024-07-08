@@ -5,6 +5,34 @@
 
 #include "storm/array.h"
 
+typedef enum BlitAlpha BlitAlpha;
+typedef enum BlitFormat BlitFormat;
+typedef enum EGxApi EGxApi;
+typedef enum EGxBlend EGxBlend;
+typedef enum EGxColorFormat EGxColorFormat;
+typedef enum EGxFontHJusts EGxFontHJusts;
+typedef enum EGxFontVJusts EGxFontVJusts;
+typedef enum EGxMasterEnables EGxMasterEnables;
+typedef enum EGxPrim EGxPrim;
+typedef enum EGxPrimMask EGxPrimMask;
+typedef enum EGxRenderState EGxRenderState;
+typedef enum EGxShPS EGxShPS;
+typedef enum EGxShTarget EGxShTarget;
+typedef enum EGxShVS EGxShVS;
+typedef enum EGxTexCommand EGxTexCommand;
+typedef enum EGxTexFilter EGxTexFilter;
+typedef enum EGxTexFormat EGxTexFormat;
+typedef enum EGxTexTarget EGxTexTarget;
+typedef enum EGxTexWrapMode EGxTexWrapMode;
+typedef enum EGxXform EGxXform;
+typedef enum EGxuDrawListCategory EGxuDrawListCategory;
+typedef enum EGxWM EGxWM;
+typedef enum COLOR_FILE_FORMAT COLOR_FILE_FORMAT;
+typedef enum PIXEL_FORMAT PIXEL_FORMAT;
+
+typedef struct C4Pixel C4Pixel;
+typedef struct MipBits MipBits;
+
 enum BlitAlpha {
   BlitAlpha_0 = 0,
   BlitAlpha_1 = 1,

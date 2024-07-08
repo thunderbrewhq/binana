@@ -13,7 +13,7 @@ typedef struct TSHashTable_##T##_##K TSHashTable_##T##_##K; \
 typedef struct TSHashObject_##T##_##K TSHashObject_##T##_##K; \
 struct TSHashTable_##T##_##K { \
   TSList_##T m_fulllist; \
-  uint32_t m_fulllist; \
+  uint32_t m_fullnessIndicator; \
   TSGrowableArray_TSList_##T m_slotlistarray; \
   uint32_t m_slotmask; \
 }; \

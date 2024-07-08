@@ -15,10 +15,14 @@ struct CGxCaps {
   EGxColorFormat m_colorFormat;
   uint32_t m_maxIndex;
   int32_t m_generateMipMaps;
-  int32_t m_texFmt[GxTexFormats_Last];
-  int32_t m_texTarget[GxTexTargets_Last];
-  uint32_t m_texMaxSize[GxTexTargets_Last];
-  int32_t m_shaderTargets[GxShTargets_Last];
+  // int32_t m_texFmt[GxTexFormats_Last];
+  int32_t m_texFmt[13];
+  // int32_t m_texTarget[GxTexTargets_Last];
+  int32_t m_texTarget[4];
+  // uint32_t m_texMaxSize[GxTexTargets_Last];
+  uint32_t m_texMaxSize[4];
+  // int32_t m_shaderTargets[GxShTargets_Last];
+  int32_t m_shaderTargets[6];
   int32_t m_texFilterTrilinear;
   int32_t m_texFilterAnisotropic;
   uint32_t m_maxTexAnisotropy;

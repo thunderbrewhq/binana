@@ -2,6 +2,8 @@
 #define GX_FORMAT_H
 
 #include <stdint.h>
+#include <stdbool.h>
+
 #include "tempest/vector.h"
 
 typedef enum CGxFormat__Format CGxFormat__Format;

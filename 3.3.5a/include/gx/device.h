@@ -19,6 +19,9 @@
 #include "gx/matrix_stack.h"
 #include "gx/buffer.h"
 
+typedef struct CGxAppRenderState CGxAppRenderState;
+typedef struct CGxPushedRenderState CGxPushedRenderState;
+typedef struct ShaderConstants ShaderConstants;
 typedef struct CGxDevice CGxDevice;
 
 struct CGxAppRenderState {
@@ -41,7 +44,7 @@ struct ShaderConstants {
   uint32_t unk2;
 };
 
-// minimum size in binary: 3944 bytes
+// this class is at least 14688 bytes in size
 struct CGxDevice {
   // TODO: pointer to struct CGxDevice__vtable
   void* v_vtable;
@@ -53,7 +56,8 @@ struct CGxDevice {
   EGxApi m_api;
   CGxFormat m_format;
   CGxCaps m_caps;
-  TSHashTable_CGxShader_HASHKEY_STRI m_shaderList[GxShTargets_Last];
+  // TSHashTable_CGxShader_HASHKEY_STRI m_shaderList[GxShTargets_Last];
+  TSHashTable_CGxShader_HASHKEY_STRI m_shaderList[6];
   int32_t (*m_windowProc)(void* window, uint32_t message, uintptr_t wparam, intptr_t lparam);
   int32_t m_context;
   int32_t intF5C;
@@ -63,16 +67,21 @@ struct CGxDevice {
   CBoundingBox m_viewport;
   C44Matrix m_projection;
   C44Matrix m_projNative;
-  CGxMatrixStack m_xforms[GxXforms_Last];
+  // CGxMatrixStack m_xforms[GxXforms_Last];
+  CGxMatrixStack m_xforms[11];
   uint32_t m_appMasterEnables;
   uint32_t m_hwMasterEnables;
   TSList_CGxPool m_poolList;
-  CGxBuf* m_bufLocked[GxPoolTargets_Last];
+  // CGxBuf* m_bufLocked[GxPoolTargets_Last];
+  CGxBuf* m_bufLocked[2];
   CGxPool* m_vertexPool;
   CGxPool* m_indexPool;
-  CGxBuf* m_streamBufs[GxPoolTargets_Last];
-  CGxVertexAttrib m_primVertexFormatAttrib[GxVertexBufferFormats_Last];
-  CGxBuf* m_primVertexFormatBuf[GxVertexBufferFormats_Last];
+  // CGxBuf* m_streamBufs[GxPoolTargets_Last];
+  CGxBuf* m_streamBufs[2];
+  // CGxVertexAttrib m_primVertexFormatAttrib[GxVertexBufferFormats_Last];
+  CGxVertexAttrib m_primVertexFormatAttrib[14];
+  // CGxBuf* m_primVertexFormatBuf[GxVertexBufferFormats_Last];
+  CGxBuf* m_primVertexFormatBuf[14];
   uint32_t m_primVertexMask;
   uint32_t m_primVertexDirty;
   EGxVertexBufferFormat m_primVertexFormat;

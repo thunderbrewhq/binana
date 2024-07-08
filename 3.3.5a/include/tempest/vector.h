@@ -4,6 +4,7 @@
 #include <stdint.h>
 
 typedef struct C2Vector C2Vector;
+typedef struct C2iVector C2iVector;
 typedef struct C3Vector C3Vector;
 typedef struct C4Vector C4Vector;
 typedef struct CImVector CImVector;
