@@ -29,6 +29,7 @@ GxuFontGetMaxCharsWithinWidth 006bcea0 f
 GxuFontGetTextExtent 006bce60 f
 GxuFontSetStringPosition 006bd0a0 f
 IEvtSchedulerProcess 0047f230 f
+OsSystemEnableCpuLog 0086b0c0 fScript_GetText 0081B720 f ; thanks namreeb :^)
 SCmdProcess 00773890 f
 SCmdProcessCommandLine 00773990 f
 SCmdRegisterArgList 00773590 f
@@ -1169,7 +1170,6 @@ Script_GetTargetTradeMoney 005867D0 f
 Script_GetTaxiBenchmarkMode 0051D100 f
 Script_GetTerrainMip 0054EB10 f
 Script_GetTexLodBias 005102B0 f
-Script_GetText 0081B720 f ; thanks namreeb :^)
 Script_GetThreatStatusColor 00511FE0 f
 Script_GetTime 006081F0 f
 Script_GetTimeToWellRested 00510B90 f
