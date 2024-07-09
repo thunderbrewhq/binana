@@ -1,6 +1,7 @@
 SCmdProcess 00773890 f
 SCmdProcessCommandLine 00773990 f
 SCmdRegisterArgList 00773590 f
+SErrCatchUnhandledExceptions 00772b20 f
 SErrDisplayAppFatal 005eeb70 f
 SErrRegisterHandler 00771b80 f
 SErrSetLogTitleCallback 00771900 f
@@ -18,3 +19,8 @@ SStrPrintf 0076f070 f
 SStrTokenize 0076f1e0 f
 SEvent__Set 00774720 f
 SEvent__Reset 00774730 f
+StormInitialize 007739e0 f
+TSList__LinkNode 004f71a0 f
+SCritSect__Enter 00774640 f
+SCritSect__Leave 00774650 f
+SCritSect__SCritSect 00774620 f

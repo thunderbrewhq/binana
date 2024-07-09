@@ -1,6 +1,8 @@
 EventCreateContextEx 0047d080 f
 EventDoMessageLoop 0047f2d0 f
 EventPostCloseEx 0047d290 f
+EventRegister 0x47d770 f
 EventRegisterEx 0047d3c0 f
+EventSetMouseMode 0x47d690 f
 EventUnregister 0047d790 f
 IEvtSchedulerProcess 0047f230 f
