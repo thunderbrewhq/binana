@@ -8,4 +8,4 @@ if [ $# -eq 0 ]
     exit 1
 fi
 
-cat $1/symbol/*/*.sym | sort > $1/symbol/main.sym
+awk 1 $1/symbol/*/*.sym | sort > $1/symbol/main.sym
