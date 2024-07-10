@@ -11,6 +11,7 @@ GxuFontDestroyString 006bdfc0 f
 GxuFontGetMaxCharsWithinWidth 006bcea0 f
 GxuFontGetTextExtent 006bce60 f
 GxuFontSetStringPosition 006bd0a0 f
+CGxDevice__CGxDevice 00688690 f
 CGxDevice__MasterEnableSet 00685eb0 f
 CGxDevice__IRsForceUpdate 006859e0 f
 CGxDeviceOpenGl__CGxDeviceOpenGl 0068bbc0 f

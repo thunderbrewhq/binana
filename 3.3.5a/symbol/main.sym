@@ -3,18 +3,37 @@ CGxDeviceD3d__CGxDeviceD3d 0068fd50 f
 CGxDeviceD3d__vtable 00a2e718 l
 CGxDeviceOpenGl__CGxDeviceOpenGl 0068bbc0 f
 CGxDeviceOpenGl__vtable 00a2e198 l
+CGxDevice__CGxDevice 00688690 f
 CGxDevice__IRsForceUpdate 006859e0 f
 CGxDevice__MasterEnableSet 00685eb0 f
 CGxDevice__s_shadowConstants 00c5dfe0 l
 CGxDevice__vtable 00a2ddc0 l
+CVar__Initialize 00768340 f
+CVar__Register 00767fc0 f
+CmdLineProcess 0047b720 f
 CommonMain 00406c70 f
+ConsoleAccessGetEnabled 00769230 f
+ConsoleCommandExecute 007658a0 f
+ConsoleCommandHistory 00768440 f
+ConsoleCommandRegister 00769100 f
+ConsoleCommand_Quit 00768410 f
+ConsoleDeviceInitialize 0076ab80 f
+ConsolePostClose 00763c50 f
+ConsoleScreenInitialize 00766140 f
+ConsoleWrite 00765270 f
+ConsoleWriteA 007653b0 f
+DestroyGlobal 00406b70 f
+EventCloseCallback 00763d60 f
 EventCreateContextEx 0047d080 f
 EventDoMessageLoop 0047f2d0 f
+EventIsKeyDown 0047d230 f
 EventPostCloseEx 0047d290 f
 EventRegister 0x47d770 f
 EventRegisterEx 0047d3c0 f
+EventSetConfirmCloseCallback 0047d090 f
 EventSetMouseMode 0x47d690 f
 EventUnregister 0047d790 f
+GetInputLine 00764520 f
 GxDevApi 00682d20 f
 GxDrawLockedElements 00682340 f
 GxLog 006817e0 f
@@ -29,7 +48,21 @@ GxuFontGetMaxCharsWithinWidth 006bcea0 f
 GxuFontGetTextExtent 006bce60 f
 GxuFontSetStringPosition 006bd0a0 f
 IEvtSchedulerProcess 0047f230 f
-OsSystemEnableCpuLog 0086b0c0 fScript_GetText 0081B720 f ; thanks namreeb :^)
+InitializeGlobal 004067f0 f
+MakeCommandCurrent 00763a60 f
+NDCToDDCHeight 0047c080 f
+OnChar 00764990 f
+OnIdle 007659c0 f
+OnKeyDown 00765af0 f
+OnKeyDownRepeat 00764b90 f
+OnKeyUp 00763be0 f
+OsCreateFile 00406b70 f
+OsSystemEnableCpuLog 0086b0c0 f
+PaintBackground 007643f0 f
+PaintText 007645e0 f
+PasteInInputLine 00764800 f
+ReserveInputSpace 007637d0 f
+ResetHighlight 00763830 f
 SCmdProcess 00773890 f
 SCmdProcessCommandLine 00773990 f
 SCmdRegisterArgList 00773590 f
@@ -51,9 +84,11 @@ SStrChr 0076e6e0 f
 SStrCmp 0076e760 f
 SStrCmpI 0076e780 f
 SStrCopy 0076ed20 f
+SStrHashHT 0076f640 f
 SStrLen 0076ee30 f
 SStrPrintf 0076f070 f
 SStrTokenize 0076f1e0 f
+SStrVPrintf 0076f0a0 f
 Script_AbandonQuest 005E4060 f
 Script_AbandonSkill 005CE2C0 f
 Script_AcceptAreaSpiritHeal 005262D0 f
@@ -1170,6 +1205,7 @@ Script_GetTargetTradeMoney 005867D0 f
 Script_GetTaxiBenchmarkMode 0051D100 f
 Script_GetTerrainMip 0054EB10 f
 Script_GetTexLodBias 005102B0 f
+Script_GetText 0081B720 f ; thanks namreeb :^)
 Script_GetThreatStatusColor 00511FE0 f
 Script_GetTime 006081F0 f
 Script_GetTimeToWellRested 00510B90 f
@@ -2061,8 +2097,48 @@ Script_VoiceSelectCaptureDevice 007DAE40 f
 Script_VoiceSelectOutputDevice 007DACF0 f
 Script_WithdrawGuildBankMoney 005A5EF0 f
 Script_ZoomOut 00546A90 f
+ScrnLayerCreate 004a8bb0 f
+SetInputString 00763730 f
 SetPaths 00402b20 f
 StormInitialize 007739e0 f
+StormSetOption 00773a80 f
 TSList__LinkNode 004f71a0 f
+TextBlockCreate 004bdaa0 f
+TextBlockGenerateFont 004be9c0 f
+UpdateHighlight 00763860 f
+carettime 00ca19f0 l ; float
+g_commandHistory 00ca3a28 l ; char[10394]
+g_commandHistoryIndex 00caba28 l ; uint32
+g_consoleCommandHash 00caba30 l ; TSHashTable<CONSOLECOMMAND, HASHKEY_CONSTSTRI>
+g_defaultCommand 00caba2c l ; command function pointer
 g_theGxDevicePtr 00c5df88 l
+s_NumLines 00ca197c l ; int32
+s_active 007649af l ; int32 as boolean
+s_baseTextFlags 00adbae4 l ; uint32
+s_caret 00ca1694 l ; int32
+s_caretpixheight 00ca1690 l
+s_caretpixwidth 00ca1718 l
+s_charSpacing 00ca19a8 l ; float
+s_completedCmd 00ca1984 l ; int32
+s_completionMode 00ca1980 l
+s_consoleAccessEnabled 00cabcc4 l ; int32 as boolean
+s_consoleHeight 00ca19b0 l ; float
+s_consoleHotKey 00adbac4 l ; KEY
+s_consoleResizeState 00ca1990 l ; CONSOLERESIZESTATE
+s_currlineptr 00ca1720 l ; CONSOLELINE*
+s_fontHeight 00adbacc l ; float
+s_fontName 00ca1768 l ; char[260]
+s_hRect 00adbad4 l ; RECTF
+s_highlightLeftCharIndex 00ca19a0 l ; uint32
+s_highlightRightCharIndex 00ca19a4 l ; uint32
+s_highlightState 00ca1994 l ; HIGHLIGHTSTATE
+s_historyIndex 00adbac8 l ; int32
+s_inputString 00ca171c l ; CGxString*
+s_layerBackground 00ca1724 l ; HLAYER
+s_layerText 00ca1870 l ; HLAYER
 s_mainThread 00b417c8 l
+s_partial 00ca1878 l ; char[100]
+s_rect 00adbab4 l ; RECTF
+s_repeatBuffer 00ca1728 l ; char[64]
+s_repeatCount 00ca186c l ; uint32
+s_textFont 00ca198c l ; HTEXTFONT

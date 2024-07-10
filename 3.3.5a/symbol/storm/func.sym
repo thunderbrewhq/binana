@@ -14,8 +14,10 @@ SStrChr 0076e6e0 f
 SStrCmp 0076e760 f
 SStrCmpI 0076e780 f
 SStrCopy 0076ed20 f
+SStrHashHT 0076f640 f
 SStrLen 0076ee30 f
 SStrPrintf 0076f070 f
+SStrVPrintf 0076f0a0 f
 SStrTokenize 0076f1e0 f
 SEvent__Set 00774720 f
 SEvent__Reset 00774730 f
@@ -24,3 +26,4 @@ TSList__LinkNode 004f71a0 f
 SCritSect__Enter 00774640 f
 SCritSect__Leave 00774650 f
 SCritSect__SCritSect 00774620 f
+StormSetOption 00773a80 f

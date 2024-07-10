@@ -1,2 +1,9 @@
-CommonMain 00406c70 f
 SetPaths 00402b20 f
+CommonMain 00406c70 f
+InitializeGlobal 004067f0 f
+DestroyGlobal 00406b70 f
+CmdLineProcess 0047b720 f
+NDCToDDCHeight 0047c080 f
+TextBlockCreate 004bdaa0 f
+TextBlockGenerateFont 004be9c0 f
+ScrnLayerCreate 004a8bb0 f
