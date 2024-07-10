@@ -16,6 +16,7 @@ SStrCmpI 0076e780 f
 SStrCopy 0076ed20 f
 SStrHashHT 0076f640 f
 SStrLen 0076ee30 f
+SStrPack 0076ef70 f ; double-check this
 SStrPrintf 0076f070 f
 SStrVPrintf 0076f0a0 f
 SStrTokenize 0076f1e0 f

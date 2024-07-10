@@ -1,15 +1,20 @@
 GxDevApi 00682d20 f
 GxDrawLockedElements 00682340 f
 GxLog 006817e0 f
+GxRsPush 00409670 f
+GxRsPop 00685fb0 f
 GxPrimIndexPtr 00681ab0 f
 GxPrimLockVertexPtrs 006828c0 f
 GxPrimVertexPtr_FFP 00682400 f ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
 GxuDetermineQuotedCode 006bd5a0 f
+GxuFontClearBatch 006be390 f
 GxuFontAddToBatch 006bce10 f
+GxuFontCreateBatch 006bf160 f
 GxuFontCreateString 006be2b0 f
 GxuFontDestroyString 006bdfc0 f
 GxuFontGetMaxCharsWithinWidth 006bcea0 f
 GxuFontGetTextExtent 006bce60 f
+GxuFontRenderBatch 006bce40 f
 GxuFontSetStringPosition 006bd0a0 f
 CGxDevice__CGxDevice 00688690 f
 CGxDevice__MasterEnableSet 00685eb0 f

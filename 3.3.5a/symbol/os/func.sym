@@ -1,2 +1,5 @@
 OsCreateFile 00406b70 f
+OsGetFileSize 00461bd0 f
+OsReadFile 00461b50 f
+OsCloseFile 00461b00 f
 OsSystemEnableCpuLog 0086b0c0 f

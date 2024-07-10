@@ -1,10 +1,18 @@
 CVar__Register 00767fc0 f
 CVar__Initialize 00768340 f
+CVar__Set 007668c0 f
+CVar__Destroy 007673f0 f
+CVarSaveFile 00767100 f
+CVarLoadFile 00766530 f
 ConsoleAccessGetEnabled 00769230 f
 ConsoleCommand_Quit 00768410 f
 ConsoleCommandExecute 007658a0 f
 ConsoleCommandHistory 00768440 f
+ConsoleCommandHistoryDepth 0095bfb0 f
+ConsoleCommandHistoryPrev 00763b40 f ; UC
+ConsoleCommandHistoryNext 00763b90 f ; UC
 ConsoleCommandRegister 00769100 f
+ConsoleCommandUnregister 007689e0 f
 ConsoleDeviceInitialize 0076ab80 f
 ConsolePostClose 00763c50 f
 ConsoleScreenInitialize 00766140 f
@@ -22,6 +30,9 @@ MakeCommandCurrent 00763a60 f
 ReserveInputSpace 007637d0 f
 GetInputLine 00764520 f
 PasteInInputLine 00764800 f
-SetInputString 00763730 f
+SetInputString 00763730 f ; UC
 ResetHighlight 00763830 f
 UpdateHighlight 00763860 f
+DrawCaret 007641a0 f
+DrawBackground 00763df0 f
+DrawHighLight 00764040 f

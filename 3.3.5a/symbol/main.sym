@@ -8,14 +8,22 @@ CGxDevice__IRsForceUpdate 006859e0 f
 CGxDevice__MasterEnableSet 00685eb0 f
 CGxDevice__s_shadowConstants 00c5dfe0 l
 CGxDevice__vtable 00a2ddc0 l
+CVarLoadFile 00766530 f
+CVarSaveFile 00767100 f
+CVar__Destroy 007673f0 f
 CVar__Initialize 00768340 f
 CVar__Register 00767fc0 f
+CVar__Set 007668c0 f
 CmdLineProcess 0047b720 f
 CommonMain 00406c70 f
 ConsoleAccessGetEnabled 00769230 f
 ConsoleCommandExecute 007658a0 f
 ConsoleCommandHistory 00768440 f
+ConsoleCommandHistoryDepth 0095bfb0 f
+ConsoleCommandHistoryNext 00763b90 f ; UC
+ConsoleCommandHistoryPrev 00763b40 f ; UC
 ConsoleCommandRegister 00769100 f
+ConsoleCommandUnregister 007689e0 f
 ConsoleCommand_Quit 00768410 f
 ConsoleDeviceInitialize 0076ab80 f
 ConsolePostClose 00763c50 f
@@ -23,6 +31,9 @@ ConsoleScreenInitialize 00766140 f
 ConsoleWrite 00765270 f
 ConsoleWriteA 007653b0 f
 DestroyGlobal 00406b70 f
+DrawBackground 00763df0 f
+DrawCaret 007641a0 f
+DrawHighLight 00764040 f
 EventCloseCallback 00763d60 f
 EventCreateContextEx 0047d080 f
 EventDoMessageLoop 0047f2d0 f
@@ -40,12 +51,17 @@ GxLog 006817e0 f
 GxPrimIndexPtr 00681ab0 f
 GxPrimLockVertexPtrs 006828c0 f
 GxPrimVertexPtr_FFP 00682400 f ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
+GxRsPop 00685fb0 f
+GxRsPush 00409670 f
 GxuDetermineQuotedCode 006bd5a0 f
 GxuFontAddToBatch 006bce10 f
+GxuFontClearBatch 006be390 f
+GxuFontCreateBatch 006bf160 f
 GxuFontCreateString 006be2b0 f
 GxuFontDestroyString 006bdfc0 f
 GxuFontGetMaxCharsWithinWidth 006bcea0 f
 GxuFontGetTextExtent 006bce60 f
+GxuFontRenderBatch 006bce40 f
 GxuFontSetStringPosition 006bd0a0 f
 IEvtSchedulerProcess 0047f230 f
 InitializeGlobal 004067f0 f
@@ -56,7 +72,10 @@ OnIdle 007659c0 f
 OnKeyDown 00765af0 f
 OnKeyDownRepeat 00764b90 f
 OnKeyUp 00763be0 f
+OsCloseFile 00461b00 f
 OsCreateFile 00406b70 f
+OsGetFileSize 00461bd0 f
+OsReadFile 00461b50 f
 OsSystemEnableCpuLog 0086b0c0 f
 PaintBackground 007643f0 f
 PaintText 007645e0 f
@@ -86,6 +105,7 @@ SStrCmpI 0076e780 f
 SStrCopy 0076ed20 f
 SStrHashHT 0076f640 f
 SStrLen 0076ee30 f
+SStrPack 0076ef70 f ; double-check this
 SStrPrintf 0076f070 f
 SStrTokenize 0076f1e0 f
 SStrVPrintf 0076f0a0 f
@@ -2098,7 +2118,7 @@ Script_VoiceSelectOutputDevice 007DACF0 f
 Script_WithdrawGuildBankMoney 005A5EF0 f
 Script_ZoomOut 00546A90 f
 ScrnLayerCreate 004a8bb0 f
-SetInputString 00763730 f
+SetInputString 00763730 f ; UC
 SetPaths 00402b20 f
 StormInitialize 007739e0 f
 StormSetOption 00773a80 f
@@ -2115,6 +2135,7 @@ g_theGxDevicePtr 00c5df88 l
 s_NumLines 00ca197c l ; int32
 s_active 007649af l ; int32 as boolean
 s_baseTextFlags 00adbae4 l ; uint32
+s_batch 00ca1874 l ; CGxStringBatch*
 s_caret 00ca1694 l ; int32
 s_caretpixheight 00ca1690 l
 s_caretpixwidth 00ca1718 l

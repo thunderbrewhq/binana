@@ -4,6 +4,7 @@ g_consoleCommandHash 00caba30 l ; TSHashTable<CONSOLECOMMAND, HASHKEY_CONSTSTRI>
 g_defaultCommand 00caba2c l ; command function pointer
 s_active 007649af l ; int32 as boolean
 s_baseTextFlags 00adbae4 l ; uint32
+s_batch 00ca1874 l ; CGxStringBatch*
 s_caret 00ca1694 l ; int32
 s_caretpixwidth 00ca1718 l
 s_caretpixheight 00ca1690 l
