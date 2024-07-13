@@ -90,14 +90,6 @@
     },
     {
       "manual": true,
-      "start": "0x61fa0",
-      "end": "0x61ff9",
-      "module": "wow.exe",
-      "icount": "0x0",
-      "parent": "0x61fa0"
-    },
-    {
-      "manual": true,
       "start": "0x7b720",
       "end": "0x7b735",
       "module": "wow.exe",
@@ -17421,12 +17413,6 @@
       "module": "wow.exe",
       "text": "OsSetCurrentDirectory",
       "address": "0x61db0"
-    },
-    {
-      "manual": true,
-      "module": "wow.exe",
-      "text": "OsCreateFile",
-      "address": "0x61fa0"
     },
     {
       "manual": true,
