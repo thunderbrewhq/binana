@@ -1,30 +1,35 @@
-SCmdProcess 00773890 f
-SCmdProcessCommandLine 00773990 f
-SCmdRegisterArgList 00773590 f
-SErrCatchUnhandledExceptions 00772b20 f
-SErrDisplayAppFatal 005eeb70 f
-SErrRegisterHandler 00771b80 f
-SErrSetLogTitleCallback 00771900 f
-SErrSetLogTitleString 00771890 f
-SMemAlloc 0076e540 f
-SMemFree 0076e5a0 f
-SRegLoadValue 00770840 f
-SRegSaveValue 007709a0 f
-SStrChr 0076e6e0 f
-SStrCmp 0076e760 f
-SStrCmpI 0076e780 f
-SStrCopy 0076ed20 f
-SStrHashHT 0076f640 f
-SStrLen 0076ee30 f
-SStrPack 0076ef70 f ; double-check this
-SStrPrintf 0076f070 f
-SStrVPrintf 0076f0a0 f
-SStrTokenize 0076f1e0 f
-SEvent__Set 00774720 f
-SEvent__Reset 00774730 f
-StormInitialize 007739e0 f
-TSList__LinkNode 004f71a0 f
-SCritSect__Enter 00774640 f
-SCritSect__Leave 00774650 f
-SCritSect__SCritSect 00774620 f
-StormSetOption 00773a80 f
+SCmdRegisterArgList 00773590 f end=007737C2
+SCmdProcess 00773890 f end=00773986
+SCmdProcessCommandLine 00773990 f end=007739AD
+SErrDisplayAppFatal 005EEB70 f end=005EEB71
+SErrSetLogTitleString 00771890 f end=007718F2
+SErrSetLogTitleCallback 00771900 f end=00771957
+SErrRegisterHandler 00771B80 f end=00771C15
+SErrCatchUnhandledExceptions 00772B20 f end=00772B2C
+SMemAlloc 0076E540 f end=0076E59A
+SMemFree 0076E5A0 f end=0076E5C4
+SMemSetDebugFlags 0076E4A0 f end=0076E4D2
+SRegLoadValue 00770840 f end=007708E9
+SRegSaveValue 007709A0 f end=007709E8
+SStrChr 0076E6E0 f end=0076E712
+SStrCmp 0076E760 f end=0076E77B
+SStrCmpI 0076E780 f end=0076E79B
+SStrCopy 0076ED20 f end=0076ED98
+SStrLen 0076EE30 f end=0076EE5E
+SStrPack 0076EF70 f end=0076F001
+SStrPrintf 0076F070 f end=0076F09E
+SStrVPrintf 0076F0A0 f end=0076F0CE
+SStrTokenize 0076F1E0 f end=0076F331
+SStrHashHT 0076F640 f end=0076F6B9
+SEvent__Set 00774720 f end=0077472A
+SEvent__Reset 00774730 f end=0077473A
+SSyncObject__Wait 00774690 f end=007746A4
+StormInitialize 007739E0 f end=007739F4
+StormSetOption 00773A80 f end=00773C81
+TSList__LinkNode 004F71A0 f end=004F724D
+SCritSect__SCritSect 00774620 f end=0077462E
+SCritSect__Enter 00774640 f end=00774648
+SCritSect__Leave 00774650 f end=00774658
+SCritSect__destructor 00774630 f end=00774638
+SRgnCreate 00777980 f end=00777A78
+SRgnDelete 00777940 f end=00777971

@@ -1,23 +1,29 @@
-GxDevApi 00682d20 f
-GxDrawLockedElements 00682340 f
-GxLog 006817e0 f
-GxRsPush 00409670 f
-GxRsPop 00685fb0 f
-GxPrimIndexPtr 00681ab0 f
-GxPrimLockVertexPtrs 006828c0 f
-GxPrimVertexPtr_FFP 00682400 f ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
-GxuDetermineQuotedCode 006bd5a0 f
-GxuFontClearBatch 006be390 f
-GxuFontAddToBatch 006bce10 f
-GxuFontCreateBatch 006bf160 f
-GxuFontCreateString 006be2b0 f
-GxuFontDestroyString 006bdfc0 f
-GxuFontGetMaxCharsWithinWidth 006bcea0 f
-GxuFontGetTextExtent 006bce60 f
-GxuFontRenderBatch 006bce40 f
-GxuFontSetStringPosition 006bd0a0 f
-CGxDevice__CGxDevice 00688690 f
-CGxDevice__MasterEnableSet 00685eb0 f
-CGxDevice__IRsForceUpdate 006859e0 f
-CGxDeviceOpenGl__CGxDeviceOpenGl 0068bbc0 f
-CGxDeviceD3d__CGxDeviceD3d 0068fd50 f
+GxDevCreate 00681290 f end=00681301
+GxDevApi 00682D20 f end=00682D27
+GxDrawLockedElements 00682340 f end=0068239E
+GxLog 006817E0 f end=006817F5
+GxRsPush 00409670 f end=004096CC
+GxRsPop 00685FB0 f end=00686116
+GxPrimIndexPtr 00681AB0 f end=00681AFB
+GxPrimVertexPtr_FFP 00682400 f end=00682781 ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
+GxPrimLockVertexPtrs 006828C0 f end=006828FE
+GxuFontAddToBatch 006BCE10 f end=006BCE32
+GxuFontRenderBatch 006BCE40 f end=006BCE52
+GxuFontGetTextExtent 006BCE60 f end=006BCE98
+GxuFontGetMaxCharsWithinWidth 006BCEA0 f end=006BCEE7
+GxuFontSetStringPosition 006BD0A0 f end=006BD0BE
+GxuDetermineQuotedCode 006BD5A0 f end=006BD89D
+GxuFontDestroyString 006BDFC0 f end=006BE014
+GxuFontCreateString 006BE2B0 f end=006BE390
+GxuFontClearBatch 006BE390 f end=006BE3AD
+GxuFontCreateBatch 006BF160 f end=006BF202
+CGxDevice__CGxDevice 00688690 f end=0068903F
+CGxDevice__MasterEnableSet 00685EB0 f end=00685F33
+CGxDevice__IRsForceUpdate 006859E0 f end=00685A65
+CGxDevice__NewOpenGl 0068BF20 f end=0068BF44
+CGxDevice__NewD3d 00689EF0 f end=00689F14
+CGxDevice__NewD3d9Ex 0068C220 f end=0068C244
+CGxDeviceOpenGl__CGxDeviceOpenGl 0068BBC0 f end=0068BD15
+CGxDeviceD3d__CGxDeviceD3d 0068FD50 f end=0068FE80
+CGxDeviceD3d9Ex__CGxDeviceD3d9Ex 006A1A90 f end=006A1C24
+OnPaint 004A8720 f end=004A8B58

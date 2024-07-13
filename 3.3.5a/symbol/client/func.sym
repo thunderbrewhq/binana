@@ -1,9 +1,17 @@
-SetPaths 00402b20 f
-CommonMain 00406c70 f
-InitializeGlobal 004067f0 f
-DestroyGlobal 00406b70 f
-CmdLineProcess 0047b720 f
-NDCToDDCHeight 0047c080 f
-TextBlockCreate 004bdaa0 f
-TextBlockGenerateFont 004be9c0 f
-ScrnLayerCreate 004a8bb0 f
+SetPaths 00402B20 f end=00402B8B
+CommonMain 00406C70 f end=00406D64
+InitializeGlobal 004067F0 f end=00406B67
+DestroyGlobal 00406B70 f end=00406C65
+CmdLineProcess 0047B720 f end=0047B736
+CSRWLock__Enter 0047D0E0 f
+CSRWLock__Leave 00481390 f
+NDCToDDCHeight 0047C080 f end=0047C08E
+NDCToDDC 0047BFF0 f end=0047C019
+DDCToNDC 0047C020 f end=0047C049
+ConvertPosition 0047FC90 f end=0047FDD4
+TextBlockCreate 004BDAA0 f end=004BDBE4
+TextBlockGenerateFont 004BE9C0 f end=004BEB8C
+TextBlockGetFontPtr 004BD9D0 f end=004BD9EA
+ScrnLayerCreate 004A8BB0 f end=004A8C83
+ScrnLayerSetRect 004A8500 f end=004A8522
+ClientKillTimer 004033B0 f end=004033B9

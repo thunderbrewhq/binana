@@ -1,10 +1,45 @@
-EventCreateContextEx 0047d080 f
-EventDoMessageLoop 0047f2d0 f
-EventIsKeyDown 0047d230 f
-EventPostCloseEx 0047d290 f
-EventRegister 0x47d770 f
-EventRegisterEx 0047d3c0 f
-EventSetConfirmCloseCallback 0047d090 f
-EventSetMouseMode 0x47d690 f
-EventUnregister 0047d790 f
-IEvtSchedulerProcess 0047f230 f
+EventDestroy 0047D030 f end=0047D04E
+EventDestroy_cleanup 00480EA0 f end=00480ED9
+EventInitialize 0047CFF0 f end=0047D02D
+EventCreateContextEx 0047D080 f end=0047D089
+EventSetConfirmCloseCallback 0047D090 f end=0047D099
+EventIsButtonDown 0047D1D0 f end=0047D230
+EventIsKeyDown 0047D230 f end=0047D290
+EventPostCloseEx 0047D290 f end=0047D305
+EventRegisterEx 0047D3C0 f end=0047D443
+EventSetMouseMode 0047D690 f end=0047D6FD
+EventRegister 0047D770 f end=0047D78D
+EventUnregister 0047D790 f end=0047D7A9
+EventUnregisterEx 0047D450 f end=0047D4B7
+EventDoMessageLoop 0047F2D0 f end=0047F2EC
+EventForceIdleProcessing 0047DCA0 f end=0047DE09
+EventKillTimer 0047D620 f end=0047D683
+IEvtInputProcess 00480410 f end=004804A8
+IEvtInputGetMousePosition 004800A0 f end=004800EF
+IEvtInputSetConfirmCloseCallback 0047FC20 f end=0047FC36
+IEvtInputSetMouseMode 0047FBB0 f end=0047FC17
+IEvtInputDestroy 0047FB80 f end=0047FB92
+IEvtQueueCheckSyncKeyState 00480A50 f end=00480AC2
+IEvtQueueCheckSyncMouseState 004804C0 f end=004804E6
+IEvtQueueDestroy 004804B0 f end=004804BA
+IEvtQueueDispatch 00480AD0 f end=00480BCB
+IEvtQueueDispatchAll 00480BD0 f end=00480D28
+IEvtQueueRegister 004804F0 f end=004805F4
+IEvtQueueUnregister 00480D30 f end=00480DD1
+IEvtSchedulerCreateContext 0047F5C0 f end=0047F6B9
+IEvtSchedulerInitialize 0047F2F0 f end=0047F5BA
+IEvtSchedulerDestroy 0047DEA0 f end=0047E117
+IEvtSchedulerShutdown 0047D990 f end=0047D9EB
+SchedulerThreadProc 0047F230 f end=0047F2C1 ; IEvtSchedulerProcess appears to be optimized out
+SchedulerThreadProcProcess 0047EFF0 f end=0047F225
+IEvtTimerDispatch 00481100 f end=00481289
+IEvtTimerGetNextTime 00480F70 f end=00480FCA
+IEvtTimerKill 00481290 f end=0048138F
+PostMouseModeChanged 0047FAC0 f end=0047FB22
+PropSelectContext 0047CBF0 f end=0047CC08
+PropSet 0047CC50 f end=0047CC70
+PropGet 0047CC20 f end=0047CC41
+InitializeSchedulerThread 0047E910 f end=0047EA69
+SynthesizeIdle 0047DBC0 f end=0047DC14
+SynthesizePaint 0047DC50 f end=0047DC8D
+SynthesizePoll 0047DC20 f end=0047DC50

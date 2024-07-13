@@ -22,6 +22,7 @@
 #include "gx/types.h"
 
 // include files that define the use of template classes for standard library types
+// template classes for whoa types should be entered immediately after where the type is
 
 #include "storm/array/uint32_t.h"
 
