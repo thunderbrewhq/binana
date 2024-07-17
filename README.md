@@ -54,7 +54,7 @@ To load the database information into x64dbg:
   1. Open x96dbg.exe or x32dbg.exe directly
   2. Load your game binary
   3. Go to `File` > `Database` > `Import database`
-  4. Navigate to <game version>/x32dbg/game.dd32`.
+  4. Navigate to `<game version>/x32dbg/game.dd32`.
 
 ## Importing types
 
