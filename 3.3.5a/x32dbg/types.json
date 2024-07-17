@@ -1,0 +1,2206 @@
+{
+  "types": [
+    {
+      "type": "int32_t",
+      "name": "ptrdiff_t"
+    },
+    {
+      "type": "uint32_t",
+      "name": "uintptr_t"
+    },
+    {
+      "type": "int32_t",
+      "name": "intptr_t"
+    },
+    {
+      "type": "int",
+      "name": "EGxPoolHintBits"
+    },
+    {
+      "type": "int",
+      "name": "EGxPoolTarget"
+    },
+    {
+      "type": "int",
+      "name": "EGxPoolUsage"
+    },
+    {
+      "type": "int",
+      "name": "EGxVertexAttrib"
+    },
+    {
+      "type": "int",
+      "name": "EGxVertexBufferFormat"
+    },
+    {
+      "type": "int",
+      "name": "EGxColorFormat"
+    },
+    {
+      "type": "int",
+      "name": "BlitAlpha"
+    },
+    {
+      "type": "int",
+      "name": "BlitFormat"
+    },
+    {
+      "type": "int",
+      "name": "EGxApi"
+    },
+    {
+      "type": "int",
+      "name": "EGxBlend"
+    },
+    {
+      "type": "int",
+      "name": "EGxFontHJusts"
+    },
+    {
+      "type": "int",
+      "name": "EGxFontVJusts"
+    },
+    {
+      "type": "int",
+      "name": "EGxMasterEnables"
+    },
+    {
+      "type": "int",
+      "name": "EGxPrim"
+    },
+    {
+      "type": "int",
+      "name": "EGxPrimMask"
+    },
+    {
+      "type": "int",
+      "name": "EGxRenderState"
+    },
+    {
+      "type": "int",
+      "name": "EGxShPS"
+    },
+    {
+      "type": "int",
+      "name": "EGxShTarget"
+    },
+    {
+      "type": "int",
+      "name": "EGxShVS"
+    },
+    {
+      "type": "int",
+      "name": "EGxTexCommand"
+    },
+    {
+      "type": "int",
+      "name": "EGxTexFilter"
+    },
+    {
+      "type": "int",
+      "name": "EGxTexFormat"
+    },
+    {
+      "type": "int",
+      "name": "EGxTexTarget"
+    },
+    {
+      "type": "int",
+      "name": "EGxTexWrapMode"
+    },
+    {
+      "type": "int",
+      "name": "EGxXform"
+    },
+    {
+      "type": "int",
+      "name": "EGxuDrawListCategory"
+    },
+    {
+      "type": "int",
+      "name": "EGxWM"
+    },
+    {
+      "type": "int",
+      "name": "COLOR_FILE_FORMAT"
+    },
+    {
+      "type": "int",
+      "name": "PIXEL_FORMAT"
+    },
+    {
+      "type": "int",
+      "name": "CGxFormat__Format"
+    },
+    {
+      "type": "int",
+      "name": "CGxMatrixStack__EMatrixFlags"
+    }
+  ],
+  "structs": [
+    {
+      "name": "HASHKEY_PTR",
+      "members": [
+        {
+          "type": "void*",
+          "name": "m_key"
+        }
+      ]
+    },
+    {
+      "name": "HASHKEY_STR",
+      "members": [
+        {
+          "type": "char*",
+          "name": "m_str"
+        }
+      ]
+    },
+    {
+      "name": "HASHKEY_STRI",
+      "members": [
+        {
+          "type": "char*",
+          "name": "m_str"
+        }
+      ]
+    },
+    {
+      "name": "HASHKEY_NONE"
+    },
+    {
+      "name": "CAaBox",
+      "members": [
+        {
+          "type": "C3Vector",
+          "name": "b"
+        },
+        {
+          "type": "C3Vector",
+          "name": "t",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "CBoundingBox",
+      "members": [
+        {
+          "type": "CRange",
+          "name": "x"
+        },
+        {
+          "type": "CRange",
+          "name": "y",
+          "offset": 8
+        },
+        {
+          "type": "CRange",
+          "name": "z",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "C3Vector",
+      "members": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "z",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "CRange",
+      "members": [
+        {
+          "type": "float",
+          "name": "l"
+        },
+        {
+          "type": "float",
+          "name": "h",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "C2Vector",
+      "members": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "C2iVector",
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "x"
+        },
+        {
+          "type": "int32_t",
+          "name": "y",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "C4Vector",
+      "members": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "z",
+          "offset": 8
+        },
+        {
+          "type": "float",
+          "name": "w",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "CImVector",
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "b"
+        },
+        {
+          "type": "uint8_t",
+          "name": "g",
+          "offset": 1
+        },
+        {
+          "type": "uint8_t",
+          "name": "r",
+          "offset": 2
+        },
+        {
+          "type": "uint8_t",
+          "name": "a",
+          "offset": 3
+        }
+      ]
+    },
+    {
+      "name": "CiRange",
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "l"
+        },
+        {
+          "type": "int32_t",
+          "name": "h",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "C33Matrix",
+      "members": [
+        {
+          "type": "float",
+          "name": "a0"
+        },
+        {
+          "type": "float",
+          "name": "a1",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "a2",
+          "offset": 8
+        },
+        {
+          "type": "float",
+          "name": "b0",
+          "offset": 12
+        },
+        {
+          "type": "float",
+          "name": "b1",
+          "offset": 16
+        },
+        {
+          "type": "float",
+          "name": "b2",
+          "offset": 20
+        },
+        {
+          "type": "float",
+          "name": "c0",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "c1",
+          "offset": 28
+        },
+        {
+          "type": "float",
+          "name": "c2",
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "C34Matrix",
+      "members": [
+        {
+          "type": "float",
+          "name": "a0"
+        },
+        {
+          "type": "float",
+          "name": "a1",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "a2",
+          "offset": 8
+        },
+        {
+          "type": "float",
+          "name": "b0",
+          "offset": 12
+        },
+        {
+          "type": "float",
+          "name": "b1",
+          "offset": 16
+        },
+        {
+          "type": "float",
+          "name": "b2",
+          "offset": 20
+        },
+        {
+          "type": "float",
+          "name": "c0",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "c1",
+          "offset": 28
+        },
+        {
+          "type": "float",
+          "name": "c2",
+          "offset": 32
+        },
+        {
+          "type": "float",
+          "name": "d0",
+          "offset": 36
+        },
+        {
+          "type": "float",
+          "name": "d1",
+          "offset": 40
+        },
+        {
+          "type": "float",
+          "name": "d2",
+          "offset": 44
+        }
+      ]
+    },
+    {
+      "name": "C44Matrix",
+      "members": [
+        {
+          "type": "float",
+          "name": "a0"
+        },
+        {
+          "type": "float",
+          "name": "a1",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "a2",
+          "offset": 8
+        },
+        {
+          "type": "float",
+          "name": "a3",
+          "offset": 12
+        },
+        {
+          "type": "float",
+          "name": "b0",
+          "offset": 16
+        },
+        {
+          "type": "float",
+          "name": "b1",
+          "offset": 20
+        },
+        {
+          "type": "float",
+          "name": "b2",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "b3",
+          "offset": 28
+        },
+        {
+          "type": "float",
+          "name": "c0",
+          "offset": 32
+        },
+        {
+          "type": "float",
+          "name": "c1",
+          "offset": 36
+        },
+        {
+          "type": "float",
+          "name": "c2",
+          "offset": 40
+        },
+        {
+          "type": "float",
+          "name": "c3",
+          "offset": 44
+        },
+        {
+          "type": "float",
+          "name": "d0",
+          "offset": 48
+        },
+        {
+          "type": "float",
+          "name": "d1",
+          "offset": 52
+        },
+        {
+          "type": "float",
+          "name": "d2",
+          "offset": 56
+        },
+        {
+          "type": "float",
+          "name": "d3",
+          "offset": 60
+        }
+      ]
+    },
+    {
+      "name": "C4Plane",
+      "members": [
+        {
+          "type": "C3Vector",
+          "name": "n"
+        },
+        {
+          "type": "float",
+          "name": "d",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "C4Quaternion",
+      "members": [
+        {
+          "type": "float",
+          "name": "x"
+        },
+        {
+          "type": "float",
+          "name": "y",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "z",
+          "offset": 8
+        },
+        {
+          "type": "float",
+          "name": "w",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "CRect",
+      "members": [
+        {
+          "type": "float",
+          "name": "minY"
+        },
+        {
+          "type": "float",
+          "name": "minX",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "maxY",
+          "offset": 8
+        },
+        {
+          "type": "float",
+          "name": "maxX",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "CiRect",
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "minY"
+        },
+        {
+          "type": "int32_t",
+          "name": "minX",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "maxY",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "maxX",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "CAaSphere",
+      "members": [
+        {
+          "type": "C3Vector",
+          "name": "n"
+        },
+        {
+          "type": "float",
+          "name": "d",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "ubyte4",
+      "members": [
+        {
+          "type": "ubyte4__0000",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "name": "CGxVertexAttrib",
+      "members": [
+        {
+          "type": "EGxVertexAttrib",
+          "name": "attrib"
+        },
+        {
+          "type": "uint32_t",
+          "name": "type",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "offset",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "bufSize",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "CGxVertexPBNT2",
+      "members": [
+        {
+          "type": "C3Vector",
+          "name": "p"
+        },
+        {
+          "type": "ubyte4",
+          "name": "bw",
+          "offset": 12
+        },
+        {
+          "type": "ubyte4",
+          "name": "bi",
+          "offset": 16
+        },
+        {
+          "type": "C3Vector",
+          "name": "n",
+          "offset": 20
+        },
+        {
+          "type": "C2Vector",
+          "name": "tc",
+          "arrsize": 2,
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "CGxVertexPCT",
+      "members": [
+        {
+          "type": "C3Vector",
+          "name": "p"
+        },
+        {
+          "type": "CImVector",
+          "name": "c",
+          "offset": 12
+        },
+        {
+          "type": "C2Vector",
+          "name": "tc",
+          "arrsize": 1,
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "CGxPool",
+      "members": [
+        {
+          "type": "TSLinkedNode_CGxPool",
+          "name": "b_base"
+        },
+        {
+          "type": "EGxPoolTarget",
+          "name": "m_target",
+          "offset": 8
+        },
+        {
+          "type": "EGxPoolUsage",
+          "name": "m_usage",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "m_size",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "m_apiSpecific",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "m_mem",
+          "offset": 24
+        },
+        {
+          "type": "int32_t",
+          "name": "unk1C",
+          "offset": 28
+        },
+        {
+          "type": "TSList_CGxBuf",
+          "name": "m_bufList",
+          "offset": 32
+        },
+        {
+          "type": "EGxPoolHintBits",
+          "name": "m_hint",
+          "offset": 44
+        },
+        {
+          "type": "char*",
+          "name": "m_name",
+          "offset": 48
+        }
+      ]
+    },
+    {
+      "name": "CGxBuf",
+      "members": [
+        {
+          "type": "TSLinkedNode_CGxBuf",
+          "name": "b_base"
+        },
+        {
+          "type": "CGxPool*",
+          "name": "m_pool",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_itemSize",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_itemCount",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_size",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_index",
+          "offset": 24
+        },
+        {
+          "type": "uint8_t",
+          "name": "unk1C",
+          "offset": 28
+        },
+        {
+          "type": "uint8_t",
+          "name": "unk1D",
+          "offset": 29
+        },
+        {
+          "type": "uint8_t",
+          "name": "unk1E",
+          "offset": 30
+        },
+        {
+          "type": "uint8_t",
+          "name": "unk1F",
+          "offset": 31
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CGxPool",
+      "members": [
+        {
+          "type": "TSLink_CGxPool",
+          "name": "m_link"
+        }
+      ]
+    },
+    {
+      "name": "TSList_CGxBuf",
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset"
+        },
+        {
+          "type": "TSLink_CGxBuf",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CGxBuf",
+      "members": [
+        {
+          "type": "TSLink_CGxBuf",
+          "name": "m_link"
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CGxBuf",
+      "members": [
+        {
+          "type": "TSLink_CGxBuf*",
+          "name": "m_prevlink"
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CGxPool",
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset"
+        },
+        {
+          "type": "TSLink_CGxPool",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CGxPool",
+      "members": [
+        {
+          "type": "TSLink_CGxPool*",
+          "name": "m_prevlink"
+        },
+        {
+          "type": "CGxPool*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "CGxCaps",
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "m_numTmus"
+        },
+        {
+          "type": "int32_t",
+          "name": "m_pixelCenterOnEdge",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "m_texelCenterOnEdge",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "m_numStreams",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "int10",
+          "offset": 16
+        },
+        {
+          "type": "EGxColorFormat",
+          "name": "m_colorFormat",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_maxIndex",
+          "offset": 24
+        },
+        {
+          "type": "int32_t",
+          "name": "m_generateMipMaps",
+          "offset": 28
+        },
+        {
+          "type": "int32_t",
+          "name": "m_texFmt",
+          "arrsize": 13,
+          "offset": 32
+        },
+        {
+          "type": "int32_t",
+          "name": "m_texTarget",
+          "arrsize": 4,
+          "offset": 84
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_texMaxSize",
+          "arrsize": 4,
+          "offset": 100
+        },
+        {
+          "type": "int32_t",
+          "name": "m_shaderTargets",
+          "arrsize": 6,
+          "offset": 116
+        },
+        {
+          "type": "int32_t",
+          "name": "m_texFilterTrilinear",
+          "offset": 140
+        },
+        {
+          "type": "int32_t",
+          "name": "m_texFilterAnisotropic",
+          "offset": 144
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_maxTexAnisotropy",
+          "offset": 148
+        },
+        {
+          "type": "int32_t",
+          "name": "m_depthBias",
+          "offset": 152
+        },
+        {
+          "type": "int32_t",
+          "name": "int130",
+          "offset": 156
+        },
+        {
+          "type": "int32_t",
+          "name": "int134",
+          "offset": 160
+        },
+        {
+          "type": "int32_t",
+          "name": "int138",
+          "offset": 164
+        }
+      ]
+    },
+    {
+      "name": "C4Pixel",
+      "members": [
+        {
+          "type": "char",
+          "name": "b"
+        },
+        {
+          "type": "char",
+          "name": "g",
+          "offset": 1
+        },
+        {
+          "type": "char",
+          "name": "r",
+          "offset": 2
+        },
+        {
+          "type": "char",
+          "name": "a",
+          "offset": 3
+        }
+      ]
+    },
+    {
+      "name": "MipBits",
+      "members": [
+        {
+          "type": "C4Pixel*",
+          "name": "mip",
+          "arrsize": 1
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_EGxRenderState",
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable"
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 8
+        },
+        {
+          "type": "EGxRenderState*",
+          "name": "m_data",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "CGxAppRenderState",
+      "members": [
+        {
+          "type": "CGxStateBom",
+          "name": "m_value"
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_stackDepth",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "m_dirty",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "CGxPushedRenderState",
+      "members": [
+        {
+          "type": "EGxRenderState",
+          "name": "m_which"
+        },
+        {
+          "type": "CGxStateBom",
+          "name": "m_value",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_stackDepth",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "ShaderConstants",
+      "members": [
+        {
+          "type": "C4Vector",
+          "name": "constants",
+          "arrsize": 256
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk1",
+          "offset": 4096
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk2",
+          "offset": 4100
+        }
+      ]
+    },
+    {
+      "name": "CGxDevice",
+      "members": [
+        {
+          "type": "CGxDevice__vtable*",
+          "name": "v_vtable"
+        },
+        {
+          "type": "TSGrowableArray_CGxPushedRenderState",
+          "name": "m_pushedStates",
+          "offset": 4
+        },
+        {
+          "type": "TSGrowableArray_uint32_t",
+          "name": "m_stackOffsets",
+          "offset": 24
+        },
+        {
+          "type": "TSGrowableArray_EGxRenderState",
+          "name": "m_dirtyStates",
+          "offset": 44
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk",
+          "arrsize": 73,
+          "offset": 64
+        },
+        {
+          "type": "CRect",
+          "name": "m_defWindowRect",
+          "offset": 356
+        },
+        {
+          "type": "CRect",
+          "name": "m_curWindowRect",
+          "offset": 372
+        },
+        {
+          "type": "EGxApi",
+          "name": "m_api",
+          "offset": 388
+        },
+        {
+          "type": "CGxFormat",
+          "name": "m_format",
+          "offset": 392
+        },
+        {
+          "type": "CGxCaps",
+          "name": "m_caps",
+          "offset": 436
+        },
+        {
+          "type": "TSHashTable_CGxShader_HASHKEY_STRI",
+          "name": "m_shaderList",
+          "arrsize": 6,
+          "offset": 604
+        },
+        {
+          "type": "void**",
+          "name": "m_windowProc",
+          "offset": 844
+        },
+        {
+          "type": "int32_t",
+          "name": "m_context",
+          "offset": 848
+        },
+        {
+          "type": "int32_t",
+          "name": "intF5C",
+          "offset": 852
+        },
+        {
+          "type": "int32_t",
+          "name": "m_windowVisible",
+          "offset": 856
+        },
+        {
+          "type": "int32_t",
+          "name": "intF64",
+          "offset": 860
+        },
+        {
+          "type": "int32_t",
+          "name": "intF6C",
+          "offset": 864
+        },
+        {
+          "type": "CBoundingBox",
+          "name": "m_viewport",
+          "offset": 868
+        },
+        {
+          "type": "C44Matrix",
+          "name": "m_projection",
+          "offset": 892
+        },
+        {
+          "type": "C44Matrix",
+          "name": "m_projNative",
+          "offset": 956
+        },
+        {
+          "type": "CGxMatrixStack",
+          "name": "m_xforms",
+          "arrsize": 11,
+          "offset": 1020
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_appMasterEnables",
+          "offset": 4100
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_hwMasterEnables",
+          "offset": 4104
+        },
+        {
+          "type": "TSList_CGxPool",
+          "name": "m_poolList",
+          "offset": 4108
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "m_bufLocked",
+          "arrsize": 2,
+          "offset": 4120
+        },
+        {
+          "type": "CGxPool*",
+          "name": "m_vertexPool",
+          "offset": 4128
+        },
+        {
+          "type": "CGxPool*",
+          "name": "m_indexPool",
+          "offset": 4132
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "m_streamBufs",
+          "arrsize": 2,
+          "offset": 4136
+        },
+        {
+          "type": "CGxVertexAttrib",
+          "name": "m_primVertexFormatAttrib",
+          "arrsize": 14,
+          "offset": 4144
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "m_primVertexFormatBuf",
+          "arrsize": 14,
+          "offset": 4368
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_primVertexMask",
+          "offset": 4424
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_primVertexDirty",
+          "offset": 4428
+        },
+        {
+          "type": "EGxVertexBufferFormat",
+          "name": "m_primVertexFormat",
+          "offset": 4432
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "m_primVertexBuf",
+          "offset": 4436
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_primVertexSize",
+          "offset": 4440
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "m_primIndexBuf",
+          "offset": 4444
+        },
+        {
+          "type": "int32_t",
+          "name": "m_primIndexDirty",
+          "offset": 4448
+        },
+        {
+          "type": "TSFixedArray_CGxAppRenderState",
+          "name": "m_appRenderStates",
+          "offset": 4452
+        },
+        {
+          "type": "TSFixedArray_CGxStateBom",
+          "name": "m_hwRenderStates",
+          "offset": 4468
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_baseMipLevel",
+          "offset": 4484
+        }
+      ]
+    },
+    {
+      "name": "CGxDevice__vtable",
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_0_ITexMarkAsUpdated"
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_1_IRsSendToHw",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_2_ICursorCreate",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_3_ICursorDestroy",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_4_ICursorDraw",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_5",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_6",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_7",
+          "offset": 28
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_8",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_9",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_10_DeviceCreate",
+          "offset": 40
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_11",
+          "offset": 44
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_12",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_13_DeviceSetFormat",
+          "offset": 52
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_14_DeviceSetBaseMipLevel",
+          "offset": 56
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_15_DeviceSetGamma",
+          "offset": 60
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_16",
+          "offset": 64
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_17",
+          "offset": 68
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_18",
+          "offset": 72
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_19",
+          "offset": 76
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_20",
+          "offset": 80
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_21",
+          "offset": 84
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_22",
+          "offset": 88
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_23",
+          "offset": 92
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_24",
+          "offset": 96
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_25",
+          "offset": 100
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_26",
+          "offset": 104
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_27",
+          "offset": 108
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_28",
+          "offset": 112
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_29",
+          "offset": 116
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_30",
+          "offset": 120
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_31",
+          "offset": 124
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_32",
+          "offset": 128
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_33",
+          "offset": 132
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_34",
+          "offset": 136
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_35_CapsWindowSize",
+          "offset": 140
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_36",
+          "offset": 144
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_37",
+          "offset": 148
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_38",
+          "offset": 152
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_39",
+          "offset": 156
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_40",
+          "offset": 160
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_41",
+          "offset": 164
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_42",
+          "offset": 168
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_43",
+          "offset": 172
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_44",
+          "offset": 176
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_45",
+          "offset": 180
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_46",
+          "offset": 184
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_47",
+          "offset": 188
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_48",
+          "offset": 192
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_49",
+          "offset": 196
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_50",
+          "offset": 200
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_51",
+          "offset": 204
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_52",
+          "offset": 208
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_53",
+          "offset": 212
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_54",
+          "offset": 216
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_55",
+          "offset": 220
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_56",
+          "offset": 224
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_57",
+          "offset": 228
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_58",
+          "offset": 232
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_59",
+          "offset": 236
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_60",
+          "offset": 240
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_61",
+          "offset": 244
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_62",
+          "offset": 248
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_63",
+          "offset": 252
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_64",
+          "offset": 256
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_65",
+          "offset": 260
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_66",
+          "offset": 264
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_67",
+          "offset": 268
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_68",
+          "offset": 272
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_69",
+          "offset": 276
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_70",
+          "offset": 280
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_71",
+          "offset": 284
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_72",
+          "offset": 288
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_73",
+          "offset": 292
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_74",
+          "offset": 296
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_75",
+          "offset": 300
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_76",
+          "offset": 304
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_77",
+          "offset": 308
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_78",
+          "offset": 312
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_79",
+          "offset": 316
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_80",
+          "offset": 320
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_81",
+          "offset": 324
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_82",
+          "offset": 328
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_83",
+          "offset": 332
+        }
+      ]
+    },
+    {
+      "name": "CGxStateBom",
+      "members": [
+        {
+          "type": "CGxStateBom__m_data",
+          "name": "m_data"
+        },
+        {
+          "type": "int32_t",
+          "name": "filler",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_CGxPushedRenderState",
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable"
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 8
+        },
+        {
+          "type": "CGxPushedRenderState*",
+          "name": "m_data",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_uint32_t",
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable"
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t*",
+          "name": "m_data",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "CGxFormat",
+      "members": [
+        {
+          "type": "bool",
+          "name": "hwTnL"
+        },
+        {
+          "type": "int8_t",
+          "name": "window",
+          "offset": 1
+        },
+        {
+          "type": "int32_t",
+          "name": "maximize",
+          "offset": 4
+        },
+        {
+          "type": "CGxFormat__Format",
+          "name": "depthFormat",
+          "offset": 8
+        },
+        {
+          "type": "C2iVector",
+          "name": "size",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "sampleCount",
+          "offset": 20
+        },
+        {
+          "type": "CGxFormat__Format",
+          "name": "colorFormat",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "refreshRate",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "vsync",
+          "offset": 32
+        },
+        {
+          "type": "C2iVector",
+          "name": "pos",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "TSHashTable_CGxShader_HASHKEY_STRI",
+      "members": [
+        {
+          "type": "TSList_CGxShader",
+          "name": "m_fulllist"
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fullnessIndicator",
+          "offset": 12
+        },
+        {
+          "type": "TSGrowableArray_TSList_CGxShader",
+          "name": "m_slotlistarray",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_slotmask",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "CGxMatrixStack",
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_level"
+        },
+        {
+          "type": "int8_t",
+          "name": "m_dirty",
+          "offset": 4
+        },
+        {
+          "type": "C44Matrix",
+          "name": "m_mtx",
+          "arrsize": 4,
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "arrsize": 4,
+          "offset": 264
+        }
+      ]
+    },
+    {
+      "name": "TSFixedArray_CGxAppRenderState",
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable"
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 8
+        },
+        {
+          "type": "CGxAppRenderState*",
+          "name": "m_data",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSFixedArray_CGxStateBom",
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable"
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 8
+        },
+        {
+          "type": "CGxStateBom*",
+          "name": "m_data",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "CGxShader",
+      "members": [
+        {
+          "type": "TSHashObject_CGxShader_HASHKEY_STRI",
+          "name": "b_base"
+        },
+        {
+          "type": "uint32_t",
+          "name": "refCount",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "apiSpecific",
+          "offset": 28
+        },
+        {
+          "type": "int32_t",
+          "name": "target",
+          "offset": 32
+        },
+        {
+          "type": "int32_t",
+          "name": "int28",
+          "offset": 36
+        },
+        {
+          "type": "int32_t",
+          "name": "valid",
+          "offset": 40
+        },
+        {
+          "type": "int32_t",
+          "name": "loaded",
+          "offset": 44
+        },
+        {
+          "type": "int32_t",
+          "name": "int34",
+          "offset": 48
+        },
+        {
+          "type": "int32_t",
+          "name": "patched",
+          "offset": 52
+        },
+        {
+          "type": "int32_t",
+          "name": "int3C",
+          "offset": 56
+        },
+        {
+          "type": "int32_t",
+          "name": "int40",
+          "offset": 60
+        },
+        {
+          "type": "int16_t",
+          "name": "int44",
+          "offset": 64
+        },
+        {
+          "type": "int16_t",
+          "name": "int46",
+          "offset": 66
+        },
+        {
+          "type": "TSGrowableArray_uint8_t",
+          "name": "code",
+          "offset": 68
+        }
+      ]
+    },
+    {
+      "name": "TSHashObject_CGxShader_HASHKEY_STRI",
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_hashval"
+        },
+        {
+          "type": "TSLink_CGxShader",
+          "name": "m_linktoslot",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_CGxShader",
+          "name": "m_linktofull",
+          "offset": 12
+        },
+        {
+          "type": "HASHKEY_STRI",
+          "name": "m_key",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_uint8_t",
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable"
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 8
+        },
+        {
+          "type": "uint8_t*",
+          "name": "m_data",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "TSList_CGxShader",
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset"
+        },
+        {
+          "type": "TSLink_CGxShader",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_TSList_CGxShader",
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable"
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 8
+        },
+        {
+          "type": "TSList_CGxShader*",
+          "name": "m_data",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CGxShader",
+      "members": [
+        {
+          "type": "TSLink_CGxShader*",
+          "name": "m_prevlink"
+        },
+        {
+          "type": "CGxShader*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CGxShader",
+      "members": [
+        {
+          "type": "TSLink_CGxShader",
+          "name": "m_link"
+        }
+      ]
+    }
+  ],
+  "unions": [
+    {
+      "name": "ubyte4__0000",
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "b",
+          "arrsize": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "u"
+        }
+      ]
+    },
+    {
+      "name": "CGxStateBom__m_data",
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "i",
+          "arrsize": 3
+        },
+        {
+          "type": "uint32_t",
+          "name": "u",
+          "arrsize": 3
+        },
+        {
+          "type": "float",
+          "name": "f",
+          "arrsize": 3
+        },
+        {
+          "type": "void*",
+          "name": "p"
+        }
+      ]
+    }
+  ]
+}

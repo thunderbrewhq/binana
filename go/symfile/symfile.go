@@ -35,7 +35,6 @@ type Entry struct {
 
 type Table interface {
 	Insert(entry *Entry) (err error)
-	// Find() (iter func() (entry *Entry, err error))
 }
 
 func Load(table Table, text io.Reader) (err error) {

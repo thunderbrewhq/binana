@@ -2,10 +2,7 @@ package x64dbg
 
 import (
 	"encoding/json"
-	"io"
 	"os"
-
-	"github.com/pierrec/lz4/v4"
 )
 
 type Function struct {
@@ -62,28 +59,17 @@ type Database struct {
 	Breakpoints []Breakpoint `json:"breakpoints,omitempty"`
 }
 
-func SaveDatabase(name string, database *Database, compress bool) (err error) {
+func SaveDatabase(name string, database *Database) (err error) {
 	var file *os.File
 	file, err = os.Create(name)
 	if err != nil {
 		return
 	}
 
-	var writecloser io.WriteCloser = file
-
-	if compress {
-		lz4_writer := lz4.NewWriter(file)
-		writecloser = lz4_writer
-	}
-
-	e := json.NewEncoder(writecloser)
+	e := json.NewEncoder(file)
 	e.SetIndent("", "  ")
 	if err = e.Encode(database); err != nil {
 		return
-	}
-
-	if compress {
-		writecloser.Close()
 	}
 
 	err = file.Close()

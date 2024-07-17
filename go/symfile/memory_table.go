@@ -27,3 +27,7 @@ func (t *InMemoryTable) Insert(entry *Entry) (err error) {
 func (t *InMemoryTable) Len() int {
 	return len(t.Entries)
 }
+
+func NewInMemoryTable() *InMemoryTable {
+	return new(InMemoryTable)
+}

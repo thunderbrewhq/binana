@@ -38,7 +38,6 @@ func init() {
 	x64dbg_gen.Flags().StringP("game", "g", "3.3.5a", "the game profile")
 	x64dbg_gen.Flags().StringP("module-name", "m", "wow.exe", "the name of the module")
 	x64dbg_gen.Flags().StringP("base-address", "b", "00400000", "the base address of the module")
-	x64dbg_gen.Flags().BoolP("compress", "c", false, "enable/disable lz4 compression of the x64dbg database")
 
 	rootCmd.AddCommand(x64dbg_gen)
 }
