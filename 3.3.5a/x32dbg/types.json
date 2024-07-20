@@ -1515,7 +1515,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_38",
+          "name": "v_fn_38_ScenePresent",
           "offset": 152
         },
         {
@@ -1525,7 +1525,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_40",
+          "name": "v_fn_40_XformSetProjection",
           "offset": 160
         },
         {
@@ -1580,7 +1580,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_51",
+          "name": "v_fn_51_MasterEnableSet",
           "offset": 204
         },
         {
@@ -1590,27 +1590,27 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_53",
+          "name": "v_fn_53_PoolDestroy",
           "offset": 212
         },
         {
           "type": "void*",
-          "name": "v_fn_54",
+          "name": "v_fn_54_BufLock",
           "offset": 216
         },
         {
           "type": "void*",
-          "name": "v_fn_55",
+          "name": "v_fn_55_BufUnlock",
           "offset": 220
         },
         {
           "type": "void*",
-          "name": "v_fn_56",
+          "name": "v_fn_56_BufData",
           "offset": 224
         },
         {
           "type": "void*",
-          "name": "v_fn_57",
+          "name": "v_fn_57_TexCreate",
           "offset": 228
         },
         {
@@ -1665,7 +1665,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_68",
+          "name": "v_fn_68_ShaderCreate",
           "offset": 272
         },
         {
@@ -1675,7 +1675,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_70",
+          "name": "v_fn_70_ShaderConstantsSet",
           "offset": 280
         },
         {

@@ -1,17 +1,50 @@
+CDataStore__FetchWrite 00401070 f ; protected: int __thiscall CDataStore::FetchWrite(unsigned int,unsigned int,char const *,int)
+CDataStore__IsRead 004010D0 f ; CDataStore::IsRead() const
+CDataStore__Reset 004010E0 f ; CDataStore::Reset() 
+CDataStore__Finalize 00401130 f ; CDataStore::Finalize()
 SetPaths 00402B20 f end=00402B8B
 ClientKillTimer 004033B0 f end=004033B9
+CDataStore__destructor 004038A0 f ; CDataStore::~CDataStore()
 InitializeGlobal 004067F0 f end=00406B67
 DestroyGlobal 00406B70 f end=00406C65
 CommonMain 00406C70 f end=00406D64
+CGxDevice__RsPush 00409670 f end=004096CC
 GxRsPush 00409670 f end=004096CC
+nullsub_1 0040D3B5 f
 OsCloseFile 00461B00 f end=00461B09
 OsReadFile 00461B50 f end=00461B88
 OsGetFileSize 00461BD0 f end=00461BF4
 OsSetCurrentDirectory 00461DB0 f end=00461DD7
 OsCreateFile 00461FA0 f end=00461FFA
+nullsub_2 0047ADD0 f
+CDataStore__GetBufferParams 0047ADE0 f ; CDataStore::GetBufferParams(void const**, unsigned int*, unsigned int*)
+CDataStore__DetachBuffer 0047AE10 f ; CDataStore::DetachBuffer(void**, unsigned int*, unsigned int*)
+CDataStore__InternalDestroy 0047AE50 f ; virtual void __thiscall CDataStore::InternalDestroy(unsigned char * &,unsigned int &,unsigned int &)
+CDataStore__InternalFetchWrite 0047AEA0 f ; CDataStore::InternalFetchWrite(unsigned int, unsigned int, unsigned char*&, unsigned int&, unsigned int&, char const*, int)
+CDataStore__Set 0047AF40 f ; CDataStore::Set(unsigned int, unsigned short)
+CDataStore__Put_uint8_t 0047AFE0 f ; CDataStore::Put(unsigned char)
+CDataStore__Put_uint16_t 0047B040 f ; CDataStore::Put(unsigned short)
+CDataStore__Put_uint32_t 0047B0A0 f ; CDataStore::Put(unsigned int)
+CDataStore__Put_uint64_t 0047B100 f ; CDataStore::Put(unsigned long long)
+CDataStore__PutArray 0047B1C0 f ; CDataStore::PutArray(unsigned char const*, unsigned int)
+CDataStore__PutData 0047B280 f ; CDataStore::PutData(void const*, unsigned long)
+CDataStore__FetchRead 0047B290 f ; CDataStore::FetchRead(unsigned int, unsigned int)
+CDataStore__PutString 0047B300 f ; CDataStore::PutString(char const*)
+CDataStore__Get_uint8_t 0047B340 f end=0047B371 ; CDataStore::Get(unsigned char&)
+CDataStore__Get_uint16_t 0047B380 f end=0047B3B3 ; CDataStore::Get(unsigned short&)
+CDataStore__Get_uint32_t 0047B3C0 f end=0047B3F1 ; CDataStore::Get(unsigned int&)
+CDataStore__Get_uint64_t 0047B400 f end=0047B43A ; CDataStore::Get(unsigned long long&)
+CDataStore__Get_float 0047B440 f end=0047B471 ; CDataStore::Get(float&)
+CDataStore__GetString 0047B480 f end=0047B560 ; CDataStore::GetString(char*, unsigned int)
+CDataStore__GetArray 0047B560 f end=0047B5ED ; CDataStore::GetArray(unsigned char*, unsigned int)
+CDataStore__GetDataInSitu 0047B6B0 f end=0047B6E9 ; CDataStore::GetDataInSitu(void*&, unsigned int)
 CmdLineProcess 0047B720 f end=0047B736
+j_nullsub_3 0047B760 f
 NDCToDDC 0047BFF0 f end=0047C019
 DDCToNDC 0047C020 f end=0047C049
+DDCToNDCWidth 0047C050 f end=0047C05E
+DDCToNDCHeight 0047C060 f end=0047C06E
+NDCToDDCWidth 0047C070 f end=0047C07E
 NDCToDDCHeight 0047C080 f end=0047C08E
 PropSelectContext 0047CBF0 f end=0047CC08
 PropGet 0047CC20 f end=0047CC41
@@ -20,12 +53,14 @@ EventInitialize 0047CFF0 f end=0047D02D
 EventDestroy 0047D030 f end=0047D04E
 EventCreateContextEx 0047D080 f end=0047D089
 EventSetConfirmCloseCallback 0047D090 f end=0047D099
-CSRWLock__Enter 0047D0E0 f
+CSRWLock__Enter 0047D0E0 f end=0047D16A
 EventIsButtonDown 0047D1D0 f end=0047D230
 EventIsKeyDown 0047D230 f end=0047D290
 EventPostCloseEx 0047D290 f end=0047D305
+EventQueuePost 0047D310 f end=0047D3AF
 EventRegisterEx 0047D3C0 f end=0047D443
 EventUnregisterEx 0047D450 f end=0047D4B7
+EventSetTimer 0047D530 f end=0047D59C
 EventKillTimer 0047D620 f end=0047D683
 EventSetMouseMode 0047D690 f end=0047D6FD
 EventRegister 0047D770 f end=0047D78D
@@ -38,7 +73,7 @@ EventForceIdleProcessing 0047DCA0 f end=0047DE09
 IEvtSchedulerDestroy 0047DEA0 f end=0047E117
 InitializeSchedulerThread 0047E910 f end=0047EA69
 SchedulerThreadProcProcess 0047EFF0 f end=0047F225
-SchedulerThreadProc 0047F230 f end=0047F2C1 ; IEvtSchedulerProcess appears to be optimized out
+SchedulerThreadProc 0047F230 f end=0047F2C1 ; IEvtSchedulerProcess as an independent function appears to be optimized out
 EventDoMessageLoop 0047F2D0 f end=0047F2EC
 IEvtSchedulerInitialize 0047F2F0 f end=0047F5BA
 IEvtSchedulerCreateContext 0047F5C0 f end=0047F6B9
@@ -52,6 +87,7 @@ IEvtInputProcess 00480410 f end=004804A8
 IEvtQueueDestroy 004804B0 f end=004804BA
 IEvtQueueCheckSyncMouseState 004804C0 f end=004804E6
 IEvtQueueRegister 004804F0 f end=004805F4
+IEvtQueuePost 004806A0 f end=0048071F
 IEvtQueueCheckSyncKeyState 00480A50 f end=00480AC2
 IEvtQueueDispatch 00480AD0 f end=00480BCB
 IEvtQueueDispatchAll 00480BD0 f end=00480D28
@@ -60,12 +96,16 @@ EventDestroy_cleanup 00480EA0 f end=00480ED9
 IEvtTimerGetNextTime 00480F70 f end=00480FCA
 IEvtTimerDispatch 00481100 f end=00481289
 IEvtTimerKill 00481290 f end=0048138F
-CSRWLock__Leave 00481390 f
+IEvtTimerSet 00481390 f end=004814E4
+GxCapsWindowSizeInScreenCoords 00493BF0 f end=00493C09
 ScrnLayerSetRect 004A8500 f end=004A8522
 OnPaint 004A8720 f end=004A8B58
 ScrnLayerCreate 004A8BB0 f end=004A8C83
+GxuFontShutdown 004A8D10 f end=004A8DBF
 TextBlockGetFontPtr 004BD9D0 f end=004BD9EA
 TextBlockCreate 004BDAA0 f end=004BDBE4
+TextBlockSetStringPos 004BDBF0 f end=004BDC4C
+TextBlockGetWrappedTextHeight 004BDD80 f
 TextBlockGenerateFont 004BE9C0 f end=004BEB8C
 Script_GetLocale 004DBFD0 f end=004DBFF3 ; thanks namreeb :^)
 Script_IsWindowsClient 004DCE40 f end=004DCE5E
@@ -492,6 +532,7 @@ Script_ResetTutorials 00530830 f end=00530838
 Script_TriggerTutorial 005308D0 f end=0053091F
 Script_BNConnected 00530EC0 f end=00530F13
 Script_IsBNLogin 00530F20 f end=00530F58
+CGxDevice__Caps 00532AF0 f end=00532AF7 ; public: class CGxCaps const & __thiscall CGxDevice::Caps(void)const
 Script_BNGetInfo 005343F0 f end=00534581
 Script_BNGetNumFriends 00534590 f end=005346EC
 Script_BNGetNumFriendToons 005349F0 f end=00534B5C
@@ -1702,7 +1743,7 @@ Script_OffhandHasWeapon 005EAC10 f end=005EAC81
 Script_RequestInspectHonorData 005EAC90 f end=005EAC98
 Script_GetWeaponEnchantInfo 005EACA0 f end=005EAE8C
 Script_HasWandEquipped 005EAE90 f end=005EAF27
-SErrDisplayAppFatal 005EEB70 f end=005EEB71
+nullsub_3 005EEB70 f end=005EEB71 ; SErrDisplayAppFatal resolves to this in release mode?
 Script_VehicleAimGetNormPower 005F9550 f end=005F9572
 Script_IsMouselooking 005F9DD0 f end=005F9E0F
 Script_VehicleAimGetAngle 005F9E10 f end=005F9E5C
@@ -1943,23 +1984,66 @@ Script_UnitDebuff 00614CF0 f end=00614D3F
 Script_UnitAura 00614D40 f end=00614D83
 Script_GetVehicleUIIndicator 00614E60 f end=00614EEE
 Script_GetVehicleUIIndicatorSeat 00614EF0 f end=00614FC6
+nullsub_4 00632050 f
+nullsub_5 00653A10 f
 GxDevCreate 00681290 f end=00681301
 GxLog 006817E0 f end=006817F5
 GxPrimIndexPtr 00681AB0 f end=00681AFB
+GxPrimVertexPtr 00681B00 f
 GxDrawLockedElements 00682340 f end=0068239E
 GxPrimVertexPtr_FFP 00682400 f end=00682781 ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
 GxPrimLockVertexPtrs 006828C0 f end=006828FE
+CGxDevice__DeviceCreate 00682CB0 f end=00682CCB
+CGxDevice__DeviceApi 00682D20 f end=00682D27
 GxDevApi 00682D20 f end=00682D27
+CGxDevice__IDevIsWindowed 00682D40 f end=00682D48
+CGxDevice__DeviceCurWindow 00682D70 f end=00682D76
+CGxDevice__ScenePresent 00682E50 f end=00682E66
+CGxDevice__PrimCalcCount 00682F40 f end=00682F66
+CGxDevice__LightEnable 00683080 f end=006830A4
+CGxDevice__NeedsUpdate 006830B0 f end=006830F9
+CGxDevice__MasterEnable 00683100 f end=00683121
+CGxDevice__BufLock 00683150 f end=00683171
+CGxDevice__BufUnlock 00683180 f end=006831A0
+CGxDevice__ShaderConstantsClear 006833A0 f end=006833DD
+CGxDevice__ShaderConstantsSet 006833E0 f end=00683554
+CGxDevice__ShaderConstantsLock 00683560 f end=00683577
+CGxDevice__ShaderConstantsUnlock 00683580 f end=006835D6
+CGxDevice__ICursorUpdate 00683610 f end=00683632
+CGxDevice__DeviceSetFormat 006840F0 f end=0068416C
+CGxDevice__DeviceSetDefWindow 00684360 f end=006843B0
+CGxDevice__ClipPlaneSet 00684440 f end=006844B9
+CGxDevice__LightSet 006847D0 f end=00684843
+CGxDevice__BufStream 00684850 f end=0068489F
+CGxDevice__ITexMarkAsUpdated 00684900 f end=0068492D
+CGxDevice__IShaderLoad 00684970 f end=00684AC8
+CGxDevice__Log 00684C20 f end=00684C3E
+CGxDevice__Log_CGxCaps 00684C40 f end=00684D07 ; CGxDevice::Log(CGxCaps const&) const
+CGxDevice__Log 00684D10 f end=00684D6C
+CGxDevice__IRsDirty 00685970 f end=006859DB
 CGxDevice__IRsForceUpdate 006859E0 f end=00685A65
+CGxDevice__IRsForceUpdate_EGxRenderState 006859E0 f end=00685A65 ; CGxDevice::IRsForceUpdate(EGxRenderState)
+CGxDevice__IRsForceUpdate 00685A70 f end=00685B4E ; CGxDevice::IRsForceUpdate()
+CGxDevice__IRsSync 00685B50 f end=00685BFE
 CGxDevice__MasterEnableSet 00685EB0 f end=00685F33
+CGxDevice__RsSet 00685F50 f end=00685FB0
+CGxDevice__RsPop 00685FB0 f end=00686116
 GxRsPop 00685FB0 f end=00686116
+CGxDevice__BufCreate 00687660 f end=006876C9
+CGxDevice__PoolCreate 006876D0 f end=0068773F
 CGxDevice__CGxDevice 00688690 f end=0068903F
+CGxDevice__ShaderCreate 006897C0 f end=00689A49
 CGxDevice__NewD3d 00689EF0 f end=00689F14
 CGxDeviceOpenGl__CGxDeviceOpenGl 0068BBC0 f end=0068BD15
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244
 CGxDeviceD3d__CGxDeviceD3d 0068FD50 f end=0068FE80
 CGxDeviceD3d9Ex__CGxDeviceD3d9Ex 006A1A90 f end=006A1C24
+CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF
+nullsub_154 006B0960 f
+nullsub_151 006B1B80 f
+nullsub_6 006B1B90 f
+nullsub_155 006B1BA0 f
 Script_GetNumWhoResults 006B33D0 f end=006B3428
 Script_SetWhoToUI 006B3430 f end=006B344C
 Script_GetNumFriends 006B4060 f end=006B412B
@@ -1995,12 +2079,25 @@ GxuFontAddToBatch 006BCE10 f end=006BCE32
 GxuFontRenderBatch 006BCE40 f end=006BCE52
 GxuFontGetTextExtent 006BCE60 f end=006BCE98
 GxuFontGetMaxCharsWithinWidth 006BCEA0 f end=006BCEE7
+GxuFontGetOneToOneHeight 006BD020 f end=006BD069
 GxuFontSetStringPosition 006BD0A0 f end=006BD0BE
+GxuFontAddShadow 006BD0C0 f end=006BD0DF
 GxuDetermineQuotedCode 006BD5A0 f end=006BD89D
 GxuFontDestroyString 006BDFC0 f end=006BE014
+GxuFontWindowSizeChanged 006BE020 f end=006BE221
 GxuFontCreateString 006BE2B0 f end=006BE390
 GxuFontClearBatch 006BE390 f end=006BE3AD
+GxuFontDestroyBatch 006BE3B0 f end=006BE3DD
+GxuFontUpdate 006BE3E0 f end=006BEE87
 GxuFontCreateBatch 006BF160 f end=006BF202
+GxuXformCreateProjection_Exact 006BF370 f end=006BF4B2
+GxuXformCalcFrustumCorners 006BF6D0 f end=006BFB60
+GxuUpdateSingleColorTexture 006BFDA0 f end=006BFDFE
+GxuXformCreateProjection_SG 006BFE00 f end=006BFE5C
+GxuXformCreateLookAtSgCompat 006BFE60 f end=006C004D
+IGxuFontGlyphRenderGlyph 006C8CC0 f end=006C8E6B
+nullsub_152 00743550 f
+nullsub_153 00743560 f
 Script_CombatTextSetActiveUnit 0074D580 f end=0074D5A8
 Script_CombatLogSetRetentionTime 0074D5B0 f end=0074D5FD
 Script_CombatLog_Object_IsA 0074D600 f end=0074D6A3
@@ -2040,6 +2137,7 @@ ConsoleWriteA 007653B0 f end=00765400
 ConsoleCommandExecute 007658A0 f end=007659BF
 OnIdle 007659C0 f end=00765AE5
 OnKeyDown 00765AF0 f end=00765FB2
+RegisterHandlers 00765FF0 f end=007660C2
 ConsoleScreenInitialize 00766140 f end=00766295
 CVarLoadFile 00766530 f end=007665C2
 CVar__Set 007668C0 f end=00766936
@@ -2081,6 +2179,7 @@ SCritSect__SCritSect 00774620 f end=0077462E
 SCritSect__destructor 00774630 f end=00774638
 SCritSect__Enter 00774640 f end=00774648
 SCritSect__Leave 00774650 f end=00774658
+CSRWLock__Leave 00774660 f end=00774675
 SSyncObject__Wait 00774690 f end=007746A4
 SEvent__Set 00774720 f end=0077472A
 SEvent__Reset 00774730 f end=0077473A
@@ -2143,8 +2242,13 @@ OsCallSetContext 0086F5A0 f end=0086F5EA
 OsCallInitialize 0086F760 f end=0086F875
 OsCallInitializeContext 0086F880 f end=0086F902
 OsClipboardPutString 008722A0 f end=008722BF
-Script_ToggleTris 008E5250 f end=008E5253
+return_zero4_sub 008E5250 f end=008E5253 ; Script_ToggleTris
 ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6
+CDataRecycler__Clear 0095CEC0 f end=0095CF39
+CDataRecycler__GetData 0095CF40 f end=0095CFAE
+CDataRecycler__PutData 0095CFB0 f end=0095D077
+CDataAllocator__GetData 0095D110 f ; CDataAllocator::GetData(int, char const*, int)
+CDataAllocator__PutData 0095D1B0 f ; CDataAllocator::PutData(void*, char const*, int)
 Script_PlaySound 009858B0 f end=0098594B
 Script_PlayMusic 00985950 f end=009859AA
 Script_PlaySoundFile 009859B0 f end=00985A0A
@@ -2168,8 +2272,152 @@ Script_VoiceChat_IsPlayingLoopbackSound 00985E30 f end=00985E5D
 Script_VoiceChat_GetCurrentMicrophoneSignalLevel 00985E60 f end=00985E8A
 Script_VoiceChat_ActivatePrimaryCaptureCallback 00985E90 f end=00985E98
 Script_VoiceChat_StartCapture 00985EF0 f end=00985F6B
+nullsub_7 009D34B0 f
+nullsub_8 009D34C0 f
+nullsub_9 009D4260 f
+nullsub_10 009DB620 f
+nullsub_11 009DB630 f
+nullsub_12 009DD930 f
+nullsub_13 009DD940 f
+nullsub_14 009DD950 f
+nullsub_15 009DD960 f
+nullsub_16 009DD970 f
+nullsub_17 009DD980 f
+nullsub_18 009DD990 f
+nullsub_19 009DD9A0 f
+nullsub_20 009DD9B0 f
+nullsub_21 009DD9C0 f
+nullsub_22 009DD9D0 f
+nullsub_23 009DD9E0 f
+nullsub_24 009DD9F0 f
+nullsub_25 009DDA00 f
+nullsub_26 009DDA10 f
+nullsub_27 009DDA20 f
+nullsub_28 009DDA30 f
+nullsub_29 009DDA40 f
+nullsub_30 009DDA50 f
+nullsub_31 009DDA60 f
+nullsub_32 009DDA70 f
+nullsub_33 009DDA80 f
+nullsub_34 009DDA90 f
+nullsub_35 009DDAA0 f
+nullsub_36 009DDAB0 f
+nullsub_37 009DDAC0 f
+nullsub_38 009DDAD0 f
+nullsub_39 009DDAE0 f
+nullsub_40 009DDAF0 f
+nullsub_41 009DDB00 f
+nullsub_42 009DDB10 f
+nullsub_43 009DDB20 f
+nullsub_44 009DDB30 f
+nullsub_45 009DDB40 f
+nullsub_46 009DDB50 f
+nullsub_47 009DDB60 f
+nullsub_48 009DDB70 f
+nullsub_49 009DDB80 f
+nullsub_50 009DDB90 f
+nullsub_51 009DDBA0 f
+nullsub_52 009DDBB0 f
+nullsub_53 009DDBC0 f
+nullsub_54 009DDBD0 f
+nullsub_55 009DDBE0 f
+nullsub_56 009DDBF0 f
+nullsub_57 009DDC00 f
+nullsub_58 009DDC10 f
+nullsub_59 009DDC20 f
+nullsub_60 009DDC30 f
+nullsub_61 009DDC40 f
+nullsub_62 009DDC50 f
+nullsub_63 009DDC60 f
+nullsub_64 009DDC70 f
+nullsub_65 009DDC80 f
+nullsub_66 009DDC90 f
+nullsub_67 009DDCA0 f
+nullsub_68 009DDCB0 f
+nullsub_69 009DDCC0 f
+nullsub_70 009DDCD0 f
+nullsub_71 009DDCE0 f
+nullsub_72 009DDCF0 f
+nullsub_73 009DDD00 f
+nullsub_74 009DDD10 f
+nullsub_75 009DDD20 f
+nullsub_76 009DDD30 f
+nullsub_77 009DDD40 f
+nullsub_78 009DDD50 f
+nullsub_79 009DDD60 f
+nullsub_80 009DDD70 f
+nullsub_81 009DDD80 f
+nullsub_82 009DDD90 f
+nullsub_83 009DDDA0 f
+nullsub_84 009DDDB0 f
+nullsub_85 009DDDC0 f
+nullsub_86 009DDDD0 f
+nullsub_87 009DDDE0 f
+nullsub_88 009DDDF0 f
+nullsub_89 009DDE00 f
+nullsub_90 009DDE10 f
+nullsub_91 009DDE20 f
+nullsub_92 009DDE30 f
+nullsub_93 009DDE40 f
+nullsub_94 009DDE50 f
+nullsub_95 009DDE60 f
+nullsub_96 009DDE70 f
+nullsub_97 009DDE80 f
+nullsub_98 009DDE90 f
+nullsub_99 009DDEA0 f
+nullsub_100 009DDEB0 f
+nullsub_101 009DDEC0 f
+nullsub_102 009DDED0 f
+nullsub_103 009DDEE0 f
+nullsub_104 009DDEF0 f
+nullsub_105 009DDF00 f
+nullsub_106 009DDF10 f
+nullsub_107 009DDF20 f
+nullsub_108 009DDF30 f
+nullsub_109 009DDF40 f
+nullsub_110 009DDF50 f
+nullsub_111 009DDF60 f
+nullsub_112 009DDF70 f
+nullsub_113 009DDF80 f
+nullsub_114 009DDF90 f
+nullsub_115 009DDFA0 f
+nullsub_116 009DDFB0 f
+nullsub_117 009DDFC0 f
+nullsub_118 009DDFD0 f
+nullsub_119 009DDFE0 f
+nullsub_120 009DDFF0 f
+nullsub_121 009DE000 f
+nullsub_122 009DE010 f
+nullsub_123 009DE020 f
+nullsub_124 009DE030 f
+nullsub_125 009DE040 f
+nullsub_126 009DE050 f
+nullsub_127 009DE060 f
+nullsub_128 009DE070 f
+nullsub_129 009DE080 f
+nullsub_130 009DE090 f
+nullsub_131 009DE0A0 f
+nullsub_132 009DE0B0 f
+nullsub_133 009DE0C0 f
+nullsub_134 009DE0D0 f
+nullsub_135 009DE0E0 f
+nullsub_136 009DE0F0 f
+nullsub_137 009DE100 f
+nullsub_138 009DE110 f
+nullsub_139 009DE120 f
+nullsub_140 009DE130 f
+nullsub_141 009DE140 f
+nullsub_142 009DE150 f
+nullsub_143 009DE160 f
+nullsub_144 009DE170 f
+nullsub_145 009DE180 f
+nullsub_146 009DE190 f
+nullsub_147 009DE1A0 f
+nullsub_148 009DE1B0 f
+nullsub_149 009DE1C0 f
+nullsub_150 009DE1D0 f
+CGxDeviceOpenGl__vtable 00A2E198 l
 CGxDevice__vtable 00a2ddc0 l
-CGxDeviceOpenGl__vtable 00a2e198 l
 CGxDeviceD3d__vtable 00a2e718 l
 CGxDeviceD3d9Ex__vtable 00a2f500 l
 s_rect 00adbab4 l ; RECTF

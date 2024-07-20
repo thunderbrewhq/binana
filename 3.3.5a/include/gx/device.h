@@ -57,9 +57,13 @@ struct CGxDevice__vtable {
   void* v_fn_3_ICursorDestroy;
   // void ICursorDraw();
   void* v_fn_4_ICursorDraw;
+  // don't know if this ever gets called (IStateSync something?)
   void* v_fn_5;
+  // don't know if this ever gets called (IStateSync something?)
   void* v_fn_6;
-  void* v_fn_7;
+  // don't know if this ever gets called (IStateSync something?)
+  void* v_fn_7; 
+  // don't know if this ever gets called (something deleted?)
   void* v_fn_8;
   void* v_fn_9;
   void* v_fn_10_DeviceCreate;
@@ -90,9 +94,10 @@ struct CGxDevice__vtable {
   void* v_fn_35_CapsWindowSize;
   void* v_fn_36;
   void* v_fn_37;
-  void* v_fn_38;
+  void* v_fn_38_ScenePresent;
   void* v_fn_39;
-  void* v_fn_40;
+  // void XformSetProjection(const C44Matrix&);
+  void* v_fn_40_XformSetProjection;
   void* v_fn_41;
   void* v_fn_42;
   void* v_fn_43;
@@ -103,13 +108,13 @@ struct CGxDevice__vtable {
   void* v_fn_48;
   void* v_fn_49;
   void* v_fn_50;
-  void* v_fn_51;
+  void* v_fn_51_MasterEnableSet;
   void* v_fn_52;
-  void* v_fn_53;
-  void* v_fn_54;
-  void* v_fn_55;
-  void* v_fn_56;
-  void* v_fn_57;
+  void* v_fn_53_PoolDestroy;
+  void* v_fn_54_BufLock;
+  void* v_fn_55_BufUnlock;
+  void* v_fn_56_BufData;
+  void* v_fn_57_TexCreate;
   void* v_fn_58;
   void* v_fn_59;
   void* v_fn_60;
@@ -120,9 +125,9 @@ struct CGxDevice__vtable {
   void* v_fn_65;
   void* v_fn_66;
   void* v_fn_67;
-  void* v_fn_68;
+  void* v_fn_68_ShaderCreate;
   void* v_fn_69;
-  void* v_fn_70;
+  void* v_fn_70_ShaderConstantsSet;
   void* v_fn_71;
   void* v_fn_72;
   void* v_fn_73;

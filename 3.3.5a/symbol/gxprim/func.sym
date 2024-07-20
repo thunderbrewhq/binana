@@ -1,0 +1,4 @@
+GxPrimIndexPtr 00681AB0 f end=00681AFB
+GxPrimVertexPtr 00681B00 f
+GxPrimVertexPtr_FFP 00682400 f end=00682781 ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
+GxPrimLockVertexPtrs 006828C0 f end=006828FE

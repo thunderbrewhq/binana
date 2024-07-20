@@ -16,6 +16,7 @@ ConsoleCommandUnregister 007689E0 f end=00768A19
 ConsoleDeviceInitialize 0076AB80 f end=0076B287
 ConsolePostClose 00763C50 f end=00763C5D
 ConsoleScreenInitialize 00766140 f end=00766295
+RegisterHandlers 00765FF0 f end=007660C2
 ConsoleWrite 00765270 f end=00765359
 ConsoleWriteA 007653B0 f end=00765400
 EventCloseCallback 00763D60 f end=00763D71

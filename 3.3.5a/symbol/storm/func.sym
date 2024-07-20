@@ -1,7 +1,6 @@
 SCmdRegisterArgList 00773590 f end=007737C2
 SCmdProcess 00773890 f end=00773986
 SCmdProcessCommandLine 00773990 f end=007739AD
-SErrDisplayAppFatal 005EEB70 f end=005EEB71
 SErrSetLogTitleString 00771890 f end=007718F2
 SErrSetLogTitleCallback 00771900 f end=00771957
 SErrRegisterHandler 00771B80 f end=00771C15

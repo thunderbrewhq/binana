@@ -1947,7 +1947,6 @@ Script_EnumerateFrames 0081B9C0 f end=0081BAAA
 Script_GetNumFrames 0081BAB0 f end=0081BB15
 Script_CreateFrame 0081BB20 f end=0081BE68
 Script_GetFramesRegisteredForEvent 0081BE70 f end=0081BF4D
-Script_ToggleTris 008E5250 f end=008E5253
 Script_PlaySound 009858B0 f end=0098594B
 Script_PlayMusic 00985950 f end=009859AA
 Script_PlaySoundFile 009859B0 f end=00985A0A
