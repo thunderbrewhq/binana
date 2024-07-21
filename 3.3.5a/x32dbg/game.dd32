@@ -90,11 +90,11 @@
     },
     {
       "manual": true,
-      "start": "0x9670",
-      "end": "0x96cb",
+      "start": "0xbaa5",
+      "end": "0xbace",
       "module": "wow.exe",
       "icount": "0x0",
-      "parent": "0x9670"
+      "parent": "0xbaa5"
     },
     {
       "manual": true,
@@ -338,6 +338,30 @@
     },
     {
       "manual": true,
+      "start": "0x7bf90",
+      "end": "0x7bfc7",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x7bf90"
+    },
+    {
+      "manual": true,
+      "start": "0x7bfd0",
+      "end": "0x7bfd6",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x7bfd0"
+    },
+    {
+      "manual": true,
+      "start": "0x7bfe0",
+      "end": "0x7bfe6",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x7bfe0"
+    },
+    {
+      "manual": true,
       "start": "0x7bff0",
       "end": "0x7c018",
       "module": "wow.exe",
@@ -407,6 +431,14 @@
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x7cc50"
+    },
+    {
+      "manual": true,
+      "start": "0x7cf80",
+      "end": "0x7cfeb",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x7cf80"
     },
     {
       "manual": true,
@@ -15970,11 +16002,11 @@
     },
     {
       "manual": true,
-      "start": "0x282d20",
-      "end": "0x282d26",
+      "start": "0x282d00",
+      "end": "0x282d0f",
       "module": "wow.exe",
       "icount": "0x0",
-      "parent": "0x282d20"
+      "parent": "0x282d00"
     },
     {
       "manual": true,
@@ -16042,6 +16074,14 @@
     },
     {
       "manual": true,
+      "start": "0x283130",
+      "end": "0x283141",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x283130"
+    },
+    {
+      "manual": true,
       "start": "0x283150",
       "end": "0x283170",
       "module": "wow.exe",
@@ -16090,6 +16130,14 @@
     },
     {
       "manual": true,
+      "start": "0x2835e0",
+      "end": "0x283601",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2835e0"
+    },
+    {
+      "manual": true,
       "start": "0x283610",
       "end": "0x283631",
       "module": "wow.exe",
@@ -16103,6 +16151,14 @@
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x2840f0"
+    },
+    {
+      "manual": true,
+      "start": "0x284190",
+      "end": "0x2841ae",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x284190"
     },
     {
       "manual": true,
@@ -16151,6 +16207,14 @@
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x284970"
+    },
+    {
+      "manual": true,
+      "start": "0x284ad0",
+      "end": "0x284b49",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x284ad0"
     },
     {
       "manual": true,
@@ -16218,6 +16282,14 @@
     },
     {
       "manual": true,
+      "start": "0x285c60",
+      "end": "0x285cca",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x285c60"
+    },
+    {
+      "manual": true,
       "start": "0x285eb0",
       "end": "0x285f32",
       "module": "wow.exe",
@@ -16242,14 +16314,6 @@
     },
     {
       "manual": true,
-      "start": "0x285fb0",
-      "end": "0x286115",
-      "module": "wow.exe",
-      "icount": "0x0",
-      "parent": "0x285fb0"
-    },
-    {
-      "manual": true,
       "start": "0x287660",
       "end": "0x2876c8",
       "module": "wow.exe",
@@ -16263,6 +16327,22 @@
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x2876d0"
+    },
+    {
+      "manual": true,
+      "start": "0x287a90",
+      "end": "0x287fc9",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x287a90"
+    },
+    {
+      "manual": true,
+      "start": "0x288340",
+      "end": "0x288371",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x288340"
     },
     {
       "manual": true,
@@ -16314,11 +16394,83 @@
     },
     {
       "manual": true,
+      "start": "0x28e720",
+      "end": "0x28e741",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x28e720"
+    },
+    {
+      "manual": true,
+      "start": "0x28e810",
+      "end": "0x28e8f1",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x28e810"
+    },
+    {
+      "manual": true,
+      "start": "0x28e900",
+      "end": "0x28e974",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x28e900"
+    },
+    {
+      "manual": true,
+      "start": "0x28fae0",
+      "end": "0x28fb06",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x28fae0"
+    },
+    {
+      "manual": true,
+      "start": "0x28fce0",
+      "end": "0x28fcfd",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x28fce0"
+    },
+    {
+      "manual": true,
+      "start": "0x28fd00",
+      "end": "0x28fd48",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x28fd00"
+    },
+    {
+      "manual": true,
       "start": "0x28fd50",
       "end": "0x28fe7f",
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x28fd50"
+    },
+    {
+      "manual": true,
+      "start": "0x2904d0",
+      "end": "0x2905e7",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2904d0"
+    },
+    {
+      "manual": true,
+      "start": "0x290750",
+      "end": "0x290820",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x290750"
+    },
+    {
+      "manual": true,
+      "start": "0x2a00c0",
+      "end": "0x2a0101",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2a00c0"
     },
     {
       "manual": true,
@@ -16330,11 +16482,59 @@
     },
     {
       "manual": true,
+      "start": "0x2a3070",
+      "end": "0x2a30ce",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2a3070"
+    },
+    {
+      "manual": true,
+      "start": "0x2a3450",
+      "end": "0x2a3610",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2a3450"
+    },
+    {
+      "manual": true,
+      "start": "0x2a4c30",
+      "end": "0x2a5498",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2a4c30"
+    },
+    {
+      "manual": true,
+      "start": "0x2a5a00",
+      "end": "0x2a5a24",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2a5a00"
+    },
+    {
+      "manual": true,
       "start": "0x2a5ef0",
       "end": "0x2a5fde",
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x2a5ef0"
+    },
+    {
+      "manual": true,
+      "start": "0x2a9b40",
+      "end": "0x2a9d87",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2a9b40"
+    },
+    {
+      "manual": true,
+      "start": "0x2aa130",
+      "end": "0x2aa189",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2aa130"
     },
     {
       "manual": true,
@@ -19401,14 +19601,14 @@
     {
       "manual": true,
       "module": "wow.exe",
-      "text": "GxRsPush",
+      "text": "CGxDevice__RsPush",
       "address": "0x9670"
     },
     {
       "manual": true,
       "module": "wow.exe",
-      "text": "CGxDevice__RsPush",
-      "address": "0x9670"
+      "text": "purecall",
+      "address": "0xbaa5"
     },
     {
       "manual": true,
@@ -19593,6 +19793,24 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "CoordinateSetAspectRatio",
+      "address": "0x7bf90"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CoordinateGetAspectRatio",
+      "address": "0x7bfd0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CoordinateGetAspectCompensation",
+      "address": "0x7bfe0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "NDCToDDC",
       "address": "0x7bff0"
     },
@@ -19643,6 +19861,12 @@
       "module": "wow.exe",
       "text": "PropSet",
       "address": "0x7cc50"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "RCString__Copy",
+      "address": "0x7cf80"
     },
     {
       "manual": true,
@@ -31311,14 +31535,14 @@
     {
       "manual": true,
       "module": "wow.exe",
-      "text": "CGxDevice__DeviceCreate",
+      "text": "CGxDevice__DeviceCreate_WindowProc_CGxFormat",
       "address": "0x282cb0"
     },
     {
       "manual": true,
       "module": "wow.exe",
-      "text": "GxDevApi",
-      "address": "0x282d20"
+      "text": "CGxDevice__DeviceSetBaseMipLevel",
+      "address": "0x282d00"
     },
     {
       "manual": true,
@@ -31371,6 +31595,12 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "CGxDevice__BufData",
+      "address": "0x283130"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "CGxDevice__BufLock",
       "address": "0x283150"
     },
@@ -31407,6 +31637,12 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "CGxDevice__ICursorDestroy",
+      "address": "0x2835e0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "CGxDevice__ICursorUpdate",
       "address": "0x283610"
     },
@@ -31415,6 +31651,12 @@
       "module": "wow.exe",
       "text": "CGxDevice__DeviceSetFormat",
       "address": "0x2840f0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__DeviceSetGamma",
+      "address": "0x284190"
     },
     {
       "manual": true,
@@ -31451,6 +31693,12 @@
       "module": "wow.exe",
       "text": "CGxDevice__IShaderLoad",
       "address": "0x284970"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__ICursorCreate",
+      "address": "0x284ad0"
     },
     {
       "manual": true,
@@ -31503,6 +31751,12 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "CGxDevice__TexCreate",
+      "address": "0x285c60"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "CGxDevice__MasterEnableSet",
       "address": "0x285eb0"
     },
@@ -31511,12 +31765,6 @@
       "module": "wow.exe",
       "text": "CGxDevice__RsSet",
       "address": "0x285f50"
-    },
-    {
-      "manual": true,
-      "module": "wow.exe",
-      "text": "GxRsPop",
-      "address": "0x285fb0"
     },
     {
       "manual": true,
@@ -31535,6 +31783,18 @@
       "module": "wow.exe",
       "text": "CGxDevice__PoolCreate",
       "address": "0x2876d0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__ICursorDraw",
+      "address": "0x287a90"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__PoolDestroy",
+      "address": "0x288340"
     },
     {
       "manual": true,
@@ -31575,8 +31835,62 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "CGxDeviceD3d__PoolDestroy",
+      "address": "0x28e720"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__ICursorDraw",
+      "address": "0x28e810"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__ICursorCreate",
+      "address": "0x28e900"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__BufUnlock",
+      "address": "0x28fae0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__BufLock",
+      "address": "0x28fce0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__BufData",
+      "address": "0x28fd00"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "CGxDeviceD3d__CGxDeviceD3d",
       "address": "0x28fd50"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__DeviceSetFormat",
+      "address": "0x2904d0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__DeviceCreate_WindowProc_CGxFormat",
+      "address": "0x290750"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__ICursorDestroy",
+      "address": "0x2a00c0"
     },
     {
       "manual": true,
@@ -31587,8 +31901,44 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "CGxDeviceD3d__ITexMarkAsUpdated",
+      "address": "0x2a3070"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__ScenePresent",
+      "address": "0x2a3450"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__IRsSendToHw",
+      "address": "0x2a4c30"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__CapsWindowSize",
+      "address": "0x2a5a00"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "CGxDevice__ITexWHDStartEnd",
       "address": "0x2a5ef0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__XformSetProjection",
+      "address": "0x2a9b40"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__ShaderCreate",
+      "address": "0x2aa130"
     },
     {
       "manual": true,

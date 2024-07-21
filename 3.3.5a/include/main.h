@@ -21,6 +21,8 @@
 #include "gx/state_bom.h"
 #include "gx/types.h"
 
+#include "gx/d3d9.h"
+
 // include files that define the use of template classes for standard library types
 // template classes for whoa types should be entered immediately after where the type is
 

@@ -4,3 +4,6 @@ NDCToDDCWidth 0047C070 f end=0047C07E
 NDCToDDCHeight 0047C080 f end=0047C08E
 NDCToDDC 0047BFF0 f end=0047C019
 DDCToNDC 0047C020 f end=0047C049
+CoordinateSetAspectRatio 0047BF90 f end=0047BFC8
+CoordinateGetAspectRatio 0047BFD0 f end=0047BFD7
+CoordinateGetAspectCompensation 0047BFE0 f end=0047BFE7

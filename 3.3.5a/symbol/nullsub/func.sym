@@ -155,3 +155,4 @@ nullsub_148 009DE1B0 f
 nullsub_149 009DE1C0 f
 nullsub_150 009DE1D0 f
 return_zero4_sub 008E5250 f end=008E5253 ; Script_ToggleTris
+purecall 0040BAA5 f end=0040BACF

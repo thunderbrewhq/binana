@@ -22,15 +22,28 @@ enum CGxFormat__Format {
 };
 
 struct CGxFormat {
+  uint32_t unk0;
   bool hwTnL;
+  int8_t unk5;
+  int8_t fixLag;
   int8_t window;
+  uint32_t unk8;
   int32_t maximize;
   CGxFormat__Format depthFormat;
   C2iVector size;
+  uint32_t unk1C;
   uint32_t sampleCount;
+  float float24;
   CGxFormat__Format colorFormat;
   uint32_t refreshRate;
   uint32_t vsync;
+  uint32_t unk34;
+  uint32_t unk38;
+  uint32_t unk3C;
+  uint32_t unk40;
+  uint32_t unk44;
+  uint32_t unk48;
+  uint32_t unk4C;
   C2iVector pos;
 };
 

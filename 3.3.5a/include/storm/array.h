@@ -5,7 +5,6 @@
 
 #define STORM_TS_BASE_ARRAY(T) typedef struct TSBaseArray_##T TSBaseArray_##T; \
 struct TSBaseArray_##T { \
-  void** vtable; \
   uint32_t m_alloc; \
   uint32_t m_count; \
   T* m_data; \
@@ -13,7 +12,6 @@ struct TSBaseArray_##T { \
 
 #define STORM_TS_FIXED_ARRAY(T) typedef struct TSFixedArray_##T TSFixedArray_##T; \
 struct TSFixedArray_##T { \
-  void** vtable; \
   uint32_t m_alloc; \
   uint32_t m_count; \
   T* m_data; \
@@ -21,7 +19,6 @@ struct TSFixedArray_##T { \
 
 #define STORM_TS_GROWABLE_ARRAY(T) typedef struct TSGrowableArray_##T TSGrowableArray_##T; \
 struct TSGrowableArray_##T { \
-  void** vtable; \
   uint32_t m_alloc; \
   uint32_t m_count; \
   T* m_data; \

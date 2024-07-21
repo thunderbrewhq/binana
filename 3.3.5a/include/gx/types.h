@@ -32,6 +32,7 @@ typedef enum PIXEL_FORMAT PIXEL_FORMAT;
 
 typedef struct C4Pixel C4Pixel;
 typedef struct MipBits MipBits;
+typedef struct CGxGammaRamp CGxGammaRamp;
 
 enum BlitAlpha {
   BlitAlpha_0 = 0,
@@ -378,6 +379,12 @@ struct C4Pixel {
 
 struct MipBits {
   C4Pixel* mip[1];
+};
+
+struct CGxGammaRamp {
+  uint16_t red[256];
+  uint16_t green[256];
+  uint16_t blue[256];
 };
 
 #endif
