@@ -118,7 +118,8 @@ struct CGxDevice__vtable {
   void* v_fn_50;
   // void MasterEnableSet(EGxMasterEnables, int);
   void* v_fn_51_MasterEnableSet;
-  void* v_fn_52;
+  // void PoolSizeSet(CGxPool*, uint32_t);
+  void* v_fn_52_PoolSizeSet;
   // void PoolDestroy(CGxPool*);
   void* v_fn_53_PoolDestroy;
   // char* BufLock(CGxBuf*);
