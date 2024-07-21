@@ -106,7 +106,8 @@ struct CGxDevice__vtable {
   // void XformSetProjection(const C44Matrix&);
   void* v_fn_40_XformSetProjection;
   void* v_fn_41;
-  void* v_fn_42;
+  // void Draw(CGxBatch*, int32_t);
+  void* v_fn_42_Draw;
   void* v_fn_43;
   void* v_fn_44;
   void* v_fn_45;
