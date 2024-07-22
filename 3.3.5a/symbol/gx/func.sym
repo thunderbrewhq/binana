@@ -3,3 +3,4 @@ GxDrawLockedElements 00682340 f end=0068239E
 GxLog 006817E0 f end=006817F5
 OnPaint 004A8720 f end=004A8B58
 GxCapsWindowSizeInScreenCoords 00493BF0 f end=00493C09
+GxTexCreate 00681CB0 f end=00681D87
