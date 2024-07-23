@@ -14,3 +14,6 @@ CGxDeviceD3d__BufLock 0068FCE0 f end=0068FCFE
 CGxDeviceD3d__BufUnlock 0068FAE0 f end=0068FB07
 CGxDeviceD3d__BufData 0068FD00 f end=0068FD49
 CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A
+CGxDeviceD3d__ICreateWindow 0068EBB0 f end=0068ED78
+CGxDeviceD3d__ISetCaps 0068EE20 f end=0068F36D
+CGxDeviceD3d__ICreateD3dDevice 0068F3D0 f end=0068F692
