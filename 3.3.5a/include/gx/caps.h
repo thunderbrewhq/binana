@@ -40,14 +40,17 @@ struct CGxCaps {
   uint32_t unkB0;
   // int32_t m_shaderTargets[GxShTargets_Last];
   int32_t m_shaderTargets[6];
-  uint32_t m_unkCC[6];
+  // Evidence for this: go to 0x00684CD8
+  uint32_t m_shaderConstants[6];
   int32_t m_texFilterTrilinear;
   int32_t m_texFilterAnisotropic;
   uint32_t m_maxTexAnisotropy;
   int32_t m_depthBias;
   uint32_t unkF4;
   int32_t m_maxClipPlanes;
-  uint32_t unkFC[6];
+  // CGxDeviceD3d::ISetCaps
+  int32_t m_hardwareCursor;
+  uint32_t unk100[5];
   uint32_t unk114[6];
   int32_t m_stereoAvailable;
   int32_t int130;

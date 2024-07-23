@@ -18,6 +18,7 @@
 #include "gx/shader.h"
 #include "gx/matrix_stack.h"
 #include "gx/buffer.h"
+#include "gx/texture.h"
 
 typedef struct CGxAppRenderState CGxAppRenderState;
 typedef struct CGxPushedRenderState CGxPushedRenderState;
@@ -229,7 +230,11 @@ struct CGxDevice {
   uint32_t unk28E8;
   TSFixedArray_CGxAppRenderState m_appRenderStates;
   TSFixedArray_CGxStateBom m_hwRenderStates;
-  uint32_t unk2904[1049];
+  uint32_t unk2904[20]; // 0x2904 (size 0x50) 
+  int32_t m_hardwareCursor; // 0x2954 (size 0x4)
+  uint32_t unk2958[1026]; // 0x2958 (size 0x1008)
+  CGxTex* m_cursorTexture; // 0x3960 (size 0x4)
+  // 0x3964 == 14688 (the complete size of CGxDevice)
 };
 
 #endif
