@@ -24,7 +24,8 @@ enum CGxFormat__Format {
 struct CGxFormat {
   uint32_t unk0;
   bool hwTnL;
-  int8_t unk5;
+  // TODO: verify this name 
+  bool hwCursor; // 0x5
   int8_t fixLag;
   int8_t window;
   uint32_t unk8;
