@@ -40,6 +40,9 @@ CDataStore__GetArray 0047B560 f end=0047B5ED ; CDataStore::GetArray(unsigned cha
 CDataStore__GetDataInSitu 0047B6B0 f end=0047B6E9 ; CDataStore::GetDataInSitu(void*&, unsigned int)
 CmdLineProcess 0047B720 f end=0047B736
 j_nullsub_3 0047B760 f
+HandleClose 0047BF30 f end=0047BF46
+HandleCreate 0047BF50 f end=0047BF6B
+HandleDuplicate 0047BF70 f end=0047BF82
 CoordinateSetAspectRatio 0047BF90 f end=0047BFC8
 CoordinateGetAspectRatio 0047BFD0 f end=0047BFD7
 CoordinateGetAspectCompensation 0047BFE0 f end=0047BFE7
@@ -1994,6 +1997,8 @@ GxDevCreate 00681290 f end=00681301
 GxLog 006817E0 f end=006817F5
 GxPrimIndexPtr 00681AB0 f end=00681AFB
 GxPrimVertexPtr 00681B00 f
+CGxTexFlags__CGxTexFlags 00681BE0 f end=00681CAB ; UC
+GxTexCreate 00681CB0 f end=00681D87
 GxDrawLockedElements 00682340 f end=0068239E
 GxPrimVertexPtr_FFP 00682400 f end=00682781 ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
 GxPrimLockVertexPtrs 006828C0 f end=006828FE
