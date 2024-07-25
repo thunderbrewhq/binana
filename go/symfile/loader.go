@@ -126,11 +126,13 @@ func load(text io.Reader, table Table) (err error) {
 				err = nil
 				break
 			} else {
+				err = fmt.Errorf("symfile: error reading at line %d: %w", l.line_number, err)
 				return
 			}
 		}
 
 		if err = l.parse_line(line); err != nil {
+			err = fmt.Errorf("symfile: error parsing at line %d: %w", l.line_number, err)
 			return
 		}
 	}
