@@ -17,3 +17,8 @@ CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A
 CGxDeviceD3d__ICreateWindow 0068EBB0 f end=0068ED78
 CGxDeviceD3d__ISetCaps 0068EE20 f end=0068F36D
 CGxDeviceD3d__ICreateD3dDevice 0068F3D0 f end=0068F692
+CGxDeviceD3d__ISceneBegin 006A3350 f
+CGxDeviceD3d__ScenePresent 006A3450 f
+CGxDeviceD3d__Draw 006A3620 f
+CGxDeviceD3d__IStateSyncEnables 006A3810 f
+CGxDeviceD3d__ISetVertexBuffer 006A39E0 f

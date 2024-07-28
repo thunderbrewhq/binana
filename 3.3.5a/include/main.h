@@ -20,7 +20,7 @@
 #include "gx/shader.h"
 #include "gx/state_bom.h"
 #include "gx/types.h"
-
+#include "gx/batch.h"
 #include "gx/d3d9.h"
 
 // include files that define the use of template classes for standard library types

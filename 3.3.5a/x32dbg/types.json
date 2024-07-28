@@ -1553,8 +1553,13 @@
         {
           "type": "uint32_t",
           "name": "unk2904",
-          "arrsize": 20,
+          "arrsize": 19,
           "offset": 10500
+        },
+        {
+          "type": "int32_t",
+          "name": "m_cursorVisible",
+          "offset": 10576
         },
         {
           "type": "int32_t",
@@ -1563,17 +1568,17 @@
         },
         {
           "type": "uint32_t",
-          "name": "unk2958",
+          "name": "m_cursorHotspotX",
           "offset": 10584
         },
         {
           "type": "uint32_t",
-          "name": "unk295C",
+          "name": "m_cursorHotspotY",
           "offset": 10588
         },
         {
           "type": "CImVector",
-          "name": "m_cursorImage",
+          "name": "m_cursor",
           "arrsize": 1024,
           "offset": 10592
         },
@@ -1643,7 +1648,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_11",
+          "name": "v_fn_11_DeviceDestroy",
           "offset": 44
         },
         {
@@ -1728,7 +1733,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_28",
+          "name": "v_fn_28_DeviceOverride",
           "offset": 112
         },
         {
@@ -1768,7 +1773,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_36",
+          "name": "v_fn_36_CapsWindowSizeInScreenCoords",
           "offset": 144
         },
         {
@@ -1783,7 +1788,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_39",
+          "name": "v_fn_39_SceneClear",
           "offset": 156
         },
         {
@@ -1793,7 +1798,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_41",
+          "name": "v_fn_41_XformSetView",
           "offset": 164
         },
         {
@@ -1953,17 +1958,17 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_73",
+          "name": "v_fn_73_CursorSetVisible",
           "offset": 292
         },
         {
           "type": "void*",
-          "name": "v_fn_74",
+          "name": "v_fn_74_CursorLock",
           "offset": 296
         },
         {
           "type": "void*",
-          "name": "v_fn_75",
+          "name": "v_fn_75_CursorUnlock",
           "offset": 300
         },
         {
@@ -1988,7 +1993,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_80",
+          "name": "v_fn_80_StereoEnabled",
           "offset": 320
         },
         {
@@ -2605,6 +2610,35 @@
         {
           "type": "uint32_t",
           "name": "m_flags"
+        }
+      ]
+    },
+    {
+      "name": "CGxBatch",
+      "members": [
+        {
+          "type": "EGxPrim",
+          "name": "m_primType"
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_start",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 8
+        },
+        {
+          "type": "uint16_t",
+          "name": "m_minIndex",
+          "offset": 12
+        },
+        {
+          "type": "uint16_t",
+          "name": "m_maxIndex",
+          "offset": 14
         }
       ]
     },

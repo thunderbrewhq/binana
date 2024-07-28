@@ -69,7 +69,8 @@ struct CGxDevice__vtable {
   void* v_fn_9;
   // int32_t DeviceCreate(long (*)(void*, uint32_t, uint32_t, int32_t), CGxFormat const&);
   void* v_fn_10_DeviceCreate;
-  void* v_fn_11;
+  // void DeviceDestroy();
+  void* v_fn_11_DeviceDestroy;
   void* v_fn_12;
   // int32_t DeviceSetFormat(struct CGxFormat const &);
   void* v_fn_13_DeviceSetFormat;
@@ -90,7 +91,8 @@ struct CGxDevice__vtable {
   void* v_fn_25;
   void* v_fn_26;
   void* v_fn_27;
-  void* v_fn_28;
+  // void DeviceOverride(EGxOverride, uint32_t);
+  void* v_fn_28_DeviceOverride;
   void* v_fn_29;
   void* v_fn_30;
   void* v_fn_31;
@@ -99,14 +101,17 @@ struct CGxDevice__vtable {
   void* v_fn_34;
   // void CapsWindowSize(CRect&);
   void* v_fn_35_CapsWindowSize;
-  void* v_fn_36;
+  // void CapsWindowSize(CRect&);
+  void* v_fn_36_CapsWindowSizeInScreenCoords;
   void* v_fn_37;
   // void ScenePresent(uint32_t);
   void* v_fn_38_ScenePresent;
-  void* v_fn_39;
+  // void SceneClear(uint32_t, CImVector);
+  void* v_fn_39_SceneClear;
   // void XformSetProjection(const C44Matrix&);
   void* v_fn_40_XformSetProjection;
-  void* v_fn_41;
+  // void XformSetView(const C44Matrix&);
+  void* v_fn_41_XformSetView;
   // void Draw(CGxBatch*, int32_t);
   void* v_fn_42_Draw;
   void* v_fn_43;
@@ -150,14 +155,18 @@ struct CGxDevice__vtable {
   void* v_fn_70_ShaderConstantsSet;
   void* v_fn_71;
   void* v_fn_72;
-  void* v_fn_73;
-  void* v_fn_74;
-  void* v_fn_75;
+  // void CursorSetVisible(int32_t);
+  void* v_fn_73_CursorSetVisible;
+  // void* CursorLock();
+  void* v_fn_74_CursorLock;
+  // void CursorUnlock(uint32_t, uint32_t);
+  void* v_fn_75_CursorUnlock;
   void* v_fn_76;
   void* v_fn_77;
   void* v_fn_78;
   void* v_fn_79;
-  void* v_fn_80;
+  // bool StereoEnabled();
+  void* v_fn_80_StereoEnabled;
   void* v_fn_81;
   void* v_fn_82;
   void* v_fn_83;
@@ -230,11 +239,12 @@ struct CGxDevice {
   uint32_t unk28E8;
   TSFixedArray_CGxAppRenderState m_appRenderStates;
   TSFixedArray_CGxStateBom m_hwRenderStates;
-  uint32_t unk2904[20]; // 0x2904 (size 0x50) 
+  uint32_t unk2904[19]; // 0x2904 (size 0x4C) 
+  int32_t m_cursorVisible;
   int32_t m_hardwareCursor; // 0x2954 (size 0x4)
-  uint32_t unk2958;
-  uint32_t unk295C;
-  CImVector m_cursorImage[1024]; // 0x2960 (size 0x4)
+  uint32_t m_cursorHotspotX;
+  uint32_t m_cursorHotspotY;
+  CImVector m_cursor[1024]; // 0x2960 (size 0x4)
   CGxTex* m_cursorTexture; // 0x3960 (size 0x4)
   // 0x3964 == 14688 (the complete size of CGxDevice)
 };

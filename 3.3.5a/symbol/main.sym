@@ -8,6 +8,12 @@ CDataStore__destructor 004038A0 f ; CDataStore::~CDataStore()
 InitializeGlobal 004067F0 f end=00406B67
 DestroyGlobal 00406B70 f end=00406C65
 CommonMain 00406C70 f end=00406D64
+C44Matrix__C44Matrix 00407F40 f end=00407F76
+C44Matrix__operator_equals_C44Matrix 00407F80 f end=00407FEA
+GxXformSetProjection 00408030 f end=00408049
+GxXformViewport 00408070 f end=004080D9
+GxRsSet_CGxShader 00408240 f end=00408258
+GxRsSet_int32_t 00408BF0 f end=00408C27
 CGxDevice__RsPush 00409670 f end=004096CC
 purecall 0040BAA5 f end=0040BACF
 nullsub_1 0040D3B5 f
@@ -104,6 +110,7 @@ IEvtTimerGetNextTime 00480F70 f end=00480FCA
 IEvtTimerDispatch 00481100 f end=00481289
 IEvtTimerKill 00481290 f end=0048138F
 IEvtTimerSet 00481390 f end=004814E4
+GxDraw 00482A40 f end=00482A5D
 GxCapsWindowSizeInScreenCoords 00493BF0 f end=00493C09
 ScrnLayerSetRect 004A8500 f end=004A8522
 OnPaint 004A8720 f end=004A8B58
@@ -114,6 +121,11 @@ TextBlockCreate 004BDAA0 f end=004BDBE4
 TextBlockSetStringPos 004BDBF0 f end=004BDC4C
 TextBlockGetWrappedTextHeight 004BDD80 f
 TextBlockGenerateFont 004BE9C0 f end=004BEB8C
+CCamera__SetupWorldProjection 004BECF0 f end=004BEE5E
+CameraSetupScreenProjection 004BEE60 f end=004BF0B9
+CameraSetupWorldProjection 004BF0C0 f end=004BF0E2
+CCamera__CCamera 004BF770 f end=004BFA4E
+CameraCreate 004BFCA0 f end=004BFCD4
 Script_GetLocale 004DBFD0 f end=004DBFF3 ; thanks namreeb :^)
 Script_IsWindowsClient 004DCE40 f end=004DCE5E
 Script_RestartGx 004DD400 f end=004DD412
@@ -1994,6 +2006,7 @@ Script_GetVehicleUIIndicatorSeat 00614EF0 f end=00614FC6
 nullsub_4 00632050 f
 nullsub_5 00653A10 f
 GxDevCreate 00681290 f end=00681301
+GxTexUpdate 006813D0 f end=006813EC
 GxLog 006817E0 f end=006817F5
 GxPrimIndexPtr 00681AB0 f end=00681AFB
 GxPrimVertexPtr 00681B00 f
@@ -2021,15 +2034,19 @@ CGxDevice__ShaderConstantsLock 00683560 f end=00683577
 CGxDevice__ShaderConstantsUnlock 00683580 f end=006835D6
 CGxDevice__ICursorDestroy 006835E0 f end=00683602
 CGxDevice__ICursorUpdate 00683610 f end=00683632
+CGxDevice__CursorSetVisible 00683640 f end=00683650
+CGxDevice__CursorLock 00683650 f end=00683657
 CGxDevice__DeviceSetFormat 006840F0 f end=0068416C
 CGxDevice__DeviceSetGamma 00684190 f end=006841AF
 CGxDevice__DeviceSetDefWindow 00684360 f end=006843B0
 CGxDevice__ClipPlaneSet 00684440 f end=006844B9
 CGxDevice__LightSet 006847D0 f end=00684843
 CGxDevice__BufStream 00684850 f end=0068489F
+CGxDevice__TexMarkForUpdate 006848A0 f end=000684900
 CGxDevice__ITexMarkAsUpdated 00684900 f end=0068492D
 CGxDevice__IShaderLoad 00684970 f end=00684AC8
 CGxDevice__ICursorCreate 00684AD0 f end=00684B4A
+CGxDevice__CursorUnlock 00684B50 f end=00684B99
 CGxDevice__Log 00684C20 f end=00684C3E
 CGxDevice__Log_CGxCaps 00684C40 f end=00684D07 ; CGxDevice::Log(CGxCaps const&) const
 CGxDevice__Log 00684D10 f end=00684D6C
@@ -2067,7 +2084,12 @@ CGxDeviceD3d__DeviceCreate_WindowProc_CGxFormat 00690750 f end=00690821
 CGxDeviceD3d__ICursorDestroy 006A00C0 f end=006A0102
 CGxDeviceD3d9Ex__CGxDeviceD3d9Ex 006A1A90 f end=006A1C24
 CGxDeviceD3d__ITexMarkAsUpdated 006A3070 f end=006A30CF
+CGxDeviceD3d__ISceneBegin 006A3350 f
+CGxDeviceD3d__ScenePresent 006A3450 f
 CGxDeviceD3d__ScenePresent 006A3450 f end=006A3611
+CGxDeviceD3d__Draw 006A3620 f
+CGxDeviceD3d__IStateSyncEnables 006A3810 f
+CGxDeviceD3d__ISetVertexBuffer 006A39E0 f
 CGxDeviceD3d__IRsSendToHw 006A4C30 f end=006A5499
 CGxDeviceD3d__CapsWindowSize 006A5A00 f end=006A5A25
 CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF
