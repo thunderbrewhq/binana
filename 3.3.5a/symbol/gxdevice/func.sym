@@ -53,4 +53,5 @@ CGxDevice__ShaderCreate 006897C0 f end=00689A49
 CGxDevice__ShaderConstantsSet 006833E0 f end=00683554
 CGxDevice__CursorSetVisible 00683640 f end=00683650
 CGxDevice__CursorLock 00683650 f end=00683657
+CGxDevice__CursorSetDepth 00683660 f end=00683670
 CGxDevice__CursorUnlock 00684B50 f end=00684B99

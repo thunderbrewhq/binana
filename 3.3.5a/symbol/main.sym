@@ -9,9 +9,11 @@ InitializeGlobal 004067F0 f end=00406B67
 DestroyGlobal 00406B70 f end=00406C65
 CommonMain 00406C70 f end=00406D64
 C44Matrix__C44Matrix 00407F40 f end=00407F76
-C44Matrix__operator_equals_C44Matrix 00407F80 f end=00407FEA
+C44Matrix__operator_assign_C44Matrix 00407F80 f end=00407FEA
 GxXformSetProjection 00408030 f end=00408049
 GxXformViewport 00408070 f end=004080D9
+GxXformProjNativeTranspose 00408110 f end=0040820F
+GxShaderConstantsSet 00408210 f end=0040823B
 GxRsSet_CGxShader 00408240 f end=00408258
 GxRsSet_int32_t 00408BF0 f end=00408C27
 CGxDevice__RsPush 00409670 f end=004096CC
@@ -110,6 +112,9 @@ IEvtTimerGetNextTime 00480F70 f end=00480FCA
 IEvtTimerDispatch 00481100 f end=00481289
 IEvtTimerKill 00481290 f end=0048138F
 IEvtTimerSet 00481390 f end=004814E4
+GxBufLock 004829D0 f end=004829E9
+GxBufUnlock 004829F0 f end=00482A13
+GxBufStream 00482A20 f end=00482A3C
 GxDraw 00482A40 f end=00482A5D
 GxCapsWindowSizeInScreenCoords 00493BF0 f end=00493C09
 ScrnLayerSetRect 004A8500 f end=004A8522
@@ -121,11 +126,33 @@ TextBlockCreate 004BDAA0 f end=004BDBE4
 TextBlockSetStringPos 004BDBF0 f end=004BDC4C
 TextBlockGetWrappedTextHeight 004BDD80 f
 TextBlockGenerateFont 004BE9C0 f end=004BEB8C
+GxXformProjection 004BEC70 f end=004BEC88
 CCamera__SetupWorldProjection 004BECF0 f end=004BEE5E
 CameraSetupScreenProjection 004BEE60 f end=004BF0B9
 CameraSetupWorldProjection 004BF0C0 f end=004BF0E2
 CCamera__CCamera 004BF770 f end=004BFA4E
 CameraCreate 004BFCA0 f end=004BFCD4
+CRndSeed__SetSeed 004C1510 f
+C44Matrix__Determinant 004C1930 f
+C44Matrix__Translate 004C1B30 f
+C44Matrix__Scale_C3Vector 004C1B90 f
+C44Matrix__Scale_float 004C1BF0 f
+C44Matrix__C44Matrix_C4Quaternion 004C1DE0 f
+operator_multiply_C44Matrix_C44Matrix 004C1F00 f
+operator_multiply_C3Vector_C44Matrix 004C21B0 f
+C44Matrix__operator_assignment_multiply 004C2370 f
+C44Matrix__Transpose 004C23D0 f
+C44Matrix__Inverse 004C2F90 f
+C44Matrix__AffineInverse 004C2FC0 f
+C44Matrix__AffineInvertInPlace 004C30A0 f
+C44Matrix__RotationAroundZ 004C3290 f
+C44Matrix__RotateAroundX 004C3300 f
+C44Matrix__RotateAroundY 004C3340 f
+C44Matrix__RotateAroundZ 004C3380 f
+C44Matrix__Rotate 004C33C0 f
+C3Vector__Normalize_1 004C3420 f
+C3Vector__Normalize_2 004C3600 f
+C33Matrix__operator_assign_C33Matrix 004C51B0 f
 Script_GetLocale 004DBFD0 f end=004DBFF3 ; thanks namreeb :^)
 Script_IsWindowsClient 004DCE40 f end=004DCE5E
 Script_RestartGx 004DD400 f end=004DD412
@@ -993,6 +1020,7 @@ Script_CloseBankFrame 0057B9C0 f end=0057B9E0
 Script_GetNumBankSlots 0057BAB0 f end=0057BB30
 Script_GetBankSlotCost 0057BB30 f end=0057BBB3
 Script_PurchaseSlot 0057BBC0 f end=0057BC8A
+GxXformPop 0057C420 f end=0057C44A
 Script_GetNumTrackingTypes 0057F170 f end=0057F1AE
 Script_GetTrackingInfo 0057F1B0 f end=0057F37A
 Script_SetTracking 0057F380 f end=0057F4F0
@@ -2003,6 +2031,7 @@ Script_UnitDebuff 00614CF0 f end=00614D3F
 Script_UnitAura 00614D40 f end=00614D83
 Script_GetVehicleUIIndicator 00614E60 f end=00614EEE
 Script_GetVehicleUIIndicatorSeat 00614EF0 f end=00614FC6
+GxXformPush_EGxXform_C44Matrix 00616AD0 f end=00616AE8
 nullsub_4 00632050 f
 nullsub_5 00653A10 f
 GxDevCreate 00681290 f end=00681301
@@ -2036,6 +2065,7 @@ CGxDevice__ICursorDestroy 006835E0 f end=00683602
 CGxDevice__ICursorUpdate 00683610 f end=00683632
 CGxDevice__CursorSetVisible 00683640 f end=00683650
 CGxDevice__CursorLock 00683650 f end=00683657
+CGxDevice__CursorSetDepth 00683660 f end=00683670
 CGxDevice__DeviceSetFormat 006840F0 f end=0068416C
 CGxDevice__DeviceSetGamma 00684190 f end=006841AF
 CGxDevice__DeviceSetDefWindow 00684360 f end=006843B0
@@ -2065,6 +2095,7 @@ CGxDevice__ICursorDraw 00687A90 f end=00687FCA
 CGxDevice__PoolDestroy 00688340 f end=00688372
 CGxDevice__CGxDevice 00688690 f end=0068903F
 CGxDevice__ShaderCreate 006897C0 f end=00689A49
+CGxShader__Valid 00689A50 f end=00689A6F
 CGxDevice__NewD3d 00689EF0 f end=00689F14
 CGxDeviceOpenGl__CGxDeviceOpenGl 0068BBC0 f end=0068BD15
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44
@@ -2084,17 +2115,22 @@ CGxDeviceD3d__DeviceCreate_WindowProc_CGxFormat 00690750 f end=00690821
 CGxDeviceD3d__ICursorDestroy 006A00C0 f end=006A0102
 CGxDeviceD3d9Ex__CGxDeviceD3d9Ex 006A1A90 f end=006A1C24
 CGxDeviceD3d__ITexMarkAsUpdated 006A3070 f end=006A30CF
-CGxDeviceD3d__ISceneBegin 006A3350 f
-CGxDeviceD3d__ScenePresent 006A3450 f
+CGxDeviceD3d__ISceneBegin 006A3350 f end=006A3417
 CGxDeviceD3d__ScenePresent 006A3450 f end=006A3611
-CGxDeviceD3d__Draw 006A3620 f
-CGxDeviceD3d__IStateSyncEnables 006A3810 f
-CGxDeviceD3d__ISetVertexBuffer 006A39E0 f
+CGxDeviceD3d__Draw 006A3620 f end=006A3716
+CGxDeviceD3d__IStateSyncEnables 006A3810 f end=006A386E
+CGxDeviceD3d__ISetVertexBuffer 006A39E0 f end=006A3A59
 CGxDeviceD3d__IRsSendToHw 006A4C30 f end=006A5499
 CGxDeviceD3d__CapsWindowSize 006A5A00 f end=006A5A25
+CGxDeviceD3d__IShaderCreate 006A5E10 f end=006A5E36
 CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF
 CGxDeviceD3d__XformSetProjection 006A9B40 f end=006A9D88
+CGxDeviceD3d__XformSetView 006A9E00 f end=006A9E09
+CGxDeviceD3d__IShaderConstantsFlush 006A9FE0 f end=006AA06D
+CGxDeviceD3d__IShaderCreatePixel 006AA070 f end=006AA0C5
+CGxDeviceD3d__IShaderCreateVertex 006AA0D0 f end=006AA125
 CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A
+CGxDeviceD3d__IBindVertexShader 006AA2F0 f end=006AA346
 nullsub_154 006B0960 f
 nullsub_151 006B1B80 f
 nullsub_6 006B1B90 f
@@ -2471,8 +2507,12 @@ nullsub_147 009DE1A0 f
 nullsub_148 009DE1B0 f
 nullsub_149 009DE1C0 f
 nullsub_150 009DE1D0 f
+CGxDevice__vtable 00A2DDC0 l
 CGxDeviceOpenGl__vtable 00A2E198 l
-CGxDevice__vtable 00a2ddc0 l
+g_theGxDevicePtr 00C5DF88 l
+CGxDevice__s_uiVertexShader 00C5DFDC l
+CGxDevice__s_shadowConstants 00C5DFE0 l
+CGxDevice__s_uiPixelShader 00C5FFFC l
 CGxDeviceD3d__vtable 00a2e718 l
 CGxDeviceD3d9Ex__vtable 00a2f500 l
 s_rect 00adbab4 l ; RECTF
@@ -2482,8 +2522,6 @@ s_fontHeight 00adbacc l ; float
 s_hRect 00adbad4 l ; RECTF
 s_baseTextFlags 00adbae4 l ; uint32
 s_mainThread 00b417c8 l
-g_theGxDevicePtr 00c5df88 l
-CGxDevice__s_shadowConstants 00c5dfe0 l
 s_caretpixheight 00ca1690 l
 s_caret 00ca1694 l ; int32
 s_caretpixwidth 00ca1718 l

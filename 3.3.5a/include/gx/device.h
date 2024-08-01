@@ -154,7 +154,8 @@ struct CGxDevice__vtable {
   // void ShaderConstantsSet(EGxShTarget, uint32_t, const float*, uint32_t);
   void* v_fn_70_ShaderConstantsSet;
   void* v_fn_71;
-  void* v_fn_72;
+  // void IShaderCreate(CGxShader*);
+  void* v_fn_72_IShaderCreate;
   // void CursorSetVisible(int32_t);
   void* v_fn_73_CursorSetVisible;
   // void* CursorLock();
@@ -179,7 +180,7 @@ struct CGxDevice {
   TSGrowableArray_CGxPushedRenderState m_pushedStates; // 0x4 (size: 0x14)
   TSGrowableArray_uint32_t m_stackOffsets; // 0x18 (size: 0x14)
   TSGrowableArray_EGxRenderState m_dirtyStates; // 0x2C (size: 0x14)
-  uint32_t m_unk40[76];
+  uint32_t m_unk34[76];
   CRect m_defWindowRect; // 0x164 (size: 0x10)
   CRect m_curWindowRect; // 0x174 (size: 0x10)
   uint32_t m_unk184[12];
@@ -246,7 +247,8 @@ struct CGxDevice {
   uint32_t m_cursorHotspotY;
   CImVector m_cursor[1024]; // 0x2960 (size 0x4)
   CGxTex* m_cursorTexture; // 0x3960 (size 0x4)
-  // 0x3964 == 14688 (the complete size of CGxDevice)
+  float m_cursorDepth; // 0x3964 (size 0x4)
+  // 0x3968 == 14692 (the complete size of CGxDevice)
 };
 
 #endif

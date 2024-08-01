@@ -1,3 +1,5 @@
-g_theGxDevicePtr 00c5df88 l
-CGxDevice__vtable 00a2ddc0 l
-CGxDevice__s_shadowConstants 00c5dfe0 l
+g_theGxDevicePtr 00C5DF88 l
+CGxDevice__vtable 00A2DDC0 l
+CGxDevice__s_shadowConstants 00C5DFE0 l
+CGxDevice__s_uiVertexShader 00C5DFDC l
+CGxDevice__s_uiPixelShader 00C5FFFC l
