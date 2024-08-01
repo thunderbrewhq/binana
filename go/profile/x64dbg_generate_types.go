@@ -55,7 +55,7 @@ loop:
 	return
 }
 
-func cc_type_to_typedef(t cc.Type) (m x64dbg.Type) {
+func cc_type_to_typedef(t cc.Type) (m x64dbg.AliasType) {
 	var s string
 	var arrsize int32 = 1
 	var array bool
@@ -156,7 +156,7 @@ func (profile *Profile) generate_x64dbg_types() (err error) {
 			if declarator, ok := node.(*cc.Declarator); ok {
 				if declarator.IsTypedefName {
 					if declarator.Type().Kind() != cc.Struct {
-						var x64_type x64dbg.Type = cc_type_to_typedef(declarator.Type())
+						var x64_type x64dbg.AliasType = cc_type_to_typedef(declarator.Type())
 						x64_type.Name = scope_id.String()
 						if !slices.Contains(ignore_types, x64_type.Name) {
 							x64_types.Types = append(x64_types.Types, x64_type)
@@ -180,6 +180,7 @@ func (profile *Profile) generate_x64dbg_types() (err error) {
 
 		var x64_struct x64dbg.StructType
 		x64_struct.Name = struct_name.String()
+		x64_struct.Size = int32(struct_type.Size())
 
 		for i := range struct_type.NumField() {
 			struct_member := struct_type.FieldByIndex([]int{i})
@@ -199,7 +200,7 @@ func (profile *Profile) generate_x64dbg_types() (err error) {
 
 				for i := range struct_member.Type().NumField() {
 					union_field := struct_member.Type().FieldByIndex([]int{i})
-					var x64_union_member x64dbg.Type = cc_type_to_typedef(union_field.Type())
+					var x64_union_member x64dbg.AliasType = cc_type_to_typedef(union_field.Type())
 					x64_union_member.Name = union_field.Name().String()
 					x64_union.Members = append(x64_union.Members, x64_union_member)
 				}
@@ -210,11 +211,13 @@ func (profile *Profile) generate_x64dbg_types() (err error) {
 				x64_struct_member.Type = union_type_name
 				x64_struct_member.Name = struct_member.Name().String()
 				x64_struct_member.Offset = int32(struct_member.Offset())
+				// x64_struct_member.Offset = -1
 				x64_struct.Members = append(x64_struct.Members, x64_struct_member)
 			} else {
 
 				x64_struct_member := cc_type_to_struct_member_type(struct_member.Type())
 				x64_struct_member.Name = struct_member.Name().String()
+				// x64_struct_member.Offset = -1
 				x64_struct_member.Offset = int32(struct_member.Offset())
 				x64_struct.Members = append(x64_struct.Members, x64_struct_member)
 			}
@@ -224,6 +227,11 @@ func (profile *Profile) generate_x64dbg_types() (err error) {
 	}
 
 	types_file_path := filepath.Join(profile.Directory, "x32dbg", "types.json")
+
+	err = x64dbg.SortTypes(&x64_types)
+	if err != nil {
+		return
+	}
 
 	err = x64dbg.SaveTypes(types_file_path, &x64_types)
 	if err != nil {

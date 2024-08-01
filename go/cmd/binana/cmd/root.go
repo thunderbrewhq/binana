@@ -40,4 +40,5 @@ func init() {
 	x64dbg_gen.Flags().StringP("base-address", "b", "00400000", "the base address of the module")
 
 	rootCmd.AddCommand(x64dbg_gen)
+	rootCmd.AddCommand(x64dbg_typesort)
 }
