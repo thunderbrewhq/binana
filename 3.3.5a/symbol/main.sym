@@ -153,12 +153,30 @@ C44Matrix__Rotate 004C33C0 f
 C3Vector__Normalize_1 004C3420 f
 C3Vector__Normalize_2 004C3600 f
 C33Matrix__operator_assign_C33Matrix 004C51B0 f
+CGlueMgr__SetCurrentAccount 004D7F60 f end=004D7F82
+CGlueMgr__DisplayLoginStatus 004D80C0 f end=004D8200
+CGlueMgr__SetScreen 004D82A0 f end=004D82B8
+CGlueMgr__UpdateCurrentScreen 004D82C0 f end=004D834D
+CGlueMgr__HandleDisplaySizeChanged 004D8860 f end=004D8924
+CGlueMgr__Suspend 004D8930 f end=004D8A2D
+CGlueMgr__LoginServerLogin 004D8A30 f end=004D8B9C
+CGlueMgr__ChangeRealm 004D8BD0 f end=004D8C56
+CGlueMgr__OnKickReasonMsg 004D9500 f end=004D9582
+CGlueMgr__GetCharacterList 004D95C0 f end=004D960D
+CGlueMgr__StatusDialogClick 004D98D0 f end=004D99D4
+CGlueMgr__LogConnectionStatus 004DA3D0 f end=004DA4A8
+CGlueMgr__SetLoginStateAndResult 004DA4B0 f end=004DA50D
+CGlueMgr__Resume 004DA5F0 f end=004DA9C4
+CGlueMgr__NetDisconnectHandler 004DA9D0 f end=004DAB3D
+CGlueMgr__Idle 004DAB40 f end=004DB9E4
+CGlueMgr__Initialize 004DB9F0 f end=004DBBBF
 Script_GetLocale 004DBFD0 f end=004DBFF3 ; thanks namreeb :^)
 Script_IsWindowsClient 004DCE40 f end=004DCE5E
 Script_RestartGx 004DD400 f end=004DD412
 Script_RestoreVideoStereoDefaults 004DD420 f end=004DD42D
 Script_GetMovieResolution 004DD610 f end=004DD671
 Script_GetExpansionLevel 004DDC20 f end=004DDC51
+CGlueMgr__SurveyDownloadCancel 004E4A40 f end=004E4A9E
 TSList__LinkNode 004F71A0 f end=004F724D
 Script_LoggingChat 004FBD00 f end=004FBD13
 Script_LoggingCombat 004FBD20 f end=004FBD36
@@ -535,6 +553,7 @@ Script_AcceptAreaSpiritHeal 005262D0 f end=005262D8
 Script_TargetTotem 005262E0 f end=00526362
 Script_InteractUnit 00527F00 f end=00527FD4
 Script_LoadAddOn 00528920 f end=00528AE1
+CGameUI__Initialize 0052A980 f end=0052AEC6
 Script_RegisterForSave 0052B470 f end=0052B4D4
 Script_RegisterForSavePerCharacter 0052B4E0 f end=0052B544
 Script_GetNumPartyMembers 0052C110 f end=0052C187
@@ -2031,10 +2050,12 @@ Script_UnitDebuff 00614CF0 f end=00614D3F
 Script_UnitAura 00614D40 f end=00614D83
 Script_GetVehicleUIIndicator 00614E60 f end=00614EEE
 Script_GetVehicleUIIndicatorSeat 00614EF0 f end=00614FC6
+CursorInitialize 006163B0 f end=006164A5
 GxXformPush_EGxXform_C44Matrix 00616AD0 f end=00616AE8
 nullsub_4 00632050 f
 nullsub_5 00653A10 f
 GxDevCreate 00681290 f end=00681301
+GxSceneClear 006813B0 f end=006813CD
 GxTexUpdate 006813D0 f end=006813EC
 GxLog 006817E0 f end=006817F5
 GxPrimIndexPtr 00681AB0 f end=00681AFB
@@ -2044,6 +2065,7 @@ GxTexCreate 00681CB0 f end=00681D87
 GxDrawLockedElements 00682340 f end=0068239E
 GxPrimVertexPtr_FFP 00682400 f end=00682781 ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
 GxPrimLockVertexPtrs 006828C0 f end=006828FE
+GxScenePresent 00682A00 f end=00682A33
 CGxDevice__DeviceCreate_WindowProc_CGxFormat 00682CB0 f end=00682CCB
 CGxDevice__DeviceSetBaseMipLevel 00682D00 f end=00682D10
 CGxDevice__DeviceApi 00682D20 f end=00682D27
@@ -2116,6 +2138,7 @@ CGxDeviceD3d__ICursorDestroy 006A00C0 f end=006A0102
 CGxDeviceD3d9Ex__CGxDeviceD3d9Ex 006A1A90 f end=006A1C24
 CGxDeviceD3d__ITexMarkAsUpdated 006A3070 f end=006A30CF
 CGxDeviceD3d__ISceneBegin 006A3350 f end=006A3417
+CGxDeviceD3d__ISceneEnd 006A3420 f end=006A3449
 CGxDeviceD3d__ScenePresent 006A3450 f end=006A3611
 CGxDeviceD3d__Draw 006A3620 f end=006A3716
 CGxDeviceD3d__IStateSyncEnables 006A3810 f end=006A386E

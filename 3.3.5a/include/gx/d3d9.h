@@ -30,9 +30,9 @@ struct CGxDeviceD3d {
   IDirect3DSurface9* m_defDepthSurface;
   uint32_t unk3B44;
   uint32_t unk3B48;
-  uint32_t unk3B4C;
-  uint32_t unk3B50;
-  uint32_t unk3B54;
+  int32_t m_hwCursorNeedsUpdate;
+  IDirect3DTexture9* m_hwCursorTexture;
+  IDirect3DSurface9* m_hwCursorBitmap;
   uint32_t unk3B58;
   IDirect3DVertexDeclaration9* m_d3dCurrentVertexDecl;
   IDirect3DIndexBuffer9* m_d3dCurrentIndexBuf;

@@ -13,6 +13,9 @@ typedef struct IDirect3DVertexDeclaration9 IDirect3DVertexDeclaration9;
 typedef struct IDirect3DSurface9 IDirect3DSurface9;
 typedef struct IDirect3DIndexBuffer9 IDirect3DIndexBuffer9;
 typedef struct IDirect3DVertexBuffer9 IDirect3DVertexBuffer9;
+typedef struct IDirect3DTexture9 IDirect3DTexture9;
+
+typedef struct D3DLOCKED_RECT D3DLOCKED_RECT;
 
 struct D3DDISPLAYMODE {
   uint32_t Width;
@@ -43,6 +46,15 @@ struct IDirect3DIndexBuffer9 {
 
 struct IDirect3DVertexBuffer9 {
   void** v_vtable;
+};
+
+struct IDirect3DTexture9 {
+  void** v_vtable;
+};
+
+struct D3DLOCKED_RECT {
+  int32_t Pitch;
+  void* pBits;
 };
 
 #endif

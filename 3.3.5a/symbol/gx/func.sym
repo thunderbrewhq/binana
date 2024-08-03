@@ -18,3 +18,5 @@ GxShaderConstantsSet 00408210 f end=0040823B
 GxBufLock 004829D0 f end=004829E9
 GxBufUnlock 004829F0 f end=00482A13
 GxBufStream 00482A20 f end=00482A3C
+GxScenePresent 00682A00 f end=00682A33
+GxSceneClear 006813B0 f end=006813CD
