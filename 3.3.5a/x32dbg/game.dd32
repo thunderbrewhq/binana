@@ -35511,6 +35511,12 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "s_cursorImages",
+      "address": "0x826df0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "g_theGxDevicePtr",
       "address": "0x85df88"
     },

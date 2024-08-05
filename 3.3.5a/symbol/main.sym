@@ -2532,6 +2532,7 @@ nullsub_149 009DE1C0 f
 nullsub_150 009DE1D0 f
 CGxDevice__vtable 00A2DDC0 l
 CGxDeviceOpenGl__vtable 00A2E198 l
+s_cursorImages 00C26DF0 l type="CImVector[54][1024]"
 g_theGxDevicePtr 00C5DF88 l
 CGxDevice__s_uiVertexShader 00C5DFDC l
 CGxDevice__s_shadowConstants 00C5DFE0 l

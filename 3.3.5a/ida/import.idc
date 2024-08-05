@@ -2545,6 +2545,7 @@ static main() {
   set_name(0x00ADBAD4, "s_hRect");
   set_name(0x00ADBAE4, "s_baseTextFlags");
   set_name(0x00B417C8, "s_mainThread");
+  set_name(0x00C26DF0, "s_cursorImages");
   set_name(0x00C5DF88, "g_theGxDevicePtr");
   set_name(0x00C5DFDC, "CGxDevice__s_uiVertexShader");
   set_name(0x00C5DFE0, "CGxDevice__s_shadowConstants");
@@ -7442,4 +7443,6 @@ static main() {
   set_func_start(0x009DE1B0, 0x009DE1B0);
   set_func_start(0x009DE1C0, 0x009DE1C0);
   set_func_start(0x009DE1D0, 0x009DE1D0);
+  // Apply data types
+  apply_type(0x00C26DF0, "CImVector[54][1024]");
 }
