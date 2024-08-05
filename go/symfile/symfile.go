@@ -31,6 +31,9 @@ type Entry struct {
 	// Attributes
 	//  end=AABBCCEEDD
 	EndAddress uint64
+	//  type=void*
+	// The C syntax type of the data
+	DataType string
 }
 
 type Table interface {

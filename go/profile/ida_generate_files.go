@@ -42,6 +42,15 @@ func (profile *Profile) generate_symbols_idc() (err error) {
 			}
 		}
 	}
+	fmt.Fprintf(output_file, "  // Apply data types\n")
+
+	for _, symbol := range profile.SymbolTable.Entries {
+		if symbol.DataType != "" {
+			quoted_data_type := strconv.Quote(symbol.DataType)
+			address := fmt.Sprintf("0x%08X", symbol.StartAddress)
+			fmt.Fprintf(output_file, "  apply_type(%s, %s);\n", address, quoted_data_type)
+		}
+	}
 
 	fmt.Fprintf(output_file, "}\n")
 

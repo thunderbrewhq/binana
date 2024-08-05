@@ -12,6 +12,7 @@ You can use the information here to get a headstart when working on the [Whoa pr
   * [Importing symbols](#importing-symbols)
 - [IDA](#ida)
   * [Importing C headers](#importing-c-headers-1)
+  * [Importing symbols](#importing-symbols-1)
 - [x64dbg](#x64dbg)
   * [Importing database](#importing-database)
   * [Importing types](#importing-types)

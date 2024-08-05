@@ -28,6 +28,68 @@ func (l *loader) read_line() (line string, err error) {
 	return
 }
 
+func parse_attributes(attribute_columns []string) (attributes map[string]string, err error) {
+	attributes = make(map[string]string)
+	var (
+		scanning_quoted_string bool
+		current_key            string
+		current_value          string
+	)
+	for _, attribute_column := range attribute_columns {
+		if scanning_quoted_string {
+			current_value += " "
+			current_value += attribute_column
+
+			if strings.HasSuffix(attribute_column, `"`) {
+				scanning_quoted_string = false
+				attributes[current_key], err = strconv.Unquote(current_value)
+				if err != nil {
+					return
+				}
+				current_key = ""
+				current_value = ""
+				continue
+			} else {
+				continue
+			}
+		}
+
+		key, value_start, found := strings.Cut(attribute_column, "=")
+		if !found {
+			err = fmt.Errorf("extraneous column: '%s'", attribute_column)
+			return
+		}
+
+		current_key = key
+
+		if strings.HasPrefix(value_start, `"`) {
+			current_value = value_start
+			if strings.HasSuffix(value_start, `"`) {
+				attributes[current_key], err = strconv.Unquote(value_start)
+				if err != nil {
+					return
+				}
+				continue
+			} else {
+				scanning_quoted_string = true
+			}
+		} else {
+			// unquoted, we can succeed immediately
+			attributes[current_key] = value_start
+			current_value = ""
+			current_key = ""
+			continue
+		}
+	}
+
+	if scanning_quoted_string {
+		err = fmt.Errorf("line ends in the middle of a quoted attribute --> \"%s", current_value)
+		return
+	}
+
+	return
+}
+
 func (l *loader) parse_line(line string) (err error) {
 	// trim extraneous whitespace
 	line = strings.Trim(line, " \t")
@@ -89,18 +151,22 @@ func (l *loader) parse_line(line string) (err error) {
 
 	// build attributes
 	if num_semantic_columns > 3 {
-		for _, column := range columns[3:] {
-			key, value, found := strings.Cut(column, "=")
-			if found {
-				switch key {
-				case "end":
-					entry.EndAddress, err = strconv.ParseUint(value, 16, 64)
-					if err != nil {
-						return
-					}
-				default:
-					return fmt.Errorf("symfile: (*loader).parse_line: line %d: unknown attribute '%s'", l.line_number, key)
-				}
+		extra_columns := columns[3:num_semantic_columns]
+
+		var attributes map[string]string
+		attributes, err = parse_attributes(extra_columns)
+		if err != nil {
+			return fmt.Errorf("symfile: (*loader).parse_line: line %d: error parsing attribute: '%s'", l.line_number, err)
+		}
+
+		if data_type, found := attributes["type"]; found {
+			entry.DataType = data_type
+		}
+
+		if end_address, found := attributes["end"]; found {
+			entry.EndAddress, err = strconv.ParseUint(end_address, 16, 64)
+			if err != nil {
+				return
 			}
 		}
 	}
