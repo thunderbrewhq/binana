@@ -1,10 +1,10 @@
 #ifndef TEMPEST_RANGE_H
 #define TEMPEST_RANGE_H
 
-#include <stdint.h>
+#include "system/types.h"
 
-typedef struct CRange CRange;
-typedef struct CiRange CiRange;
+DECLARE_STRUCT(CRange);
+DECLARE_STRUCT(CiRange);
 
 struct CRange {
   float l;

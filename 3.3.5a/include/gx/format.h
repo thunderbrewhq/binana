@@ -1,8 +1,7 @@
 #ifndef GX_FORMAT_H
 #define GX_FORMAT_H
 
-#include <stdint.h>
-#include <stdbool.h>
+#include "system/types.h"
 
 #include "tempest/vector.h"
 

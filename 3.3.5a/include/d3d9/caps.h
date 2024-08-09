@@ -1,7 +1,7 @@
 #ifndef D3D9_CAPS_H
 #define D3D9_CAPS_H
 
-#include <stdint.h>
+#include "system/types.h"
 
 typedef enum D3DDEVTYPE D3DDEVTYPE;
 typedef struct D3DVSHADERCAPS2_0 D3DVSHADERCAPS2_0;

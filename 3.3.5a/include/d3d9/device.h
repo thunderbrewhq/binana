@@ -1,7 +1,7 @@
 #ifndef D3D9_DEVICE_H
 #define D3D9_DEVICE_H
 
-#include <stdint.h>
+#include "system/types.h"
 
 #include "d3d9/caps.h"
 

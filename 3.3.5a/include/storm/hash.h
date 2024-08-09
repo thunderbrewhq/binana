@@ -1,7 +1,7 @@
 #ifndef STORM_HASH_H
 #define STORM_HASH_H
 
-#include <stdint.h>
+#include "system/types.h"
 
 #include "storm/array.h"
 #include "storm/list.h"
@@ -24,10 +24,10 @@ struct TSHashObject_##T##_##K { \
   K m_key; \
 };
 
-typedef struct HASHKEY_PTR HASHKEY_PTR;
-typedef struct HASHKEY_STR HASHKEY_STR;
-typedef struct HASHKEY_STRI HASHKEY_STRI;
-typedef struct HASHKEY_NONE HASHKEY_NONE;
+DECLARE_STRUCT(HASHKEY_PTR);
+DECLARE_STRUCT(HASHKEY_STR);
+DECLARE_STRUCT(HASHKEY_STRI);
+DECLARE_STRUCT(HASHKEY_NONE);
 
 struct HASHKEY_PTR {
   void* m_key;
@@ -42,6 +42,7 @@ struct HASHKEY_STRI {
 };
 
 struct HASHKEY_NONE {
+  int32_t m_unused;
 };
 
 #endif

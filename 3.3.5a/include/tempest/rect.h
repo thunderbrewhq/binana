@@ -1,10 +1,10 @@
 #ifndef TEMPEST_RECT_H
 #define TEMPEST_RECT_H
 
-#include <stdint.h>
+#include "system/types.h"
 
-typedef struct CRect CRect;
-typedef struct CiRect CiRect;
+DECLARE_STRUCT(CRect);
+DECLARE_STRUCT(CiRect);
 
 struct CRect {
   float minY; // t

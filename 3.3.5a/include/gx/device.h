@@ -1,7 +1,7 @@
 #ifndef GX_DEVICE_H
 #define GX_DEVICE_H
 
-#include <stdint.h>
+#include "system/types.h"
 
 #include "storm/array.h"
 #include "storm/array/uint32_t.h"

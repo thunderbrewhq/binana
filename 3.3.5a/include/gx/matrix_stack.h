@@ -1,7 +1,7 @@
 #ifndef GX_MATRIX_STACK_H
 #define GX_MATRIX_STACK_H
 
-#include <stdint.h>
+#include "system/types.h"
 
 #include "tempest/matrix.h"
 

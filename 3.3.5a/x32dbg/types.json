@@ -129,8 +129,48 @@
       "name": "EGxuDrawListCategory"
     },
     {
+      "type": "void**",
+      "name": "EVENTHANDLERFUNC"
+    },
+    {
+      "type": "int",
+      "name": "EVENTID"
+    },
+    {
+      "type": "void*",
+      "name": "HEVENTCONTEXT"
+    },
+    {
+      "type": "HPROPCONTEXT__*",
+      "name": "HPROPCONTEXT"
+    },
+    {
+      "type": "long long",
+      "name": "KEY"
+    },
+    {
+      "type": "long long",
+      "name": "MOUSEBUTTON"
+    },
+    {
+      "type": "int",
+      "name": "MOUSEMODE"
+    },
+    {
+      "type": "int",
+      "name": "OSINPUT"
+    },
+    {
+      "type": "int",
+      "name": "OS_MOUSE_MODE"
+    },
+    {
       "type": "int",
       "name": "PIXEL_FORMAT"
+    },
+    {
+      "type": "long long",
+      "name": "SCHEDSTATE"
     },
     {
       "type": "int32_t",
@@ -143,6 +183,50 @@
     {
       "type": "uint32_t",
       "name": "uintptr_t"
+    },
+    {
+      "type": "CSBasePriorityQueue",
+      "name": "TSPriorityQueue_EvtTimer"
+    },
+    {
+      "type": "TSList_EvtMessage",
+      "name": "TSExplicitList_EvtMessage"
+    },
+    {
+      "type": "TSList_EvtHandler",
+      "name": "TSExplicitList_EvtHandler"
+    },
+    {
+      "type": "TSList_EvtKeyDown",
+      "name": "TSExplicitList_EvtKeyDown"
+    },
+    {
+      "type": "TSList_EvtContext",
+      "name": "TSExplicitList_EvtContext"
+    },
+    {
+      "type": "TSList_SIMPLEFRAMENODE",
+      "name": "TSExplicitList_SIMPLEFRAMENODE"
+    },
+    {
+      "type": "TSList_EVENTLISTENERNODE",
+      "name": "TSExplicitList_EVENTLISTENERNODE"
+    },
+    {
+      "type": "TSList_FrameScript_EventObject",
+      "name": "TSExplicitList_FrameScript_EventObject"
+    },
+    {
+      "type": "TSList_CGxBuf",
+      "name": "TSExplicitList_CGxBuf"
+    },
+    {
+      "type": "TSList_CGxPool",
+      "name": "TSExplicitList_CGxPool"
+    },
+    {
+      "type": "TSList_CGxShader",
+      "name": "TSExplicitList_CGxShader"
     }
   ],
   "structs": [
@@ -477,6 +561,94 @@
           "type": "float",
           "name": "w",
           "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "CDataRecycler",
+      "size": 24,
+      "members": [
+        {
+          "type": "CDataRecycler__vtable*",
+          "name": "v_vtable",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "m_nodesRecyclable",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_nodesPerBlock",
+          "offset": 8
+        },
+        {
+          "type": "CDataRecycler__NodeBlock*",
+          "name": "m_nodeBlockList",
+          "offset": 12
+        },
+        {
+          "type": "CDataRecycler__Node*",
+          "name": "m_nodeFullList",
+          "offset": 16
+        },
+        {
+          "type": "CDataRecycler__Node*",
+          "name": "m_nodeEmptyList",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "CDataRecycler__Node",
+      "size": 12,
+      "members": [
+        {
+          "type": "CDataRecycler__Node*",
+          "name": "m_next",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "m_data",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_bytes",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "CDataRecycler__vtable",
+      "size": 20,
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_00",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_01",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_02",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_03",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_04",
+          "offset": 16
         }
       ]
     },
@@ -1010,6 +1182,38 @@
       ]
     },
     {
+      "name": "CSBasePriority",
+      "size": 8,
+      "members": [
+        {
+          "type": "CSBasePriorityQueue*",
+          "name": "m_queue",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_index",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "CSRWLock",
+      "size": 12,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "m_opaqueData",
+          "arrsize": 12,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CSimpleFrame",
+      "size": 0
+    },
+    {
       "name": "CiRange",
       "size": 8,
       "members": [
@@ -1125,8 +1329,105 @@
       ]
     },
     {
+      "name": "EVENT_DATA_CHAR",
+      "size": 12,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "ch",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "metaKeyState",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "repeat",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "EVENT_DATA_FOCUS",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "focus",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "EVENT_DATA_IDLE",
+      "size": 8,
+      "members": [
+        {
+          "type": "float",
+          "name": "elapsedSec",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "time",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "EVENT_DATA_SIZE",
+      "size": 8,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "w",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "h",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "FrameScript_Object",
+      "size": 16,
+      "members": [
+        {
+          "type": "void**",
+          "name": "v_vtable",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "lua_registered",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "lua_objectRef",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "m_onEvent",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "HASHKEY_NONE",
-      "size": 0
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "m_unused",
+          "offset": 0
+        }
+      ]
     },
     {
       "name": "HASHKEY_PTR",
@@ -1157,6 +1458,17 @@
         {
           "type": "char*",
           "name": "m_str",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "HPROPCONTEXT__",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unused",
           "offset": 0
         }
       ]
@@ -1246,6 +1558,29 @@
           "type": "C4Pixel*",
           "name": "mip",
           "arrsize": 1,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "SCritSect",
+      "size": 24,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "m_critsect",
+          "arrsize": 24,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TExtraInstanceRecyclable",
+      "size": 4,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_recycleBytes",
           "offset": 0
         }
       ]
@@ -1371,6 +1706,84 @@
       ]
     },
     {
+      "name": "TSGrowableArray_TSList_FrameScript_EventObject",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "TSList_FrameScript_EventObject*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_pointer_to_EvtTimer",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "EvtTimer**",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_pointer_to_void",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "void**",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_uint32_t",
       "size": 16,
       "members": [
@@ -1471,6 +1884,118 @@
       ]
     },
     {
+      "name": "TSLink_EVENTLISTENERNODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_EVENTLISTENERNODE*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "EVENTLISTENERNODE*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_EvtContext",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_EvtContext*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "EvtContext*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_EvtHandler",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_EvtHandler*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "EvtHandler*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_EvtKeyDown",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_EvtKeyDown*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "EvtKeyDown*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_EvtMessage",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_EvtMessage*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "EvtMessage*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_FrameScript_EventObject",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_FrameScript_EventObject*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "FrameScript_EventObject*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_SIMPLEFRAMENODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_SIMPLEFRAMENODE*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "SIMPLEFRAMENODE*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "CAaBox",
       "size": 24,
       "members": [
@@ -1565,6 +2090,23 @@
           "type": "uint32_t",
           "name": "unk2",
           "offset": 4100
+        }
+      ]
+    },
+    {
+      "name": "CDataRecycler__NodeBlock",
+      "size": 16,
+      "members": [
+        {
+          "type": "CDataRecycler__NodeBlock*",
+          "name": "m_next",
+          "offset": 0
+        },
+        {
+          "type": "CDataRecycler__Node",
+          "name": "m_nodes",
+          "arrsize": 1,
+          "offset": 4
         }
       ]
     },
@@ -1745,6 +2287,22 @@
           "type": "CRange",
           "name": "z",
           "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "TSTimerPriority_uint32_t",
+      "size": 12,
+      "members": [
+        {
+          "type": "CSBasePriority",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_val",
+          "offset": 8
         }
       ]
     },
@@ -2547,6 +3105,132 @@
       ]
     },
     {
+      "name": "EVENT_DATA_KEY",
+      "size": 24,
+      "members": [
+        {
+          "type": "KEY",
+          "name": "key",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "metaKeyState",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "repeat",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "time",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "EVENT_DATA_MOUSE",
+      "size": 48,
+      "members": [
+        {
+          "type": "MOUSEMODE",
+          "name": "mode",
+          "offset": 0
+        },
+        {
+          "type": "MOUSEBUTTON",
+          "name": "button",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "buttonState",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "metaKeyState",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "x",
+          "offset": 28
+        },
+        {
+          "type": "float",
+          "name": "y",
+          "offset": 32
+        },
+        {
+          "type": "int32_t",
+          "name": "wheelDistance",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "time",
+          "offset": 40
+        }
+      ]
+    },
+    {
+      "name": "OSEVENT",
+      "size": 20,
+      "members": [
+        {
+          "type": "OSINPUT",
+          "name": "id",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "param",
+          "arrsize": 4,
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "CSBasePriorityQueue",
+      "size": 20,
+      "members": [
+        {
+          "type": "TSGrowableArray_pointer_to_void",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_linkOffset",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "EvtIdTable_pointer_to_EvtTimer",
+      "size": 32,
+      "members": [
+        {
+          "type": "TSGrowableArray_pointer_to_EvtTimer",
+          "name": "m_allocArray",
+          "offset": 0
+        },
+        {
+          "type": "TSGrowableArray_uint32_t",
+          "name": "m_freeArray",
+          "offset": 16
+        }
+      ]
+    },
+    {
       "name": "TSLinkedNode_CGxBuf",
       "size": 8,
       "members": [
@@ -2602,6 +3286,295 @@
           "type": "TSLink_CGxShader",
           "name": "m_link",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_EVENTLISTENERNODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_EVENTLISTENERNODE",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_EvtContext",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_EvtContext",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "EvtHandler",
+      "size": 24,
+      "members": [
+        {
+          "type": "TSLink_EvtHandler",
+          "name": "link",
+          "offset": 0
+        },
+        {
+          "type": "void**",
+          "name": "func",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "param",
+          "offset": 12
+        },
+        {
+          "type": "float",
+          "name": "priority",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "marker",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_EvtHandler",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_EvtHandler",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "EvtKeyDown",
+      "size": 16,
+      "members": [
+        {
+          "type": "TSLink_EvtKeyDown",
+          "name": "link",
+          "offset": 0
+        },
+        {
+          "type": "KEY",
+          "name": "key",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_EvtKeyDown",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_EvtKeyDown",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "EvtMessage",
+      "size": 20,
+      "members": [
+        {
+          "type": "TExtraInstanceRecyclable",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_EvtMessage",
+          "name": "link",
+          "offset": 4
+        },
+        {
+          "type": "EVENTID",
+          "name": "id",
+          "offset": 12
+        },
+        {
+          "type": "char",
+          "name": "data",
+          "arrsize": 4,
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_EvtMessage",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_EvtMessage",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSHashObject_FrameScript_EventObject_HASHKEY_STRI",
+      "size": 24,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_hashval",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_FrameScript_EventObject",
+          "name": "m_linktoslot",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_FrameScript_EventObject",
+          "name": "m_linktofull",
+          "offset": 12
+        },
+        {
+          "type": "HASHKEY_STRI",
+          "name": "m_key",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_FrameScript_EventObject",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_FrameScript_EventObject",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_SIMPLEFRAMENODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_SIMPLEFRAMENODE",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSList_EvtMessage",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_EvtMessage",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_EvtHandler",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_EvtHandler",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_EvtKeyDown",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_EvtKeyDown",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_EvtContext",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_EvtContext",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_SIMPLEFRAMENODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_SIMPLEFRAMENODE",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_EVENTLISTENERNODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_EVENTLISTENERNODE",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_FrameScript_EventObject",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_FrameScript_EventObject",
+          "name": "m_terminator",
+          "offset": 4
         }
       ]
     },
@@ -2703,6 +3676,52 @@
           "type": "uint32_t",
           "name": "m_stackDepth",
           "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "EvtTimer",
+      "size": 48,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "id",
+          "offset": 0
+        },
+        {
+          "type": "TSTimerPriority_uint32_t",
+          "name": "targetTime",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "timeout",
+          "offset": 16
+        },
+        {
+          "type": "void**",
+          "name": "handler",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "param",
+          "offset": 24
+        },
+        {
+          "type": "void**",
+          "name": "guidHandler",
+          "offset": 28
+        },
+        {
+          "type": "uint64_t",
+          "name": "guidParam",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "guidParam2",
+          "offset": 40
         }
       ]
     },
@@ -2835,6 +3854,91 @@
           "type": "TSGrowableArray_uint8_t",
           "name": "code",
           "offset": 68
+        }
+      ]
+    },
+    {
+      "name": "EVENTLISTENERNODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "TSLinkedNode_EVENTLISTENERNODE",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "FrameScript_Object*",
+          "name": "listener",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TInstanceId_EvtContext",
+      "size": 12,
+      "members": [
+        {
+          "type": "TSLinkedNode_EvtContext",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_id",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "FrameScript_EventObject",
+      "size": 24,
+      "members": [
+        {
+          "type": "TSHashObject_FrameScript_EventObject_HASHKEY_STRI",
+          "name": "b_base",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "SIMPLEFRAMENODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "TSLinkedNode_SIMPLEFRAMENODE",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "CSimpleFrame*",
+          "name": "frame",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TSHashTable_FrameScript_EventObject_HASHKEY_STRI",
+      "size": 36,
+      "members": [
+        {
+          "type": "TSList_FrameScript_EventObject",
+          "name": "m_fulllist",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fullnessIndicator",
+          "offset": 12
+        },
+        {
+          "type": "TSGrowableArray_TSList_FrameScript_EventObject",
+          "name": "m_slotlistarray",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_slotmask",
+          "offset": 32
         }
       ]
     },
@@ -3296,6 +4400,28 @@
       ]
     },
     {
+      "name": "EvtTimerQueue",
+      "size": 20,
+      "members": [
+        {
+          "type": "TSPriorityQueue_EvtTimer",
+          "name": "b_base",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSingletonInstanceId_EvtContext",
+      "size": 12,
+      "members": [
+        {
+          "type": "TInstanceId_EvtContext",
+          "name": "b_base",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "CGxDeviceD3d",
       "size": 16048,
       "members": [
@@ -3470,6 +4596,148 @@
           "name": "m_texEnabled",
           "arrsize": 8,
           "offset": 16036
+        }
+      ]
+    },
+    {
+      "name": "EvtContext",
+      "size": 640,
+      "members": [
+        {
+          "type": "TSingletonInstanceId_EvtContext",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "unkA",
+          "offset": 12
+        },
+        {
+          "type": "SCritSect",
+          "name": "m_critsect",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_currTime",
+          "offset": 40
+        },
+        {
+          "type": "SCHEDSTATE",
+          "name": "m_schedState",
+          "offset": 48
+        },
+        {
+          "type": "TSTimerPriority_uint32_t",
+          "name": "m_schedNextWakeTime",
+          "offset": 56
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_schedLastIdle",
+          "offset": 68
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_schedFlags",
+          "offset": 72
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_schedIdleTime",
+          "offset": 76
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_schedInitialIdleTime",
+          "offset": 80
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_schedWeight",
+          "offset": 84
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_schedSmoothWeight",
+          "offset": 88
+        },
+        {
+          "type": "int32_t",
+          "name": "m_schedRebalance",
+          "offset": 92
+        },
+        {
+          "type": "int32_t",
+          "name": "unkXX",
+          "offset": 96
+        },
+        {
+          "type": "int32_t",
+          "name": "unkXY",
+          "offset": 100
+        },
+        {
+          "type": "int32_t",
+          "name": "unkXZ",
+          "offset": 104
+        },
+        {
+          "type": "int32_t",
+          "name": "unkYY",
+          "offset": 108
+        },
+        {
+          "type": "int32_t",
+          "name": "unkYZ",
+          "offset": 112
+        },
+        {
+          "type": "TSExplicitList_EvtHandler",
+          "name": "m_queueHandlerList",
+          "arrsize": 36,
+          "offset": 116
+        },
+        {
+          "type": "TSExplicitList_EvtMessage",
+          "name": "m_queueMessageList",
+          "offset": 548
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_queueSyncButtonState",
+          "offset": 560
+        },
+        {
+          "type": "TSExplicitList_EvtKeyDown",
+          "name": "m_queueSyncKeyDownList",
+          "offset": 564
+        },
+        {
+          "type": "EvtIdTable_pointer_to_EvtTimer",
+          "name": "m_timerIdTable",
+          "offset": 576
+        },
+        {
+          "type": "EvtTimerQueue",
+          "name": "m_timerQueue",
+          "offset": 608
+        },
+        {
+          "type": "HPROPCONTEXT",
+          "name": "m_propContext",
+          "offset": 628
+        },
+        {
+          "type": "void*",
+          "name": "m_callContext",
+          "offset": 632
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_startWatchdog",
+          "offset": 636
         }
       ]
     }

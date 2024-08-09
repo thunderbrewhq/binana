@@ -1,7 +1,7 @@
 #ifndef TEMPEST_QUATERNION_H
 #define TEMPEST_QUATERNION_H
 
-typedef struct C4Quaternion C4Quaternion;
+DECLARE_STRUCT(C4Quaternion);
 
 struct C4Quaternion {
   float x;

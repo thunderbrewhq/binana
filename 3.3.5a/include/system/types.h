@@ -1,5 +1,8 @@
-#ifndef IDA_STD_INT_H
-#define IDA_STD_INT_H
+#ifndef SYSTEM_TYPES_H
+#define SYSTEM_TYPES_H
+
+// stdint
+#if defined(IDA) || defined(BINANA_GENERATOR)
 
 typedef signed char        int8_t;
 typedef short              int16_t;
@@ -13,5 +16,25 @@ typedef unsigned long long uint64_t;
 typedef int32_t ptrdiff_t;
 typedef uint32_t uintptr_t;
 typedef int32_t intptr_t;
+
+#else
+
+#include <stdint.h>
+
+#endif
+
+// stdbool
+
+#if defined(BINANA_GENERATOR)
+
+typedef char bool;
+
+#endif
+
+#if defined(GHIDRA)
+
+#include <stdbool.h>
+
+#endif
 
 #endif

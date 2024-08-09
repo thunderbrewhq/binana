@@ -1,5 +1,6 @@
 #include <idc.idc>
 
+#include "import_data_types.idc"
 static main() {
   // Make names
   set_name(0x00401070, "CDataStore__FetchWrite");
@@ -91,6 +92,7 @@ static main() {
   set_name(0x0047DCA0, "EventForceIdleProcessing");
   set_name(0x0047DEA0, "IEvtSchedulerDestroy");
   set_name(0x0047E910, "InitializeSchedulerThread");
+  set_name(0x0047EC10, "AttachContextToThread");
   set_name(0x0047EFF0, "SchedulerThreadProcProcess");
   set_name(0x0047F230, "SchedulerThreadProc");
   set_name(0x0047F2D0, "EventDoMessageLoop");
@@ -2272,6 +2274,7 @@ static main() {
   set_name(0x0076E4A0, "SMemSetDebugFlags");
   set_name(0x0076E540, "SMemAlloc");
   set_name(0x0076E5A0, "SMemFree");
+  set_name(0x0076E5E0, "SMemReAlloc");
   set_name(0x0076E6E0, "SStrChr");
   set_name(0x0076E760, "SStrCmp");
   set_name(0x0076E780, "SStrCmpI");
@@ -2329,6 +2332,7 @@ static main() {
   set_name(0x00809E30, "Script_SpellStopTargeting");
   set_name(0x00809EA0, "Script_SpellStopCasting");
   set_name(0x0080DC00, "Script_SpellTargetUnit");
+  set_name(0x00819EA0, "FrameScript_Execute");
   set_name(0x0081B720, "Script_GetText");
   set_name(0x0081B7B0, "Script_CreateFont");
   set_name(0x0081B820, "Script_GetCurrentKeyBoardFocus");
@@ -2336,6 +2340,28 @@ static main() {
   set_name(0x0081BAB0, "Script_GetNumFrames");
   set_name(0x0081BB20, "Script_CreateFrame");
   set_name(0x0081BE70, "Script_GetFramesRegisteredForEvent");
+  set_name(0x0084DBD0, "_lua_gettop");
+  set_name(0x0084DBF0, "_lua_settop");
+  set_name(0x0084DCC0, "_lua_insert");
+  set_name(0x0084DEB0, "_lua_type");
+  set_name(0x0084DF20, "_lua_isnumber");
+  set_name(0x0084DF60, "_lua_isstring");
+  set_name(0x0084E030, "_lua_tonumber");
+  set_name(0x0084E0E0, "_lua_tolstring");
+  set_name(0x0084E1C0, "_lua_touserdata");
+  set_name(0x0084E280, "_lua_pushnil");
+  set_name(0x0084E2A0, "_lua_pushnumber");
+  set_name(0x0084E350, "_lua_pushstring");
+  set_name(0x0084E600, "_lua_rawget");
+  set_name(0x0084E670, "_lua_rawgeti");
+  set_name(0x0084E970, "_lua_rawset");
+  set_name(0x0084F280, "_luaL_error");
+  set_name(0x0084F7A0, "_luaL_unref");
+  set_name(0x00850920, "_luaG_runerror");
+  set_name(0x008562E0, "_luaD_throw");
+  set_name(0x00856370, "_luaD_precall");
+  set_name(0x00856760, "luaD_call");
+  set_name(0x00857CA0, "_luaV_execute");
   set_name(0x008695B0, "RestoreMouse");
   set_name(0x00869720, "OsInputInitialize");
   set_name(0x00869760, "OsInputDestroy");
@@ -2545,6 +2571,8 @@ static main() {
   set_name(0x00ADBAD4, "s_hRect");
   set_name(0x00ADBAE4, "s_baseTextFlags");
   set_name(0x00B417C8, "s_mainThread");
+  set_name(0x00B417D0, "s_interactiveCount");
+  set_name(0x00B41850, "s_messageRecycler");
   set_name(0x00C26DF0, "s_cursorImages");
   set_name(0x00C5DF88, "g_theGxDevicePtr");
   set_name(0x00C5DFDC, "CGxDevice__s_uiVertexShader");
@@ -2736,6 +2764,7 @@ static main() {
   set_func_end(0x0047DEA0, 0x0047E117);
   set_func_start(0x0047E910, 0x0047E910);
   set_func_end(0x0047E910, 0x0047EA69);
+  set_func_start(0x0047EC10, 0x0047EC10);
   set_func_start(0x0047EFF0, 0x0047EFF0);
   set_func_end(0x0047EFF0, 0x0047F225);
   set_func_start(0x0047F230, 0x0047F230);
@@ -7065,6 +7094,8 @@ static main() {
   set_func_end(0x0076E540, 0x0076E59A);
   set_func_start(0x0076E5A0, 0x0076E5A0);
   set_func_end(0x0076E5A0, 0x0076E5C4);
+  set_func_start(0x0076E5E0, 0x0076E5E0);
+  set_func_end(0x0076E5E0, 0x0076E6D6);
   set_func_start(0x0076E6E0, 0x0076E6E0);
   set_func_end(0x0076E6E0, 0x0076E712);
   set_func_start(0x0076E760, 0x0076E760);
@@ -7179,6 +7210,8 @@ static main() {
   set_func_end(0x00809EA0, 0x00809F7E);
   set_func_start(0x0080DC00, 0x0080DC00);
   set_func_end(0x0080DC00, 0x0080DCE3);
+  set_func_start(0x00819EA0, 0x00819EA0);
+  set_func_end(0x00819EA0, 0x0081A2B5);
   set_func_start(0x0081B720, 0x0081B720);
   set_func_end(0x0081B720, 0x0081B7AF);
   set_func_start(0x0081B7B0, 0x0081B7B0);
@@ -7193,6 +7226,28 @@ static main() {
   set_func_end(0x0081BB20, 0x0081BE68);
   set_func_start(0x0081BE70, 0x0081BE70);
   set_func_end(0x0081BE70, 0x0081BF4D);
+  set_func_start(0x0084DBD0, 0x0084DBD0);
+  set_func_start(0x0084DBF0, 0x0084DBF0);
+  set_func_start(0x0084DCC0, 0x0084DCC0);
+  set_func_start(0x0084DEB0, 0x0084DEB0);
+  set_func_start(0x0084DF20, 0x0084DF20);
+  set_func_start(0x0084DF60, 0x0084DF60);
+  set_func_start(0x0084E030, 0x0084E030);
+  set_func_start(0x0084E0E0, 0x0084E0E0);
+  set_func_start(0x0084E1C0, 0x0084E1C0);
+  set_func_start(0x0084E280, 0x0084E280);
+  set_func_start(0x0084E2A0, 0x0084E2A0);
+  set_func_start(0x0084E350, 0x0084E350);
+  set_func_start(0x0084E600, 0x0084E600);
+  set_func_start(0x0084E670, 0x0084E670);
+  set_func_start(0x0084E970, 0x0084E970);
+  set_func_start(0x0084F280, 0x0084F280);
+  set_func_start(0x0084F7A0, 0x0084F7A0);
+  set_func_start(0x00850920, 0x00850920);
+  set_func_start(0x008562E0, 0x008562E0);
+  set_func_start(0x00856370, 0x00856370);
+  set_func_start(0x00856760, 0x00856760);
+  set_func_start(0x00857CA0, 0x00857CA0);
   set_func_start(0x008695B0, 0x008695B0);
   set_func_end(0x008695B0, 0x008695FB);
   set_func_start(0x00869720, 0x00869720);
@@ -7444,5 +7499,5 @@ static main() {
   set_func_start(0x009DE1C0, 0x009DE1C0);
   set_func_start(0x009DE1D0, 0x009DE1D0);
   // Apply data types
-  apply_type(0x00C26DF0, "CImVector[54][1024]");
+  import_data_types();
 }

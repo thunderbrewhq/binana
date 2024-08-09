@@ -26,9 +26,9 @@ IEvtQueueCheckSyncMouseState 004804C0 f end=004804E6
 IEvtQueueDestroy 004804B0 f end=004804BA
 IEvtQueueDispatch 00480AD0 f end=00480BCB
 IEvtQueueDispatchAll 00480BD0 f end=00480D28
-IEvtQueueRegister 004804F0 f end=004805F4
+IEvtQueueRegister 004804F0 f end=004805F4 type="void __cdecl func(EvtContext* context, EVENTID id, void* handler, void* param, float priority)"
 IEvtQueueUnregister 00480D30 f end=00480DD1
-IEvtQueuePost 004806A0 f end=0048071F
+IEvtQueuePost 004806A0 f end=0048071F type="int32_t __cdecl func(EvtContext* context, EVENTID id, void *data, size_t bytes)"
 IEvtSchedulerCreateContext 0047F5C0 f end=0047F6B9
 IEvtSchedulerInitialize 0047F2F0 f end=0047F5BA
 IEvtSchedulerDestroy 0047DEA0 f end=0047E117
@@ -47,3 +47,4 @@ InitializeSchedulerThread 0047E910 f end=0047EA69
 SynthesizeIdle 0047DBC0 f end=0047DC14
 SynthesizePaint 0047DC50 f end=0047DC8D
 SynthesizePoll 0047DC20 f end=0047DC50
+AttachContextToThread 0047EC10 f

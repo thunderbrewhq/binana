@@ -1,7 +1,7 @@
 #ifndef GX_STATE_BOM_H
 #define GX_STATE_BOM_H
 
-#include <stdint.h>
+#include "system/types.h"
 #include "storm/array.h"
 
 typedef struct CGxStateBom CGxStateBom;

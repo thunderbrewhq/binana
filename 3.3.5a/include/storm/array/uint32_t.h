@@ -1,7 +1,7 @@
 #ifndef STORM_ARRAY_UINT32_T_H
 #define STORM_ARRAY_UINT32_T_H
 
-#include <stdint.h>
+#include "system/types.h"
 
 #include "storm/array.h"
 

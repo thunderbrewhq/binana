@@ -1,9 +1,9 @@
 #ifndef TEMPEST_MATRIX_H
 #define TEMPEST_MATRIX_H
 
-typedef struct C33Matrix C33Matrix;
-typedef struct C34Matrix C34Matrix;
-typedef struct C44Matrix C44Matrix;
+DECLARE_STRUCT(C33Matrix);
+DECLARE_STRUCT(C34Matrix);
+DECLARE_STRUCT(C44Matrix);
 
 struct C33Matrix {
   float a0;

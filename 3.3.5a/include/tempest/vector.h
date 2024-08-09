@@ -1,13 +1,13 @@
 #ifndef TEMPEST_VECTOR_H
 #define TEMPEST_VECTOR_H
 
-#include <stdint.h>
+#include "system/types.h"
 
-typedef struct C2Vector C2Vector;
-typedef struct C2iVector C2iVector;
-typedef struct C3Vector C3Vector;
-typedef struct C4Vector C4Vector;
-typedef struct CImVector CImVector;
+DECLARE_STRUCT(C2Vector);
+DECLARE_STRUCT(C2iVector);
+DECLARE_STRUCT(C3Vector);
+DECLARE_STRUCT(C4Vector);
+DECLARE_STRUCT(CImVector);
 
 struct C2Vector {
   float x;

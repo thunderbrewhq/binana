@@ -1,7 +1,7 @@
 #ifndef GX_CAPS_H
 #define GX_CAPS_H
 
-#include <stdint.h>
+#include "system/types.h"
 
 #include "gx/types.h"
 

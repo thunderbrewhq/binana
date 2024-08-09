@@ -1,7 +1,7 @@
 #ifndef GX_TYPES_H
 #define GX_TYPES_H
 
-#include <stdint.h>
+#include "system/types.h"
 
 #include "storm/array.h"
 

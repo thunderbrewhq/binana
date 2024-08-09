@@ -4,6 +4,7 @@ This repository hosts some work related to studying the original game binaries.
 
 You can use the information here to get a headstart when working on the [Whoa project](https://github.com/whoahq/whoa).
 
+- [Dependencies (optional)](#dependencies--optional-)
 - [Header files](#header-files)
 - [Symbol files](#symbol-files)
 - [Debugging files](#debugging-files)
@@ -16,6 +17,24 @@ You can use the information here to get a headstart when working on the [Whoa pr
 - [x64dbg](#x64dbg)
   * [Importing database](#importing-database)
   * [Importing types](#importing-types)
+
+# Dependencies (optional)
+
+This project can be utilized immediately using files we have already generated. However, if you wish to make modifications to the C header and symbol files, **it may be necessary to refresh the generated files that are based on them**.
+
+You'll need:
+
+  - Go >= 1.22
+  - git
+  - Make
+  - Bash shell
+
+You can regenerate everything to include your changes with:
+
+```bash
+make dependencies
+make
+```
 
 # Header files
 
@@ -34,7 +53,7 @@ FunctionName 00CC00DDEE f
 
 To improve the call stack view in x64dbg, you should append an `end` field to every function, with the address where this function ends and another begins (i.e. after the last instruction of the function):
 
-```
+```csv
 FunctionName 00CC00DDEE f end=00CC00DDFF
 ```
 
@@ -79,7 +98,8 @@ To import the main header file into your Ghidra project,
   2. Select `clib.prf` as your parse configuration, and clear all source files and input paths.
   3. Add the header `<game version>/include/main.h` to the `Source files to parse` combo box.
   4. Add the path to `<game version>/include` to the `Include paths` combo box.
-  5. press `Parse to Program`.
+  5. Add `-DGHIDRA` to a new line in `Parse Options`.
+  6. press `Parse to Program`.
 
 If all goes well, Data Type Manager will now contain the data structures from the headers.
 
@@ -91,7 +111,7 @@ To import the symbol file into your Ghidra project,
   2. In the table view, lookup `ImportSymbolsScript.py`
   3. Run the script
   4. Enter the path to `<game version>/symbol/main.sym`
-
+  
 # IDA
 
 ## Importing C headers
@@ -99,7 +119,7 @@ To import the symbol file into your Ghidra project,
 To import the main header file into your IDA database,
 
   1. Go to `Options` 🡒 `Compiler`
-  2. In `Include directories`, add the path to `<game version>/ida/include` and press `OK`
+  2. Add `IDA` to the semicolon-separated `Predefined macros` list.
   3. Go to `File` 🡒 `Load file` 🡒 `Parse C Header file`
   4. Enter the path to `<game version>/include/main.h`
 
@@ -108,7 +128,8 @@ To import the main header file into your IDA database,
 To use the IDC script,
 
   1. Go to `File` 🡒 `Script file...`
-  2. Navigate to `<game version>/ida/import.idc`
+  2. Navigate to `<game version>/ida/import_symbols.idc`
+  3. Wait for everything to be reanalyzed
 
 # x64dbg 
 

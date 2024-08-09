@@ -1,7 +1,7 @@
 #ifndef STORM_LIST_H
 #define STORM_LIST_H
 
-#include <stdint.h>
+#include "system/types.h"
 
 // to make an object self referential
 // forward-declare 'struct Object_type' as 'Object_type'
@@ -15,10 +15,12 @@ struct TSLink_##T { \
 };
 
 // TSList<T>
+// TSExplicitList<T>
 // TSLinkedNode<T>
 #define STORM_TS_LIST(T) \
 STORM_TS_LINK(T) \
 typedef struct TSList_##T TSList_##T; \
+typedef struct TSList_##T TSExplicitList_##T; \
 typedef struct TSLinkedNode_##T TSLinkedNode_##T; \
 struct TSList_##T { \
   ptrdiff_t m_linkoffset; \

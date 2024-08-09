@@ -79,6 +79,7 @@ loop:
 			arrsize *= int32(t.Len())
 		case cc.Function:
 			s = "void*" + s
+			break loop
 		default:
 			s = t.Kind().String() + s
 			break loop
@@ -114,6 +115,10 @@ func (profile *Profile) generate_x64dbg_types() (err error) {
 	}
 
 	cc_sources := []cc.Source{
+		cc.Source{
+			Name:  "pch.h",
+			Value: `#define BINANA_GENERATOR 1\n`,
+		},
 		cc.Source{
 			Name: filepath.Join(profile.Directory, "include", "main.h"),
 		},
@@ -155,10 +160,10 @@ func (profile *Profile) generate_x64dbg_types() (err error) {
 		for _, node := range scope {
 			if declarator, ok := node.(*cc.Declarator); ok {
 				if declarator.IsTypedefName {
-					if declarator.Type().Kind() != cc.Struct {
-						var x64_type x64dbg.AliasType = cc_type_to_typedef(declarator.Type())
-						x64_type.Name = scope_id.String()
-						if !slices.Contains(ignore_types, x64_type.Name) {
+					var x64_type x64dbg.AliasType = cc_type_to_typedef(declarator.Type())
+					x64_type.Name = scope_id.String()
+					if !slices.Contains(ignore_types, x64_type.Name) {
+						if x64_type.Name != x64_type.Type {
 							x64_types.Types = append(x64_types.Types, x64_type)
 						}
 					}

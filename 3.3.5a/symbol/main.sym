@@ -87,6 +87,7 @@ SynthesizePaint 0047DC50 f end=0047DC8D
 EventForceIdleProcessing 0047DCA0 f end=0047DE09
 IEvtSchedulerDestroy 0047DEA0 f end=0047E117
 InitializeSchedulerThread 0047E910 f end=0047EA69
+AttachContextToThread 0047EC10 f
 SchedulerThreadProcProcess 0047EFF0 f end=0047F225
 SchedulerThreadProc 0047F230 f end=0047F2C1 ; IEvtSchedulerProcess as an independent function appears to be optimized out
 EventDoMessageLoop 0047F2D0 f end=0047F2EC
@@ -101,8 +102,8 @@ IEvtInputGetMousePosition 004800A0 f end=004800EF
 IEvtInputProcess 00480410 f end=004804A8
 IEvtQueueDestroy 004804B0 f end=004804BA
 IEvtQueueCheckSyncMouseState 004804C0 f end=004804E6
-IEvtQueueRegister 004804F0 f end=004805F4
-IEvtQueuePost 004806A0 f end=0048071F
+IEvtQueueRegister 004804F0 f end=004805F4 type="void __cdecl func(EvtContext* context, EVENTID id, void* handler, void* param, float priority)"
+IEvtQueuePost 004806A0 f end=0048071F type="int32_t __cdecl func(EvtContext* context, EVENTID id, void *data, size_t bytes)"
 IEvtQueueCheckSyncKeyState 00480A50 f end=00480AC2
 IEvtQueueDispatch 00480AD0 f end=00480BCB
 IEvtQueueDispatchAll 00480BD0 f end=00480D28
@@ -2266,15 +2267,16 @@ ConsoleCommandRegister 00769100 f end=007691B3
 ConsoleAccessGetEnabled 00769230 f end=00769236
 ConsoleDeviceInitialize 0076AB80 f end=0076B287
 SMemSetDebugFlags 0076E4A0 f end=0076E4D2
-SMemAlloc 0076E540 f end=0076E59A
-SMemFree 0076E5A0 f end=0076E5C4
+SMemAlloc 0076E540 f end=0076E59A type="void* __stdcall func(uint32_t bytes, char* filename, int32_t linenumber, uint32_t flags)"
+SMemFree 0076E5A0 f end=0076E5C4 type="int32_t __stdcall func(void* ptr, char* filename, int32_t linenumber, uint32_t flags)"
+SMemReAlloc 0076E5E0 f end=0076E6D6 type="void* __stdcall func(void* ptr, uint32_t bytes, char* filename, int32_t linenumber, uint32_t flags)"
 SStrChr 0076E6E0 f end=0076E712
 SStrCmp 0076E760 f end=0076E77B
 SStrCmpI 0076E780 f end=0076E79B
 SStrCopy 0076ED20 f end=0076ED98
 SStrLen 0076EE30 f end=0076EE5E
 SStrPack 0076EF70 f end=0076F001
-SStrPrintf 0076F070 f end=0076F09E
+SStrPrintf 0076F070 f end=0076F09E type="int32_t __stdcall func(char* dest, size_t maxchars, char* format, ...)"
 SStrVPrintf 0076F0A0 f end=0076F0CE
 SStrTokenize 0076F1E0 f end=0076F331
 SStrHashHT 0076F640 f end=0076F6B9
@@ -2289,10 +2291,10 @@ SCmdProcess 00773890 f end=00773986
 SCmdProcessCommandLine 00773990 f end=007739AD
 StormInitialize 007739E0 f end=007739F4
 StormSetOption 00773A80 f end=00773C81
-SCritSect__SCritSect 00774620 f end=0077462E
-SCritSect__destructor 00774630 f end=00774638
-SCritSect__Enter 00774640 f end=00774648
-SCritSect__Leave 00774650 f end=00774658
+SCritSect__SCritSect 00774620 f end=0077462E type="SCritSect* __thiscall func(SCritSect* this)"
+SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect *this)"
+SCritSect__Enter 00774640 f end=00774648 type="void __thiscall func(SCritSect *this)"
+SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *this)"
 CSRWLock__Leave 00774660 f end=00774675
 SSyncObject__Wait 00774690 f end=007746A4
 SEvent__Set 00774720 f end=0077472A
@@ -2325,6 +2327,7 @@ Script_CancelUnitBuff 00804220 f end=00804420
 Script_SpellStopTargeting 00809E30 f end=00809E96
 Script_SpellStopCasting 00809EA0 f end=00809F7E
 Script_SpellTargetUnit 0080DC00 f end=0080DCE3
+FrameScript_Execute 00819EA0 f end=0081A2B5 type="void __stdcall func(int32_t function, FrameScript_Object* object, int32_t args, char* args_fmt, FrameScript_EventObject* eventObject)"
 Script_GetText 0081B720 f end=0081B7AF
 Script_CreateFont 0081B7B0 f end=0081B81E
 Script_GetCurrentKeyBoardFocus 0081B820 f end=0081B86C
@@ -2332,6 +2335,28 @@ Script_EnumerateFrames 0081B9C0 f end=0081BAAA
 Script_GetNumFrames 0081BAB0 f end=0081BB15
 Script_CreateFrame 0081BB20 f end=0081BE68
 Script_GetFramesRegisteredForEvent 0081BE70 f end=0081BF4D
+_lua_gettop 0084DBD0 f
+_lua_settop 0084DBF0 f
+_lua_insert 0084DCC0 f
+_lua_type 0084DEB0 f
+_lua_isnumber 0084DF20 f
+_lua_isstring 0084DF60 f
+_lua_tonumber 0084E030 f
+_lua_tolstring 0084E0E0 f
+_lua_touserdata 0084E1C0 f
+_lua_pushnil 0084E280 f
+_lua_pushnumber 0084E2A0 f
+_lua_pushstring 0084E350 f
+_lua_rawget 0084E600 f
+_lua_rawgeti 0084E670 f
+_lua_rawset 0084E970 f
+_luaL_error 0084F280 f
+_luaL_unref 0084F7A0 f
+_luaG_runerror 00850920 f
+_luaD_throw 008562E0 f
+_luaD_precall 00856370 f
+luaD_call 00856760 f
+_luaV_execute 00857CA0 f
 RestoreMouse 008695B0 f end=008695FB
 OsInputInitialize 00869720 f end=00869757 ; actually called by IEvtInputInitialize, but this is optimized out
 OsInputDestroy 00869760 f end=008697D3
@@ -2532,6 +2557,8 @@ nullsub_149 009DE1C0 f
 nullsub_150 009DE1D0 f
 CGxDevice__vtable 00A2DDC0 l
 CGxDeviceOpenGl__vtable 00A2E198 l
+s_interactiveCount 00B417D0 l type="int32_t"
+s_messageRecycler 00B41850 l type="CDataRecycler"
 s_cursorImages 00C26DF0 l type="CImVector[54][1024]"
 g_theGxDevicePtr 00C5DF88 l
 CGxDevice__s_uiVertexShader 00C5DFDC l
@@ -2545,7 +2572,7 @@ s_historyIndex 00adbac8 l ; int32
 s_fontHeight 00adbacc l ; float
 s_hRect 00adbad4 l ; RECTF
 s_baseTextFlags 00adbae4 l ; uint32
-s_mainThread 00b417c8 l
+s_mainThread 00b417c8 l type="uint32_t"
 s_caretpixheight 00ca1690 l
 s_caret 00ca1694 l ; int32
 s_caretpixwidth 00ca1718 l

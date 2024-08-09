@@ -1,7 +1,7 @@
 #ifndef GX_BUFFER_H
 #define GX_BUFFER_H
 
-#include <stdint.h>
+#include "system/types.h"
 
 #include "storm/list.h"
 #include "tempest/vector.h"

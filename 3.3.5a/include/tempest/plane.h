@@ -3,7 +3,7 @@
 
 #include "tempest/vector.h"
 
-typedef struct C4Plane C4Plane;
+DECLARE_STRUCT(C4Plane);
 
 struct C4Plane {
   C3Vector n;

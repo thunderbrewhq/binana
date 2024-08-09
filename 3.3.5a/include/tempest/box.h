@@ -4,8 +4,8 @@
 #include "tempest/vector.h"
 #include "tempest/range.h"
 
-typedef struct CAaBox CAaBox;
-typedef struct CBoundingBox CBoundingBox;
+DECLARE_STRUCT(CAaBox);
+DECLARE_STRUCT(CBoundingBox);
 
 struct CAaBox {
   C3Vector b;
