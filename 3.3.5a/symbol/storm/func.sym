@@ -1,6 +1,7 @@
 SCmdRegisterArgList 00773590 f end=007737C2
 SCmdProcess 00773890 f end=00773986
 SCmdProcessCommandLine 00773990 f end=007739AD
+SErrSetLastError 00771870 f end=00771886
 SErrSetLogTitleString 00771890 f end=007718F2
 SErrSetLogTitleCallback 00771900 f end=00771957
 SErrRegisterHandler 00771B80 f end=00771C15
@@ -12,6 +13,7 @@ SMemSetDebugFlags 0076E4A0 f end=0076E4D2
 SRegLoadValue 00770840 f end=007708E9
 SRegSaveValue 007709A0 f end=007709E8
 SStrChr 0076E6E0 f end=0076E712
+SStrChrR 0076E720 f end=0076E756
 SStrCmp 0076E760 f end=0076E77B
 SStrCmpI 0076E780 f end=0076E79B
 SStrCopy 0076ED20 f end=0076ED98

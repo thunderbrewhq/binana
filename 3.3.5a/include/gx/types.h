@@ -5,34 +5,35 @@
 
 #include "storm/array.h"
 
-typedef enum BlitAlpha BlitAlpha;
-typedef enum BlitFormat BlitFormat;
-typedef enum EGxApi EGxApi;
-typedef enum EGxBlend EGxBlend;
-typedef enum EGxColorFormat EGxColorFormat;
-typedef enum EGxFontHJusts EGxFontHJusts;
-typedef enum EGxFontVJusts EGxFontVJusts;
-typedef enum EGxMasterEnables EGxMasterEnables;
-typedef enum EGxPrim EGxPrim;
-typedef enum EGxPrimMask EGxPrimMask;
-typedef enum EGxRenderState EGxRenderState;
-typedef enum EGxShPS EGxShPS;
-typedef enum EGxShTarget EGxShTarget;
-typedef enum EGxShVS EGxShVS;
-typedef enum EGxTexCommand EGxTexCommand;
-typedef enum EGxTexFilter EGxTexFilter;
-typedef enum EGxTexFormat EGxTexFormat;
-typedef enum EGxTexTarget EGxTexTarget;
-typedef enum EGxTexWrapMode EGxTexWrapMode;
-typedef enum EGxXform EGxXform;
-typedef enum EGxuDrawListCategory EGxuDrawListCategory;
-typedef enum EGxWM EGxWM;
-typedef enum COLOR_FILE_FORMAT COLOR_FILE_FORMAT;
-typedef enum PIXEL_FORMAT PIXEL_FORMAT;
+DECLARE_ENUM(BlitAlpha);
+DECLARE_ENUM(BlitFormat);
+DECLARE_ENUM(EGxApi);
+DECLARE_ENUM(EGxBlend);
+DECLARE_ENUM(EGxColorFormat);
+DECLARE_ENUM(EGxFontHJusts);
+DECLARE_ENUM(EGxFontVJusts);
+DECLARE_ENUM(EGxMasterEnables);
+DECLARE_ENUM(EGxPrim);
+DECLARE_ENUM(EGxPrimMask);
+DECLARE_ENUM(EGxRenderState);
+DECLARE_ENUM(EGxShPS);
+DECLARE_ENUM(EGxShTarget);
+DECLARE_ENUM(EGxShVS);
+DECLARE_ENUM(EGxTexCommand);
+DECLARE_ENUM(EGxTexFilter);
+DECLARE_ENUM(EGxTexFormat);
+DECLARE_ENUM(EGxTexTarget);
+DECLARE_ENUM(EGxTexWrapMode);
+DECLARE_ENUM(EGxXform);
+DECLARE_ENUM(EGxuDrawListCategory);
+DECLARE_ENUM(EGxWM);
+DECLARE_ENUM(COLOR_FILE_FORMAT);
+DECLARE_ENUM(PIXEL_FORMAT);
 
-typedef struct C4Pixel C4Pixel;
-typedef struct MipBits MipBits;
-typedef struct CGxGammaRamp CGxGammaRamp;
+DECLARE_STRUCT(C4Pixel);
+DECLARE_STRUCT(C4LargePixel);
+DECLARE_STRUCT(MipBits);
+DECLARE_STRUCT(CGxGammaRamp);
 
 enum BlitAlpha {
   BlitAlpha_0 = 0,
@@ -370,10 +371,17 @@ enum PIXEL_FORMAT {
 };
 
 struct C4Pixel {
-  char b;
-  char g;
-  char r;
-  char a;
+  uint8_t b;
+  uint8_t g;
+  uint8_t r;
+  uint8_t a;
+};
+
+struct C4LargePixel {
+  uint64_t b;
+  uint64_t g;
+  uint64_t r;
+  uint64_t a;
 };
 
 struct MipBits {

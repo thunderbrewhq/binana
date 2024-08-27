@@ -7,6 +7,7 @@
 #include "common/handle.h"
 #include "common/instance.h"
 #include "common/datarecycler.h"
+#include "common/status.h"
 
 #include "d3d9/caps.h"
 #include "d3d9/device.h"
@@ -45,6 +46,9 @@
 #include "tempest/rect.h"
 #include "tempest/sphere.h"
 #include "tempest/vector.h"
+
+#include "texture/blp.h"
+#include "texture/tga.h"
 
 #include "ui/simpleframe.h"
 

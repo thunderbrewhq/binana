@@ -137,6 +137,10 @@
       "name": "EVENTID"
     },
     {
+      "type": "HCOLORMAP__*",
+      "name": "HCOLORMAP"
+    },
+    {
       "type": "void*",
       "name": "HEVENTCONTEXT"
     },
@@ -158,6 +162,10 @@
     },
     {
       "type": "int",
+      "name": "MipMapAlgorithm"
+    },
+    {
+      "type": "int",
       "name": "OSINPUT"
     },
     {
@@ -171,6 +179,10 @@
     {
       "type": "long long",
       "name": "SCHEDSTATE"
+    },
+    {
+      "type": "int",
+      "name": "STATUS_TYPE"
     },
     {
       "type": "int32_t",
@@ -187,6 +199,10 @@
     {
       "type": "CSBasePriorityQueue",
       "name": "TSPriorityQueue_EvtTimer"
+    },
+    {
+      "type": "TSList_CStatus__STATUSENTRY",
+      "name": "TSExplicitList_CStatus__STATUSENTRY"
     },
     {
       "type": "TSList_EvtMessage",
@@ -230,6 +246,49 @@
     }
   ],
   "structs": [
+    {
+      "name": "BLPJPEGHeader",
+      "size": 1024,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "headerSize",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "headerData",
+          "arrsize": 1020,
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "BlpPalPixel",
+      "size": 4,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "b",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "g",
+          "offset": 1
+        },
+        {
+          "type": "uint8_t",
+          "name": "r",
+          "offset": 2
+        },
+        {
+          "type": "uint8_t",
+          "name": "pad",
+          "offset": 3
+        }
+      ]
+    },
     {
       "name": "C2Vector",
       "size": 8,
@@ -487,26 +546,52 @@
       ]
     },
     {
-      "name": "C4Pixel",
-      "size": 4,
+      "name": "C4LargePixel",
+      "size": 32,
       "members": [
         {
-          "type": "char",
+          "type": "uint64_t",
           "name": "b",
           "offset": 0
         },
         {
-          "type": "char",
+          "type": "uint64_t",
+          "name": "g",
+          "offset": 8
+        },
+        {
+          "type": "uint64_t",
+          "name": "r",
+          "offset": 16
+        },
+        {
+          "type": "uint64_t",
+          "name": "a",
+          "offset": 24
+        }
+      ]
+    },
+    {
+      "name": "C4Pixel",
+      "size": 4,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "b",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
           "name": "g",
           "offset": 1
         },
         {
-          "type": "char",
+          "type": "uint8_t",
           "name": "r",
           "offset": 2
         },
         {
-          "type": "char",
+          "type": "uint8_t",
           "name": "a",
           "offset": 3
         }
@@ -1463,6 +1548,17 @@
       ]
     },
     {
+      "name": "HCOLORMAP__",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unused",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "HPROPCONTEXT__",
       "size": 4,
       "members": [
@@ -1575,12 +1671,90 @@
       ]
     },
     {
+      "name": "SFile",
+      "size": 0
+    },
+    {
       "name": "TExtraInstanceRecyclable",
       "size": 4,
       "members": [
         {
           "type": "uint32_t",
           "name": "m_recycleBytes",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TGA32Pixel",
+      "size": 4,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "b",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "g",
+          "offset": 1
+        },
+        {
+          "type": "uint8_t",
+          "name": "r",
+          "offset": 2
+        },
+        {
+          "type": "uint8_t",
+          "name": "a",
+          "offset": 3
+        }
+      ]
+    },
+    {
+      "name": "TGAFooter",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "dwExtensionOffset",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "dwDeveloperOffset",
+          "offset": 4
+        },
+        {
+          "type": "uint8_t",
+          "name": "szSigniture",
+          "arrsize": 18,
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TGAImageDesc",
+      "size": 1,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "bAlphaChannelBits",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "bLeftRightOrder",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "bTopBottomOrder",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "bReserved",
           "offset": 0
         }
       ]
@@ -1878,6 +2052,22 @@
         },
         {
           "type": "CGxShader*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CStatus__STATUSENTRY",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CStatus__STATUSENTRY*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CStatus__STATUSENTRY*",
           "name": "m_next",
           "offset": 4
         }
@@ -3290,6 +3480,38 @@
       ]
     },
     {
+      "name": "CStatus__STATUSENTRY",
+      "size": 16,
+      "members": [
+        {
+          "type": "char*",
+          "name": "text",
+          "offset": 0
+        },
+        {
+          "type": "STATUS_TYPE",
+          "name": "severity",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_CStatus__STATUSENTRY",
+          "name": "link",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CStatus__STATUSENTRY",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CStatus__STATUSENTRY",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "TSLinkedNode_EVENTLISTENERNODE",
       "size": 8,
       "members": [
@@ -3467,6 +3689,22 @@
       ]
     },
     {
+      "name": "TSList_CStatus__STATUSENTRY",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CStatus__STATUSENTRY",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSList_EvtMessage",
       "size": 12,
       "members": [
@@ -3638,6 +3876,69 @@
       ]
     },
     {
+      "name": "BLPHeader",
+      "size": 1172,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "magic",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "formatVersion",
+          "offset": 4
+        },
+        {
+          "type": "uint8_t",
+          "name": "colorEncoding",
+          "offset": 8
+        },
+        {
+          "type": "uint8_t",
+          "name": "alphaSize",
+          "offset": 9
+        },
+        {
+          "type": "uint8_t",
+          "name": "preferredFormat",
+          "offset": 10
+        },
+        {
+          "type": "uint8_t",
+          "name": "hasMips",
+          "offset": 11
+        },
+        {
+          "type": "uint32_t",
+          "name": "width",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "height",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "mipOffsets",
+          "arrsize": 16,
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "mipSizes",
+          "arrsize": 16,
+          "offset": 84
+        },
+        {
+          "type": "BLPHeader__extended",
+          "name": "extended",
+          "offset": 148
+        }
+      ]
+    },
+    {
       "name": "CGxAppRenderState",
       "size": 24,
       "members": [
@@ -3722,6 +4023,72 @@
           "type": "void*",
           "name": "guidParam2",
           "offset": 40
+        }
+      ]
+    },
+    {
+      "name": "TGAHeader",
+      "size": 20,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "bIDLength",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "bColorMapType",
+          "offset": 1
+        },
+        {
+          "type": "uint8_t",
+          "name": "bImageType",
+          "offset": 2
+        },
+        {
+          "type": "uint16_t",
+          "name": "wColorMapStartIndex",
+          "offset": 4
+        },
+        {
+          "type": "uint16_t",
+          "name": "wColorMapEntries",
+          "offset": 6
+        },
+        {
+          "type": "uint8_t",
+          "name": "bColorMapEntrySize",
+          "offset": 8
+        },
+        {
+          "type": "uint16_t",
+          "name": "wXOrigin",
+          "offset": 10
+        },
+        {
+          "type": "uint16_t",
+          "name": "wYOrigin",
+          "offset": 12
+        },
+        {
+          "type": "uint16_t",
+          "name": "wWidth",
+          "offset": 14
+        },
+        {
+          "type": "uint16_t",
+          "name": "wHeight",
+          "offset": 16
+        },
+        {
+          "type": "uint8_t",
+          "name": "bPixelDepth",
+          "offset": 18
+        },
+        {
+          "type": "TGAHeader__0019",
+          "name": "",
+          "offset": 19
         }
       ]
     },
@@ -4400,6 +4767,98 @@
       ]
     },
     {
+      "name": "CBLPFile",
+      "size": 1204,
+      "members": [
+        {
+          "type": "MipBits*",
+          "name": "m_images",
+          "offset": 0
+        },
+        {
+          "type": "BLPHeader",
+          "name": "m_header",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "m_inMemoryImage",
+          "offset": 1176
+        },
+        {
+          "type": "int32_t",
+          "name": "m_inMemoryNeedsFree",
+          "offset": 1180
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_numLevels",
+          "offset": 1184
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_quality",
+          "offset": 1188
+        },
+        {
+          "type": "HCOLORMAP",
+          "name": "m_colorMapping",
+          "offset": 1192
+        },
+        {
+          "type": "MipMapAlgorithm",
+          "name": "m_mipMapAlgorithm",
+          "offset": 1196
+        },
+        {
+          "type": "uint8_t*",
+          "name": "m_lockDecompMem",
+          "offset": 1200
+        }
+      ]
+    },
+    {
+      "name": "CTgaFile",
+      "size": 68,
+      "members": [
+        {
+          "type": "SFile*",
+          "name": "m_file",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t*",
+          "name": "m_image",
+          "offset": 4
+        },
+        {
+          "type": "TGAHeader",
+          "name": "m_header",
+          "offset": 8
+        },
+        {
+          "type": "uint8_t*",
+          "name": "m_addlHeaderData",
+          "offset": 28
+        },
+        {
+          "type": "TGAFooter",
+          "name": "m_footer",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_imageBytes",
+          "offset": 60
+        },
+        {
+          "type": "uint8_t*",
+          "name": "m_colorMap",
+          "offset": 64
+        }
+      ]
+    },
+    {
       "name": "EvtTimerQueue",
       "size": 20,
       "members": [
@@ -4417,6 +4876,17 @@
         {
           "type": "TInstanceId_EvtContext",
           "name": "b_base",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CStatus",
+      "size": 12,
+      "members": [
+        {
+          "type": "TSExplicitList_CStatus__STATUSENTRY",
+          "name": "statusList",
           "offset": 0
         }
       ]
@@ -4778,6 +5248,33 @@
         {
           "type": "uint32_t",
           "name": "u"
+        }
+      ]
+    },
+    {
+      "name": "BLPHeader__extended",
+      "members": [
+        {
+          "type": "BlpPalPixel",
+          "name": "palette",
+          "arrsize": 256
+        },
+        {
+          "type": "BLPJPEGHeader",
+          "name": "jpeg"
+        }
+      ]
+    },
+    {
+      "name": "TGAHeader__0019",
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "bImageDescriptor"
+        },
+        {
+          "type": "TGAImageDesc",
+          "name": "desc"
         }
       ]
     }

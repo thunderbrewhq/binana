@@ -1,1 +1,7 @@
 s_cursorImages 00C26DF0 l type="CImVector[54][1024]"
+s_cursorNames 00AD2808 l type="char*[54]"
+s_cursorMode 00C26DE8 l
+s_cursorResetMode 00C25DE4 l
+s_cursorItemType 00C25DE0 l
+s_cursorItemMips 00C25DDC l
+s_cursorFile 00C25CD0 l type="int8_t" ; wonder why it's this type

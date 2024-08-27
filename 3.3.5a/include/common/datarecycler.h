@@ -9,11 +9,11 @@ DECLARE_STRUCT(CDataRecycler__NodeBlock);
 DECLARE_STRUCT(CDataRecycler__Node);
 
 struct CDataRecycler__vtable {
-  void *v_fn_00;
-  void *v_fn_01;
-  void *v_fn_02;
-  void *v_fn_03;
-  void *v_fn_04;
+  void* v_fn_00;
+  void* v_fn_01;
+  void* v_fn_02;
+  void* v_fn_03;
+  void* v_fn_04;
 };
 
 struct CDataRecycler__Node {

@@ -28,3 +28,4 @@ CGxDeviceD3d__IShaderCreateVertex 006AA0D0 f end=006AA125
 CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A
 CGxDeviceD3d__IBindVertexShader 006AA2F0 f end=006AA346
 CGxDeviceD3d__IShaderCreate 006A5E10 f end=006A5E36
+CGxDeviceD3d__WindowProcD3d 006A0360 f end=006A0834
