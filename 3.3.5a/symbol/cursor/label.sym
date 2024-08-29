@@ -1,4 +1,4 @@
-s_cursorImages 00C26DF0 l type="CImVector[53][1024]"
+s_cursorImages 00C26DF0 l type="uint32_t[1024][53]"
 s_cursorNames 00AD2808 l type="char*[53]"
 s_cursorMode 00C26DE8 l type="CURSORMODE"
 s_cursorResetMode 00C25DE4 l
