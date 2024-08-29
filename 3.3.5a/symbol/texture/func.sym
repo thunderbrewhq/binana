@@ -11,10 +11,10 @@ CBLPFile__Lock2 006AFCE0 f end=006AFF06 type="int32_t __thiscall func(CBLPFile* 
 CBLPFile__GetFormatSize 006AF730 f end=006AF7E9 type="int32_t __thiscall func(CBLPFile *this, PIXEL_FORMAT format, uint32_t mipLevel, uint32_t* size, uint32_t* stride)"
 CBLPFile__DecompPalARGB8888 006AE9E0 f end=006AEB93 type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t colorSize)"
 CBLPFile__DecompPalFastPath 006AE990 f end=006AE9D6 type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t colorSize)"
-CBLPFile__DecompPalARGB4444DitherFloydSteinberg 006AEBA0 f end=006AEE61
-CBLPFile__DecompPalARGB1555DitherFloydSteinberg 006AEE70 f end=006AF133
-CBLPFile__DecompPalARGB565DitherFloydSteinberg 006AF140 f end=006AF33F
-CBLPFile__DecompPalARGB2565DitherFloydSteinberg 006AF340 f end=006AF65D
+CBLPFile__DecompPalARGB4444DitherFloydSteinberg 006AEBA0 f end=006AEE61 type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)"
+CBLPFile__DecompPalARGB1555DitherFloydSteinberg 006AEE70 f end=006AF133 type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)"
+CBLPFile__DecompPalARGB565DitherFloydSteinberg 006AF140 f end=006AF33F type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)"
+CBLPFile__DecompPalARGB2565DitherFloydSteinberg 006AF340 f end=006AF65D type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)"
 CBLPFile__DecompPal 006AF810 f end=006AF984 type="int32_t __thiscall func(CBLPFile* this, PIXEL_FORMAT format, uint32_t mipLevel, uint8_t* data, void* tempBuffer)"
 CTgaFile__AddAlphaChannel_internal 006AA420 f end=006AA51E type="void __thiscall func(CTgaFile* this, uint8_t* pAlphaData, uint8_t* pNoAlphaData, uint8_t* alpha)" ; private utility method
 CTgaFile__AddAlphaChannel 006AB390 f end=006AB447 type="int32_t __thiscall func(CTgaFile* this, void* pImg)" ; public method

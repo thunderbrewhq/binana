@@ -9,6 +9,8 @@
 #include "common/datarecycler.h"
 #include "common/status.h"
 
+#include "cursor/types.h"
+
 #include "d3d9/caps.h"
 #include "d3d9/device.h"
 

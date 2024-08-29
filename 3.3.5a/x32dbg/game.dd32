@@ -16594,11 +16594,27 @@
     },
     {
       "manual": true,
+      "start": "0x2162c0",
+      "end": "0x2163ac",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2162c0"
+    },
+    {
+      "manual": true,
       "start": "0x2163b0",
       "end": "0x2164a4",
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x2163b0"
+    },
+    {
+      "manual": true,
+      "start": "0x216800",
+      "end": "0x21682d",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x216800"
     },
     {
       "manual": true,
@@ -19119,6 +19135,14 @@
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x419ea0"
+    },
+    {
+      "manual": true,
+      "start": "0x41b530",
+      "end": "0x41b548",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x41b530"
     },
     {
       "manual": true,
@@ -33385,8 +33409,20 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "UpdateCursor",
+      "address": "0x2162c0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "CursorInitialize",
       "address": "0x2163b0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CursorSetMode",
+      "address": "0x216800"
     },
     {
       "manual": true,
@@ -35287,6 +35323,12 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "FrameScript_SignalEvent",
+      "address": "0x41b530"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "Script_GetText",
       "address": "0x41b720"
     },
@@ -36685,6 +36727,12 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "CBLPFile__s_eightBitAlphaLookup",
+      "address": "0x6d90b0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "CBLPFile__s_oneBitAlphaLookup",
       "address": "0x6d90c0"
     },
@@ -36747,6 +36795,18 @@
       "module": "wow.exe",
       "text": "s_cursorFile",
       "address": "0x825cd0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "s_cursorItemMipsWidth",
+      "address": "0x825dd4"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "s_cursorItemMipsHeight",
+      "address": "0x825dd8"
     },
     {
       "manual": true,

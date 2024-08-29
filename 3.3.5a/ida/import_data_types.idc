@@ -9,6 +9,8 @@ static import_data_types() {
   apply_type(0x004B78A0, "int32_t __usercall func@<eax>(char* ext@<eax>, char* filename, int32_t a3, MipBits** mipBits, uint32_t* width, uint32_t* height, PIXEL_FORMAT* texFormat, int32_t* isOpaque@<ecx>, uint32_t* alphaBits, PIXEL_FORMAT* dataFormat)");
   apply_type(0x004B8070, "int32_t __usercall func@<eax>(char* ext@<eax>, char* filename@<ebx>, int32_t a3, MipBits** mipBits, uint32_t* width, uint32_t* height, uint32_t* isOpaque, uint32_t* alphaBits, PIXEL_FORMAT* dataFormat)");
   apply_type(0x004B81D0, "MipBits* func(const char* filename, uint32_t* width, uint32_t* height, PIXEL_FORMAT* dataFormat, int32_t* isOpaque, CStatus* status, uint32_t* alphaBits, int32_t a8)");
+  apply_type(0x006160B0, "int32_t __usercall func@<eax>(uint32_t** image@<eax>, MipBits* mipImages@<ecx>, uint32_t width@<edx>, uint32_t height)");
+  apply_type(0x00616800, "void __stdcall func(CURSORMODE mode)");
   apply_type(0x006AA3B0, "int32_t __thiscall func(CTgaFile* this)");
   apply_type(0x006AA3E0, "uint32_t __thiscall func(CTgaFile* this)");
   apply_type(0x006AA420, "void __thiscall func(CTgaFile* this, uint8_t* pAlphaData, uint8_t* pNoAlphaData, uint8_t* alpha)");
@@ -29,6 +31,10 @@ static import_data_types() {
   apply_type(0x006AE900, "int32_t __thiscall func(CBLPFile* this, void* fileBits)");
   apply_type(0x006AE990, "void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t colorSize)");
   apply_type(0x006AE9E0, "void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t colorSize)");
+  apply_type(0x006AEBA0, "void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)");
+  apply_type(0x006AEE70, "void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)");
+  apply_type(0x006AF140, "void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)");
+  apply_type(0x006AF340, "void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)");
   apply_type(0x006AF6A0, "uint32_t __thiscall func(CBLPFile* this, uint32_t mipLevel)");
   apply_type(0x006AF730, "int32_t __thiscall func(CBLPFile *this, PIXEL_FORMAT format, uint32_t mipLevel, uint32_t* size, uint32_t* stride)");
   apply_type(0x006AF810, "int32_t __thiscall func(CBLPFile* this, PIXEL_FORMAT format, uint32_t mipLevel, uint8_t* data, void* tempBuffer)");
@@ -44,11 +50,13 @@ static import_data_types() {
   apply_type(0x00774640, "void __thiscall func(SCritSect *this)");
   apply_type(0x00774650, "void __thiscall func(SCritSect *this)");
   apply_type(0x00819EA0, "void __stdcall func(int32_t function, FrameScript_Object* object, int32_t args, char* args_fmt, FrameScript_EventObject* eventObject)");
-  apply_type(0x00AD2808, "char*[54]");
+  apply_type(0x00AD2808, "char*[53]");
+  apply_type(0x00AD90B0, "uint8_t[16]");
   apply_type(0x00AD90C0, "uint8_t[2]");
   apply_type(0x00B417C8, "uint32_t");
   apply_type(0x00B417D0, "int32_t");
   apply_type(0x00B41850, "CDataRecycler");
   apply_type(0x00C25CD0, "int8_t");
-  apply_type(0x00C26DF0, "CImVector[54][1024]");
+  apply_type(0x00C26DE8, "CURSORMODE");
+  apply_type(0x00C26DF0, "CImVector[53][1024]");
 }

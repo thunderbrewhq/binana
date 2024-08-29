@@ -2077,7 +2077,9 @@ static main() {
   set_name(0x00614E60, "Script_GetVehicleUIIndicator");
   set_name(0x00614EF0, "Script_GetVehicleUIIndicatorSeat");
   set_name(0x006160B0, "CopyCursorImage");
+  set_name(0x006162C0, "UpdateCursor");
   set_name(0x006163B0, "CursorInitialize");
+  set_name(0x00616800, "CursorSetMode");
   set_name(0x00616AD0, "GxXformPush_EGxXform_C44Matrix");
   set_name(0x00632050, "nullsub_4");
   set_name(0x00653A10, "nullsub_5");
@@ -2394,6 +2396,7 @@ static main() {
   set_name(0x00809EA0, "Script_SpellStopCasting");
   set_name(0x0080DC00, "Script_SpellTargetUnit");
   set_name(0x00819EA0, "FrameScript_Execute");
+  set_name(0x0081B530, "FrameScript_SignalEvent");
   set_name(0x0081B720, "Script_GetText");
   set_name(0x0081B7B0, "Script_CreateFont");
   set_name(0x0081B820, "Script_GetCurrentKeyBoardFocus");
@@ -2627,6 +2630,7 @@ static main() {
   set_name(0x00A2E718, "CGxDeviceD3d__vtable");
   set_name(0x00A2F500, "CGxDeviceD3d9Ex__vtable");
   set_name(0x00AD2808, "s_cursorNames");
+  set_name(0x00AD90B0, "CBLPFile__s_eightBitAlphaLookup");
   set_name(0x00AD90C0, "CBLPFile__s_oneBitAlphaLookup");
   set_name(0x00ADBAB4, "s_rect");
   set_name(0x00ADBAC4, "s_consoleHotKey");
@@ -2638,6 +2642,8 @@ static main() {
   set_name(0x00B417D0, "s_interactiveCount");
   set_name(0x00B41850, "s_messageRecycler");
   set_name(0x00C25CD0, "s_cursorFile");
+  set_name(0x00C25DD4, "s_cursorItemMipsWidth");
+  set_name(0x00C25DD8, "s_cursorItemMipsHeight");
   set_name(0x00C25DDC, "s_cursorItemMips");
   set_name(0x00C25DE0, "s_cursorItemType");
   set_name(0x00C25DE4, "s_cursorResetMode");
@@ -6780,8 +6786,12 @@ static main() {
   set_func_end(0x00614EF0, 0x00614FC6);
   set_func_start(0x006160B0, 0x006160B0);
   set_func_end(0x006160B0, 0x00616211);
+  set_func_start(0x006162C0, 0x006162C0);
+  set_func_end(0x006162C0, 0x006163AD);
   set_func_start(0x006163B0, 0x006163B0);
   set_func_end(0x006163B0, 0x006164A5);
+  set_func_start(0x00616800, 0x00616800);
+  set_func_end(0x00616800, 0x0061682E);
   set_func_start(0x00616AD0, 0x00616AD0);
   set_func_end(0x00616AD0, 0x00616AE8);
   set_func_start(0x00632050, 0x00632050);
@@ -7403,6 +7413,8 @@ static main() {
   set_func_end(0x0080DC00, 0x0080DCE3);
   set_func_start(0x00819EA0, 0x00819EA0);
   set_func_end(0x00819EA0, 0x0081A2B5);
+  set_func_start(0x0081B530, 0x0081B530);
+  set_func_end(0x0081B530, 0x0081B549);
   set_func_start(0x0081B720, 0x0081B720);
   set_func_end(0x0081B720, 0x0081B7AF);
   set_func_start(0x0081B7B0, 0x0081B7B0);

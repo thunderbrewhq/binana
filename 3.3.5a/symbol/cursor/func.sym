@@ -1,2 +1,4 @@
 CursorInitialize 006163B0 f end=006164A5
-CopyCursorImage 006160B0 f end=00616211
+CopyCursorImage 006160B0 f end=00616211 type="int32_t __usercall func@<eax>(uint32_t** image@<eax>, MipBits* mipImages@<ecx>, uint32_t width@<edx>, uint32_t height)"
+UpdateCursor 006162C0 f end=006163AD
+CursorSetMode 00616800 f end=0061682E type="void __stdcall func(CURSORMODE mode)"
