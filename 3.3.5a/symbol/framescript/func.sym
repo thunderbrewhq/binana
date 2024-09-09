@@ -1,2 +1,0 @@
-FrameScript_Execute 00819EA0 f end=0081A2B5 type="void __stdcall func(int32_t function, FrameScript_Object* object, int32_t args, char* args_fmt, FrameScript_EventObject* eventObject)"
-FrameScript_SignalEvent 0081B530 f end=0081B549

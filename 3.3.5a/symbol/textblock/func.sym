@@ -1,5 +1,0 @@
-TextBlockCreate 004BDAA0 f end=004BDBE4
-TextBlockGenerateFont 004BE9C0 f end=004BEB8C
-TextBlockGetFontPtr 004BD9D0 f end=004BD9EA
-TextBlockSetStringPos 004BDBF0 f end=004BDC4C
-TextBlockGetWrappedTextHeight 004BDD80 f

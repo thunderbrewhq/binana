@@ -1,2 +1,0 @@
-CDataAllocator__GetData 0095D110 f ; CDataAllocator::GetData(int, char const*, int)
-CDataAllocator__PutData 0095D1B0 f ; CDataAllocator::PutData(void*, char const*, int)
