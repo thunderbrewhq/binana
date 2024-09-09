@@ -1,0 +1,3 @@
+s_mainThread 00b417c8 l type="uint32_t"
+s_messageRecycler 00B41850 l type="CDataRecycler"
+s_interactiveCount 00B417D0 l type="int32_t"

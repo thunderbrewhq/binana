@@ -96,8 +96,8 @@ To import the main header file into your Ghidra project,
 
   1. go to `File` 🡒 `Parse C Source...`. 
   2. Select `clib.prf` as your parse configuration, and clear all source files and input paths.
-  3. Add the header `<game version>/include/main.h` to the `Source files to parse` combo box.
-  4. Add the path to `<game version>/include` to the `Include paths` combo box.
+  3. Add the header `profile/<game version>/include/main.h` to the `Source files to parse` combo box.
+  4. Add the path to `profile/<game version>/include` to the `Include paths` combo box.
   5. Add `-DGHIDRA` to a new line in `Parse Options`.
   6. press `Parse to Program`.
 
@@ -110,7 +110,7 @@ To import the symbol file into your Ghidra project,
   1. go to `Window` 🡒 `Script Manager`
   2. In the table view, lookup `ImportSymbolsScript.py`
   3. Run the script
-  4. Enter the path to `<game version>/symbol/main.sym`
+  4. Enter the path to `profile/<game version>/symbol/main.sym`
   
 # IDA
 
@@ -121,14 +121,14 @@ To import the main header file into your IDA database,
   1. Go to `Options` 🡒 `Compiler`
   2. Add `IDA` to the semicolon-separated `Predefined macros` list.
   3. Go to `File` 🡒 `Load file` 🡒 `Parse C Header file`
-  4. Enter the path to `<game version>/include/main.h`
+  4. Enter the path to `profile/<game version>/include/main.h`
 
 ## Importing symbols
 
 To use the IDC script,
 
   1. Go to `File` 🡒 `Script file...`
-  2. Navigate to `<game version>/ida/import_symbols.idc`
+  2. Navigate to `profile/<game version>/ida/import_symbols.idc`
   3. Wait for everything to be reanalyzed
 
 # x64dbg 
@@ -142,12 +142,12 @@ To load the database information into x64dbg:
   1. Open x96dbg.exe or x32dbg.exe directly
   2. Load your game binary
   3. Go to `File` 🡒 `Database` 🡒 `Import database`
-  4. Navigate to `<game version>/x32dbg/game.dd32`.
+  4. Navigate to `profile/<game version>/x32dbg/game.dd32`.
 
 ## Importing types
 
 To load the type information JSON file:
 
   1. Open the binary in x32dbg.exe
-  2. in the console, type: `LoadTypes <full path to local binana repository>\<game version>\x32dbg\types.json` 
+  2. in the console, type: `LoadTypes <full path to local binana repository>\profile\<game version>\x32dbg\types.json` 
 

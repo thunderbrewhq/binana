@@ -1,13 +1,13 @@
 all: generate
 
 compile-symbols:
-	./script/compile-symbols 3.3.5a
+	./script/compile-symbols profile/3.3.5a-windows
 
 ida-gen:
-	./bin/binana ida-gen --game 3.3.5a
+	./bin/binana ida-gen --game profile/3.3.5a-windows
 
 x64dbg-gen:
-	./bin/binana x64dbg-gen --game 3.3.5a --base-address=00400000 --module-name=wow.exe
+	./bin/binana x64dbg-gen --game profile/3.3.5a-windows --base-address=00400000 --module-name=wow.exe
 
 generate: compile-symbols x64dbg-gen ida-gen
 

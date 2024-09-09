@@ -1,0 +1,45 @@
+TextureLoadImage 004B81D0 f end=004B8385 type="MipBits* func(const char* filename, uint32_t* width, uint32_t* height, PIXEL_FORMAT* dataFormat, int32_t* isOpaque, CStatus* status, uint32_t* alphaBits, int32_t a8)"
+TextureFreeMippedImg 004B7300 f end=004B73D9 type="void func(MipBits* image)"
+LoadTgaMips 004B78A0 f end=004B7AA0 type="int32_t __usercall func@<eax>(char* ext@<eax>, char* filename, int32_t a3, MipBits** mipBits, uint32_t* width, uint32_t* height, PIXEL_FORMAT* texFormat, int32_t* isOpaque@<ecx>, uint32_t* alphaBits, PIXEL_FORMAT* dataFormat)"
+LoadBlpMips 004B8070 f end=004B81CE type="int32_t __usercall func@<eax>(char* ext@<eax>, char* filename@<ebx>, int32_t a3, MipBits** mipBits, uint32_t* width, uint32_t* height, uint32_t* isOpaque, uint32_t* alphaBits, PIXEL_FORMAT* dataFormat)"
+CBLPFile__Pixels 006AF6A0 f end=006AF6D1 type="uint32_t __thiscall func(CBLPFile* this, uint32_t mipLevel)"
+CBLPFile__Close 006AE8B0 f end=006AE8DA type="void __thiscall func(CBLPFile* this)"
+CBLPFile__Open 006AFF10 f end=006AFFCF type="int32_t __thiscall func(CBLPFile* this, char* filename)"
+CBLPFile__Source 006AE900 f end=006AE990 type="int32_t __thiscall func(CBLPFile* this, void* fileBits)"
+CBLPFile__LockChain2 006AFFD0 f end=006B012E type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, MipBits** images, uint32_t mipLevel, int32_t a6)"
+CBLPFile__Lock2 006AFCE0 f end=006AFF06 type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, uint32_t mipLevel, unsigned char* data, uint32_t* stride)"
+CBLPFile__GetFormatSize 006AF730 f end=006AF7E9 type="int32_t __thiscall func(CBLPFile *this, PIXEL_FORMAT format, uint32_t mipLevel, uint32_t* size, uint32_t* stride)"
+CBLPFile__DecompPalARGB8888 006AE9E0 f end=006AEB93 type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t colorSize)"
+CBLPFile__DecompPalFastPath 006AE990 f end=006AE9D6 type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t colorSize)"
+CBLPFile__DecompPalARGB4444DitherFloydSteinberg 006AEBA0 f end=006AEE61 type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)"
+CBLPFile__DecompPalARGB1555DitherFloydSteinberg 006AEE70 f end=006AF133 type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)"
+CBLPFile__DecompPalARGB565DitherFloydSteinberg 006AF140 f end=006AF33F type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)"
+CBLPFile__DecompPalARGB2565DitherFloydSteinberg 006AF340 f end=006AF65D type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)"
+CBLPFile__DecompPal 006AF810 f end=006AF984 type="int32_t __thiscall func(CBLPFile* this, PIXEL_FORMAT format, uint32_t mipLevel, uint8_t* data, void* tempBuffer)"
+CTgaFile__AddAlphaChannel_internal 006AA420 f end=006AA51E type="void __thiscall func(CTgaFile* this, uint8_t* pAlphaData, uint8_t* pNoAlphaData, uint8_t* alpha)" ; private utility method
+CTgaFile__AddAlphaChannel 006AB390 f end=006AB447 type="int32_t __thiscall func(CTgaFile* this, void* pImg)" ; public method
+CTgaFile__RemoveAlphaChannels 006AA870 f end=006AA948 type="int32_t __thiscall func(CTgaFile* this)"
+CTgaFile__Open 006AAFB0 f end=006AB0D4 type="int32_t __thiscall func(CTgaFile* this, char* filename, int32_t a3)"
+CTgaFile__Close 006AAF40 f end=006AAFA5 type="int32_t __thiscall func(CTgaFile* this)"
+CTgaFile__LoadImageData 006AB4B0 f end=006AB5B8 type="int32_t __thiscall func(CTgaFile* this, int32_t flags)"
+CTgaFile__ReadRawImage 006AA520 f end=006AA62F
+CTgaFile__ReadRleImage 006AB220 f end=006AB381
+CTgaFile__ConvertColorMapped 006AB0E0 f end=006AB212
+CTgaFile__ReadColorMappedImage 006AB450 f end=006AB4A1
+CTgaFile__ColorMapEntryBytes 006AA350 f end=006AA379 ; UC
+CTgaFile__ColorMapBytes 006AA380 f end=006AA3B0
+CTgaFile__SetTopDown 006AA700 f end=006AA81D type="void __thiscall func(CTgaFile* this, int32_t set)"
+CTgaFile__ImageTGA32Pixel 006AA840 f end=006AA867 type="TGA32Pixel* __thiscall func(CTgaFile* this)"
+CTgaFile__ValidateColorDepth 006AA3B0 f end=006AA3E0 type="int32_t __thiscall func(CTgaFile* this)"
+CTgaFile__PreImageBytes 006AA3E0 f end=006AA41B type="uint32_t __thiscall func(CTgaFile* this)"
+CTgaFile__RLEDecompressImage 006AA630 f end=006AA6F2 type="int32_t __thiscall func(CTgaFile* this, uint8_t* pRLEData, uint8_t* pData)"
+TextureCalcMipCount 004B5510 f end=004B5549 type="int32_t __stdcall func(uint32_t width, uint32_t height)"
+TextureAllocMippedImg 004B7220 f end=004B72F4 type="MipBits* __stdcall func(PIXEL_FORMAT format, uint32_t width, uint32_t height)"
+MippedImgSet 006AB810 f end=006AB85E type="void __stdcall func(uint32_t fourCC, uint32_t width, uint32_t height, MipBits* bits)"
+MippedImgAllocA 006AB760 f end=006AB7DF type="MipBits* __stdcall func(uint32_t fourCC, uint32_t width, uint32_t height, char* filename, int32_t linenumber)"
+LoadPredrawnMips 004B5A00 f end=004B5BA2
+FullShrink 006AB860 f end=006ABAAF type="void _stdcall func(C4Pixel* dest, uint32_t destWidth, uint32_t destHeight, C4Pixel* source, uint32_t sourceWidth, uint32_t sourceHeight)"
+TextureGenerateMips 004B5550 f end=004B55D7
+CalcLevelSize 006AB620 f end=006AB6B9 type="uint32_t __cdecl func(uint32_t level, uint32_t width, uint32_t height, uint32_t fourCC)"
+CalcLevelCount 006AB700 f end=006AB75C type="uint32_t __stdcall func(uint32_t width, uint32_t height)"
+GetBitDepth 006AB5C0 f end=006AB614

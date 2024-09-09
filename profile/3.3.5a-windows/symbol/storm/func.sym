@@ -1,0 +1,37 @@
+SCmdRegisterArgList 00773590 f end=007737C2
+SCmdProcess 00773890 f end=00773986
+SCmdProcessCommandLine 00773990 f end=007739AD
+SErrSetLastError 00771870 f end=00771886
+SErrSetLogTitleString 00771890 f end=007718F2
+SErrSetLogTitleCallback 00771900 f end=00771957
+SErrRegisterHandler 00771B80 f end=00771C15
+SErrCatchUnhandledExceptions 00772B20 f end=00772B2C
+SMemAlloc 0076E540 f end=0076E59A type="void* __stdcall func(uint32_t bytes, char* filename, int32_t linenumber, uint32_t flags)"
+SMemFree 0076E5A0 f end=0076E5C4 type="int32_t __stdcall func(void* ptr, char* filename, int32_t linenumber, uint32_t flags)"
+SMemReAlloc 0076E5E0 f end=0076E6D6 type="void* __stdcall func(void* ptr, uint32_t bytes, char* filename, int32_t linenumber, uint32_t flags)"
+SMemSetDebugFlags 0076E4A0 f end=0076E4D2
+SRegLoadValue 00770840 f end=007708E9
+SRegSaveValue 007709A0 f end=007709E8
+SStrChr 0076E6E0 f end=0076E712
+SStrChrR 0076E720 f end=0076E756
+SStrCmp 0076E760 f end=0076E77B
+SStrCmpI 0076E780 f end=0076E79B
+SStrCopy 0076ED20 f end=0076ED98
+SStrLen 0076EE30 f end=0076EE5E
+SStrPack 0076EF70 f end=0076F001
+SStrPrintf 0076F070 f end=0076F09E type="int32_t __stdcall func(char* dest, size_t maxchars, char* format, ...)"
+SStrVPrintf 0076F0A0 f end=0076F0CE
+SStrTokenize 0076F1E0 f end=0076F331
+SStrHashHT 0076F640 f end=0076F6B9
+SEvent__Set 00774720 f end=0077472A
+SEvent__Reset 00774730 f end=0077473A
+SSyncObject__Wait 00774690 f end=007746A4
+StormInitialize 007739E0 f end=007739F4
+StormSetOption 00773A80 f end=00773C81
+TSList__LinkNode 004F71A0 f end=004F724D
+SCritSect__SCritSect 00774620 f end=0077462E type="SCritSect* __thiscall func(SCritSect* this)"
+SCritSect__Enter 00774640 f end=00774648 type="void __thiscall func(SCritSect *this)"
+SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *this)"
+SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect *this)"
+SRgnCreate 00777980 f end=00777A78
+SRgnDelete 00777940 f end=00777971
