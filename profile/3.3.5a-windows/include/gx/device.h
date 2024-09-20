@@ -199,7 +199,8 @@ struct CGxDevice {
   int32_t m_windowVisible;
   int32_t intF64;
   int32_t intF68;
-  int32_t intF6C;
+  // Invented name, though seems to have the same place as CGxDeviceD3d::m_d3dNeedsReset 
+  int32_t m_needsUpdate;
   CBoundingBox m_viewport;
   C44Matrix m_projection;
   C44Matrix m_projNative;

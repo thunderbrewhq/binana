@@ -16706,6 +16706,14 @@
     },
     {
       "manual": true,
+      "start": "0x281f60",
+      "end": "0x282123",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x281f60"
+    },
+    {
+      "manual": true,
       "start": "0x282340",
       "end": "0x28239d",
       "module": "wow.exe",
@@ -16775,6 +16783,22 @@
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x282d70"
+    },
+    {
+      "manual": true,
+      "start": "0x282dc0",
+      "end": "0x282de6",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x282dc0"
+    },
+    {
+      "manual": true,
+      "start": "0x282e20",
+      "end": "0x282e46",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x282e20"
     },
     {
       "manual": true,
@@ -17311,6 +17335,14 @@
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x28fd50"
+    },
+    {
+      "manual": true,
+      "start": "0x290150",
+      "end": "0x290222",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x290150"
     },
     {
       "manual": true,
@@ -18362,6 +18394,14 @@
     },
     {
       "manual": true,
+      "start": "0x2bf4c0",
+      "end": "0x2bf5a3",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2bf4c0"
+    },
+    {
+      "manual": true,
       "start": "0x2bf6d0",
       "end": "0x2bfb5f",
       "module": "wow.exe",
@@ -19111,6 +19151,22 @@
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x374730"
+    },
+    {
+      "manual": true,
+      "start": "0x377420",
+      "end": "0x377587",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x377420"
+    },
+    {
+      "manual": true,
+      "start": "0x377590",
+      "end": "0x377896",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x377590"
     },
     {
       "manual": true,
@@ -21167,6 +21223,14 @@
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x5de1d0"
+    },
+    {
+      "manual": true,
+      "start": "0x6c1b9c",
+      "end": "0x6c1b9c",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x6c1b9c"
     }
   ],
   "labels": [
@@ -33701,6 +33765,12 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "GxXformSetViewport",
+      "address": "0x281f60"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "GxDrawLockedElements",
       "address": "0x282340"
     },
@@ -33751,6 +33821,18 @@
       "module": "wow.exe",
       "text": "CGxDevice__DeviceCurWindow",
       "address": "0x282d70"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__CapsIsWindowVisible",
+      "address": "0x282dc0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__CapsHasContext",
+      "address": "0x282e20"
     },
     {
       "manual": true,
@@ -34153,6 +34235,12 @@
       "module": "wow.exe",
       "text": "CGxDeviceD3d__CGxDeviceD3d",
       "address": "0x28fd50"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDeviceD3d__IReleaseD3dResources",
+      "address": "0x290150"
     },
     {
       "manual": true,
@@ -34943,6 +35031,12 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "GxuXformCreateOrtho",
+      "address": "0x2bf4c0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "GxuXformCalcFrustumCorners",
       "address": "0x2bf6d0"
     },
@@ -35509,6 +35603,18 @@
       "module": "wow.exe",
       "text": "SEvent__Reset",
       "address": "0x374730"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "SRgnCombineRectf",
+      "address": "0x377420"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "SRgnGetBoundingRectf",
+      "address": "0x377590"
     },
     {
       "manual": true,
@@ -37081,6 +37187,12 @@
       "module": "wow.exe",
       "text": "CGxDeviceD3d9Ex__vtable",
       "address": "0x62f500"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "s_zorderlist",
+      "address": "0x6c1b9c"
     },
     {
       "manual": true,

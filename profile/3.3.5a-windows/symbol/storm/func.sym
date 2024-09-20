@@ -35,3 +35,5 @@ SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *t
 SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect *this)"
 SRgnCreate 00777980 f end=00777A78
 SRgnDelete 00777940 f end=00777971
+SRgnCombineRectf 00777420 f end=00777588 type="void __stdcall func(HSRGN handle, RECTF* rect, void* param, int32_t combinemode)"
+SRgnGetBoundingRectf 00777590 f end=00777897 type="void __stdcall func(HSRGN handle, RECTF* rect)"

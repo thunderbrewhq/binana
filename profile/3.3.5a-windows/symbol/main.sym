@@ -11,7 +11,7 @@ CommonMain 00406C70 f end=00406D64
 C44Matrix__C44Matrix 00407F40 f end=00407F76
 C44Matrix__operator_assign_C44Matrix 00407F80 f end=00407FEA
 GxXformSetProjection 00408030 f end=00408049
-GxXformViewport 00408070 f end=004080D9
+GxXformViewport 00408070 f end=004080D9 type="void __stdcall func(float* minX, float* maxX, float* minY, float* maxY, float* minZ, float* maxZ)"
 GxXformProjNativeTranspose 00408110 f end=0040820F
 GxShaderConstantsSet 00408210 f end=0040823B
 GxRsSet_CGxShader 00408240 f end=00408258
@@ -2086,6 +2086,7 @@ GxPrimIndexPtr 00681AB0 f end=00681AFB
 GxPrimVertexPtr 00681B00 f
 CGxTexFlags__CGxTexFlags 00681BE0 f end=00681CAB ; UC
 GxTexCreate 00681CB0 f end=00681D87
+GxXformSetViewport 00681F60 f end=00682124 type="void __stdcall func(float minX, float maxX, float minY, float maxY, float minZ, float maxZ)"
 GxDrawLockedElements 00682340 f end=0068239E
 GxPrimVertexPtr_FFP 00682400 f end=00682781 ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
 GxPrimLockVertexPtrs 006828C0 f end=006828FE
@@ -2095,6 +2096,8 @@ CGxDevice__DeviceSetBaseMipLevel 00682D00 f end=00682D10
 CGxDevice__DeviceApi 00682D20 f end=00682D27
 CGxDevice__IDevIsWindowed 00682D40 f end=00682D48
 CGxDevice__DeviceCurWindow 00682D70 f end=00682D76
+CGxDevice__CapsIsWindowVisible 00682DC0 f end=00682DE7 type="int32_t __thiscall func(CGxDevice* this, int32_t a2)"
+CGxDevice__CapsHasContext 00682E20 f end=00682E47 type="int32_t __thiscall func(CGxDevice* this, int32_t a2)"
 CGxDevice__ScenePresent 00682E50 f end=00682E66
 CGxDevice__PrimCalcCount 00682F40 f end=00682F66
 CGxDevice__LightEnable 00683080 f end=006830A4
@@ -2162,6 +2165,7 @@ CGxDeviceD3d__IBufLock 0068FB10 f end=0068FCDC
 CGxDeviceD3d__BufLock 0068FCE0 f end=0068FCFE
 CGxDeviceD3d__BufData 0068FD00 f end=0068FD49
 CGxDeviceD3d__CGxDeviceD3d 0068FD50 f end=0068FE80
+CGxDeviceD3d__IReleaseD3dResources 00690150 f end=00690223
 CGxDeviceD3d__DeviceWM 00690230 f end=0069038D
 CGxDeviceD3d__DeviceSetFormat 006904D0 f end=006905E8
 CGxDeviceD3d__ICreateD3d 00690680 f end=00690742
@@ -2293,6 +2297,7 @@ GxuFontDestroyBatch 006BE3B0 f end=006BE3DD
 GxuFontUpdate 006BE3E0 f end=006BEE87
 GxuFontCreateBatch 006BF160 f end=006BF202
 GxuXformCreateProjection_Exact 006BF370 f end=006BF4B2
+GxuXformCreateOrtho 006BF4C0 f end=006BF5A4 type="void __stdcall GxuXformCreateOrtho(float minX, float maxX, float minY, float maxY, float minZ, float maxZ, C44Matrix* dst)"
 GxuXformCalcFrustumCorners 006BF6D0 f end=006BFB60
 GxuUpdateSingleColorTexture 006BFDA0 f end=006BFDFE
 GxuXformCreateProjection_SG 006BFE00 f end=006BFE5C
@@ -2388,6 +2393,8 @@ CSRWLock__Leave 00774660 f end=00774675
 SSyncObject__Wait 00774690 f end=007746A4
 SEvent__Set 00774720 f end=0077472A
 SEvent__Reset 00774730 f end=0077473A
+SRgnCombineRectf 00777420 f end=00777588 type="void __stdcall func(HSRGN handle, RECTF* rect, void* param, int32_t combinemode)"
+SRgnGetBoundingRectf 00777590 f end=00777897 type="void __stdcall func(HSRGN handle, RECTF* rect)"
 SRgnDelete 00777940 f end=00777971
 SRgnCreate 00777980 f end=00777A78
 Script_VoiceEnumerateOutputDevices 007DAB80 f end=007DAC34
@@ -2648,6 +2655,7 @@ nullsub_150 009DE1D0 f
 s_pixelFormatToMipBitsCache 009F1074 l
 CGxDevice__vtable 00A2DDC0 l type="CGxDevice__vtable"
 CGxDeviceOpenGl__vtable 00A2E198 l
+s_zorderlist 00AC1B9C f type="TSExplicitList_CILayer"
 s_cursorNames 00AD2808 l type="char*[53]"
 CBLPFile__s_eightBitAlphaLookup 00AD90B0 l type="uint8_t[16]"
 CBLPFile__s_oneBitAlphaLookup 00AD90C0 l type="uint8_t[2]"

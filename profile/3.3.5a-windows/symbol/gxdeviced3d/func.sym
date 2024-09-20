@@ -55,3 +55,4 @@ CGxDeviceD3d__IShaderCreatePixel 006AA070 f end=006AA0C5
 CGxDeviceD3d__IShaderCreateVertex 006AA0D0 f end=006AA125
 CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A
 CGxDeviceD3d__IBindVertexShader 006AA2F0 f end=006AA346
+CGxDeviceD3d__IReleaseD3dResources 00690150 f end=00690223

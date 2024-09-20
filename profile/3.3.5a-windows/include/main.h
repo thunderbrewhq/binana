@@ -36,9 +36,12 @@
 #include "gx/batch.h"
 #include "gx/d3d9.h"
 
+#include "screen/layer.h"
+
 #include "storm/array.h"
 #include "storm/list.h"
 #include "storm/hash.h"
+#include "storm/region.h"
 
 #include "tempest/box.h"
 #include "tempest/matrix.h"

@@ -55,3 +55,5 @@ CGxDevice__CursorSetVisible 00683640 f end=00683650
 CGxDevice__CursorLock 00683650 f end=00683657
 CGxDevice__CursorSetDepth 00683660 f end=00683670
 CGxDevice__CursorUnlock 00684B50 f end=00684B99
+CGxDevice__CapsHasContext 00682E20 f end=00682E47 type="int32_t __thiscall func(CGxDevice* this, int32_t a2)"
+CGxDevice__CapsIsWindowVisible 00682DC0 f end=00682DE7 type="int32_t __thiscall func(CGxDevice* this, int32_t a2)"

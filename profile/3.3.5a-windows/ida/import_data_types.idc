@@ -1,6 +1,7 @@
 #include <idc.idc>
 
 static import_data_types() {
+  apply_type(0x00408070, "void __stdcall func(float* minX, float* maxX, float* minY, float* maxY, float* minZ, float* maxZ)");
   apply_type(0x004804F0, "void __cdecl func(EvtContext* context, EVENTID id, void* handler, void* param, float priority)");
   apply_type(0x004806A0, "int32_t __cdecl func(EvtContext* context, EVENTID id, void *data, size_t bytes)");
   apply_type(0x004B5510, "int32_t __stdcall func(uint32_t width, uint32_t height)");
@@ -11,6 +12,9 @@ static import_data_types() {
   apply_type(0x004B81D0, "MipBits* func(const char* filename, uint32_t* width, uint32_t* height, PIXEL_FORMAT* dataFormat, int32_t* isOpaque, CStatus* status, uint32_t* alphaBits, int32_t a8)");
   apply_type(0x006160B0, "int32_t __usercall func@<eax>(uint32_t** image@<eax>, MipBits* mipImages@<ecx>, uint32_t width@<edx>, uint32_t height)");
   apply_type(0x00616800, "void __stdcall func(CURSORMODE mode)");
+  apply_type(0x00681F60, "void __stdcall func(float minX, float maxX, float minY, float maxY, float minZ, float maxZ)");
+  apply_type(0x00682DC0, "int32_t __thiscall func(CGxDevice* this, int32_t a2)");
+  apply_type(0x00682E20, "int32_t __thiscall func(CGxDevice* this, int32_t a2)");
   apply_type(0x006A5A30, "void __thiscall func(CGxDeviceD3d* this)");
   apply_type(0x006AA3B0, "int32_t __thiscall func(CTgaFile* this)");
   apply_type(0x006AA3E0, "uint32_t __thiscall func(CTgaFile* this)");
@@ -42,6 +46,7 @@ static import_data_types() {
   apply_type(0x006AFCE0, "int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, uint32_t mipLevel, unsigned char* data, uint32_t* stride)");
   apply_type(0x006AFF10, "int32_t __thiscall func(CBLPFile* this, char* filename)");
   apply_type(0x006AFFD0, "int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, MipBits** images, uint32_t mipLevel, int32_t a6)");
+  apply_type(0x006BF4C0, "void __stdcall GxuXformCreateOrtho(float minX, float maxX, float minY, float maxY, float minZ, float maxZ, C44Matrix* dst)");
   apply_type(0x0076E540, "void* __stdcall func(uint32_t bytes, char* filename, int32_t linenumber, uint32_t flags)");
   apply_type(0x0076E5A0, "int32_t __stdcall func(void* ptr, char* filename, int32_t linenumber, uint32_t flags)");
   apply_type(0x0076E5E0, "void* __stdcall func(void* ptr, uint32_t bytes, char* filename, int32_t linenumber, uint32_t flags)");
@@ -50,8 +55,11 @@ static import_data_types() {
   apply_type(0x00774630, "void __thiscall func(SCritSect *this)");
   apply_type(0x00774640, "void __thiscall func(SCritSect *this)");
   apply_type(0x00774650, "void __thiscall func(SCritSect *this)");
+  apply_type(0x00777420, "void __stdcall func(HSRGN handle, RECTF* rect, void* param, int32_t combinemode)");
+  apply_type(0x00777590, "void __stdcall func(HSRGN handle, RECTF* rect)");
   apply_type(0x00819EA0, "void __stdcall func(int32_t function, FrameScript_Object* object, int32_t args, char* args_fmt, FrameScript_EventObject* eventObject)");
   apply_type(0x00A2DDC0, "CGxDevice__vtable");
+  apply_type(0x00AC1B9C, "TSExplicitList_CILayer");
   apply_type(0x00AD2808, "char*[53]");
   apply_type(0x00AD90B0, "uint8_t[16]");
   apply_type(0x00AD90C0, "uint8_t[2]");

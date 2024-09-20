@@ -145,8 +145,20 @@
       "name": "HEVENTCONTEXT"
     },
     {
+      "type": "HLAYER__*",
+      "name": "HLAYER"
+    },
+    {
+      "type": "HLOCKEDRGN__*",
+      "name": "HLOCKEDRGN"
+    },
+    {
       "type": "HPROPCONTEXT__*",
       "name": "HPROPCONTEXT"
+    },
+    {
+      "type": "HSRGN__*",
+      "name": "HSRGN"
     },
     {
       "type": "long long",
@@ -243,6 +255,14 @@
     {
       "type": "TSList_CGxShader",
       "name": "TSExplicitList_CGxShader"
+    },
+    {
+      "type": "TSList_CILayer",
+      "name": "TSExplicitList_CILayer"
+    },
+    {
+      "type": "TSList_RGN",
+      "name": "TSExplicitList_RGN"
     }
   ],
   "structs": [
@@ -1199,6 +1219,17 @@
       ]
     },
     {
+      "name": "CHandleObject",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "m_refcount",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "CImVector",
       "size": 4,
       "members": [
@@ -1478,6 +1509,22 @@
       ]
     },
     {
+      "name": "FOUNDPARAM",
+      "size": 8,
+      "members": [
+        {
+          "type": "void*",
+          "name": "param",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "sequence",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "FrameScript_Object",
       "size": 16,
       "members": [
@@ -1559,7 +1606,40 @@
       ]
     },
     {
+      "name": "HLAYER__",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unused",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "HLOCKEDRGN__",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unused",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "HPROPCONTEXT__",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unused",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "HSRGN__",
       "size": 4,
       "members": [
         {
@@ -1655,6 +1735,32 @@
           "name": "mip",
           "arrsize": 1,
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "RECTF",
+      "size": 16,
+      "members": [
+        {
+          "type": "float",
+          "name": "left",
+          "offset": 0
+        },
+        {
+          "type": "float",
+          "name": "bottom",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "right",
+          "offset": 8
+        },
+        {
+          "type": "float",
+          "name": "top",
+          "offset": 12
         }
       ]
     },
@@ -1854,6 +1960,84 @@
       ]
     },
     {
+      "name": "TSGrowableArray_FOUNDPARAM",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "FOUNDPARAM*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_RECTF",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "RECTF*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_SOURCE",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "SOURCE*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_TSList_CGxShader",
       "size": 16,
       "members": [
@@ -1895,6 +2079,32 @@
         },
         {
           "type": "TSList_FrameScript_EventObject*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_TSList_RGN",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "TSList_RGN*",
           "name": "m_data",
           "offset": 8
         },
@@ -2058,6 +2268,22 @@
       ]
     },
     {
+      "name": "TSLink_CILayer",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CILayer*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CILayer*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSLink_CStatus__STATUSENTRY",
       "size": 8,
       "members": [
@@ -2164,6 +2390,22 @@
         },
         {
           "type": "FrameScript_EventObject*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_RGN",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_RGN*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "RGN*",
           "name": "m_next",
           "offset": 4
         }
@@ -3295,6 +3537,17 @@
       ]
     },
     {
+      "name": "CSRgn",
+      "size": 4,
+      "members": [
+        {
+          "type": "HSRGN",
+          "name": "m_handle",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "EVENT_DATA_KEY",
       "size": 24,
       "members": [
@@ -3389,6 +3642,32 @@
       ]
     },
     {
+      "name": "SOURCE",
+      "size": 28,
+      "members": [
+        {
+          "type": "RECTF",
+          "name": "rect",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "param",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "sequence",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 24
+        }
+      ]
+    },
+    {
       "name": "CSBasePriorityQueue",
       "size": 20,
       "members": [
@@ -3474,6 +3753,63 @@
       "members": [
         {
           "type": "TSLink_CGxShader",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CILayer",
+      "size": 60,
+      "members": [
+        {
+          "type": "CHandleObject",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "RECTF",
+          "name": "rect",
+          "offset": 4
+        },
+        {
+          "type": "RECTF",
+          "name": "visible",
+          "offset": 20
+        },
+        {
+          "type": "float",
+          "name": "zorder",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 40
+        },
+        {
+          "type": "void*",
+          "name": "param",
+          "offset": 44
+        },
+        {
+          "type": "void**",
+          "name": "paintfunc",
+          "offset": 48
+        },
+        {
+          "type": "TSLink_CILayer",
+          "name": "zorderlink",
+          "offset": 52
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CILayer",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CILayer",
           "name": "m_link",
           "offset": 0
         }
@@ -3678,6 +4014,43 @@
       ]
     },
     {
+      "name": "TSHashObject_RGN_HASHKEY_NONE",
+      "size": 24,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_hashval",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_RGN",
+          "name": "m_linktoslot",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_RGN",
+          "name": "m_linktofull",
+          "offset": 12
+        },
+        {
+          "type": "HASHKEY_NONE",
+          "name": "m_key",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_RGN",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_RGN",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "TSLinkedNode_SIMPLEFRAMENODE",
       "size": 8,
       "members": [
@@ -3859,6 +4232,38 @@
         },
         {
           "type": "TSLink_CGxShader",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CILayer",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CILayer",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_RGN",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_RGN",
           "name": "m_terminator",
           "offset": 4
         }
@@ -4264,6 +4669,47 @@
           "type": "TSHashObject_FrameScript_EventObject_HASHKEY_STRI",
           "name": "b_base",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "RGN",
+      "size": 96,
+      "members": [
+        {
+          "type": "TSHashObject_RGN_HASHKEY_NONE",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "TSGrowableArray_SOURCE",
+          "name": "source",
+          "offset": 24
+        },
+        {
+          "type": "TSGrowableArray_RECTF",
+          "name": "combined",
+          "offset": 40
+        },
+        {
+          "type": "TSGrowableArray_FOUNDPARAM",
+          "name": "foundparams",
+          "offset": 56
+        },
+        {
+          "type": "RECTF",
+          "name": "foundparamsrect",
+          "offset": 72
+        },
+        {
+          "type": "int32_t",
+          "name": "sequence",
+          "offset": 88
+        },
+        {
+          "type": "int32_t",
+          "name": "dirty",
+          "offset": 92
         }
       ]
     },
@@ -4724,6 +5170,32 @@
         },
         {
           "type": "TSGrowableArray_TSList_CGxShader",
+          "name": "m_slotlistarray",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_slotmask",
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "TSHashTable_RGN_HASHKEY_NONE",
+      "size": 36,
+      "members": [
+        {
+          "type": "TSList_RGN",
+          "name": "m_fulllist",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fullnessIndicator",
+          "offset": 12
+        },
+        {
+          "type": "TSGrowableArray_TSList_RGN",
           "name": "m_slotlistarray",
           "offset": 16
         },

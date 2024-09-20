@@ -2091,6 +2091,7 @@ static main() {
   set_name(0x00681B00, "GxPrimVertexPtr");
   set_name(0x00681BE0, "CGxTexFlags__CGxTexFlags");
   set_name(0x00681CB0, "GxTexCreate");
+  set_name(0x00681F60, "GxXformSetViewport");
   set_name(0x00682340, "GxDrawLockedElements");
   set_name(0x00682400, "GxPrimVertexPtr_FFP");
   set_name(0x006828C0, "GxPrimLockVertexPtrs");
@@ -2100,6 +2101,8 @@ static main() {
   set_name(0x00682D20, "CGxDevice__DeviceApi");
   set_name(0x00682D40, "CGxDevice__IDevIsWindowed");
   set_name(0x00682D70, "CGxDevice__DeviceCurWindow");
+  set_name(0x00682DC0, "CGxDevice__CapsIsWindowVisible");
+  set_name(0x00682E20, "CGxDevice__CapsHasContext");
   set_name(0x00682E50, "CGxDevice__ScenePresent");
   set_name(0x00682F40, "CGxDevice__PrimCalcCount");
   set_name(0x00683080, "CGxDevice__LightEnable");
@@ -2167,6 +2170,7 @@ static main() {
   set_name(0x0068FCE0, "CGxDeviceD3d__BufLock");
   set_name(0x0068FD00, "CGxDeviceD3d__BufData");
   set_name(0x0068FD50, "CGxDeviceD3d__CGxDeviceD3d");
+  set_name(0x00690150, "CGxDeviceD3d__IReleaseD3dResources");
   set_name(0x00690230, "CGxDeviceD3d__DeviceWM");
   set_name(0x006904D0, "CGxDeviceD3d__DeviceSetFormat");
   set_name(0x00690680, "CGxDeviceD3d__ICreateD3d");
@@ -2298,6 +2302,7 @@ static main() {
   set_name(0x006BE3E0, "GxuFontUpdate");
   set_name(0x006BF160, "GxuFontCreateBatch");
   set_name(0x006BF370, "GxuXformCreateProjection_Exact");
+  set_name(0x006BF4C0, "GxuXformCreateOrtho");
   set_name(0x006BF6D0, "GxuXformCalcFrustumCorners");
   set_name(0x006BFDA0, "GxuUpdateSingleColorTexture");
   set_name(0x006BFE00, "GxuXformCreateProjection_SG");
@@ -2393,6 +2398,8 @@ static main() {
   set_name(0x00774690, "SSyncObject__Wait");
   set_name(0x00774720, "SEvent__Set");
   set_name(0x00774730, "SEvent__Reset");
+  set_name(0x00777420, "SRgnCombineRectf");
+  set_name(0x00777590, "SRgnGetBoundingRectf");
   set_name(0x00777940, "SRgnDelete");
   set_name(0x00777980, "SRgnCreate");
   set_name(0x007DAB80, "Script_VoiceEnumerateOutputDevices");
@@ -2655,6 +2662,7 @@ static main() {
   set_name(0x00A2E198, "CGxDeviceOpenGl__vtable");
   set_name(0x00A2E718, "CGxDeviceD3d__vtable");
   set_name(0x00A2F500, "CGxDeviceD3d9Ex__vtable");
+  set_name(0x00AC1B9C, "s_zorderlist");
   set_name(0x00AD2808, "s_cursorNames");
   set_name(0x00AD90B0, "CBLPFile__s_eightBitAlphaLookup");
   set_name(0x00AD90C0, "CBLPFile__s_oneBitAlphaLookup");
@@ -6840,6 +6848,8 @@ static main() {
   set_func_end(0x00681BE0, 0x00681CAB);
   set_func_start(0x00681CB0, 0x00681CB0);
   set_func_end(0x00681CB0, 0x00681D87);
+  set_func_start(0x00681F60, 0x00681F60);
+  set_func_end(0x00681F60, 0x00682124);
   set_func_start(0x00682340, 0x00682340);
   set_func_end(0x00682340, 0x0068239E);
   set_func_start(0x00682400, 0x00682400);
@@ -6858,6 +6868,10 @@ static main() {
   set_func_end(0x00682D40, 0x00682D48);
   set_func_start(0x00682D70, 0x00682D70);
   set_func_end(0x00682D70, 0x00682D76);
+  set_func_start(0x00682DC0, 0x00682DC0);
+  set_func_end(0x00682DC0, 0x00682DE7);
+  set_func_start(0x00682E20, 0x00682E20);
+  set_func_end(0x00682E20, 0x00682E47);
   set_func_start(0x00682E50, 0x00682E50);
   set_func_end(0x00682E50, 0x00682E66);
   set_func_start(0x00682F40, 0x00682F40);
@@ -6992,6 +7006,8 @@ static main() {
   set_func_end(0x0068FD00, 0x0068FD49);
   set_func_start(0x0068FD50, 0x0068FD50);
   set_func_end(0x0068FD50, 0x0068FE80);
+  set_func_start(0x00690150, 0x00690150);
+  set_func_end(0x00690150, 0x00690223);
   set_func_start(0x00690230, 0x00690230);
   set_func_end(0x00690230, 0x0069038D);
   set_func_start(0x006904D0, 0x006904D0);
@@ -7250,6 +7266,8 @@ static main() {
   set_func_end(0x006BF160, 0x006BF202);
   set_func_start(0x006BF370, 0x006BF370);
   set_func_end(0x006BF370, 0x006BF4B2);
+  set_func_start(0x006BF4C0, 0x006BF4C0);
+  set_func_end(0x006BF4C0, 0x006BF5A4);
   set_func_start(0x006BF6D0, 0x006BF6D0);
   set_func_end(0x006BF6D0, 0x006BFB60);
   set_func_start(0x006BFDA0, 0x006BFDA0);
@@ -7436,6 +7454,10 @@ static main() {
   set_func_end(0x00774720, 0x0077472A);
   set_func_start(0x00774730, 0x00774730);
   set_func_end(0x00774730, 0x0077473A);
+  set_func_start(0x00777420, 0x00777420);
+  set_func_end(0x00777420, 0x00777588);
+  set_func_start(0x00777590, 0x00777590);
+  set_func_end(0x00777590, 0x00777897);
   set_func_start(0x00777940, 0x00777940);
   set_func_end(0x00777940, 0x00777971);
   set_func_start(0x00777980, 0x00777980);
@@ -7782,6 +7804,7 @@ static main() {
   set_func_start(0x009DE1B0, 0x009DE1B0);
   set_func_start(0x009DE1C0, 0x009DE1C0);
   set_func_start(0x009DE1D0, 0x009DE1D0);
+  set_func_start(0x00AC1B9C, 0x00AC1B9C);
   // Apply data types
   import_data_types();
 }

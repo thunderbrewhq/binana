@@ -10,4 +10,10 @@ typedef struct name##__ { \
 }* name
 #endif
 
+DECLARE_STRUCT(CHandleObject);
+
+struct CHandleObject {
+  int32_t m_refcount;
+};
+
 #endif
