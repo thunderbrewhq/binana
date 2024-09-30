@@ -7,8 +7,8 @@
 #include "storm/list.h"
 
 #define STORM_TS_HASH(T, K) \
-STORM_TS_LIST(T) \
-STORM_TS_GROWABLE_ARRAY(TSList_##T) \
+STORM_TS_LIST(T); \
+STORM_TS_GROWABLE_ARRAY(TSList_##T); \
 typedef struct TSHashTable_##T##_##K TSHashTable_##T##_##K; \
 typedef struct TSHashObject_##T##_##K TSHashObject_##T##_##K; \
 struct TSHashTable_##T##_##K { \
@@ -22,7 +22,7 @@ struct TSHashObject_##T##_##K { \
   TSLink_##T m_linktoslot; \
   TSLink_##T m_linktofull; \
   K m_key; \
-};
+}
 
 DECLARE_STRUCT(HASHKEY_PTR);
 DECLARE_STRUCT(HASHKEY_STR);

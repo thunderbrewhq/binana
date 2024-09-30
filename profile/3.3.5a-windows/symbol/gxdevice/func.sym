@@ -1,6 +1,5 @@
 CGxDevice__CGxDevice 00688690 f end=0068903F
 CGxDevice__MasterEnableSet 00685EB0 f end=00685F33
-CGxDevice__IRsForceUpdate 006859E0 f end=00685A65
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44
 CGxDevice__NewD3d 00689EF0 f end=00689F14
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244

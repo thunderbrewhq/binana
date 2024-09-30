@@ -135,6 +135,7 @@ static main() {
   set_name(0x00482A20, "GxBufStream");
   set_name(0x00482A40, "GxDraw");
   set_name(0x00493BF0, "GxCapsWindowSizeInScreenCoords");
+  set_name(0x00495410, "CSimpleTop__OnLayerRender");
   set_name(0x004A8500, "ScrnLayerSetRect");
   set_name(0x004A8720, "OnPaint");
   set_name(0x004A8BB0, "ScrnLayerCreate");
@@ -579,7 +580,7 @@ static main() {
   set_name(0x005262E0, "Script_TargetTotem");
   set_name(0x00527F00, "Script_InteractUnit");
   set_name(0x00528920, "Script_LoadAddOn");
-  set_name(0x0052A980, "CGameUI__Initialize");
+  set_name(0x0052A980, "CGGameUI__Initialize");
   set_name(0x0052B470, "Script_RegisterForSave");
   set_name(0x0052B4E0, "Script_RegisterForSavePerCharacter");
   set_name(0x0052C110, "Script_GetNumPartyMembers");
@@ -2136,7 +2137,6 @@ static main() {
   set_name(0x00684D10, "CGxDevice__Log");
   set_name(0x00685970, "CGxDevice__IRsDirty");
   set_name(0x006859E0, "CGxDevice__IRsForceUpdate_EGxRenderState");
-  set_name(0x006859E0, "CGxDevice__IRsForceUpdate");
   set_name(0x00685A70, "CGxDevice__IRsForceUpdate");
   set_name(0x00685B50, "CGxDevice__IRsSync");
   set_name(0x00685C60, "CGxDevice__TexCreate");
@@ -2177,6 +2177,7 @@ static main() {
   set_name(0x00690750, "CGxDeviceD3d__DeviceCreate_WindowProc_CGxFormat");
   set_name(0x0069FB00, "CGxDeviceD3d__ICreateD3dVB");
   set_name(0x0069FB70, "CGxDeviceD3d__CreatePoolAPI");
+  set_name(0x0069FE10, "CGxDeviceD3d__ICursorClip");
   set_name(0x006A00C0, "CGxDeviceD3d__ICursorDestroy");
   set_name(0x006A0360, "CGxDeviceD3d__WindowProcD3d");
   set_name(0x006A1A90, "CGxDeviceD3d9Ex__CGxDeviceD3d9Ex");
@@ -2961,6 +2962,8 @@ static main() {
   set_func_end(0x00482A40, 0x00482A5D);
   set_func_start(0x00493BF0, 0x00493BF0);
   set_func_end(0x00493BF0, 0x00493C09);
+  set_func_start(0x00495410, 0x00495410);
+  set_func_end(0x00495410, 0x0049546A);
   set_func_start(0x004A8500, 0x004A8500);
   set_func_end(0x004A8500, 0x004A8522);
   set_func_start(0x004A8720, 0x004A8720);
@@ -6938,8 +6941,6 @@ static main() {
   set_func_end(0x00685970, 0x006859DB);
   set_func_start(0x006859E0, 0x006859E0);
   set_func_end(0x006859E0, 0x00685A65);
-  set_func_start(0x006859E0, 0x006859E0);
-  set_func_end(0x006859E0, 0x00685A65);
   set_func_start(0x00685A70, 0x00685A70);
   set_func_end(0x00685A70, 0x00685B4E);
   set_func_start(0x00685B50, 0x00685B50);
@@ -7020,6 +7021,8 @@ static main() {
   set_func_end(0x0069FB00, 0x0069FB68);
   set_func_start(0x0069FB70, 0x0069FB70);
   set_func_end(0x0069FB70, 0x0069FBB8);
+  set_func_start(0x0069FE10, 0x0069FE10);
+  set_func_end(0x0069FE10, 0x0069FE57);
   set_func_start(0x006A00C0, 0x006A00C0);
   set_func_end(0x006A00C0, 0x006A0102);
   set_func_start(0x006A0360, 0x006A0360);

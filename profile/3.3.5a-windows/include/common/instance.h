@@ -11,7 +11,7 @@
 // TInstanceId<T>
 // TSingletonInstanceId<T>
 #define COMMON_INSTANCE_ID(T) \
-STORM_TS_LIST(T) \
+STORM_TS_LIST(T); \
 typedef struct TInstanceId_##T TInstanceId_##T; \
 typedef struct TSingletonInstanceId_##T TSingletonInstanceId_##T; \
 struct TInstanceId_##T { \
@@ -20,10 +20,10 @@ struct TInstanceId_##T { \
 }; \
 struct TSingletonInstanceId_##T { \
   TInstanceId_##T b_base; \
-}; 
+};
 
 #define COMMON_INSTANCE_ID_TABLE(T) \
-STORM_TS_LIST(T) \
+STORM_TS_LIST(T); \
 typedef struct TInstanceIdTable_##T TInstanceIdTable_##T; \
 struct TInstanceIdTable_##T { \
   SCritSect m_idCritSect; \

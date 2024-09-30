@@ -29,6 +29,14 @@
       "name": "D3DFORMAT"
     },
     {
+      "type": "void**",
+      "name": "DEVICERESTOREDCALLBACK"
+    },
+    {
+      "type": "void**",
+      "name": "DISPLAYCHANGECALLBACK"
+    },
+    {
       "type": "int",
       "name": "EGxApi"
     },
@@ -137,12 +145,20 @@
       "name": "EVENTID"
     },
     {
+      "type": "int",
+      "name": "FRAMEPOINT"
+    },
+    {
       "type": "HCOLORMAP__*",
       "name": "HCOLORMAP"
     },
     {
       "type": "void*",
       "name": "HEVENTCONTEXT"
+    },
+    {
+      "type": "HFACE__*",
+      "name": "HFACE"
     },
     {
       "type": "HLAYER__*",
@@ -197,6 +213,10 @@
       "name": "STATUS_TYPE"
     },
     {
+      "type": "void**",
+      "name": "TEXTURERECREATIONCALLBACK"
+    },
+    {
       "type": "int32_t",
       "name": "intptr_t"
     },
@@ -211,6 +231,14 @@
     {
       "type": "CSBasePriorityQueue",
       "name": "TSPriorityQueue_EvtTimer"
+    },
+    {
+      "type": "TSList_CAsyncQueue",
+      "name": "TSExplicitList_CAsyncQueue"
+    },
+    {
+      "type": "TSList_CAsyncObject",
+      "name": "TSExplicitList_CAsyncObject"
     },
     {
       "type": "TSList_CStatus__STATUSENTRY",
@@ -237,6 +265,46 @@
       "name": "TSExplicitList_SIMPLEFRAMENODE"
     },
     {
+      "type": "TSList_CLayoutFrame__FRAMENODE",
+      "name": "TSExplicitList_CLayoutFrame__FRAMENODE"
+    },
+    {
+      "type": "TSList_RENDERCALLBACKNODE",
+      "name": "TSExplicitList_RENDERCALLBACKNODE"
+    },
+    {
+      "type": "TSList_CGxShader",
+      "name": "TSExplicitList_CGxShader"
+    },
+    {
+      "type": "TSList_CGxString",
+      "name": "TSExplicitList_CGxString"
+    },
+    {
+      "type": "TSList_CGxFont",
+      "name": "TSExplicitList_CGxFont"
+    },
+    {
+      "type": "TSList_CHARCODEDESC",
+      "name": "TSExplicitList_CHARCODEDESC"
+    },
+    {
+      "type": "TSList_KERNNODE",
+      "name": "TSExplicitList_KERNNODE"
+    },
+    {
+      "type": "TSList_BATCHEDRENDERFONTDESC",
+      "name": "TSExplicitList_BATCHEDRENDERFONTDESC"
+    },
+    {
+      "type": "TSList_CGxStringBatch",
+      "name": "TSExplicitList_CGxStringBatch"
+    },
+    {
+      "type": "TSList_CRenderBatch",
+      "name": "TSExplicitList_CRenderBatch"
+    },
+    {
       "type": "TSList_EVENTLISTENERNODE",
       "name": "TSExplicitList_EVENTLISTENERNODE"
     },
@@ -251,10 +319,6 @@
     {
       "type": "TSList_CGxPool",
       "name": "TSExplicitList_CGxPool"
-    },
-    {
-      "type": "TSList_CGxShader",
-      "name": "TSExplicitList_CGxShader"
     },
     {
       "type": "TSList_CILayer",
@@ -788,17 +852,17 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_5",
+          "name": "v_fn_5_NotifyOnDeviceRestored",
           "offset": 20
         },
         {
           "type": "void*",
-          "name": "v_fn_6",
+          "name": "v_fn_6_NotifyOnTextureRecreation",
           "offset": 24
         },
         {
           "type": "void*",
-          "name": "v_fn_7",
+          "name": "v_fn_7_NotifyOnDisplayChange",
           "offset": 28
         },
         {
@@ -908,32 +972,32 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_29",
+          "name": "v_fn_29_AddDeviceRestoredCallback",
           "offset": 116
         },
         {
           "type": "void*",
-          "name": "v_fn_30",
+          "name": "v_fn_30_RemoveDeviceRestoredCallback",
           "offset": 120
         },
         {
           "type": "void*",
-          "name": "v_fn_31",
+          "name": "v_fn_31_AddTextureRecreationCallback",
           "offset": 124
         },
         {
           "type": "void*",
-          "name": "v_fn_32",
+          "name": "v_fn_32_RemoveTextureRecreationCallback",
           "offset": 128
         },
         {
           "type": "void*",
-          "name": "v_fn_33",
+          "name": "v_fn_33_AddDisplayChangeCallback",
           "offset": 132
         },
         {
           "type": "void*",
-          "name": "v_fn_34",
+          "name": "v_fn_34_RemoveDisplayChangeCallback",
           "offset": 136
         },
         {
@@ -1256,6 +1320,107 @@
       ]
     },
     {
+      "name": "CLayoutFrame_vtable",
+      "size": 76,
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_00",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_01",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_02",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_03",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_04",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_05",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_06",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_07",
+          "offset": 28
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_08",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_09",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_10",
+          "offset": 40
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_11",
+          "offset": 44
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_12",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_13",
+          "offset": 52
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_14",
+          "offset": 56
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_15",
+          "offset": 60
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_16",
+          "offset": 64
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_17",
+          "offset": 68
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_18",
+          "offset": 72
+        }
+      ]
+    },
+    {
       "name": "CRange",
       "size": 8,
       "members": [
@@ -1324,10 +1489,6 @@
           "offset": 0
         }
       ]
-    },
-    {
-      "name": "CSimpleFrame",
-      "size": 0
     },
     {
       "name": "CiRange",
@@ -1525,6 +1686,22 @@
       ]
     },
     {
+      "name": "FRAMEPRIORITY",
+      "size": 8,
+      "members": [
+        {
+          "type": "CSimpleFrame*",
+          "name": "frame",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "priority",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "FrameScript_Object",
       "size": 16,
       "members": [
@@ -1547,6 +1724,22 @@
           "type": "int32_t",
           "name": "m_onEvent",
           "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "FrameScript_Object__ScriptIx",
+      "size": 8,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "luaRef",
+          "offset": 0
+        },
+        {
+          "type": "int8_t*",
+          "name": "unk",
+          "offset": 4
         }
       ]
     },
@@ -1596,6 +1789,17 @@
     },
     {
       "name": "HCOLORMAP__",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unused",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "HFACE__",
       "size": 4,
       "members": [
         {
@@ -1665,9 +1869,610 @@
       "size": 4,
       "members": [
         {
-          "type": "void**",
+          "type": "IDirect3DDevice9_vtable*",
           "name": "v_vtable",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "IDirect3DDevice9_vtable",
+      "size": 476,
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_0_QueryInterface",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_1_AddRef",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_2_Release",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_3_TestCooperativeLevel",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_4_GetAvailableTextureMem",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_5_EvictManagedResources",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_6_GetDirect3D",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_7_GetDeviceCaps",
+          "offset": 28
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_8_GetDisplayMode",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_9_GetCreationParameters",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_10_SetCursorProperties",
+          "offset": 40
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_11_SetCursorPosition",
+          "offset": 44
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_12_ShowCursor",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_13_CreateAdditionalSwapChain",
+          "offset": 52
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_14_GetSwapChain",
+          "offset": 56
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_15_GetNumberOfSwapChains",
+          "offset": 60
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_16_Reset",
+          "offset": 64
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_17_Present",
+          "offset": 68
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_18_GetBackBuffer",
+          "offset": 72
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_19_GetRasterStatus",
+          "offset": 76
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_20_SetDialogBoxMode",
+          "offset": 80
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_21_SetGammaRamp",
+          "offset": 84
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_22_GetGammaRamp",
+          "offset": 88
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_23_CreateTexture",
+          "offset": 92
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_24_CreateVolumeTexture",
+          "offset": 96
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_25_CreateCubeTexture",
+          "offset": 100
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_26_CreateVertexBuffer",
+          "offset": 104
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_27_CreateIndexBuffer",
+          "offset": 108
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_28_CreateRenderTarget",
+          "offset": 112
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_29_CreateDepthStencilSurface",
+          "offset": 116
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_30_UpdateSurface",
+          "offset": 120
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_31_UpdateTexture",
+          "offset": 124
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_32_GetRenderTargetData",
+          "offset": 128
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_33_GetFrontBufferData",
+          "offset": 132
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_34_StretchRect",
+          "offset": 136
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_35_ColorFill",
+          "offset": 140
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_36_CreateOffscreenPlainSurface",
+          "offset": 144
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_37_SetRenderTarget",
+          "offset": 148
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_38_GetRenderTarget",
+          "offset": 152
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_39_SetDepthStencilSurface",
+          "offset": 156
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_40_GetDepthStencilSurface",
+          "offset": 160
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_41_BeginScene",
+          "offset": 164
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_42_EndScene",
+          "offset": 168
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_43_Clear",
+          "offset": 172
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_44_SetTransform",
+          "offset": 176
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_45_GetTransform",
+          "offset": 180
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_46_MultiplyTransform",
+          "offset": 184
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_47_SetViewport",
+          "offset": 188
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_48_GetViewport",
+          "offset": 192
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_49_SetMaterial",
+          "offset": 196
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_50_GetMaterial",
+          "offset": 200
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_51_SetLight",
+          "offset": 204
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_52_GetLight",
+          "offset": 208
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_53_LightEnable",
+          "offset": 212
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_54_GetLightEnable",
+          "offset": 216
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_55_SetClipPlane",
+          "offset": 220
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_56_GetClipPlane",
+          "offset": 224
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_57_SetRenderState",
+          "offset": 228
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_58_GetRenderState",
+          "offset": 232
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_59_CreateStateBlock",
+          "offset": 236
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_60_BeginStateBlock",
+          "offset": 240
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_61_EndStateBlock",
+          "offset": 244
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_62_SetClipStatus",
+          "offset": 248
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_63_GetClipStatus",
+          "offset": 252
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_64_GetTexture",
+          "offset": 256
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_65_SetTexture",
+          "offset": 260
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_66_GetTextureStageState",
+          "offset": 264
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_67_SetTextureStageState",
+          "offset": 268
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_68_GetSamplerState",
+          "offset": 272
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_69_SetSamplerState",
+          "offset": 276
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_70_ValidateDevice",
+          "offset": 280
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_71_SetPaletteEntries",
+          "offset": 284
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_72_GetPaletteEntries",
+          "offset": 288
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_73_SetCurrentTexturePalette",
+          "offset": 292
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_74_GetCurrentTexturePalette",
+          "offset": 296
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_75_SetScissorRect",
+          "offset": 300
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_76_GetScissorRect",
+          "offset": 304
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_77_SetSoftwareVertexProcessing",
+          "offset": 308
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_78_GetSoftwareVertexProcessing",
+          "offset": 312
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_79_SetNPatchMode",
+          "offset": 316
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_80_GetNPatchMode",
+          "offset": 320
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_81_DrawPrimitive",
+          "offset": 324
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_82_DrawIndexedPrimitive",
+          "offset": 328
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_83_DrawPrimitiveUP",
+          "offset": 332
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_84_DrawIndexedPrimitiveUP",
+          "offset": 336
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_85_ProcessVertices",
+          "offset": 340
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_86_CreateVertexDeclaration",
+          "offset": 344
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_87_SetVertexDeclaration",
+          "offset": 348
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_88_GetVertexDeclaration",
+          "offset": 352
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_89_SetFVF",
+          "offset": 356
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_90_GetFVF",
+          "offset": 360
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_91_CreateVertexShader",
+          "offset": 364
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_92_SetVertexShader",
+          "offset": 368
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_93_GetVertexShader",
+          "offset": 372
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_94_SetVertexShaderConstantF",
+          "offset": 376
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_95_GetVertexShaderConstantF",
+          "offset": 380
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_96_SetVertexShaderConstantI",
+          "offset": 384
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_97_GetVertexShaderConstantI",
+          "offset": 388
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_98_SetVertexShaderConstantB",
+          "offset": 392
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_99_GetVertexShaderConstantB",
+          "offset": 396
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_100_SetStreamSource",
+          "offset": 400
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_101_GetStreamSource",
+          "offset": 404
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_102_SetStreamSourceFreq",
+          "offset": 408
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_103_GetStreamSourceFreq",
+          "offset": 412
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_104_SetIndices",
+          "offset": 416
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_105_GetIndices",
+          "offset": 420
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_106_CreatePixelShader",
+          "offset": 424
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_107_SetPixelShader",
+          "offset": 428
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_108_GetPixelShader",
+          "offset": 432
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_109_SetPixelShaderConstantF",
+          "offset": 436
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_110_GetPixelShaderConstantF",
+          "offset": 440
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_111_SetPixelShaderConstantI",
+          "offset": 444
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_112_GetPixelShaderConstantI",
+          "offset": 448
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_113_SetPixelShaderConstantB",
+          "offset": 452
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_114_GetPixelShaderConstantB",
+          "offset": 456
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_115_DrawRectPatch",
+          "offset": 460
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_116_DrawTriPatch",
+          "offset": 464
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_117_DeletePatch",
+          "offset": 468
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_118_CreateQuery",
+          "offset": 472
         }
       ]
     },
@@ -1727,6 +2532,38 @@
       ]
     },
     {
+      "name": "KERNINGHASHKEY",
+      "size": 4,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "code",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "KERNNODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "float",
+          "name": "proporportionalSpacing",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "fixedWidthSpacing",
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "MipBits",
       "size": 4,
       "members": [
@@ -1761,6 +2598,22 @@
           "type": "float",
           "name": "top",
           "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "RENDERCALLBACKNODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "void*",
+          "name": "callback",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "param",
+          "offset": 4
         }
       ]
     },
@@ -1866,6 +2719,22 @@
       ]
     },
     {
+      "name": "TRefCnt",
+      "size": 8,
+      "members": [
+        {
+          "type": "void*",
+          "name": "vfptr",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_refcnt",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSFixedArray_CGxAppRenderState",
       "size": 12,
       "members": [
@@ -1908,6 +2777,27 @@
       ]
     },
     {
+      "name": "TSFixedArray_TEXTURECACHEROW",
+      "size": 12,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "TEXTURECACHEROW*",
+          "name": "m_data",
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_CGxPushedRenderState",
       "size": 16,
       "members": [
@@ -1923,6 +2813,84 @@
         },
         {
           "type": "CGxPushedRenderState*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_CSimpleBatchedMesh",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "CSimpleBatchedMesh*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_DEVICERESTOREDCALLBACK",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "DEVICERESTOREDCALLBACK*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_DISPLAYCHANGECALLBACK",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "DISPLAYCHANGECALLBACK*",
           "name": "m_data",
           "offset": 8
         },
@@ -2038,6 +3006,58 @@
       ]
     },
     {
+      "name": "TSGrowableArray_TEXTURERECREATIONCALLBACK",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "TEXTURERECREATIONCALLBACK*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_TSList_BATCHEDRENDERFONTDESC",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "TSList_BATCHEDRENDERFONTDESC*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_TSList_CGxShader",
       "size": 16,
       "members": [
@@ -2064,6 +3084,32 @@
       ]
     },
     {
+      "name": "TSGrowableArray_TSList_CHARCODEDESC",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "TSList_CHARCODEDESC*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_TSList_FrameScript_EventObject",
       "size": 16,
       "members": [
@@ -2079,6 +3125,32 @@
         },
         {
           "type": "TSList_FrameScript_EventObject*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_TSList_KERNNODE",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "TSList_KERNNODE*",
           "name": "m_data",
           "offset": 8
         },
@@ -2131,6 +3203,32 @@
         },
         {
           "type": "EvtTimer**",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_pointer_to_FRAMEPRIORITY",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "FRAMEPRIORITY**",
           "name": "m_data",
           "offset": 8
         },
@@ -2220,6 +3318,54 @@
       ]
     },
     {
+      "name": "TSLink_BATCHEDRENDERFONTDESC",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_BATCHEDRENDERFONTDESC*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "BATCHEDRENDERFONTDESC*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CAsyncObject",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CAsyncObject*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CAsyncObject*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CAsyncQueue",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CAsyncQueue*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CAsyncQueue*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSLink_CGxBuf",
       "size": 8,
       "members": [
@@ -2230,6 +3376,22 @@
         },
         {
           "type": "CGxBuf*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CGxFont",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGxFont*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CGxFont*",
           "name": "m_next",
           "offset": 4
         }
@@ -2268,6 +3430,54 @@
       ]
     },
     {
+      "name": "TSLink_CGxString",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGxString*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CGxString*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CGxStringBatch",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGxStringBatch*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CGxStringBatch*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CHARCODEDESC",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CHARCODEDESC*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CHARCODEDESC*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSLink_CILayer",
       "size": 8,
       "members": [
@@ -2278,6 +3488,38 @@
         },
         {
           "type": "CILayer*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CLayoutFrame__FRAMENODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CLayoutFrame__FRAMENODE*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CLayoutFrame__FRAMENODE*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CRenderBatch",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CRenderBatch*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CRenderBatch*",
           "name": "m_next",
           "offset": 4
         }
@@ -2390,6 +3632,38 @@
         },
         {
           "type": "FrameScript_EventObject*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_KERNNODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_KERNNODE*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "KERNNODE*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_RENDERCALLBACKNODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_RENDERCALLBACKNODE*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "RENDERCALLBACKNODE*",
           "name": "m_next",
           "offset": 4
         }
@@ -2680,6 +3954,147 @@
       ]
     },
     {
+      "name": "CBackdropGenerator",
+      "size": 108,
+      "members": [
+        {
+          "type": "CSimpleTexture*",
+          "name": "m_backgroundTexture",
+          "offset": 0
+        },
+        {
+          "type": "CSimpleTexture*",
+          "name": "m_leftTexture",
+          "offset": 4
+        },
+        {
+          "type": "CSimpleTexture*",
+          "name": "m_rightTexture",
+          "offset": 8
+        },
+        {
+          "type": "CSimpleTexture*",
+          "name": "m_topTexture",
+          "offset": 12
+        },
+        {
+          "type": "CSimpleTexture*",
+          "name": "m_bottomTexture",
+          "offset": 16
+        },
+        {
+          "type": "CSimpleTexture*",
+          "name": "m_topLeftTexture",
+          "offset": 20
+        },
+        {
+          "type": "CSimpleTexture*",
+          "name": "m_topRightTexture",
+          "offset": 24
+        },
+        {
+          "type": "CSimpleTexture*",
+          "name": "m_bottomLeftTexture",
+          "offset": 28
+        },
+        {
+          "type": "CSimpleTexture*",
+          "name": "m_bottomRightTexture",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword24",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword28",
+          "offset": 40
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword2C",
+          "offset": 44
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword30",
+          "offset": 48
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword34",
+          "offset": 52
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword38",
+          "offset": 56
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword3C",
+          "offset": 60
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword40",
+          "offset": 64
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword44",
+          "offset": 68
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword48",
+          "offset": 72
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword4C",
+          "offset": 76
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword50",
+          "offset": 80
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword54",
+          "offset": 84
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword58",
+          "offset": 88
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword5C",
+          "offset": 92
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword60",
+          "offset": 96
+        },
+        {
+          "type": "CImVector",
+          "name": "m_borderColor",
+          "offset": 100
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword68",
+          "offset": 104
+        }
+      ]
+    },
+    {
       "name": "CGxVertexPCT",
       "size": 24,
       "members": [
@@ -2719,6 +4134,67 @@
           "type": "CRange",
           "name": "z",
           "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "GLYPHBITMAPDATA",
+      "size": 56,
+      "members": [
+        {
+          "type": "void*",
+          "name": "m_data",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_dataSize",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_glyphWidth",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_glyphHeight",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_glyphCellWidth",
+          "offset": 16
+        },
+        {
+          "type": "float",
+          "name": "m_glyphAdvance",
+          "offset": 20
+        },
+        {
+          "type": "float",
+          "name": "m_glyphBearing",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_glyphPitch",
+          "offset": 28
+        },
+        {
+          "type": "int32_t",
+          "name": "m_yOffset",
+          "offset": 32
+        },
+        {
+          "type": "int32_t",
+          "name": "m_yStart",
+          "offset": 36
+        },
+        {
+          "type": "CRect",
+          "name": "m_textureCoords",
+          "offset": 40
         }
       ]
     },
@@ -3257,6 +4733,82 @@
       ]
     },
     {
+      "name": "CSimpleBatchedMesh",
+      "size": 60,
+      "members": [
+        {
+          "type": "CTexture*",
+          "name": "texture",
+          "offset": 0
+        },
+        {
+          "type": "CGxTex*",
+          "name": "textureID",
+          "offset": 4
+        },
+        {
+          "type": "EGxBlend",
+          "name": "alphaMode",
+          "offset": 8
+        },
+        {
+          "type": "CGxShader*",
+          "name": "shader",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "posCount",
+          "offset": 16
+        },
+        {
+          "type": "C3Vector*",
+          "name": "position",
+          "offset": 20
+        },
+        {
+          "type": "C2Vector*",
+          "name": "texCoord",
+          "offset": 24
+        },
+        {
+          "type": "CImVector*",
+          "name": "color",
+          "offset": 28
+        },
+        {
+          "type": "int32_t",
+          "name": "colorCount",
+          "offset": 32
+        },
+        {
+          "type": "uint16_t*",
+          "name": "indices",
+          "offset": 36
+        },
+        {
+          "type": "int32_t",
+          "name": "idxCount",
+          "offset": 40
+        },
+        {
+          "type": "int32_t",
+          "name": "onAtlas",
+          "offset": 44
+        },
+        {
+          "type": "float",
+          "name": "atlasScale",
+          "offset": 48
+        },
+        {
+          "type": "C2Vector",
+          "name": "atlasOffset",
+          "offset": 52
+        }
+      ]
+    },
+    {
       "name": "CGxCaps",
       "size": 316,
       "members": [
@@ -3537,6 +5089,37 @@
       ]
     },
     {
+      "name": "CSimpleTop__frame_layout",
+      "size": 24,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "enabled",
+          "offset": 0
+        },
+        {
+          "type": "CSimpleFrame*",
+          "name": "frame",
+          "offset": 4
+        },
+        {
+          "type": "FRAMEPOINT",
+          "name": "anchor",
+          "offset": 8
+        },
+        {
+          "type": "C2Vector",
+          "name": "last",
+          "offset": 12
+        },
+        {
+          "type": "float",
+          "name": "float14",
+          "offset": 20
+        }
+      ]
+    },
+    {
       "name": "CSRgn",
       "size": 4,
       "members": [
@@ -3668,6 +5251,80 @@
       ]
     },
     {
+      "name": "RCString",
+      "size": 12,
+      "members": [
+        {
+          "type": "TRefCnt",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t*",
+          "name": "m_str",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TEXTURECACHE",
+      "size": 24,
+      "members": [
+        {
+          "type": "void*",
+          "name": "m_texture",
+          "offset": 0
+        },
+        {
+          "type": "CGxFont*",
+          "name": "m_theFace",
+          "offset": 4
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_anyDirtyGlyphs",
+          "offset": 8
+        },
+        {
+          "type": "uint8_t",
+          "name": "pad",
+          "arrsize": 3,
+          "offset": 9
+        },
+        {
+          "type": "TSFixedArray_TEXTURECACHEROW",
+          "name": "m_textureRows",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "CSimpleSortedArray_pointer_to_FRAMEPRIORITY",
+      "size": 28,
+      "members": [
+        {
+          "type": "TSGrowableArray_pointer_to_FRAMEPRIORITY",
+          "name": "m_array",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_maxcount",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_iterator",
+          "offset": 24
+        }
+      ]
+    },
+    {
       "name": "CSBasePriorityQueue",
       "size": 20,
       "members": [
@@ -3700,11 +5357,167 @@
       ]
     },
     {
+      "name": "TSHashObject_BATCHEDRENDERFONTDESC_HASHKEY_PTR",
+      "size": 24,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_hashval",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_BATCHEDRENDERFONTDESC",
+          "name": "m_linktoslot",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_BATCHEDRENDERFONTDESC",
+          "name": "m_linktofull",
+          "offset": 12
+        },
+        {
+          "type": "HASHKEY_PTR",
+          "name": "m_key",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_BATCHEDRENDERFONTDESC",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_BATCHEDRENDERFONTDESC",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CAsyncObject",
+      "size": 40,
+      "members": [
+        {
+          "type": "void*",
+          "name": "file",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "buffer",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "size",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "userArg",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "userPostloadCallback",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "userPostUnloadCallback",
+          "offset": 20
+        },
+        {
+          "type": "CAsyncQueue*",
+          "name": "queue",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "ptr1c",
+          "offset": 28
+        },
+        {
+          "type": "int8_t",
+          "name": "priority",
+          "offset": 32
+        },
+        {
+          "type": "int8_t",
+          "name": "isProcessed",
+          "offset": 33
+        },
+        {
+          "type": "int8_t",
+          "name": "isRead",
+          "offset": 34
+        },
+        {
+          "type": "int8_t",
+          "name": "isCurrent",
+          "offset": 35
+        },
+        {
+          "type": "int8_t",
+          "name": "char24",
+          "offset": 36
+        },
+        {
+          "type": "int8_t",
+          "name": "char25",
+          "offset": 37
+        },
+        {
+          "type": "uint16_t",
+          "name": "padding",
+          "offset": 38
+        },
+        {
+          "type": "TSLink_CAsyncObject",
+          "name": "link",
+          "offset": 40
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CAsyncObject",
+      "size": 0,
+      "members": [
+        {
+          "type": "TSLink_CAsyncObject",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CAsyncQueue",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CAsyncQueue",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "TSLinkedNode_CGxBuf",
       "size": 8,
       "members": [
         {
           "type": "TSLink_CGxBuf",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CGxFont",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGxFont",
           "name": "m_link",
           "offset": 0
         }
@@ -3753,6 +5566,65 @@
       "members": [
         {
           "type": "TSLink_CGxShader",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CGxString",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGxString",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CGxStringBatch",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGxStringBatch",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSHashObject_CHARCODEDESC_HASHKEY_NONE",
+      "size": 24,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_hashval",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CHARCODEDESC",
+          "name": "m_linktoslot",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_CHARCODEDESC",
+          "name": "m_linktofull",
+          "offset": 12
+        },
+        {
+          "type": "HASHKEY_NONE",
+          "name": "m_key",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CHARCODEDESC",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CHARCODEDESC",
           "name": "m_link",
           "offset": 0
         }
@@ -3810,6 +5682,28 @@
       "members": [
         {
           "type": "TSLink_CILayer",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CLayoutFrame__FRAMENODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CLayoutFrame__FRAMENODE",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CRenderBatch",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CRenderBatch",
           "name": "m_link",
           "offset": 0
         }
@@ -4014,6 +5908,54 @@
       ]
     },
     {
+      "name": "TSHashObject_KERNNODE_KERNINGHASHKEY",
+      "size": 24,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_hashval",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_KERNNODE",
+          "name": "m_linktoslot",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_KERNNODE",
+          "name": "m_linktofull",
+          "offset": 12
+        },
+        {
+          "type": "KERNINGHASHKEY",
+          "name": "m_key",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_KERNNODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_KERNNODE",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_RENDERCALLBACKNODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_RENDERCALLBACKNODE",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "TSHashObject_RGN_HASHKEY_NONE",
       "size": 24,
       "members": [
@@ -4058,6 +6000,38 @@
           "type": "TSLink_SIMPLEFRAMENODE",
           "name": "m_link",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSList_CAsyncQueue",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CAsyncQueue",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CAsyncObject",
+      "size": 4,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CAsyncObject",
+          "name": "m_terminator",
+          "offset": 4
         }
       ]
     },
@@ -4158,6 +6132,166 @@
       ]
     },
     {
+      "name": "TSList_CLayoutFrame__FRAMENODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CLayoutFrame__FRAMENODE",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_RENDERCALLBACKNODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_RENDERCALLBACKNODE",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CGxShader",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CGxShader",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CGxString",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CGxString",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CGxFont",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CGxFont",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CHARCODEDESC",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CHARCODEDESC",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_KERNNODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_KERNNODE",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_BATCHEDRENDERFONTDESC",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_BATCHEDRENDERFONTDESC",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CGxStringBatch",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CGxStringBatch",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CRenderBatch",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CRenderBatch",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSList_EVENTLISTENERNODE",
       "size": 12,
       "members": [
@@ -4216,22 +6350,6 @@
         },
         {
           "type": "TSLink_CGxPool",
-          "name": "m_terminator",
-          "offset": 4
-        }
-      ]
-    },
-    {
-      "name": "TSList_CGxShader",
-      "size": 12,
-      "members": [
-        {
-          "type": "ptrdiff_t",
-          "name": "m_linkoffset",
-          "offset": 0
-        },
-        {
-          "type": "TSLink_CGxShader",
           "name": "m_terminator",
           "offset": 4
         }
@@ -4498,6 +6616,22 @@
       ]
     },
     {
+      "name": "CScriptObject",
+      "size": 28,
+      "members": [
+        {
+          "type": "FrameScript_Object",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "RCString",
+          "name": "m_name",
+          "offset": 16
+        }
+      ]
+    },
+    {
       "name": "CGxBuf",
       "size": 32,
       "members": [
@@ -4630,6 +6764,261 @@
       ]
     },
     {
+      "name": "CGxString",
+      "size": 216,
+      "members": [
+        {
+          "type": "TSLinkedNode_CGxString",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CGxString",
+          "name": "m_fontStringLink",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CGxString",
+          "name": "m_batchedStringLink",
+          "offset": 16
+        },
+        {
+          "type": "float",
+          "name": "m_requestedFontHeight",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "m_currentFontHeight",
+          "offset": 28
+        },
+        {
+          "type": "C3Vector",
+          "name": "m_position",
+          "offset": 32
+        },
+        {
+          "type": "CImVector",
+          "name": "m_fontColor",
+          "offset": 44
+        },
+        {
+          "type": "CImVector",
+          "name": "m_shadowColor",
+          "offset": 48
+        },
+        {
+          "type": "C2Vector",
+          "name": "m_shadowOffset",
+          "offset": 52
+        },
+        {
+          "type": "float",
+          "name": "m_blockWidth",
+          "offset": 60
+        },
+        {
+          "type": "float",
+          "name": "m_blockHeight",
+          "offset": 64
+        },
+        {
+          "type": "void*",
+          "name": "m_currentFace",
+          "offset": 68
+        },
+        {
+          "type": "char*",
+          "name": "m_text",
+          "offset": 72
+        },
+        {
+          "type": "int32_t",
+          "name": "m_textLen",
+          "offset": 76
+        },
+        {
+          "type": "int32_t",
+          "name": "m_vertJust",
+          "offset": 80
+        },
+        {
+          "type": "int32_t",
+          "name": "m_horzJust",
+          "offset": 84
+        },
+        {
+          "type": "float",
+          "name": "m_spacing",
+          "offset": 88
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "offset": 92
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_texturePagesUsed",
+          "offset": 96
+        },
+        {
+          "type": "int32_t",
+          "name": "m_textureEvicted",
+          "offset": 100
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_lastGradientStart",
+          "offset": 104
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_lastGradientLength",
+          "offset": 108
+        },
+        {
+          "type": "C3Vector",
+          "name": "m_viewTranslation",
+          "offset": 112
+        },
+        {
+          "type": "float",
+          "name": "m_scale",
+          "offset": 124
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_hyperlinkInfo",
+          "arrsize": 4,
+          "offset": 128
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword90",
+          "offset": 144
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword94",
+          "offset": 148
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword98",
+          "offset": 152
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword9C",
+          "offset": 156
+        },
+        {
+          "type": "uint32_t",
+          "name": "dwordA0",
+          "offset": 160
+        },
+        {
+          "type": "uint32_t",
+          "name": "dwordA4",
+          "offset": 164
+        },
+        {
+          "type": "uint32_t",
+          "name": "dwordA8",
+          "offset": 168
+        },
+        {
+          "type": "uint32_t",
+          "name": "dwordAC",
+          "offset": 172
+        },
+        {
+          "type": "int32_t",
+          "name": "m_intB0",
+          "offset": 176
+        },
+        {
+          "type": "void*",
+          "name": "m_textLines",
+          "arrsize": 8,
+          "offset": 180
+        },
+        {
+          "type": "int32_t",
+          "name": "m_intD4",
+          "offset": 212
+        }
+      ]
+    },
+    {
+      "name": "CHARCODEDESC",
+      "size": 112,
+      "members": [
+        {
+          "type": "TSHashObject_CHARCODEDESC_HASHKEY_NONE",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CHARCODEDESC",
+          "name": "textureRowLink",
+          "offset": 24
+        },
+        {
+          "type": "TSLink_CHARCODEDESC",
+          "name": "fontGlyphLink",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "textureNumber",
+          "offset": 40
+        },
+        {
+          "type": "uint32_t",
+          "name": "rowNumber",
+          "offset": 44
+        },
+        {
+          "type": "uint32_t",
+          "name": "glyphStartPixel",
+          "offset": 48
+        },
+        {
+          "type": "uint32_t",
+          "name": "glyphEndPixel",
+          "offset": 52
+        },
+        {
+          "type": "GLYPHBITMAPDATA",
+          "name": "bitmapData",
+          "offset": 56
+        }
+      ]
+    },
+    {
+      "name": "CLayoutFrame__FRAMENODE",
+      "size": 16,
+      "members": [
+        {
+          "type": "TSLinkedNode_CLayoutFrame__FRAMENODE",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "CLayoutFrame*",
+          "name": "frame",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "dep",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "EVENTLISTENERNODE",
       "size": 12,
       "members": [
@@ -4726,6 +7115,224 @@
           "type": "CSimpleFrame*",
           "name": "frame",
           "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "CLayoutFrame",
+      "size": 116,
+      "members": [
+        {
+          "type": "CLayoutFrame_vtable*",
+          "name": "v_vtable",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "resizeLink",
+          "arrsize": 2,
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "m_points",
+          "arrsize": 9,
+          "offset": 12
+        },
+        {
+          "type": "TSList_CLayoutFrame__FRAMENODE",
+          "name": "m_resizeList",
+          "offset": 48
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_guard",
+          "offset": 60
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "offset": 64
+        },
+        {
+          "type": "CRect",
+          "name": "m_rect",
+          "offset": 68
+        },
+        {
+          "type": "float",
+          "name": "m_width",
+          "offset": 84
+        },
+        {
+          "type": "float",
+          "name": "m_height",
+          "offset": 88
+        },
+        {
+          "type": "float",
+          "name": "m_layoutScale",
+          "offset": 92
+        },
+        {
+          "type": "float",
+          "name": "m_layoutDepth",
+          "offset": 96
+        },
+        {
+          "type": "float",
+          "name": "float64",
+          "offset": 100
+        },
+        {
+          "type": "float",
+          "name": "float68",
+          "offset": 104
+        },
+        {
+          "type": "float",
+          "name": "float6C",
+          "offset": 108
+        },
+        {
+          "type": "float",
+          "name": "float70",
+          "offset": 112
+        }
+      ]
+    },
+    {
+      "name": "CRenderBatch",
+      "size": 44,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 0
+        },
+        {
+          "type": "TSGrowableArray_CSimpleBatchedMesh",
+          "name": "m_texturelist",
+          "offset": 4
+        },
+        {
+          "type": "CGxStringBatch*",
+          "name": "m_stringbatch",
+          "offset": 20
+        },
+        {
+          "type": "TSList_RENDERCALLBACKNODE",
+          "name": "m_callbacks",
+          "offset": 24
+        },
+        {
+          "type": "TSLink_CRenderBatch",
+          "name": "renderLink",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "TSHashTable_CGxShader_HASHKEY_STRI",
+      "size": 36,
+      "members": [
+        {
+          "type": "TSList_CGxShader",
+          "name": "m_fulllist",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fullnessIndicator",
+          "offset": 12
+        },
+        {
+          "type": "TSGrowableArray_TSList_CGxShader",
+          "name": "m_slotlistarray",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_slotmask",
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "TSHashTable_CHARCODEDESC_HASHKEY_NONE",
+      "size": 36,
+      "members": [
+        {
+          "type": "TSList_CHARCODEDESC",
+          "name": "m_fulllist",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fullnessIndicator",
+          "offset": 12
+        },
+        {
+          "type": "TSGrowableArray_TSList_CHARCODEDESC",
+          "name": "m_slotlistarray",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_slotmask",
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "TSHashTable_KERNNODE_KERNINGHASHKEY",
+      "size": 36,
+      "members": [
+        {
+          "type": "TSList_KERNNODE",
+          "name": "m_fulllist",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fullnessIndicator",
+          "offset": 12
+        },
+        {
+          "type": "TSGrowableArray_TSList_KERNNODE",
+          "name": "m_slotlistarray",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_slotmask",
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "TSHashTable_BATCHEDRENDERFONTDESC_HASHKEY_PTR",
+      "size": 36,
+      "members": [
+        {
+          "type": "TSList_BATCHEDRENDERFONTDESC",
+          "name": "m_fulllist",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fullnessIndicator",
+          "offset": 12
+        },
+        {
+          "type": "TSGrowableArray_TSList_BATCHEDRENDERFONTDESC",
+          "name": "m_slotlistarray",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_slotmask",
+          "offset": 32
         }
       ]
     },
@@ -4852,10 +7459,19 @@
           "offset": 372
         },
         {
-          "type": "uint32_t",
-          "name": "m_unk184",
-          "arrsize": 12,
+          "type": "TSGrowableArray_DEVICERESTOREDCALLBACK",
+          "name": "m_deviceRestoredCallbacks",
           "offset": 388
+        },
+        {
+          "type": "TSGrowableArray_TEXTURERECREATIONCALLBACK",
+          "name": "m_textureRecreationCallbacks",
+          "offset": 404
+        },
+        {
+          "type": "TSGrowableArray_DISPLAYCHANGECALLBACK",
+          "name": "m_displayChangeCallbacks",
+          "offset": 420
         },
         {
           "type": "EGxApi",
@@ -4924,7 +7540,7 @@
         },
         {
           "type": "int32_t",
-          "name": "intF6C",
+          "name": "m_needsUpdate",
           "offset": 3948
         },
         {
@@ -5137,7 +7753,7 @@
           "offset": 10588
         },
         {
-          "type": "CImVector",
+          "type": "uint32_t",
           "name": "m_cursor",
           "arrsize": 1024,
           "offset": 10592
@@ -5151,32 +7767,6 @@
           "type": "float",
           "name": "m_cursorDepth",
           "offset": 14692
-        }
-      ]
-    },
-    {
-      "name": "TSHashTable_CGxShader_HASHKEY_STRI",
-      "size": 36,
-      "members": [
-        {
-          "type": "TSList_CGxShader",
-          "name": "m_fulllist",
-          "offset": 0
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_fullnessIndicator",
-          "offset": 12
-        },
-        {
-          "type": "TSGrowableArray_TSList_CGxShader",
-          "name": "m_slotlistarray",
-          "offset": 16
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_slotmask",
-          "offset": 32
         }
       ]
     },
@@ -5353,6 +7943,32 @@
       ]
     },
     {
+      "name": "CAsyncQueue",
+      "size": 12,
+      "members": [
+        {
+          "type": "TSLink_CAsyncQueue",
+          "name": "link",
+          "offset": 0
+        },
+        {
+          "type": "TSExplicitList_CAsyncObject",
+          "name": "readList",
+          "offset": 8
+        },
+        {
+          "type": "TSExplicitList_CAsyncObject",
+          "name": "unkList",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "int20",
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "CStatus",
       "size": 12,
       "members": [
@@ -5360,6 +7976,288 @@
           "type": "TSExplicitList_CStatus__STATUSENTRY",
           "name": "statusList",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CScriptRegion",
+      "size": 156,
+      "members": [
+        {
+          "type": "CScriptObject",
+          "name": "b_base_01",
+          "offset": 0
+        },
+        {
+          "type": "CLayoutFrame",
+          "name": "b_base_02",
+          "offset": 28
+        },
+        {
+          "type": "CSimpleFrame*",
+          "name": "m_parent",
+          "offset": 144
+        },
+        {
+          "type": "void*",
+          "name": "m_animGroups",
+          "offset": 148
+        },
+        {
+          "type": "uint32_t",
+          "name": "scriptregion_dword8",
+          "offset": 152
+        }
+      ]
+    },
+    {
+      "name": "CSimpleTop",
+      "size": 4712,
+      "members": [
+        {
+          "type": "CLayoutFrame",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "m_screenLayer",
+          "offset": 116
+        },
+        {
+          "type": "CSimpleFrame*",
+          "name": "m_mouseFocus",
+          "offset": 120
+        },
+        {
+          "type": "CSimpleFrame*",
+          "name": "m_mouseCapture",
+          "offset": 124
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_keydownCapture",
+          "arrsize": 787,
+          "offset": 128
+        },
+        {
+          "type": "TSList_SIMPLEFRAMENODE",
+          "name": "m_frames",
+          "offset": 3276
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_destroyed",
+          "arrsize": 3,
+          "offset": 3288
+        },
+        {
+          "type": "void*",
+          "name": "m_strata",
+          "arrsize": 9,
+          "offset": 3300
+        },
+        {
+          "type": "CSimpleTop__frame_layout",
+          "name": "m_layout",
+          "offset": 3336
+        },
+        {
+          "type": "CSimpleSortedArray_pointer_to_FRAMEPRIORITY",
+          "name": "m_eventqueue",
+          "arrsize": 45,
+          "offset": 3360
+        },
+        {
+          "type": "int32_t",
+          "name": "m_checkFocus",
+          "offset": 4620
+        },
+        {
+          "type": "EVENT_DATA_MOUSE",
+          "name": "m_mousePosition",
+          "offset": 4624
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword1234",
+          "offset": 4672
+        },
+        {
+          "type": "void*",
+          "name": "m_mouseButtonCallback",
+          "offset": 4676
+        },
+        {
+          "type": "void*",
+          "name": "m_mouseMoveCallback",
+          "offset": 4680
+        },
+        {
+          "type": "void*",
+          "name": "m_displaySizeCallback",
+          "offset": 4684
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword1244",
+          "offset": 4688
+        },
+        {
+          "type": "void*",
+          "name": "m_keyEventCallback",
+          "offset": 4692
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword124C",
+          "offset": 4696
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword1250",
+          "offset": 4700
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword1254",
+          "offset": 4704
+        }
+      ]
+    },
+    {
+      "name": "BATCHEDRENDERFONTDESC",
+      "size": 40,
+      "members": [
+        {
+          "type": "TSHashObject_BATCHEDRENDERFONTDESC_HASHKEY_PTR",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "CGxFont*",
+          "name": "m_face",
+          "offset": 24
+        },
+        {
+          "type": "TSExplicitList_CGxString",
+          "name": "m_strings",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "TEXTURECACHEROW",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "widestFreeSlot",
+          "offset": 0
+        },
+        {
+          "type": "TSExplicitList_CHARCODEDESC",
+          "name": "glyphList",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "CGxFont",
+      "size": 584,
+      "members": [
+        {
+          "type": "TSLinkedNode_CGxFont",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "TSExplicitList_CGxString",
+          "name": "m_strings",
+          "offset": 8
+        },
+        {
+          "type": "TSHashTable_CHARCODEDESC_HASHKEY_NONE",
+          "name": "m_activeCharacters",
+          "offset": 20
+        },
+        {
+          "type": "TSHashTable_KERNNODE_KERNINGHASHKEY",
+          "name": "m_kernInfo",
+          "offset": 56
+        },
+        {
+          "type": "TSExplicitList_CHARCODEDESC",
+          "name": "m_activeCharacterCache",
+          "offset": 92
+        },
+        {
+          "type": "HFACE",
+          "name": "m_faceHandle",
+          "offset": 104
+        },
+        {
+          "type": "char",
+          "name": "m_fontName",
+          "arrsize": 260,
+          "offset": 108
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_cellHeight",
+          "offset": 368
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_baseline",
+          "offset": 372
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "offset": 376
+        },
+        {
+          "type": "float",
+          "name": "float184",
+          "offset": 380
+        },
+        {
+          "type": "float",
+          "name": "m_pixelsPerUnit",
+          "offset": 384
+        },
+        {
+          "type": "TEXTURECACHE",
+          "name": "m_textureCache",
+          "arrsize": 8,
+          "offset": 388
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_pixelSize",
+          "offset": 580
+        }
+      ]
+    },
+    {
+      "name": "CGxStringBatch",
+      "size": 48,
+      "members": [
+        {
+          "type": "TSLinkedNode_CGxStringBatch",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "TSHashTable_BATCHEDRENDERFONTDESC_HASHKEY_PTR",
+          "name": "m_fontBatch",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "offset": 44
         }
       ]
     },
@@ -5418,10 +8316,30 @@
           "offset": 15032
         },
         {
-          "type": "uint32_t",
-          "name": "unk3AB4",
-          "arrsize": 11,
+          "type": "int32_t",
+          "name": "m_d3dNVAPI",
           "offset": 15036
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk3AB8",
+          "offset": 15040
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk3ABC",
+          "offset": 15044
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_d3dStereoHandle",
+          "offset": 15048
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk3AC4",
+          "arrsize": 7,
+          "offset": 15052
         },
         {
           "type": "IDirect3DVertexDeclaration9*",
@@ -5680,6 +8598,535 @@
           "type": "uint32_t",
           "name": "m_startWatchdog",
           "offset": 636
+        }
+      ]
+    },
+    {
+      "name": "CTexture",
+      "size": 356,
+      "members": [
+        {
+          "type": "CHandleObject",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword8",
+          "arrsize": 6,
+          "offset": 4
+        },
+        {
+          "type": "CGxTexFlags",
+          "name": "unkTexFlags1",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword10",
+          "offset": 32
+        },
+        {
+          "type": "uint16_t",
+          "name": "flags",
+          "offset": 36
+        },
+        {
+          "type": "int8_t",
+          "name": "bestMip",
+          "offset": 38
+        },
+        {
+          "type": "int8_t",
+          "name": "alphaBits",
+          "offset": 39
+        },
+        {
+          "type": "CStatus",
+          "name": "loadStatus",
+          "offset": 40
+        },
+        {
+          "type": "CAsyncObject*",
+          "name": "asyncObject",
+          "offset": 52
+        },
+        {
+          "type": "CGxTex*",
+          "name": "gxTex",
+          "offset": 56
+        },
+        {
+          "type": "int32_t",
+          "name": "gxTexTarget",
+          "offset": 60
+        },
+        {
+          "type": "uint16_t",
+          "name": "gxWidth",
+          "offset": 64
+        },
+        {
+          "type": "uint16_t",
+          "name": "gxHeight",
+          "offset": 66
+        },
+        {
+          "type": "EGxTexFormat",
+          "name": "gxTexFormat",
+          "offset": 68
+        },
+        {
+          "type": "EGxTexFormat",
+          "name": "dataFormat",
+          "offset": 72
+        },
+        {
+          "type": "CGxTexFlags",
+          "name": "gxTexFlags",
+          "offset": 76
+        },
+        {
+          "type": "void*",
+          "name": "atlas",
+          "offset": 80
+        },
+        {
+          "type": "uint32_t",
+          "name": "atlasBlockIndex",
+          "offset": 84
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword50",
+          "arrsize": 2,
+          "offset": 88
+        },
+        {
+          "type": "char",
+          "name": "filename",
+          "arrsize": 260,
+          "offset": 96
+        }
+      ]
+    },
+    {
+      "name": "CSimpleFrame",
+      "size": 664,
+      "members": [
+        {
+          "type": "CScriptRegion",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "m_top",
+          "offset": 156
+        },
+        {
+          "type": "CSimpleFrame*",
+          "name": "m_tooltip",
+          "offset": 160
+        },
+        {
+          "type": "CScriptRegion*",
+          "name": "m_titleRegion",
+          "offset": 164
+        },
+        {
+          "type": "int32_t",
+          "name": "m_intAC",
+          "offset": 168
+        },
+        {
+          "type": "int32_t",
+          "name": "m_id",
+          "offset": 172
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "offset": 176
+        },
+        {
+          "type": "float",
+          "name": "m_frameScale",
+          "offset": 180
+        },
+        {
+          "type": "uint32_t",
+          "name": "dwordBC",
+          "offset": 184
+        },
+        {
+          "type": "uint32_t",
+          "name": "dwordC0",
+          "offset": 188
+        },
+        {
+          "type": "float",
+          "name": "m_floatC4",
+          "offset": 192
+        },
+        {
+          "type": "float",
+          "name": "m_floatC8",
+          "offset": 196
+        },
+        {
+          "type": "uint32_t",
+          "name": "dwordCC",
+          "offset": 200
+        },
+        {
+          "type": "int32_t",
+          "name": "m_strata",
+          "offset": 204
+        },
+        {
+          "type": "int32_t",
+          "name": "m_level",
+          "offset": 208
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_eventmask",
+          "offset": 212
+        },
+        {
+          "type": "int32_t",
+          "name": "m_shown",
+          "offset": 216
+        },
+        {
+          "type": "int32_t",
+          "name": "m_visible",
+          "offset": 220
+        },
+        {
+          "type": "CRect",
+          "name": "m_hitRect",
+          "offset": 224
+        },
+        {
+          "type": "CRect",
+          "name": "m_hitOffset",
+          "offset": 240
+        },
+        {
+          "type": "uint32_t",
+          "name": "simpleframe_unk9",
+          "arrsize": 4,
+          "offset": 256
+        },
+        {
+          "type": "int32_t",
+          "name": "m_highlightLocked",
+          "offset": 272
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_lookForDrag",
+          "offset": 276
+        },
+        {
+          "type": "int32_t",
+          "name": "m_mouseDown",
+          "offset": 280
+        },
+        {
+          "type": "int32_t",
+          "name": "m_dragging",
+          "offset": 284
+        },
+        {
+          "type": "int32_t",
+          "name": "m_dragButton",
+          "offset": 288
+        },
+        {
+          "type": "C2Vector",
+          "name": "m_clickPoint",
+          "offset": 292
+        },
+        {
+          "type": "int32_t",
+          "name": "m_loading",
+          "offset": 300
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onLoad",
+          "offset": 304
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onSizeChanged",
+          "offset": 312
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onUpdate",
+          "offset": 320
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onShow",
+          "offset": 328
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onHide",
+          "offset": 336
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onEnter",
+          "offset": 344
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onLeave",
+          "offset": 352
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onMouseDown",
+          "offset": 360
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onMouseUp",
+          "offset": 368
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onMouseWheel",
+          "offset": 376
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onDragStart",
+          "offset": 384
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onDragStop",
+          "offset": 392
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onReceiveDrag",
+          "offset": 400
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onChar",
+          "offset": 408
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onKeyDown",
+          "offset": 416
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onKeyUp",
+          "offset": 424
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onAttributeChange",
+          "offset": 432
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onEnable",
+          "offset": 440
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onDisable",
+          "offset": 448
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_attributes",
+          "arrsize": 10,
+          "offset": 456
+        },
+        {
+          "type": "int32_t",
+          "name": "m_drawenabled",
+          "arrsize": 5,
+          "offset": 496
+        },
+        {
+          "type": "CBackdropGenerator*",
+          "name": "m_backdrop",
+          "offset": 516
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_regions",
+          "arrsize": 3,
+          "offset": 520
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_drawlayers",
+          "arrsize": 15,
+          "offset": 532
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_batchDirty",
+          "offset": 592
+        },
+        {
+          "type": "void*",
+          "name": "m_batch",
+          "arrsize": 5,
+          "offset": 596
+        },
+        {
+          "type": "TSExplicitList_CRenderBatch",
+          "name": "m_renderList",
+          "offset": 616
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_children",
+          "arrsize": 3,
+          "offset": 628
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_framesLink",
+          "arrsize": 2,
+          "offset": 640
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_destroyedLink",
+          "arrsize": 2,
+          "offset": 648
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_strataLink",
+          "arrsize": 2,
+          "offset": 656
+        }
+      ]
+    },
+    {
+      "name": "CSimpleRegion",
+      "size": 204,
+      "members": [
+        {
+          "type": "CScriptRegion",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "m_numAlpha",
+          "offset": 156
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_alpha",
+          "arrsize": 4,
+          "offset": 160
+        },
+        {
+          "type": "int32_t",
+          "name": "m_numColor",
+          "offset": 164
+        },
+        {
+          "type": "CImVector",
+          "name": "m_color",
+          "arrsize": 4,
+          "offset": 168
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_regionLink",
+          "arrsize": 2,
+          "offset": 184
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_drawLink",
+          "arrsize": 2,
+          "offset": 192
+        },
+        {
+          "type": "uint16_t",
+          "name": "m_regionFlags",
+          "offset": 200
+        },
+        {
+          "type": "uint16_t",
+          "name": "padding",
+          "offset": 202
+        }
+      ]
+    },
+    {
+      "name": "CSimpleTexture",
+      "size": 352,
+      "members": [
+        {
+          "type": "CSimpleRegion",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "dwordD0",
+          "offset": 204
+        },
+        {
+          "type": "CTexture*",
+          "name": "m_texture",
+          "offset": 208
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_alphaMode",
+          "offset": 212
+        },
+        {
+          "type": "void*",
+          "name": "m_shader",
+          "offset": 216
+        },
+        {
+          "type": "C3Vector",
+          "name": "m_position",
+          "arrsize": 4,
+          "offset": 220
+        },
+        {
+          "type": "C3Vector",
+          "name": "m_position2",
+          "arrsize": 4,
+          "offset": 268
+        },
+        {
+          "type": "C2Vector",
+          "name": "m_texCoord",
+          "arrsize": 4,
+          "offset": 316
+        },
+        {
+          "type": "uint32_t",
+          "name": "dword160",
+          "offset": 348
         }
       ]
     }

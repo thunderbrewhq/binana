@@ -3,7 +3,7 @@
 
 #include "gx/types.h"
 
-typedef struct CGxBatch CGxBatch;
+DECLARE_STRUCT(CGxBatch);
 
 struct CGxBatch {
   // Member variables

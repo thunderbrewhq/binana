@@ -3,7 +3,7 @@
 
 #include "gx/device.h"
 
-#include "d3d9/device.h"
+#include "external/d3d9/device.h"
 
 typedef struct CGxDeviceD3d CGxDeviceD3d;
 

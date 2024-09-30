@@ -23,9 +23,9 @@ typedef struct TSTimerPriority_##T TSTimerPriority_##T; \
 struct TSTimerPriority_##T { \
   CSBasePriority b_base; \
   T m_val; \
-};
+}
 
 #define STORM_TS_PRIORITY_QUEUE(T) \
-typedef CSBasePriorityQueue TSPriorityQueue_##T; 
+typedef CSBasePriorityQueue TSPriorityQueue_##T
 
 #endif

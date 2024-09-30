@@ -2,17 +2,24 @@
 
 #include "system/detect.h"
 
-// Types
+// Types (include all files to expose them in the disassembler)
 
+// external types (c-ified)
+#include "external/d3d9/caps.h"
+#include "external/d3d9/device.h"
+
+#include "async/object.h"
+#include "async/queue.h"
+
+#include "common/array.h"
 #include "common/handle.h"
 #include "common/instance.h"
 #include "common/datarecycler.h"
 #include "common/status.h"
+#include "common/refcount.h"
+#include "common/rcstring.h"
 
 #include "cursor/types.h"
-
-#include "d3d9/caps.h"
-#include "d3d9/device.h"
 
 #include "event/types.h"
 #include "event/context.h"
@@ -25,6 +32,7 @@
 #include "framescript/object.h"
 #include "framescript/event_object.h"
 
+#include "gx/batch.h"
 #include "gx/buffer.h"
 #include "gx/caps.h"
 #include "gx/device.h"
@@ -32,6 +40,8 @@
 #include "gx/matrix_stack.h"
 #include "gx/shader.h"
 #include "gx/state_bom.h"
+#include "gx/string.h"
+#include "gx/stringbatch.h"
 #include "gx/types.h"
 #include "gx/batch.h"
 #include "gx/d3d9.h"
@@ -41,7 +51,9 @@
 #include "storm/array.h"
 #include "storm/list.h"
 #include "storm/hash.h"
+#include "storm/queue.h"
 #include "storm/region.h"
+#include "storm/thread.h"
 
 #include "tempest/box.h"
 #include "tempest/matrix.h"
@@ -53,9 +65,19 @@
 #include "tempest/vector.h"
 
 #include "texture/blp.h"
+#include "texture/texture.h"
 #include "texture/tga.h"
 
+#include "ui/backdropgenerator.h"
+#include "ui/layoutframe.h"
+#include "ui/renderbatch.h"
+#include "ui/scriptobject.h"
+#include "ui/scriptregion.h"
+#include "ui/simplebatchedmesh.h"
 #include "ui/simpleframe.h"
+#include "ui/simpleregion.h"
+#include "ui/simpletexture.h"
+#include "ui/simpletop.h"
 
 // include files that define the use of template classes for standard library types
 // template classes for whoa types should be entered immediately after where the type is
