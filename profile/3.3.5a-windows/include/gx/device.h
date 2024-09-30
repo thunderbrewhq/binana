@@ -26,6 +26,15 @@ typedef struct ShaderConstants ShaderConstants;
 typedef struct CGxDevice CGxDevice;
 typedef struct CGxDevice__vtable CGxDevice__vtable;
 
+typedef void (*DEVICERESTOREDCALLBACK)();
+STORM_TS_GROWABLE_ARRAY(DEVICERESTOREDCALLBACK);
+
+typedef void (*TEXTURERECREATIONCALLBACK)();
+STORM_TS_GROWABLE_ARRAY(TEXTURERECREATIONCALLBACK);
+
+typedef void (*DISPLAYCHANGECALLBACK)();
+STORM_TS_GROWABLE_ARRAY(DISPLAYCHANGECALLBACK);
+
 struct CGxAppRenderState {
   CGxStateBom m_value;
   uint32_t m_stackDepth;
@@ -51,6 +60,7 @@ struct CGxDevice__vtable {
   // void ITexMarkAsUpdated(CGxTex*, uint32_t);
   void* v_fn_0_ITexMarkAsUpdated;
   // void IRsSendToHw(EGxRenderState);
+  // no base implementation
   void* v_fn_1_IRsSendToHw;
   // void ICursorCreate(const CGxFormat&);
   void* v_fn_2_ICursorCreate;
@@ -58,12 +68,16 @@ struct CGxDevice__vtable {
   void* v_fn_3_ICursorDestroy;
   // void ICursorDraw();
   void* v_fn_4_ICursorDraw;
-  // don't know if this ever gets called (IStateSync something?)
-  void* v_fn_5;
-  // don't know if this ever gets called (IStateSync something?)
-  void* v_fn_6;
-  // don't know if this ever gets called (IStateSync something?)
-  void* v_fn_7; 
+  // This gets called when window is resized. It runs a list of callbacks in an array.
+  // two functions that are in this array (ONLY once in-game, not in login screen):
+  // * 007E7FE0
+  // * 00512920
+  // void NotifyOnDeviceRestored();
+  void* v_fn_5_NotifyOnDeviceRestored;
+  // void NotifyOnTextureRecreation();
+  void* v_fn_6_NotifyOnTextureRecreation;
+  // void NotifyOnDisplayChange();
+  void* v_fn_7_NotifyOnDisplayChange; 
   // don't know if this ever gets called (something deleted?)
   void* v_fn_8;
   void* v_fn_9;
@@ -79,6 +93,7 @@ struct CGxDevice__vtable {
   // void DeviceSetGamma(CGxGammaRamp const&);
   void* v_fn_15_DeviceSetGamma;
   void* v_fn_16;
+  // no base implementation
   void* v_fn_17;
   void* v_fn_18;
   void* v_fn_19;
@@ -93,12 +108,18 @@ struct CGxDevice__vtable {
   void* v_fn_27;
   // void DeviceOverride(EGxOverride, uint32_t);
   void* v_fn_28_DeviceOverride;
-  void* v_fn_29;
-  void* v_fn_30;
-  void* v_fn_31;
-  void* v_fn_32;
-  void* v_fn_33;
-  void* v_fn_34;
+  // void AddDeviceRestoredCallback(DEVICERESTOREDCALLBACK);
+  void* v_fn_29_AddDeviceRestoredCallback;
+  // void RemoveDeviceRestoredCallback(DEVICERESTOREDCALLBACK);
+  void* v_fn_30_RemoveDeviceRestoredCallback;
+  // void AddTextureRecreationCallback(TEXTURERECREATIONCALLBACK);
+  void* v_fn_31_AddTextureRecreationCallback;
+  // void RemoveTextureRecreationCallback(TEXTURERECREATIONCALLBACK);
+  void* v_fn_32_RemoveTextureRecreationCallback;
+  // void AddDisplayChangeCallback(DISPLAYCHANGECALLBACK);
+  void* v_fn_33_AddDisplayChangeCallback;
+  // void AddDisplayChangeCallback(DISPLAYCHANGECALLBACK);
+  void* v_fn_34_RemoveDisplayChangeCallback;
   // void CapsWindowSize(CRect&);
   void* v_fn_35_CapsWindowSize;
   // void CapsWindowSize(CRect&);
@@ -183,7 +204,11 @@ struct CGxDevice {
   uint32_t m_unk34[76];
   CRect m_defWindowRect; // 0x164 (size: 0x10)
   CRect m_curWindowRect; // 0x174 (size: 0x10)
-  uint32_t m_unk184[12];
+  // uint32_t m_unk184[12] {
+  TSGrowableArray_DEVICERESTOREDCALLBACK m_deviceRestoredCallbacks;
+  TSGrowableArray_TEXTURERECREATIONCALLBACK m_textureRecreationCallbacks;
+  TSGrowableArray_DISPLAYCHANGECALLBACK m_displayChangeCallbacks;
+  // };
   EGxApi m_api; // 0x1b4
   uint32_t m_cpuFeatures;
   CGxFormat m_format;
@@ -246,7 +271,7 @@ struct CGxDevice {
   int32_t m_hardwareCursor; // 0x2954 (size 0x4)
   uint32_t m_cursorHotspotX;
   uint32_t m_cursorHotspotY;
-  CImVector m_cursor[1024]; // 0x2960 (size 0x4)
+  uint32_t m_cursor[1024]; // 0x2960 (size 0x4)
   CGxTex* m_cursorTexture; // 0x3960 (size 0x4)
   float m_cursorDepth; // 0x3964 (size 0x4)
   // 0x3968 == 14692 (the complete size of CGxDevice)
