@@ -1,6 +1,7 @@
 package symfile
 
 import (
+	"fmt"
 	"slices"
 	"sort"
 )
@@ -16,6 +17,10 @@ func (t *InMemoryTable) Insert(entry *Entry) (err error) {
 	})
 
 	if i < len(t.Entries) {
+		if t.Entries[i].StartAddress == entry.StartAddress {
+			err = fmt.Errorf("symfile: (*InMemoryTable).Insert() failed: duplicate entry: %s", entry.Name)
+			return
+		}
 		t.Entries = slices.Insert(t.Entries, i, *entry)
 	} else {
 		t.Entries = append(t.Entries, *entry)
