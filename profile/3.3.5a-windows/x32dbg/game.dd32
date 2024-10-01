@@ -16970,6 +16970,30 @@
     },
     {
       "manual": true,
+      "start": "0x2843b0",
+      "end": "0x2843d8",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2843b0"
+    },
+    {
+      "manual": true,
+      "start": "0x2843e0",
+      "end": "0x284408",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2843e0"
+    },
+    {
+      "manual": true,
+      "start": "0x284410",
+      "end": "0x284438",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x284410"
+    },
+    {
+      "manual": true,
       "start": "0x284440",
       "end": "0x2844b8",
       "module": "wow.exe",
@@ -17055,6 +17079,54 @@
       "module": "wow.exe",
       "icount": "0x0",
       "parent": "0x284d10"
+    },
+    {
+      "manual": true,
+      "start": "0x2853b0",
+      "end": "0x2853c5",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2853b0"
+    },
+    {
+      "manual": true,
+      "start": "0x2853d0",
+      "end": "0x28545b",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2853d0"
+    },
+    {
+      "manual": true,
+      "start": "0x285460",
+      "end": "0x285475",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x285460"
+    },
+    {
+      "manual": true,
+      "start": "0x285480",
+      "end": "0x28550b",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x285480"
+    },
+    {
+      "manual": true,
+      "start": "0x285510",
+      "end": "0x285525",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x285510"
+    },
+    {
+      "manual": true,
+      "start": "0x285530",
+      "end": "0x2855bb",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x285530"
     },
     {
       "manual": true,
@@ -33971,6 +34043,24 @@
     {
       "manual": true,
       "module": "wow.exe",
+      "text": "CGxDevice__NotifyOnDeviceRestored",
+      "address": "0x2843b0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__NotifyOnTextureRecreation",
+      "address": "0x2843e0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__NotifyOnDisplayChange",
+      "address": "0x284410"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
       "text": "CGxDevice__ClipPlaneSet",
       "address": "0x284440"
     },
@@ -34033,6 +34123,42 @@
       "module": "wow.exe",
       "text": "CGxDevice__Log",
       "address": "0x284d10"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__AddDeviceRestoredCallback",
+      "address": "0x2853b0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__RemoveDeviceRestoredCallback",
+      "address": "0x2853d0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__AddTextureRecreationCallback",
+      "address": "0x285460"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__RemoveTextureRecreationCallback",
+      "address": "0x285480"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__AddDisplayChangeCallback",
+      "address": "0x285510"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__RemoveDisplayChangeCallback",
+      "address": "0x285530"
     },
     {
       "manual": true,

@@ -2119,6 +2119,9 @@ CGxDevice__CursorSetDepth 00683660 f end=00683670
 CGxDevice__DeviceSetFormat 006840F0 f end=0068416C
 CGxDevice__DeviceSetGamma 00684190 f end=006841AF
 CGxDevice__DeviceSetDefWindow 00684360 f end=006843B0
+CGxDevice__NotifyOnDeviceRestored 006843B0 f end=006843D9
+CGxDevice__NotifyOnTextureRecreation 006843E0 f end=00684409
+CGxDevice__NotifyOnDisplayChange 00684410 f end=00684439
 CGxDevice__ClipPlaneSet 00684440 f end=006844B9
 CGxDevice__LightSet 006847D0 f end=00684843
 CGxDevice__BufStream 00684850 f end=0068489F
@@ -2130,6 +2133,12 @@ CGxDevice__CursorUnlock 00684B50 f end=00684B99
 CGxDevice__Log 00684C20 f end=00684C3E
 CGxDevice__Log_CGxCaps 00684C40 f end=00684D07 ; CGxDevice::Log(CGxCaps const&) const
 CGxDevice__Log 00684D10 f end=00684D6C
+CGxDevice__AddDeviceRestoredCallback 006853B0 f end=006853C6 type="void __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)"
+CGxDevice__RemoveDeviceRestoredCallback 006853D0 f end=0068545C type="int32_t __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)"
+CGxDevice__AddTextureRecreationCallback 00685460 f end=00685476 type="void __thiscall func(CGxDevice* this, TEXTURERECREATIONCALLBACK fn)"
+CGxDevice__RemoveTextureRecreationCallback 00685480 f end=0068550C type="int32_t __thiscall func(CGxDevice* this, TEXTURERECREATIONCALLBACK fn)"
+CGxDevice__AddDisplayChangeCallback 00685510 f end=00685526 type="void __thiscall func(CGxDevice* this, DISPLAYCHANGECALLBACK fn)"
+CGxDevice__RemoveDisplayChangeCallback 00685530 f end=006855BC type="int32_t __thiscall func(CGxDevice* this, DISPLAYCHANGECALLBACK fn)"
 CGxDevice__IRsDirty 00685970 f end=006859DB
 CGxDevice__IRsForceUpdate_EGxRenderState 006859E0 f end=00685A65 ; CGxDevice::IRsForceUpdate(EGxRenderState)
 CGxDevice__IRsForceUpdate 00685A70 f end=00685B4E ; CGxDevice::IRsForceUpdate()

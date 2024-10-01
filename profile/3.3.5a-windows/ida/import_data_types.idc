@@ -15,6 +15,12 @@ static import_data_types() {
   apply_type(0x00681F60, "void __stdcall func(float minX, float maxX, float minY, float maxY, float minZ, float maxZ)");
   apply_type(0x00682DC0, "int32_t __thiscall func(CGxDevice* this, int32_t a2)");
   apply_type(0x00682E20, "int32_t __thiscall func(CGxDevice* this, int32_t a2)");
+  apply_type(0x006853B0, "void __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)");
+  apply_type(0x006853D0, "int32_t __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)");
+  apply_type(0x00685460, "void __thiscall func(CGxDevice* this, TEXTURERECREATIONCALLBACK fn)");
+  apply_type(0x00685480, "int32_t __thiscall func(CGxDevice* this, TEXTURERECREATIONCALLBACK fn)");
+  apply_type(0x00685510, "void __thiscall func(CGxDevice* this, DISPLAYCHANGECALLBACK fn)");
+  apply_type(0x00685530, "int32_t __thiscall func(CGxDevice* this, DISPLAYCHANGECALLBACK fn)");
   apply_type(0x006A5A30, "void __thiscall func(CGxDeviceD3d* this)");
   apply_type(0x006AA3B0, "int32_t __thiscall func(CTgaFile* this)");
   apply_type(0x006AA3E0, "uint32_t __thiscall func(CTgaFile* this)");
