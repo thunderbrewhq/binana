@@ -5,7 +5,15 @@
 
 #include "external/d3d9/device.h"
 
-typedef struct CGxDeviceD3d CGxDeviceD3d;
+#include "storm/array.h"
+
+DECLARE_STRUCT(CGxDeviceD3d);
+DECLARE_STRUCT(CGxDeviceD3d__GxVertexDecl);
+
+struct CGxDeviceD3d__GxVertexDecl {
+  uint32_t m_unk00;
+};
+STORM_TS_GROWABLE_ARRAY(CGxDeviceD3d__GxVertexDecl);
 
 struct CGxDeviceD3d {
   CGxDevice b_base;
@@ -22,7 +30,8 @@ struct CGxDeviceD3d {
   uint32_t unk3AB8;
   uint32_t unk3ABC;
   uint32_t m_d3dStereoHandle;
-  uint32_t unk3AC4[7];
+  uint32_t unk3AC4[3]; //TSList?
+  TSGrowableArray_CGxDeviceD3d__GxVertexDecl m_vertexDecl;
   IDirect3DVertexDeclaration9* m_d3dVertexDecl[14];
   D3DDISPLAYMODE m_desktopDisplayMode;
   int32_t m_inScene;

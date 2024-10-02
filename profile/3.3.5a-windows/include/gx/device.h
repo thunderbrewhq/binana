@@ -4,7 +4,11 @@
 #include "system/types.h"
 
 #include "storm/array.h"
+#include "storm/array/uint16_t.h"
 #include "storm/array/uint32_t.h"
+#include "storm/array/c2vector.h"
+#include "storm/array/c3vector.h"
+#include "storm/array/cimvector.h"
 
 #include "tempest/box.h"
 #include "tempest/matrix.h"
@@ -79,14 +83,16 @@ struct CGxDevice__vtable {
   // void NotifyOnDisplayChange();
   void* v_fn_7_NotifyOnDisplayChange; 
   // don't know if this ever gets called (something deleted?)
-  void* v_fn_8;
-  void* v_fn_9;
+  void* v_fn_8_destructor;
+  // int32_t DeviceCreate(const CGxFormat&);
+  void* v_fn_9_DeviceCreate;
   // int32_t DeviceCreate(long (*)(void*, uint32_t, uint32_t, int32_t), CGxFormat const&);
   void* v_fn_10_DeviceCreate;
   // void DeviceDestroy();
   void* v_fn_11_DeviceDestroy;
-  void* v_fn_12;
-  // int32_t DeviceSetFormat(struct CGxFormat const &);
+  // void DeviceEvictResources();
+  void* v_fn_12_DeviceEvictResources;
+  // int32_t DeviceSetFormat(const CGxFormat&);
   void* v_fn_13_DeviceSetFormat;
   // void DeviceSetBaseMipLevel(uint32_t);
   void* v_fn_14_DeviceSetBaseMipLevel;
@@ -110,15 +116,15 @@ struct CGxDevice__vtable {
   void* v_fn_28_DeviceOverride;
   // void AddDeviceRestoredCallback(DEVICERESTOREDCALLBACK);
   void* v_fn_29_AddDeviceRestoredCallback;
-  // void RemoveDeviceRestoredCallback(DEVICERESTOREDCALLBACK);
+  // int32_t RemoveDeviceRestoredCallback(DEVICERESTOREDCALLBACK);
   void* v_fn_30_RemoveDeviceRestoredCallback;
   // void AddTextureRecreationCallback(TEXTURERECREATIONCALLBACK);
   void* v_fn_31_AddTextureRecreationCallback;
-  // void RemoveTextureRecreationCallback(TEXTURERECREATIONCALLBACK);
+  // int32_t RemoveTextureRecreationCallback(TEXTURERECREATIONCALLBACK);
   void* v_fn_32_RemoveTextureRecreationCallback;
   // void AddDisplayChangeCallback(DISPLAYCHANGECALLBACK);
   void* v_fn_33_AddDisplayChangeCallback;
-  // void AddDisplayChangeCallback(DISPLAYCHANGECALLBACK);
+  // int32_t RemoveDisplayChangeCallback(DISPLAYCHANGECALLBACK);
   void* v_fn_34_RemoveDisplayChangeCallback;
   // void CapsWindowSize(CRect&);
   void* v_fn_35_CapsWindowSize;
@@ -201,7 +207,17 @@ struct CGxDevice {
   TSGrowableArray_CGxPushedRenderState m_pushedStates; // 0x4 (size: 0x14)
   TSGrowableArray_uint32_t m_stackOffsets; // 0x18 (size: 0x14)
   TSGrowableArray_EGxRenderState m_dirtyStates; // 0x2C (size: 0x14)
-  uint32_t m_unk34[76];
+  uint32_t m_unk34[4];
+  C3Vector m_primVertex;
+  C2Vector m_primTexCoord[8];
+  C3Vector m_primNormal;
+  CImVector m_primColor;
+  TSGrowableArray_C3Vector m_primVertexArray;
+  TSGrowableArray_C2Vector m_primTexCoordArray[8];
+  TSGrowableArray_C3Vector m_primNormalArray;
+  TSGrowableArray_CImVector m_primColorArray;
+  TSGrowableArray_uint16_t m_primIndexArray;
+  uint32_t m_primMask;
   CRect m_defWindowRect; // 0x164 (size: 0x10)
   CRect m_curWindowRect; // 0x174 (size: 0x10)
   // uint32_t m_unk184[12] {
@@ -224,8 +240,8 @@ struct CGxDevice {
   int32_t m_windowVisible;
   int32_t intF64;
   int32_t intF68;
-  // Invented name, though seems to have the same place as CGxDeviceD3d::m_d3dNeedsReset 
-  int32_t m_needsUpdate;
+  // Invented name, though seems to have the same place as CGxDeviceD3d::m_d3dNeedsReset (Alpha) 
+  int32_t m_needsReset;
   CBoundingBox m_viewport;
   C44Matrix m_projection;
   C44Matrix m_projNative;

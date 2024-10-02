@@ -4,6 +4,8 @@
 #include "system/types.h"
 #include "storm/list.h"
 
+#include "async/object.h"
+
 DECLARE_STRUCT(TSLink_CAsyncQueue);
 DECLARE_STRUCT(TSExplicitList_CAsyncObject);
 

@@ -822,6 +822,17 @@
       ]
     },
     {
+      "name": "CGxDeviceD3d__GxVertexDecl",
+      "size": 4,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_unk00",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "CGxDevice__vtable",
       "size": 336,
       "members": [
@@ -867,12 +878,12 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_8",
+          "name": "v_fn_8_destructor",
           "offset": 32
         },
         {
           "type": "void*",
-          "name": "v_fn_9",
+          "name": "v_fn_9_DeviceCreate",
           "offset": 36
         },
         {
@@ -887,7 +898,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_12",
+          "name": "v_fn_12_DeviceEvictResources",
           "offset": 48
         },
         {
@@ -2798,6 +2809,84 @@
       ]
     },
     {
+      "name": "TSGrowableArray_C2Vector",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "C2Vector*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_C3Vector",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "C3Vector*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_CGxDeviceD3d__GxVertexDecl",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "CGxDeviceD3d__GxVertexDecl*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_CGxPushedRenderState",
       "size": 16,
       "members": [
@@ -2813,6 +2902,32 @@
         },
         {
           "type": "CGxPushedRenderState*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_CImVector",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "CImVector*",
           "name": "m_data",
           "offset": 8
         },
@@ -3255,6 +3370,32 @@
         },
         {
           "type": "void**",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_uint16_t",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "uint16_t*",
           "name": "m_data",
           "offset": 8
         },
@@ -7445,8 +7586,60 @@
         {
           "type": "uint32_t",
           "name": "m_unk34",
-          "arrsize": 76,
+          "arrsize": 4,
           "offset": 52
+        },
+        {
+          "type": "C3Vector",
+          "name": "m_primVertex",
+          "offset": 68
+        },
+        {
+          "type": "C2Vector",
+          "name": "m_primTexCoord",
+          "arrsize": 8,
+          "offset": 80
+        },
+        {
+          "type": "C3Vector",
+          "name": "m_primNormal",
+          "offset": 144
+        },
+        {
+          "type": "CImVector",
+          "name": "m_primColor",
+          "offset": 156
+        },
+        {
+          "type": "TSGrowableArray_C3Vector",
+          "name": "m_primVertexArray",
+          "offset": 160
+        },
+        {
+          "type": "TSGrowableArray_C2Vector",
+          "name": "m_primTexCoordArray",
+          "arrsize": 8,
+          "offset": 176
+        },
+        {
+          "type": "TSGrowableArray_C3Vector",
+          "name": "m_primNormalArray",
+          "offset": 304
+        },
+        {
+          "type": "TSGrowableArray_CImVector",
+          "name": "m_primColorArray",
+          "offset": 320
+        },
+        {
+          "type": "TSGrowableArray_uint16_t",
+          "name": "m_primIndexArray",
+          "offset": 336
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_primMask",
+          "offset": 352
         },
         {
           "type": "CRect",
@@ -7540,7 +7733,7 @@
         },
         {
           "type": "int32_t",
-          "name": "m_needsUpdate",
+          "name": "m_needsReset",
           "offset": 3948
         },
         {
@@ -8338,8 +8531,13 @@
         {
           "type": "uint32_t",
           "name": "unk3AC4",
-          "arrsize": 7,
+          "arrsize": 3,
           "offset": 15052
+        },
+        {
+          "type": "TSGrowableArray_CGxDeviceD3d__GxVertexDecl",
+          "name": "m_vertexDecl",
+          "offset": 15064
         },
         {
           "type": "IDirect3DVertexDeclaration9*",
