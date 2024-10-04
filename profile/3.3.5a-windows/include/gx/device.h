@@ -82,8 +82,8 @@ struct CGxDevice__vtable {
   void* v_fn_6_NotifyOnTextureRecreation;
   // void NotifyOnDisplayChange();
   void* v_fn_7_NotifyOnDisplayChange; 
-  // don't know if this ever gets called (something deleted?)
-  void* v_fn_8_destructor;
+  // public: virtual void * __thiscall CGxDevice::`scalar deleting destructor'(unsigned int)
+  void* v_fn_8_scalar_deleting_destructor;
   // int32_t DeviceCreate(const CGxFormat&);
   void* v_fn_9_DeviceCreate;
   // int32_t DeviceCreate(long (*)(void*, uint32_t, uint32_t, int32_t), CGxFormat const&);

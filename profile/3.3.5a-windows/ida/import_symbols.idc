@@ -2137,7 +2137,7 @@ static main() {
   set_name(0x00684B50, "CGxDevice__CursorUnlock");
   set_name(0x00684C20, "CGxDevice__Log");
   set_name(0x00684C40, "CGxDevice__Log_CGxCaps");
-  set_name(0x00684D10, "CGxDevice__Log");
+  set_name(0x00684D10, "CGxDevice__Log_CGxFormat");
   set_name(0x006853B0, "CGxDevice__AddDeviceRestoredCallback");
   set_name(0x006853D0, "CGxDevice__RemoveDeviceRestoredCallback");
   set_name(0x00685460, "CGxDevice__AddTextureRecreationCallback");
@@ -2150,13 +2150,15 @@ static main() {
   set_name(0x00685B50, "CGxDevice__IRsSync");
   set_name(0x00685C60, "CGxDevice__TexCreate");
   set_name(0x00685EB0, "CGxDevice__MasterEnableSet");
-  set_name(0x00685F50, "CGxDevice__RsSet");
+  set_name(0x00685F50, "CGxDevice__RsSet_pointer_to_void");
   set_name(0x00685FB0, "CGxDevice__RsPop");
   set_name(0x00687660, "CGxDevice__BufCreate");
   set_name(0x006876D0, "CGxDevice__PoolCreate");
   set_name(0x00687A90, "CGxDevice__ICursorDraw");
   set_name(0x00688340, "CGxDevice__PoolDestroy");
   set_name(0x00688690, "CGxDevice__CGxDevice");
+  set_name(0x006890C0, "CGxDevice__destructor");
+  set_name(0x00689690, "CGxDevice__scalar_deleting_destructor");
   set_name(0x006897C0, "CGxDevice__ShaderCreate");
   set_name(0x00689A50, "CGxShader__Valid");
   set_name(0x00689EF0, "CGxDevice__NewD3d");
@@ -6990,6 +6992,10 @@ static main() {
   set_func_end(0x00688340, 0x00688372);
   set_func_start(0x00688690, 0x00688690);
   set_func_end(0x00688690, 0x0068903F);
+  set_func_start(0x006890C0, 0x006890C0);
+  set_func_end(0x006890C0, 0x00689460);
+  set_func_start(0x00689690, 0x00689690);
+  set_func_end(0x00689690, 0x006896BB);
   set_func_start(0x006897C0, 0x006897C0);
   set_func_end(0x006897C0, 0x00689A49);
   set_func_start(0x00689A50, 0x00689A50);

@@ -1,67 +1,69 @@
-CGxDevice__RsPush 00409670 f end=004096CC
-CGxDevice__Caps 00532AF0 f end=00532AF7 ; public: class CGxCaps const & __thiscall CGxDevice::Caps(void)const
-CGxDevice__DeviceCreate_WindowProc_CGxFormat 00682CB0 f end=00682CCB
-CGxDevice__DeviceSetBaseMipLevel 00682D00 f end=00682D10
-CGxDevice__DeviceApi 00682D20 f end=00682D27
-CGxDevice__IDevIsWindowed 00682D40 f end=00682D48
-CGxDevice__DeviceCurWindow 00682D70 f end=00682D76
+CGxDevice__RsPush 00409670 f end=004096CC type="void __thiscall func(CGxDevice* this)"
+CGxDevice__Caps 00532AF0 f end=00532AF7 type="CGxCaps* __thiscall func(CGxDevice* this)" ; public: class CGxCaps const & __thiscall CGxDevice::Caps(void)const
+CGxDevice__DeviceCreate_WindowProc_CGxFormat 00682CB0 f end=00682CCB type="void __thiscall func(CGxDevice* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
+CGxDevice__DeviceSetBaseMipLevel 00682D00 f end=00682D10 type="void __thiscall func(CGxDevice* this, uint32_t baseMipLevel)"
+CGxDevice__DeviceApi 00682D20 f end=00682D27 type="EGxApi __thiscall func(CGxDevice* this)"
+CGxDevice__IDevIsWindowed 00682D40 f end=00682D48 type="int32_t __thiscall func(CGxDevice* this)"
+CGxDevice__DeviceCurWindow 00682D70 f end=00682D76 type="CRect* __thiscall func(CGxDevice* this)"
 CGxDevice__CapsIsWindowVisible 00682DC0 f end=00682DE7 type="int32_t __thiscall func(CGxDevice* this, int32_t a2)"
 CGxDevice__CapsHasContext 00682E20 f end=00682E47 type="int32_t __thiscall func(CGxDevice* this, int32_t a2)"
-CGxDevice__ScenePresent 00682E50 f end=00682E66
-CGxDevice__PrimCalcCount 00682F40 f end=00682F66
-CGxDevice__LightEnable 00683080 f end=006830A4
-CGxDevice__NeedsUpdate 006830B0 f end=006830F9
-CGxDevice__MasterEnable 00683100 f end=00683121
-CGxDevice__BufData 00683130 f end=00683142
-CGxDevice__BufLock 00683150 f end=00683171
-CGxDevice__BufUnlock 00683180 f end=006831A0
-CGxDevice__ShaderConstantsClear 006833A0 f end=006833DD
-CGxDevice__ShaderConstantsSet 006833E0 f end=00683554
-CGxDevice__ShaderConstantsLock 00683560 f end=00683577
-CGxDevice__ShaderConstantsUnlock 00683580 f end=006835D6
-CGxDevice__ICursorDestroy 006835E0 f end=00683602
-CGxDevice__ICursorUpdate 00683610 f end=00683632
-CGxDevice__CursorSetVisible 00683640 f end=00683650
-CGxDevice__CursorLock 00683650 f end=00683657
-CGxDevice__CursorSetDepth 00683660 f end=00683670
-CGxDevice__DeviceSetFormat 006840F0 f end=0068416C
-CGxDevice__DeviceSetGamma 00684190 f end=006841AF
-CGxDevice__DeviceSetDefWindow 00684360 f end=006843B0
-CGxDevice__NotifyOnDeviceRestored 006843B0 f end=006843D9
-CGxDevice__NotifyOnTextureRecreation 006843E0 f end=00684409
-CGxDevice__NotifyOnDisplayChange 00684410 f end=00684439
-CGxDevice__ClipPlaneSet 00684440 f end=006844B9
-CGxDevice__LightSet 006847D0 f end=00684843
-CGxDevice__BufStream 00684850 f end=0068489F
-CGxDevice__TexMarkForUpdate 006848A0 f end=000684900
-CGxDevice__ITexMarkAsUpdated 00684900 f end=0068492D
-CGxDevice__IShaderLoad 00684970 f end=00684AC8
-CGxDevice__ICursorCreate 00684AD0 f end=00684B4A
-CGxDevice__CursorUnlock 00684B50 f end=00684B99
-CGxDevice__Log 00684C20 f end=00684C3E
-CGxDevice__Log_CGxCaps 00684C40 f end=00684D07 ; CGxDevice::Log(CGxCaps const&) const
-CGxDevice__Log 00684D10 f end=00684D6C
+CGxDevice__ScenePresent 00682E50 f end=00682E66 type="void __thiscall func(CGxDevice* this)"
+CGxDevice__PrimCalcCount 00682F40 f end=00682F66 type="uint32_t __stdcall func(EGxPrim primType, uint32_t indexCount)"
+CGxDevice__LightEnable 00683080 f end=006830A4 type="void __thiscall func(CGxDevice* this, uint32_t whichLight, int32_t enable)"
+CGxDevice__NeedsUpdate 006830B0 f end=006830F9 type="int32_t __thiscall func(CGxDevice* this, uint32_t app, uint32_t hw, uint32_t appDisables, uint32_t hwDisables, uint32_t flagPos, int32_t* enable)"
+CGxDevice__MasterEnable 00683100 f end=00683121 type="int32_t __thiscall func(CGxDevice* this, EGxMasterEnables state)"
+CGxDevice__BufData 00683130 f end=00683142 type="int32_t __thiscall func(CGxDevice* this, CGxBuf* buf, void *data, uint32_t size, uint32_t offset)"
+CGxDevice__BufLock 00683150 f end=00683171 type="uint8_t* __thiscall func(CGxDevice* this, CGxBuf* buf)"
+CGxDevice__BufUnlock 00683180 f end=006831A0 type="int32_t __thiscall func(CGxDevice* this, CGxBuf* buf, uint32_t size)"
+CGxDevice__ShaderConstantsClear 006833A0 f end=006833DD type="void __thiscall func(CGxDevice* this)"
+CGxDevice__ShaderConstantsSet 006833E0 f end=00683554 type="void __thiscall func(CGxDevice* this, EGxShTarget target, uint32_t index, float* constants, uint32_t count)"
+CGxDevice__ShaderConstantsLock 00683560 f end=00683577 type="uint8_t* __thiscall func(CGxDevice* this, EGxShTarget target)"
+CGxDevice__ShaderConstantsUnlock 00683580 f end=006835D6 type="void __thiscall func(CGxDevice* this, EGxShTarget target, uint32_t index, uint32_t count)"
+CGxDevice__ICursorDestroy 006835E0 f end=00683602 type="void __thiscall func(CGxDevice* this)"
+CGxDevice__ICursorUpdate 00683610 f end=00683632 type="void __stdcall func(EGxTexCommand command, uint32_t width, uint32_t height, uint32_t face, uint32_t level, void* userArg, uint32_t* texelStrideInBytes, void** texels)"
+CGxDevice__CursorSetVisible 00683640 f end=00683650 type="void __thiscall func(CGxDevice* this, int32_t visible)"
+CGxDevice__CursorLock 00683650 f end=00683657 type="uint32_t* __thiscall func(CGxDevice* this)"
+CGxDevice__CursorSetDepth 00683660 f end=00683670 type="void __thiscall func(CGxDevice* this, float depth)"
+CGxDevice__DeviceSetFormat 006840F0 f end=0068416C type="int32_t __thiscall func(CGxDevice* this, CGxFormat* format)"
+CGxDevice__DeviceSetGamma 00684190 f end=006841AF type="int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)"
+CGxDevice__DeviceSetDefWindow 00684360 f end=006843B0 type="void __thiscall func(CGxDevice* this, CRect* rect)"
+CGxDevice__NotifyOnDeviceRestored 006843B0 f end=006843D9 type="void __thiscall func(CGxDevice* this)"
+CGxDevice__NotifyOnTextureRecreation 006843E0 f end=00684409 type="void __thiscall func(CGxDevice* this)"
+CGxDevice__NotifyOnDisplayChange 00684410 f end=00684439 type="void __thiscall func(CGxDevice* this)"
+CGxDevice__ClipPlaneSet 00684440 f end=006844B9 type="void __thiscall func(CGxDevice* this, uint32_t a2, C4Plane* plane)"
+CGxDevice__LightSet 006847D0 f end=00684843 type="void __thiscall func(CGxDevice* this, uint32_t a2, CGxLight* light, C3Vector* pos)"
+CGxDevice__BufStream 00684850 f end=0068489F type="void __thiscall func(CGxDevice* this, EGxPoolTarget target, uint32_t itemSize, uint32_t itemCount)"
+CGxDevice__TexMarkForUpdate 006848A0 f end=000684900 type="void __thiscall func(CGxDevice* this, CGxTex* texId, CiRect* updateRect, int32_t immediate)"
+CGxDevice__ITexMarkAsUpdated 00684900 f end=0068492D type="void __thiscall func(CGxDevice* this, CGxTex* texId)"
+CGxDevice__IShaderLoad 00684970 f end=00684AC8 type="int32_t __thiscall func(CGxDevice* this, CGxShader** shaders, EGxShTarget target, char* a4, char* a5, int32_t permutations)"
+CGxDevice__ICursorCreate 00684AD0 f end=00684B4A type="void __thiscall func(CGxDevice* this, CGxFormat* format)"
+CGxDevice__CursorUnlock 00684B50 f end=00684B99 type="void __thiscall func(CGxDevice* this, uint32_t x, uint32_t y)"
+CGxDevice__Log 00684C20 f end=00684C3E type="void __stdcall func(char* format, ...)"
+CGxDevice__Log_CGxCaps 00684C40 f end=00684D07 type="void __stdcall func(CGxCaps* caps)" ; CGxDevice::Log(CGxCaps const&) const
+CGxDevice__Log_CGxFormat 00684D10 f end=00684D6C type="void __stdcall func(CGxFormat* format)"
 CGxDevice__AddDeviceRestoredCallback 006853B0 f end=006853C6 type="void __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)"
 CGxDevice__RemoveDeviceRestoredCallback 006853D0 f end=0068545C type="int32_t __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)"
 CGxDevice__AddTextureRecreationCallback 00685460 f end=00685476 type="void __thiscall func(CGxDevice* this, TEXTURERECREATIONCALLBACK fn)"
 CGxDevice__RemoveTextureRecreationCallback 00685480 f end=0068550C type="int32_t __thiscall func(CGxDevice* this, TEXTURERECREATIONCALLBACK fn)"
 CGxDevice__AddDisplayChangeCallback 00685510 f end=00685526 type="void __thiscall func(CGxDevice* this, DISPLAYCHANGECALLBACK fn)"
 CGxDevice__RemoveDisplayChangeCallback 00685530 f end=006855BC type="int32_t __thiscall func(CGxDevice* this, DISPLAYCHANGECALLBACK fn)"
-CGxDevice__IRsDirty 00685970 f end=006859DB
-CGxDevice__IRsForceUpdate_EGxRenderState 006859E0 f end=00685A65 ; CGxDevice::IRsForceUpdate(EGxRenderState)
-CGxDevice__IRsForceUpdate 00685A70 f end=00685B4E ; CGxDevice::IRsForceUpdate()
-CGxDevice__IRsSync 00685B50 f end=00685BFE
-CGxDevice__TexCreate 00685C60 f end=00685CCB
-CGxDevice__MasterEnableSet 00685EB0 f end=00685F33
-CGxDevice__RsSet 00685F50 f end=00685FB0
-CGxDevice__RsPop 00685FB0 f end=00686116
-CGxDevice__BufCreate 00687660 f end=006876C9
-CGxDevice__PoolCreate 006876D0 f end=0068773F
-CGxDevice__ICursorDraw 00687A90 f end=00687FCA
-CGxDevice__PoolDestroy 00688340 f end=00688372
-CGxDevice__CGxDevice 00688690 f end=0068903F
-CGxDevice__ShaderCreate 006897C0 f end=00689A49
-CGxDevice__NewD3d 00689EF0 f end=00689F14
-CGxDevice__NewOpenGl 0068BF20 f end=0068BF44
-CGxDevice__NewD3d9Ex 0068C220 f end=0068C244
-CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF
+CGxDevice__IRsDirty 00685970 f end=006859DB type="void __thiscall func(CGxDevice* this, EGxRenderState which)"
+CGxDevice__IRsForceUpdate_EGxRenderState 006859E0 f end=00685A65 type="void __thiscall func(CGxDevice* this, EGxRenderState which)" ; CGxDevice::IRsForceUpdate(EGxRenderState)
+CGxDevice__IRsForceUpdate 00685A70 f end=00685B4E type="void __thiscall func(CGxDevice* this)" ; CGxDevice::IRsForceUpdate()
+CGxDevice__IRsSync 00685B50 f end=00685BFE type="void __thiscall func(CGxDevice* this, int32_t force)"
+CGxDevice__TexCreate 00685C60 f end=00685CCB type="void __thiscall func(CGxDevice* this, EGxTexTarget target, uint32_t width, uint32_t height, uint32_t depth, EGxTexFormat format, EGxTexFormat dataFormat, CGxTexFlags flags, void* userArg, void (*userFunc)(EGxTexCommand, uint32_t, uint32_t, uint32_t, uint32_t, void*, uint32_t*, void**), char* name, CGxTex** texId)"
+CGxDevice__MasterEnableSet 00685EB0 f end=00685F33 type="void __thiscall func(CGxDevice* this, EGxMasterEnables state, int32_t enable)"
+CGxDevice__RsSet_pointer_to_void 00685F50 f end=00685FB0 type="void __thiscall func(CGxDevice* this, EGxRenderState which, void* value)"
+CGxDevice__RsPop 00685FB0 f end=00686116 type="void __thiscall func(CGxDevice* this)"
+CGxDevice__BufCreate 00687660 f end=006876C9 type="CGxBuf* __thiscall func(CGxDevice* this, CGxPool* pool, uint32_t itemSize, uint32_t itemCount, uint32_t index)"
+CGxDevice__PoolCreate 006876D0 f end=0068773F type="CGxPool* __thiscall func(CGxDevice* this, EGxPoolTarget target, EGxPoolUsage usage, uint32_t size, EGxPoolHintBits hint, char* name)"
+CGxDevice__ICursorDraw 00687A90 f end=00687FCA type="void __thiscall func(CGxDevice* this)"
+CGxDevice__PoolDestroy 00688340 f end=00688372 type="void __thiscall func(CGxDevice* this, CGxPool* pool)"
+CGxDevice__CGxDevice 00688690 f end=0068903F type="void __thiscall func(CGxDevice* this)"
+CGxDevice__destructor 006890C0 f end=00689460 type="void __thiscall func(CGxDevice* this)"
+CGxDevice__scalar_deleting_destructor 00689690 f end=006896BB type="void __thiscall func(CGxDevice *this, uint8_t __flags)"
+CGxDevice__ShaderCreate 006897C0 f end=00689A49 type="void __thiscall func(CGxDevice* this, CGxShader**, EGxShTarget, char*, char*, int32_t)"
+CGxDevice__NewD3d 00689EF0 f end=00689F14 type="CGxDevice* __stdcall func()"
+CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
+CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
+CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF type="void __thiscall func(CGxDevice* this, CGxTex* texId, uint32_t* width, uint32_t* height, uint32_t* baseMip, uint32_t* mipCount)"

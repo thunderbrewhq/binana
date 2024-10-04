@@ -17234,6 +17234,22 @@
     },
     {
       "manual": true,
+      "start": "0x2890c0",
+      "end": "0x28945f",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x2890c0"
+    },
+    {
+      "manual": true,
+      "start": "0x289690",
+      "end": "0x2896ba",
+      "module": "wow.exe",
+      "icount": "0x0",
+      "parent": "0x289690"
+    },
+    {
+      "manual": true,
       "start": "0x2897c0",
       "end": "0x289a48",
       "module": "wow.exe",
@@ -34121,7 +34137,7 @@
     {
       "manual": true,
       "module": "wow.exe",
-      "text": "CGxDevice__Log",
+      "text": "CGxDevice__Log_CGxFormat",
       "address": "0x284d10"
     },
     {
@@ -34199,7 +34215,7 @@
     {
       "manual": true,
       "module": "wow.exe",
-      "text": "CGxDevice__RsSet",
+      "text": "CGxDevice__RsSet_pointer_to_void",
       "address": "0x285f50"
     },
     {
@@ -34237,6 +34253,18 @@
       "module": "wow.exe",
       "text": "CGxDevice__CGxDevice",
       "address": "0x288690"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__destructor",
+      "address": "0x2890c0"
+    },
+    {
+      "manual": true,
+      "module": "wow.exe",
+      "text": "CGxDevice__scalar_deleting_destructor",
+      "address": "0x289690"
     },
     {
       "manual": true,

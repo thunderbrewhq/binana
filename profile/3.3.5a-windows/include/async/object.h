@@ -8,6 +8,8 @@
 DECLARE_STRUCT(CAsyncObject);
 DECLARE_STRUCT(TSLink_CAsyncObject);
 
+STORM_TS_LIST(CAsyncObject);
+
 struct CAsyncObject {
   void* file;
   void* buffer;
@@ -26,6 +28,5 @@ struct CAsyncObject {
   uint16_t padding;
   TSLink_CAsyncObject link;
 };
-STORM_TS_LIST(CAsyncObject);
 
 #endif

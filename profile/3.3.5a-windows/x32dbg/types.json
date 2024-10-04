@@ -878,7 +878,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_8_destructor",
+          "name": "v_fn_8_scalar_deleting_destructor",
           "offset": 32
         },
         {
@@ -5536,7 +5536,7 @@
     },
     {
       "name": "CAsyncObject",
-      "size": 40,
+      "size": 48,
       "members": [
         {
           "type": "void*",
@@ -5622,7 +5622,7 @@
     },
     {
       "name": "TSLinkedNode_CAsyncObject",
-      "size": 0,
+      "size": 8,
       "members": [
         {
           "type": "TSLink_CAsyncObject",
@@ -6162,7 +6162,7 @@
     },
     {
       "name": "TSList_CAsyncObject",
-      "size": 4,
+      "size": 12,
       "members": [
         {
           "type": "ptrdiff_t",
