@@ -37,4 +37,41 @@ typedef char bool;
 
 #endif
 
+// stddef
+#if defined(GHIDRA)
+
+#include <stddef.h>
+
+#else
+
+typedef uint32_t size_t;
+
+#endif
+
+// stdarg
+
+#if defined(GHIDRA)
+
+#include <stdarg.h>
+
+#else
+
+typedef char* va_list;
+
+#endif
+
+// other types
+
+typedef struct fixed16 fixed16;
+struct fixed16 {
+  int16_t n;
+};
+
+struct ubyte4 {
+  union {
+    uint8_t b[4];
+    uint32_t u;
+  };
+};
+
 #endif

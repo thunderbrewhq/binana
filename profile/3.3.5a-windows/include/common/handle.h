@@ -16,4 +16,6 @@ struct CHandleObject {
   int32_t m_refcount;
 };
 
+DECLARE_HANDLE(HOBJECT);
+
 #endif

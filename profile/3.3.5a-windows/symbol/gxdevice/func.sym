@@ -1,6 +1,8 @@
 CGxDevice__RsPush 00409670 f end=004096CC type="void __thiscall func(CGxDevice* this)"
 CGxDevice__Caps 00532AF0 f end=00532AF7 type="CGxCaps* __thiscall func(CGxDevice* this)" ; public: class CGxCaps const & __thiscall CGxDevice::Caps(void)const
 CGxDevice__DeviceCreate_WindowProc_CGxFormat 00682CB0 f end=00682CCB type="void __thiscall func(CGxDevice* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
+CGxDevice__DeviceCreate_CGxFormat 00682CD0 f end=00682CF0 type="void __thiscall func(CGxDevice* this, CGxFormat* format)"
+CGxDevice__DeviceDestroy 00682CF0 f end=00682CFB type="void __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceSetBaseMipLevel 00682D00 f end=00682D10 type="void __thiscall func(CGxDevice* this, uint32_t baseMipLevel)"
 CGxDevice__DeviceApi 00682D20 f end=00682D27 type="EGxApi __thiscall func(CGxDevice* this)"
 CGxDevice__IDevIsWindowed 00682D40 f end=00682D48 type="int32_t __thiscall func(CGxDevice* this)"
@@ -25,7 +27,8 @@ CGxDevice__CursorSetVisible 00683640 f end=00683650 type="void __thiscall func(C
 CGxDevice__CursorLock 00683650 f end=00683657 type="uint32_t* __thiscall func(CGxDevice* this)"
 CGxDevice__CursorSetDepth 00683660 f end=00683670 type="void __thiscall func(CGxDevice* this, float depth)"
 CGxDevice__DeviceSetFormat 006840F0 f end=0068416C type="int32_t __thiscall func(CGxDevice* this, CGxFormat* format)"
-CGxDevice__DeviceSetGamma 00684190 f end=006841AF type="int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)"
+CGxDevice__DeviceSetGamma_CGxGammaRamp 00684190 f end=006841AF type="int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)"
+CGxDevice__DeviceSetGamma_float 00684170 f end=00684189 type="void __thiscall func(CGxDevice* this, float gamma)"
 CGxDevice__DeviceSetDefWindow 00684360 f end=006843B0 type="void __thiscall func(CGxDevice* this, CRect* rect)"
 CGxDevice__NotifyOnDeviceRestored 006843B0 f end=006843D9 type="void __thiscall func(CGxDevice* this)"
 CGxDevice__NotifyOnTextureRecreation 006843E0 f end=00684409 type="void __thiscall func(CGxDevice* this)"

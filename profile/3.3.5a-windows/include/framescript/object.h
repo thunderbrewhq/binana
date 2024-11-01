@@ -19,4 +19,14 @@ struct FrameScript_Object__ScriptIx {
   int8_t* unk;
 };
 
+// struct FrameScript_Object::ScriptData
+struct FrameScript_Object__ScriptData {
+  char* wrapper;
+};
+
+// struct FrameScript_Object::ScriptFunction {
+struct FrameScript_Object__ScriptFunction {
+  int32_t luaRef;
+};
+
 #endif

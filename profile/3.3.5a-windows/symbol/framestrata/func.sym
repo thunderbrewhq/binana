@@ -1,0 +1,2 @@
+CFrameStrata__BuildBatches 00494EE0 f end=00494F2E type="int32_t __thiscall func(CFrameStrata* this, int32_t a2)"
+CFrameStrata__RenderBatch 00494F30 f end=00494F89 type="void __thiscall func(CFrameStrata* this)"

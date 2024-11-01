@@ -2,6 +2,12 @@
 #define GX_TEXTURE_H
 
 #include "tempest/rect.h"
+#include "common/handle.h"
+
+#include "storm/array.h"
+
+typedef HOBJECT HTEXTURE;
+STORM_TS_GROWABLE_ARRAY(HTEXTURE);
 
 typedef struct CGxTexFlags CGxTexFlags;
 typedef struct CGxTex CGxTex;
@@ -14,7 +20,7 @@ struct CGxTexFlags {
   // unsigned __int32 m_generateMipMaps : 1;
   // unsigned __int32 m_renderTarget : 1;
   // unsigned __int32 m_maxAnisotropy : 5;
-  uint32_t m_flags;
+  uint32_t f_flags;
 };
 
 struct CGxTex {

@@ -18,6 +18,7 @@ EventKillTimer 0047D620 f end=0047D683
 EventQueuePost 0047D310 f end=0047D3AF
 IEvtInputProcess 00480410 f end=004804A8
 IEvtInputGetMousePosition 004800A0 f end=004800EF
+IEvtInputInitialize 0047FBA0 f end=0047FBA5
 IEvtInputSetConfirmCloseCallback 0047FC20 f end=0047FC36
 IEvtInputSetMouseMode 0047FBB0 f end=0047FC17
 IEvtInputDestroy 0047FB80 f end=0047FB92

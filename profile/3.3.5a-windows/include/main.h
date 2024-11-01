@@ -8,8 +8,12 @@
 #include "external/d3d9/caps.h"
 #include "external/d3d9/device.h"
 
+#include "external/lua/lua.h"
+
 #include "async/object.h"
 #include "async/queue.h"
+
+#include "camera/camera.h"
 
 #include "common/array.h"
 #include "common/handle.h"
@@ -42,9 +46,21 @@
 #include "gx/state_bom.h"
 #include "gx/string.h"
 #include "gx/stringbatch.h"
+#include "gx/texture.h"
 #include "gx/types.h"
 #include "gx/batch.h"
 #include "gx/d3d9.h"
+
+#include "m2/cache.h"
+#include "m2/data.h"
+#include "m2/light.h"
+#include "m2/lighting.h"
+#include "m2/model.h"
+#include "m2/ribbon.h"
+#include "m2/scene.h"
+#include "m2/shadereffect.h"
+#include "m2/shared.h"
+#include "m2/types.h"
 
 #include "screen/layer.h"
 
@@ -69,6 +85,7 @@
 #include "texture/tga.h"
 
 #include "ui/backdropgenerator.h"
+#include "ui/framestrata.h"
 #include "ui/layoutframe.h"
 #include "ui/renderbatch.h"
 #include "ui/scriptobject.h"

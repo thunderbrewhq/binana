@@ -74,13 +74,6 @@ enum EGxVertexBufferFormat {
   GxVertexBufferFormats_Last = 14
 };
 
-struct ubyte4 {
-  union {
-    uint8_t b[4];
-    uint32_t u;
-  };
-};
-
 struct CGxVertexAttrib {
   EGxVertexAttrib attrib;
   uint32_t type;

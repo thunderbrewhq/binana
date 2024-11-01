@@ -78,6 +78,7 @@ struct CSimpleFrame {
   uint32_t m_destroyedLink[2];
   uint32_t m_strataLink[2];
 };
+STORM_TS_LIST(CSimpleFrame);
 
 // struct SIMPLEFRAMENODE : TSLinkedNode<SIMPLEFRAMENODE> 
 struct SIMPLEFRAMENODE {

@@ -82,7 +82,7 @@ struct CGxDevice__vtable {
   void* v_fn_6_NotifyOnTextureRecreation;
   // void NotifyOnDisplayChange();
   void* v_fn_7_NotifyOnDisplayChange; 
-  // public: virtual void * __thiscall CGxDevice::`scalar deleting destructor'(unsigned int)
+  // void `scalar deleting destructor'(unsigned int)
   void* v_fn_8_scalar_deleting_destructor;
   // int32_t DeviceCreate(const CGxFormat&);
   void* v_fn_9_DeviceCreate;
@@ -98,16 +98,24 @@ struct CGxDevice__vtable {
   void* v_fn_14_DeviceSetBaseMipLevel;
   // void DeviceSetGamma(CGxGammaRamp const&);
   void* v_fn_15_DeviceSetGamma;
-  void* v_fn_16;
+  // void DeviceSetGamma(float);
+  void* v_fn_16_DeviceSetGamma;
   // no base implementation
-  void* v_fn_17;
-  void* v_fn_18;
-  void* v_fn_19;
-  void* v_fn_20;
-  void* v_fn_21;
+  // void* DeviceWindow();
+  void* v_fn_17_DeviceWindow;
+  // void DeviceTakeScreenShot();
+  void* v_fn_18_DeviceTakeScreenShot;
+  // void DeviceReadScreenShot(uint32_t&, uint32_t&, const CImVector*&) */
+  void* v_fn_19_DeviceReadScreenShot;
+  // void DeviceReadPixels(CiRect&, TSGrowableArray<CImVector>&);
+  void* v_fn_20_DeviceReadPixels;
+  // void DeviceReadDepths(CiRect&, TSGrowableArray<float>&);
+  void* v_fn_21_DeviceReadDepths;
   // void DeviceWM(EGxWM, int32_t, int32_t);
   void* v_fn_22_DeviceWM;
+  // void DeviceSetRenderTarget(EGxBuffer, CGxTex*, uint32_t);
   void* v_fn_23;
+  // void DeviceCopyTex(CGxTex*, uint32_t, CGxTex*, uint32_t);
   void* v_fn_24;
   void* v_fn_25;
   void* v_fn_26;
@@ -180,7 +188,7 @@ struct CGxDevice__vtable {
   void* v_fn_69;
   // void ShaderConstantsSet(EGxShTarget, uint32_t, const float*, uint32_t);
   void* v_fn_70_ShaderConstantsSet;
-  void* v_fn_71;
+  void* v_fn_71_IShaderDestroy;
   // void IShaderCreate(CGxShader*);
   void* v_fn_72_IShaderCreate;
   // void CursorSetVisible(int32_t);
@@ -189,15 +197,22 @@ struct CGxDevice__vtable {
   void* v_fn_74_CursorLock;
   // void CursorUnlock(uint32_t, uint32_t);
   void* v_fn_75_CursorUnlock;
-  void* v_fn_76;
-  void* v_fn_77;
-  void* v_fn_78;
-  void* v_fn_79;
+  // void StereoSetConvergence(float);
+  void* v_fn_76_StereoSetConvergence;
+  // double StereoGetConvergence();
+  void* v_fn_77_StereoGetConvergence;
+  // void StereoSetSeparation(float);
+  void* v_fn_78_StereoSetSeparation;
+  // double StereoGetSeparation();
+  void* v_fn_79_StereoGetSeparation;
   // bool StereoEnabled();
   void* v_fn_80_StereoEnabled;
-  void* v_fn_81;
-  void* v_fn_82;
-  void* v_fn_83;
+  // void DebugGroupBegin(const char*, char*);
+  void* v_fn_81_DebugGroupBegin;
+  // void DebugGroupEnd();
+  void* v_fn_82_DebugGroupEnd;
+  // void DebugEvent(const char*, char*);
+  void* v_fn_83_DebugEvent;
 };
 
 // this class is at least 14688 bytes in size
@@ -220,11 +235,9 @@ struct CGxDevice {
   uint32_t m_primMask;
   CRect m_defWindowRect; // 0x164 (size: 0x10)
   CRect m_curWindowRect; // 0x174 (size: 0x10)
-  // uint32_t m_unk184[12] {
-  TSGrowableArray_DEVICERESTOREDCALLBACK m_deviceRestoredCallbacks;
+  TSGrowableArray_DEVICERESTOREDCALLBACK m_deviceRestoredCallbacks; // 0x184
   TSGrowableArray_TEXTURERECREATIONCALLBACK m_textureRecreationCallbacks;
   TSGrowableArray_DISPLAYCHANGECALLBACK m_displayChangeCallbacks;
-  // };
   EGxApi m_api; // 0x1b4
   uint32_t m_cpuFeatures;
   CGxFormat m_format;
