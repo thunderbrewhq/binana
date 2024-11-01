@@ -128,7 +128,7 @@ To import the main header file into your IDA database,
 To use the IDC script,
 
   1. Go to `File` 🡒 `Script file...`
-  2. Navigate to `profile/<game version>/ida/import_symbols.idc`
+  2. Navigate to `profile/<game version>/ida/import_all.idc`
   3. Wait for everything to be reanalyzed
 
 # x64dbg 
