@@ -150,7 +150,7 @@ func (graph *type_dependency_graph) Load(types *Types) (err error) {
 
 			dependency_type := graph.get(dependency_name)
 			if dependency_type == nil {
-				err = fmt.Errorf("unknown dependency name %s", dependency_name)
+				err = fmt.Errorf("unknown dependency name '%s' from type '%s'", dependency_name, t.t.GetName())
 				return
 			}
 
