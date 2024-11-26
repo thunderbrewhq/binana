@@ -22,12 +22,7 @@ static bna_save_function_symbols(fd) {
         "%s %s f end=%s ; %08X",
         func_name, bna_format_address(func_start), bna_format_address(func_end), get_func_attr(func_address, FUNCATTR_FLAGS));
 
-      if (writestr(fd, func_line) != 0) {
-        error("bna_save_function_symbols: failed to write line to file");
-        return 0;
-      }
-
-      if (writestr(fd, "\n") != 0) {
+      if (fprintf(fd, "%s\n", func_line) != 0) {
         error("bna_save_function_symbols: failed to write line break to file");
         return 0;
       }
@@ -49,10 +44,10 @@ static main() {
   output_filename = ask_file(1, "all.sym", "Enter a path to export your symbols");
   if (output_filename == 0) {
     error("No output file specified. Doing NOTHING.");
-    return 0;
+    return 1;
   }
 
-  output_file = fopen(output_filename, "wb");
+  output_file = fopen(output_filename, "w");
 
   if (!output_file) {
     error("Failed to open output file '%s' for writing", output_filename);
@@ -68,5 +63,8 @@ static main() {
   }
 
   fclose(output_file);
+
+  warning("Successfully exported to %s", output_filename);
+
   return 1;
 }
