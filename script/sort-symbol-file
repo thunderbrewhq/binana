@@ -8,4 +8,6 @@ if [ $# -eq 0 ]
     exit 1
 fi
 
-awk 1 $1 | sort -k2 -t' '
+mv $1 "$1.bak"
+awk 1 "$1.bak" | sort -k2 -t' ' > $1
+rm "$1.bak"
