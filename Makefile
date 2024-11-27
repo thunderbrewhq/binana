@@ -1,15 +1,12 @@
 all: generate
 
 compile-symbols:
-	./script/compile-symbols profile/3.3.5a-windows
+	./script/compile-symbols profile/3.3.5a-windows-386
 
-ida-gen:
-	./bin/binana ida-gen --game profile/3.3.5a-windows
+profile-gen:
+	./bin/binana generate --profile profile/3.3.5a-windows-386
 
-x64dbg-gen:
-	./bin/binana x64dbg-gen --game profile/3.3.5a-windows --base-address=00400000 --module-name=wow.exe
-
-generate: compile-symbols x64dbg-gen ida-gen
+generate: compile-symbols profile-gen
 
 dependencies:
 	mkdir -p bin

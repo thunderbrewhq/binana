@@ -1,0 +1,7 @@
+GxPrimIndexPtr 00681AB0 f end=00681AFB
+GxPrimVertexPtr 00681B00 f end= type="void __stdcall func(CGxBuf* buf, EGxVertexBufferFormat format)"
+GxPrimVertexPtr 00682400 f end=00682781 ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
+GxPrimLockVertexPtrs 006828C0 f end=006828FE
+GxPrimLockIndexPtr 006823A0 f end=006823F8 type="void __stdcall func(EGxPrim primType, uint32_t indexCount, uint16_t* indices)"
+GxDrawLockedElements 00682340 f end=0068239E type="void __stdcall func(EGxPrim primType, uint32_t, uint16_t*)"
+GxDrawLockedElements 00681A60 f end=00681AAB type="void __stdcall func()"

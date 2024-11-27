@@ -1,0 +1,68 @@
+#include <idc.idc>
+
+static import_functions() {
+	// Import function addresses and comments
+	msg("Importing function addresses and comments");
+	set_func_cmt(0x00401030, "void operator delete(void*)", 0);
+	set_func_cmt(0x00401070, "protected: int __thiscall CDataStore::FetchWrite(unsigned int,unsigned int,char const *,int)", 0);
+	set_func_cmt(0x004010D0, "CDataStore::IsRead() const", 0);
+	set_func_cmt(0x004010E0, "CDataStore::Reset()", 0);
+	set_func_cmt(0x00401130, "CDataStore::Finalize()", 0);
+	set_func_cmt(0x004038A0, "CDataStore::~CDataStore()", 0);
+	set_func_cmt(0x0047ADE0, "CDataStore::GetBufferParams(void const**, unsigned int*, unsigned int*)", 0);
+	set_func_cmt(0x0047AE10, "CDataStore::DetachBuffer(void**, unsigned int*, unsigned int*)", 0);
+	set_func_cmt(0x0047AE50, "virtual void __thiscall CDataStore::InternalDestroy(unsigned char * &,unsigned int &,unsigned int &)", 0);
+	set_func_cmt(0x0047AEA0, "CDataStore::InternalFetchWrite(unsigned int, unsigned int, unsigned char*&, unsigned int&, unsigned int&, char const*, int)", 0);
+	set_func_cmt(0x0047AF40, "CDataStore::Set(unsigned int, unsigned short)", 0);
+	set_func_cmt(0x0047AFE0, "CDataStore::Put(unsigned char)", 0);
+	set_func_cmt(0x0047B040, "CDataStore::Put(unsigned short)", 0);
+	set_func_cmt(0x0047B0A0, "CDataStore::Put(unsigned int)", 0);
+	set_func_cmt(0x0047B100, "CDataStore::Put(unsigned long long)", 0);
+	set_func_cmt(0x0047B1C0, "CDataStore::PutArray(unsigned char const*, unsigned int)", 0);
+	set_func_cmt(0x0047B280, "CDataStore::PutData(void const*, unsigned long)", 0);
+	set_func_cmt(0x0047B290, "CDataStore::FetchRead(unsigned int, unsigned int)", 0);
+	set_func_cmt(0x0047B300, "CDataStore::PutString(char const*)", 0);
+	set_func_cmt(0x0047B340, "CDataStore::Get(unsigned char&)", 0);
+	set_func_cmt(0x0047B380, "CDataStore::Get(unsigned short&)", 0);
+	set_func_cmt(0x0047B3C0, "CDataStore::Get(unsigned int&)", 0);
+	set_func_cmt(0x0047B400, "CDataStore::Get(unsigned long long&)", 0);
+	set_func_cmt(0x0047B440, "CDataStore::Get(float&)", 0);
+	set_func_cmt(0x0047B480, "CDataStore::GetString(char*, unsigned int)", 0);
+	set_func_cmt(0x0047B560, "CDataStore::GetArray(unsigned char*, unsigned int)", 0);
+	set_func_cmt(0x0047B6B0, "CDataStore::GetDataInSitu(void*&, unsigned int)", 0);
+	set_func_cmt(0x0047F230, "IEvtSchedulerProcess as an independent function appears to be optimized out", 0);
+	set_func_cmt(0x004DBFD0, "thanks namreeb :^)", 0);
+	set_func_cmt(0x00532AF0, "public: class CGxCaps const & __thiscall CGxDevice::Caps(void)const", 0);
+	set_func_cmt(0x005EEB70, "SErrDisplayAppFatal resolves to this in release mode?", 0);
+	set_func_cmt(0x00681BE0, "UC", 0);
+	set_func_cmt(0x00682400, "this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline", 0);
+	set_func_cmt(0x00684C40, "CGxDevice::Log(CGxCaps const&) const", 0);
+	set_func_cmt(0x006859E0, "CGxDevice::IRsForceUpdate(EGxRenderState)", 0);
+	set_func_cmt(0x00685A70, "CGxDevice::IRsForceUpdate()", 0);
+	set_func_cmt(0x006AA350, "UC", 0);
+	set_func_cmt(0x006AA420, "private utility method", 0);
+	set_func_cmt(0x006AB390, "public method", 0);
+	set_func_cmt(0x00763730, "UC", 0);
+	set_func_cmt(0x00763B40, "UC", 0);
+	set_func_cmt(0x00763B90, "UC", 0);
+	set_func_cmt(0x0077ACF0, "public: unsigned int __thiscall BigBuffer::operator[](unsigned int)const", 0);
+	set_func_cmt(0x0077AE80, "public: __thiscall BigStack::~BigStack(void)", 0);
+	set_func_cmt(0x0077AEC0, "public: unsigned int & __thiscall BigBuffer::operator[](unsigned int)const", 0);
+	set_func_cmt(0x0077AF80, "public: void __thiscall BigBuffer::Trim(void)const", 0);
+	set_func_cmt(0x0077B020, "void Add(class BigBuffer &,class BigBuffer const &,class BigBuffer const &)", 0);
+	set_func_cmt(0x0077B160, "void Div(class BigBuffer &,unsigned int *,class BigBuffer const &,unsigned __int64)", 0);
+	set_func_cmt(0x0077B2B0, "void Mul(class BigBuffer &,class BigBuffer const &,unsigned __int64)", 0);
+	set_func_cmt(0x0077B3E0, "void Sub(class BigBuffer &,class BigBuffer const &,class BigBuffer const &)", 0);
+	set_func_cmt(0x0077B590, "void Shl(class BigBuffer &,class BigBuffer const &,unsigned int)", 0);
+	set_func_cmt(0x0077B700, "void Shl(class BigBuffer &,class BigBuffer const &,unsigned int)", 0);
+	set_func_cmt(0x0077B7F0, "void FromBinary(class BigBuffer &,void const *,unsigned int)", 0);
+	set_func_cmt(0x0077B8B0, "void FromUnsigned(class BigBuffer &,unsigned int)", 0);
+	set_func_cmt(0x0077B910, "_ToBinaryAppend(TSGrowableArray<unsigned char>&, BigBuffer const&)", 0);
+	set_func_cmt(0x0077BAC0, "void __fastcall Div(class BigBuffer &,class BigBuffer &,class BigBuffer const &,class BigBuffer const &,class BigStack &)", 0);
+	set_func_cmt(0x0077BFF0, "void Mul(class BigBuffer &,class BigBuffer const &,class BigBuffer const &,class BigStack &)", 0);
+	set_func_cmt(0x0077C330, "void __fastcall Square(class BigBuffer &,class BigBuffer const &,class BigStack &)", 0);
+	set_func_cmt(0x00869720, "actually called by IEvtInputInitialize, but this is optimized out", 0);
+	set_func_cmt(0x008E5250, "Script_ToggleTris", 0);
+	set_func_cmt(0x0095D110, "CDataAllocator::GetData(int, char const*, int)", 0);
+	set_func_cmt(0x0095D1B0, "CDataAllocator::PutData(void*, char const*, int)", 0);
+}
