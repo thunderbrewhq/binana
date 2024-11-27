@@ -123,6 +123,7 @@ static import_symbols() {
 	set_name(0x0047FC20, "IEvtInputSetConfirmCloseCallback");
 	set_name(0x0047FC90, "ConvertPosition");
 	set_name(0x004800A0, "IEvtInputGetMousePosition");
+	set_name(0x00480130, "ProcessInput");
 	set_name(0x00480410, "IEvtInputProcess");
 	set_name(0x004804B0, "IEvtQueueDestroy");
 	set_name(0x004804C0, "IEvtQueueCheckSyncMouseState");
@@ -2105,7 +2106,7 @@ static import_symbols() {
 	set_name(0x00681F60, "GxXformSetViewport");
 	set_name(0x00682340, "GxDrawLockedElements@2");
 	set_name(0x006823A0, "GxPrimLockIndexPtr");
-	set_name(0x00682400, "GxPrimVertexPtr_FFP");
+	set_name(0x00682400, "GxPrimVertexPtr@2");
 	set_name(0x006828C0, "GxPrimLockVertexPtrs");
 	set_name(0x00682A00, "GxScenePresent");
 	set_name(0x00682CB0, "CGxDevice__DeviceCreate_WindowProc_CGxFormat");
@@ -2113,6 +2114,7 @@ static import_symbols() {
 	set_name(0x00682CF0, "CGxDevice__DeviceDestroy");
 	set_name(0x00682D00, "CGxDevice__DeviceSetBaseMipLevel");
 	set_name(0x00682D20, "CGxDevice__DeviceApi");
+	set_name(0x00682D30, "CGxDevice__DeviceTakeScreenShot");
 	set_name(0x00682D40, "CGxDevice__IDevIsWindowed");
 	set_name(0x00682D70, "CGxDevice__DeviceCurWindow");
 	set_name(0x00682DC0, "CGxDevice__CapsIsWindowVisible");
@@ -2138,10 +2140,11 @@ static import_symbols() {
 	set_name(0x006840F0, "CGxDevice__DeviceSetFormat");
 	set_name(0x00684170, "CGxDevice__DeviceSetGamma_float");
 	set_name(0x00684190, "CGxDevice__DeviceSetGamma_CGxGammaRamp");
+	set_name(0x00684260, "CGxDevice__DeviceReadScreenShot");
 	set_name(0x00684360, "CGxDevice__DeviceSetDefWindow");
 	set_name(0x006843B0, "CGxDevice__NotifyOnDeviceRestored");
 	set_name(0x006843E0, "CGxDevice__NotifyOnTextureRecreation");
-	set_name(0x00684410, "CGxDevice__NotifyOnDisplayChange");
+	set_name(0x00684410, "CGxDevice__NotifyOnStereoChanged");
 	set_name(0x00684440, "CGxDevice__ClipPlaneSet");
 	set_name(0x006847D0, "CGxDevice__LightSet");
 	set_name(0x00684850, "CGxDevice__BufStream");
@@ -2157,8 +2160,8 @@ static import_symbols() {
 	set_name(0x006853D0, "CGxDevice__RemoveDeviceRestoredCallback");
 	set_name(0x00685460, "CGxDevice__AddTextureRecreationCallback");
 	set_name(0x00685480, "CGxDevice__RemoveTextureRecreationCallback");
-	set_name(0x00685510, "CGxDevice__AddDisplayChangeCallback");
-	set_name(0x00685530, "CGxDevice__RemoveDisplayChangeCallback");
+	set_name(0x00685510, "CGxDevice__AddStereoChangedCallback");
+	set_name(0x00685530, "CGxDevice__RemoveStereoChangedCallback");
 	set_name(0x00685970, "CGxDevice__IRsDirty");
 	set_name(0x006859E0, "CGxDevice__IRsForceUpdate_EGxRenderState");
 	set_name(0x00685A70, "CGxDevice__IRsForceUpdate");

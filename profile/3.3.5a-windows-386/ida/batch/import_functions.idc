@@ -39,6 +39,7 @@ static import_functions() {
 	set_func_cmt(0x00684C40, "CGxDevice::Log(CGxCaps const&) const", 0);
 	set_func_cmt(0x006859E0, "CGxDevice::IRsForceUpdate(EGxRenderState)", 0);
 	set_func_cmt(0x00685A70, "CGxDevice::IRsForceUpdate()", 0);
+	set_func_cmt(0x0069FE10, "UC (invented name)", 0);
 	set_func_cmt(0x006AA350, "UC", 0);
 	set_func_cmt(0x006AA420, "private utility method", 0);
 	set_func_cmt(0x006AB390, "public method", 0);

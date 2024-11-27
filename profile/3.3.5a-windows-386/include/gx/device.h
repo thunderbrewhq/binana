@@ -80,8 +80,8 @@ struct CGxDevice__vtable {
   void* v_fn_5_NotifyOnDeviceRestored;
   // void NotifyOnTextureRecreation();
   void* v_fn_6_NotifyOnTextureRecreation;
-  // void NotifyOnDisplayChange();
-  void* v_fn_7_NotifyOnDisplayChange; 
+  // void NotifyOnStereoChanged();
+  void* v_fn_7_NotifyOnStereoChanged; 
   // void `scalar deleting destructor'(uint32_t __flags)
   void* v_fn_8_scalar_deleting_destructor;
   // int32_t DeviceCreate(const CGxFormat& format);
@@ -337,7 +337,11 @@ struct CGxDevice {
   uint32_t unk28E8;
   TSFixedArray_CGxAppRenderState m_appRenderStates;
   TSFixedArray_CGxStateBom m_hwRenderStates;
-  uint32_t unk2904[19]; // 0x2904 (size 0x4C) 
+  uint32_t unk2904[12]; // 0x2904 (size 0x30) 
+  int32_t m_scrShotClick; // 0x2934
+  uint32_t m_scrShotWidth; // 0x2938
+  uint32_t m_scrShotHeight; // 0x293C
+  TSGrowableArray_CImVector m_scrShotPixels; // 0x2940
   int32_t m_cursorVisible;
   int32_t m_hardwareCursor; // 0x2954 (size 0x4)
   uint32_t m_cursorHotspotX;

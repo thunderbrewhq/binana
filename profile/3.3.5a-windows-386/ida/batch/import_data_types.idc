@@ -23,14 +23,19 @@ static import_data_types() {
 	apply_type(0x006160B0, "int32_t __usercall func@<eax>(uint32_t** image@<eax>, MipBits* mipImages@<ecx>, uint32_t width@<edx>, uint32_t height)");
 	apply_type(0x00616800, "void __stdcall func(CURSORMODE mode)");
 	apply_type(0x00681A60, "void __stdcall func()");
+	apply_type(0x00681AB0, "void __stdcall func(uint32_t indexCount, uint16_t* indices)");
+	apply_type(0x00681B00, "void __stdcall func(CGxBuf* buf, EGxVertexBufferFormat format)");
 	apply_type(0x00681F60, "void __stdcall func(float minX, float maxX, float minY, float maxY, float minZ, float maxZ)");
 	apply_type(0x00682340, "void __stdcall func(EGxPrim primType, uint32_t, uint16_t*)");
 	apply_type(0x006823A0, "void __stdcall func(EGxPrim primType, uint32_t indexCount, uint16_t* indices)");
+	apply_type(0x00682400, "void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)");
+	apply_type(0x006828C0, "void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, uint8_t* bone, uint32_t boneStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)");
 	apply_type(0x00682CB0, "void __thiscall func(CGxDevice* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)");
 	apply_type(0x00682CD0, "void __thiscall func(CGxDevice* this, CGxFormat* format)");
 	apply_type(0x00682CF0, "void __thiscall func(CGxDevice* this)");
 	apply_type(0x00682D00, "void __thiscall func(CGxDevice* this, uint32_t baseMipLevel)");
 	apply_type(0x00682D20, "EGxApi __thiscall func(CGxDevice* this)");
+	apply_type(0x00682D30, "void __thiscall func(CGxDevice* this)");
 	apply_type(0x00682D40, "int32_t __thiscall func(CGxDevice* this)");
 	apply_type(0x00682D70, "CRect* __thiscall func(CGxDevice* this)");
 	apply_type(0x00682DC0, "int32_t __thiscall func(CGxDevice* this, int32_t a2)");
@@ -56,6 +61,7 @@ static import_data_types() {
 	apply_type(0x006840F0, "int32_t __thiscall func(CGxDevice* this, CGxFormat* format)");
 	apply_type(0x00684170, "void __thiscall func(CGxDevice* this, float gamma)");
 	apply_type(0x00684190, "int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)");
+	apply_type(0x00684260, "void __thiscall func(CGxDevice* this, uint32_t* w, uint32_t* h, CImVector** pixels)");
 	apply_type(0x00684360, "void __thiscall func(CGxDevice* this, CRect* rect)");
 	apply_type(0x006843B0, "void __thiscall func(CGxDevice* this)");
 	apply_type(0x006843E0, "void __thiscall func(CGxDevice* this)");
@@ -75,8 +81,8 @@ static import_data_types() {
 	apply_type(0x006853D0, "int32_t __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)");
 	apply_type(0x00685460, "void __thiscall func(CGxDevice* this, TEXTURERECREATIONCALLBACK fn)");
 	apply_type(0x00685480, "int32_t __thiscall func(CGxDevice* this, TEXTURERECREATIONCALLBACK fn)");
-	apply_type(0x00685510, "void __thiscall func(CGxDevice* this, DISPLAYCHANGECALLBACK fn)");
-	apply_type(0x00685530, "int32_t __thiscall func(CGxDevice* this, DISPLAYCHANGECALLBACK fn)");
+	apply_type(0x00685510, "void __thiscall func(CGxDevice* this, STEREOCHANGEDCALLBACK fn)");
+	apply_type(0x00685530, "int32_t __thiscall func(CGxDevice* this, STEREOCHANGEDCALLBACK fn)");
 	apply_type(0x00685970, "void __thiscall func(CGxDevice* this, EGxRenderState which)");
 	apply_type(0x006859E0, "void __thiscall func(CGxDevice* this, EGxRenderState which)");
 	apply_type(0x00685A70, "void __thiscall func(CGxDevice* this)");

@@ -119,6 +119,7 @@ IEvtInputSetMouseMode 0047FBB0 f end=0047FC17
 IEvtInputSetConfirmCloseCallback 0047FC20 f end=0047FC36
 ConvertPosition 0047FC90 f end=0047FDD4
 IEvtInputGetMousePosition 004800A0 f end=004800EF
+ProcessInput 00480130 f end=0048040C
 IEvtInputProcess 00480410 f end=004804A8
 IEvtQueueDestroy 004804B0 f end=004804BA
 IEvtQueueCheckSyncMouseState 004804C0 f end=004804E6
@@ -2094,21 +2095,22 @@ GxSceneClear 006813B0 f end=006813CD
 GxTexUpdate 006813D0 f end=006813EC
 GxLog 006817E0 f end=006817F5
 GxDrawLockedElements 00681A60 f end=00681AAB type="void __stdcall func()"
-GxPrimIndexPtr 00681AB0 f end=00681AFB
-GxPrimVertexPtr 00681B00 f
+GxPrimIndexPtr 00681AB0 f end=00681AFB type="void __stdcall func(uint32_t indexCount, uint16_t* indices)"
+GxPrimVertexPtr 00681B00 f end=00681B4B type="void __stdcall func(CGxBuf* buf, EGxVertexBufferFormat format)"
 CGxTexFlags__CGxTexFlags 00681BE0 f end=00681CAB ; UC
 GxTexCreate 00681CB0 f end=00681D87
 GxXformSetViewport 00681F60 f end=00682124 type="void __stdcall func(float minX, float maxX, float minY, float maxY, float minZ, float maxZ)"
 GxDrawLockedElements 00682340 f end=0068239E type="void __stdcall func(EGxPrim primType, uint32_t, uint16_t*)"
 GxPrimLockIndexPtr 006823A0 f end=006823F8 type="void __stdcall func(EGxPrim primType, uint32_t indexCount, uint16_t* indices)"
-GxPrimVertexPtr_FFP 00682400 f end=00682781 ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
-GxPrimLockVertexPtrs 006828C0 f end=006828FE
+GxPrimVertexPtr 00682400 f end=00682781 type="void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)" ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
+GxPrimLockVertexPtrs 006828C0 f end=006828FE type="void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, uint8_t* bone, uint32_t boneStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)"
 GxScenePresent 00682A00 f end=00682A33
 CGxDevice__DeviceCreate_WindowProc_CGxFormat 00682CB0 f end=00682CCB type="void __thiscall func(CGxDevice* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
 CGxDevice__DeviceCreate_CGxFormat 00682CD0 f end=00682CF0 type="void __thiscall func(CGxDevice* this, CGxFormat* format)"
 CGxDevice__DeviceDestroy 00682CF0 f end=00682CFB type="void __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceSetBaseMipLevel 00682D00 f end=00682D10 type="void __thiscall func(CGxDevice* this, uint32_t baseMipLevel)"
 CGxDevice__DeviceApi 00682D20 f end=00682D27 type="EGxApi __thiscall func(CGxDevice* this)"
+CGxDevice__DeviceTakeScreenShot 00682D30 f end=00682D3B type="void __thiscall func(CGxDevice* this)"
 CGxDevice__IDevIsWindowed 00682D40 f end=00682D48 type="int32_t __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceCurWindow 00682D70 f end=00682D76 type="CRect* __thiscall func(CGxDevice* this)"
 CGxDevice__CapsIsWindowVisible 00682DC0 f end=00682DE7 type="int32_t __thiscall func(CGxDevice* this, int32_t a2)"
@@ -2134,10 +2136,11 @@ CGxDevice__CursorSetDepth 00683660 f end=00683670 type="void __thiscall func(CGx
 CGxDevice__DeviceSetFormat 006840F0 f end=0068416C type="int32_t __thiscall func(CGxDevice* this, CGxFormat* format)"
 CGxDevice__DeviceSetGamma_float 00684170 f end=00684189 type="void __thiscall func(CGxDevice* this, float gamma)"
 CGxDevice__DeviceSetGamma_CGxGammaRamp 00684190 f end=006841AF type="int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)"
+CGxDevice__DeviceReadScreenShot 00684260 f end=0068429E type="void __thiscall func(CGxDevice* this, uint32_t* w, uint32_t* h, CImVector** pixels)"
 CGxDevice__DeviceSetDefWindow 00684360 f end=006843B0 type="void __thiscall func(CGxDevice* this, CRect* rect)"
 CGxDevice__NotifyOnDeviceRestored 006843B0 f end=006843D9 type="void __thiscall func(CGxDevice* this)"
 CGxDevice__NotifyOnTextureRecreation 006843E0 f end=00684409 type="void __thiscall func(CGxDevice* this)"
-CGxDevice__NotifyOnDisplayChange 00684410 f end=00684439 type="void __thiscall func(CGxDevice* this)"
+CGxDevice__NotifyOnStereoChanged 00684410 f end=00684439 type="void __thiscall func(CGxDevice* this)"
 CGxDevice__ClipPlaneSet 00684440 f end=006844B9 type="void __thiscall func(CGxDevice* this, uint32_t a2, C4Plane* plane)"
 CGxDevice__LightSet 006847D0 f end=00684843 type="void __thiscall func(CGxDevice* this, uint32_t a2, CGxLight* light, C3Vector* pos)"
 CGxDevice__BufStream 00684850 f end=0068489F type="void __thiscall func(CGxDevice* this, EGxPoolTarget target, uint32_t itemSize, uint32_t itemCount)"
@@ -2153,8 +2156,8 @@ CGxDevice__AddDeviceRestoredCallback 006853B0 f end=006853C6 type="void __thisca
 CGxDevice__RemoveDeviceRestoredCallback 006853D0 f end=0068545C type="int32_t __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)"
 CGxDevice__AddTextureRecreationCallback 00685460 f end=00685476 type="void __thiscall func(CGxDevice* this, TEXTURERECREATIONCALLBACK fn)"
 CGxDevice__RemoveTextureRecreationCallback 00685480 f end=0068550C type="int32_t __thiscall func(CGxDevice* this, TEXTURERECREATIONCALLBACK fn)"
-CGxDevice__AddDisplayChangeCallback 00685510 f end=00685526 type="void __thiscall func(CGxDevice* this, DISPLAYCHANGECALLBACK fn)"
-CGxDevice__RemoveDisplayChangeCallback 00685530 f end=006855BC type="int32_t __thiscall func(CGxDevice* this, DISPLAYCHANGECALLBACK fn)"
+CGxDevice__AddStereoChangedCallback 00685510 f end=00685526 type="void __thiscall func(CGxDevice* this, STEREOCHANGEDCALLBACK fn)"
+CGxDevice__RemoveStereoChangedCallback 00685530 f end=006855BC type="int32_t __thiscall func(CGxDevice* this, STEREOCHANGEDCALLBACK fn)"
 CGxDevice__IRsDirty 00685970 f end=006859DB type="void __thiscall func(CGxDevice* this, EGxRenderState which)"
 CGxDevice__IRsForceUpdate_EGxRenderState 006859E0 f end=00685A65 type="void __thiscall func(CGxDevice* this, EGxRenderState which)" ; CGxDevice::IRsForceUpdate(EGxRenderState)
 CGxDevice__IRsForceUpdate 00685A70 f end=00685B4E type="void __thiscall func(CGxDevice* this)" ; CGxDevice::IRsForceUpdate()
@@ -2199,7 +2202,7 @@ CGxDeviceD3d__ICreateD3d 00690680 f end=00690742
 CGxDeviceD3d__DeviceCreate_WindowProc_CGxFormat 00690750 f end=00690821
 CGxDeviceD3d__ICreateD3dVB 0069FB00 f end=0069FB68
 CGxDeviceD3d__CreatePoolAPI 0069FB70 f end=0069FBB8
-CGxDeviceD3d__ICursorClip 0069FE10 f end=0069FE57
+CGxDeviceD3d__ICursorClip 0069FE10 f end=0069FE57 ; UC (invented name)
 CGxDeviceD3d__ICursorDestroy 006A00C0 f end=006A0102
 CGxDeviceD3d__WindowProcD3d 006A0360 f end=006A0834
 CGxDeviceD3d9Ex__CGxDeviceD3d9Ex 006A1A90 f end=006A1C24
