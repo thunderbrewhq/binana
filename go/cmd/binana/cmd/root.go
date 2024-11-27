@@ -35,13 +35,10 @@ func init() {
 	// when this action is called directly.
 	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 
-	ida_gen.Flags().StringP("game", "g", "3.3.5a", "the game profile")
-	rootCmd.AddCommand(ida_gen)
+	generate.Flags().StringP("profile", "p", "3.3.5a", "the game profile")
+	generate.Flags().BoolP("compress", "c", true, "enable/disable compression of the x64dbg database file")
 
-	x64dbg_gen.Flags().StringP("game", "g", "3.3.5a", "the game profile")
-	x64dbg_gen.Flags().StringP("module-name", "m", "wow.exe", "the name of the module")
-	x64dbg_gen.Flags().StringP("base-address", "b", "00400000", "the base address of the module")
+	rootCmd.AddCommand(generate)
 
-	rootCmd.AddCommand(x64dbg_gen)
 	rootCmd.AddCommand(x64dbg_typesort)
 }

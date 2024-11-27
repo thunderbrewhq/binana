@@ -85,8 +85,19 @@ func (profile *Profile) generate_symbols_idc() (err error) {
 	b.P("static import_symbols() {")
 	b.T(1)
 	b.P("// Set/create names")
+
+	name_instances := make(map[string]int)
+
 	for _, symbol := range profile.SymbolTable.Entries {
-		quoted_name := strconv.Quote(symbol.Name)
+		name := symbol.Name
+		instances := name_instances[name]
+		name_instances[name] = instances + 1
+
+		if instances != 0 {
+			name = fmt.Sprintf("%s@%d", name, instances+1)
+		}
+
+		quoted_name := strconv.Quote(name)
 		address := fmt.Sprintf("0x%08X", symbol.StartAddress)
 		b.P("set_name(%s, %s);", address, quoted_name)
 	}
@@ -133,11 +144,11 @@ func (profile *Profile) generate_symbols_idc() (err error) {
 	for _, function_symbol := range profile.SymbolTable.Entries {
 		if function_symbol.Kind == symfile.Function {
 			address := fmt.Sprintf("0x%08X", function_symbol.StartAddress)
-			b.P("set_func_start(%s, %s);", address, address)
-			if function_symbol.EndAddress != 0 {
-				end_address := fmt.Sprintf("0x%08X", function_symbol.EndAddress)
-				b.P("set_func_end(%s, %s);", address, end_address)
-			}
+			// b.P("set_func_start(%s, %s);", address, address)
+			// if function_symbol.EndAddress != 0 {
+			// 	end_address := fmt.Sprintf("0x%08X", function_symbol.EndAddress)
+			// 	b.P("set_func_end(%s, %s);", address, end_address)
+			// }
 			if function_symbol.Comment != "" {
 				b.P("set_func_cmt(%s, %s, 0);", address, strconv.Quote(function_symbol.Comment))
 			}

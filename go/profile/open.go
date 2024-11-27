@@ -10,6 +10,7 @@ import (
 )
 
 type Profile struct {
+	Info        Info
 	Directory   string
 	SymbolTable *symfile.InMemoryTable
 }
@@ -29,6 +30,11 @@ func Open(profile_directory string) (profile *Profile, err error) {
 	fmt.Println("Opening profile", profile_directory)
 
 	profile = new(Profile)
+
+	if err = read_info(filepath.Join(profile_directory, "info.json"), &profile.Info); err != nil {
+		return
+	}
+
 	profile.Directory = profile_directory
 
 	path_to_symbols_file := filepath.Join(profile_directory, "symbol", "main.sym")

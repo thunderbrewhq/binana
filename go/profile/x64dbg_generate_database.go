@@ -12,8 +12,14 @@ func hex_address(u uint64) string {
 	return fmt.Sprintf("0x%x", u)
 }
 
-func (profile *Profile) generate_x64dbg_database(module_name string, base_address uint64) (err error) {
+func (profile *Profile) generate_x64dbg_database(compress bool) (err error) {
 	// Convert symbol table into x64dbg database
+
+	is_64bit := profile.Info.Arch == "amd64"
+
+	module_name := profile.Info.ModuleName
+	base_address := profile.Info.ModuleBase
+
 	var dd x64dbg.Database
 
 	for _, entry := range profile.SymbolTable.Entries {
@@ -54,9 +60,14 @@ func (profile *Profile) generate_x64dbg_database(module_name string, base_addres
 		}
 	}
 
+	filename := "game.dd32"
+	if is_64bit {
+		filename = "game.dd64"
+	}
+
 	// save database
-	dd_path := filepath.Join(profile.Directory, "x32dbg", "game.dd32")
-	if err = x64dbg.SaveDatabase(dd_path, &dd); err != nil {
+	dd_path := filepath.Join(profile.Directory, "x64dbg", filename)
+	if err = x64dbg.SaveDatabase(dd_path, &dd, compress); err != nil {
 		return
 	}
 

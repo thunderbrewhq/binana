@@ -101,7 +101,7 @@ loop:
 func (profile *Profile) generate_x64dbg_types() (err error) {
 	// parse C headers
 	var cc_config cc.Config
-	cc_config.ABI, err = cc.NewABI("windows", "386")
+	cc_config.ABI, err = cc.NewABI("windows", profile.Info.Arch)
 	if err != nil {
 		panic(err)
 	}
@@ -231,7 +231,7 @@ func (profile *Profile) generate_x64dbg_types() (err error) {
 		x64_types.Structs = append(x64_types.Structs, x64_struct)
 	}
 
-	types_file_path := filepath.Join(profile.Directory, "x32dbg", "types.json")
+	types_file_path := filepath.Join(profile.Directory, "x64dbg", "types.json")
 
 	err = x64dbg.SortTypes(&x64_types)
 	if err != nil {

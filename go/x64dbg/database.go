@@ -2,6 +2,7 @@ package x64dbg
 
 import (
 	"encoding/json"
+	"io"
 	"os"
 )
 
@@ -59,19 +60,37 @@ type Database struct {
 	Breakpoints []Breakpoint `json:"breakpoints,omitempty"`
 }
 
-func SaveDatabase(name string, database *Database) (err error) {
+func SaveDatabase(name string, database *Database, compress bool) (err error) {
 	var file *os.File
 	file, err = os.Create(name)
 	if err != nil {
 		return
 	}
 
-	e := json.NewEncoder(file)
-	e.SetIndent("", "  ")
+	var writecloser io.WriteCloser = file
+
+	if compress {
+		writecloser, err = new_lz4_writecloser(file)
+		if err != nil {
+			return
+		}
+	}
+
+	e := json.NewEncoder(writecloser)
+	if !compress {
+		e.SetIndent("", "  ")
+	}
 	if err = e.Encode(database); err != nil {
 		return
 	}
 
-	err = file.Close()
+	if err = writecloser.Close(); err != nil {
+		return
+	}
+
+	if compress {
+		err = file.Close()
+	}
+
 	return
 }
