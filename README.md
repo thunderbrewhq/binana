@@ -4,7 +4,7 @@ This repository hosts some work related to studying the original game binaries.
 
 You can use the information here to get a headstart when working on the [Whoa project](https://github.com/whoahq/whoa).
 
-- [Dependencies (optional)](#dependencies--optional-)
+- [Dependencies (optional)](#dependencies-optional)
 - [Header files](#header-files)
 - [Symbol files](#symbol-files)
 - [Debugging files](#debugging-files)
@@ -142,7 +142,7 @@ To load the database information into x64dbg:
   1. Open x96dbg.exe or x32dbg.exe directly
   2. Load your game binary
   3. Go to `File` 🡒 `Database` 🡒 `Import database`
-  4. Navigate to `profile/<game version>/x32dbg/game.dd32`.
+  4. Navigate to `profile/<game version>/x64dbg/game.dd32`.
 
 ## Importing types
 
