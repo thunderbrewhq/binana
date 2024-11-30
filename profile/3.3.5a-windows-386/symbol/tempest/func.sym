@@ -21,3 +21,6 @@ C44Matrix__Rotate 004C33C0 f
 C3Vector__Normalize_1 004C3420 f
 C3Vector__Normalize_2 004C3600 f
 C33Matrix__operator_assign_C33Matrix 004C51B0 f
+TSGrowableArray_C3Vector__SetCount 004C4B80 f end=004C4C75 type="void __thiscall func(TSGrowableArray_C3Vector* this, uint32_t count)"
+TSGrowableArray_CImVector__SetCount 00616CA0 f end=00616D07 type="void __thiscall func(TSGrowableArray_CImVector* this, uint32_t count)"
+TSGrowableArray_C2Vector__SetCount 0057FDD0 f end=0057FE93 type="void __thiscall func(TSGrowableArray_C2Vector* this, uint32_t count)"

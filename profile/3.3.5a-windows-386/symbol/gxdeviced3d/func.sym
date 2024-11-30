@@ -1,34 +1,67 @@
 CGxDeviceD3d__ICreateD3dIB 0068E180 f end=0068E1E8
 CGxDeviceD3d__ISetPresentParms 0068E250 f end=0068E448
-CGxDeviceD3d__PoolDestroy 0068E720 f end=0068E742
-CGxDeviceD3d__CursorSetVisible 0068E750 f end=0068E7D6
-CGxDeviceD3d__ICursorDraw 0068E810 f end=0068E8F2
-CGxDeviceD3d__ICursorCreate 0068E900 f end=0068E975
+CGxDeviceD3d__DeviceEvictResources 0068E450 f end=0068E49E type="void __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__DeviceSetBaseMipLevel 0068E4A0 f end=0068E4BD type="void __thiscall func(CGxDeviceD3d* this, uint32_t level)"
+CGxDeviceD3d__DeviceSetGamma 0068E4C0 f end=0068E507 type="void __thiscall func(CGxDeviceD3d* this, float gamma)"
+CGxDeviceD3d__LogCrashInfo 0068E570 f end=0068E719 type="void __thiscall func(CGxDeviceD3d* this, char* buffer, uint32_t size)"
+CGxDeviceD3d__PoolDestroy 0068E720 f end=0068E742 type="void __thiscall func(CGxDeviceD3d* this, CGxPool* this)"
+CGxDeviceD3d__CursorSetVisible 0068E750 f end=0068E7D6 type="void __thiscall func(CGxDeviceD3d* this, int32_t visible)"
+CGxDeviceD3d__CursorUnlock 0068E7E0 f end=0068E804 type="void __thiscall func(CGxDeviceD3d* this, uint32_t x, uint32_t y)"
+CGxDeviceD3d__ICursorDraw 0068E810 f end=0068E8F2 type="void __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__ICursorCreate 0068E900 f end=0068E975 type="void __thiscall func(CGxDeviceD3d* this, CGxFormat* format)"
+CGxDeviceD3d__StereoSetConvergence 0068E980 f end=0068E99A type="void __thiscall func(CGxDeviceD3d* this, float c)"
+CGxDeviceD3d__StereoSetSeparation 0068E9A0 f end=0068E9BA type="void __thiscall func(CGxDeviceD3d* this, float s)"
+CGxDeviceD3d__QueryCreate 0068E9C0 f end=0068EA0A type="void __thiscall func(CGxDeviceD3d* this, CGxQuery** query, EGxQueryType queryType)"
+CGxDeviceD3d__QueryBegin 0068EA10 f end=0068EA81 type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query)"
+CGxDeviceD3d__QueryGetParam 0068EA90 f end=0068EB1D type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query, EGxQueryParam param, uint32_t* data)"
 CGxDeviceD3d__ICreateWindow 0068EBB0 f end=0068ED78
 CGxDeviceD3d__ILoadD3dLib 0068ED80 f end=0068EE13
 CGxDeviceD3d__ISetCaps 0068EE20 f end=0068F36D
 CGxDeviceD3d__ICreateD3dDevice 0068F3D0 f end=0068F692
+CGxDeviceD3d__DeviceSetRenderTarget 0068F770 f end=0068F8F2 type="void __thiscall func(CGxDeviceD3d* this, EGxBuffer buffer, CGxTex* texture, uint32_t plane)"
+CGxDeviceD3d__DeviceResolveDepthBuffer 0068F900 f end=0068F94A type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
+CGxDeviceD3d__DeviceCopyTex 0068F950 f end=0068FA5E type="void __thiscall func(CGxDeviceD3d* this, CGxTex* a1, int32_t a2, CGxTex* a3, int32_t a4)"
 CGxDeviceD3d__IBufUnlock 0068FA60 f end=0068FADC
-CGxDeviceD3d__BufUnlock 0068FAE0 f end=0068FB07
+CGxDeviceD3d__BufUnlock 0068FAE0 f end=0068FB07 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxBuf* buf, uint32_t size)"
 CGxDeviceD3d__IBufLock 0068FB10 f end=0068FCDC
-CGxDeviceD3d__BufLock 0068FCE0 f end=0068FCFE
-CGxDeviceD3d__BufData 0068FD00 f end=0068FD49
-CGxDeviceD3d__CGxDeviceD3d 0068FD50 f end=0068FE80
-CGxDeviceD3d__DeviceWM 00690230 f end=0069038D
-CGxDeviceD3d__DeviceSetFormat 006904D0 f end=006905E8
+CGxDeviceD3d__BufLock 0068FCE0 f end=0068FCFE type="char* __thiscall func(CGxDeviceD3d* this, CGxBuf* buf)"
+CGxDeviceD3d__BufData 0068FD00 f end=0068FD49 type="void __thiscall func(CGxDeviceD3d* this, CGxBuf* buf, const void* data, uint32_t size, uint32_t offset)"
+CGxDeviceD3d__CGxDeviceD3d 0068FD50 f end=0068FE80 type="void __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__scalar_deleting_destructor 0068FE80 f end=0068FEC8 type="void __thiscall func(CGxDeviceD3d* this, uint8_t __flags)"
+CGxDeviceD3d__DeviceReadPixels 0068FED0 f end=00690144 type="void __thiscall func(CGxDeviceD3d* this, CiRect* rect, TSGrowableArray_CImVector* pixels)"
+CGxDeviceD3d__IReleaseD3dResources 00690150 f end=00690223
+CGxDeviceD3d__DeviceWM 00690230 f end=0069038D type="void __thiscall func(CGxDeviceD3d* this, EGxWM wm, int32_t param1, int32_t param2)"
+CGxDeviceD3d__DeviceSetFormat 006904D0 f end=006905E8 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxFormat* format)"
+CGxDeviceD3d__DeviceDestroy 006905F0 f end=00690679 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__ICreateD3d 00690680 f end=00690742
-CGxDeviceD3d__DeviceCreate_WindowProc_CGxFormat 00690750 f end=00690821
+CGxDeviceD3d__DeviceCreate 00690750 f end=00690821 type="void __thiscall func(CGxDeviceD3d* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
+CGxDeviceD3d__DeviceCreate 00690830 f end=00690897 type="void __thiscall func(CGxDeviceD3d* this, uintptr_t hwnd, CGxFormat* format)"
 CGxDeviceD3d__ICreateD3dVB 0069FB00 f end=0069FB68
 CGxDeviceD3d__CreatePoolAPI 0069FB70 f end=0069FBB8
-CGxDeviceD3d__ICursorDestroy 006A00C0 f end=006A0102
+CGxDeviceD3d__ICursorClip 0069FE10 f end=0069FE57 ; UC (invented name)
+CGxDeviceD3d__DeviceSetGamma 0069FE80 f end=0069FEC4 type="void __thiscall func(CGxDeviceD3d* this, CGxGammaRamp* ramp)"
+CGxDeviceD3d__DeviceWindow 0069FED0 f end=0069FED7 type="void* __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__DeviceOverride 0069FF40 f end=0069FF7F type="void __thiscall func(CGxDeviceD3d* this, EGxOverride override, uint32_t value)"
+CGxDeviceD3d__PoolSizeSet 0069FF80 f end=0069FFCD type="void __thiscall func(CGxDeviceD3d* this, CGxPool* pool, uint32_t size)"
+CGxDeviceD3d__ICursorDestroy 006A00C0 f end=006A0102 type="void __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__StereoGetConvergence 006A0110 f end=006A0117 type="float __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__StereoGetSeparation 006A0120 f end=006A0127 type="float __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__StereoEnabled 006A0130 f end=006A013D type="bool __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__QueryDestroy 006A0190 f end=006A01C0 type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery** query)"
+CGxDeviceD3d__QueryEnd 006A0240 f end=006A0272 type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query)"
+CGxDeviceD3d__QueryGetData 006A0310 f end=006A035F type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query, uint32_t* data)"
 CGxDeviceD3d__WindowProcD3d 006A0360 f end=006A0834
+CGxDeviceD3d__DeviceReadDepths 006A1950 f end=006A19C4 type="void __thiscall func(CGxDeviceD3d* this, CiRect* rect, TSGrowableArray_float* depths)"
+CGxDeviceD3d__TexDestroy 006A2BB0 f end=006A2BF1 type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
 CGxDeviceD3d__ITexCreate 006A2C00 f end=006A2D7E
 CGxDeviceD3d__ITexUpload 006A2D80 f end=006A3062
-CGxDeviceD3d__ITexMarkAsUpdated 006A3070 f end=006A30CF
+CGxDeviceD3d__ITexMarkAsUpdated 006A3070 f end=006A30CF type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
+CGxDeviceD3d__TexCopy 006A30D0 f end=006A31D6 type="void __thiscall func(CGxDeviceD3d* this, CGxTex* a1, CGxTex* a2, C2iVector* a3, C2iVector* a4, uint32_t a5, uint32_t a6)"
+CGxDeviceD3d__TexStretch 006A31E0 f end=006A3349 type="void __thiscall func(CGxDeviceD3d* this, CGxTex* a1, CGxTex* a2, CiRect* a3, CiRect* a4, uint32_t a5, uint32_t a6)"
 CGxDeviceD3d__ISceneBegin 006A3350 f end=006A3417
 CGxDeviceD3d__ISceneEnd 006A3420 f end=006A3449
-CGxDeviceD3d__ScenePresent 006A3450 f end=006A3611
-CGxDeviceD3d__Draw 006A3620 f end=006A3716
+CGxDeviceD3d__ScenePresent 006A3450 f end=006A3611 type="void __thiscall func(CGxDeviceD3d* this, uint32_t mask)"
+CGxDeviceD3d__Draw 006A3620 f end=006A3716 type="void __thiscall func(CGxDeviceD3d* this, CGxBatch* batch)"
 CGxDeviceD3d__IStateSyncEnables 006A3810 f end=006A386E
 CGxDeviceD3d__ISetVertexBuffer 006A39E0 f end=006A3A59
 CGxDeviceD3d__IStateSetD3DDefaults 006A3A60 f end=006A3C34
@@ -38,22 +71,22 @@ CGxDeviceD3d__ISetAlphaOp 006A41F0 f end=006A424C
 CGxDeviceD3d__IStateSyncMaterial 006A4700 f end=006A4846
 CGxDeviceD3d__IStateSyncXforms 006A4850 f end=006A48FE
 CGxDeviceD3d__ISetTexture 006A4900 f end=006A4AB3
-CGxDeviceD3d__IRsSendToHw 006A4C30 f end=006A5499
+CGxDeviceD3d__IRsSendToHw 006A4C30 f end=006A5499 type="void __thiscall func(CGxDeviceD3d* this, EGxRenderState rs)"
 CGxDeviceD3d__ICreateD3dVertexDecl 006A5540 f end=006A5677
 CGxDeviceD3d__IStateSyncVertexPtrs 006A5700 f end=006A5934
 CGxDeviceD3d__IStateSync 006A5940 f end=006A59f5
-CGxDeviceD3d__CapsWindowSize 006A5A00 f end=006A5A25
+CGxDeviceD3d__CapsWindowSize 006A5A00 f end=006A5A25 type="void __thiscall func(CGxDeviceD3d* this, CRect* dst)"
 CGxDeviceD3d__IXformSetWorld 006A5A30 f end=006A5A92 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IBindPixelShader 006A5C70 f end=006A5D48
-CGxDeviceD3d__IShaderCreate 006A5E10 f end=006A5E36
-CGxDeviceD3d__SceneClear 006A74B0 f end=006A7538
-CGxDeviceD3d__CapsWindowSizeInScreenCoords 006A9920 f end=006A99D4
-CGxDeviceD3d__XformSetProjection 006A9B40 f end=006A9D88
-CGxDeviceD3d__XformSetView 006A9E00 f end=006A9E09
+CGxDeviceD3d__IShaderReload 006A5D50 f end=006A5E07 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader, const char* a2, const char* a3)"
+CGxDeviceD3d__IShaderCreate 006A5E10 f end=006A5E36 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
+CGxDeviceD3d__SceneClear 006A74B0 f end=006A7538 type="void __thiscall func(CGxDeviceD3d* this, uint32_t mask, CImVector color)"
+CGxDeviceD3d__CapsWindowSizeInScreenCoords 006A9920 f end=006A99D4 type="void __thiscall func(CGxDeviceD3d* this, CRect* dst)"
+CGxDeviceD3d__XformSetProjection 006A9B40 f end=006A9D88 type="void __thiscall func(CGxDeviceD3d* this, C44Matrix* matrix)"
+CGxDeviceD3d__XformSetView 006A9E00 f end=006A9E09 type="void __thiscall func(CGxDeviceD3d* this, C44Matrix* matrix)"
 CGxDeviceD3d__IShaderConstantsFlush 006A9FE0 f end=006AA06D
-CGxDeviceD3d__IShaderCreatePixel 006AA070 f end=006AA0C5
-CGxDeviceD3d__IShaderCreateVertex 006AA0D0 f end=006AA125
-CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A
+CGxDeviceD3d__IShaderCreatePixel 006AA070 f end=006AA0C5 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
+CGxDeviceD3d__IShaderCreateVertex 006AA0D0 f end=006AA125 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
+CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A type="void __thiscall func(CGxShader** shaders, EGxShTarget target, char* a3, char* a4, int32_t permutations)"
+CGxDeviceD3d__ShaderDestroy 006AA190 f end=006AA207 type="void __thiscall func(CGxDeviceD3d* this, CGxShader** shader)"
 CGxDeviceD3d__IBindVertexShader 006AA2F0 f end=006AA346
-CGxDeviceD3d__IReleaseD3dResources 00690150 f end=00690223
-CGxDeviceD3d__ICursorClip 0069FE10 f end=0069FE57 ; UC (invented name)

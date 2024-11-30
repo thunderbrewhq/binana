@@ -74,6 +74,10 @@
     },
     {
       "type": "int",
+      "name": "EGxBuffer"
+    },
+    {
+      "type": "int",
       "name": "EGxColorFormat"
     },
     {
@@ -87,6 +91,10 @@
     {
       "type": "int",
       "name": "EGxMasterEnables"
+    },
+    {
+      "type": "int",
+      "name": "EGxOverride"
     },
     {
       "type": "int",
@@ -107,6 +115,10 @@
     {
       "type": "int",
       "name": "EGxPrimMask"
+    },
+    {
+      "type": "int",
+      "name": "EGxQueryType"
     },
     {
       "type": "int",
@@ -427,6 +439,10 @@
     {
       "type": "TSList_CGxPool",
       "name": "TSExplicitList_CGxPool"
+    },
+    {
+      "type": "TSList_CGxQuery",
+      "name": "TSExplicitList_CGxQuery"
     },
     {
       "type": "TSList_CShaderEffect",
@@ -949,6 +965,27 @@
       ]
     },
     {
+      "name": "CGxDevice__TextureTarget",
+      "size": 12,
+      "members": [
+        {
+          "type": "CGxTex*",
+          "name": "m_texture",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_plane",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "m_apiSpecific",
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "CGxDevice__vtable",
       "size": 336,
       "members": [
@@ -1299,7 +1336,7 @@
         },
         {
           "type": "void*",
-          "name": "v_fn_69_ShaderRelease",
+          "name": "v_fn_69_ShaderDestroy",
           "offset": 276
         },
         {
@@ -9766,6 +9803,32 @@
       ]
     },
     {
+      "name": "TSGrowableArray_float",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "float*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_pointer_to_EvtTimer",
       "size": 16,
       "members": [
@@ -10028,6 +10091,22 @@
         },
         {
           "type": "CGxPool*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CGxQuery",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGxQuery*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CGxQuery*",
           "name": "m_next",
           "offset": 4
         }
@@ -13931,6 +14010,38 @@
       ]
     },
     {
+      "name": "CGxQuery",
+      "size": 16,
+      "members": [
+        {
+          "type": "void*",
+          "name": "m_apiSpecific",
+          "offset": 0
+        },
+        {
+          "type": "EGxQueryType",
+          "name": "m_type",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_CGxQuery",
+          "name": "m_link",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CGxQuery",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGxQuery",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "TSHashObject_CGxShader_HASHKEY_STRI",
       "size": 24,
       "members": [
@@ -14837,6 +14948,22 @@
         },
         {
           "type": "TSLink_CGxPool",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CGxQuery",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CGxQuery",
           "name": "m_terminator",
           "offset": 4
         }
@@ -18202,6 +18329,179 @@
       ]
     },
     {
+      "name": "BATCHEDRENDERFONTDESC",
+      "size": 40,
+      "members": [
+        {
+          "type": "TSHashObject_BATCHEDRENDERFONTDESC_HASHKEY_PTR",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "CGxFont*",
+          "name": "m_face",
+          "offset": 24
+        },
+        {
+          "type": "TSExplicitList_CGxString",
+          "name": "m_strings",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "TEXTURECACHEROW",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "widestFreeSlot",
+          "offset": 0
+        },
+        {
+          "type": "TSExplicitList_CHARCODEDESC",
+          "name": "glyphList",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "CGxFont",
+      "size": 592,
+      "members": [
+        {
+          "type": "TSLinkedNode_CGxFont",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "TSExplicitList_CGxString",
+          "name": "m_strings",
+          "offset": 8
+        },
+        {
+          "type": "TSHashTable_CHARCODEDESC_HASHKEY_NONE",
+          "name": "m_activeCharacters",
+          "offset": 20
+        },
+        {
+          "type": "TSHashTable_KERNNODE_KERNINGHASHKEY",
+          "name": "m_kernInfo",
+          "offset": 60
+        },
+        {
+          "type": "TSExplicitList_CHARCODEDESC",
+          "name": "m_activeCharacterCache",
+          "offset": 100
+        },
+        {
+          "type": "HFACE",
+          "name": "m_faceHandle",
+          "offset": 112
+        },
+        {
+          "type": "char",
+          "name": "m_fontName",
+          "arrsize": 260,
+          "offset": 116
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_cellHeight",
+          "offset": 376
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_baseline",
+          "offset": 380
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "offset": 384
+        },
+        {
+          "type": "float",
+          "name": "float184",
+          "offset": 388
+        },
+        {
+          "type": "float",
+          "name": "m_pixelsPerUnit",
+          "offset": 392
+        },
+        {
+          "type": "TEXTURECACHE",
+          "name": "m_textureCache",
+          "arrsize": 8,
+          "offset": 396
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_pixelSize",
+          "offset": 588
+        }
+      ]
+    },
+    {
+      "name": "CGxStringBatch",
+      "size": 52,
+      "members": [
+        {
+          "type": "TSLinkedNode_CGxStringBatch",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "TSHashTable_BATCHEDRENDERFONTDESC_HASHKEY_PTR",
+          "name": "m_fontBatch",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "offset": 48
+        }
+      ]
+    },
+    {
+      "name": "CFrameStrataNode",
+      "size": 264,
+      "members": [
+        {
+          "type": "TSExplicitList_CSimpleFrame",
+          "name": "pendingFrames",
+          "offset": 0
+        },
+        {
+          "type": "TSExplicitList_CSimpleFrame",
+          "name": "frames",
+          "offset": 12
+        },
+        {
+          "type": "CSimpleFrame*",
+          "name": "pendingFrame",
+          "offset": 24
+        },
+        {
+          "type": "CRenderBatch",
+          "name": "batches",
+          "arrsize": 5,
+          "offset": 28
+        },
+        {
+          "type": "int32_t",
+          "name": "batchDirty",
+          "offset": 248
+        },
+        {
+          "type": "TSExplicitList_CRenderBatch",
+          "name": "renderList",
+          "offset": 252
+        }
+      ]
+    },
+    {
       "name": "CGxDevice",
       "size": 14696,
       "members": [
@@ -18231,10 +18531,14 @@
           "offset": 52
         },
         {
-          "type": "uint32_t",
-          "name": "m_unk38",
-          "arrsize": 2,
+          "type": "int32_t",
+          "name": "m_indexLocked",
           "offset": 56
+        },
+        {
+          "type": "int32_t",
+          "name": "m_vertexLocked",
+          "offset": 60
         },
         {
           "type": "int32_t",
@@ -18538,7 +18842,7 @@
           "offset": 10448
         },
         {
-          "type": "uint32_t",
+          "type": "uint8_t",
           "name": "unk28D4",
           "offset": 10452
         },
@@ -18580,8 +18884,19 @@
         {
           "type": "uint32_t",
           "name": "unk2904",
-          "arrsize": 12,
+          "arrsize": 3,
           "offset": 10500
+        },
+        {
+          "type": "CGxDevice__TextureTarget",
+          "name": "m_textureTarget",
+          "arrsize": 2,
+          "offset": 10512
+        },
+        {
+          "type": "TSExplicitList_CGxQuery",
+          "name": "m_queryList",
+          "offset": 10536
         },
         {
           "type": "int32_t",
@@ -18610,7 +18925,7 @@
         },
         {
           "type": "int32_t",
-          "name": "m_hardwareCursor",
+          "name": "m_hwCursor",
           "offset": 10580
         },
         {
@@ -18638,179 +18953,6 @@
           "type": "float",
           "name": "m_cursorDepth",
           "offset": 14692
-        }
-      ]
-    },
-    {
-      "name": "BATCHEDRENDERFONTDESC",
-      "size": 40,
-      "members": [
-        {
-          "type": "TSHashObject_BATCHEDRENDERFONTDESC_HASHKEY_PTR",
-          "name": "b_base",
-          "offset": 0
-        },
-        {
-          "type": "CGxFont*",
-          "name": "m_face",
-          "offset": 24
-        },
-        {
-          "type": "TSExplicitList_CGxString",
-          "name": "m_strings",
-          "offset": 28
-        }
-      ]
-    },
-    {
-      "name": "TEXTURECACHEROW",
-      "size": 16,
-      "members": [
-        {
-          "type": "uint32_t",
-          "name": "widestFreeSlot",
-          "offset": 0
-        },
-        {
-          "type": "TSExplicitList_CHARCODEDESC",
-          "name": "glyphList",
-          "offset": 4
-        }
-      ]
-    },
-    {
-      "name": "CGxFont",
-      "size": 592,
-      "members": [
-        {
-          "type": "TSLinkedNode_CGxFont",
-          "name": "b_base",
-          "offset": 0
-        },
-        {
-          "type": "TSExplicitList_CGxString",
-          "name": "m_strings",
-          "offset": 8
-        },
-        {
-          "type": "TSHashTable_CHARCODEDESC_HASHKEY_NONE",
-          "name": "m_activeCharacters",
-          "offset": 20
-        },
-        {
-          "type": "TSHashTable_KERNNODE_KERNINGHASHKEY",
-          "name": "m_kernInfo",
-          "offset": 60
-        },
-        {
-          "type": "TSExplicitList_CHARCODEDESC",
-          "name": "m_activeCharacterCache",
-          "offset": 100
-        },
-        {
-          "type": "HFACE",
-          "name": "m_faceHandle",
-          "offset": 112
-        },
-        {
-          "type": "char",
-          "name": "m_fontName",
-          "arrsize": 260,
-          "offset": 116
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_cellHeight",
-          "offset": 376
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_baseline",
-          "offset": 380
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_flags",
-          "offset": 384
-        },
-        {
-          "type": "float",
-          "name": "float184",
-          "offset": 388
-        },
-        {
-          "type": "float",
-          "name": "m_pixelsPerUnit",
-          "offset": 392
-        },
-        {
-          "type": "TEXTURECACHE",
-          "name": "m_textureCache",
-          "arrsize": 8,
-          "offset": 396
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_pixelSize",
-          "offset": 588
-        }
-      ]
-    },
-    {
-      "name": "CGxStringBatch",
-      "size": 52,
-      "members": [
-        {
-          "type": "TSLinkedNode_CGxStringBatch",
-          "name": "b_base",
-          "offset": 0
-        },
-        {
-          "type": "TSHashTable_BATCHEDRENDERFONTDESC_HASHKEY_PTR",
-          "name": "m_fontBatch",
-          "offset": 8
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_flags",
-          "offset": 48
-        }
-      ]
-    },
-    {
-      "name": "CFrameStrataNode",
-      "size": 264,
-      "members": [
-        {
-          "type": "TSExplicitList_CSimpleFrame",
-          "name": "pendingFrames",
-          "offset": 0
-        },
-        {
-          "type": "TSExplicitList_CSimpleFrame",
-          "name": "frames",
-          "offset": 12
-        },
-        {
-          "type": "CSimpleFrame*",
-          "name": "pendingFrame",
-          "offset": 24
-        },
-        {
-          "type": "CRenderBatch",
-          "name": "batches",
-          "arrsize": 5,
-          "offset": 28
-        },
-        {
-          "type": "int32_t",
-          "name": "batchDirty",
-          "offset": 248
-        },
-        {
-          "type": "TSExplicitList_CRenderBatch",
-          "name": "renderList",
-          "offset": 252
         }
       ]
     },

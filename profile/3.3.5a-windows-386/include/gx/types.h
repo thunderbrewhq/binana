@@ -9,16 +9,19 @@ DECLARE_ENUM(BlitAlpha);
 DECLARE_ENUM(BlitFormat);
 DECLARE_ENUM(EGxApi);
 DECLARE_ENUM(EGxBlend);
+DECLARE_ENUM(EGxBuffer);
 DECLARE_ENUM(EGxColorFormat);
 DECLARE_ENUM(EGxFontHJusts);
 DECLARE_ENUM(EGxFontVJusts);
 DECLARE_ENUM(EGxMasterEnables);
+DECLARE_ENUM(EGxOverride);
 DECLARE_ENUM(EGxPrim);
 DECLARE_ENUM(EGxPrimMask);
 DECLARE_ENUM(EGxRenderState);
 DECLARE_ENUM(EGxShPS);
 DECLARE_ENUM(EGxShTarget);
 DECLARE_ENUM(EGxShVS);
+DECLARE_ENUM(EGxQueryType);
 DECLARE_ENUM(EGxTexCommand);
 DECLARE_ENUM(EGxTexFilter);
 DECLARE_ENUM(EGxTexFormat);
@@ -86,6 +89,12 @@ enum EGxBlend {
   GxBlends_Last = 12
 };
 
+enum EGxBuffer {
+  GxBuffers_Color = 0,
+  GxBuffers_Depth = 1,
+  GxBuffers_Last = 2
+};
+
 enum EGxColorFormat {
   GxCF_argb = 0,
   GxCF_rgba = 1,
@@ -117,6 +126,19 @@ enum EGxMasterEnables {
   GxMasterEnable_NormalProjection = 7,
   GxMasterEnable_PolygonFill = 8,
   GxMasterEnables_Last = 9
+};
+
+enum EGxOverride {
+  GxOverride_PixelShader = 0,
+  GxOverride_Unk1 = 1,
+  GxOverride_Unk2 = 2,
+  GxOverride_Unk3 = 3,
+  GxOverride_Unk4 = 4,
+  GxOverride_Unk5 = 5,
+  GxOverride_Unk6 = 6,
+  GxOverride_Unk7 = 7,
+  GxOverride_Unk8 = 8,
+  GxOverrides_Last = 9
 };
 
 enum EGxPrim {
@@ -322,6 +344,7 @@ enum EGxTexWrapMode {
 
 enum EGxQueryType {
   GxQueryType_Occlusion = 0,
+  // TODO
 };
 
 enum EGxXform {

@@ -23,11 +23,13 @@
 #include "gx/matrix_stack.h"
 #include "gx/buffer.h"
 #include "gx/texture.h"
+#include "gx/query.h"
 
 DECLARE_STRUCT(CGxAppRenderState);
 DECLARE_STRUCT(CGxPushedRenderState);
 DECLARE_STRUCT(ShaderConstants);
 DECLARE_STRUCT(CGxDevice);
+DECLARE_STRUCT(CGxDevice__TextureTarget);
 DECLARE_STRUCT(CGxDevice__vtable);
 
 typedef void (*DEVICERESTOREDCALLBACK)();
@@ -59,6 +61,12 @@ struct ShaderConstants {
   uint32_t unk2;
 };
 
+struct CGxDevice__TextureTarget {
+  CGxTex* m_texture;
+  uint32_t m_plane;
+  void* m_apiSpecific;
+};
+
 // 84 functions
 struct CGxDevice__vtable {
   // void ITexMarkAsUpdated(CGxTex* texId);
@@ -84,7 +92,7 @@ struct CGxDevice__vtable {
   void* v_fn_7_NotifyOnStereoChanged; 
   // void `scalar deleting destructor'(uint32_t __flags)
   void* v_fn_8_scalar_deleting_destructor;
-  // int32_t DeviceCreate(const CGxFormat& format);
+  // int32_t DeviceCreate(uintptr_t hwnd, const CGxFormat& format);
   void* v_fn_9_DeviceCreate;
   // int32_t DeviceCreate(long (*windowProc)(void*, uint32_t, uint32_t, int32_t), CGxFormat const& format);
   void* v_fn_10_DeviceCreate;
@@ -96,7 +104,7 @@ struct CGxDevice__vtable {
   void* v_fn_13_DeviceSetFormat;
   // void DeviceSetBaseMipLevel(uint32_t mipLevel);
   void* v_fn_14_DeviceSetBaseMipLevel;
-  // void DeviceSetGamma(CGxGammaRamp const& ramp);
+  // void DeviceSetGamma(const CGxGammaRamp& ramp);
   void* v_fn_15_DeviceSetGamma;
   // void DeviceSetGamma(float gamma);
   void* v_fn_16_DeviceSetGamma;
@@ -167,7 +175,7 @@ struct CGxDevice__vtable {
   void* v_fn_40_XformSetProjection;
   // void XformSetView(const C44Matrix& matrix);
   void* v_fn_41_XformSetView;
-  // void Draw(CGxBatch*, int32_t);
+  // void Draw(CGxBatch* batch, int32_t indexed);
   void* v_fn_42_Draw;
   // void PrimBegin(EGxPrim primType);
   void* v_fn_43_PrimBegin;
@@ -201,7 +209,7 @@ struct CGxDevice__vtable {
   void* v_fn_57_TexCreate;
   // void TexDestroy(CGxTex* texId);
   void* v_fn_58_TexDestroy;
-  // int32_t TexCopy(CGxTex* a1, CGxTex* a2, const C2iVector& a3, const C2iVector& a4, const C2iVector& a5, uint32_t a6);
+  // int32_t TexCopy(CGxTex* a1, CGxTex* a2, const C2iVector& a3, const C2iVector& a4, uint32_t a5, uint32_t a6);
   void* v_fn_59_TexCopy;
   // bool TexStretch(CGxTex* a1, CGxTex* a2, const CiRect* a3, const CiRect* a4, uint32_t a5, uint32_t a6);
   void* v_fn_60_TexStretch;
@@ -209,7 +217,7 @@ struct CGxDevice__vtable {
   void* v_fn_61_TexSetCacheSize;
   // void QueryCreate(CGxQuery*& query, EGxQueryType queryType);
   void* v_fn_62_QueryCreate;
-  // bool QueryDestroy(CGxQuery* query);
+  // bool QueryDestroy(CGxQuery*& query);
   void* v_fn_63_QueryDestroy;
   // bool QueryBegin(CGxQuery* query);
   void* v_fn_64_QueryBegin;
@@ -219,10 +227,10 @@ struct CGxDevice__vtable {
   void* v_fn_66_QueryGetParam;
   // bool QueryGetData(CGxQuery* query, uint32_t* data);
   void* v_fn_67_QueryGetData;
-  // void ShaderCreate(CGxShader*[] shaders, EGxShTarget target, const char* a3, const char* a4, int32_t permutations);
+  // void ShaderCreate(CGxShader*[] shaders[], EGxShTarget target, const char* a3, const char* a4, int32_t permutations);
   void* v_fn_68_ShaderCreate;
-  // void ShaderRelease(CGxShader*& shader);
-  void* v_fn_69_ShaderRelease;
+  // void ShaderDestroy(CGxShader*& shader);
+  void* v_fn_69_ShaderDestroy;
   // void ShaderConstantsSet(EGxShTarget target, uint32_t index, const float* constraints, uint32_t count);
   void* v_fn_70_ShaderConstantsSet;
   // void IShaderReload(CGxShader* shader, const char* a2, const char* a3);
@@ -237,7 +245,7 @@ struct CGxDevice__vtable {
   void* v_fn_75_CursorUnlock;
   // void StereoSetConvergence(float c);
   void* v_fn_76_StereoSetConvergence;
-  // double StereoGetConvergence();
+  // float StereoGetConvergence();
   void* v_fn_77_StereoGetConvergence;
   // void StereoSetSeparation(float s);
   void* v_fn_78_StereoSetSeparation;
@@ -261,7 +269,8 @@ struct CGxDevice {
   TSGrowableArray_uint32_t m_stackOffsets; // 0x18 (size: 0x14)
   TSGrowableArray_EGxRenderState m_dirtyStates; // 0x2C (size: 0x14)
   EGxPrim m_primType;
-  uint32_t m_unk38[2]; // m_indexLocked-m_vertexLocked?
+  int32_t m_indexLocked;
+  int32_t m_vertexLocked;
   int32_t m_inBeginEnd;
   C3Vector m_primVertex;
   C2Vector m_primTexCoord[8];
@@ -329,7 +338,7 @@ struct CGxDevice {
   uint32_t unk28C8;
   uint32_t unk28CC;
   uint32_t unk28D0;
-  uint32_t unk28D4;
+  uint8_t unk28D4;
   uint32_t unk28D8;
   uint32_t unk28DC;
   uint32_t unk28E0;
@@ -337,13 +346,15 @@ struct CGxDevice {
   uint32_t unk28E8;
   TSFixedArray_CGxAppRenderState m_appRenderStates;
   TSFixedArray_CGxStateBom m_hwRenderStates;
-  uint32_t unk2904[12]; // 0x2904 (size 0x30) 
+  uint32_t unk2904[3]; // 0x2904 (size 0xC)
+  CGxDevice__TextureTarget m_textureTarget[2];
+  TSExplicitList_CGxQuery m_queryList; // 0x2928
   int32_t m_scrShotClick; // 0x2934
   uint32_t m_scrShotWidth; // 0x2938
   uint32_t m_scrShotHeight; // 0x293C
   TSGrowableArray_CImVector m_scrShotPixels; // 0x2940
   int32_t m_cursorVisible;
-  int32_t m_hardwareCursor; // 0x2954 (size 0x4)
+  int32_t m_hwCursor; // 0x2954 (size 0x4)
   uint32_t m_cursorHotspotX;
   uint32_t m_cursorHotspotY;
   uint32_t m_cursor[1024]; // 0x2960 (size 0x4)

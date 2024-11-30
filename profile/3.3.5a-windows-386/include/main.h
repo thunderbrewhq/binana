@@ -53,6 +53,7 @@
 #include "gx/types.h"
 #include "gx/batch.h"
 #include "gx/d3d9.h"
+#include "gx/query.h"
 
 #include "m2/cache.h"
 #include "m2/data.h"
@@ -107,6 +108,7 @@
 #include "storm/array/pointer_to_void.h"
 #include "storm/array/uint8_t.h"
 #include "storm/array/uint32_t.h"
+#include "storm/array/float.h"
 
 #include "storm/queue/timer_priority_uint32_t.h"
 
