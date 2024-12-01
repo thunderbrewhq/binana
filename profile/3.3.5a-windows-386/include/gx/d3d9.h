@@ -26,11 +26,13 @@ struct CGxDeviceD3d {
   IDirect3DDevice9* m_d3dDevice;
   D3DCAPS9 m_d3dCaps;
   int32_t m_d3dIsHwDevice;
-  int32_t m_d3dNVAPI;
-  uint32_t unk3AB8;
+  int32_t m_d3dNVAPI; 
+  uint32_t m_d3dStereoEnabled; // UC
   uint32_t unk3ABC;
-  uint32_t m_d3dStereoHandle;
-  uint32_t unk3AC4[3]; //TSList?
+  uint32_t m_d3dStereoHandle; // UC
+  float m_d3dStereoConvergence; // UC
+  float m_d3dStereoSeparation; // UC
+  int32_t unk3ACC;
   TSGrowableArray_CGxDeviceD3d__GxVertexDecl m_vertexDecl;
   IDirect3DVertexDeclaration9* m_d3dVertexDecl[14];
   D3DDISPLAYMODE m_desktopDisplayMode;

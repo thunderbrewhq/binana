@@ -87,6 +87,6 @@ CGxDeviceD3d__XformSetView 006A9E00 f end=006A9E09 type="void __thiscall func(CG
 CGxDeviceD3d__IShaderConstantsFlush 006A9FE0 f end=006AA06D
 CGxDeviceD3d__IShaderCreatePixel 006AA070 f end=006AA0C5 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
 CGxDeviceD3d__IShaderCreateVertex 006AA0D0 f end=006AA125 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
-CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A type="void __thiscall func(CGxShader** shaders, EGxShTarget target, char* a3, char* a4, int32_t permutations)"
+CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A type="void __thiscall func(CGxDeviceD3d* this, CGxShader** shaders, EGxShTarget target, char* a3, char* a4, int32_t permutations)"
 CGxDeviceD3d__ShaderDestroy 006AA190 f end=006AA207 type="void __thiscall func(CGxDeviceD3d* this, CGxShader** shader)"
 CGxDeviceD3d__IBindVertexShader 006AA2F0 f end=006AA346
