@@ -2096,6 +2096,7 @@ nullsub_5 00653A10 f
 GxDevCreate 00681290 f end=00681301
 GxSceneClear 006813B0 f end=006813CD
 GxTexUpdate 006813D0 f end=006813EC
+GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
 GxLog 006817E0 f end=006817F5
 GxDrawLockedElements 00681A60 f end=00681AAB type="void __stdcall func()"
 GxPrimIndexPtr 00681AB0 f end=00681AFB type="void __stdcall func(uint32_t indexCount, uint16_t* indices)"
@@ -2193,7 +2194,7 @@ CGxDevice__scalar_deleting_destructor 00689690 f end=006896BB type="void __thisc
 CGxDevice__ShaderCreate 006897C0 f end=00689A49 type="void __thiscall func(CGxDevice* this, CGxShader**, EGxShTarget, char*, char*, int32_t)"
 CGxShader__Valid 00689A50 f end=00689A6F
 CGxDevice__NewD3d 00689EF0 f end=00689F14 type="CGxDevice* __stdcall func()"
-CGxDeviceOpenGl__CGxDeviceOpenGl 0068BBC0 f end=0068BD15
+CGxDeviceOpenGl__CGxDeviceOpenGl 0068BBC0 f end=0068BD15 type="void __thiscall func(CGxDeviceOpenGl* this)"
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
 CGxDeviceD3d__ICreateD3dIB 0068E180 f end=0068E1E8
@@ -2287,7 +2288,7 @@ CGxDeviceD3d__XformSetView 006A9E00 f end=006A9E09 type="void __thiscall func(CG
 CGxDeviceD3d__IShaderConstantsFlush 006A9FE0 f end=006AA06D
 CGxDeviceD3d__IShaderCreatePixel 006AA070 f end=006AA0C5 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
 CGxDeviceD3d__IShaderCreateVertex 006AA0D0 f end=006AA125 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
-CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A type="void __thiscall func(CGxShader** shaders, EGxShTarget target, char* a3, char* a4, int32_t permutations)"
+CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A type="void __thiscall func(CGxDeviceD3d* this, CGxShader** shaders, EGxShTarget target, char* a3, char* a4, int32_t permutations)"
 CGxDeviceD3d__ShaderDestroy 006AA190 f end=006AA207 type="void __thiscall func(CGxDeviceD3d* this, CGxShader** shader)"
 CGxDeviceD3d__IBindVertexShader 006AA2F0 f end=006AA346
 CTgaFile__ColorMapEntryBytes 006AA350 f end=006AA379 ; UC
@@ -2670,6 +2671,7 @@ Script_VoiceChat_IsPlayingLoopbackSound 00985E30 f end=00985E5D
 Script_VoiceChat_GetCurrentMicrophoneSignalLevel 00985E60 f end=00985E8A
 Script_VoiceChat_ActivatePrimaryCaptureCallback 00985E90 f end=00985E98
 Script_VoiceChat_StartCapture 00985EF0 f end=00985F6B
+DayNight__DNGlare__Initialize 009AD000 f end=009AD0A3 type="void __thiscall func(DayNight__DNGlare* this, char* a1)"
 nullsub_7 009D34B0 f
 nullsub_8 009D34C0 f
 nullsub_9 009D4260 f

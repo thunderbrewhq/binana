@@ -20291,7 +20291,7 @@
         },
         {
           "type": "uint32_t",
-          "name": "unk3AB8",
+          "name": "m_d3dStereoEnabled",
           "offset": 15040
         },
         {
@@ -20305,10 +20305,19 @@
           "offset": 15048
         },
         {
-          "type": "uint32_t",
-          "name": "unk3AC4",
-          "arrsize": 3,
+          "type": "float",
+          "name": "m_d3dStereoConvergence",
           "offset": 15052
+        },
+        {
+          "type": "float",
+          "name": "m_d3dStereoSeparation",
+          "offset": 15056
+        },
+        {
+          "type": "int32_t",
+          "name": "unk3ACC",
+          "offset": 15060
         },
         {
           "type": "TSGrowableArray_CGxDeviceD3d__GxVertexDecl",

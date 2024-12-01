@@ -1,2 +1,4 @@
 * text eol=lf
 *.dd32 binary
+profile/*/x64dbg/game.*
+profile/*/x64dbg/types.json

@@ -25,6 +25,7 @@ static import_data_types() {
 	apply_type(0x006160B0, "int32_t __usercall func@<eax>(uint32_t** image@<eax>, MipBits* mipImages@<ecx>, uint32_t width@<edx>, uint32_t height)");
 	apply_type(0x00616800, "void __stdcall func(CURSORMODE mode)");
 	apply_type(0x00616CA0, "void __thiscall func(TSGrowableArray_CImVector* this, uint32_t count)");
+	apply_type(0x00681630, "void __stdcall func(CGxQuery** query, EGxQueryType type)");
 	apply_type(0x00681A60, "void __stdcall func()");
 	apply_type(0x00681AB0, "void __stdcall func(uint32_t indexCount, uint16_t* indices)");
 	apply_type(0x00681B00, "void __stdcall func(CGxBuf* buf, EGxVertexBufferFormat format)");
@@ -117,6 +118,7 @@ static import_data_types() {
 	apply_type(0x00689690, "void __thiscall func(CGxDevice* this, uint8_t __flags)");
 	apply_type(0x006897C0, "void __thiscall func(CGxDevice* this, CGxShader**, EGxShTarget, char*, char*, int32_t)");
 	apply_type(0x00689EF0, "CGxDevice* __stdcall func()");
+	apply_type(0x0068BBC0, "void __thiscall func(CGxDeviceOpenGl* this)");
 	apply_type(0x0068BF20, "CGxDevice* __stdcall func()");
 	apply_type(0x0068C220, "CGxDevice* __stdcall func()");
 	apply_type(0x0068E450, "void __thiscall func(CGxDeviceD3d* this)");
@@ -177,7 +179,7 @@ static import_data_types() {
 	apply_type(0x006A9E00, "void __thiscall func(CGxDeviceD3d* this, C44Matrix* matrix)");
 	apply_type(0x006AA070, "void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)");
 	apply_type(0x006AA0D0, "void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)");
-	apply_type(0x006AA130, "void __thiscall func(CGxShader** shaders, EGxShTarget target, char* a3, char* a4, int32_t permutations)");
+	apply_type(0x006AA130, "void __thiscall func(CGxDeviceD3d* this, CGxShader** shaders, EGxShTarget target, char* a3, char* a4, int32_t permutations)");
 	apply_type(0x006AA190, "void __thiscall func(CGxDeviceD3d* this, CGxShader** shader)");
 	apply_type(0x006AA3B0, "int32_t __thiscall func(CTgaFile* this)");
 	apply_type(0x006AA3E0, "uint32_t __thiscall func(CTgaFile* this)");
@@ -308,6 +310,7 @@ static import_data_types() {
 	apply_type(0x00961420, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x00961470, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x009614B0, "int32_t __stdcall func(lua_State* L)");
+	apply_type(0x009AD000, "void __thiscall func(DayNight__DNGlare* this, char* a1)");
 	apply_type(0x00A2DDC0, "CGxDevice__vtable");
 	apply_type(0x00AC1B9C, "TSExplicitList_CILayer");
 	apply_type(0x00AD2808, "char*[53]");

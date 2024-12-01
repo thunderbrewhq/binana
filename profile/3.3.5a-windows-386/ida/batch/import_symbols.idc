@@ -2100,6 +2100,7 @@ static import_symbols() {
 	set_name(0x00681290, "GxDevCreate");
 	set_name(0x006813B0, "GxSceneClear");
 	set_name(0x006813D0, "GxTexUpdate");
+	set_name(0x00681630, "GxQueryCreate");
 	set_name(0x006817E0, "GxLog");
 	set_name(0x00681A60, "GxDrawLockedElements");
 	set_name(0x00681AB0, "GxPrimIndexPtr");
@@ -2674,6 +2675,7 @@ static import_symbols() {
 	set_name(0x00985E60, "Script_VoiceChat_GetCurrentMicrophoneSignalLevel");
 	set_name(0x00985E90, "Script_VoiceChat_ActivatePrimaryCaptureCallback");
 	set_name(0x00985EF0, "Script_VoiceChat_StartCapture");
+	set_name(0x009AD000, "DayNight__DNGlare__Initialize");
 	set_name(0x009D34B0, "nullsub_7");
 	set_name(0x009D34C0, "nullsub_8");
 	set_name(0x009D4260, "nullsub_9");
