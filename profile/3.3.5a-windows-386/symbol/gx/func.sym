@@ -21,3 +21,4 @@ GxBufStream 00482A20 f end=00482A3C
 GxScenePresent 00682A00 f end=00682A33
 GxSceneClear 006813B0 f end=006813CD
 GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
+GxLogOpen 006817C0 f end=006817C5 type="void __stdcall func()"

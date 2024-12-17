@@ -10,6 +10,14 @@
     },
     {
       "type": "int",
+      "name": "Blizzard__File__Operation"
+    },
+    {
+      "type": "int",
+      "name": "CATEGORY"
+    },
+    {
+      "type": "int",
       "name": "CBaseManaged__ManagedFlags"
     },
     {
@@ -43,6 +51,18 @@
     {
       "type": "int",
       "name": "COLOR_FILE_FORMAT"
+    },
+    {
+      "type": "int",
+      "name": "COLOR_T"
+    },
+    {
+      "type": "void**",
+      "name": "COMMANDHANDLER"
+    },
+    {
+      "type": "int",
+      "name": "CONSOLERESIZESTATE"
     },
     {
       "type": "int",
@@ -186,6 +206,10 @@
     },
     {
       "type": "int",
+      "name": "EXECMODE"
+    },
+    {
+      "type": "int",
       "name": "FRAMEPOINT"
     },
     {
@@ -213,12 +237,28 @@
       "name": "HOBJECT"
     },
     {
+      "type": "HOSFILE__*",
+      "name": "HOSFILE"
+    },
+    {
       "type": "HPROPCONTEXT__*",
       "name": "HPROPCONTEXT"
     },
     {
+      "type": "HSLOG__*",
+      "name": "HSLOG"
+    },
+    {
       "type": "HSRGN__*",
       "name": "HSRGN"
+    },
+    {
+      "type": "HTEXTBLOCK__*",
+      "name": "HTEXTBLOCK"
+    },
+    {
+      "type": "HTEXTFONT__*",
+      "name": "HTEXTFONT"
     },
     {
       "type": "long long",
@@ -361,6 +401,22 @@
       "name": "TSExplicitList_CStatus__STATUSENTRY"
     },
     {
+      "type": "TSList_CONSOLECOMMAND",
+      "name": "TSExplicitList_CONSOLECOMMAND"
+    },
+    {
+      "type": "TSList_CGxString",
+      "name": "TSExplicitList_CGxString"
+    },
+    {
+      "type": "TSList_CONSOLELINE",
+      "name": "TSExplicitList_CONSOLELINE"
+    },
+    {
+      "type": "TSList_CVar",
+      "name": "TSExplicitList_CVar"
+    },
+    {
       "type": "TSList_EvtMessage",
       "name": "TSExplicitList_EvtMessage"
     },
@@ -391,10 +447,6 @@
     {
       "type": "TSList_CGxShader",
       "name": "TSExplicitList_CGxShader"
-    },
-    {
-      "type": "TSList_CGxString",
-      "name": "TSExplicitList_CGxString"
     },
     {
       "type": "TSList_CGxFont",
@@ -476,6 +528,178 @@
           "name": "headerData",
           "arrsize": 1020,
           "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "Blizzard__File__Filesystem",
+      "size": 124,
+      "members": [
+        {
+          "type": "Blizzard__File__Filesystem*",
+          "name": "base",
+          "offset": 0
+        },
+        {
+          "type": "Blizzard__File__Filesystem*",
+          "name": "next",
+          "offset": 4
+        },
+        {
+          "type": "void**",
+          "name": "f_cd",
+          "offset": 8
+        },
+        {
+          "type": "void**",
+          "name": "f_close",
+          "offset": 12
+        },
+        {
+          "type": "void**",
+          "name": "f_create",
+          "offset": 16
+        },
+        {
+          "type": "void**",
+          "name": "f_cwd",
+          "offset": 20
+        },
+        {
+          "type": "void**",
+          "name": "f_dirwalk",
+          "offset": 24
+        },
+        {
+          "type": "void**",
+          "name": "f_exists",
+          "offset": 28
+        },
+        {
+          "type": "void**",
+          "name": "f_flush",
+          "offset": 32
+        },
+        {
+          "type": "void**",
+          "name": "f_getfileinfo",
+          "offset": 36
+        },
+        {
+          "type": "void**",
+          "name": "f_getfreespace",
+          "offset": 40
+        },
+        {
+          "type": "void**",
+          "name": "f_getpos",
+          "offset": 44
+        },
+        {
+          "type": "void**",
+          "name": "f_getrootchars",
+          "offset": 48
+        },
+        {
+          "type": "void**",
+          "name": "f_isabspath",
+          "offset": 52
+        },
+        {
+          "type": "void**",
+          "name": "f_isreadonly",
+          "offset": 56
+        },
+        {
+          "type": "void**",
+          "name": "f_makeabspath",
+          "offset": 60
+        },
+        {
+          "type": "void**",
+          "name": "f_mkdir",
+          "offset": 64
+        },
+        {
+          "type": "void**",
+          "name": "f_move",
+          "offset": 68
+        },
+        {
+          "type": "void**",
+          "name": "f_copy",
+          "offset": 72
+        },
+        {
+          "type": "void**",
+          "name": "f_open",
+          "offset": 76
+        },
+        {
+          "type": "void**",
+          "name": "f_read",
+          "offset": 80
+        },
+        {
+          "type": "void**",
+          "name": "f_readp",
+          "offset": 84
+        },
+        {
+          "type": "void**",
+          "name": "f_rmdir",
+          "offset": 88
+        },
+        {
+          "type": "void**",
+          "name": "f_setcachemode",
+          "offset": 92
+        },
+        {
+          "type": "void**",
+          "name": "f_seteof",
+          "offset": 96
+        },
+        {
+          "type": "void**",
+          "name": "f_setfileinfo",
+          "offset": 100
+        },
+        {
+          "type": "void**",
+          "name": "f_setpos",
+          "offset": 104
+        },
+        {
+          "type": "void**",
+          "name": "f_unlink",
+          "offset": 108
+        },
+        {
+          "type": "void**",
+          "name": "f_write",
+          "offset": 112
+        },
+        {
+          "type": "void**",
+          "name": "f_writep",
+          "offset": 116
+        },
+        {
+          "type": "void**",
+          "name": "f_shutdown",
+          "offset": 120
+        }
+      ]
+    },
+    {
+      "name": "Blizzard__File__StreamRecord",
+      "size": 4,
+      "members": [
+        {
+          "type": "void*",
+          "name": "handle",
+          "offset": 0
         }
       ]
     },
@@ -7430,6 +7654,17 @@
       ]
     },
     {
+      "name": "HOSFILE__",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unused",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "HPROPCONTEXT__",
       "size": 4,
       "members": [
@@ -7441,7 +7676,40 @@
       ]
     },
     {
+      "name": "HSLOG__",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unused",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "HSRGN__",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unused",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "HTEXTBLOCK__",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unused",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "HTEXTFONT__",
       "size": 4,
       "members": [
         {
@@ -8999,6 +9267,17 @@
       "size": 0
     },
     {
+      "name": "System_File__Stacked__FileParms",
+      "size": 4,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "offset",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "TExtraInstanceRecyclable",
       "size": 4,
       "members": [
@@ -9699,6 +9978,32 @@
       ]
     },
     {
+      "name": "TSGrowableArray_TSList_CONSOLECOMMAND",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "TSList_CONSOLECOMMAND*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_TSList_CShaderEffect",
       "size": 16,
       "members": [
@@ -9714,6 +10019,32 @@
         },
         {
           "type": "TSList_CShaderEffect*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_TSList_CVar",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "TSList_CVar*",
           "name": "m_data",
           "offset": 8
         },
@@ -10225,6 +10556,38 @@
       ]
     },
     {
+      "name": "TSLink_CONSOLECOMMAND",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CONSOLECOMMAND*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CONSOLECOMMAND*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CONSOLELINE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CONSOLELINE*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CONSOLELINE*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSLink_CRenderBatch",
       "size": 8,
       "members": [
@@ -10283,6 +10646,22 @@
         },
         {
           "type": "CStatus__STATUSENTRY*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CVar",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CVar*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CVar*",
           "name": "m_next",
           "offset": 4
         }
@@ -14217,6 +14596,54 @@
       ]
     },
     {
+      "name": "TSHashObject_CONSOLECOMMAND_HASHKEY_STRI",
+      "size": 24,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_hashval",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CONSOLECOMMAND",
+          "name": "m_linktoslot",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_CONSOLECOMMAND",
+          "name": "m_linktofull",
+          "offset": 12
+        },
+        {
+          "type": "HASHKEY_STRI",
+          "name": "m_key",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CONSOLECOMMAND",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CONSOLECOMMAND",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CONSOLELINE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CONSOLELINE",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "TSLinkedNode_CRenderBatch",
       "size": 8,
       "members": [
@@ -14302,6 +14729,43 @@
       "members": [
         {
           "type": "TSLink_CStatus__STATUSENTRY",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSHashObject_CVar_HASHKEY_STRI",
+      "size": 24,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_hashval",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CVar",
+          "name": "m_linktoslot",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_CVar",
+          "name": "m_linktofull",
+          "offset": 12
+        },
+        {
+          "type": "HASHKEY_STRI",
+          "name": "m_key",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CVar",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CVar",
           "name": "m_link",
           "offset": 0
         }
@@ -14634,6 +15098,70 @@
       ]
     },
     {
+      "name": "TSList_CONSOLECOMMAND",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CONSOLECOMMAND",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CGxString",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CGxString",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CONSOLELINE",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CONSOLELINE",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CVar",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CVar",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSList_EvtMessage",
       "size": 12,
       "members": [
@@ -14756,22 +15284,6 @@
         },
         {
           "type": "TSLink_CGxShader",
-          "name": "m_terminator",
-          "offset": 4
-        }
-      ]
-    },
-    {
-      "name": "TSList_CGxString",
-      "size": 12,
-      "members": [
-        {
-          "type": "ptrdiff_t",
-          "name": "m_linkoffset",
-          "offset": 0
-        },
-        {
-          "type": "TSLink_CGxString",
           "name": "m_terminator",
           "offset": 4
         }
@@ -16481,6 +16993,78 @@
       ]
     },
     {
+      "name": "CONSOLECOMMAND",
+      "size": 36,
+      "members": [
+        {
+          "type": "TSHashObject_CONSOLECOMMAND_HASHKEY_STRI",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "COMMANDHANDLER",
+          "name": "m_handler",
+          "offset": 24
+        },
+        {
+          "type": "char*",
+          "name": "m_helpText",
+          "offset": 28
+        },
+        {
+          "type": "CATEGORY",
+          "name": "m_category",
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "CONSOLELINE",
+      "size": 36,
+      "members": [
+        {
+          "type": "TSLinkedNode_CONSOLELINE",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t*",
+          "name": "buffer",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "chars",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "charsalloc",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "inputpos",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "inputstart",
+          "offset": 24
+        },
+        {
+          "type": "COLOR_T",
+          "name": "colorType",
+          "offset": 28
+        },
+        {
+          "type": "CGxString*",
+          "name": "fontPointer",
+          "offset": 32
+        }
+      ]
+    },
+    {
       "name": "CShaderEffect",
       "size": 468,
       "members": [
@@ -16525,6 +17109,77 @@
           "name": "pixelShaders",
           "arrsize": 16,
           "offset": 404
+        }
+      ]
+    },
+    {
+      "name": "CVar",
+      "size": 112,
+      "members": [
+        {
+          "type": "TSHashObject_CVar_HASHKEY_STRI",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_category",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "offset": 28
+        },
+        {
+          "type": "RCString",
+          "name": "m_stringValue",
+          "offset": 32
+        },
+        {
+          "type": "float",
+          "name": "m_floatValue",
+          "offset": 44
+        },
+        {
+          "type": "int32_t",
+          "name": "m_intValue",
+          "offset": 48
+        },
+        {
+          "type": "int32_t",
+          "name": "m_modified",
+          "offset": 52
+        },
+        {
+          "type": "RCString",
+          "name": "m_defaultValue",
+          "offset": 56
+        },
+        {
+          "type": "RCString",
+          "name": "m_resetValue",
+          "offset": 68
+        },
+        {
+          "type": "RCString",
+          "name": "m_latchedValue",
+          "offset": 80
+        },
+        {
+          "type": "RCString",
+          "name": "m_help",
+          "offset": 92
+        },
+        {
+          "type": "void**",
+          "name": "m_callback",
+          "offset": 104
+        },
+        {
+          "type": "void*",
+          "name": "m_arg",
+          "offset": 108
         }
       ]
     },
@@ -16625,6 +17280,68 @@
           "type": "CSimpleFrame*",
           "name": "frame",
           "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TSHashTable_CONSOLECOMMAND_HASHKEY_STRI",
+      "size": 40,
+      "members": [
+        {
+          "type": "void**",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "TSList_CONSOLECOMMAND",
+          "name": "m_fulllist",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fullnessIndicator",
+          "offset": 16
+        },
+        {
+          "type": "TSGrowableArray_TSList_CONSOLECOMMAND",
+          "name": "m_slotlistarray",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_slotmask",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "TSHashTable_CVar_HASHKEY_STRI",
+      "size": 40,
+      "members": [
+        {
+          "type": "void**",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "TSList_CVar",
+          "name": "m_fulllist",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fullnessIndicator",
+          "offset": 16
+        },
+        {
+          "type": "TSGrowableArray_TSList_CVar",
+          "name": "m_slotlistarray",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_slotmask",
+          "offset": 36
         }
       ]
     },
@@ -18183,6 +18900,27 @@
       ]
     },
     {
+      "name": "BATCHEDRENDERFONTDESC",
+      "size": 40,
+      "members": [
+        {
+          "type": "TSHashObject_BATCHEDRENDERFONTDESC_HASHKEY_PTR",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "CGxFont*",
+          "name": "m_face",
+          "offset": 24
+        },
+        {
+          "type": "TSExplicitList_CGxString",
+          "name": "m_strings",
+          "offset": 28
+        }
+      ]
+    },
+    {
       "name": "CScriptRegion",
       "size": 156,
       "members": [
@@ -18325,27 +19063,6 @@
           "type": "uint32_t",
           "name": "dword1254",
           "offset": 4704
-        }
-      ]
-    },
-    {
-      "name": "BATCHEDRENDERFONTDESC",
-      "size": 40,
-      "members": [
-        {
-          "type": "TSHashObject_BATCHEDRENDERFONTDESC_HASHKEY_PTR",
-          "name": "b_base",
-          "offset": 0
-        },
-        {
-          "type": "CGxFont*",
-          "name": "m_face",
-          "offset": 24
-        },
-        {
-          "type": "TSExplicitList_CGxString",
-          "name": "m_strings",
-          "offset": 28
         }
       ]
     },

@@ -1,35 +1,45 @@
-g_commandHistory 00ca3a28 l ; char[10394]
-g_commandHistoryIndex 00caba28 l ; uint32
-g_consoleCommandHash 00caba30 l ; TSHashTable<CONSOLECOMMAND, HASHKEY_CONSTSTRI>
-g_defaultCommand 00caba2c l ; command function pointer
-s_active 007649af l ; int32 as boolean
-s_baseTextFlags 00adbae4 l ; uint32
-s_batch 00ca1874 l ; CGxStringBatch*
-s_caret 00ca1694 l ; int32
-s_caretpixwidth 00ca1718 l
-s_caretpixheight 00ca1690 l
-s_charSpacing 00ca19a8 l ; float
-s_completedCmd 00ca1984 l ; int32
-s_completionMode 00ca1980 l
-s_consoleAccessEnabled 00cabcc4 l ; int32 as boolean
-s_consoleHeight 00ca19b0 l ; float
-s_consoleHotKey 00adbac4 l ; KEY
-s_consoleResizeState 00ca1990 l ; CONSOLERESIZESTATE
-s_currlineptr 00ca1720 l ; CONSOLELINE*
-s_fontHeight 00adbacc l ; float
-s_fontName 00ca1768 l ; char[260]
-s_highlightState 00ca1994 l ; HIGHLIGHTSTATE
-s_highlightLeftCharIndex 00ca19a0 l ; uint32
-s_highlightRightCharIndex 00ca19a4 l ; uint32
-s_historyIndex 00adbac8 l ; int32
-s_hRect 00adbad4 l ; RECTF
-s_inputString 00ca171c l ; CGxString*
-s_layerBackground 00ca1724 l ; HLAYER
-s_layerText 00ca1870 l ; HLAYER
-s_partial 00ca1878 l ; char[100]
-s_rect 00adbab4 l ; RECTF
-s_repeatCount 00ca186c l ; uint32
-s_repeatBuffer 00ca1728 l ; char[64]
-carettime 00ca19f0 l ; float
-s_NumLines 00ca197c l ; int32
-s_textFont 00ca198c l ; HTEXTFONT
+s_active 00CA1978 l type="int32_t" ; int32 as boolean
+s_rect 00ADBAB4 l type="RECTF" ; RECTF
+s_consoleHotKey 00ADBAC4 l type="KEY" ; KEY
+s_historyIndex 00ADBAC8 l type="int32_t" ; int32
+s_fontHeight 00ADBACC l type="float" ; float
+s_hRect 00ADBAD4 l type="RECTF" ; RECTF
+s_baseTextFlags 00ADBAE4 l type="uint32_t" ; uint32
+s_linelist 00ADBBB0 l type="TSList_CONSOLELINE"
+s_caretpixheight 00CA1690 l type="float"
+s_caret 00CA1694 l type="int32_t" ; int32
+s_copyText 00CA1698 l
+s_caretpixwidth 00CA1718 l type="float"
+s_inputString 00CA171C l type="CGxString*"
+s_currlineptr 00CA1720 l type="CONSOLELINE*"
+s_layerBackground 00CA1724 l type="HLAYER"
+s_repeatBuffer 00CA1728 l type="char[64]"
+s_fontName 00CA1768 l type="char[260]"
+s_repeatCount 00CA186C l type="uint32_t"
+s_layerText 00CA1870 l type="HLAYER"
+s_batch 00CA1874 l type="CGxStringBatch*"
+s_partial 00CA1878 l type="char[256]"
+s_NumLines 00CA197C l type="int32_t"
+s_completionMode 00CA1980 l type="int32_t"
+s_completedCmd 00CA1984 l type="char*"
+s_textFont 00CA198C l type="HTEXTFONT" ; HTEXTFONT
+s_consoleResizeState 00CA1990 l type="CONSOLERESIZESTATE" ; CONSOLERESIZESTATE
+s_highlightState 00CA1994 l type="HIGHLIGHTSTATE" ; HIGHLIGHTSTATE
+s_highlightHStart 00CA1998 l type="float"
+s_highlightHEnd 00CA199C l type="float"
+s_highlightLeftCharIndex 00CA19A0 l type="uint32_t"
+s_highlightRightCharIndex 00CA19A4 l type="uint32_t"
+s_charSpacing 00CA19A8 l type="float"
+s_consoleHeight 00CA19B0 l type="float"
+s_critsect 00CA19B4 l type="SCritSect"
+carettime 00CA19F0 l type="float"
+s_fileName 00CA19F4 l type="char*"
+CVar__m_initialized 00CA19F9 l type="bool"
+s_registeredCVars 00CA19FC l type="TSHashTable_CVar_HASHKEY_STRI"
+g_commandHistory 00CA3A28 l type="char[32][1024]"
+g_commandHistoryIndex 00CABA28 l type="uint32_t"
+g_defaultCommand 00CABA2C l type="COMMANDHANDLER" ; command function pointer
+g_consoleCommandHash 00CABA30 l type="TSHashTable_CONSOLECOMMAND_HASHKEY_STRI" ; TSHashTable<CONSOLECOMMAND, HASHKEY_CONSTSTRI>
+s_hwDetect 00CABCBE l type="bool"
+s_consoleAccessEnabled 00CABCC4 l type="int32_t" ; int32 as boolean
+s_requestedFormat 00CABCD8 l type="CGxFormat"

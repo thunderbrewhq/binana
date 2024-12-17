@@ -1,2 +1,13 @@
 FrameScript_Execute 00819EA0 f end=0081A2B5 type="void __stdcall func(int32_t function, FrameScript_Object* object, int32_t args, char* args_fmt, FrameScript_EventObject* eventObject)"
-FrameScript_SignalEvent 0081B530 f end=0081B549
+FrameScript_SignalEvent 0081B530 f end=0081B549 ; FrameScript_SignalEvent(unsigned int, char const*, ...)
+FrameScript_Sprintf 00818070 f end=0081839F type="void __stdcall func(lua_State* L, int startIndex, char* buffer, uint32_t bufferSize)" ; startIndex is the index of starting argument on stack
+FrameScript_Object__CreateScriptMetaTable 00816790 f end=008167D3 ; FrameScript_Object::CreateScriptMetaTable(lua_State*, void (*)(lua_State*))
+FrameScript_Object__FillScriptMethodTable 008167E0 f end=00816822 ; FrameScript_Object::FillScriptMethodTable(lua_State*, FrameScript_Method*, int)
+FrameScript_Object__FrameScript_Object 00819830 f end=0081984B type="void __thiscall func(FrameScript_Object* this)" ; FrameScript_Object::FrameScript_Object()
+FrameScript_Object__destructor 00819850 f end=00819872 ; FrameScript_Object::~FrameScript_Object()
+FrameScript_Object__UnregisterScriptObject 008199C0 f end=00819A58 ; FrameScript_Object::UnregisterScriptObject(char const*)
+FrameScript_Object__RunScript 0081A2C0 f end=0081A2E7 ; FrameScript_Object__RunScript(FrameScript_Object::ScriptIx const&, int, char const*)
+FrameScript_SignalEvent 0081AA00 f end=0081AB59 ; FrameScript_SignalEvent(unsigned int, lua_State*, int)
+vFrameScript_SignalEvent 0081AC90 f end=0081AE4F ; vFrameScript_SignalEvent(unsigned int, char const*, char*)
+FrameScript_CreateEvents 0081B5F0 f end=0081B714 ; FrameScript_CreateEvents(char const**, unsigned int)
+FrameScript_GetObjectThis 004A81B0 f end=004A8235 ; FrameScript_GetObjectThis(lua_State*, int)

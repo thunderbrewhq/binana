@@ -33,7 +33,7 @@ struct CGxFormat {
   C2iVector size;
   uint32_t unk1C;
   uint32_t sampleCount;
-  float float24;
+  float float24; // multisampleQuality? write at 00769693
   CGxFormat__Format colorFormat;
   uint32_t refreshRate;
   uint32_t vsync;

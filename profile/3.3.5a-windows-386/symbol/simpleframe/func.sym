@@ -1,0 +1,2 @@
+CSimpleFrame_SetAlpha 0049F9E0 f end=0049FAA1 type="void __stdcall func(lua_State* L)"
+CSimpleFrame__SetFrameAlpha 0048EA10 f end=0048EA32 type="void __thiscall func(CSimpleFrame* this, uint8_t alpha)"

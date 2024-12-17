@@ -7,13 +7,25 @@ SStrChr 0076E6E0 f end=0076E712
 SStrChrR 0076E720 f end=0076E756
 SStrCmp 0076E760 f end=0076E77B
 SStrCmpI 0076E780 f end=0076E79B
+SStrCmpUTF8I 0076EA40 f end=0076EAA3
 SStrCopy 0076ED20 f end=0076ED98
-SStrLen 0076EE30 f end=0076EE5E
+SStrLen 0076EE30 f end=0076EE5E type="int32_t __stdcall func(char* str)"
 SStrPack 0076EF70 f end=0076F001
+ISStrVPrintf 0076F010 f end=0076F063
 SStrPrintf 0076F070 f end=0076F09E type="int32_t __stdcall func(char* dest, size_t maxchars, char* format, ...)"
 SStrVPrintf 0076F0A0 f end=0076F0CE
+SStrToInt 0076F0D0 f end=0076F136
+SStrToUnsigned 0076F140 f end=0076F189
 SStrTokenize 0076F1E0 f end=0076F331
+SStrHash 0076F340 f end=0076F418
 SStrHashHT 0076F640 f end=0076F6B9
+SStrUpper 0076F6C0 f end=0076F6D3
+SStrLower 0076F6E0 f end=0076F6F3
+SStrStr 0076F700 f end=0076F762
+SStrCmp 0076F770 f end=0076F7D2
+SStrStrUTF8I 0076F7E0 f end=0076F852
+SStrDupA 0076F9E0 f end=0076FA35
+SStrToFloat 0076FB80 f end=0076FDA9
 SRegLoadValue 00770840 f end=007708E9
 SRegSaveValue 007709A0 f end=007709E8
 SErrSetLastError 00771870 f end=00771886
@@ -33,17 +45,18 @@ SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *t
 SSyncObject__Wait 00774690 f end=007746A4
 SEvent__Set 00774720 f end=0077472A
 SEvent__Reset 00774730 f end=0077473A
+SLogCreate 007757E0 f end=007758D6 type="int32_t __stdcall func(char* filename, uint32_t flags, HSLOG* log)"
 SRgnCombineRectf 00777420 f end=00777588 type="void __stdcall func(HSRGN handle, RECTF* rect, void* param, int32_t combinemode)"
 SRgnGetBoundingRectf 00777590 f end=00777897 type="void __stdcall func(HSRGN handle, RECTF* rect)"
 SRgnDelete 00777940 f end=00777971 type="void __stdcall func(HSRGN handle)"
 SRgnCreate 00777980 f end=00777A78 type="void __stdcall func(HSRGN* handlePtr, uint32_t reserved)"
 TSFixedArray_uint32_t_Set 0077AC80 f end=0077ACE4 type="void __thiscall func(TSFixedArray_uint32_t* this, uint32_t count, uint32_t* data)"
-BigBuffer__operator_index 0077ACF0 f end=0077AD10 type="uint32_t __thiscall func(BigBuffer* this, uint32_t index)" ; public: unsigned int __thiscall BigBuffer::operator[](unsigned int)const  
+BigBuffer__operator_index 0077ACF0 f end=0077AD10 type="uint32_t __thiscall func(BigBuffer* this, uint32_t index)" ; public: unsigned int __thiscall BigBuffer::operator[](unsigned int)const
 Compare 0077AD10 f end=0077ADC5 type="int32_t __fastcall func(BigBuffer* a, BigBuffer* b)"
 HighBitPos 0077ADD0 f end=0077AE5A type="uint32_t __stdcall func(BigBuffer* a)"
 SBigCompare 0077AE60 f end=0077AE77 type="int32_t __stdcall func(BigData* b, BigData* c)"
 BigStack__destructor 0077AE80 f end=0077AEB1 type="void __thiscall func(BigStack* this)" ; public: __thiscall BigStack::~BigStack(void)
-BigBuffer__operator_index 0077AEC0 f end=0077AF2D type="uint32_t* __thiscall func(BigBuffer* this, uint32_t index)" ; public: unsigned int & __thiscall BigBuffer::operator[](unsigned int)const  
+BigBuffer__operator_index 0077AEC0 f end=0077AF2D type="uint32_t* __thiscall func(BigBuffer* this, uint32_t index)" ; public: unsigned int & __thiscall BigBuffer::operator[](unsigned int)const
 BigBuffer__SetCount 0077AF30 f end=0077AF7C type="void __thiscall func(BigBuffer* this, uint32_t count)"
 BigBuffer__Trim 0077AF80 f end=0077AFE3 type="void __thiscall func(BigBuffer* this)" ; public: void __thiscall BigBuffer::Trim(void)const
 BigStack__BigStack 0077AFF0 f end=0077B01F type="void __thiscall func(BigBuffer* this)"
@@ -57,7 +70,7 @@ Shr 0077B700 f end=0077B7E8 type="void __stdcall func(BigBuffer* a, BigBuffer* b
 FromBinary 0077B7F0 f end=0077B8AD type="void __stdcall func(BigBuffer* buffer@<edi>, void* data, uint32_t bytes)" ; void FromBinary(class BigBuffer &,void const *,unsigned int)
 FromUnsigned 0077B8B0 f end=0077B90B type="void __stdcall func(BigBuffer* buffer@<edi>, uint32_t value)" ; void FromUnsigned(class BigBuffer &,unsigned int)
 ToBinaryAppend 0077B910 f end=0077B9DC type="void __stdcall func(TSGrowableArray_uint8_t* output, BigBuffer* buffer)" ; _ToBinaryAppend(TSGrowableArray<unsigned char>&, BigBuffer const&)
-SBigAdd 0077B9E0 f end=0077B9FC type="void __stdcall func(BigData* a, BigData* b, BigData* c)" 
+SBigAdd 0077B9E0 f end=0077B9FC type="void __stdcall func(BigData* a, BigData* b, BigData* c)"
 SBigBitLen 0077BA00 f end=0077BA52 type="void __stdcall func(BigData* a, uint32_t* bits)"
 SBigFromBinary 0077BA60 f end=0077BA7C type="void __stdcall func(BigData* num, void* data, uint32_t bytes)"
 SBigFromUnsigned 0077BA80 f end=0077BA98 type="void __stdcall func(BigData* num, uint32_t val)"

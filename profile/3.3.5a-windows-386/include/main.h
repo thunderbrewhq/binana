@@ -13,6 +13,11 @@
 #include "async/object.h"
 #include "async/queue.h"
 
+#include "bc/file/filesystem.h"
+#include "bc/file/stream.h"
+#include "bc/systemfile/stacked.h"
+#include "bc/osfile.h"
+
 #include "camera/camera.h"
 
 #include "cmd/option.h"
@@ -24,6 +29,11 @@
 #include "common/status.h"
 #include "common/refcount.h"
 #include "common/rcstring.h"
+
+#include "console/command.h"
+#include "console/line.h"
+#include "console/var.h"
+#include "console/types.h"
 
 #include "cursor/types.h"
 
@@ -76,6 +86,7 @@
 #include "storm/queue.h"
 #include "storm/region.h"
 #include "storm/thread.h"
+#include "storm/log.h"
 
 #include "tempest/box.h"
 #include "tempest/matrix.h"
@@ -85,6 +96,8 @@
 #include "tempest/rect.h"
 #include "tempest/sphere.h"
 #include "tempest/vector.h"
+
+#include "text/font.h"
 
 #include "texture/blp.h"
 #include "texture/texture.h"

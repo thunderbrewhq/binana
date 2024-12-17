@@ -1,6 +1,6 @@
 CDataStore__FetchWrite 00401070 f ; protected: int __thiscall CDataStore::FetchWrite(unsigned int,unsigned int,char const *,int)
 CDataStore__IsRead 004010D0 f ; CDataStore::IsRead() const
-CDataStore__Reset 004010E0 f ; CDataStore::Reset() 
+CDataStore__Reset 004010E0 f ; CDataStore::Reset()
 CDataStore__Finalize 00401130 f ; CDataStore::Finalize()
 CDataStore__destructor 004038A0 f ; CDataStore::~CDataStore()
 CDataStore__GetBufferParams 0047ADE0 f ; CDataStore::GetBufferParams(void const**, unsigned int*, unsigned int*)

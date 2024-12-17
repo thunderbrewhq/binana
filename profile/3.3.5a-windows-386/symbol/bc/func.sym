@@ -1,0 +1,14 @@
+Blizzard__File__Open 00427600 f end=0042765E
+Blizzard__File__Read 004276C0 f end=0042771F
+Blizzard__File__Write 004279B0 f end=00427A12
+Blizzard__File__Close 004270F0 f end=0042712f
+Blizzard__File__Delete 00427130 f end=0042716F ; Blizzard::File::Delete(char const*)
+Blizzard__File__MakeAbsolutePath 00427500 f end=00427551 ; Blizzard::File::MakeAbsolutePath(char const*, char*, int, bool)
+Blizzard__File__Move 00427560 f end=004275A8 ; Blizzard::File::Move(char const*, char const*)
+System_File__Stacked__file_init 0042D440 f end=0042D4F4 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+OsCloseFile 00461B00 f end=00461B09
+OsReadFile 00461B50 f end=00461B88
+OsGetFileSize 00461BD0 f end=00461BF4
+OsSetCurrentDirectory 00461DB0 f end=00461DD7
+OsCreateFile 00461FA0 f end=00461FFA
+OsCreateDirectory 00461D10 f end=00461D3F

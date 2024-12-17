@@ -20,4 +20,5 @@ GxuUpdateSingleColorTexture 006BFDA0 f end=006BFDFE
 GxuXformCreateProjection_SG 006BFE00 f end=006BFE5C
 GxuXformCreateLookAtSgCompat 006BFE60 f end=006C004D
 GxuXformCreateOrtho 006BF4C0 f end=006BF5A4 type="void __stdcall func(float minX, float maxX, float minY, float maxY, float minZ, float maxZ, C44Matrix* dst)"
+GxuXformCreateOrthoDepth 006BF5B0 f end=006BF6CD
 IGxuFontGlyphRenderGlyph 006C8CC0 f end=006C8E6B

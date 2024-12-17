@@ -1,42 +1,55 @@
-SetInputString 00763730 f end=007637CD ; UC
-ReserveInputSpace 007637D0 f end=0076382B
-ResetHighlight 00763830 f end=00763855
-UpdateHighlight 00763860 f end=00763996
-OnMouseUp 007639A0 f end=007639CF
-OnMouseMove 007639D0 f end=00763A54
-MakeCommandCurrent 00763A60 f end=00763AAA
-ConsoleCommandHistoryPrev 00763B40 f end=00763B83 ; UC
-ConsoleCommandHistoryNext 00763B90 f end=00763BD6 ; UC
-OnKeyUp 00763BE0 f end=00763C0A
-ConsolePostClose 00763C50 f end=00763C5D
-EventCloseCallback 00763D60 f end=00763D71
-DrawBackground 00763DF0 f end=00764039
-DrawHighLight 00764040 f end=00764196
-DrawCaret 007641A0 f end=007643EA
-PaintBackground 007643F0 f end=00764413
-GetInputLine 00764520 f end=007645D3
-PaintText 007645E0 f end=00764788
-PasteInInputLine 00764800 f end=00764985
-OnChar 00764990 f end=00764A03
-OnMouseDown 00764A10 f end=00764B88
-OnKeyDownRepeat 00764B90 f end=00764E4F
-ConsoleWrite 00765270 f end=00765359
-ConsoleWriteA 007653B0 f end=00765400
-ConsoleCommandExecute 007658A0 f end=007659BF
-OnIdle 007659C0 f end=00765AE5
-OnKeyDown 00765AF0 f end=00765FB2
-RegisterHandlers 00765FF0 f end=007660C2
-ConsoleScreenInitialize 00766140 f end=00766295
-CVarLoadFile 00766530 f end=007665C2
-CVar__Set 007668C0 f end=00766936
-CVarSaveFile 00767100 f end=0076719C
-CVar__Destroy 007673F0 f end=00767434
-CVar__Register 00767FC0 f end=007681E9
-CVar__Initialize 00768340 f end=00768402
-ConsoleCommand_Quit 00768410 f end=0076841B
-ConsoleCommandHistory 00768440 f end=0076845B
-ConsoleCommandUnregister 007689E0 f end=00768A19
-ConsoleCommandRegister 00769100 f end=007691B3
-ConsoleAccessGetEnabled 00769230 f end=00769236
-ConsoleDeviceInitialize 0076AB80 f end=0076B287
-ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6
+GenerateNodeString 00763680 f end=0076372C type="void __stdcall func(CONSOLELINE* node)"
+SetInputString 00763730 f end=007637CD type="void __stdcall func(char* text)" ; UC
+ReserveInputSpace 007637D0 f end=0076382B type="void __fastcall func(CONSOLELINE* lineptr, uint32_t chars)"
+ResetHighlight 00763830 f end=00763855 type="void __stdcall func()"
+UpdateHighlight 00763860 f end=00763996 type="void __stdcall func()"
+OnMouseUp 007639A0 f end=007639CF type="int32_t __stdcall func(EVENT_DATA_MOUSE* data, void* param)"
+OnMouseMove 007639D0 f end=00763A54 type="int32_t __stdcall func(EVENT_DATA_MOUSE* data, void* param)"
+MakeCommandCurrent 00763A60 f end=00763AAA type="void __stdcall func(CONSOLELINE* lineptr@<eax>, char* command)"
+CONSOLELINE__Backspace 00763AB0 f end=00763B08 type="void __thiscall func(CONSOLELINE* this)" ; static void CONSOLELINE::Backspace()
+CONSOLELINE__Delete 00763B10 f end=00763B40 type="void __thiscall func(CONSOLELINE* this)" ; void CONSOLELINE::Delete()
+CONSOLELINE__Up 00763B40 f end=00763B83 type="void __thiscall func(CONSOLELINE* this)" ; static void CONSOLELINE::Up()
+CONSOLELINE__Down 00763B90 f end=00763BD6 type="void __thiscall func(CONSOLELINE* this)" ; static void CONSOLELINE::Down()
+OnKeyUp 00763BE0 f end=00763C0A type="int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)"
+ConsolePostClose 00763C50 f end=00763C5D type="void __stdcall func()"
+EventCloseCallback 00763D60 f end=00763D71 type="int32_t __stdcall func(void* param)"
+DrawBackground 00763DF0 f end=00764039 type="void __stdcall func()"
+DrawHighLight 00764040 f end=00764196 type="void __stdcall func()"
+DrawCaret 007641A0 f end=007643EA type="void ___stdcall func(C3Vector* caretpos)"
+PaintBackground 007643F0 f end=00764413 type="void __stdcall func()"
+EnforceMaxLines 007644B0 f end=0076451C
+GetInputLine 00764520 f end=007645D3 type="CONSOLELINE* __stdcall func()"
+PaintText 007645E0 f end=00764788 type="void __stdcall func(void* param, RECTF* rect, RECTF* visible, float elapsedSec)"
+GetLineAtMousePosition 00764790 f end=007647F5 type="CONSOLELINE* __stdcall func(float y)"
+PasteInInputLine 00764800 f end=00764985 type="void __stdcall func(char* characters)"
+OnChar 00764990 f end=00764A03 type="int32_t __stdcall func(EVENT_DATA_CHAR* data, void* param)"
+OnMouseDown 00764A10 f end=00764B88 type="int32_t __stdcall func(EVENT_DATA_MOUSE* data, void* param)"
+OnKeyDownRepeat 00764B90 f end=00764E4F type="int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)"
+ConsoleWrite 00765270 f end=00765359 type="void __stdcall func(char* str, COLOR_T color)"
+ConsoleWriteA 007653B0 f end=00765400 type="void __stdcall func(char* str, COLOR_T color, ...)"
+ConsoleCommandExecute 007658A0 f end=007659BF type="void __stdcall func(char* commandLine, int32_t addToHistory)"
+OnIdle 007659C0 f end=00765AE5 type="int32_t __stdcall func(EVENT_DATA_IDLE* data,void* param)"
+OnKeyDown 00765AF0 f end=00765FB2 type="int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)"
+RegisterHandlers 00765FF0 f end=007660C2 type="void __stdcall func()"
+ConsoleScreenInitialize 00766140 f end=00766295 type="void __stdcall func()"
+CVar__Load 00766400 f end=0076652C type="int32_t __stdcall func(HOSFILE file)"
+CVar__Load 00766530 f end=007665C2 type="int32_t __stdcall func(char* filename)"
+CVar__SaveCvar 00766640 f end=007666A1 type="bool __stdcall func(char* name, char* value, void* param)"
+CVar__Set 007668C0 f end=00766936 type="bool __thiscall func(CVar* this, char* value, bool setValue, bool setReset, bool setDefault, bool a6)"
+CVar__IterateForArchive 00767030 f end=007670DA type="int32_t __stdcall func(uint32_t a1, uint32_t a2, void* callback, void* param)"
+CVarSaveFile 00767100 f end=0076719C type="void __stdcall func()"
+CVar__Destroy 007673F0 f end=00767434 type="void __stdcall func()"
+CVar__Register 00767FC0 f end=007681E9 type="CVar* __stdcall func(char* name, char* help, uint32_t flags, const char* value, void* fcn, uint32_t category, bool a7, void* arg, bool a9)"
+CVar__Initialize 00768340 f end=00768402 type="void __stdcall func(char* filename)"
+ConsoleCommand_Quit 00768410 f end=0076841B type="int32_t __stdcall func(char* command, char* arguments)"
+ConsoleCommandHistory 00768440 f end=0076845B type="char* __stdcall func(uint32_t index)"
+ConsoleCommandUnregister 007689E0 f end=00768A19 type="void __stdcall func(char* command)"
+ConsoleCommandComplete 00768A20 f end=00768AD6 type="int32_t __stdcall func(char* partial, char** previous, int32_t direction)"
+ConsoleCommandRegister 00769100 f end=007691B3 type="int32_t __stdcall func(char* command, COMMANDHANDLER handler, CATEGORY category, char* helpText)"
+ConsoleAccessGetEnabled 00769230 f end=00769236 type="int32_t __stdcall func()"
+SetGxCVars 00769950 f end=00769BF5
+ConsoleDeviceInitialize 0076AB80 f end=0076B287 type="int32_t __stdcall func(char* title, int32_t multithreaded)"
+ConsoleDetectSaveHardware 0076B620 f end=0076B7DB
+ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9
+ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
+RegisterGxCVars 0076A630 f end=0076AAA8

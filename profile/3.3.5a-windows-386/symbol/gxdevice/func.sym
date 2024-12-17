@@ -50,8 +50,8 @@ CGxDevice__IShaderLoad 00684970 f end=00684AC8 type="int32_t __thiscall func(CGx
 CGxDevice__ICursorCreate 00684AD0 f end=00684B4A type="void __thiscall func(CGxDevice* this, CGxFormat* format)"
 CGxDevice__CursorUnlock 00684B50 f end=00684B99 type="void __thiscall func(CGxDevice* this, uint32_t x, uint32_t y)"
 CGxDevice__Log 00684C20 f end=00684C3E type="void __stdcall func(char* format, ...)"
-CGxDevice__Log_CGxCaps 00684C40 f end=00684D07 type="void __stdcall func(CGxCaps* caps)" ; CGxDevice::Log(CGxCaps const&) const
-CGxDevice__Log_CGxFormat 00684D10 f end=00684D6C type="void __stdcall func(CGxFormat* format)"
+CGxDevice__Log 00684C40 f end=00684D07 type="void __stdcall func(CGxCaps* caps)" ; CGxDevice::Log(CGxCaps const&) const
+CGxDevice__Log 00684D10 f end=00684D6C type="void __stdcall func(CGxFormat* format)"
 CGxDevice__DeviceOverride 00684FE0 f end=00685036 type="void __thiscall func(CGxDevice* this, EGxOverride override, uint32_t value)"
 CGxDevice__AddDeviceRestoredCallback 006853B0 f end=006853C6 type="void __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)"
 CGxDevice__RemoveDeviceRestoredCallback 006853D0 f end=0068545C type="int32_t __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)"
@@ -87,3 +87,4 @@ CGxDevice__NewD3d 00689EF0 f end=00689F14 type="CGxDevice* __stdcall func()"
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
 CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF type="void __thiscall func(CGxDevice* this, CGxTex* texId, uint32_t* width, uint32_t* height, uint32_t* baseMip, uint32_t* mipCount)"
+CGxDevice__LogOpen 00683670 f end=006836A4 type="void __stdcall func()" ; static void CGxDevice::LogOpen(void)
