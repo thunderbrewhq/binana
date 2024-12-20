@@ -1351,7 +1351,7 @@ struct ItemRandomPropertiesRec {
   int32_t m_ID;
   const char* m_name;
   int32_t m_enchantment[5];
-  const char* m_name;
+  const char* m_name_lang;
 };
 
 struct ItemRandomSuffixRec {
@@ -4214,7 +4214,7 @@ struct ItemRandomPropertiesRec {
   int32_t m_ID;
   const char* m_name;
   int32_t m_enchantment[5];
-  const char* m_name;
+  const char* m_name_lang;
 };
 
 struct ItemRandomSuffixRec {

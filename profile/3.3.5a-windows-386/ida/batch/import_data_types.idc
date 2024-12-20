@@ -50,8 +50,11 @@ static import_data_types() {
 	apply_type(0x006160B0, "int32_t __usercall func@<eax>(uint32_t** image@<eax>, MipBits* mipImages@<ecx>, uint32_t width@<edx>, uint32_t height)");
 	apply_type(0x00616800, "void __stdcall func(CURSORMODE mode)");
 	apply_type(0x00616CA0, "void __thiscall func(TSGrowableArray_CImVector* this, uint32_t count)");
+	apply_type(0x00681210, "int32_t __stdcall func(TSGrowableArray_CGxMonitorMode* modes)");
+	apply_type(0x00681220, "int32_t __stdcall func(CGxMonitorMode* mode)");
 	apply_type(0x00681630, "void __stdcall func(CGxQuery** query, EGxQueryType type)");
 	apply_type(0x006817C0, "void __stdcall func()");
+	apply_type(0x006817E0, "int __stdcall func(char* format, ...)");
 	apply_type(0x00681A60, "void __stdcall func()");
 	apply_type(0x00681AB0, "void __stdcall func(uint32_t indexCount, uint16_t* indices)");
 	apply_type(0x00681B00, "void __stdcall func(CGxBuf* buf, EGxVertexBufferFormat format)");
@@ -276,6 +279,8 @@ static import_data_types() {
 	apply_type(0x00766530, "int32_t __stdcall func(char* filename)");
 	apply_type(0x00766640, "bool __stdcall func(char* name, char* value, void* param)");
 	apply_type(0x007668C0, "bool __thiscall func(CVar* this, char* value, bool setValue, bool setReset, bool setDefault, bool a6)");
+	apply_type(0x00766A20, "bool __thiscall func(CVar* this)");
+	apply_type(0x00766AB0, "bool __thiscall func(CVar* this)");
 	apply_type(0x00767030, "int32_t __stdcall func(uint32_t a1, uint32_t a2, void* callback, void* param)");
 	apply_type(0x00767100, "void __stdcall func()");
 	apply_type(0x007673F0, "void __stdcall func()");
@@ -303,10 +308,15 @@ static import_data_types() {
 	apply_type(0x00769830, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
 	apply_type(0x00769860, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
 	apply_type(0x00769890, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
+	apply_type(0x00769950, "void __stdcall func(CGxFormat* format)");
 	apply_type(0x00769C00, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
+	apply_type(0x00769D00, "Hardware* __stdcall func()");
 	apply_type(0x0076A220, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
 	apply_type(0x0076A580, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
 	apply_type(0x0076AB80, "int32_t __stdcall func(char* title, int32_t multithreaded)");
+	apply_type(0x0076B3F0, "void __stdcall func(DefaultSettings* defaults, Hardware* hardware)");
+	apply_type(0x0076B520, "void __stdcall func(DefaultSettings* defaults, Hardware* hardware)");
+	apply_type(0x0076BA30, "void __stdcall func(Hardware* hardware, bool* hwChanged)");
 	apply_type(0x0076E4A0, "void __stdcall func(uint32_t flags, uint8_t changeMask)");
 	apply_type(0x0076E540, "void* __stdcall func(uint32_t bytes, char* filename, int32_t linenumber, uint32_t flags)");
 	apply_type(0x0076E5A0, "int32_t __stdcall func(void* ptr, char* filename, int32_t linenumber, uint32_t flags)");
@@ -365,6 +375,7 @@ static import_data_types() {
 	apply_type(0x00819EA0, "void __stdcall func(int32_t function, FrameScript_Object* object, int32_t args, char* args_fmt, FrameScript_EventObject* eventObject)");
 	apply_type(0x0086E200, "void __thiscall func(TSExplicitList_CGxBuf* this, CGxBuf* ptr)");
 	apply_type(0x008A1420, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
+	apply_type(0x008C8DE0, "EGxApi __stdcall func()");
 	apply_type(0x0095BFB0, "int32_t __stdcall func()");
 	apply_type(0x0095F3A0, "void __thiscall func(CSimpleModel* this)");
 	apply_type(0x0095F420, "FrameScript_Object__ScriptIx* __thiscall func(CSimpleModel* this, char* name, FrameScript_Object__ScriptData* data)");
@@ -649,6 +660,8 @@ static import_data_types() {
 	apply_type(0x00AD50D8, "WowClientDB_ObjectEffectPackageElemRec");
 	apply_type(0x00AD50FC, "WowClientDB_SoundFilterRec");
 	apply_type(0x00AD5120, "WowClientDB_SoundFilterElemRec");
+	apply_type(0x00AD87C4, "char*[8]");
+	apply_type(0x00AD87E4, "char*[6]");
 	apply_type(0x00AD90B0, "uint8_t[16]");
 	apply_type(0x00AD90C0, "uint8_t[2]");
 	apply_type(0x00ADBAB4, "RECTF");
@@ -658,6 +671,14 @@ static import_data_types() {
 	apply_type(0x00ADBAD4, "RECTF");
 	apply_type(0x00ADBAE4, "uint32_t");
 	apply_type(0x00ADBBB0, "TSList_CONSOLELINE");
+	apply_type(0x00ADBE5C, "uint32_t[4]");
+	apply_type(0x00ADBE6C, "uint8_t[2][2]");
+	apply_type(0x00ADBE70, "uint32_t[2][2]");
+	apply_type(0x00ADBE80, "float[4][2]");
+	apply_type(0x00ADBEA0, "float[4][2]");
+	apply_type(0x00ADBEC0, "float[4][2]");
+	apply_type(0x00ADBEE0, "float[4][2]");
+	apply_type(0x00ADBF00, "float[5][2]");
 	apply_type(0x00AF4998, "WowClientDB_LightSkyboxRec");
 	apply_type(0x00AF49BC, "WowClientDB_LightIntBandRec");
 	apply_type(0x00AF49E0, "WowClientDB_LightFloatBandRec");
@@ -671,6 +692,7 @@ static import_data_types() {
 	apply_type(0x00C25DE8, "uint32_t[1024]");
 	apply_type(0x00C26DE8, "CURSORMODE");
 	apply_type(0x00C26DF0, "uint32_t[53][1024]");
+	apply_type(0x00C5DE9C, "int32_t");
 	apply_type(0x00C5DF88, "CGxDevice*");
 	apply_type(0x00C5FFF8, "HSLOG");
 	apply_type(0x00CA1690, "float");
@@ -719,7 +741,9 @@ static import_data_types() {
 	apply_type(0x00CABAC0, "CVar*");
 	apply_type(0x00CABAC4, "CVar*");
 	apply_type(0x00CABAEC, "CVar*");
+	apply_type(0x00CABAF0, "DefaultSettings");
 	apply_type(0x00CABB30, "CVar*");
+	apply_type(0x00CABB38, "Hardware");
 	apply_type(0x00CABB6C, "CVar*");
 	apply_type(0x00CABB70, "CVar*");
 	apply_type(0x00CABB74, "CVar*");
@@ -730,8 +754,15 @@ static import_data_types() {
 	apply_type(0x00CABBAC, "CVar*");
 	apply_type(0x00CABBB0, "CVar*");
 	apply_type(0x00CABBB4, "CVar*");
+	apply_type(0x00CABCBC, "bool");
+	apply_type(0x00CABCBD, "bool");
 	apply_type(0x00CABCBE, "bool");
 	apply_type(0x00CABCC4, "int32_t");
+	apply_type(0x00CABCC8, "TSGrowableArray_CGxMonitorMode");
 	apply_type(0x00CABCD8, "CGxFormat");
+	apply_type(0x00CABD40, "CGxFormat");
+	apply_type(0x00CABDA8, "CGxFormat");
+	apply_type(0x00CABE00, "CGxFormat");
+	apply_type(0x00CABE98, "CGxFormat[5]");
 	apply_type(0x00D43020, "int32_t");
 }

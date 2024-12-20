@@ -2135,12 +2135,14 @@ WowClientDB_Cfg_CategoriesRec__LoadRecords 00659910 f end=00659A03 ; WowClientDB
 WowClientDB_CharBaseInfoRec__LoadRecords 00659B80 f end=00659C82 ; WowClientDB<CharBaseInfoRec>::LoadRecords(SFile*, char const*, int)
 WowClientDB__GetRecord 0065C290 f end=0065C2B4 ; 00005410
 WowClientDB_AchievementRec__GetRecordByIndex 0065F520 f end=0065F55B ; WowClientDB<AchievementRec>::GetRecordByIndex(int, void*)
+GxAdapterMonitorModes 00681210 f end=00681219 type="int32_t __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
+GxAdapterDesktopMode 00681220 f type="int32_t __stdcall func(CGxMonitorMode* mode)"
 GxDevCreate 00681290 f end=00681301
 GxSceneClear 006813B0 f end=006813CD
 GxTexUpdate 006813D0 f end=006813EC
 GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
 GxLogOpen 006817C0 f end=006817C5 type="void __stdcall func()"
-GxLog 006817E0 f end=006817F5
+GxLog 006817E0 f end=006817F5 type="int __stdcall func(char* format, ...)"
 GxDrawLockedElements 00681A60 f end=00681AAB type="void __stdcall func()"
 GxPrimIndexPtr 00681AB0 f end=00681AFB type="void __stdcall func(uint32_t indexCount, uint16_t* indices)"
 GxPrimVertexPtr 00681B00 f end=00681B4B type="void __stdcall func(CGxBuf* buf, EGxVertexBufferFormat format)"
@@ -2477,13 +2479,23 @@ OnIdle 007659C0 f end=00765AE5 type="int32_t __stdcall func(EVENT_DATA_IDLE* dat
 OnKeyDown 00765AF0 f end=00765FB2 type="int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)"
 RegisterHandlers 00765FF0 f end=007660C2 type="void __stdcall func()"
 ConsoleScreenInitialize 00766140 f end=00766295 type="void __stdcall func()"
+CVar__ArchiveCodeRegisteredOnly 007663F0 f end=007663F8 ; CVar::ArchiveCodeRegisteredOnly()
 CVar__Load 00766400 f end=0076652C type="int32_t __stdcall func(HOSFILE file)"
 CVar__Load 00766530 f end=007665C2 type="int32_t __stdcall func(char* filename)"
 CVar__SaveCvar 00766640 f end=007666A1 type="bool __stdcall func(char* name, char* value, void* param)"
+CVar__LogCvar 007666B0 f end=007666F9 ; CVar::LogCvar(char const*, char const*, void*)
+CVar__InternalSet 007667B0 f end=00766855 ; CVar::InternalSet(char const*, bool, bool, bool, bool) 
 CVar__Set 007668C0 f end=00766936 type="bool __thiscall func(CVar* this, char* value, bool setValue, bool setReset, bool setDefault, bool a6)"
-CVar__IterateForArchive 00767030 f end=007670DA type="int32_t __stdcall func(uint32_t a1, uint32_t a2, void* callback, void* param)"
+CVar__Reset 00766990 f end=00766A14 ; public: void __thiscall CVar::Reset(void)
+CVar__Default 00766A20 f end=00766AA4 type="bool __thiscall func(CVar* this)" ; public: bool __thiscall CVar::Default(void)
+CVar__Update 00766AB0 f end=00766B1F type="bool __thiscall func(CVar* this)" ; CVar::Update()
+CVar__IterateForArchive 00767030 f end=007670DA type="int32_t __stdcall func(uint32_t a1, uint32_t a2, void* callback, void* param)" ; CVar::IterateForArchive(unsigned int, unsigned int, int (*)(char const*, char const*, void*), void*)
 CVarSaveFile 00767100 f end=0076719C type="void __stdcall func()"
+CVar__LogAll 007671A0 f end=007671CF ; CVar::LogAll(char*, unsigned long, unsigned int, unsigned int) 
+CvarListCommandHandler 00767220 f end=0076734A ; 00005410
+CVar__DeleteAccountCVars 007673A0 f end=007673E4 ; 00005400
 CVar__Destroy 007673F0 f end=00767434 type="void __stdcall func()"
+CVar__Lookup 00767440 f end=0076745B ; CVar::Lookup(char const*)
 CVar__Register 00767FC0 f end=007681E9 type="CVar* __stdcall func(char* name, char* help, uint32_t flags, const char* value, void* fcn, uint32_t category, bool a7, void* arg, bool a9)"
 CVar__Initialize 00768340 f end=00768402 type="void __stdcall func(char* filename)"
 ConsoleCommand_Quit 00768410 f end=0076841B type="int32_t __stdcall func(char* command, char* arguments)"
@@ -2508,14 +2520,21 @@ CVGxOverrideCallback 00769810 f end=00769823 type="bool __stdcall func(CVar* h, 
 CVGxMaxFPSCallback 00769830 f end=00769856 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxMaxFPSBkCallback 00769860 f end=00769886 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxWindowResizeLockCallback 00769890 f end=007698A9 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
-SetGxCVars 00769950 f end=00769BF5
+UpdateGxCVars 007698B0 f end=0076994A ; 00005400
+SetGxCVars 00769950 f end=00769BF5 type="void __stdcall func(CGxFormat* format)" ; SetGxCVars(CGxFormat const&)
 CVGxStereoEnabledCallback 00769C00 f end=00769C2B type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
+ConsoleGetHardware 00769D00 f end=00769D0F type="Hardware* __stdcall func()"
+ConsoleDeviceDestroy 00769D40 f end=00769D7D ; 00005400
+ValidateFormatMonitor 00769E10 f end=00769FF0
+CCGxRestart 00769FF0 f end=0076A12E
 CVGxResolutionCallback 0076A220 f end=0076A57F type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxRefreshCallback 0076A580 f end=0076A62D type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 RegisterGxCVars 0076A630 f end=0076AAA8
 ConsoleDeviceInitialize 0076AB80 f end=0076B287 type="int32_t __stdcall func(char* title, int32_t multithreaded)"
+SetDefaults 0076B3F0 f type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; void SetDefaults(DefaultSettings&, const Hardware&)
+ConsoleDetectSetDefaultsFormat 0076B520 f end=0076B53D type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; ConsoleDetectSetDefaultsFormat(DefaultSettings&, const Hardware&)
 ConsoleDetectSaveHardware 0076B620 f end=0076B7DB
-ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9
+ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9 type="void __stdcall func(Hardware* hardware, bool* hwChanged)" ; ConsoleDetectDetectHardware(Hardware&, bool&)
 SMemSetDebugFlags 0076E4A0 f end=0076E4D2 type="void __stdcall func(uint32_t flags, uint8_t changeMask)"
 SMemAlloc 0076E540 f end=0076E59A type="void* __stdcall func(uint32_t bytes, char* filename, int32_t linenumber, uint32_t flags)"
 SMemFree 0076E5A0 f end=0076E5C4 type="int32_t __stdcall func(void* ptr, char* filename, int32_t linenumber, uint32_t flags)"
@@ -2700,6 +2719,7 @@ InternalClipboardGetString 008726F0 f end=008727BB
 InternalClipboardPutString 008727E0 f end=008728B8
 CShaderEffect__UpdateProjMatrix 00872C10 f end=00872CD5
 CVGxVideoOptionsVersionCallback 008A1420 f end=008A1423 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
+GxDefaultApi 008C8DE0 f type="EGxApi __stdcall func()"
 return_zero4_sub 008E5250 f end=008E5253 ; Script_ToggleTris
 ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
 CDataRecycler__Clear 0095CEC0 f end=0095CF39
@@ -3161,6 +3181,8 @@ g_objectEffectPackageDB 00AD50B4 l type="WowClientDB_ObjectEffectPackageRec" ; 0
 g_objectEffectPackageElemDB 00AD50D8 l type="WowClientDB_ObjectEffectPackageElemRec" ; 0x1D5
 g_soundFilterDB 00AD50FC l type="WowClientDB_SoundFilterRec" ; 0x1D6
 g_soundFilterElemDB 00AD5120 l type="WowClientDB_SoundFilterElemRec" ; 0x1D7
+formatToInt 00AD87C4 l type="char*[8]"
+g_gxApiNames 00AD87E4 l type="char*[6]"
 CBLPFile__s_eightBitAlphaLookup 00AD90B0 l type="uint8_t[16]"
 CBLPFile__s_oneBitAlphaLookup 00AD90C0 l type="uint8_t[2]"
 s_rect 00ADBAB4 l type="RECTF" ; RECTF
@@ -3170,6 +3192,14 @@ s_fontHeight 00ADBACC l type="float" ; float
 s_hRect 00ADBAD4 l type="RECTF" ; RECTF
 s_baseTextFlags 00ADBAE4 l type="uint32_t" ; uint32
 s_linelist 00ADBBB0 l type="TSList_CONSOLELINE"
+s_detailDoodadDensity 00ADBE5C l type="uint32_t[4]"
+s_animatingDoodads 00ADBE6C l type="uint8_t[2][2]"
+s_waterLOD 00ADBE70 l type="uint32_t[2][2]"
+s_particleDensity 00ADBE80 l type="float[4][2]"
+s_unitDrawDist 00ADBEA0 l type="float[4][2]"
+s_smallCull 00ADBEC0 l type="float[4][2]"
+s_distCull 00ADBEE0 l type="float[4][2]"
+s_farClip 00ADBF00 l type="float[5][2]"
 g_lightSkyboxDB 00AF4998 l type="WowClientDB_LightSkyboxRec" ; 0x15F
 g_lightIntBandDB 00AF49BC l type="WowClientDB_LightIntBandRec" ; 0x15D
 g_lightFloatBandDB 00AF49E0 l type="WowClientDB_LightFloatBandRec" ; 0x15C
@@ -3188,6 +3218,7 @@ s_cursorResetMode 00C25DE4 l
 s_cursorItem 00C25DE8 l type="uint32_t[1024]"
 s_cursorMode 00C26DE8 l type="CURSORMODE"
 s_cursorImages 00C26DF0 l type="uint32_t[53][1024]"
+_CURRENT_LANGUAGE 00C5DE9C l type="int32_t"
 g_theGxDevicePtr 00C5DF88 l type="CGxDevice*"
 CGxDevice__s_uiVertexShader 00C5DFDC l
 CGxDevice__s_shadowConstants 00C5DFE0 l
@@ -3241,7 +3272,9 @@ s_cvGxOverride 00CABABC l type="CVar*"
 s_cvGxFixLag 00CABAC0 l type="CVar*"
 s_cvMaxFPS 00CABAC4 l type="CVar*"
 s_cvGxVSync 00CABAEC l type="CVar*"
+s_defaults 00CABAF0 l type="DefaultSettings"
 s_cvVideoOptionsVersion 00CABB30 l type="CVar*"
+s_hardware 00CABB38 l type="Hardware"
 s_cvMaxFPSBk 00CABB6C l type="CVar*"
 s_cvGxTripleBuffer 00CABB70 l type="CVar*"
 s_cvGxDepthBits 00CABB74 l type="CVar*"
@@ -3252,7 +3285,14 @@ s_cvFixedFunction 00CABBA8 l type="CVar*"
 s_cvWidescreen 00CABBAC l type="CVar*"
 s_cvGxWindow 00CABBB0 l type="CVar*"
 s_cvWindowResizeLock 00CABBB4 l type="CVar*"
+s_hardwareDetected 00CABCBC l type="bool"
+s_hwChanged 00CABCBD l type="bool"
 s_hwDetect 00CABCBE l type="bool"
 s_consoleAccessEnabled 00CABCC4 l type="int32_t" ; int32 as boolean
+s_gxMonitorModes 00CABCC8 l type="TSGrowableArray_CGxMonitorMode"
 s_requestedFormat 00CABCD8 l type="CGxFormat"
+s_desktopFormat 00CABD40 l type="CGxFormat"
+s_fallbackFormat 00CABDA8 l type="CGxFormat"
+s_lastGoodFormat 00CABE00 l type="CGxFormat"
+s_formats 00CABE98 l type="CGxFormat[5]"
 CShaderEffect__s_enableShaders 00D43020 l type="int32_t"

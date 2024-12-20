@@ -1,5 +1,5 @@
 GxDevCreate 00681290 f end=00681301
-GxLog 006817E0 f end=006817F5
+GxLog 006817E0 f end=006817F5 type="int __stdcall func(char* format, ...)"
 OnPaint 004A8720 f end=004A8B58
 GxCapsWindowSizeInScreenCoords 00493BF0 f end=00493C09
 GxTexCreate 00681CB0 f end=00681D87
@@ -22,3 +22,6 @@ GxScenePresent 00682A00 f end=00682A33
 GxSceneClear 006813B0 f end=006813CD
 GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
 GxLogOpen 006817C0 f end=006817C5 type="void __stdcall func()"
+GxAdapterMonitorModes 00681210 f end=00681219 type="int32_t __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
+GxAdapterDesktopMode 00681220 f type="int32_t __stdcall func(CGxMonitorMode* mode)"
+GxDefaultApi 008C8DE0 f type="EGxApi __stdcall func()"

@@ -30,6 +30,8 @@
 #include "common/refcount.h"
 #include "common/rcstring.h"
 
+#include "console/hardware.h"
+#include "console/default_settings.h"
 #include "console/command.h"
 #include "console/line.h"
 #include "console/var.h"
@@ -54,6 +56,7 @@
 #include "gx/device.h"
 #include "gx/format.h"
 #include "gx/matrix_stack.h"
+#include "gx/monitor_mode.h"
 #include "gx/opengl.h"
 #include "gx/shader.h"
 #include "gx/state_bom.h"
