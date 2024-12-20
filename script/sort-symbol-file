@@ -9,5 +9,5 @@ if [ $# -eq 0 ]
 fi
 
 mv $1 "$1.bak"
-awk 1 "$1.bak" | sort -k2 -t' ' > $1
+awk '$2 = toupper($2)' "$1.bak" | awk 1 - | sort -k2 -t' ' > $1
 rm "$1.bak"
