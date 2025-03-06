@@ -23,21 +23,23 @@ enum CGxFormat__Format {
 struct CGxFormat {
   uint32_t unk0;
   bool hwTnL;
-  // TODO: verify this name 
-  bool hwCursor; // 0x5
+  bool hwCursor; // 0x5, UC
   int8_t fixLag;
   int8_t window;
-  uint32_t unk8;
+  bool aspect; // UC
   int32_t maximize;
   CGxFormat__Format depthFormat;
   C2iVector size;
-  uint32_t unk1C;
+                  // set by CVGxTripleBufferCallback
+  uint32_t backbuffers; // buffering? buffer? framebufferCount?
   uint32_t sampleCount;
-  float float24; // multisampleQuality? write at 00769693
+  float multisampleQuality; // UC, write at 00769693
   CGxFormat__Format colorFormat;
   uint32_t refreshRate;
   uint32_t vsync;
-  uint32_t unk34;
+  bool stereoEnabled; // UC, 34
+  // something to do with fixed function?
+  // write at 0076AD4C
   uint32_t unk38;
   uint32_t unk3C;
   uint32_t unk40;

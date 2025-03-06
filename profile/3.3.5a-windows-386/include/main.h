@@ -15,8 +15,12 @@
 
 #include "bc/file/filesystem.h"
 #include "bc/file/stream.h"
+#include "bc/file/processdir.h"
+#include "bc/lock/do_once.h"
+#include "bc/string/quicknativepath.h"
 #include "bc/systemfile/stacked.h"
 #include "bc/osfile.h"
+#include "bc/time/timestamp.h"
 
 #include "camera/camera.h"
 
@@ -125,6 +129,7 @@
 #include "storm/array/uint8_t.h"
 #include "storm/array/uint32_t.h"
 #include "storm/array/float.h"
+#include "storm/array/c2ivector.h"
 
 #include "storm/queue/timer_priority_uint32_t.h"
 

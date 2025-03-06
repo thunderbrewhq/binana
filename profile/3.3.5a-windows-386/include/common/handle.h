@@ -3,12 +3,12 @@
 
 #include "system/types.h"
 
-#if !defined(DECLARE_HANDLE)
-#define DECLARE_HANDLE(name) \
-typedef struct name##__ { \
+#define DECLARE_HANDLE(I) \
+typedef struct I##__ I##__; \
+struct I##__ { \
     int32_t unused; \
-}* name
-#endif
+}; \
+typedef I##__* I
 
 DECLARE_STRUCT(CHandleObject);
 

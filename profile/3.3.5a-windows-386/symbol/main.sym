@@ -1,5 +1,5 @@
-operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)"
-operator_delete_array 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
+Blizzard__Memory__Allocate 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)"
+Blizzard__Memory__Free 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
 CDataStore__FetchWrite 00401070 f ; protected: int __thiscall CDataStore::FetchWrite(unsigned int,unsigned int,char const *,int)
 CDataStore__IsRead 004010D0 f ; CDataStore::IsRead() const
 CDataStore__Reset 004010E0 f ; CDataStore::Reset()
@@ -38,12 +38,65 @@ SFile__Load 00424E80 f end=00424F46
 SFile__Open 00424F80 f end=00424F98
 Blizzard__File__Close 004270F0 f end=0042712f
 Blizzard__File__Delete 00427130 f end=0042716F ; Blizzard::File::Delete(char const*)
+Blizzard__File__GetFileInfo 004271D0 f end=00427242 type="bool __stdcall func(char* name, Blizzard__File__Info* info)"
+Blizzard__File__GetFileInfo 00427250 f end=004272B8 type="Blizzard__File__Info* __stdcall func(Blizzard__File__StreamRecord* file)"
+Blizzard__File__GetFileInfo 004272C0 f end=00427325 type="bool __stdcall func(Blizzard__File__StreamRecord* file, Blizzard__File__FileInfo* info)"
+Blizzard__File__GetPos 004273A0 f end=00427406
+Blizzard__File__GetRootChars 00427410 f end=00427466
+Blizzard__File__GetWorkingDirectory 00427470 f end=004274B5
+Blizzard__File__IsAbsolutePath 004274C0 f end=004274FF
 Blizzard__File__MakeAbsolutePath 00427500 f end=00427551 ; Blizzard::File::MakeAbsolutePath(char const*, char*, int, bool)
 Blizzard__File__Move 00427560 f end=004275A8 ; Blizzard::File::Move(char const*, char const*)
+Blizzard__File__Copy 004275B0 f end=004275FE
 Blizzard__File__Open 00427600 f end=0042765E
 Blizzard__File__Read 004276C0 f end=0042771F
 Blizzard__File__Write 004279B0 f end=00427A12
+System_File__FromNativeAttributes 00427C70 f end=00427CBC
+System_File__ReadP 00427CC0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__WriteP 00427D10 f end=00427D5C type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+Blizzard__String__FindFilename 00428500 f end=00428538 type="char* __stdcall func(char* str)"
+Blizzard__String__Copy 00428670 f end=004286BB type="int32_t __stdcall func(char* dst, const char* src, int32_t count)"
+Blizzard__Unicode__ConvertUTF16to8 00428940 f end=00428AFC type="int32_t __stdcall func(uint8_t* dst, uint32_t dstmaxchars, const uint16_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
+Blizzard__Unicode__ConvertUTF8to16 00428B00 f end=00428C94 type="int32_t __stdcall func(uint16_t* dst, uint32_t dstmaxchars, const uint8_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
+Blizzard__Time__FromFileTime 00428F00 f end=00428F56 type="Blizzard__Time__Timestamp __stdcall func(uint64_t fileTime)"
+Blizzard__File__CreateDirectory 0042CEA0 f end=0042CEE9
+HoistAll 0042CFB0 f end=0042D43E
 System_File__Stacked__file_init 0042D440 f end=0042D4F4 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Close 0042D620 f end=0042D64F type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+Blizzard__String__Format 0042E670 f end=0042E6A1
+System_File__GetRootChars 004325C0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__FromNativeName 00433590 f end=00433650 type="void __stdcall func(uint8_t *buffer, uint32_t buffersize, const char *str)"
+Blizzard__String__QuickNativePath_300__QuickNativePath 00433650 f end=0043375A
+System_File__GetFileInfoByFile 00435580 f end=004356A2 type="void __stdcall func(Blizzard__File__StreamRecord* file)"
+System_File__Exists 004356B0 f end=00435781 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__MakeAbsolutePath 00435790 f end=00435889 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Move 00435890 f end=004359B6 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Delete 004359C0 f end=00435A57 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__read_overlapped 00454870 f end=00454904
+System_File__write_overlapped 00454910 f end=004549A9
+System_File__SetWorkingDirectory 00454A50 f end=00454AB5 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Create 00454AC0 f end=00454AD3 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__GetWorkingDirectory 00454AE0 f end=00454B44 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__ProcessDirFast 00454B50 f end=00454CAA type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Flush 00454CB0 f end=00454CE2 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__GetFileInfo 00454CF0 f end=00454E6A type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__GetFreeSpace 00454E70 f end=00454FCE type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__GetPos 00454FD0 f end=0045504C type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__IsAbsolutePath 00455050 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__IsReadOnly 004550C0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__CreateDirectory 00455130 f end=004554B1 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Copy 004554C0 f end=00455727 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Open 00455730 f end=004558E3 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Read 004558F0 f end=0045590E type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__RemoveDirectory 00455910 f end=00455A2E type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__SetCacheMode 00455A30 f end=00455B07 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__SetEOF 00455B10 f end=00455B94 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__SetAttributes 00455BA0 f end=00455C9A type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__SetPos 00455CA0 f end=00455D13 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Write 00455D20 f end=00455D3E type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__read_locked 00457820 f end=00457904
+System_File__write_locked 00457910 f end=004579f4
+System_File__detect_io_mode 00459910 f end=00459998
 OsCloseFile 00461B00 f end=00461B09
 OsReadFile 00461B50 f end=00461B88
 OsGetFileSize 00461BD0 f end=00461BF4
@@ -858,6 +911,7 @@ Script_IsPlayerResolutionAvailable 0054EBC0 f end=0054EBFB
 Script_SetupFullscreenScale 0054ED80 f end=0054EE58
 Script_GetVideoCaps 0054EE60 f end=0054EF87
 Script_IsStereoVideoAvailable 0054EF90 f end=0054EFD5
+AddResolution 0054EFE0 f end=0054F046 type="void __fastcall func(TSGrowableArray_C2iVector* this, C2iVector* resolution)"
 Script_GetScreenResolutions 0054F430 f end=0054F49D
 Script_GetCurrentResolution 0054F4A0 f end=0054F561
 Script_SetScreenResolution 0054F570 f end=0054F684
@@ -2135,12 +2189,15 @@ WowClientDB_Cfg_CategoriesRec__LoadRecords 00659910 f end=00659A03 ; WowClientDB
 WowClientDB_CharBaseInfoRec__LoadRecords 00659B80 f end=00659C82 ; WowClientDB<CharBaseInfoRec>::LoadRecords(SFile*, char const*, int)
 WowClientDB__GetRecord 0065C290 f end=0065C2B4 ; 00005410
 WowClientDB_AchievementRec__GetRecordByIndex 0065F520 f end=0065F55B ; WowClientDB<AchievementRec>::GetRecordByIndex(int, void*)
+GxApiSupported 006811D0 f end=006811F0 type="int32_t __stdcall func(EGxApi api)" ; 00005410
 GxAdapterMonitorModes 00681210 f end=00681219 type="int32_t __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
 GxAdapterDesktopMode 00681220 f type="int32_t __stdcall func(CGxMonitorMode* mode)"
 GxDevCreate 00681290 f end=00681301
 GxSceneClear 006813B0 f end=006813CD
 GxTexUpdate 006813D0 f end=006813EC
 GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
+GxSetMaxFPS 00681770 f end=0068177D type="void __stdcall func(uint32_t maxFPS)"
+GxSetMaxFPSBk 00681790 f end=0068179D type="void __stdcall func(uint32_t maxFPSBk)"
 GxLogOpen 006817C0 f end=006817C5 type="void __stdcall func()"
 GxLog 006817E0 f end=006817F5 type="int __stdcall func(char* format, ...)"
 GxDrawLockedElements 00681A60 f end=00681AAB type="void __stdcall func()"
@@ -2239,7 +2296,12 @@ CGxDevice__destructor 006890C0 f end=00689460 type="void __thiscall func(CGxDevi
 CGxDevice__scalar_deleting_destructor 00689690 f end=006896BB type="void __thiscall func(CGxDevice* this, uint8_t __flags)"
 CGxDevice__ShaderCreate 006897C0 f end=00689A49 type="void __thiscall func(CGxDevice* this, CGxShader**, EGxShTarget, char*, char*, int32_t)"
 CGxShader__Valid 00689A50 f end=00689A6F
+CGxMonitorModeSort 00689E80 f type="int32_t __stdcall func(void* a, void* b)"
+CGxDevice__FindDisplayDevice 00689EA0 f end=00689EF0 type="int32_t __stdcall func(PDISPLAY_DEVICEA device, uint32_t flag)" ; UC
 CGxDevice__NewD3d 00689EF0 f end=00689F14 type="CGxDevice* __stdcall func()"
+TSGrowableArray_CGxMonitorMode__New 0068A090 f end=0068A0ED type="CGxMonitorMode* __thiscall func(TSGrowableArray_CGxMonitorMode* this)"
+TSGrowableArray_CGxMonitorMode__SetCount 0068A0F0 f end=0068A165 type="void __thiscall func(TSGrowableArray_CGxMonitorMode* this, uint32_t count)"
+CGxDevice__AdapterMonitorModes 0068A4C0 f end=0068A589 type="void __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
 CGxDeviceOpenGl__CGxDeviceOpenGl 0068BBC0 f end=0068BD15 type="void __thiscall func(CGxDeviceOpenGl* this)"
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
@@ -2516,6 +2578,7 @@ CVGxCursorCallback 007695E0 f end=0076960A type="bool __stdcall func(CVar* h, ch
 CVGxMultisampleCallback 00769610 f end=0076964A type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxMultisampleQualityCallback 00769650 f end=00769693 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxFixLagCallback 007696A0 f end=007696CA type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
+ConsoleGxOverride 007696D0 f end=00769804 type="void __stdcall func(char* list)"
 CVGxOverrideCallback 00769810 f end=00769823 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxMaxFPSCallback 00769830 f end=00769856 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxMaxFPSBkCallback 00769860 f end=00769886 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
@@ -2582,7 +2645,9 @@ CSRWLock__Leave 00774660 f end=00774675
 SSyncObject__Wait 00774690 f end=007746A4
 SEvent__Set 00774720 f end=0077472A
 SEvent__Reset 00774730 f end=0077473A
+SLogClose 007754A0 f end=007754F2
 SLogCreate 007757E0 f end=007758D6 type="int32_t __stdcall func(char* filename, uint32_t flags, HSLOG* log)"
+SLogWrite 00775BB0 f end=00775BC6
 SRgnCombineRectf 00777420 f end=00777588 type="void __stdcall func(HSRGN handle, RECTF* rect, void* param, int32_t combinemode)"
 SRgnGetBoundingRectf 00777590 f end=00777897 type="void __stdcall func(HSRGN handle, RECTF* rect)"
 SRgnDelete 00777940 f end=00777971 type="void __stdcall func(HSRGN handle)"
@@ -2690,6 +2755,7 @@ _luaD_precall 00856370 f
 luaD_call 00856760 f
 _luaV_execute 00857CA0 f
 RestoreMouse 008695B0 f end=008695FB
+OsInputSetWindowResizeLock 00869620 f end=0086962D
 OsInputInitialize 00869720 f end=00869757
 OsInputDestroy 00869760 f end=008697D3
 OsInputSetEventPollProc 00869D90 f end=00869D9D
@@ -2702,11 +2768,14 @@ OsGetDefaultWindowRect 0086A1A0 f end=0086A20C
 OsGetAsyncTimeMs 0086AE20 f end=0086AE2B
 OsSystemEnableCpuLog 0086B0C0 f end=0086B0CB
 OsGetProcessorCount 0086B240 f end=0086B27D
+OsIsRemoteSession 0086B780 f end=0086B78C
+OsGetAsyncClocksPerSecond 0086BBA0 f end=0086BBD0 type="uint64_t __stdcall func()"
 OsGetExeName 0086BBD0 f end=0086BC2F
 OsPathGetRootChars 0086BC30 f end=0086BC9E
 OsPathStripFilename 0086BE50 f end=0086BE9B
 OsGetExePath 0086BEA0 f end=0086BEBE
 OsGuiGetWindow 0086C6A0 f end=0086C6CE
+OsGuiMessageBox 0086C6E0 f end=0086C7D0
 OsIMEInitialize 0086D0A0 f end=0086D0B8
 OsIMEDestroy 0086D0C0 f end=0086D0Df
 TSExplicitList_CGxBuf__LinkToTail 0086E200 f end=0086E25F type="void __thiscall func(TSExplicitList_CGxBuf* this, CGxBuf* ptr)"
@@ -2715,10 +2784,10 @@ OsCallInitialize 0086F760 f end=0086F875
 OsCallInitializeContext 0086F880 f end=0086F902
 OsClipboardGetString 00872280 f end=00872297
 OsClipboardPutString 008722A0 f end=008722BF
-InternalClipboardGetString 008726F0 f end=008727BB
-InternalClipboardPutString 008727E0 f end=008728B8
+IOsClipboardGetString 008726F0 f end=008727BB
+IOsClipboardPutString 008727E0 f end=008728B8
 CShaderEffect__UpdateProjMatrix 00872C10 f end=00872CD5
-CVGxVideoOptionsVersionCallback 008A1420 f end=008A1423 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
+return_one_byte_sub 008A1420 f end=008A1423 ; known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback
 GxDefaultApi 008C8DE0 f type="EGxApi __stdcall func()"
 return_zero4_sub 008E5250 f end=008E5253 ; Script_ToggleTris
 ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
@@ -2940,6 +3009,8 @@ nullsub_147 009DE1A0 f
 nullsub_148 009DE1B0 f
 nullsub_149 009DE1C0 f
 nullsub_150 009DE1D0 f
+firstByteMark 009E537C l type="uint32_t[7]"
+bytesFromUTF8 009E5398 l type="uint8_t[256]"
 firstByteMark 009e9ec8 l type="uint32_t[7]"
 s_pixelFormatToMipBitsCache 009F1074 l
 CGxDevice__vtable 00A2DDC0 l type="CGxDevice__vtable"
@@ -2947,6 +3018,10 @@ CGxDeviceOpenGl__vtable 00A2E198 l
 CGxDeviceD3d__vtable 00a2e718 l
 CGxDeviceD3d9Ex__vtable 00a2f500 l
 System_File__Stacked__s_manager 00AB90AC l type="Blizzard__File__Filesystem*"
+System_File__read_func 00AB912C l ; type="int32_t (*)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__write_func 00AB91B4 l ; type="int32_t (*)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Stacked__s_nullstack 00AB91C0 l type="Blizzard__File__Filesystem"
+System_File__Stacked__s_basestack 00AB92C0 l type="Blizzard__File__Filesystem"
 s_zorderlist 00AC1B9C f type="TSExplicitList_CILayer"
 s_cursorNames 00AD2808 l type="char*[53]"
 g_achievementDB 00AD305C l type="WowClientDB_AchievementRec" ; 0xEB
@@ -3200,11 +3275,14 @@ s_unitDrawDist 00ADBEA0 l type="float[4][2]"
 s_smallCull 00ADBEC0 l type="float[4][2]"
 s_distCull 00ADBEE0 l type="float[4][2]"
 s_farClip 00ADBF00 l type="float[5][2]"
+g_videoHardwareDB 00ADBF88 l type="WowClientDB_VideoHardwareRec"
 g_lightSkyboxDB 00AF4998 l type="WowClientDB_LightSkyboxRec" ; 0x15F
 g_lightIntBandDB 00AF49BC l type="WowClientDB_LightIntBandRec" ; 0x15D
 g_lightFloatBandDB 00AF49E0 l type="WowClientDB_LightFloatBandRec" ; 0x15C
 g_lightParamsDB 00AF4A04 l type="WowClientDB_LightParamsRec" ; 0x15E
 g_lightDB 00AF4A28 l type="WowClientDB_LightRec" ; 0x15B
+System_File__s_read_init 00B38A5C l type="Blizzard__Lock__DoOnceData"
+System_File__s_write_init 00B38A64 l type="Blizzard__Lock__DoOnceData"
 s_mainThread 00b417c8 l type="uint32_t"
 s_interactiveCount 00B417D0 l type="int32_t"
 s_messageRecycler 00B41850 l type="CDataRecycler"
@@ -3219,6 +3297,8 @@ s_cursorItem 00C25DE8 l type="uint32_t[1024]"
 s_cursorMode 00C26DE8 l type="CURSORMODE"
 s_cursorImages 00C26DF0 l type="uint32_t[53][1024]"
 _CURRENT_LANGUAGE 00C5DE9C l type="int32_t"
+s_maxFPSBk 00C5DF74 l type="uint32_t"
+s_maxFPS 00C5DF7C l type="uint32_t"
 g_theGxDevicePtr 00C5DF88 l type="CGxDevice*"
 CGxDevice__s_uiVertexShader 00C5DFDC l
 CGxDevice__s_shadowConstants 00C5DFE0 l
@@ -3271,6 +3351,7 @@ s_cvHwDetect 00CABAB8 l type="CVar*"
 s_cvGxOverride 00CABABC l type="CVar*"
 s_cvGxFixLag 00CABAC0 l type="CVar*"
 s_cvMaxFPS 00CABAC4 l type="CVar*"
+s_consoleGxOverrideSet 00CABAC8 l type="int32_t[9]"
 s_cvGxVSync 00CABAEC l type="CVar*"
 s_defaults 00CABAF0 l type="DefaultSettings"
 s_cvVideoOptionsVersion 00CABB30 l type="CVar*"
@@ -3279,6 +3360,7 @@ s_cvMaxFPSBk 00CABB6C l type="CVar*"
 s_cvGxTripleBuffer 00CABB70 l type="CVar*"
 s_cvGxDepthBits 00CABB74 l type="CVar*"
 s_cvGxColorBits 00CABB78 l type="CVar*"
+s_consoleGxOverrideVal 00CABB7C l type="uint32_t[9]"
 s_cvGxApi 00CABBA0 l type="CVar*"
 s_cvGxAspect 00CABBA4 l type="CVar*"
 s_cvFixedFunction 00CABBA8 l type="CVar*"
@@ -3295,4 +3377,6 @@ s_desktopFormat 00CABD40 l type="CGxFormat"
 s_fallbackFormat 00CABDA8 l type="CGxFormat"
 s_lastGoodFormat 00CABE00 l type="CGxFormat"
 s_formats 00CABE98 l type="CGxFormat[5]"
+s_WindowResizeLock 00D41580 l type="int32_t"
+s_cpuTicksPerSecond 00D415C8 l type="uint64_t"
 CShaderEffect__s_enableShaders 00D43020 l type="int32_t"

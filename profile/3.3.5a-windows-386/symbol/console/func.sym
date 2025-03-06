@@ -65,8 +65,10 @@ ValidateFormatMonitor 00769E10 f end=00769FF0
 CCGxRestart 00769FF0 f end=0076A12E
 RegisterGxCVars 0076A630 f end=0076AAA8
 ConsoleDeviceInitialize 0076AB80 f end=0076B287 type="int32_t __stdcall func(char* title, int32_t multithreaded)"
+SetDefaults 0076B3F0 f type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; void SetDefaults(DefaultSettings&, const Hardware&)
 ConsoleDetectSetDefaultsFormat 0076B520 f end=0076B53D type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; ConsoleDetectSetDefaultsFormat(DefaultSettings&, const Hardware&)
 ConsoleDetectSaveHardware 0076B620 f end=0076B7DB
 ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9 type="void __stdcall func(Hardware* hardware, bool* hwChanged)" ; ConsoleDetectDetectHardware(Hardware&, bool&)
 ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
-SetDefaults 0076B3F0 f type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; void SetDefaults(DefaultSettings&, const Hardware&)
+ConsoleGxOverride 007696D0 f end=00769804 type="void __stdcall func(char* list)"
+AddResolution 0054EFE0 f end=0054F046 type="void __fastcall func(TSGrowableArray_C2iVector* this, C2iVector* resolution)"

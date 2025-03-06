@@ -46,6 +46,8 @@ SSyncObject__Wait 00774690 f end=007746A4
 SEvent__Set 00774720 f end=0077472A
 SEvent__Reset 00774730 f end=0077473A
 SLogCreate 007757E0 f end=007758D6 type="int32_t __stdcall func(char* filename, uint32_t flags, HSLOG* log)"
+SLogClose 007754A0 f end=007754F2
+SLogWrite 00775BB0 f end=00775BC6
 SRgnCombineRectf 00777420 f end=00777588 type="void __stdcall func(HSRGN handle, RECTF* rect, void* param, int32_t combinemode)"
 SRgnGetBoundingRectf 00777590 f end=00777897 type="void __stdcall func(HSRGN handle, RECTF* rect)"
 SRgnDelete 00777940 f end=00777971 type="void __stdcall func(HSRGN handle)"
@@ -85,3 +87,5 @@ SBigDel 0077C6A0 f end=0077C6F6 type="void __stdcall func(BigData* num)"
 SBigMul 0077C700 f end=0077C71F type="void __stdcall func(BigData* a, BigData* b, BigData* c)"
 PowMod 0077C720 f end=0077C97B type="void __stdcall func(BigBuffer* a, BigBuffer* b, BigBuffer* c, BigBuffer* d, BigStack* stack)"
 SBigPowMod 0077C980 f end=0077C9A4 type="void __stdcall func(BigData* a, BigData* b, BigData* c, BigData* d)"
+TSGrowableArray_CGxMonitorMode__SetCount 0068A0F0 f end=0068A165 type="void __thiscall func(TSGrowableArray_CGxMonitorMode* this, uint32_t count)"
+TSGrowableArray_CGxMonitorMode__New 0068A090 f end=0068A0ED type="CGxMonitorMode* __thiscall func(TSGrowableArray_CGxMonitorMode* this)"

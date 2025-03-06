@@ -1,0 +1,2 @@
+s_WindowResizeLock 00D41580 l type="int32_t"
+s_cpuTicksPerSecond 00D415C8 l type="uint64_t"

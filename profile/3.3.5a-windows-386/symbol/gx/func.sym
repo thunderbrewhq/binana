@@ -25,3 +25,7 @@ GxLogOpen 006817C0 f end=006817C5 type="void __stdcall func()"
 GxAdapterMonitorModes 00681210 f end=00681219 type="int32_t __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
 GxAdapterDesktopMode 00681220 f type="int32_t __stdcall func(CGxMonitorMode* mode)"
 GxDefaultApi 008C8DE0 f type="EGxApi __stdcall func()"
+GxApiSupported 006811D0 f end=006811F0 type="int32_t __stdcall func(EGxApi api)" ; 00005410
+GxSetMaxFPS 00681770 f end=0068177D type="void __stdcall func(uint32_t maxFPS)"
+GxSetMaxFPSBk 00681790 f end=0068179D type="void __stdcall func(uint32_t maxFPSBk)"
+CGxMonitorModeSort 00689E80 f type="int32_t __stdcall func(void* a, void* b)"

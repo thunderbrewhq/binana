@@ -41,7 +41,7 @@ enum Blizzard__File__Operation {
   num_operations
 };
 
-#define FS_OP(N) bool (*f_##N)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)
+#define FS_OP(N) bool (*N)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)
 
 // 0x7C bytes = 4 + 4 + (29 * 4)
 struct Blizzard__File__Filesystem {

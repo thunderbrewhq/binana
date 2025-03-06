@@ -1,7 +1,7 @@
 #ifndef SYSTEM_DETECT_H
 #define SYSTEM_DETECT_H
 
-#if !defined(IDA) && !defined(GHIDRA) && !defined(BINANA_GENERATOR)
+#if !defined(__GNUC__) && !defined(IDA) && !defined(GHIDRA) && !defined(BINANA_GENERATOR)
 #error "Preprocessor mode not detected! You must define either IDA or GHIDRA or BINANA_GENERATOR"
 #endif
 

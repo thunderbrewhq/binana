@@ -51,12 +51,14 @@ static import_functions() {
 	set_func_cmt(0x00659B80, "WowClientDB<CharBaseInfoRec>::LoadRecords(SFile*, char const*, int)", 0);
 	set_func_cmt(0x0065C290, "00005410", 0);
 	set_func_cmt(0x0065F520, "WowClientDB<AchievementRec>::GetRecordByIndex(int, void*)", 0);
+	set_func_cmt(0x006811D0, "00005410", 0);
 	set_func_cmt(0x00681BE0, "UC", 0);
 	set_func_cmt(0x00682400, "this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline", 0);
 	set_func_cmt(0x00683670, "static void CGxDevice::LogOpen(void)", 0);
 	set_func_cmt(0x00684C40, "CGxDevice::Log(CGxCaps const&) const", 0);
 	set_func_cmt(0x006859E0, "CGxDevice::IRsForceUpdate(EGxRenderState)", 0);
 	set_func_cmt(0x00685A70, "CGxDevice::IRsForceUpdate()", 0);
+	set_func_cmt(0x00689EA0, "UC", 0);
 	set_func_cmt(0x0069FE10, "UC (invented name)", 0);
 	set_func_cmt(0x006AA350, "UC", 0);
 	set_func_cmt(0x006AA420, "private utility method", 0);
@@ -110,6 +112,7 @@ static import_functions() {
 	set_func_cmt(0x0081AC90, "vFrameScript_SignalEvent(unsigned int, char const*, char*)", 0);
 	set_func_cmt(0x0081B530, "FrameScript_SignalEvent(unsigned int, char const*, ...)", 0);
 	set_func_cmt(0x0081B5F0, "FrameScript_CreateEvents(char const**, unsigned int)", 0);
+	set_func_cmt(0x008A1420, "known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback", 0);
 	set_func_cmt(0x008E5250, "Script_ToggleTris", 0);
 	set_func_cmt(0x0095D110, "CDataAllocator::GetData(int, char const*, int)", 0);
 	set_func_cmt(0x0095D1B0, "CDataAllocator::PutData(void*, char const*, int)", 0);

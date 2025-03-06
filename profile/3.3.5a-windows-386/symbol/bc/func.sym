@@ -1,14 +1,69 @@
+Blizzard__Memory__Allocate 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)"
+Blizzard__Memory__Free 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
+Blizzard__File__Close 004270F0 f end=0042712f
+Blizzard__File__Delete 00427130 f end=0042716F ; Blizzard::File::Delete(char const*)
+Blizzard__File__GetFileInfo 004271D0 f end=00427242 type="bool __stdcall func(char* name, Blizzard__File__Info* info)"
+Blizzard__File__GetFileInfo 00427250 f end=004272B8 type="Blizzard__File__Info* __stdcall func(Blizzard__File__StreamRecord* file)"
+Blizzard__File__GetFileInfo 004272C0 f end=00427325 type="bool __stdcall func(Blizzard__File__StreamRecord* file, Blizzard__File__FileInfo* info)"
+Blizzard__File__GetPos 004273A0 f end=00427406
+Blizzard__File__GetRootChars 00427410 f end=00427466
+Blizzard__File__GetWorkingDirectory 00427470 f end=004274B5
+Blizzard__File__IsAbsolutePath 004274C0 f end=004274FF
+Blizzard__File__MakeAbsolutePath 00427500 f end=00427551 ; Blizzard::File::MakeAbsolutePath(char const*, char*, int, bool)
+Blizzard__File__Move 00427560 f end=004275A8 ; Blizzard::File::Move(char const*, char const*)
+Blizzard__File__Copy 004275B0 f end=004275FE
 Blizzard__File__Open 00427600 f end=0042765E
 Blizzard__File__Read 004276C0 f end=0042771F
 Blizzard__File__Write 004279B0 f end=00427A12
-Blizzard__File__Close 004270F0 f end=0042712f
-Blizzard__File__Delete 00427130 f end=0042716F ; Blizzard::File::Delete(char const*)
-Blizzard__File__MakeAbsolutePath 00427500 f end=00427551 ; Blizzard::File::MakeAbsolutePath(char const*, char*, int, bool)
-Blizzard__File__Move 00427560 f end=004275A8 ; Blizzard::File::Move(char const*, char const*)
+System_File__FromNativeAttributes 00427C70 f end=00427CBC
+System_File__ReadP 00427CC0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__WriteP 00427D10 f end=00427D5C type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+Blizzard__String__FindFilename 00428500 f end=00428538 type="char* __stdcall func(char* str)"
+Blizzard__String__Copy 00428670 f end=004286BB type="int32_t __stdcall func(char* dst, const char* src, int32_t count)"
+Blizzard__Unicode__ConvertUTF16to8 00428940 f end=00428AFC type="int32_t __stdcall func(uint8_t* dst, uint32_t dstmaxchars, const uint16_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
+Blizzard__Unicode__ConvertUTF8to16 00428B00 f end=00428C94 type="int32_t __stdcall func(uint16_t* dst, uint32_t dstmaxchars, const uint8_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
+Blizzard__Time__FromFileTime 00428F00 f end=00428F56 type="Blizzard__Time__Timestamp __stdcall func(uint64_t fileTime)"
+Blizzard__File__CreateDirectory 0042CEA0 f end=0042CEE9
+HoistAll 0042CFB0 f end=0042D43E
 System_File__Stacked__file_init 0042D440 f end=0042D4F4 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Close 0042D620 f end=0042D64F type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+Blizzard__String__Format 0042E670 f end=0042E6A1
+System_File__GetRootChars 004325C0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__FromNativeName 00433590 f end=00433650 type="void __stdcall func(uint8_t *buffer, uint32_t buffersize, const char *str)"
+Blizzard__String__QuickNativePath_300__QuickNativePath 00433650 f end=0043375A
+System_File__GetFileInfoByFile 00435580 f end=004356A2 type="void __stdcall func(Blizzard__File__StreamRecord* file)"
+System_File__Exists 004356B0 f end=00435781 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__MakeAbsolutePath 00435790 f end=00435889 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Move 00435890 f end=004359B6 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Delete 004359C0 f end=00435A57 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__read_overlapped 00454870 f end=00454904
+System_File__write_overlapped 00454910 f end=004549A9
+System_File__SetWorkingDirectory 00454A50 f end=00454AB5 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Create 00454AC0 f end=00454AD3 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__GetWorkingDirectory 00454AE0 f end=00454B44 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__ProcessDirFast 00454B50 f end=00454CAA type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Flush 00454CB0 f end=00454CE2 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__GetFileInfo 00454CF0 f end=00454E6A type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__GetFreeSpace 00454E70 f end=00454FCE type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__GetPos 00454FD0 f end=0045504C type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__IsAbsolutePath 00455050 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__IsReadOnly 004550C0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__CreateDirectory 00455130 f end=004554B1 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Copy 004554C0 f end=00455727 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Open 00455730 f end=004558E3 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Read 004558F0 f end=0045590E type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__RemoveDirectory 00455910 f end=00455A2E type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__SetCacheMode 00455A30 f end=00455B07 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__SetEOF 00455B10 f end=00455B94 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__SetAttributes 00455BA0 f end=00455C9A type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__SetPos 00455CA0 f end=00455D13 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__Write 00455D20 f end=00455D3E type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_File__read_locked 00457820 f end=00457904
+System_File__write_locked 00457910 f end=004579f4
+System_File__detect_io_mode 00459910 f end=00459998
 OsCloseFile 00461B00 f end=00461B09
 OsReadFile 00461B50 f end=00461B88
 OsGetFileSize 00461BD0 f end=00461BF4
+OsCreateDirectory 00461D10 f end=00461D3F
 OsSetCurrentDirectory 00461DB0 f end=00461DD7
 OsCreateFile 00461FA0 f end=00461FFA
-OsCreateDirectory 00461D10 f end=00461D3F
