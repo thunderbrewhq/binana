@@ -6,3 +6,7 @@ ConvertPosition 0047FC90 f end=0047FDD4
 ScrnLayerCreate 004A8BB0 f end=004A8C83
 ScrnLayerSetRect 004A8500 f end=004A8522
 ClientKillTimer 004033B0 f end=004033B9
+PatchFiles__qsortpatchfiles 00401200 f ; int __cdecl PatchFiles::qsortpatchfiles(char **, char **)
+quicksort 0047B800 f ; void __cdecl quicksort(unsigned int, unsigned int, int, int (__cdecl *)(unsigned int, unsigned int, int), int)
+PatchFiles__EnumPatchArchives 00405A10 f ; int __cdecl PatchFiles::EnumPatchArchives(OS_FILE_DATA *fileData, PatchOnDemand__Cache *cbParam)
+PatchFiles__LoadArchives 00405AB0 f ; int __thiscall PatchFiles::LoadArchives(PatchFiles *this, const char *localeCode, char a3)

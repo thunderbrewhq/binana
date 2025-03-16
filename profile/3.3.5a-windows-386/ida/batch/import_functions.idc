@@ -8,10 +8,16 @@ static import_functions() {
 	set_func_cmt(0x004010D0, "CDataStore::IsRead() const", 0);
 	set_func_cmt(0x004010E0, "CDataStore::Reset()", 0);
 	set_func_cmt(0x00401130, "CDataStore::Finalize()", 0);
+	set_func_cmt(0x00401200, "int __cdecl PatchFiles::qsortpatchfiles(char **, char **)", 0);
 	set_func_cmt(0x004038A0, "CDataStore::~CDataStore()", 0);
+	set_func_cmt(0x00405A10, "int __cdecl PatchFiles::EnumPatchArchives(OS_FILE_DATA *fileData, PatchOnDemand__Cache *cbParam)", 0);
+	set_func_cmt(0x00405AB0, "int __thiscall PatchFiles::LoadArchives(PatchFiles *this, const char *localeCode, char a3)", 0);
 	set_func_cmt(0x00427130, "Blizzard::File::Delete(char const*)", 0);
 	set_func_cmt(0x00427500, "Blizzard::File::MakeAbsolutePath(char const*, char*, int, bool)", 0);
 	set_func_cmt(0x00427560, "Blizzard::File::Move(char const*, char const*)", 0);
+	set_func_cmt(0x00427720, "Blizzard::File::Read(Blizzard::File::StreamRecord*, void*, long long, int*, int)", 0);
+	set_func_cmt(0x00433510, "Blizzard::String::JoinPath(char*, int, char const*, char const*)", 0);
+	set_func_cmt(0x0044FA10, "Blizzard::File::RemoveDirectoryAndContents(char const*, bool)::Internal::Callback(Blizzard::File::ProcessDirParms const&)", 0);
 	set_func_cmt(0x0047ADE0, "CDataStore::GetBufferParams(void const**, unsigned int*, unsigned int*)", 0);
 	set_func_cmt(0x0047AE10, "CDataStore::DetachBuffer(void**, unsigned int*, unsigned int*)", 0);
 	set_func_cmt(0x0047AE50, "virtual void __thiscall CDataStore::InternalDestroy(unsigned char * &,unsigned int &,unsigned int &)", 0);
@@ -33,6 +39,7 @@ static import_functions() {
 	set_func_cmt(0x0047B480, "CDataStore::GetString(char*, unsigned int)", 0);
 	set_func_cmt(0x0047B560, "CDataStore::GetArray(unsigned char*, unsigned int)", 0);
 	set_func_cmt(0x0047B6B0, "CDataStore::GetDataInSitu(void*&, unsigned int)", 0);
+	set_func_cmt(0x0047B800, "void __cdecl quicksort(unsigned int, unsigned int, int, int (__cdecl *)(unsigned int, unsigned int, int), int)", 0);
 	set_func_cmt(0x0047F230, "IEvtSchedulerProcess as an independent function appears to be optimized out", 0);
 	set_func_cmt(0x004A2780, "_CBackdropGenerator::LoadXML(linkObject*, CStatus*)", 0);
 	set_func_cmt(0x004A81B0, "FrameScript_GetObjectThis(lua_State*, int)", 0);

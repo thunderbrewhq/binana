@@ -5,6 +5,7 @@
 #include "bc/file/stream.h"
 #include "bc/file/info.h"
 #include "bc/file/processdir.h"
+#include "bc/file/mode.h"
 
 DECLARE_STRUCT(System_File__Stacked__FileParms);
 
@@ -17,19 +18,31 @@ struct System_File__Stacked__FileParms {
   char* newname; // 0x8
   Blizzard__File__StreamRecord* file; // 0xC
   Blizzard__File__FileInfo* info;
-  uint32_t extra[17]; // 0x10
-  uint32_t flags;
+  uint32_t extra;
+  Blizzard__File__FileInfo noinfo;
+  uint32_t setinfo;
+    // something to do with file info
+  // used by:
+  //   Blizzard::File::GetFileInfo
+  //   set to -1
+  uint32_t getinfo;
+  Blizzard__File__Mode mode; // 0x58
   void* data; // 
   uint32_t count;
   int64_t offset;
-  uint32_t unk__;
+  int32_t whence;
   char* buffer;
   int32_t buffersize;
-  bool unkbool1;
-  bool unkbool2;
+  bool recurse;
+  // something to do with MakeAbsolutePath? (normalize? resolve? resolvesymlinks?)
+  bool canonicalize; 
   void* dirwalkparam;
   Blizzard__File__ProcessDirCallback dirwalkcallback;
-  uint32_t extra3[2];
+  // set to false by Blizzard::File::ProcessDirFast
+  bool unk88;
+  bool overwrite;
+  bool set_acl; // something that causes a security descriptor to be generated in mkdir() (takeownership? chown? )
+  uint32_t unk8C;
 };
 
 #endif

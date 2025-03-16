@@ -11,11 +11,11 @@ struct Blizzard__File__FileInfo {
   // uint32_t unk08;
   // uint32_t unk0C;
   uint64_t size; // 08
-  uint32_t attributes; 
-  Blizzard__Time__Timestamp creationTime;
-  Blizzard__Time__Timestamp lastWriteTime;
-  Blizzard__Time__Timestamp lastAccessTime; 
-  int32_t exists; 
+  int32_t attributes; 
+  Blizzard__Time__Timestamp createtime;
+  Blizzard__Time__Timestamp lastwritetime;
+  Blizzard__Time__Timestamp lastaccesstime; 
+  int32_t filetype; 
   int32_t normal; 
 };
 

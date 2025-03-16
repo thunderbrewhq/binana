@@ -13,14 +13,7 @@
 #include "async/object.h"
 #include "async/queue.h"
 
-#include "bc/file/filesystem.h"
-#include "bc/file/stream.h"
-#include "bc/file/processdir.h"
-#include "bc/lock/do_once.h"
-#include "bc/string/quicknativepath.h"
-#include "bc/systemfile/stacked.h"
-#include "bc/osfile.h"
-#include "bc/time/timestamp.h"
+#include "bc/main.h"
 
 #include "camera/camera.h"
 

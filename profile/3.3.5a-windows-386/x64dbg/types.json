@@ -10,6 +10,10 @@
     },
     {
       "type": "int",
+      "name": "Blizzard__File__Mode"
+    },
+    {
+      "type": "int",
       "name": "Blizzard__File__Operation"
     },
     {
@@ -11421,7 +11425,7 @@
       "members": [
         {
           "type": "int32_t",
-          "name": "unused",
+          "name": "unused__",
           "offset": 0
         }
       ]
@@ -21211,6 +21215,28 @@
       ]
     },
     {
+      "name": "OS_FILE_DATA",
+      "size": 268,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "size",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 4
+        },
+        {
+          "type": "char",
+          "name": "fileName",
+          "arrsize": 260,
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "ObjectEffectGroupRec",
       "size": 8,
       "members": [
@@ -21354,6 +21380,32 @@
           "type": "int32_t",
           "name": "m_objectEffectModifierID",
           "offset": 44
+        }
+      ]
+    },
+    {
+      "name": "OsFileList__Internal__FileListParms",
+      "size": 16,
+      "members": [
+        {
+          "type": "void*",
+          "name": "callback",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "param",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 8
+        },
+        {
+          "type": "char*",
+          "name": "pattern",
+          "offset": 12
         }
       ]
     },
@@ -29377,104 +29429,6 @@
       ]
     },
     {
-      "name": "System_File__Stacked__FileParms",
-      "size": 144,
-      "members": [
-        {
-          "type": "uint32_t",
-          "name": "op",
-          "offset": 0
-        },
-        {
-          "type": "char*",
-          "name": "name",
-          "offset": 4
-        },
-        {
-          "type": "char*",
-          "name": "newname",
-          "offset": 8
-        },
-        {
-          "type": "Blizzard__File__StreamRecord*",
-          "name": "file",
-          "offset": 12
-        },
-        {
-          "type": "Blizzard__File__FileInfo*",
-          "name": "info",
-          "offset": 16
-        },
-        {
-          "type": "uint32_t",
-          "name": "extra",
-          "arrsize": 17,
-          "offset": 20
-        },
-        {
-          "type": "uint32_t",
-          "name": "flags",
-          "offset": 88
-        },
-        {
-          "type": "void*",
-          "name": "data",
-          "offset": 92
-        },
-        {
-          "type": "uint32_t",
-          "name": "count",
-          "offset": 96
-        },
-        {
-          "type": "int64_t",
-          "name": "offset",
-          "offset": 104
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk__",
-          "offset": 112
-        },
-        {
-          "type": "char*",
-          "name": "buffer",
-          "offset": 116
-        },
-        {
-          "type": "int32_t",
-          "name": "buffersize",
-          "offset": 120
-        },
-        {
-          "type": "bool",
-          "name": "unkbool1",
-          "offset": 124
-        },
-        {
-          "type": "bool",
-          "name": "unkbool2",
-          "offset": 125
-        },
-        {
-          "type": "void*",
-          "name": "dirwalkparam",
-          "offset": 128
-        },
-        {
-          "type": "Blizzard__File__ProcessDirCallback",
-          "name": "dirwalkcallback",
-          "offset": 132
-        },
-        {
-          "type": "uint32_t",
-          "name": "extra3",
-          "arrsize": 2,
-          "offset": 136
-        }
-      ]
-    },
-    {
       "name": "Blizzard__File__FileInfo",
       "size": 56,
       "members": [
@@ -29494,28 +29448,28 @@
           "offset": 8
         },
         {
-          "type": "uint32_t",
+          "type": "int32_t",
           "name": "attributes",
           "offset": 16
         },
         {
           "type": "Blizzard__Time__Timestamp",
-          "name": "creationTime",
+          "name": "createtime",
           "offset": 24
         },
         {
           "type": "Blizzard__Time__Timestamp",
-          "name": "lastWriteTime",
+          "name": "lastwritetime",
           "offset": 32
         },
         {
           "type": "Blizzard__Time__Timestamp",
-          "name": "lastAccessTime",
+          "name": "lastaccesstime",
           "offset": 40
         },
         {
           "type": "int32_t",
-          "name": "exists",
+          "name": "filetype",
           "offset": 48
         },
         {
@@ -37532,6 +37486,132 @@
       ]
     },
     {
+      "name": "System_File__Stacked__FileParms",
+      "size": 144,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "op",
+          "offset": 0
+        },
+        {
+          "type": "char*",
+          "name": "name",
+          "offset": 4
+        },
+        {
+          "type": "char*",
+          "name": "newname",
+          "offset": 8
+        },
+        {
+          "type": "Blizzard__File__StreamRecord*",
+          "name": "file",
+          "offset": 12
+        },
+        {
+          "type": "Blizzard__File__FileInfo*",
+          "name": "info",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "extra",
+          "offset": 20
+        },
+        {
+          "type": "Blizzard__File__FileInfo",
+          "name": "noinfo",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "setinfo",
+          "offset": 80
+        },
+        {
+          "type": "uint32_t",
+          "name": "getinfo",
+          "offset": 84
+        },
+        {
+          "type": "Blizzard__File__Mode",
+          "name": "mode",
+          "offset": 88
+        },
+        {
+          "type": "void*",
+          "name": "data",
+          "offset": 92
+        },
+        {
+          "type": "uint32_t",
+          "name": "count",
+          "offset": 96
+        },
+        {
+          "type": "int64_t",
+          "name": "offset",
+          "offset": 104
+        },
+        {
+          "type": "int32_t",
+          "name": "whence",
+          "offset": 112
+        },
+        {
+          "type": "char*",
+          "name": "buffer",
+          "offset": 116
+        },
+        {
+          "type": "int32_t",
+          "name": "buffersize",
+          "offset": 120
+        },
+        {
+          "type": "bool",
+          "name": "recurse",
+          "offset": 124
+        },
+        {
+          "type": "bool",
+          "name": "canonicalize",
+          "offset": 125
+        },
+        {
+          "type": "void*",
+          "name": "dirwalkparam",
+          "offset": 128
+        },
+        {
+          "type": "Blizzard__File__ProcessDirCallback",
+          "name": "dirwalkcallback",
+          "offset": 132
+        },
+        {
+          "type": "bool",
+          "name": "unk88",
+          "offset": 136
+        },
+        {
+          "type": "bool",
+          "name": "overwrite",
+          "offset": 137
+        },
+        {
+          "type": "bool",
+          "name": "set_acl",
+          "offset": 138
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk8C",
+          "offset": 140
+        }
+      ]
+    },
+    {
       "name": "Blizzard__File__StreamRecord",
       "size": 80,
       "members": [
@@ -37541,8 +37621,8 @@
           "offset": 0
         },
         {
-          "type": "uint32_t",
-          "name": "flags",
+          "type": "int32_t",
+          "name": "mode",
           "offset": 4
         },
         {
