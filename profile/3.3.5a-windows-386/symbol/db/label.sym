@@ -192,6 +192,7 @@ g_spellVisualKitModelAttachDB 00AD4A84 l type="WowClientDB_SpellVisualKitModelAt
 g_stableSlotPricesDB 00AD4ACC l type="WowClientDB_StableSlotPricesRec" ; 0x1AA
 g_stationeryDB 00AD4AF0 l type="WowClientDB_StationeryRec" ; 0x1AB
 g_stringLookupsDB 00AD4B14 l type="WowClientDB_StringLookupsRec" ; 0x1AC
+g_startup_StringsDB 00AB6350 l type="WowClientDB_Startup_StringsRec"
 g_summonPropertiesDB 00AD4B38 l type="WowClientDB_SummonPropertiesRec" ; 0x1AD
 g_talentDB 00AD4B5C l type="WowClientDB_TalentRec" ; 0x1AE
 g_talentTabDB 00AD4B80 l type="WowClientDB_TalentTabRec" ; 0x1AF

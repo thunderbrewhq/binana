@@ -1,3 +1,4 @@
+CDataStore__CDataStore 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
 CDataStore__FetchWrite 00401070 f ; protected: int __thiscall CDataStore::FetchWrite(unsigned int,unsigned int,char const *,int)
 CDataStore__IsRead 004010D0 f ; CDataStore::IsRead() const
 CDataStore__Reset 004010E0 f ; CDataStore::Reset()

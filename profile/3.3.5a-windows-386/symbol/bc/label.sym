@@ -6,6 +6,8 @@ System_File__read_func 00AB912C l ; type="int32_t (*)(Blizzard__File__Filesystem
 System_File__write_func 00AB91B4 l ; type="int32_t (*)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Stacked__s_nullstack 00AB91C0 l type="Blizzard__File__Filesystem"
 System_File__Stacked__s_basestack 00AB92C0 l type="Blizzard__File__Filesystem"
+Blizzard__Streaming__s_streamingReady 00B38180 l type="bool"
+Blizzard__Streaming__s_isStreamingTrial 00B38181 l type="bool"
 System_File__s_read_init 00B38A5C l type="Blizzard__Lock__DoOnceData"
 System_File__s_write_init 00B38A64 l type="Blizzard__Lock__DoOnceData"
 OsFileGetDownloadFolder__s_downloadfolder 00B38A88 l ; OsFileGetDownloadFolder()::s_downloadfolder;

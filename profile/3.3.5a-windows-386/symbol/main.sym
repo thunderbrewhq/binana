@@ -1,13 +1,17 @@
 Blizzard__Memory__Allocate 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)"
 Blizzard__Memory__Free 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
+CDataStore__CDataStore 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
 CDataStore__FetchWrite 00401070 f ; protected: int __thiscall CDataStore::FetchWrite(unsigned int,unsigned int,char const *,int)
 CDataStore__IsRead 004010D0 f ; CDataStore::IsRead() const
 CDataStore__Reset 004010E0 f ; CDataStore::Reset()
 CDataStore__Finalize 00401130 f ; CDataStore::Finalize()
 PatchFiles__qsortpatchfiles 00401200 f ; int __cdecl PatchFiles::qsortpatchfiles(char **, char **)
 SetPaths 00402B20 f end=00402B8B
+CCommand_TimingInfo 004032A0 f end=004032FF
 ClientKillTimer 004033B0 f end=004033B9
+StartupStreaming 00403600 f end=004036A4 type="void __stdcall func(char* manifest@<eax>)"
 CDataStore__destructor 004038A0 f ; CDataStore::~CDataStore()
+WowClientDB_StartupStringsRec__Load 004052f0 f end=0040553D
 PatchFiles__EnumPatchArchives 00405A10 f ; int __cdecl PatchFiles::EnumPatchArchives(OS_FILE_DATA *fileData, PatchOnDemand__Cache *cbParam)
 PatchFiles__LoadArchives 00405AB0 f ; int __thiscall PatchFiles::LoadArchives(PatchFiles *this, const char *localeCode, char a3)
 InitializeGlobal 004067F0 f end=00406B67
@@ -27,18 +31,23 @@ nullsub_1 0040D3B5 f
 SFile__DisableSFileCheckDisk 00421750 f end=00421758
 SFile__EnableDirectAccess 00421760 f end=0042179B
 SFile__FileIsLocal 004217C0 f end=004217DA
+SFile__GetBasePath 00421880 f end=004218A1 type="int32_t __stdcall func(char* buffer, int32_t buffersize)"
 SFile__GetFileSize 004218C0 f end=00421948
 SFile__SetBasePath 00421A80 f end=00421AE5
 SFile__SetDataPath 00421AF0 f end=00421B4A
 SFile__SetFilePointer 00421BB0 f end=00421C98
 SFile__Unload 00421CA0 f end=00421CB8
+SFile__SetStreamingStatus 004220B0 f end=004220F1
+SFile__InitializeStreaming 00422100 f end=00422125
 SFile__IsStreamingMode 00422130 f end=00422139
+SFile__GetErrorDetails 00422150 f end=0042215F
 SFile__Read 00422530 f end=004227D4
 SFile__Close 00422910 f end=004229AB
 SFile__FileExistsEx 00424B10 f end=00424B41
 SFile__OpenEx 00424B50 f end=00424E44
 SFile__Load 00424E80 f end=00424F46
 SFile__Open 00424F80 f end=00424F98
+Blizzard__Debug__ErrorStackAsText 004270D0 f end=004270E6
 Blizzard__File__Close 004270F0 f end=0042712F
 Blizzard__File__Delete 00427130 f end=0042716F ; Blizzard::File::Delete(char const*)
 Blizzard__File__Exists 00427170 f end=004271C3
@@ -75,6 +84,7 @@ Blizzard__String__Append 004286C0 f end=00428721 type="int32_t __stdcall func(ch
 Blizzard__Unicode__ConvertUTF16to8 00428940 f end=00428AFC type="int32_t __stdcall func(uint8_t* dst, uint32_t dstmaxchars, const uint16_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
 Blizzard__Unicode__ConvertUTF8to16 00428B00 f end=00428C94 type="int32_t __stdcall func(uint16_t* dst, uint32_t dstmaxchars, const uint8_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
 Blizzard__Time__FromFileTime 00428F00 f end=00428F56 type="Blizzard__Time__Timestamp __stdcall func(uint64_t fileTime)"
+Blizzard__String__QuickFormat__QuickFormat 00429790 f end=004297C5
 Blizzard__String__MakeUnivPath 0042A9B0 f end=0042A9FB type="void __stdcall func(char* src, char* dst, int32_t count)"
 Blizzard__String__MakeBackslashPath 0042AA00 f end=0042AA4B type="void __stdcall func(char* src, char* dst, int32_t count)"
 Blizzard__File__CreateDirectory 0042CEA0 f end=0042CEE9
@@ -82,7 +92,7 @@ HoistAll 0042CFB0 f end=0042D43E
 System_File__Stacked__file_init 0042D440 f end=0042D4F4 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Close 0042D620 f end=0042D64F type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 Blizzard__String__MakeConsistentPath 0042E420 f end=0042E4AA
-Blizzard__File__ForceTrailingSeparator 0042E4B0 f end=0042E522 type="void __stdcall func(char* dst, int32_t count, char separator)"
+Blizzard__String__ForceTrailingSeparator 0042E4B0 f end=0042E522 type="void __stdcall func(char* dst, int32_t count, char separator)"
 Blizzard__String__FindPathSeparatorReverse 0042E630 f end=0042E663
 Blizzard__String__Format 0042E670 f end=0042E6A1
 System_File__GetRootChars 004325C0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
@@ -94,8 +104,14 @@ System_File__Exists 004356B0 f end=00435781 type="int32_t __stdcall func(Blizzar
 System_File__MakeAbsolutePath 00435790 f end=00435889 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Move 00435890 f end=004359B6 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Delete 004359C0 f end=00435A57 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+System_Time__Init 00435C80 f end=00435D74
 Blizzard__File__RemoveDirectoryAndContents__Internal__Callback 0044FA10 f end=0044FB29 type="bool __stdcall func(Blizzard__File__ProcessDirParms* dirwalkparms)" ; Blizzard::File::RemoveDirectoryAndContents(char const*, bool)::Internal::Callback(Blizzard::File::ProcessDirParms const&)
 Blizzard__File__RemoveDirectoryAndContents 004518C0 f end=004519A7
+Blizzard__Streaming__FileManifest__GetIsStreamingTrial 00453480 f end=00453507 type="bool __stdcall func()"
+System_SFile__OpenDirectPathAsArchive 00453E30 f end=00453FB6
+Blizzard__File__GetLastErrorStack 00454210 f end=0045421E
+Blizzard__File__SetLastErrorStack 00454220 f end=0045424B ; Blizzard::File::SetLastErrorStack(Blizzard::Debug::ErrorStackRecord*)
+Blizzard__File__AddToLastErrorStack 00454250 f end=004542A9
 System_File__read_overlapped 00454870 f end=00454904
 System_File__write_overlapped 00454910 f end=004549A9
 System_File__ToCreateFlags 004549B0 f end=00454A4E type="bool __stdcall func(uint32_t flags, DWORD* sharemode, DWORD* desiredaccess, DWORD* creationdisposition, DWORD* flagsandattributes)"
@@ -122,6 +138,8 @@ System_File__Write 00455D20 f end=00455D3E type="int32_t __stdcall func(Blizzard
 System_File__read_locked 00457820 f end=00457904
 System_File__write_locked 00457910 f end=004579f4
 System_File__detect_io_mode 00459910 f end=00459998
+Blizzard__Mopaq__SFileOpenArchive 0045C480 f end=0045C5BA
+Blizzard__Streaming__InitializeStreaming 004616A0 f end=00461AF8
 OsCloseFile 00461B00 f end=00461B09 type="void __stdcall func(HOSFILE fileHandle)"
 OsFileExists 00461B10 f end=00461B27 type="int32_t __stdcall func(char* path)"
 OsDirectoryExists 00461B30 f end=00461B47 type="int32_t __stdcall func(char* dirName)"
@@ -2238,7 +2256,9 @@ GxSceneClear 006813B0 f end=006813CD
 GxTexUpdate 006813D0 f end=006813EC
 GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
 GxSetMaxFPS 00681770 f end=0068177D type="void __stdcall func(uint32_t maxFPS)"
+GxGetMaxFPS 00681780 f end=00681786
 GxSetMaxFPSBk 00681790 f end=0068179D type="void __stdcall func(uint32_t maxFPSBk)"
+GxGetMaxFPSBk 006817A0 f end=006817A6
 GxLogOpen 006817C0 f end=006817C5 type="void __stdcall func()"
 GxLog 006817E0 f end=006817F5 type="int __stdcall func(char* format, ...)"
 CGxFormat__CGxFormat 00681950 f type="CGxFormat* __thiscall func(CGxFormat* this)"
@@ -2479,9 +2499,21 @@ CBLPFile__Lock2 006AFCE0 f end=006AFF06 type="int32_t __thiscall func(CBLPFile* 
 CBLPFile__Open 006AFF10 f end=006AFFCF type="int32_t __thiscall func(CBLPFile* this, char* filename)"
 CBLPFile__LockChain2 006AFFD0 f end=006B012E type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, MipBits** images, uint32_t mipLevel, int32_t a6)"
 nullsub_154 006B0960 f
+ClientServices__Connection 006B0970 f end=006B098A
+ClientServices__LoginConnection 006B0990 f end=006B0996
+ClientServices__SendOnConnection 006B0B50 f end=006B0B79
+ClientServices__SetMessageHandler 006B0B80 f end=006B0BB5
+ClientServices_ClearMessageHandler 006B0BC0 f end=006B0BE9
+ClientServices__InitLoginServerCVars 006B0BF0 f end=006B0DB7
+ClientServices__GetSelectedRealmName 006B0DC0 f end=006B0DF0
+ClientServices__GetRealmList 006B0E10 f end=006B0EC2
+ClientServices__GetSelectedRealm 006B0ED0 f end=006B0EDF
+ClientServices__GetErrorToken 006B0F40 f end=006B0F5E
+ClientServices__ValidDisconnect 006B0F60 f end=006B0F8F
 nullsub_151 006B1B80 f
 nullsub_6 006B1B90 f
 nullsub_155 006B1BA0 f
+ClientServices__Report 006B22A0 f end=006B2A36
 Script_GetNumWhoResults 006B33D0 f end=006B3428
 Script_SetWhoToUI 006B3430 f end=006B344C
 Script_GetNumFriends 006B4060 f end=006B412B
@@ -2667,18 +2699,26 @@ SStrCmp 0076F770 f end=0076F7D2
 SStrStrUTF8I 0076F7E0 f end=0076F852
 SStrDupA 0076F9E0 f end=0076FA35
 SStrToFloat 0076FB80 f end=0076FDA9
-SRegLoadValue 00770840 f end=007708E9
-SRegSaveValue 007709A0 f end=007709E8
+SSetCurrentProcessAffinityMask 0076FE00 f end=0076FE18
+ILoadValue 007703A0 f end=00770483 type="int32_t __usercall func@<eax>(void* parentKey, char* subKeyName@<eax>, char* valuename, uint32_t* datatype, uint8_t* buffer@<ebx>, uint32_t bytes@<edi>, uint32_t* bytesread@<ecx>)"
+InternalLoadEntry 00770490 f end=00770575 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags, uint32_t* datatype, void* buffer, uint32_t bytes, uint32_t* bytesread@<esi>)"
+InternalSaveEntry 00770580 f end=00770719 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags@<ebx>, uint32_t datatype, const void* buffer, uint32_t bytes@<edi>)"
+SRegLoadString 00770720 f end=0077083B
+SRegLoadValue 00770840 f end=007708E9 type="int32_t __stdcall func(char* keyname, char* valuename, uint32_t flags, uint32_t* value)"
+SRegSaveString 007708F0 f end=0077099C
+SRegSaveValue 007709A0 f end=007709E8 type="int32_t __stdcall func(char* keyname, char* valuename, uint32_t flags, char* string)"
 SErrSetLastError 00771870 f end=00771886
 SErrSetLogTitleString 00771890 f end=007718F2
 SErrSetLogTitleCallback 00771900 f end=00771957
 SErrRegisterHandler 00771B80 f end=00771C15
+SErrDestroy 00771C90 f end=00771D04
+SErrDisplayError 00771D10 f end=00772656
 SErrCatchUnhandledExceptions 00772B20 f end=00772B2C
 SCmdRegisterArgList 00773590 f end=007737C2 type="int32_t __stdcall func(ARGLIST* listptr, uint32_t numargs)"
 SCmdProcess 00773890 f end=00773986 type="int32_t __stdcall func(char* cmdline, int32_t skipprogname, CMDEXTRACALLBACK extracallback, CMDERRORCALLBACK errorcallback)"
 SCmdProcessCommandLine 00773990 f end=007739AD type="int32_t __stdcall func(CMDEXTRACALLBACK extracallback, CMDERRORCALLBACK errorcallback)"
 StormInitialize 007739E0 f end=007739F4
-StormSetOption 00773A80 f end=00773C81
+StormSetOption 00773A80 f end=00773C81 type="int32_t __stdcall func(int optname, void* optval, uint32_t optlen)"
 SCritSect__SCritSect 00774620 f end=0077462E type="SCritSect* __thiscall func(SCritSect* this)"
 SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect *this)"
 SCritSect__Enter 00774640 f end=00774648 type="void __thiscall func(SCritSect *this)"
@@ -2690,6 +2730,8 @@ SEvent__Reset 00774730 f end=0077473A
 SLogClose 007754A0 f end=007754F2
 SLogCreate 007757E0 f end=007758D6 type="int32_t __stdcall func(char* filename, uint32_t flags, HSLOG* log)"
 SLogWrite 00775BB0 f end=00775BC6
+SUniConvertUTF16to8 00775BD0 f end=00775D90
+SUniConvertUTF8to16 00775EB0 f end=00776064
 SRgnCombineRectf 00777420 f end=00777588 type="void __stdcall func(HSRGN handle, RECTF* rect, void* param, int32_t combinemode)"
 SRgnGetBoundingRectf 00777590 f end=00777897 type="void __stdcall func(HSRGN handle, RECTF* rect)"
 SRgnDelete 00777940 f end=00777971 type="void __stdcall func(HSRGN handle)"
@@ -2807,11 +2849,31 @@ OsInputSetMouseMode 0086A020 f end=0086A063
 OsInputGetMousePosition 0086A0D0 f end=0086A130
 OsInputSetMousePosition 0086A130 f end=0086A194
 OsGetDefaultWindowRect 0086A1A0 f end=0086A20C
+OsTimeManager__Calibrate 0086AB30 f end=0086AD4A type="TimingMethod __thiscall func(OsTimeManager* this)"
+OsTimeGetTestError 0086AD50 f end=0086AD59
+OsTimeGetTimingMethodName 0086AD70 f end=0086ADB8 type="char* __stdcall func(TimingMethod method)"
+OsTimeManager__Snapshot 0086ADC0 f end=0086AE20 type="uint64_t __thiscall func(OsTimeManager* this)"
 OsGetAsyncTimeMs 0086AE20 f end=0086AE2B
+OsGetAsyncTimeClocks 0086AE30 f end=0086AE68
+OsGetAsyncClocksPerSecond 0086AE70 f end=0086AE94
+OsTimeManager__OsTimeManager 0086AEA0 f end=0086AF15 type="OsTimeManager* __thiscall func(OsTimeManager* this, int32_t a2)"
+OsTimeManagerCreate 0086AF20 f end=0086AF58
+OsTimeManagerDestroy 0086AF60 f end=0086AF83
+IOsGetProcessorFeatures 0086AF90 f end=0086B0BE
 OsSystemEnableCpuLog 0086B0C0 f end=0086B0CB
+IOsSystemCpuLog 0086B0D0 f end=0086B23D
 OsGetProcessorCount 0086B240 f end=0086B27D
+OsSleep 0086B280 f end=0086B28F
+OsGetVersionString 0086B430 f end=0086B458
+OsGetComputerName 0086B480 f end=0086B493
+OsGetUserName 0086B4A0 f end=0086B4B3
+OsGetPhysicalMemory 0086B4C0 f end=0086B4E1
+IOsParseProcessorFrequency 0086B600 f end=0086B703
+IOsGetPowerProfFrequency 0086B710 f end=0086B774
 OsIsRemoteSession 0086B780 f end=0086B78C
-OsGetAsyncClocksPerSecond 0086BBA0 f end=0086BBD0 type="uint64_t __stdcall func()"
+OsGetProcessorFeaturesEx 0086B9A0 f end=0086BB7B ; OsGetProcessorFeaturesEx(int&)
+OsGetProcessorFeatures 0086BB80 f end=0086BB94
+OsGetProcessorTicksPerSecond 0086BBA0 f end=0086BBD0 type="uint64_t __stdcall func()" ; Invented name
 OsGetExeName 0086BBD0 f end=0086BC2F
 OsPathGetRootChars 0086BC30 f end=0086BC9E
 OsPathStripFilename 0086BE50 f end=0086BE9B
@@ -2820,6 +2882,8 @@ OsGuiGetWindow 0086C6A0 f end=0086C6CE
 OsGuiMessageBox 0086C6E0 f end=0086C7D0
 OsIMEInitialize 0086D0A0 f end=0086D0B8
 OsIMEDestroy 0086D0C0 f end=0086D0Df
+OsTimeStartup 0086D430 f end=0086D439 type="void __stdcall func(TimingMethod timingMethod)"
+OsTimeShutdown 0086D440 f end=0086D445
 TSExplicitList_CGxBuf__LinkToTail 0086E200 f end=0086E25F type="void __thiscall func(TSExplicitList_CGxBuf* this, CGxBuf* ptr)"
 OsCallSetContext 0086F5A0 f end=0086F5EA
 OsCallInitialize 0086F760 f end=0086F875
@@ -2829,9 +2893,10 @@ OsClipboardPutString 008722A0 f end=008722BF
 IOsClipboardGetString 008726F0 f end=008727BB
 IOsClipboardPutString 008727E0 f end=008728B8
 CShaderEffect__UpdateProjMatrix 00872C10 f end=00872CD5
-return_one_byte_sub 008A1420 f end=008A1423 ; known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback
+stub_return_one_byte 008A1420 f end=008A1423 ; known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback
 GxDefaultApi 008C8DE0 f type="EGxApi __stdcall func()"
-return_zero4_sub 008E5250 f end=008E5253 ; Script_ToggleTris
+stub_return_zero4 008E5250 f end=008E5253 ; Script_ToggleTris
+stub_return_xor_eax 00936900 f end=00936905
 ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
 CDataRecycler__Clear 0095CEC0 f end=0095CF39
 CDataRecycler__GetData 0095CF40 f end=0095CFAE
@@ -3051,6 +3116,8 @@ nullsub_147 009DE1A0 f
 nullsub_148 009DE1B0 f
 nullsub_149 009DE1C0 f
 nullsub_150 009DE1D0 f
+CDataStore__v_table 009E0E24 l type="CDataStore__v_table"
+s_wowArgList 009E1BE0 l type="ARGLIST[17]"
 firstByteMark 009E537C l type="uint32_t[7]"
 bytesFromUTF8 009E5398 l type="uint8_t[256]"
 s_noinfo 009E5630 l type="Blizzard__File__FileInfo"
@@ -3060,6 +3127,7 @@ CGxDevice__vtable 00A2DDC0 l type="CGxDevice__vtable"
 CGxDeviceOpenGl__vtable 00A2E198 l
 CGxDeviceD3d__vtable 00a2e718 l
 CGxDeviceD3d9Ex__vtable 00a2f500 l
+g_startup_StringsDB 00AB6350 l type="WowClientDB_Startup_StringsRec"
 System_File__Stacked__s_manager 00AB90AC l type="Blizzard__File__Filesystem*"
 System_File__read_func 00AB912C l ; type="int32_t (*)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__write_func 00AB91B4 l ; type="int32_t (*)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
@@ -3324,6 +3392,10 @@ g_lightIntBandDB 00AF49BC l type="WowClientDB_LightIntBandRec" ; 0x15D
 g_lightFloatBandDB 00AF49E0 l type="WowClientDB_LightFloatBandRec" ; 0x15C
 g_lightParamsDB 00AF4A04 l type="WowClientDB_LightParamsRec" ; 0x15E
 g_lightDB 00AF4A28 l type="WowClientDB_LightRec" ; 0x15B
+s_streamingdiag 00B2F050 l
+g_clientEventContext 00B2F994 l type="HEVENTCONTEXT" 
+Blizzard__Streaming__s_streamingReady 00B38180 l type="bool"
+Blizzard__Streaming__s_isStreamingTrial 00B38181 l type="bool"
 System_File__s_read_init 00B38A5C l type="Blizzard__Lock__DoOnceData"
 System_File__s_write_init 00B38A64 l type="Blizzard__Lock__DoOnceData"
 OsFileGetDownloadFolder__s_downloadfolder 00B38A88 l ; OsFileGetDownloadFolder()::s_downloadfolder;
@@ -3421,6 +3493,20 @@ s_desktopFormat 00CABD40 l type="CGxFormat"
 s_fallbackFormat 00CABDA8 l type="CGxFormat"
 s_lastGoodFormat 00CABE00 l type="CGxFormat"
 s_formats 00CABE98 l type="CGxFormat[5]"
+s_alloccount 00CAE950 l type="uint32_t" 
+s_freecount 00CAE954 l type="uint32_t" 
+g_opt 00CAE958 l type="STORMOPTIONS"
+s_scriptProfileEnabled 00D3F798 l type="int32_t"
 s_WindowResizeLock 00D41580 l type="int32_t"
+s_OsTimeMgr 00D4159C l type="OsTimeManager*"
+s_haveProcessorFeatures 00D415A0 l type="int32_t"
+s_processorVendor 00D415A4 l type="int32_t"
+s_processorFeatures 00D415A8 l type="int32_t"
+s_processorSockets 00D415AC l type="int32_t"
+s_processorCores 00D415B0 l type="int32_t"
+s_processorCount 00D415B4 l type="int32_t"
+s_cpuLogEnabled 00D415C0 l type="int32_t"
 s_cpuTicksPerSecond 00D415C8 l type="uint64_t"
+s_gotPowerProfFrequency 00D415D0 l type="int32_t"
+s_checkedPowerProfInfo 00D415D4 l type="int32_t"
 CShaderEffect__s_enableShaders 00D43020 l type="int32_t"
