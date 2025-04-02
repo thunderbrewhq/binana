@@ -4,8 +4,11 @@ static import_data_types() {
 	// Give types to data labels
 	apply_type(0x00401010, "void* __stdcall func(uint32_t count)");
 	apply_type(0x00401030, "void __stdcall func(void* ptr)");
+	apply_type(0x00401050, "CDataStore* __thiscall func(CDataStore* this)");
+	apply_type(0x00403600, "void __stdcall func(char* manifest@<eax>)");
 	apply_type(0x00408070, "void __stdcall func(float* minX, float* maxX, float* minY, float* maxY, float* minZ, float* maxZ)");
 	apply_type(0x00409670, "void __thiscall func(CGxDevice* this)");
+	apply_type(0x00421880, "int32_t __stdcall func(char* buffer, int32_t buffersize)");
 	apply_type(0x004271D0, "bool __stdcall func(char* name, Blizzard__File__FileInfo* info)");
 	apply_type(0x00427250, "Blizzard__File__FileInfo* __stdcall func(Blizzard__File__StreamRecord* file)");
 	apply_type(0x004272C0, "bool __stdcall func(Blizzard__File__StreamRecord* file, Blizzard__File__FileInfo* info)");
@@ -38,6 +41,7 @@ static import_data_types() {
 	apply_type(0x00435890, "int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)");
 	apply_type(0x004359C0, "int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)");
 	apply_type(0x0044FA10, "bool __stdcall func(Blizzard__File__ProcessDirParms* dirwalkparms)");
+	apply_type(0x00453480, "bool __stdcall func()");
 	apply_type(0x004549B0, "bool __stdcall func(uint32_t flags, DWORD* sharemode, DWORD* desiredaccess, DWORD* creationdisposition, DWORD* flagsandattributes)");
 	apply_type(0x00454A50, "int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)");
 	apply_type(0x00454AC0, "int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)");
@@ -406,9 +410,15 @@ static import_data_types() {
 	apply_type(0x0076E5E0, "void* __stdcall func(void* ptr, uint32_t bytes, char* filename, int32_t linenumber, uint32_t flags)");
 	apply_type(0x0076EE30, "int32_t __stdcall func(char* str)");
 	apply_type(0x0076F070, "int32_t __stdcall func(char* dest, size_t maxchars, char* format, ...)");
+	apply_type(0x007703A0, "int32_t __usercall func@<eax>(void* parentKey, char* subKeyName@<eax>, char* valuename, uint32_t* datatype, uint8_t* buffer@<ebx>, uint32_t bytes@<edi>, uint32_t* bytesread@<ecx>)");
+	apply_type(0x00770490, "int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags, uint32_t* datatype, void* buffer, uint32_t bytes, uint32_t* bytesread@<esi>)");
+	apply_type(0x00770580, "int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags@<ebx>, uint32_t datatype, const void* buffer, uint32_t bytes@<edi>)");
+	apply_type(0x00770840, "int32_t __stdcall func(char* keyname, char* valuename, uint32_t flags, uint32_t* value)");
+	apply_type(0x007709A0, "int32_t __stdcall func(char* keyname, char* valuename, uint32_t flags, char* string)");
 	apply_type(0x00773590, "int32_t __stdcall func(ARGLIST* listptr, uint32_t numargs)");
 	apply_type(0x00773890, "int32_t __stdcall func(char* cmdline, int32_t skipprogname, CMDEXTRACALLBACK extracallback, CMDERRORCALLBACK errorcallback)");
 	apply_type(0x00773990, "int32_t __stdcall func(CMDEXTRACALLBACK extracallback, CMDERRORCALLBACK errorcallback)");
+	apply_type(0x00773A80, "int32_t __stdcall func(int optname, void* optval, uint32_t optlen)");
 	apply_type(0x00774620, "SCritSect* __thiscall func(SCritSect* this)");
 	apply_type(0x00774630, "void __thiscall func(SCritSect *this)");
 	apply_type(0x00774640, "void __thiscall func(SCritSect *this)");
@@ -456,7 +466,12 @@ static import_data_types() {
 	apply_type(0x00818070, "void __stdcall func(lua_State* L, int startIndex, char* buffer, uint32_t bufferSize)");
 	apply_type(0x00819830, "void __thiscall func(FrameScript_Object* this)");
 	apply_type(0x00819EA0, "void __stdcall func(int32_t function, FrameScript_Object* object, int32_t args, char* args_fmt, FrameScript_EventObject* eventObject)");
+	apply_type(0x0086AB30, "TimingMethod __thiscall func(OsTimeManager* this)");
+	apply_type(0x0086AD70, "char* __stdcall func(TimingMethod method)");
+	apply_type(0x0086ADC0, "uint64_t __thiscall func(OsTimeManager* this)");
+	apply_type(0x0086AEA0, "OsTimeManager* __thiscall func(OsTimeManager* this, int32_t a2)");
 	apply_type(0x0086BBA0, "uint64_t __stdcall func()");
+	apply_type(0x0086D430, "void __stdcall func(TimingMethod timingMethod)");
 	apply_type(0x0086E200, "void __thiscall func(TSExplicitList_CGxBuf* this, CGxBuf* ptr)");
 	apply_type(0x008C8DE0, "EGxApi __stdcall func()");
 	apply_type(0x0095BFB0, "int32_t __stdcall func()");
@@ -506,11 +521,14 @@ static import_data_types() {
 	apply_type(0x00961470, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x009614B0, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x009AD000, "void __thiscall func(DayNight__DNGlare* this, char* a1)");
+	apply_type(0x009E0E24, "CDataStore__v_table");
+	apply_type(0x009E1BE0, "ARGLIST[17]");
 	apply_type(0x009E537C, "uint32_t[7]");
 	apply_type(0x009E5398, "uint8_t[256]");
 	apply_type(0x009E5630, "Blizzard__File__FileInfo");
 	apply_type(0x009E9EC8, "uint32_t[7]");
 	apply_type(0x00A2DDC0, "CGxDevice__vtable");
+	apply_type(0x00AB6350, "WowClientDB_Startup_StringsRec");
 	apply_type(0x00AB90AC, "Blizzard__File__Filesystem*");
 	apply_type(0x00AB91C0, "Blizzard__File__Filesystem");
 	apply_type(0x00AB92C0, "Blizzard__File__Filesystem");
@@ -773,6 +791,9 @@ static import_data_types() {
 	apply_type(0x00AF49E0, "WowClientDB_LightFloatBandRec");
 	apply_type(0x00AF4A04, "WowClientDB_LightParamsRec");
 	apply_type(0x00AF4A28, "WowClientDB_LightRec");
+	apply_type(0x00B2F994, "HEVENTCONTEXT");
+	apply_type(0x00B38180, "bool");
+	apply_type(0x00B38181, "bool");
 	apply_type(0x00B38A5C, "Blizzard__Lock__DoOnceData");
 	apply_type(0x00B38A64, "Blizzard__Lock__DoOnceData");
 	apply_type(0x00B417C8, "uint32_t");
@@ -859,7 +880,21 @@ static import_data_types() {
 	apply_type(0x00CABDA8, "CGxFormat");
 	apply_type(0x00CABE00, "CGxFormat");
 	apply_type(0x00CABE98, "CGxFormat[5]");
+	apply_type(0x00CAE950, "uint32_t");
+	apply_type(0x00CAE954, "uint32_t");
+	apply_type(0x00CAE958, "STORMOPTIONS");
+	apply_type(0x00D3F798, "int32_t");
 	apply_type(0x00D41580, "int32_t");
+	apply_type(0x00D4159C, "OsTimeManager*");
+	apply_type(0x00D415A0, "int32_t");
+	apply_type(0x00D415A4, "int32_t");
+	apply_type(0x00D415A8, "int32_t");
+	apply_type(0x00D415AC, "int32_t");
+	apply_type(0x00D415B0, "int32_t");
+	apply_type(0x00D415B4, "int32_t");
+	apply_type(0x00D415C0, "int32_t");
 	apply_type(0x00D415C8, "uint64_t");
+	apply_type(0x00D415D0, "int32_t");
+	apply_type(0x00D415D4, "int32_t");
 	apply_type(0x00D43020, "int32_t");
 }
