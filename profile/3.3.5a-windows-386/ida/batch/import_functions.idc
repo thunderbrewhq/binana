@@ -18,6 +18,7 @@ static import_functions() {
 	set_func_cmt(0x00427720, "Blizzard::File::Read(Blizzard::File::StreamRecord*, void*, long long, int*, int)", 0);
 	set_func_cmt(0x00433510, "Blizzard::String::JoinPath(char*, int, char const*, char const*)", 0);
 	set_func_cmt(0x0044FA10, "Blizzard::File::RemoveDirectoryAndContents(char const*, bool)::Internal::Callback(Blizzard::File::ProcessDirParms const&)", 0);
+	set_func_cmt(0x00454220, "Blizzard::File::SetLastErrorStack(Blizzard::Debug::ErrorStackRecord*)", 0);
 	set_func_cmt(0x0047ADE0, "CDataStore::GetBufferParams(void const**, unsigned int*, unsigned int*)", 0);
 	set_func_cmt(0x0047AE10, "CDataStore::DetachBuffer(void**, unsigned int*, unsigned int*)", 0);
 	set_func_cmt(0x0047AE50, "virtual void __thiscall CDataStore::InternalDestroy(unsigned char * &,unsigned int &,unsigned int &)", 0);
@@ -119,6 +120,8 @@ static import_functions() {
 	set_func_cmt(0x0081AC90, "vFrameScript_SignalEvent(unsigned int, char const*, char*)", 0);
 	set_func_cmt(0x0081B530, "FrameScript_SignalEvent(unsigned int, char const*, ...)", 0);
 	set_func_cmt(0x0081B5F0, "FrameScript_CreateEvents(char const**, unsigned int)", 0);
+	set_func_cmt(0x0086B9A0, "OsGetProcessorFeaturesEx(int&)", 0);
+	set_func_cmt(0x0086BBA0, "Invented name", 0);
 	set_func_cmt(0x008A1420, "known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback", 0);
 	set_func_cmt(0x008E5250, "Script_ToggleTris", 0);
 	set_func_cmt(0x0095D110, "CDataAllocator::GetData(int, char const*, int)", 0);
