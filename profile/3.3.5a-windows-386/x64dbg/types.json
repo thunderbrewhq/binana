@@ -333,6 +333,10 @@
       "name": "TEXTURERECREATIONCALLBACK"
     },
     {
+      "type": "long long",
+      "name": "TimingMethod"
+    },
+    {
       "type": "int32_t",
       "name": "intptr_t"
     },
@@ -2280,6 +2284,103 @@
           "type": "void*",
           "name": "v_fn_04",
           "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "CDataStore",
+      "size": 24,
+      "members": [
+        {
+          "type": "CDataStore__v_table*",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t*",
+          "name": "m_data",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_base",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_size",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_read",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "CDataStore__v_table",
+      "size": 44,
+      "members": [
+        {
+          "type": "void*",
+          "name": "fn_InternalInitialize",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "fn_InternalDestroy",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "fn_InternalFetchRead",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "fn_InternalFetchWrite",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "fn_destructor",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "fn_IsRead",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "fn_Reset",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "fn_Finalize",
+          "offset": 28
+        },
+        {
+          "type": "void*",
+          "name": "fn_GetBufferParams",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "fn_DetachBuffer",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "fn_GetHeaderSpace",
+          "offset": 40
         }
       ]
     },
@@ -11366,6 +11467,17 @@
     },
     {
       "name": "HCOLORMAP__",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unused",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "HEVENTCONTEXT__",
       "size": 4,
       "members": [
         {
@@ -21801,6 +21913,127 @@
       ]
     },
     {
+      "name": "ProcessorFeatures",
+      "size": 92,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "std_0b",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "std_0d",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "std_0c",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "std_0a",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "std_1b",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "std_1d",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "std_4a",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_0a",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_1c",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_1d",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_8c",
+          "offset": 40
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_2a",
+          "offset": 44
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_2b",
+          "offset": 48
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_2c",
+          "offset": 52
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_2d",
+          "offset": 56
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_3a",
+          "offset": 60
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_3b",
+          "offset": 64
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_3c",
+          "offset": 68
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_3d",
+          "offset": 72
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_4a",
+          "offset": 76
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_4b",
+          "offset": 80
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_4c",
+          "offset": 84
+        },
+        {
+          "type": "uint32_t",
+          "name": "ext_4d",
+          "offset": 88
+        }
+      ]
+    },
+    {
       "name": "QuestFactionRewardRec",
       "size": 44,
       "members": [
@@ -22014,6 +22247,78 @@
     {
       "name": "SFile",
       "size": 0
+    },
+    {
+      "name": "SSyncObject",
+      "size": 4,
+      "members": [
+        {
+          "type": "void*",
+          "name": "m_opaqueData",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "STORMOPTIONS",
+      "size": 44,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "smemleaksilentwarning",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "serrleaksilentwarning",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "wavechunksize",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "opt0C",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "opt10",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "opt14",
+          "offset": 20
+        },
+        {
+          "type": "int32_t",
+          "name": "opt18",
+          "offset": 24
+        },
+        {
+          "type": "int32_t",
+          "name": "opt1C",
+          "offset": 28
+        },
+        {
+          "type": "int32_t",
+          "name": "sregunicode",
+          "offset": 32
+        },
+        {
+          "type": "int32_t",
+          "name": "opt24",
+          "offset": 36
+        },
+        {
+          "type": "int32_t",
+          "name": "opt28",
+          "offset": 40
+        }
+      ]
     },
     {
       "name": "ScalingStatDistributionRec",
@@ -32039,6 +32344,28 @@
       ]
     },
     {
+      "name": "SEvent",
+      "size": 4,
+      "members": [
+        {
+          "type": "SSyncObject",
+          "name": "b_base",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "SThread",
+      "size": 4,
+      "members": [
+        {
+          "type": "SSyncObject",
+          "name": "b_base",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "RCString",
       "size": 12,
       "members": [
@@ -33681,6 +34008,37 @@
           "type": "TSLink_SIMPLEFRAMENODE",
           "name": "m_link",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "OsTimeManager",
+      "size": 40,
+      "members": [
+        {
+          "type": "double",
+          "name": "scaleToMs",
+          "offset": 0
+        },
+        {
+          "type": "TimingMethod",
+          "name": "timingMethod",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "timingTestError",
+          "offset": 16
+        },
+        {
+          "type": "int64_t",
+          "name": "performanceFrequency",
+          "offset": 24
+        },
+        {
+          "type": "double",
+          "name": "timeBegin",
+          "offset": 32
         }
       ]
     },

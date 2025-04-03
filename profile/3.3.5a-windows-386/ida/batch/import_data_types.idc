@@ -397,12 +397,16 @@ static import_data_types() {
 	apply_type(0x00769890, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
 	apply_type(0x00769950, "void __stdcall func(CGxFormat* format)");
 	apply_type(0x00769C00, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
+	apply_type(0x00769C30, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
+	apply_type(0x00769C60, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
 	apply_type(0x00769D00, "Hardware* __stdcall func()");
 	apply_type(0x0076A220, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
 	apply_type(0x0076A580, "bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)");
 	apply_type(0x0076AB80, "int32_t __stdcall func(char* title, int32_t multithreaded)");
 	apply_type(0x0076B3F0, "void __stdcall func(DefaultSettings* defaults, Hardware* hardware)");
 	apply_type(0x0076B520, "void __stdcall func(DefaultSettings* defaults, Hardware* hardware)");
+	apply_type(0x0076B540, "void __stdcall func(Hardware* hardware@<edi>)");
+	apply_type(0x0076B5A0, "void __usercall __noreturn func(int32_t messageID, const char* fallbackMessage)");
 	apply_type(0x0076BA30, "void __stdcall func(Hardware* hardware, bool* hwChanged)");
 	apply_type(0x0076E4A0, "void __stdcall func(uint32_t flags, uint8_t changeMask)");
 	apply_type(0x0076E540, "void* __stdcall func(uint32_t bytes, char* filename, int32_t linenumber, uint32_t flags)");
@@ -471,6 +475,7 @@ static import_data_types() {
 	apply_type(0x0086ADC0, "uint64_t __thiscall func(OsTimeManager* this)");
 	apply_type(0x0086AEA0, "OsTimeManager* __thiscall func(OsTimeManager* this, int32_t a2)");
 	apply_type(0x0086BBA0, "uint64_t __stdcall func()");
+	apply_type(0x0086C6E0, "int32_t __stdcall func(void* parentWindow, int32_t style, const char* message, const char* title)");
 	apply_type(0x0086D430, "void __stdcall func(TimingMethod timingMethod)");
 	apply_type(0x0086E200, "void __thiscall func(TSExplicitList_CGxBuf* this, CGxBuf* ptr)");
 	apply_type(0x008C8DE0, "EGxApi __stdcall func()");
@@ -777,6 +782,7 @@ static import_data_types() {
 	apply_type(0x00ADBAD4, "RECTF");
 	apply_type(0x00ADBAE4, "uint32_t");
 	apply_type(0x00ADBBB0, "TSList_CONSOLELINE");
+	apply_type(0x00ADBE54, "SoundHardware");
 	apply_type(0x00ADBE5C, "uint32_t[4]");
 	apply_type(0x00ADBE6C, "uint8_t[2][2]");
 	apply_type(0x00ADBE70, "uint32_t[2][2]");
@@ -848,6 +854,7 @@ static import_data_types() {
 	apply_type(0x00CABAA0, "CVar*");
 	apply_type(0x00CABAA4, "CVar*");
 	apply_type(0x00CABAA8, "CVar*");
+	apply_type(0x00CABAAC, "CVar*");
 	apply_type(0x00CABAB0, "CVar*");
 	apply_type(0x00CABAB4, "CVar*");
 	apply_type(0x00CABAB8, "CVar*");
@@ -858,6 +865,7 @@ static import_data_types() {
 	apply_type(0x00CABAEC, "CVar*");
 	apply_type(0x00CABAF0, "DefaultSettings");
 	apply_type(0x00CABB30, "CVar*");
+	apply_type(0x00CABB34, "CVar*");
 	apply_type(0x00CABB38, "Hardware");
 	apply_type(0x00CABB6C, "CVar*");
 	apply_type(0x00CABB70, "CVar*");
@@ -870,6 +878,8 @@ static import_data_types() {
 	apply_type(0x00CABBAC, "CVar*");
 	apply_type(0x00CABBB0, "CVar*");
 	apply_type(0x00CABBB4, "CVar*");
+	apply_type(0x00CABBB8, "char[256]");
+	apply_type(0x00CABCB8, "CGxDevice*");
 	apply_type(0x00CABCBC, "bool");
 	apply_type(0x00CABCBD, "bool");
 	apply_type(0x00CABCBE, "bool");

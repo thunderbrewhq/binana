@@ -60,6 +60,7 @@ static import_functions() {
 	set_func_cmt(0x0065C290, "00005410", 0);
 	set_func_cmt(0x0065F520, "WowClientDB<AchievementRec>::GetRecordByIndex(int, void*)", 0);
 	set_func_cmt(0x006811D0, "00005410", 0);
+	set_func_cmt(0x006811F0, "GxAdapterID(unsigned short&, unsigned short&, unsigned int&, unsigned int&)", 0);
 	set_func_cmt(0x00681BE0, "UC", 0);
 	set_func_cmt(0x00682400, "this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline", 0);
 	set_func_cmt(0x00683670, "static void CGxDevice::LogOpen(void)", 0);
