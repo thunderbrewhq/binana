@@ -1,9 +1,13 @@
 #ifndef STORM_THREAD_H
 #define STORM_THREAD_H
 
+DECLARE_STRUCT(SCritSect);
+DECLARE_STRUCT(SSyncObject);
+DECLARE_STRUCT(SEvent);
+DECLARE_STRUCT(SThread);
+
 #include "system/types.h"
 
-DECLARE_STRUCT(SCritSect);
 typedef struct CSRWLock CSRWLock;
 
 struct SCritSect {
@@ -12,6 +16,19 @@ struct SCritSect {
 
 struct CSRWLock {
   uint8_t m_opaqueData[12];
+};
+
+struct SSyncObject {
+  // HANDLE
+  void* m_opaqueData;
+};
+
+struct SEvent {
+  SSyncObject b_base;
+};
+
+struct SThread {
+  SSyncObject b_base;
 };
 
 #endif

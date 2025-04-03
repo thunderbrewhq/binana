@@ -1,3 +1,4 @@
+AddResolution 0054EFE0 f end=0054F046 type="void __fastcall func(TSGrowableArray_C2iVector* this, C2iVector* resolution)"
 GenerateNodeString 00763680 f end=0076372C type="void __stdcall func(CONSOLELINE* node)"
 SetInputString 00763730 f end=007637CD type="void __stdcall func(char* text)" ; UC
 ReserveInputSpace 007637D0 f end=0076382B type="void __fastcall func(CONSOLELINE* lineptr, uint32_t chars)"
@@ -57,8 +58,10 @@ ConsoleCommandUnregister 007689E0 f end=00768A19 type="void __stdcall func(char*
 ConsoleCommandComplete 00768A20 f end=00768AD6 type="int32_t __stdcall func(char* partial, char** previous, int32_t direction)"
 ConsoleCommandRegister 00769100 f end=007691B3 type="int32_t __stdcall func(char* command, COMMANDHANDLER handler, CATEGORY category, char* helpText)"
 ConsoleAccessGetEnabled 00769230 f end=00769236 type="int32_t __stdcall func()"
+ConsoleGxOverride 007696D0 f end=00769804 type="void __stdcall func(char* list)"
 UpdateGxCVars 007698B0 f end=0076994A ; 00005400
 SetGxCVars 00769950 f end=00769BF5 type="void __stdcall func(CGxFormat* format)" ; SetGxCVars(CGxFormat const&)
+ConsoleDeviceStereoInitialize 00769C90 f end=00769CF9
 ConsoleGetHardware 00769D00 f end=00769D0F type="Hardware* __stdcall func()"
 ConsoleDeviceDestroy 00769D40 f end=00769D7D ; 00005400
 ValidateFormatMonitor 00769E10 f end=00769FF0
@@ -67,8 +70,8 @@ RegisterGxCVars 0076A630 f end=0076AAA8
 ConsoleDeviceInitialize 0076AB80 f end=0076B287 type="int32_t __stdcall func(char* title, int32_t multithreaded)"
 SetDefaults 0076B3F0 f type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; void SetDefaults(DefaultSettings&, const Hardware&)
 ConsoleDetectSetDefaultsFormat 0076B520 f end=0076B53D type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; ConsoleDetectSetDefaultsFormat(DefaultSettings&, const Hardware&)
+SetVideoIdx 0076B540 f end=0076B594 type="void __stdcall func(Hardware* hardware@<edi>)"
+PrintStartupError 0076B5A0 f end=0076B616 type="void __usercall __noreturn func(int32_t messageID, const char* fallbackMessage)"
 ConsoleDetectSaveHardware 0076B620 f end=0076B7DB
 ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9 type="void __stdcall func(Hardware* hardware, bool* hwChanged)" ; ConsoleDetectDetectHardware(Hardware&, bool&)
 ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
-ConsoleGxOverride 007696D0 f end=00769804 type="void __stdcall func(char* list)"
-AddResolution 0054EFE0 f end=0054F046 type="void __fastcall func(TSGrowableArray_C2iVector* this, C2iVector* resolution)"

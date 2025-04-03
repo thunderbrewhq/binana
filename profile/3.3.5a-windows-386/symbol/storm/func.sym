@@ -59,6 +59,7 @@ SLogClose 007754A0 f end=007754F2
 SLogCreate 007757E0 f end=007758D6 type="int32_t __stdcall func(char* filename, uint32_t flags, HSLOG* log)"
 SLogWrite 00775BB0 f end=00775BC6
 SUniConvertUTF16to8 00775BD0 f end=00775D90
+SUniConvertUTF8to16Len 00775D90 f end=00775EAC
 SUniConvertUTF8to16 00775EB0 f end=00776064
 SRgnCombineRectf 00777420 f end=00777588 type="void __stdcall func(HSRGN handle, RECTF* rect, void* param, int32_t combinemode)"
 SRgnGetBoundingRectf 00777590 f end=00777897 type="void __stdcall func(HSRGN handle, RECTF* rect)"

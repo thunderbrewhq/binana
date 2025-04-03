@@ -2249,6 +2249,8 @@ WowClientDB_CharBaseInfoRec__LoadRecords 00659B80 f end=00659C82 ; WowClientDB<C
 WowClientDB__GetRecord 0065C290 f end=0065C2B4 ; 00005410
 WowClientDB_AchievementRec__GetRecordByIndex 0065F520 f end=0065F55B ; WowClientDB<AchievementRec>::GetRecordByIndex(int, void*)
 GxApiSupported 006811D0 f end=006811F0 type="int32_t __stdcall func(EGxApi api)" ; 00005410
+GxAdapterID 006811F0 f end=006811F9 ; GxAdapterID(unsigned short&, unsigned short&, unsigned int&, unsigned int&)
+GxAdapterInfer 00681200 f end=00681209
 GxAdapterMonitorModes 00681210 f end=00681219 type="int32_t __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
 GxAdapterDesktopMode 00681220 f type="int32_t __stdcall func(CGxMonitorMode* mode)"
 GxDevCreate 00681290 f end=00681301
@@ -2260,6 +2262,7 @@ GxGetMaxFPS 00681780 f end=00681786
 GxSetMaxFPSBk 00681790 f end=0068179D type="void __stdcall func(uint32_t maxFPSBk)"
 GxGetMaxFPSBk 006817A0 f end=006817A6
 GxLogOpen 006817C0 f end=006817C5 type="void __stdcall func()"
+GxLogClose 006817D0 f end=006817D5
 GxLog 006817E0 f end=006817F5 type="int __stdcall func(char* format, ...)"
 CGxFormat__CGxFormat 00681950 f type="CGxFormat* __thiscall func(CGxFormat* this)"
 GxDrawLockedElements 00681A60 f end=00681AAB type="void __stdcall func()"
@@ -2273,6 +2276,7 @@ GxPrimLockIndexPtr 006823A0 f end=006823F8 type="void __stdcall func(EGxPrim pri
 GxPrimVertexPtr 00682400 f end=00682781 type="void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)" ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
 GxPrimLockVertexPtrs 006828C0 f end=006828FE type="void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, uint8_t* bone, uint32_t boneStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)"
 GxScenePresent 00682A00 f end=00682A33
+GxDevDestroy 00682B80 f end=00682C35
 CGxDevice__DeviceCreate 00682CB0 f end=00682CCB type="void __thiscall func(CGxDevice* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
 CGxDevice__DeviceCreate 00682CD0 f end=00682CF0 type="void __thiscall func(CGxDevice* this, uintptr_t hwnd, CGxFormat* format)"
 CGxDevice__DeviceDestroy 00682CF0 f end=00682CFB type="void __thiscall func(CGxDevice* this)"
@@ -2304,6 +2308,7 @@ CGxDevice__CursorSetVisible 00683640 f end=00683650 type="void __thiscall func(C
 CGxDevice__CursorLock 00683650 f end=00683657 type="uint32_t* __thiscall func(CGxDevice* this)"
 CGxDevice__CursorSetDepth 00683660 f end=00683670 type="void __thiscall func(CGxDevice* this, float depth)"
 CGxDevice__LogOpen 00683670 f end=006836A4 type="void __stdcall func()" ; static void CGxDevice::LogOpen(void)
+CGxDevice__LogClose 006836B0 f end=006836CA
 CGxDevice__DeviceSetFormat 006840F0 f end=0068416C type="int32_t __thiscall func(CGxDevice* this, CGxFormat* format)"
 CGxDevice__DeviceSetGamma 00684170 f end=00684189 type="void __thiscall func(CGxDevice* this, float gamma)"
 CGxDevice__DeviceSetGamma 00684190 f end=006841AF type="int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)"
@@ -2358,6 +2363,8 @@ CGxDevice__destructor 006890C0 f end=00689460 type="void __thiscall func(CGxDevi
 CGxDevice__scalar_deleting_destructor 00689690 f end=006896BB type="void __thiscall func(CGxDevice* this, uint8_t __flags)"
 CGxDevice__ShaderCreate 006897C0 f end=00689A49 type="void __thiscall func(CGxDevice* this, CGxShader**, EGxShTarget, char*, char*, int32_t)"
 CGxShader__Valid 00689A50 f end=00689A6F
+CGxDevice__DeviceAdapterID 00689C10 f end=00689DA2
+CGxDevice__DeviceAdapterInfer 00689DB0 f end=00689E7B
 CGxMonitorModeSort 00689E80 f type="int32_t __stdcall func(void* a, void* b)"
 CGxDevice__FindDisplayDevice 00689EA0 f end=00689EF0 type="int32_t __stdcall func(PDISPLAY_DEVICEA device, uint32_t flag)" ; UC
 CGxDevice__NewD3d 00689EF0 f end=00689F14 type="CGxDevice* __stdcall func()"
@@ -2660,6 +2667,8 @@ CVGxWindowResizeLockCallback 00769890 f end=007698A9 type="bool __stdcall func(C
 UpdateGxCVars 007698B0 f end=0076994A ; 00005400
 SetGxCVars 00769950 f end=00769BF5 type="void __stdcall func(CGxFormat* format)" ; SetGxCVars(CGxFormat const&)
 CVGxStereoEnabledCallback 00769C00 f end=00769C2B type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
+CVGxStereoConvergenceCallback 00769C30 f end=00769C54 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
+CVGxStereoSeparationCallback 00769C60 f end=00769C84 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 ConsoleGetHardware 00769D00 f end=00769D0F type="Hardware* __stdcall func()"
 ConsoleDeviceDestroy 00769D40 f end=00769D7D ; 00005400
 ValidateFormatMonitor 00769E10 f end=00769FF0
@@ -2670,6 +2679,8 @@ RegisterGxCVars 0076A630 f end=0076AAA8
 ConsoleDeviceInitialize 0076AB80 f end=0076B287 type="int32_t __stdcall func(char* title, int32_t multithreaded)"
 SetDefaults 0076B3F0 f type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; void SetDefaults(DefaultSettings&, const Hardware&)
 ConsoleDetectSetDefaultsFormat 0076B520 f end=0076B53D type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; ConsoleDetectSetDefaultsFormat(DefaultSettings&, const Hardware&)
+SetVideoIdx 0076B540 f end=0076B594 type="void __stdcall func(Hardware* hardware@<edi>)"
+PrintStartupError 0076B5A0 f end=0076B616 type="void __usercall __noreturn func(int32_t messageID, const char* fallbackMessage)"
 ConsoleDetectSaveHardware 0076B620 f end=0076B7DB
 ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9 type="void __stdcall func(Hardware* hardware, bool* hwChanged)" ; ConsoleDetectDetectHardware(Hardware&, bool&)
 SMemSetDebugFlags 0076E4A0 f end=0076E4D2 type="void __stdcall func(uint32_t flags, uint8_t changeMask)"
@@ -2731,6 +2742,7 @@ SLogClose 007754A0 f end=007754F2
 SLogCreate 007757E0 f end=007758D6 type="int32_t __stdcall func(char* filename, uint32_t flags, HSLOG* log)"
 SLogWrite 00775BB0 f end=00775BC6
 SUniConvertUTF16to8 00775BD0 f end=00775D90
+SUniConvertUTF8to16Len 00775D90 f end=00775EAC
 SUniConvertUTF8to16 00775EB0 f end=00776064
 SRgnCombineRectf 00777420 f end=00777588 type="void __stdcall func(HSRGN handle, RECTF* rect, void* param, int32_t combinemode)"
 SRgnGetBoundingRectf 00777590 f end=00777897 type="void __stdcall func(HSRGN handle, RECTF* rect)"
@@ -2849,6 +2861,7 @@ OsInputSetMouseMode 0086A020 f end=0086A063
 OsInputGetMousePosition 0086A0D0 f end=0086A130
 OsInputSetMousePosition 0086A130 f end=0086A194
 OsGetDefaultWindowRect 0086A1A0 f end=0086A20C
+OsWindowProc 0086A210 f end=0086AB24
 OsTimeManager__Calibrate 0086AB30 f end=0086AD4A type="TimingMethod __thiscall func(OsTimeManager* this)"
 OsTimeGetTestError 0086AD50 f end=0086AD59
 OsTimeGetTimingMethodName 0086AD70 f end=0086ADB8 type="char* __stdcall func(TimingMethod method)"
@@ -2878,8 +2891,10 @@ OsGetExeName 0086BBD0 f end=0086BC2F
 OsPathGetRootChars 0086BC30 f end=0086BC9E
 OsPathStripFilename 0086BE50 f end=0086BE9B
 OsGetExePath 0086BEA0 f end=0086BEBE
+OsGuiSetWindowTitle 0086C650 f end=0086C696
 OsGuiGetWindow 0086C6A0 f end=0086C6CE
-OsGuiMessageBox 0086C6E0 f end=0086C7D0
+OsGuiSetGxWindow 0086C6D0 f end=0086C6DD
+OsGuiMessageBox 0086C6E0 f end=0086C7D0 type="int32_t __stdcall func(void* parentWindow, int32_t style, const char* message, const char* title)"
 OsIMEInitialize 0086D0A0 f end=0086D0B8
 OsIMEDestroy 0086D0C0 f end=0086D0Df
 OsTimeStartup 0086D430 f end=0086D439 type="void __stdcall func(TimingMethod timingMethod)"
@@ -3378,6 +3393,7 @@ s_fontHeight 00ADBACC l type="float" ; float
 s_hRect 00ADBAD4 l type="RECTF" ; RECTF
 s_baseTextFlags 00ADBAE4 l type="uint32_t" ; uint32
 s_linelist 00ADBBB0 l type="TSList_CONSOLELINE"
+s_soundHwSettings 00ADBE54 l type="SoundHardware"
 s_detailDoodadDensity 00ADBE5C l type="uint32_t[4]"
 s_animatingDoodads 00ADBE6C l type="uint8_t[2][2]"
 s_waterLOD 00ADBE70 l type="uint32_t[2][2]"
@@ -3461,6 +3477,7 @@ s_cvGxRefresh 00CABA9C l type="CVar*"
 s_cvGxMaximize 00CABAA0 l type="CVar*"
 s_cvGxMultisample 00CABAA4 l type="CVar*"
 s_cvGxCursor 00CABAA8 l type="CVar*"
+s_cvGxStereoSeparation 00CABAAC l type="CVar*"
 s_cvGxMultisampleQuality 00CABAB0 l type="CVar*"
 s_cvGxResolution 00CABAB4 l type="CVar*"
 s_cvHwDetect 00CABAB8 l type="CVar*"
@@ -3471,6 +3488,7 @@ s_consoleGxOverrideSet 00CABAC8 l type="int32_t[9]"
 s_cvGxVSync 00CABAEC l type="CVar*"
 s_defaults 00CABAF0 l type="DefaultSettings"
 s_cvVideoOptionsVersion 00CABB30 l type="CVar*"
+s_cvGxStereoConvergence 00CABB34 l type="CVar*"
 s_hardware 00CABB38 l type="Hardware"
 s_cvMaxFPSBk 00CABB6C l type="CVar*"
 s_cvGxTripleBuffer 00CABB70 l type="CVar*"
@@ -3483,6 +3501,8 @@ s_cvFixedFunction 00CABBA8 l type="CVar*"
 s_cvWidescreen 00CABBAC l type="CVar*"
 s_cvGxWindow 00CABBB0 l type="CVar*"
 s_cvWindowResizeLock 00CABBB4 l type="CVar*"
+s_windowTitle 00CABBB8 l type="char[256]"
+s_device 00CABCB8 l type="CGxDevice*"
 s_hardwareDetected 00CABCBC l type="bool"
 s_hwChanged 00CABCBD l type="bool"
 s_hwDetect 00CABCBE l type="bool"

@@ -23,6 +23,7 @@
 #include "common/handle.h"
 #include "common/instance.h"
 #include "common/datarecycler.h"
+#include "common/datastore.h"
 #include "common/status.h"
 #include "common/refcount.h"
 #include "common/rcstring.h"
@@ -76,6 +77,9 @@
 #include "m2/shared.h"
 #include "m2/types.h"
 
+#include "os/processorfeatures.h"
+#include "os/timemanager.h"
+
 #include "screen/layer.h"
 
 #include "storm/array.h"
@@ -87,6 +91,7 @@
 #include "storm/region.h"
 #include "storm/thread.h"
 #include "storm/log.h"
+#include "storm/options.h"
 
 #include "tempest/box.h"
 #include "tempest/matrix.h"

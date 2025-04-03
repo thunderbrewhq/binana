@@ -15,5 +15,7 @@ CVGxMaxFPSCallback 00769830 f end=00769856 type="bool __stdcall func(CVar* h, ch
 CVGxMaxFPSBkCallback 00769860 f end=00769886 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxWindowResizeLockCallback 00769890 f end=007698A9 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxStereoEnabledCallback 00769C00 f end=00769C2B type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
+CVGxStereoConvergenceCallback 00769C30 f end=00769C54 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
+CVGxStereoSeparationCallback 00769C60 f end=00769C84 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxResolutionCallback 0076A220 f end=0076A57F type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxRefreshCallback 0076A580 f end=0076A62D type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"

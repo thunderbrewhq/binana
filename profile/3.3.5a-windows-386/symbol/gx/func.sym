@@ -1,33 +1,37 @@
-GxDevCreate 00681290 f end=00681301
-GxLog 006817E0 f end=006817F5 type="int __stdcall func(char* format, ...)"
-OnPaint 004A8720 f end=004A8B58
-GxCapsWindowSizeInScreenCoords 00493BF0 f end=00493C09
-GxTexCreate 00681CB0 f end=00681D87
-GxTexUpdate 006813D0 f end=006813EC
-GxXformProjection 004BEC70 f end=004BEC88
 GxXformSetProjection 00408030 f end=00408049
 GxXformViewport 00408070 f end=004080D9 type="void __stdcall func(float* minX, float* maxX, float* minY, float* maxY, float* minZ, float* maxZ)"
-GxXformSetViewport 00681F60 f end=00682124 type="void __stdcall func(float minX, float maxX, float minY, float maxY, float minZ, float maxZ)"
 GxXformProjNativeTranspose 00408110 f end=0040820F
-GxXformPush_EGxXform_C44Matrix 00616AD0 f end=00616AE8
-GxXformPop 0057C420 f end=0057C44A
-GxRsSet_int32_t 00408BF0 f end=00408C27
-GxRsSet_CGxShader 00408240 f end=00408258
-GxDraw 00482A40 f end=00482A5D
 GxShaderConstantsSet 00408210 f end=0040823B
+GxRsSet_CGxShader 00408240 f end=00408258
+GxRsSet_int32_t 00408BF0 f end=00408C27
 GxBufLock 004829D0 f end=004829E9
 GxBufUnlock 004829F0 f end=00482A13
 GxBufStream 00482A20 f end=00482A3C
-GxScenePresent 00682A00 f end=00682A33
-GxSceneClear 006813B0 f end=006813CD
-GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
-GxLogOpen 006817C0 f end=006817C5 type="void __stdcall func()"
+GxDraw 00482A40 f end=00482A5D
+GxCapsWindowSizeInScreenCoords 00493BF0 f end=00493C09
+OnPaint 004A8720 f end=004A8B58
+GxXformProjection 004BEC70 f end=004BEC88
+GxXformPop 0057C420 f end=0057C44A
+GxXformPush_EGxXform_C44Matrix 00616AD0 f end=00616AE8
+GxApiSupported 006811D0 f end=006811F0 type="int32_t __stdcall func(EGxApi api)" ; 00005410
+GxAdapterID 006811F0 f end=006811F9 ; GxAdapterID(unsigned short&, unsigned short&, unsigned int&, unsigned int&)
+GxAdapterInfer 00681200 f end=00681209
 GxAdapterMonitorModes 00681210 f end=00681219 type="int32_t __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
 GxAdapterDesktopMode 00681220 f type="int32_t __stdcall func(CGxMonitorMode* mode)"
-GxDefaultApi 008C8DE0 f type="EGxApi __stdcall func()"
-GxApiSupported 006811D0 f end=006811F0 type="int32_t __stdcall func(EGxApi api)" ; 00005410
+GxDevCreate 00681290 f end=00681301
+GxSceneClear 006813B0 f end=006813CD
+GxTexUpdate 006813D0 f end=006813EC
+GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
 GxSetMaxFPS 00681770 f end=0068177D type="void __stdcall func(uint32_t maxFPS)"
-GxSetMaxFPSBk 00681790 f end=0068179D type="void __stdcall func(uint32_t maxFPSBk)"
-CGxMonitorModeSort 00689E80 f type="int32_t __stdcall func(void* a, void* b)"
 GxGetMaxFPS 00681780 f end=00681786
+GxSetMaxFPSBk 00681790 f end=0068179D type="void __stdcall func(uint32_t maxFPSBk)"
 GxGetMaxFPSBk 006817A0 f end=006817A6
+GxLogOpen 006817C0 f end=006817C5 type="void __stdcall func()"
+GxLog 006817E0 f end=006817F5 type="int __stdcall func(char* format, ...)"
+GxTexCreate 00681CB0 f end=00681D87
+GxXformSetViewport 00681F60 f end=00682124 type="void __stdcall func(float minX, float maxX, float minY, float maxY, float minZ, float maxZ)"
+GxScenePresent 00682A00 f end=00682A33
+GxDevDestroy 00682B80 f end=00682C35
+GxLogClose 006817D0 f end=006817D5
+CGxMonitorModeSort 00689E80 f type="int32_t __stdcall func(void* a, void* b)"
+GxDefaultApi 008C8DE0 f type="EGxApi __stdcall func()"

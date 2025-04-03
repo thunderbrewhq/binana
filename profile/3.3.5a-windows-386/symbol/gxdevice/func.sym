@@ -31,6 +31,7 @@ CGxDevice__CursorSetVisible 00683640 f end=00683650 type="void __thiscall func(C
 CGxDevice__CursorLock 00683650 f end=00683657 type="uint32_t* __thiscall func(CGxDevice* this)"
 CGxDevice__CursorSetDepth 00683660 f end=00683670 type="void __thiscall func(CGxDevice* this, float depth)"
 CGxDevice__LogOpen 00683670 f end=006836A4 type="void __stdcall func()" ; static void CGxDevice::LogOpen(void)
+CGxDevice__LogClose 006836B0 f end=006836CA
 CGxDevice__DeviceSetFormat 006840F0 f end=0068416C type="int32_t __thiscall func(CGxDevice* this, CGxFormat* format)"
 CGxDevice__DeviceSetGamma 00684170 f end=00684189 type="void __thiscall func(CGxDevice* this, float gamma)"
 CGxDevice__DeviceSetGamma 00684190 f end=006841AF type="int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)"
@@ -84,6 +85,8 @@ CGxDevice__XformSetView 00689050 f end=006890C0 type="void __thiscall func(CGxDe
 CGxDevice__destructor 006890C0 f end=00689460 type="void __thiscall func(CGxDevice* this)"
 CGxDevice__scalar_deleting_destructor 00689690 f end=006896BB type="void __thiscall func(CGxDevice* this, uint8_t __flags)"
 CGxDevice__ShaderCreate 006897C0 f end=00689A49 type="void __thiscall func(CGxDevice* this, CGxShader**, EGxShTarget, char*, char*, int32_t)"
+CGxDevice__DeviceAdapterID 00689C10 f end=00689DA2
+CGxDevice__DeviceAdapterInfer 00689DB0 f end=00689E7B
 CGxDevice__FindDisplayDevice 00689EA0 f end=00689EF0 type="int32_t __stdcall func(PDISPLAY_DEVICEA device, uint32_t flag)" ; UC
 CGxDevice__NewD3d 00689EF0 f end=00689F14 type="CGxDevice* __stdcall func()"
 CGxDevice__AdapterMonitorModes 0068A4C0 f end=0068A589 type="void __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
