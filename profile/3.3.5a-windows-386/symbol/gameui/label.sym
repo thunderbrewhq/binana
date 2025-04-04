@@ -22,3 +22,14 @@ CGGameUI__m_instanceLockTime 00BD0858 l
 CGGameUI__m_instanceLockComletedMask 00BD085C l
 CGGameUI__m_instanceLockExtending 00BD0860 l
 CGGameUI__m_billingExpireTime 00BD086C l
+CGGameUI__m_lastRegenTime 00BD08A0 l
+CGGameUI__m_luaTainted 00D4139C l
+CGGameUI__m_simpleTop 00BD078C l
+CGGameUI__m_currentObjectTrack 00BD07A0 l
+CGGameUI__m_visible 00AC80A8 l
+CGGameUI__m_aspect 00BD07F8 l
+CGGameUI__m_UISimpleParent 00BD0778 l
+CGGameUI__m_reloadUIRequested 00BD0791 l
+CGGameUI__m_minimapZoneText 00BD077C l
+CGGameUI__m_subZoneText 00BD0784 l
+CGGameUI__m_zoneText 00BD0788 l
