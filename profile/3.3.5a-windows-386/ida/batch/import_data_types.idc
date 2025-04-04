@@ -806,6 +806,10 @@ static import_data_types() {
 	apply_type(0x00B417D0, "int32_t");
 	apply_type(0x00B41850, "CDataRecycler");
 	apply_type(0x00B6A9DC, "MipBits*");
+	apply_type(0x00C1DC98, "uint32_t[144]");
+	apply_type(0x00C1DED8, "uint32_t[144]");
+	apply_type(0x00C1E118, "uint32_t[144]");
+	apply_type(0x00C1E358, "uint32_t[144]");
 	apply_type(0x00C25CD0, "int8_t");
 	apply_type(0x00C25DE8, "uint32_t[1024]");
 	apply_type(0x00C26DE8, "CURSORMODE");
