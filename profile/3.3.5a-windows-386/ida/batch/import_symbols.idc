@@ -2429,8 +2429,9 @@ static import_symbols() {
 	set_name(0x00689690, "CGxDevice__scalar_deleting_destructor");
 	set_name(0x006897C0, "CGxDevice__ShaderCreate");
 	set_name(0x00689A50, "CGxShader__Valid");
-	set_name(0x00689C10, "CGxDevice__DeviceAdapterID");
-	set_name(0x00689DB0, "CGxDevice__DeviceAdapterInfer");
+	set_name(0x00689B90, "HToI");
+	set_name(0x00689C10, "CGxDevice__AdapterID");
+	set_name(0x00689DB0, "CGxDevice__AdapterInfer");
 	set_name(0x00689E80, "CGxMonitorModeSort");
 	set_name(0x00689EA0, "CGxDevice__FindDisplayDevice");
 	set_name(0x00689EF0, "CGxDevice__NewD3d");
@@ -2440,6 +2441,7 @@ static import_symbols() {
 	set_name(0x0068BBC0, "CGxDeviceOpenGl__CGxDeviceOpenGl");
 	set_name(0x0068BF20, "CGxDevice__NewOpenGl");
 	set_name(0x0068C220, "CGxDevice__NewD3d9Ex");
+	set_name(0x0068E140, "CGxDeviceD3d__IUnloadD3dLib");
 	set_name(0x0068E180, "CGxDeviceD3d__ICreateD3dIB");
 	set_name(0x0068E250, "CGxDeviceD3d__ISetPresentParms");
 	set_name(0x0068E450, "CGxDeviceD3d__DeviceEvictResources");
@@ -2944,6 +2946,8 @@ static import_symbols() {
 	set_name(0x0086B0D0, "IOsSystemCpuLog");
 	set_name(0x0086B240, "OsGetProcessorCount");
 	set_name(0x0086B280, "OsSleep");
+	set_name(0x0086B2A0, "OsSetSleepInBackground");
+	set_name(0x0086B2C0, "OsSetBackgroundSleepMs");
 	set_name(0x0086B430, "OsGetVersionString");
 	set_name(0x0086B480, "OsGetComputerName");
 	set_name(0x0086B4A0, "OsGetUserName");
@@ -3475,6 +3479,7 @@ static import_symbols() {
 	set_name(0x00AF49E0, "g_lightFloatBandDB");
 	set_name(0x00AF4A04, "g_lightParamsDB");
 	set_name(0x00AF4A28, "g_lightDB");
+	set_name(0x00B1D2AC, "s_sleepInBackground");
 	set_name(0x00B2F050, "s_streamingdiag");
 	set_name(0x00B2F994, "g_clientEventContext");
 	set_name(0x00B38180, "Blizzard__Streaming__s_streamingReady");
@@ -3624,6 +3629,7 @@ static import_symbols() {
 	set_name(0x00D415B0, "s_processorCores");
 	set_name(0x00D415B4, "s_processorCount");
 	set_name(0x00D415C0, "s_cpuLogEnabled");
+	set_name(0x00D415C4, "s_backgroundSleepMs");
 	set_name(0x00D415C8, "s_cpuTicksPerSecond");
 	set_name(0x00D415D0, "s_gotPowerProfFrequency");
 	set_name(0x00D415D4, "s_checkedPowerProfInfo");

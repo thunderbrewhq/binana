@@ -228,6 +228,7 @@ static import_data_types() {
 	apply_type(0x006890C0, "void __thiscall func(CGxDevice* this)");
 	apply_type(0x00689690, "void __thiscall func(CGxDevice* this, uint8_t __flags)");
 	apply_type(0x006897C0, "void __thiscall func(CGxDevice* this, CGxShader**, EGxShTarget, char*, char*, int32_t)");
+	apply_type(0x00689B90, "__int16 __usercall func@<ax>(char* h@<eax>, int count)");
 	apply_type(0x00689E80, "int32_t __stdcall func(void* a, void* b)");
 	apply_type(0x00689EA0, "int32_t __stdcall func(PDISPLAY_DEVICEA device, uint32_t flag)");
 	apply_type(0x00689EF0, "CGxDevice* __stdcall func()");
@@ -797,6 +798,7 @@ static import_data_types() {
 	apply_type(0x00AF49E0, "WowClientDB_LightFloatBandRec");
 	apply_type(0x00AF4A04, "WowClientDB_LightParamsRec");
 	apply_type(0x00AF4A28, "WowClientDB_LightRec");
+	apply_type(0x00B1D2AC, "int32_t");
 	apply_type(0x00B2F994, "HEVENTCONTEXT");
 	apply_type(0x00B38180, "bool");
 	apply_type(0x00B38181, "bool");
@@ -907,6 +909,7 @@ static import_data_types() {
 	apply_type(0x00D415B0, "int32_t");
 	apply_type(0x00D415B4, "int32_t");
 	apply_type(0x00D415C0, "int32_t");
+	apply_type(0x00D415C4, "uint32_t");
 	apply_type(0x00D415C8, "uint64_t");
 	apply_type(0x00D415D0, "int32_t");
 	apply_type(0x00D415D4, "int32_t");

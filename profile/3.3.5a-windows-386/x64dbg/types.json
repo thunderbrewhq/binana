@@ -18015,9 +18015,100 @@
       "size": 4,
       "members": [
         {
-          "type": "void**",
-          "name": "v_vtable",
+          "type": "IDirect3D9_v_table*",
+          "name": "v_table",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "IDirect3D9_v_table",
+      "size": 68,
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_1_QueryInterface",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_2_AddRef",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_3_Release",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_4_RegisterSoftwareDevice",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_5_GetAdapterCount",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_6_GetAdapterIdentifier",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_7_GetAdapterModeCount",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_8_EnumAdapterModes",
+          "offset": 28
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_9_GetAdapterDisplayMode",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_10_CheckDeviceType",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_11_CheckDeviceFormat",
+          "offset": 40
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_12_CheckDeviceMultiSampleType",
+          "offset": 44
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_13_CheckDepthStencilMatch",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_14_CheckDeviceFormatConversion",
+          "offset": 52
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_15_GetDeviceCaps",
+          "offset": 56
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_16_GetAdapterMonitor",
+          "offset": 60
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_17_CreateDevice",
+          "offset": 64
         }
       ]
     },
@@ -18026,14 +18117,14 @@
       "size": 4,
       "members": [
         {
-          "type": "IDirect3DDevice9_vtable*",
-          "name": "v_vtable",
+          "type": "IDirect3DDevice9_v_table*",
+          "name": "v_table",
           "offset": 0
         }
       ]
     },
     {
-      "name": "IDirect3DDevice9_vtable",
+      "name": "IDirect3DDevice9_v_table",
       "size": 476,
       "members": [
         {
@@ -18639,7 +18730,7 @@
       "members": [
         {
           "type": "void**",
-          "name": "v_vtable",
+          "name": "v_table",
           "offset": 0
         }
       ]
@@ -18649,14 +18740,14 @@
       "size": 4,
       "members": [
         {
-          "type": "IDirect3DPixelShader9__vtable*",
-          "name": "v_vtable",
+          "type": "IDirect3DPixelShader9__v_table*",
+          "name": "v_v_table",
           "offset": 0
         }
       ]
     },
     {
-      "name": "IDirect3DPixelShader9__vtable",
+      "name": "IDirect3DPixelShader9__v_table",
       "size": 20,
       "members": [
         {
@@ -18691,14 +18782,14 @@
       "size": 4,
       "members": [
         {
-          "type": "IDirect3DSurface9__vtable*",
-          "name": "v_vtable",
+          "type": "IDirect3DSurface9__v_table*",
+          "name": "v_table",
           "offset": 0
         }
       ]
     },
     {
-      "name": "IDirect3DSurface9__vtable",
+      "name": "IDirect3DSurface9__v_table",
       "size": 68,
       "members": [
         {
@@ -18794,7 +18885,7 @@
       "members": [
         {
           "type": "void**",
-          "name": "v_vtable",
+          "name": "v_table",
           "offset": 0
         }
       ]
@@ -18805,7 +18896,7 @@
       "members": [
         {
           "type": "void**",
-          "name": "v_vtable",
+          "name": "v_table",
           "offset": 0
         }
       ]
@@ -18816,7 +18907,7 @@
       "members": [
         {
           "type": "void**",
-          "name": "v_vtable",
+          "name": "v_table",
           "offset": 0
         }
       ]
@@ -18826,14 +18917,14 @@
       "size": 4,
       "members": [
         {
-          "type": "IDirect3DVertexShader9__vtable*",
-          "name": "v_vtable",
+          "type": "IDirect3DVertexShader9__v_table*",
+          "name": "v_table",
           "offset": 0
         }
       ]
     },
     {
-      "name": "IDirect3DVertexShader9__vtable",
+      "name": "IDirect3DVertexShader9__v_table",
       "size": 20,
       "members": [
         {
@@ -31558,7 +31649,7 @@
         },
         {
           "type": "uint32_t",
-          "name": "videoIdx",
+          "name": "videoID",
           "offset": 28
         },
         {
