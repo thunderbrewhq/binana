@@ -1,0 +1,7 @@
+CGActionBar__m_slotUseCount 00C1E118 l type="uint32_t[144]"
+CGActionBar__m_slotUsable 00C1DED8 l type="uint32_t[144]"
+CGActionBar__m_slotNoMana 00C1DC98 l type="uint32_t[144]"
+CGActionBar__m_slotActions 00C1E358 l type="uint32_t[144]"
+CGActionBar__m_currentPage 00C1E598 l
+CGActionBar__m_bonusBarOffset 00C1E59C l
+CGActionBar__m_tempPageActiveFlags 00C1E5A0 l
