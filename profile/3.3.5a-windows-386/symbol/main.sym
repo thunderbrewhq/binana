@@ -2425,8 +2425,9 @@ CGxDevice__destructor 006890C0 f end=00689460 type="void __thiscall func(CGxDevi
 CGxDevice__scalar_deleting_destructor 00689690 f end=006896BB type="void __thiscall func(CGxDevice* this, uint8_t __flags)"
 CGxDevice__ShaderCreate 006897C0 f end=00689A49 type="void __thiscall func(CGxDevice* this, CGxShader**, EGxShTarget, char*, char*, int32_t)"
 CGxShader__Valid 00689A50 f end=00689A6F
-CGxDevice__DeviceAdapterID 00689C10 f end=00689DA2
-CGxDevice__DeviceAdapterInfer 00689DB0 f end=00689E7B
+HToI 00689B90 f end=00689C02 type="__int16 __usercall func@<ax>(char* h@<eax>, int count)"
+CGxDevice__AdapterID 00689C10 f end=00689DA2
+CGxDevice__AdapterInfer 00689DB0 f end=00689E7B
 CGxMonitorModeSort 00689E80 f type="int32_t __stdcall func(void* a, void* b)"
 CGxDevice__FindDisplayDevice 00689EA0 f end=00689EF0 type="int32_t __stdcall func(PDISPLAY_DEVICEA device, uint32_t flag)" ; UC
 CGxDevice__NewD3d 00689EF0 f end=00689F14 type="CGxDevice* __stdcall func()"
@@ -2436,6 +2437,7 @@ CGxDevice__AdapterMonitorModes 0068A4C0 f end=0068A589 type="void __stdcall func
 CGxDeviceOpenGl__CGxDeviceOpenGl 0068BBC0 f end=0068BD15 type="void __thiscall func(CGxDeviceOpenGl* this)"
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
+CGxDeviceD3d__IUnloadD3dLib 0068E140 f end=0068E174
 CGxDeviceD3d__ICreateD3dIB 0068E180 f end=0068E1E8
 CGxDeviceD3d__ISetPresentParms 0068E250 f end=0068E448
 CGxDeviceD3d__DeviceEvictResources 0068E450 f end=0068E49E type="void __thiscall func(CGxDeviceD3d* this)"
@@ -2940,6 +2942,8 @@ OsSystemEnableCpuLog 0086B0C0 f end=0086B0CB
 IOsSystemCpuLog 0086B0D0 f end=0086B23D
 OsGetProcessorCount 0086B240 f end=0086B27D
 OsSleep 0086B280 f end=0086B28F
+OsSetSleepInBackground 0086B2A0 f end=0086B2AD
+OsSetBackgroundSleepMs 0086B2C0 f end=0086B2CD
 OsGetVersionString 0086B430 f end=0086B458
 OsGetComputerName 0086B480 f end=0086B493
 OsGetUserName 0086B4A0 f end=0086B4B3
@@ -3471,6 +3475,7 @@ g_lightIntBandDB 00AF49BC l type="WowClientDB_LightIntBandRec" ; 0x15D
 g_lightFloatBandDB 00AF49E0 l type="WowClientDB_LightFloatBandRec" ; 0x15C
 g_lightParamsDB 00AF4A04 l type="WowClientDB_LightParamsRec" ; 0x15E
 g_lightDB 00AF4A28 l type="WowClientDB_LightRec" ; 0x15B
+s_sleepInBackground 00B1D2AC l type="int32_t"
 s_streamingdiag 00B2F050 l
 g_clientEventContext 00B2F994 l type="HEVENTCONTEXT" 
 Blizzard__Streaming__s_streamingReady 00B38180 l type="bool"
@@ -3620,6 +3625,7 @@ s_processorSockets 00D415AC l type="int32_t"
 s_processorCores 00D415B0 l type="int32_t"
 s_processorCount 00D415B4 l type="int32_t"
 s_cpuLogEnabled 00D415C0 l type="int32_t"
+s_backgroundSleepMs 00D415C4 l type="uint32_t"
 s_cpuTicksPerSecond 00D415C8 l type="uint64_t"
 s_gotPowerProfFrequency 00D415D0 l type="int32_t"
 s_checkedPowerProfInfo 00D415D4 l type="int32_t"

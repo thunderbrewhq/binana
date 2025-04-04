@@ -8,18 +8,19 @@
 typedef int32_t D3DFORMAT;
 
 DECLARE_STRUCT(D3DDISPLAYMODE);
+DECLARE_STRUCT(IDirect3D9_v_table);
 DECLARE_STRUCT(IDirect3D9);
 DECLARE_STRUCT(IDirect3DDevice9);
-DECLARE_STRUCT(IDirect3DDevice9_vtable);
+DECLARE_STRUCT(IDirect3DDevice9_v_table);
 DECLARE_STRUCT(IDirect3DVertexDeclaration9);
-DECLARE_STRUCT(IDirect3DSurface9__vtable);
+DECLARE_STRUCT(IDirect3DSurface9__v_table);
 DECLARE_STRUCT(IDirect3DSurface9);
 DECLARE_STRUCT(IDirect3DIndexBuffer9);
 DECLARE_STRUCT(IDirect3DVertexBuffer9);
 DECLARE_STRUCT(IDirect3DTexture9);
-DECLARE_STRUCT(IDirect3DVertexShader9__vtable);
+DECLARE_STRUCT(IDirect3DVertexShader9__v_table);
 DECLARE_STRUCT(IDirect3DVertexShader9);
-DECLARE_STRUCT(IDirect3DPixelShader9__vtable);
+DECLARE_STRUCT(IDirect3DPixelShader9__v_table);
 DECLARE_STRUCT(IDirect3DPixelShader9);
 
 DECLARE_STRUCT(D3DLOCKED_RECT);
@@ -31,11 +32,31 @@ struct D3DDISPLAYMODE {
   D3DFORMAT Format;
 };
 
-struct IDirect3D9 {
-  void** v_vtable;
+struct IDirect3D9_v_table {
+  void* v_fn_1_QueryInterface;
+  void* v_fn_2_AddRef;
+  void* v_fn_3_Release;
+  void* v_fn_4_RegisterSoftwareDevice;
+  void* v_fn_5_GetAdapterCount;
+  void* v_fn_6_GetAdapterIdentifier;
+  void* v_fn_7_GetAdapterModeCount;
+  void* v_fn_8_EnumAdapterModes;
+  void* v_fn_9_GetAdapterDisplayMode;
+  void* v_fn_10_CheckDeviceType;
+  void* v_fn_11_CheckDeviceFormat;
+  void* v_fn_12_CheckDeviceMultiSampleType;
+  void* v_fn_13_CheckDepthStencilMatch;
+  void* v_fn_14_CheckDeviceFormatConversion;
+  void* v_fn_15_GetDeviceCaps;
+  void* v_fn_16_GetAdapterMonitor;
+  void* v_fn_17_CreateDevice;
 };
 
-struct IDirect3DDevice9_vtable {
+struct IDirect3D9 {
+  IDirect3D9_v_table* v_table;
+};
+
+struct IDirect3DDevice9_v_table {
   void* v_fn_0_QueryInterface;
   void* v_fn_1_AddRef;
   void* v_fn_2_Release;
@@ -159,14 +180,14 @@ struct IDirect3DDevice9_vtable {
 };
 
 struct IDirect3DDevice9 {
-  IDirect3DDevice9_vtable* v_vtable;
+  IDirect3DDevice9_v_table* v_table;
 };
 
 struct IDirect3DVertexDeclaration9 {
-  void** v_vtable;
+  void** v_table;
 };
 
-struct IDirect3DSurface9__vtable {
+struct IDirect3DSurface9__v_table {
   /*** IUnknown methods ***/
   void* v_fn_0_QueryInterface;
   void* v_fn_1_AddRef;
@@ -190,19 +211,19 @@ struct IDirect3DSurface9__vtable {
 };
 
 struct IDirect3DSurface9 {
-  IDirect3DSurface9__vtable* v_vtable;
+  IDirect3DSurface9__v_table* v_table;
 };
 
 struct IDirect3DIndexBuffer9 {
-  void** v_vtable;
+  void** v_table;
 };
 
 struct IDirect3DVertexBuffer9 {
-  void** v_vtable;
+  void** v_table;
 };
 
 struct IDirect3DTexture9 {
-  void** v_vtable;
+  void** v_table;
 };
 
 struct D3DLOCKED_RECT {
@@ -210,7 +231,7 @@ struct D3DLOCKED_RECT {
   void* pBits;
 };
 
-struct IDirect3DVertexShader9__vtable {
+struct IDirect3DVertexShader9__v_table {
   void* v_fn_0_QueryInterface;
   void* v_fn_1_AddRef;
   void* v_fn_2_Release;
@@ -219,10 +240,10 @@ struct IDirect3DVertexShader9__vtable {
 };
 
 struct IDirect3DVertexShader9 {
-  IDirect3DVertexShader9__vtable* v_vtable;
+  IDirect3DVertexShader9__v_table* v_table;
 };
 
-struct IDirect3DPixelShader9__vtable {
+struct IDirect3DPixelShader9__v_table {
   void* v_fn_0_QueryInterface;
   void* v_fn_1_AddRef;
   void* v_fn_2_Release;
@@ -231,7 +252,7 @@ struct IDirect3DPixelShader9__vtable {
 };
 
 struct IDirect3DPixelShader9 {
-  IDirect3DPixelShader9__vtable* v_vtable;
+  IDirect3DPixelShader9__v_table* v_v_table;
 };
 
 #endif

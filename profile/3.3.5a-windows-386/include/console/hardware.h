@@ -35,7 +35,7 @@ struct Hardware {
   Hardware__Device videoDevice;
   Hardware__Device soundDevice;
   uint32_t cpuIdx;
-  uint32_t videoIdx;
+  uint32_t videoID;
   uint32_t soundIdx;
   uint32_t memIdx;
   VideoHardwareRec* videoHw;
