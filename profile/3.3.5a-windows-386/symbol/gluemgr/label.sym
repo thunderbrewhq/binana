@@ -1,1 +1,12 @@
 CGlueMgr__m_cursorMipBits 00B6A9DC l type="MipBits*"
+CGlueMgr__m_patchLastUpdate 00B6A994 l
+CGlueMgr__m_queueTime 00B6A99C l
+CGlueMgr__m_queuePosition 00B6A9BC l
+CGlueMgr__m_suspended 00B6AA2C l
+CGlueMgr__m_indleState 00B6AA38 l
+CGlueMgr__m_estimatedWaitTime 00B6AF44 l
+CGlueMgr__m_characterInfo 00B6AF4C l
+CGlueMgr__m_numChangedOptionWarnings 00B6AF9C l
+CGlueMgr__m_showedDisconnect 00B6AFA0 l
+CGlueMgr__m_surveyDownload 00B6B250 l
+CGlueMgr__m_patchDownload 00B6B25C l
