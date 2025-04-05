@@ -525,13 +525,19 @@ CGGameUI__OpenGuildInvite 00512570 f end=0051258F
 CGGameUI__IsPartyMember 00512A00 f end=00512A2C
 CGGameUI__HandleScreenshot 00512E20 f end=00512E52
 CGGameUI__CloseInteraction 00512E60 f end=005130CF
-CGGameUI__Reload 00513530 f end=00513640
+CGGameUI__SetMinimapZoneText 005134C0 f end=00513530
+CGGameUI__ShowBlockedActionFeedback 00513530 f end=00513640
+CGGameUI__ShowBlockedFrameFeedback 00513640 f end=00513653
+CGGameUI__GetCursorItem 00513660 f end=0051367A
+CGGameUI__GetCursorSpell 005136C0 f end=005136C6
+CGGameUI__GetCursorVirtualItem 005136D0 f end=005136D6
 CGGameUI__GetCursorVirtualItem 005136E0 f end=005136FA
 CGGameUI__IsAutoLooting 00513700 f end=00513740
 CGGameUI__UnlockItem 00513770 f end=005137A0
 CGGameUI__GetPartyMember 005138D0 f end=005138F1
 CGGameUI__SetInstanceLockTime 00513B20 f end=00513B8A
 CGGameUI__GetPartyMemberState 00513C30 f end=00513C66
+CGGameUI__UpdateUnitHighlights 00513CF0 f end=00513D92
 CGGameUI__LastErrorMessage 00513DF0 f end=00513DF6
 Script_IsModifierKeyDown 00514430 f end=005144B1
 Script_IsLeftShiftKeyDown 005144C0 f end=00514518
@@ -620,7 +626,10 @@ Script_IsThreatWarningEnabled 00517D30 f end=00517D6A
 Script_CanMapChangeDifficulty 00517D70 f end=00517DF1
 CGGameUI__ResetCamera 005186A0 f end=005186F2
 CGGameUI__ClearInteractTarget 00518D50 f end=00518DBE
+CGGameUI__SendTarget 00518DC0 f end=00518E36
+CGGameUI__CanPerformAction 005191C0 f end=0051924E
 CGGameUI__ClearCursor 00519280 f end=00519481
+CGGameUI__DoPowerRegen 005196F0 f end=00519774
 Script_ClearCursor 0051A3B0 f end=0051A3C2
 Script_EquipCursorItem 0051A3D0 f end=0051A528
 Script_EquipPendingItem 0051A530 f end=0051A5B8
@@ -696,14 +705,24 @@ Script_DestroyTotem 0051D520 f end=0051D584
 Script_GameMovieFinished 0051D590 f end=0051D598
 Script_GetAllowLowLevelRaid 0051D5A0 f end=0051D5FC
 Script_SetAllowLowLevelRaid 0051D600 f end=0051D706
+CGGameUI__StopCinematicInternal 0051D7C0 f end=0051D95B
+CGGameUI__HandleObjectTrackChange 0051F790 f end=0051F9C3
+CGGameUI__FilterMouseDown 0051FA50 f end=0051FAFF
 CGGameUI__HandleMouseDown 0051FB00 f end=0051FB5E
+CGGameUI__HandleSpriteTrack 0051FB60 f end=0051FB7F
+CGGameUI__HandleDisplaySizeChanged 0051FB80 f end=0051FCD1
 CGGameUI__SetInteractTarget 0051FCE0 f end=0051FDD9
+CGGameUI__SetFocusTarget 0051FF20 f end=0051FFD5
 CGGameUI__CanInspect 00520410 f end=005204B6
+CGGameUI__NewZoneFeedback 005204C0 f end=005206DE
 CGGameUI__SetCursorItem 00520770 f end=0052087C
+CGGameUI__SetCursorMoney 00520880 f end=005208E5
 CGGameUI__SetCursorPetAction 00520A80 f end=00520BAF
 CGGameUI__SetCursorPet 00520C60 f end=00520D29
+CGGameUI__SetCursorVirtualItem 00520D30 f end=00520DB3
 CGGameUI__SetCursorEquipmentSet 00520DC0 f end=00520E38
 CGGameUI__DisplayError 005216F0 f end=005218AD
+CGGameUI__AutoMouseOver 005220B0 f end=0052217B
 Script_ReloadUI 005222E0 f end=00522314
 Script_DeleteCursorItem 00522320 f end=0052247F
 Script_FocusUnit 00522480 f end=005224BB
@@ -730,9 +749,15 @@ Script_SummonFriend 00523260 f end=00523360
 Script_AcceptLevelGrant 00523360 f end=00523368
 Script_EndRefund 00523370 f end=005233C5
 Script_EndBoundTradeable 005233D0 f end=0052349D
+CGGameUI__CloseLoot 00523640 f end=005237D2
 CGGameUI__GetCorpseLocation 00523E80 f end=00523EA7
+CGGameUI__HandleDisplaySizeChanged 005240E0 f end=005241A7
+CGGameUI__ClearTarget 005241B0 f end=0052434D
+CGGameUI__BreakTarget 00524350 f end=0052443C
 Script_StopCinematic 00524980 f end=005249B7
 CGGameUI__AcceptAreaSpiritHeal 00524B60 f end=00524BEE
+CGGameUI__Target 00524BF0 f end=00524FB6
+CGGameUI__TargetNearestUnit 00524FC0 f end=005252C4
 Script_TargetUnit 00525A30 f end=00525A8B
 Script_TargetNearest 00525A90 f end=00525ACB
 Script_TargetNearestEnemy 00525AD0 f end=00525B0B
@@ -762,6 +787,7 @@ CGGameUI__LeaveWorld 00528C30 f end=00528EF9
 CGGameUI__Shutdown 00528F00 f end=0052915A
 CGGameUI__ShutdownGame 00529160 f end=00529541
 CGGameUI__Initialize 0052A980 f end=0052AEC6
+CGGameUI__RegisterSavedVariable 0052AED0 f end=0052AF3F
 Script_RegisterForSave 0052B470 f end=0052B4D4
 Script_RegisterForSavePerCharacter 0052B4E0 f end=0052B544
 CGGameUI__InitializeGame 0052B550 f end=0052BADA
@@ -3216,6 +3242,7 @@ System_File__write_func 00AB91B4 l ; type="int32_t (*)(Blizzard__File__Filesyste
 System_File__Stacked__s_nullstack 00AB91C0 l type="Blizzard__File__Filesystem"
 System_File__Stacked__s_basestack 00AB92C0 l type="Blizzard__File__Filesystem"
 s_zorderlist 00AC1B9C f type="TSExplicitList_CILayer"
+CGGameUI__m_visible 00AC80A8 l
 s_cursorNames 00AD2808 l type="char*[53]"
 g_achievementDB 00AD305C l type="WowClientDB_AchievementRec" ; 0xEB
 g_achievement_CriteriaDB 00AD3080 l type="WowClientDB_Achievement_CriteriaRec" ; 0xEC
@@ -3495,14 +3522,22 @@ CGGameUI__m_cursorVirtualSlot 00BD0750 l
 CGGameUI__m_cursorVirtualDisplay 00BD0754 l
 CGGameUI__m_cursorVirtualID 00BD0758 l
 CGGameUI__m_stackSplit 00BD0770 l
+CGGameUI__m_UISimpleParent 00BD0778 l
+CGGameUI__m_minimapZoneText 00BD077C l
+CGGameUI__m_subZoneText 00BD0784 l
+CGGameUI__m_zoneText 00BD0788 l
+CGGameUI__m_simpleTop 00BD078C l
+CGGameUI__m_reloadUIRequested 00BD0791 l
 CGGameUI__m_inWorld 00BD0792 l
 CGGameUI__m_interactMaxDistSq 00BD0798 l
 CGGameUI__m_cursorMoney 00BD079C l
+CGGameUI__m_currentObjectTrack 00BD07A0 l
 CGGameUI__m_lastTarget 00BD07B8 l
 CGGameUI__m_lastEnemyTarget 00BD07C0 l
 CGGameUI__m_lastFriendTraget 00BD07C8 l
 CGGameUI__m_directionalTarget 00BD07D8 l
 CGGameUI__m_cursorSpell 00BD07E0 l
+CGGameUI__m_aspect 00BD07F8 l
 CGGameUI__m_inCinematic 00BD07FC l
 CGGameUI__m_corpseMapID 00BD0818 l
 CGGameUI__m_corpseActualMapID 00BD081C l
@@ -3511,6 +3546,7 @@ CGGameUI__m_instanceLockTime 00BD0858 l
 CGGameUI__m_instanceLockComletedMask 00BD085C l
 CGGameUI__m_instanceLockExtending 00BD0860 l
 CGGameUI__m_billingExpireTime 00BD086C l
+CGGameUI__m_lastRegenTime 00BD08A0 l
 CGActionBar__m_slotNoMana 00C1DC98 l type="uint32_t[144]"
 CGActionBar__m_slotUsable 00C1DED8 l type="uint32_t[144]"
 CGActionBar__m_slotUseCount 00C1E118 l type="uint32_t[144]"
@@ -3616,6 +3652,7 @@ s_alloccount 00CAE950 l type="uint32_t"
 s_freecount 00CAE954 l type="uint32_t" 
 g_opt 00CAE958 l type="STORMOPTIONS"
 s_scriptProfileEnabled 00D3F798 l type="int32_t"
+CGGameUI__m_luaTainted 00D4139C l
 s_WindowResizeLock 00D41580 l type="int32_t"
 s_OsTimeMgr 00D4159C l type="OsTimeManager*"
 s_haveProcessorFeatures 00D415A0 l type="int32_t"
