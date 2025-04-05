@@ -329,30 +329,52 @@ C3Vector__Normalize_1 004C3420 f
 C3Vector__Normalize_2 004C3600 f
 TSGrowableArray_C3Vector__SetCount 004C4B80 f end=004C4C75 type="void __thiscall func(TSGrowableArray_C3Vector* this, uint32_t count)"
 C33Matrix__operator_assign_C33Matrix 004C51B0 f
+CGlueMgr__UpdateWaitQueue 004D7DA0 f end=004D7E3A
 CGlueMgr__SetCurrentAccount 004D7F60 f end=004D7F82
+CGlueMgr__LoginEnterPIN 004D7F90 f end=004D7FAD
+CGlueMgr__LoginEnterMatrix 004D7FB0 f end=004D7FCD
+CGlueMgr__LoginGetMatrixCoordinate 004D8030 f end=004D8071
 CGlueMgr__DisplayLoginStatus 004D80C0 f end=004D8200
 CGlueMgr__SetScreen 004D82A0 f end=004D82B8
 CGlueMgr__UpdateCurrentScreen 004D82C0 f end=004D834D
+CGlueMgr__QuitGame 004D8350 f end=004D8359
+CGlueMgr__DownloadFeed 004D8380 f end=004D83A3
+CGlueMgr__HandleBattlenetDisconnect 004D84A0 f end=004D8520
+CGlueMgr__ShowChangedOptionWarnings 004D8570 f end=004D857D
 CGlueMgr__HandleDisplaySizeChanged 004D8860 f end=004D8924
 CGlueMgr__Suspend 004D8930 f end=004D8A2D
 CGlueMgr__LoginServerLogin 004D8A30 f end=004D8B9C
 CGlueMgr__ChangeRealm 004D8BD0 f end=004D8C56
+CGlueMgr__CreateCharacter 004D8C60 f end=004D8CB8
+CGlueMgr__DeleteCharacter 004D8CC0 f end=004D8D20
+CGlueMgr__RenameCharacter 004D8D20 f end=004D8E0B
 CGlueMgr__OnKickReasonMsg 004D9500 f end=004D9582
 CGlueMgr__GetCharacterList 004D95C0 f end=004D960D
+CGlueMgr__GetRealmList 004D9610 f end=004D9656
+CGlueMgr__SetUIDepth 004D9810 f end=004D989B
 CGlueMgr__StatusDialogClick 004D98D0 f end=004D99D4
+CGlueMgr__CancelLogin 004D99E0 f end=004D99EF
+CGlueMgr__DeclineCharacter 004D9A40 f end=004D9BCE
+CGlueMgr__EnterWorld 004D9BD0 f end=004D9F4F
+CGlueMgr__AcceptChangedOptionWarnings 004DA240 f end=004DA274
 CGlueMgr__LogConnectionStatus 004DA3D0 f end=004DA4A8
 CGlueMgr__SetLoginStateAndResult 004DA4B0 f end=004DA50D
 CGlueMgr__Resume 004DA5F0 f end=004DA9C4
 CGlueMgr__NetDisconnectHandler 004DA9D0 f end=004DAB3D
 CGlueMgr__Idle 004DAB40 f end=004DB9E4
 CGlueMgr__Initialize 004DB9F0 f end=004DBBBF
+CGlueMgr__Shutdown 004DBBC0 f end=004DBC6C
 Script_GetLocale 004DBFD0 f end=004DBFF3 ; thanks namreeb :^)
 Script_IsWindowsClient 004DCE40 f end=004DCE5E
 Script_RestartGx 004DD400 f end=004DD412
 Script_RestoreVideoStereoDefaults 004DD420 f end=004DD42D
 Script_GetMovieResolution 004DD610 f end=004DD671
 Script_GetExpansionLevel 004DDC20 f end=004DDC51
+CGlueMgr__SurveyDownloadFeed 004E4880 f end=004E489E
 CGlueMgr__SurveyDownloadCancel 004E4A40 f end=004E4A9E
+CGlueMgr__PatchDownloadCancel 004E53A0 f end=004E541F
+CGlueMgr__PatchFailed 004E5420 f end=004E54C8
+CGlueMgr__PatchDownloadIdle 004E54D0 f end=004E5722
 TSList__LinkNode 004F71A0 f end=004F724D
 Script_LoggingChat 004FBD00 f end=004FBD13
 Script_LoggingCombat 004FBD20 f end=004FBD36
@@ -3514,7 +3536,18 @@ OsFileGetDownloadFolder__s_downloadfolder 00B38A88 l ; OsFileGetDownloadFolder()
 s_mainThread 00b417c8 l type="uint32_t"
 s_interactiveCount 00B417D0 l type="int32_t"
 s_messageRecycler 00B41850 l type="CDataRecycler"
+CGlueMgr__m_patchLastUpdate 00B6A994 l
+CGlueMgr__m_queueTime 00B6A99C l
+CGlueMgr__m_queuePosition 00B6A9BC l
 CGlueMgr__m_cursorMipBits 00B6A9DC l type="MipBits*"
+CGlueMgr__m_suspended 00B6AA2C l
+CGlueMgr__m_indleState 00B6AA38 l
+CGlueMgr__m_estimatedWaitTime 00B6AF44 l
+CGlueMgr__m_characterInfo 00B6AF4C l
+CGlueMgr__m_numChangedOptionWarnings 00B6AF9C l
+CGlueMgr__m_showedDisconnect 00B6AFA0 l
+CGlueMgr__m_surveyDownload 00B6B250 l
+CGlueMgr__m_patchDownload 00B6B25C l
 CGGameUI__m_hasControl 00BCFB8C l
 CGGameUI__m_lastErrorMessage 00BCFB90 l
 CGGameUI__m_cursorItemType 00BD0748 l
