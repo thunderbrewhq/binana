@@ -2394,6 +2394,7 @@ static import_symbols() {
 	set_name(0x00684970, "CGxDevice__IShaderLoad");
 	set_name(0x00684AD0, "CGxDevice__ICursorCreate");
 	set_name(0x00684B50, "CGxDevice__CursorUnlock");
+	set_name(0x00684BA0, "CGxDevice__VLog");
 	set_name(0x00684C20, "CGxDevice__Log");
 	set_name(0x00684C40, "CGxDevice__Log@2");
 	set_name(0x00684D10, "CGxDevice__Log@3");
@@ -3537,6 +3538,7 @@ static import_symbols() {
 	set_name(0x00C5DF88, "g_theGxDevicePtr");
 	set_name(0x00C5DFDC, "CGxDevice__s_uiVertexShader");
 	set_name(0x00C5DFE0, "CGxDevice__s_shadowConstants");
+	set_name(0x00C5FFF4, "CGxDevice__m_logBytes");
 	set_name(0x00C5FFF8, "CGxDevice__m_log");
 	set_name(0x00C5FFFC, "CGxDevice__s_uiPixelShader");
 	set_name(0x00C60760, "isIdent");

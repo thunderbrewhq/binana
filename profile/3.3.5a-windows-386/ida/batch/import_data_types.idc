@@ -194,6 +194,7 @@ static import_data_types() {
 	apply_type(0x00684970, "int32_t __thiscall func(CGxDevice* this, CGxShader** shaders, EGxShTarget target, char* a4, char* a5, int32_t permutations)");
 	apply_type(0x00684AD0, "void __thiscall func(CGxDevice* this, CGxFormat* format)");
 	apply_type(0x00684B50, "void __thiscall func(CGxDevice* this, uint32_t x, uint32_t y)");
+	apply_type(0x00684BA0, "void __stdcall func(char* format, va_list args)");
 	apply_type(0x00684C20, "void __stdcall func(char* format, ...)");
 	apply_type(0x00684C40, "void __stdcall func(CGxCaps* caps)");
 	apply_type(0x00684D10, "void __stdcall func(CGxFormat* format)");
@@ -820,6 +821,7 @@ static import_data_types() {
 	apply_type(0x00C5DF74, "uint32_t");
 	apply_type(0x00C5DF7C, "uint32_t");
 	apply_type(0x00C5DF88, "CGxDevice*");
+	apply_type(0x00C5FFF4, "uint32_t");
 	apply_type(0x00C5FFF8, "HSLOG");
 	apply_type(0x00CA1690, "float");
 	apply_type(0x00CA1694, "int32_t");

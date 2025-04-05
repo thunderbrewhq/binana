@@ -2390,6 +2390,7 @@ CGxDevice__ITexMarkAsUpdated 00684900 f end=0068492D type="void __thiscall func(
 CGxDevice__IShaderLoad 00684970 f end=00684AC8 type="int32_t __thiscall func(CGxDevice* this, CGxShader** shaders, EGxShTarget target, char* a4, char* a5, int32_t permutations)"
 CGxDevice__ICursorCreate 00684AD0 f end=00684B4A type="void __thiscall func(CGxDevice* this, CGxFormat* format)"
 CGxDevice__CursorUnlock 00684B50 f end=00684B99 type="void __thiscall func(CGxDevice* this, uint32_t x, uint32_t y)"
+CGxDevice__VLog 00684BA0 f end=00684C15 type="void __stdcall func(char* format, va_list args)"
 CGxDevice__Log 00684C20 f end=00684C3E type="void __stdcall func(char* format, ...)"
 CGxDevice__Log 00684C40 f end=00684D07 type="void __stdcall func(CGxCaps* caps)" ; CGxDevice::Log(CGxCaps const&) const
 CGxDevice__Log 00684D10 f end=00684D6C type="void __stdcall func(CGxFormat* format)"
@@ -3533,6 +3534,7 @@ s_maxFPS 00C5DF7C l type="uint32_t"
 g_theGxDevicePtr 00C5DF88 l type="CGxDevice*"
 CGxDevice__s_uiVertexShader 00C5DFDC l
 CGxDevice__s_shadowConstants 00C5DFE0 l
+CGxDevice__m_logBytes 00C5FFF4 l type="uint32_t"
 CGxDevice__m_log 00C5FFF8 l type="HSLOG"
 CGxDevice__s_uiPixelShader 00C5FFFC l
 isIdent 00C60760 l
