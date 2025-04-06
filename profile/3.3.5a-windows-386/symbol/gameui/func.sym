@@ -58,3 +58,4 @@ CGGameUI__SetCursorVirtualItem 00520D30 f end=00520DB3
 CGGameUI__CloseLoot 00523640 f end=005237D2
 CGGameUI__HandleDisplaySizeChanged 005240E0 f end=005241A7
 CGGameUI__TargetNearestUnit 00524FC0 f end=005252C4
+DisableFadingScreen 005ED080 f end=005ED116

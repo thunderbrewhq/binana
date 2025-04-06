@@ -75,3 +75,5 @@ PrintStartupError 0076B5A0 f end=0076B616 type="void __usercall __noreturn func(
 ConsoleDetectSaveHardware 0076B620 f end=0076B7DB
 ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9 type="void __stdcall func(Hardware* hardware, bool* hwChanged)" ; ConsoleDetectDetectHardware(Hardware&, bool&)
 ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
+GetConsoleMessage 00763C20 f end=00763C26
+SetConsoleMessage 00763C30 f end=00763C3D

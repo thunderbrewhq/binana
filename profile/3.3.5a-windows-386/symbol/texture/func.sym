@@ -43,3 +43,8 @@ TextureGenerateMips 004B5550 f end=004B55D7
 CalcLevelSize 006AB620 f end=006AB6B9 type="uint32_t __cdecl func(uint32_t level, uint32_t width, uint32_t height, uint32_t fourCC)"
 CalcLevelCount 006AB700 f end=006AB75C type="uint32_t __stdcall func(uint32_t width, uint32_t height)"
 GetBitDepth 006AB5C0 f end=006AB614
+TextureEnableAtlas 004B5390 f end=004B539D
+TextureFreeMippedImg 004B55E0 f end=004B55FE
+TextureSetCacheSize 004B6580 f end=004B65D5
+TextureCacheUpdate 004B6AE0 f end=004B6C47
+TextureInitialize 004B7F80 f end=004B7FF7
