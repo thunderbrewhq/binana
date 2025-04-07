@@ -1,0 +1,2 @@
+MovementInit 00401520 f end=004015E0
+MovementDestroy 006F0C30 f end=006F0C6E
