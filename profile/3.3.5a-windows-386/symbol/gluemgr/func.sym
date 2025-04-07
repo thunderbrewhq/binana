@@ -45,3 +45,4 @@ CGlueMgr__SurveyDownloadStart 004E48E0 f end=004E4A38
 CGlueMgr__SurveyExecute 004E4B30 f end=004E4E75
 CGlueMgr__GetPatchFolder 004E51E0 f end=004E51F8
 CGlueMgr__PatchDownloadStart 004E5200 f end=004E53A0
+CGlueMgr__AddChangedOptionWarning 004D9F50 f end=004D9FA5
