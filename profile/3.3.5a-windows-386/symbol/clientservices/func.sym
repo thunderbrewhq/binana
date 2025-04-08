@@ -35,6 +35,7 @@ ClientServices__GetCharacterSex 006B1090 f end=006B1096
 ClientServices__GetCharacterLevel 006B10A0 f end=006B10A6
 ClientServices__PollStatus 006B1100 f end=006B11FC
 ClientServices__RequestCharacterCreate 006B1620 f end=006B1785
+ClientServices__CharacterSetInGame 006B1840 f end=006B18B8
 ClientServices__CharacterLogout 006B1930 f end=006B1A02
 ClientServices__RequestCharacterDelete 006B1A70 f end=006B1B62
 ClientServices__GetClientStamp 006B1C70 f end=006B1DFE
