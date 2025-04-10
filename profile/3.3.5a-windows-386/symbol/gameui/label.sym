@@ -33,3 +33,6 @@ CGGameUI__m_reloadUIRequested 00BD0791 l
 CGGameUI__m_minimapZoneText 00BD077C l
 CGGameUI__m_subZoneText 00BD0784 l
 CGGameUI__m_zoneText 00BD0788 l
+CGGameUI__m_interactTarget 00BD07AC l
+CGGameUI__m_cursorItemContainer 00BD0760 l
+CGGameUI__m_cursorItem 00BD0768 l
