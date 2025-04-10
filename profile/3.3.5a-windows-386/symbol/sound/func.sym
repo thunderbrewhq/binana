@@ -1,1 +1,7 @@
 SI2__SetWeatherKitID 004C8610 f end=004C8622
+SE2__StopSound 004C6390 f end=004C6410
+SE2__PlaySoundKit 004C6A40 f end=004C713B
+SI2__StopAllMusic 004C93B0 f end=004C941B
+SI2__StopGlueAmbience 00985F70 f end=00985FA2
+SI2__StopGlueMusic 009860E0 f end=00986128
+SI2__PlayVocalErrorSound 00986D00 f end=00986DD6
