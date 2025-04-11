@@ -68,3 +68,5 @@ CGGameUI__SetAreaSpiritHealer 00523EB0 f end=00523F74
 CGGameUI__UpdateAreaSpiritHealerDistance 00524010 f end=005240D7
 CGGameUI__TargetDirection 005252D0 f end=00525526
 CGGameUI__HandleWorldClick 005278C0 f end=00527A2A
+CGGameUI__StartCinematic 00528AF0 f end=00528C2E
+CGGameUI__Idle 0052AF40 f end=0052B36B
