@@ -10,5 +10,6 @@ DestroyGlobal 00406B70 f end=00406C65
 CommonMain 00406C70 f end=00406D64
 quicksort 0047B800 f ; void __cdecl quicksort(unsigned int, unsigned int, int, int (__cdecl *)(unsigned int, unsigned int, int), int)
 ConvertPosition 0047FC90 f end=0047FDD4
-ScrnLayerSetRect 004A8500 f end=004A8522
-ScrnLayerCreate 004A8BB0 f end=004A8C83
+TimingMethodCallback 00403200 f end=00403294
+WowClientInit 00404130 f end=004042BC
+DestroyHandlerPlayer 004066D0 f end=0040673F ; 00005400
