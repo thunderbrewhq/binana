@@ -12,4 +12,9 @@ quicksort 0047B800 f ; void __cdecl quicksort(unsigned int, unsigned int, int, i
 ConvertPosition 0047FC90 f end=0047FDD4
 TimingMethodCallback 00403200 f end=00403294
 WowClientInit 00404130 f end=004042BC
-DestroyHandlerPlayer 004066D0 f end=0040673F ; 00005400
+DestroyHandlerPlayer 004066D0 f end=0040673F ; 00005400ClientPostClose 004033C0 f end=0047D769
+NameNeedsDeclensions 0076DD20 f end=0076DD3B
+RussianNameNeedsDeclensions 0076E270 f end=0076E2A6
+MD5Init 00779340 f end=0077936B
+MD5Final 00779AE0 f end=00779B97
+IsRussian 007E1030 f end=007E1049
