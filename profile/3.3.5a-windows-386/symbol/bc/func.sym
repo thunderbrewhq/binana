@@ -114,3 +114,4 @@ OsCreateFileMode 00461EF0 f end=00461F68 type="Blizzard__File__Mode __stdcall fu
 OsFileGetDownloadFolder 00461F70 f end=00461F91 type="char* __stdcall func()"
 OsCreateFile 00461FA0 f end=00461FFA type="HOSFILE __stdcall func(char* fileName, uint32_t desiredAccess, uint32_t shareMode, uint32_t createDisposition, uint32_t flagsAndAttributes, uint32_t extendedFileType)"
 OsFileList 00462000 f end=0046209C
+Blizzard__Streaming__IsStreamingMode 00428010 f end=0042802B
