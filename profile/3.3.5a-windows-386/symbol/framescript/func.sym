@@ -11,3 +11,6 @@ FrameScript_SignalEvent 0081AA00 f end=0081AB59 ; FrameScript_SignalEvent(unsign
 vFrameScript_SignalEvent 0081AC90 f end=0081AE4F ; vFrameScript_SignalEvent(unsigned int, char const*, char*)
 FrameScript_CreateEvents 0081B5F0 f end=0081B714 ; FrameScript_CreateEvents(char const**, unsigned int)
 FrameScript_GetObjectThis 004A81B0 f end=004A8235 ; FrameScript_GetObjectThis(lua_State*, int)
+FrameScript_Initialize 00819BB0 f end=00819D38
+FrameScript_Destroy 0081A9A0 f end=0081A9FF
+FrameScript_Flush 0081AC70 f end=0081AC8B
