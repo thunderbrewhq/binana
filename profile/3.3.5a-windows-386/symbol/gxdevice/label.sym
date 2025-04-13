@@ -1,7 +1,7 @@
-g_theGxDevicePtr 00C5DF88 l type="CGxDevice*"
 CGxDevice__vtable 00A2DDC0 l type="CGxDevice__vtable"
-CGxDevice__s_shadowConstants 00C5DFE0 l
+g_theGxDevicePtr 00C5DF88 l type="CGxDevice*"
 CGxDevice__s_uiVertexShader 00C5DFDC l
-CGxDevice__s_uiPixelShader 00C5FFFC l
+CGxDevice__s_shadowConstants 00C5DFE0 l
 CGxDevice__m_logBytes 00C5FFF4 l type="uint32_t"
 CGxDevice__m_log 00C5FFF8 l type="HSLOG"
+CGxDevice__s_uiPixelShader 00C5FFFC l

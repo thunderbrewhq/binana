@@ -1,5 +1,5 @@
-Blizzard__Memory__Allocate 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)"
-Blizzard__Memory__Free 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
+operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
+operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
 Blizzard__Debug__ErrorStackAsText 004270D0 f end=004270E6
 Blizzard__File__Close 004270F0 f end=0042712F
 Blizzard__File__Delete 00427130 f end=0042716F ; Blizzard::File::Delete(char const*)
@@ -27,6 +27,7 @@ System_File__ToNativeAttributes 00427C20 f end=00427C68
 System_File__FromNativeAttributes 00427C70 f end=00427CBC
 System_File__ReadP 00427CC0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__WriteP 00427D10 f end=00427D5C type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+Blizzard__Streaming__IsStreamingMode 00428010 f end=0042802B
 Blizzard__File__IsDirectory 004281D0 f end=004281EB
 Blizzard__File__IsFile 004281F0 f end=0042820B
 Blizzard__File__SimpleGlob 00428210 f end=004282F2 type="bool __stdcall func(char* name, char* pattern)"
@@ -114,4 +115,3 @@ OsCreateFileMode 00461EF0 f end=00461F68 type="Blizzard__File__Mode __stdcall fu
 OsFileGetDownloadFolder 00461F70 f end=00461F91 type="char* __stdcall func()"
 OsCreateFile 00461FA0 f end=00461FFA type="HOSFILE __stdcall func(char* fileName, uint32_t desiredAccess, uint32_t shareMode, uint32_t createDisposition, uint32_t flagsAndAttributes, uint32_t extendedFileType)"
 OsFileList 00462000 f end=0046209C
-Blizzard__Streaming__IsStreamingMode 00428010 f end=0042802B

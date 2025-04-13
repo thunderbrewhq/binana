@@ -233,6 +233,7 @@ static import_data_types() {
 	apply_type(0x00689E80, "int32_t __stdcall func(void* a, void* b)");
 	apply_type(0x00689EA0, "int32_t __stdcall func(PDISPLAY_DEVICEA device, uint32_t flag)");
 	apply_type(0x00689EF0, "CGxDevice* __stdcall func()");
+	apply_type(0x00689F20, "int32_t __stdcall func(CGxMonitorMode* mode)");
 	apply_type(0x0068A090, "CGxMonitorMode* __thiscall func(TSGrowableArray_CGxMonitorMode* this)");
 	apply_type(0x0068A0F0, "void __thiscall func(TSGrowableArray_CGxMonitorMode* this, uint32_t count)");
 	apply_type(0x0068A4C0, "void __stdcall func(TSGrowableArray_CGxMonitorMode* modes)");
@@ -357,7 +358,8 @@ static import_data_types() {
 	apply_type(0x00764A10, "int32_t __stdcall func(EVENT_DATA_MOUSE* data, void* param)");
 	apply_type(0x00764B90, "int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)");
 	apply_type(0x00765270, "void __stdcall func(char* str, COLOR_T color)");
-	apply_type(0x007653B0, "void __stdcall func(char* str, COLOR_T color, ...)");
+	apply_type(0x00765360, "void __stdcall func(char* format, COLOR_T color, ...)");
+	apply_type(0x007653B0, "void __stdcall func(char* str,...)");
 	apply_type(0x007658A0, "void __stdcall func(char* commandLine, int32_t addToHistory)");
 	apply_type(0x007659C0, "int32_t __stdcall func(EVENT_DATA_IDLE* data,void* param)");
 	apply_type(0x00765AF0, "int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)");

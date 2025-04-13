@@ -1,7 +1,7 @@
+GxDrawLockedElements 00681A60 f end=00681AAB type="void __stdcall func()"
 GxPrimIndexPtr 00681AB0 f end=00681AFB type="void __stdcall func(uint32_t indexCount, uint16_t* indices)"
 GxPrimVertexPtr 00681B00 f end=00681B4B type="void __stdcall func(CGxBuf* buf, EGxVertexBufferFormat format)"
+GxDrawLockedElements 00682340 f end=0068239E type="void __stdcall func(EGxPrim primType, uint32_t, uint16_t*)"
+GxPrimLockIndexPtr 006823A0 f end=006823F8 type="void __stdcall func(EGxPrim primType, uint32_t indexCount, uint16_t* indices)"
 GxPrimVertexPtr 00682400 f end=00682781 type="void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)" ; this is one of the functions named 'GxPrimVertexPtr' that uses the fixed-function pipeline
 GxPrimLockVertexPtrs 006828C0 f end=006828FE type="void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, uint8_t* bone, uint32_t boneStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)"
-GxPrimLockIndexPtr 006823A0 f end=006823F8 type="void __stdcall func(EGxPrim primType, uint32_t indexCount, uint16_t* indices)"
-GxDrawLockedElements 00682340 f end=0068239E type="void __stdcall func(EGxPrim primType, uint32_t, uint16_t*)"
-GxDrawLockedElements 00681A60 f end=00681AAB type="void __stdcall func()"

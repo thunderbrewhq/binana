@@ -1,6 +1,6 @@
-CSimpleFrame_SetAlpha 0049F9E0 f end=0049FAA1 type="void __stdcall func(lua_State* L)"
 CSimpleFrame__SetFrameAlpha 0048EA10 f end=0048EA32 type="void __thiscall func(CSimpleFrame* this, uint8_t alpha)"
 CSimpleFrame__SetFrameScale 0048F580 f end=0048F5CC
 CSimpleFrame__SetFrameDepth 0048F5D0 f end=0048F611
-RegisterSimpleFrameScriptMethods 0081B870 f end=009707D9
-UnregisterSimpleFrameScriptMethods 0081B920 f end=00970655
+CSimpleFrame_SetAlpha 0049F9E0 f end=0049FAA1 type="void __stdcall func(lua_State* L)"
+RegisterSimpleFrameScriptMethods 0081B870 f end=0081B914
+UnregisterSimpleFrameScriptMethods 0081B920 f end=0081B9B8

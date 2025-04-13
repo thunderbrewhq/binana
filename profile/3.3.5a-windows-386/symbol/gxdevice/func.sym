@@ -1,4 +1,5 @@
 CGxDevice__RsPush 00409670 f end=004096CC type="void __thiscall func(CGxDevice* this)"
+CGxDevice__CapsAspectRatio 0050F7C0 f end=0050F824
 CGxDevice__Caps 00532AF0 f end=00532AF7 type="CGxCaps* __thiscall func(CGxDevice* this)" ; public: class CGxCaps const & __thiscall CGxDevice::Caps(void)const
 CGxDevice__DeviceCreate 00682CB0 f end=00682CCB type="void __thiscall func(CGxDevice* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
 CGxDevice__DeviceCreate 00682CD0 f end=00682CF0 type="void __thiscall func(CGxDevice* this, uintptr_t hwnd, CGxFormat* format)"
@@ -51,10 +52,10 @@ CGxDevice__ITexMarkAsUpdated 00684900 f end=0068492D type="void __thiscall func(
 CGxDevice__IShaderLoad 00684970 f end=00684AC8 type="int32_t __thiscall func(CGxDevice* this, CGxShader** shaders, EGxShTarget target, char* a4, char* a5, int32_t permutations)"
 CGxDevice__ICursorCreate 00684AD0 f end=00684B4A type="void __thiscall func(CGxDevice* this, CGxFormat* format)"
 CGxDevice__CursorUnlock 00684B50 f end=00684B99 type="void __thiscall func(CGxDevice* this, uint32_t x, uint32_t y)"
+CGxDevice__VLog 00684BA0 f end=00684C15 type="void __stdcall func(char* format, va_list args)"
 CGxDevice__Log 00684C20 f end=00684C3E type="void __stdcall func(char* format, ...)"
 CGxDevice__Log 00684C40 f end=00684D07 type="void __stdcall func(CGxCaps* caps)" ; CGxDevice::Log(CGxCaps const&) const
 CGxDevice__Log 00684D10 f end=00684D6C type="void __stdcall func(CGxFormat* format)"
-CGxDevice__VLog 00684BA0 f end=00684C15 type="void __stdcall func(char* format, va_list args)"
 CGxDevice__DeviceOverride 00684FE0 f end=00685036 type="void __thiscall func(CGxDevice* this, EGxOverride override, uint32_t value)"
 CGxDevice__AddDeviceRestoredCallback 006853B0 f end=006853C6 type="void __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)"
 CGxDevice__RemoveDeviceRestoredCallback 006853D0 f end=0068545C type="int32_t __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)"
@@ -91,8 +92,8 @@ CGxDevice__AdapterID 00689C10 f end=00689DA2
 CGxDevice__AdapterInfer 00689DB0 f end=00689E7B
 CGxDevice__FindDisplayDevice 00689EA0 f end=00689EF0 type="int32_t __stdcall func(PDISPLAY_DEVICEA device, uint32_t flag)" ; UC
 CGxDevice__NewD3d 00689EF0 f end=00689F14 type="CGxDevice* __stdcall func()"
+CGxDevice__AdapterDesktopMode 00689F20 f end=00689F87 type="int32_t __stdcall func(CGxMonitorMode* mode)"
 CGxDevice__AdapterMonitorModes 0068A4C0 f end=0068A589 type="void __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
 CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF type="void __thiscall func(CGxDevice* this, CGxTex* texId, uint32_t* width, uint32_t* height, uint32_t* baseMip, uint32_t* mipCount)"
-CGxDevice__CapsAspectRatio 0050F7C0 f end=0050F824

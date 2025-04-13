@@ -1,3 +1,3 @@
-s_alloccount 00CAE950 l type="uint32_t" 
-s_freecount 00CAE954 l type="uint32_t" 
+s_alloccount 00CAE950 l type="uint32_t"
+s_freecount 00CAE954 l type="uint32_t"
 g_opt 00CAE958 l type="STORMOPTIONS"

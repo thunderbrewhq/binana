@@ -3,6 +3,7 @@
 static import_functions() {
 	// Import function addresses and comments
 	msg("Importing function addresses and comments");
+	set_func_cmt(0x00401010, "void* operator new(size_t)", 0);
 	set_func_cmt(0x00401030, "void operator delete(void*)", 0);
 	set_func_cmt(0x00401070, "protected: int __thiscall CDataStore::FetchWrite(unsigned int,unsigned int,char const *,int)", 0);
 	set_func_cmt(0x004010D0, "CDataStore::IsRead() const", 0);
@@ -12,6 +13,7 @@ static import_functions() {
 	set_func_cmt(0x004038A0, "CDataStore::~CDataStore()", 0);
 	set_func_cmt(0x00405A10, "int __cdecl PatchFiles::EnumPatchArchives(OS_FILE_DATA *fileData, PatchOnDemand__Cache *cbParam)", 0);
 	set_func_cmt(0x00405AB0, "int __thiscall PatchFiles::LoadArchives(PatchFiles *this, const char *localeCode, char a3)", 0);
+	set_func_cmt(0x004066D0, "00005400C", 0);
 	set_func_cmt(0x00427130, "Blizzard::File::Delete(char const*)", 0);
 	set_func_cmt(0x00427500, "Blizzard::File::MakeAbsolutePath(char const*, char*, int, bool)", 0);
 	set_func_cmt(0x00427560, "Blizzard::File::Move(char const*, char const*)", 0);
@@ -41,12 +43,38 @@ static import_functions() {
 	set_func_cmt(0x0047B560, "CDataStore::GetArray(unsigned char*, unsigned int)", 0);
 	set_func_cmt(0x0047B6B0, "CDataStore::GetDataInSitu(void*&, unsigned int)", 0);
 	set_func_cmt(0x0047B800, "void __cdecl quicksort(unsigned int, unsigned int, int, int (__cdecl *)(unsigned int, unsigned int, int), int)", 0);
+	set_func_cmt(0x0047BD40, "int __cdecl sgetu8(_BYTE *, _DWORD *)", 0);
 	set_func_cmt(0x0047F230, "IEvtSchedulerProcess as an independent function appears to be optimized out", 0);
 	set_func_cmt(0x004A2780, "_CBackdropGenerator::LoadXML(linkObject*, CStatus*)", 0);
 	set_func_cmt(0x004A81B0, "FrameScript_GetObjectThis(lua_State*, int)", 0);
 	set_func_cmt(0x004DBFD0, "thanks namreeb :^)", 0);
 	set_func_cmt(0x00532AF0, "public: class CGxCaps const & __thiscall CGxDevice::Caps(void)const", 0);
 	set_func_cmt(0x005EEB70, "SErrDisplayAppFatal resolves to this in release mode?", 0);
+	set_func_cmt(0x00631D30, "00005400", 0);
+	set_func_cmt(0x00631E10, "NetClient::ConnectInternal(char const*, unsigned short)", 0);
+	set_func_cmt(0x00631EA0, "00005400", 0);
+	set_func_cmt(0x00631F70, "NetClient::SetLoginData(LoginData*)", 0);
+	set_func_cmt(0x00631FA0, "void __thiscall NetClient::SetMessageHandler(enum NETMESSAGE, int (__fastcall *)(void *, enum NETMESSAGE, unsigned long, class CDataStore *), void *)", 0);
+	set_func_cmt(0x00631FE0, "NetClient::ProcessMessage(unsigned long, CDataStore*, int)", 0);
+	set_func_cmt(0x00632060, "NetClient::WCConnected(WowConnection*, WowConnection*, unsigned long, NETCONNADDR const*)", 0);
+	set_func_cmt(0x006320D0, "void __thiscall NetClient::GetNetStats(float &, float &, unsigned long &)", 0);
+	set_func_cmt(0x006321A0, "00005400", 0);
+	set_func_cmt(0x006322A0, "00005400", 0);
+	set_func_cmt(0x00632390, "00005400", 0);
+	set_func_cmt(0x006323C0, "NetClient::Connect(char const*)", 0);
+	set_func_cmt(0x00632460, "NetClient::HandleData(unsigned long, void*, int)", 0);
+	set_func_cmt(0x00632510, "00005400", 0);
+	set_func_cmt(0x00632540, "00005400", 0);
+	set_func_cmt(0x006325C0, "void __thiscall NetClient::PongHandler(class CDataStore *)", 0);
+	set_func_cmt(0x006326D0, "NetClient::WCDisconnected(WowConnection*, unsigned long, NETCONNADDR const*)", 0);
+	set_func_cmt(0x00632730, "00005410", 0);
+	set_func_cmt(0x00632A40, "00005410", 0);
+	set_func_cmt(0x00632B50, "NetClient::Send(CDataStore*)", 0);
+	set_func_cmt(0x00632C10, "NetClient::WCCantConnect(WowConnection*, unsigned long, NETCONNADDR const*)", 0);
+	set_func_cmt(0x00632CD0, "NetClient::Ping(CONNECTION_ID)", 0);
+	set_func_cmt(0x00632DB0, "00005400", 0);
+	set_func_cmt(0x00632E00, "00005410", 0);
+	set_func_cmt(0x00633330, "NetClient::WCMessageReady(WowConnection*, unsigned long, CDataStore*)", 0);
 	set_func_cmt(0x006337D0, "00005400", 0);
 	set_func_cmt(0x00634C60, "00005400", 0);
 	set_func_cmt(0x00634E00, "ClientDBInitialize()", 0);

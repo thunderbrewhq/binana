@@ -47,6 +47,7 @@ SCmdRegisterArgList 00773590 f end=007737C2 type="int32_t __stdcall func(ARGLIST
 SCmdProcess 00773890 f end=00773986 type="int32_t __stdcall func(char* cmdline, int32_t skipprogname, CMDEXTRACALLBACK extracallback, CMDERRORCALLBACK errorcallback)"
 SCmdProcessCommandLine 00773990 f end=007739AD type="int32_t __stdcall func(CMDEXTRACALLBACK extracallback, CMDERRORCALLBACK errorcallback)"
 StormInitialize 007739E0 f end=007739F4
+StormDestroy 00773A00 f end=00773A2F
 StormSetOption 00773A80 f end=00773C81 type="int32_t __stdcall func(int optname, void* optval, uint32_t optlen)"
 SCritSect__SCritSect 00774620 f end=0077462E type="SCritSect* __thiscall func(SCritSect* this)"
 SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect *this)"

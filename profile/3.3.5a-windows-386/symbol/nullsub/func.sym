@@ -1,3 +1,4 @@
+purecall 0040BAA5 f end=0040BACF
 nullsub_1 0040D3B5 f
 nullsub_2 0047ADD0 f
 j_nullsub_3 0047B760 f
@@ -10,6 +11,9 @@ nullsub_6 006B1B90 f
 nullsub_155 006B1BA0 f
 nullsub_152 00743550 f
 nullsub_153 00743560 f
+stub_return_one_byte 008A1420 f end=008A1423 ; known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback
+stub_return_zero4 008E5250 f end=008E5253 ; Script_ToggleTris
+stub_return_xor_eax 00936900 f end=00936905
 nullsub_7 009D34B0 f
 nullsub_8 009D34C0 f
 nullsub_9 009D4260 f
@@ -154,7 +158,3 @@ nullsub_147 009DE1A0 f
 nullsub_148 009DE1B0 f
 nullsub_149 009DE1C0 f
 nullsub_150 009DE1D0 f
-stub_return_zero4 008E5250 f end=008E5253 ; Script_ToggleTris
-purecall 0040BAA5 f end=0040BACF
-stub_return_one_byte 008A1420 f end=008A1423 ; known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback
-stub_return_xor_eax 00936900 f end=00936905

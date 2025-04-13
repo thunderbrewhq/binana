@@ -1,3 +1,4 @@
+WowClientDB_StartupStringsRec__Load 004052F0 f end=0040553D
 StaticDBLoadAll 006337D0 f end=0063478E ; 00005400
 ClientDBShutdown 00634C60 f end=00634CBB ; 00005400
 ClientDBInitialize 00634E00 f end=00634E62 ; ClientDBInitialize()
@@ -10,4 +11,3 @@ WowClientDB_Cfg_CategoriesRec__LoadRecords 00659910 f end=00659A03 ; WowClientDB
 WowClientDB_CharBaseInfoRec__LoadRecords 00659B80 f end=00659C82 ; WowClientDB<CharBaseInfoRec>::LoadRecords(SFile*, char const*, int)
 WowClientDB__GetRecord 0065C290 f end=0065C2B4 ; 00005410
 WowClientDB_AchievementRec__GetRecordByIndex 0065F520 f end=0065F55B ; WowClientDB<AchievementRec>::GetRecordByIndex(int, void*)
-WowClientDB_StartupStringsRec__Load 004052f0 f end=0040553D

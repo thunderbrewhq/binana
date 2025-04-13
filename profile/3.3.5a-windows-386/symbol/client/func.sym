@@ -1,18 +1,19 @@
 PatchFiles__qsortpatchfiles 00401200 f ; int __cdecl PatchFiles::qsortpatchfiles(char **, char **)
 SetPaths 00402B20 f end=00402B8B
+TimingMethodCallback 00403200 f end=00403294
 CCommand_TimingInfo 004032A0 f end=004032FF
 ClientKillTimer 004033B0 f end=004033B9
+ClientPostClose 004033C0 f end=004033D1
 StartupStreaming 00403600 f end=004036A4 type="void __stdcall func(char* manifest@<eax>)"
+WowClientInit 00404130 f end=004042BC
 PatchFiles__EnumPatchArchives 00405A10 f ; int __cdecl PatchFiles::EnumPatchArchives(OS_FILE_DATA *fileData, PatchOnDemand__Cache *cbParam)
 PatchFiles__LoadArchives 00405AB0 f ; int __thiscall PatchFiles::LoadArchives(PatchFiles *this, const char *localeCode, char a3)
+DestroyHandlerPlayer 004066D0 f end=0040673F ; 00005400C
 InitializeGlobal 004067F0 f end=00406B67
 DestroyGlobal 00406B70 f end=00406C65
 CommonMain 00406C70 f end=00406D64
 quicksort 0047B800 f ; void __cdecl quicksort(unsigned int, unsigned int, int, int (__cdecl *)(unsigned int, unsigned int, int), int)
 ConvertPosition 0047FC90 f end=0047FDD4
-TimingMethodCallback 00403200 f end=00403294
-WowClientInit 00404130 f end=004042BC
-DestroyHandlerPlayer 004066D0 f end=0040673F ; 00005400ClientPostClose 004033C0 f end=0047D769
 NameNeedsDeclensions 0076DD20 f end=0076DD3B
 RussianNameNeedsDeclensions 0076E270 f end=0076E2A6
 MD5Init 00779340 f end=0077936B

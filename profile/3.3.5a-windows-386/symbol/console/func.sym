@@ -12,6 +12,8 @@ CONSOLELINE__Delete 00763B10 f end=00763B40 type="void __thiscall func(CONSOLELI
 CONSOLELINE__Up 00763B40 f end=00763B83 type="void __thiscall func(CONSOLELINE* this)" ; static void CONSOLELINE::Up()
 CONSOLELINE__Down 00763B90 f end=00763BD6 type="void __thiscall func(CONSOLELINE* this)" ; static void CONSOLELINE::Down()
 OnKeyUp 00763BE0 f end=00763C0A type="int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)"
+GetConsoleMessage 00763C20 f end=00763C26
+SetConsoleMessage 00763C30 f end=00763C3D
 ConsolePostClose 00763C50 f end=00763C5D type="void __stdcall func()"
 EventCloseCallback 00763D60 f end=00763D71 type="int32_t __stdcall func(void* param)"
 DrawBackground 00763DF0 f end=00764039 type="void __stdcall func()"
@@ -27,7 +29,8 @@ OnChar 00764990 f end=00764A03 type="int32_t __stdcall func(EVENT_DATA_CHAR* dat
 OnMouseDown 00764A10 f end=00764B88 type="int32_t __stdcall func(EVENT_DATA_MOUSE* data, void* param)"
 OnKeyDownRepeat 00764B90 f end=00764E4F type="int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)"
 ConsoleWrite 00765270 f end=00765359 type="void __stdcall func(char* str, COLOR_T color)"
-ConsoleWriteA 007653B0 f end=00765400 type="void __stdcall func(char* str, COLOR_T color, ...)"
+ConsoleWriteA 00765360 f end=007653AD type="void __stdcall func(char* format, COLOR_T color, ...)"
+ConsolePrintf 007653B0 f end=00765400 type="void __stdcall func(char* str,...)"
 ConsoleCommandExecute 007658A0 f end=007659BF type="void __stdcall func(char* commandLine, int32_t addToHistory)"
 OnIdle 007659C0 f end=00765AE5 type="int32_t __stdcall func(EVENT_DATA_IDLE* data,void* param)"
 OnKeyDown 00765AF0 f end=00765FB2 type="int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)"
@@ -38,14 +41,14 @@ CVar__Load 00766400 f end=0076652C type="int32_t __stdcall func(HOSFILE file)"
 CVar__Load 00766530 f end=007665C2 type="int32_t __stdcall func(char* filename)"
 CVar__SaveCvar 00766640 f end=007666A1 type="bool __stdcall func(char* name, char* value, void* param)"
 CVar__LogCvar 007666B0 f end=007666F9 ; CVar::LogCvar(char const*, char const*, void*)
-CVar__InternalSet 007667B0 f end=00766855 ; CVar::InternalSet(char const*, bool, bool, bool, bool) 
+CVar__InternalSet 007667B0 f end=00766855 ; CVar::InternalSet(char const*, bool, bool, bool, bool)
 CVar__Set 007668C0 f end=00766936 type="bool __thiscall func(CVar* this, char* value, bool setValue, bool setReset, bool setDefault, bool a6)"
 CVar__Reset 00766990 f end=00766A14 ; public: void __thiscall CVar::Reset(void)
 CVar__Default 00766A20 f end=00766AA4 type="bool __thiscall func(CVar* this)" ; public: bool __thiscall CVar::Default(void)
 CVar__Update 00766AB0 f end=00766B1F type="bool __thiscall func(CVar* this)" ; CVar::Update()
 CVar__IterateForArchive 00767030 f end=007670DA type="int32_t __stdcall func(uint32_t a1, uint32_t a2, void* callback, void* param)" ; CVar::IterateForArchive(unsigned int, unsigned int, int (*)(char const*, char const*, void*), void*)
 CVarSaveFile 00767100 f end=0076719C type="void __stdcall func()"
-CVar__LogAll 007671A0 f end=007671CF ; CVar::LogAll(char*, unsigned long, unsigned int, unsigned int) 
+CVar__LogAll 007671A0 f end=007671CF ; CVar::LogAll(char*, unsigned long, unsigned int, unsigned int)
 CvarListCommandHandler 00767220 f end=0076734A ; 00005410
 CVar__DeleteAccountCVars 007673A0 f end=007673E4 ; 00005400
 CVar__Destroy 007673F0 f end=00767434 type="void __stdcall func()"
@@ -68,12 +71,10 @@ ValidateFormatMonitor 00769E10 f end=00769FF0
 CCGxRestart 00769FF0 f end=0076A12E
 RegisterGxCVars 0076A630 f end=0076AAA8
 ConsoleDeviceInitialize 0076AB80 f end=0076B287 type="int32_t __stdcall func(char* title, int32_t multithreaded)"
-SetDefaults 0076B3F0 f type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; void SetDefaults(DefaultSettings&, const Hardware&)
+ConsoleDetectSetDefaults 0076B3F0 f type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; void SetDefaults(DefaultSettings&, const Hardware&)
 ConsoleDetectSetDefaultsFormat 0076B520 f end=0076B53D type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; ConsoleDetectSetDefaultsFormat(DefaultSettings&, const Hardware&)
 SetVideoIdx 0076B540 f end=0076B594 type="void __stdcall func(Hardware* hardware@<edi>)"
 PrintStartupError 0076B5A0 f end=0076B616 type="void __usercall __noreturn func(int32_t messageID, const char* fallbackMessage)"
 ConsoleDetectSaveHardware 0076B620 f end=0076B7DB
 ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9 type="void __stdcall func(Hardware* hardware, bool* hwChanged)" ; ConsoleDetectDetectHardware(Hardware&, bool&)
 ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
-GetConsoleMessage 00763C20 f end=00763C26
-SetConsoleMessage 00763C30 f end=00763C3D

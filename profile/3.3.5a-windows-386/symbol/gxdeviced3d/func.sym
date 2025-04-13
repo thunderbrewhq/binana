@@ -1,3 +1,4 @@
+CGxDeviceD3d__IUnloadD3dLib 0068E140 f end=0068E174
 CGxDeviceD3d__ICreateD3dIB 0068E180 f end=0068E1E8
 CGxDeviceD3d__ISetPresentParms 0068E250 f end=0068E448
 CGxDeviceD3d__DeviceEvictResources 0068E450 f end=0068E49E type="void __thiscall func(CGxDeviceD3d* this)"
@@ -16,7 +17,6 @@ CGxDeviceD3d__QueryBegin 0068EA10 f end=0068EA81 type="bool __thiscall func(CGxD
 CGxDeviceD3d__QueryGetParam 0068EA90 f end=0068EB1D type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query, EGxQueryParam param, uint32_t* data)"
 CGxDeviceD3d__ICreateWindow 0068EBB0 f end=0068ED78
 CGxDeviceD3d__ILoadD3dLib 0068ED80 f end=0068EE13
-CGxDeviceD3d__IUnloadD3dLib 0068E140 f end=0068E174
 CGxDeviceD3d__ISetCaps 0068EE20 f end=0068F36D
 CGxDeviceD3d__ICreateD3dDevice 0068F3D0 f end=0068F692
 CGxDeviceD3d__DeviceSetRenderTarget 0068F770 f end=0068F8F2 type="void __thiscall func(CGxDeviceD3d* this, EGxBuffer buffer, CGxTex* texture, uint32_t plane)"

@@ -1,1 +1,2 @@
 ConvertUTF16toUTF8 0047B9E0 f end=0047BB9C type="int __stdcall func(char* dst, uint32_t dstMaxChars, uint16_t* src, uint32_t srcMaxChars, uint32_t* dstChars, uint32_t* srcChars)"
+sgetu8 0047BD40 f ; int __cdecl sgetu8(_BYTE *, _DWORD *)

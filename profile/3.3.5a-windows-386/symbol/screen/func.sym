@@ -1,5 +1,5 @@
 ScrnSetScreenshotQuality 004A84A0 f end=004A84FF
-ScrnGetStockFont 004A8DC0 f end=004A8DDF
-ScrnGetStockFontHeight 004A8DE0 f end=004A8DFF
 ScrnLayerSetRect 004A8500 f end=004A8522
 ScrnLayerCreate 004A8BB0 f end=004A8C83
+ScrnGetStockFont 004A8DC0 f end=004A8DDF
+ScrnGetStockFontHeight 004A8DE0 f end=004A8DFF

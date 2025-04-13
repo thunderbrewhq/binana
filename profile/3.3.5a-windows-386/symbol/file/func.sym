@@ -16,5 +16,5 @@ SFile__Close 00422910 f end=004229AB
 SFile__FileExistsEx 00424B10 f end=00424B41
 SFile__OpenEx 00424B50 f end=00424E44
 SFile__Load 00424E80 f end=00424F46
-SFile__Open 00424F80 f end=00424F98
 SFile__LoadFile 00424F50 f end=00424F74
+SFile__Open 00424F80 f end=00424F98

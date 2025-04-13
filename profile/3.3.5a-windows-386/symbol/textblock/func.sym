@@ -1,5 +1,5 @@
-TextBlockCreate 004BDAA0 f end=004BDBE4 type="HTEXTBLOCK __stdcall func(HTEXTFONT font, char* text, CImVector* color, C3Vector* pos, float fontHeight, float blockWidth, float blockHeight, uint32_t flags, float charSpacing, float lineSpacing)"
-TextBlockGenerateFont 004BE9C0 f end=004BEB8C type="HTEXTFONT __stdcall func(char* fontName, uint32_t fontFlags, float fontHeight)"
 TextBlockGetFontPtr 004BD9D0 f end=004BD9EA type="CGxFont* __stdcall func(HTEXTFONT font)"
+TextBlockCreate 004BDAA0 f end=004BDBE4 type="HTEXTBLOCK __stdcall func(HTEXTFONT font, char* text, CImVector* color, C3Vector* pos, float fontHeight, float blockWidth, float blockHeight, uint32_t flags, float charSpacing, float lineSpacing)"
 TextBlockSetStringPos 004BDBF0 f end=004BDC4C type="void __stdcall func(HTEXTBLOCK stringHandle, C2Vector* pos)"
 TextBlockGetWrappedTextHeight 004BDD80 f end=004BDE39 type="float __stdcall func(HTEXTFONT fontHandle, char* text, float a3, float a4, C2Vector* a5, float a6, float a7, uint32_t flags)"
+TextBlockGenerateFont 004BE9C0 f end=004BEB8C type="HTEXTFONT __stdcall func(char* fontName, uint32_t fontFlags, float fontHeight)"
