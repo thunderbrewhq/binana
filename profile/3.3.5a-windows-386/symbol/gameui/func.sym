@@ -70,3 +70,6 @@ CGGameUI__RegisterSavedVariable 0052AED0 f end=0052AF3F
 CGGameUI__Idle 0052AF40 f end=0052B36B
 CGGameUI__InitializeGame 0052B550 f end=0052BADA
 DisableFadingScreen 005ED080 f end=005ED116
+CGGameUI__DeleteCursorItem 00524650 f end=00524712
+EnableFadingScreen 005ED480 f end=005ED587
+UpdateModelForUI 00618110 f end=00618176

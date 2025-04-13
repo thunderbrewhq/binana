@@ -14,3 +14,4 @@ FrameScript_Flush 0081AC70 f end=0081AC8B
 vFrameScript_SignalEvent 0081AC90 f end=0081AE4F ; vFrameScript_SignalEvent(unsigned int, char const*, char*)
 FrameScript_SignalEvent 0081B530 f end=0081B549 ; FrameScript_SignalEvent(unsigned int, char const*, ...)
 FrameScript_CreateEvents 0081B5F0 f end=0081B714 ; FrameScript_CreateEvents(char const**, unsigned int)
+FrameScript_GetCurrentFunction 00817EE0 f end=00817F88

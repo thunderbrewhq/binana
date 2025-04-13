@@ -7,3 +7,5 @@ SI2__UnregisterScriptFunctions 00985ED0 f end=00985EEF
 SI2__StopGlueAmbience 00985F70 f end=00985FA2
 SI2__StopGlueMusic 009860E0 f end=00986128
 SI2__PlayVocalErrorSound 00986D00 f end=00986DD6
+SE2SoundKitProperties__ResetToDefaults 004C5990 f end=004C5A18
+SI2__PlayItemSound 004D0090 f end=004D0102
