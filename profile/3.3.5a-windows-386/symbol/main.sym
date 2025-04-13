@@ -3507,7 +3507,7 @@ System_File__read_func 00AB912C l ; type="int32_t (*)(Blizzard__File__Filesystem
 System_File__write_func 00AB91B4 l ; type="int32_t (*)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Stacked__s_nullstack 00AB91C0 l type="Blizzard__File__Filesystem"
 System_File__Stacked__s_basestack 00AB92C0 l type="Blizzard__File__Filesystem"
-s_zorderlist 00AC1B9C f type="TSExplicitList_CILayer"
+s_zorderlist 00AC1B9C l type="TSExplicitList_CILayer"
 ClientServices__m_loginState 00AC3DA4 l
 CGGameUI__m_visible 00AC80A8 l
 s_cursorNames 00AD2808 l type="char*[53]"
