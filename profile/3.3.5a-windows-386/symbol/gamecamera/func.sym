@@ -1,1 +1,4 @@
 CGCamera__SetTarget 006066E0 f end=00606967
+CGCamera__ResetModelCamera 005FE320 f end=005FE357
+CGCamera__ClearModelCamera 005FE360 f end=005FE398
+CGCamera__SetModelCamera 00606570 f end=006066DB

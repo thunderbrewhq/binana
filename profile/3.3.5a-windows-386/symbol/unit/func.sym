@@ -1,1 +1,4 @@
 CGUnit_C__StopMissileTrajectoryTargeting 006FBF00 f end=006FBF7B
+CGUnit_C__StopNamePlateSpellbar 00715B20 f end=00715B46
+CGUnit_C__DoPowerRegen 00728A20 f end=00728B09
+CGUnit_C__SetTrackingDirection 0072F040 f end=0072F1E8
