@@ -56,8 +56,20 @@ SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *t
 SSyncObject__Wait 00774690 f end=007746A4
 SEvent__Set 00774720 f end=0077472A
 SEvent__Reset 00774730 f end=0077473A
+PathGetRootChars 007750D0 f end=00775138
+FlushLog 00775140 f end=0077518E
+LockLog 00775190 f end=00775250
+OutputIndent 00775250 f end=00775299
+OutputTime 007752A0 f end=00775380
+UnlockDeleteLog 00775380 f end=007753D6
 SLogClose 007754A0 f end=007754F2
+SLogFlush 00775500 f end=00775544
+SLogInitialize 007755F0 f end=00775630
+CreateFileDirectory 00775630 f end=00775736 type="int32_t __usercall func@<eax>(char* path@<eax>)"
+OpenLogFile 00775740 f end=007757D7
 SLogCreate 007757E0 f end=007758D6 type="int32_t __stdcall func(char* filename, uint32_t flags, HSLOG* log)"
+SLogDestroy 007758E0 f end=00775A89
+SLogVWrite 00775A90 f end=00775BA3
 SLogWrite 00775BB0 f end=00775BC6
 SUniConvertUTF16to8 00775BD0 f end=00775D90
 SUniConvertUTF8to16Len 00775D90 f end=00775EAC

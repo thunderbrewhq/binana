@@ -37924,6 +37924,64 @@
       ]
     },
     {
+      "name": "LOG",
+      "size": 65828,
+      "members": [
+        {
+          "type": "HSLOG",
+          "name": "log",
+          "offset": 0
+        },
+        {
+          "type": "LOG*",
+          "name": "next",
+          "offset": 4
+        },
+        {
+          "type": "char",
+          "name": "filename",
+          "arrsize": 260,
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "file",
+          "offset": 268
+        },
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 272
+        },
+        {
+          "type": "size_t",
+          "name": "bufferused",
+          "offset": 276
+        },
+        {
+          "type": "size_t",
+          "name": "pendpoint",
+          "offset": 280
+        },
+        {
+          "type": "int32_t",
+          "name": "indent",
+          "offset": 284
+        },
+        {
+          "type": "int32_t",
+          "name": "timeStamp",
+          "offset": 288
+        },
+        {
+          "type": "char",
+          "name": "buffer",
+          "arrsize": 65536,
+          "offset": 292
+        }
+      ]
+    },
+    {
       "name": "ubyte4",
       "size": 4,
       "members": [

@@ -431,6 +431,7 @@ static import_data_types() {
 	apply_type(0x00774630, "void __thiscall func(SCritSect *this)");
 	apply_type(0x00774640, "void __thiscall func(SCritSect *this)");
 	apply_type(0x00774650, "void __thiscall func(SCritSect *this)");
+	apply_type(0x00775630, "int32_t __usercall func@<eax>(char* path@<eax>)");
 	apply_type(0x007757E0, "int32_t __stdcall func(char* filename, uint32_t flags, HSLOG* log)");
 	apply_type(0x00777420, "void __stdcall func(HSRGN handle, RECTF* rect, void* param, int32_t combinemode)");
 	apply_type(0x00777590, "void __stdcall func(HSRGN handle, RECTF* rect)");
@@ -811,6 +812,9 @@ static import_data_types() {
 	apply_type(0x00B417D0, "int32_t");
 	apply_type(0x00B41850, "CDataRecycler");
 	apply_type(0x00B6A9DC, "MipBits*");
+	apply_type(0x00BD08F0, "CVar*");
+	apply_type(0x00BD0914, "CVar*");
+	apply_type(0x00BD0A08, "CVar*");
 	apply_type(0x00C1DC98, "uint32_t[144]");
 	apply_type(0x00C1DED8, "uint32_t[144]");
 	apply_type(0x00C1E118, "uint32_t[144]");
@@ -853,6 +857,7 @@ static import_data_types() {
 	apply_type(0x00CA19B4, "SCritSect");
 	apply_type(0x00CA19F0, "float");
 	apply_type(0x00CA19F4, "char*");
+	apply_type(0x00CA19F8, "bool");
 	apply_type(0x00CA19F9, "bool");
 	apply_type(0x00CA19FC, "TSHashTable_CVar_HASHKEY_STRI");
 	apply_type(0x00CA3A28, "char[32][1024]");
@@ -903,6 +908,9 @@ static import_data_types() {
 	apply_type(0x00CAE950, "uint32_t");
 	apply_type(0x00CAE954, "uint32_t");
 	apply_type(0x00CAE958, "STORMOPTIONS");
+	apply_type(0x00CB7220, "int32_t");
+	apply_type(0x00CB732C, "CRITICAL_SECTION");
+	apply_type(0x00CB7358, "CRITICAL_SECTION[4]");
 	apply_type(0x00D3F798, "int32_t");
 	apply_type(0x00D41580, "int32_t");
 	apply_type(0x00D4159C, "OsTimeManager*");

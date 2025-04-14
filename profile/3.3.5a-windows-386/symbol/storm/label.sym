@@ -1,3 +1,6 @@
 s_alloccount 00CAE950 l type="uint32_t"
 s_freecount 00CAE954 l type="uint32_t"
 g_opt 00CAE958 l type="STORMOPTIONS"
+s_logsysteminit 00CB7220 l type="int32_t"
+s_defaultdir_critsect 00CB732C l type="CRITICAL_SECTION"
+s_critsect 00CB7358 l type="CRITICAL_SECTION[4]"

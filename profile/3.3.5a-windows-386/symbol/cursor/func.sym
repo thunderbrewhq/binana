@@ -1,9 +1,9 @@
 CopyCursorImage 006160B0 f end=00616211 type="int32_t __usercall func@<eax>(uint32_t** image@<eax>, MipBits* mipImages@<ecx>, uint32_t width@<edx>, uint32_t height)"
-UpdateCursor 006162C0 f end=006163AD
-CursorInitialize 006163B0 f end=006164A5
-CursorSetMode 00616800 f end=0061682E type="void __stdcall func(CURSORMODE mode)"
 CursorGetResetMode 00616260 f end=00616266
 CursorSetResetMode 00616270 f end=0061627D
+UpdateCursor 006162C0 f end=006163AD
+CursorInitialize 006163B0 f end=006164A5
 CursorGrabMoney 00616510 f end=006165A2
 CursorGrabSpell 006165B0 f end=00616625
 CursorDropItem 006167E0 f end=006167F9
+CursorSetMode 00616800 f end=0061682E type="void __stdcall func(CURSORMODE mode)"
