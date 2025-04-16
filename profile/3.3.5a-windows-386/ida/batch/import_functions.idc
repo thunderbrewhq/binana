@@ -13,7 +13,6 @@ static import_functions() {
 	set_func_cmt(0x004038A0, "CDataStore::~CDataStore()", 0);
 	set_func_cmt(0x00405A10, "int __cdecl PatchFiles::EnumPatchArchives(OS_FILE_DATA *fileData, PatchOnDemand__Cache *cbParam)", 0);
 	set_func_cmt(0x00405AB0, "int __thiscall PatchFiles::LoadArchives(PatchFiles *this, const char *localeCode, char a3)", 0);
-	set_func_cmt(0x004066D0, "00005400C", 0);
 	set_func_cmt(0x00427130, "Blizzard::File::Delete(char const*)", 0);
 	set_func_cmt(0x00427500, "Blizzard::File::MakeAbsolutePath(char const*, char*, int, bool)", 0);
 	set_func_cmt(0x00427560, "Blizzard::File::Move(char const*, char const*)", 0);
@@ -151,6 +150,7 @@ static import_functions() {
 	set_func_cmt(0x0081B5F0, "FrameScript_CreateEvents(char const**, unsigned int)", 0);
 	set_func_cmt(0x0086B9A0, "OsGetProcessorFeaturesEx(int&)", 0);
 	set_func_cmt(0x0086BBA0, "Invented name", 0);
+	set_func_cmt(0x0086F5F0, "00005410", 0);
 	set_func_cmt(0x008A1420, "known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback", 0);
 	set_func_cmt(0x008E5250, "Script_ToggleTris", 0);
 	set_func_cmt(0x0095D110, "CDataAllocator::GetData(int, char const*, int)", 0);

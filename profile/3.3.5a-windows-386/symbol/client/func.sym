@@ -2,13 +2,14 @@ PatchFiles__qsortpatchfiles 00401200 f ; int __cdecl PatchFiles::qsortpatchfiles
 SetPaths 00402B20 f end=00402B8B
 TimingMethodCallback 00403200 f end=00403294
 CCommand_TimingInfo 004032A0 f end=004032FF
-ClientKillTimer 004033B0 f end=004033B9
+ClientKillTimer 004033B0 f end=004033B9 type="void __stdcall ClientKillTimer(uint32_t timerId, void* handlerAddress, char* handlerName)"
 ClientPostClose 004033C0 f end=004033D1
 StartupStreaming 00403600 f end=004036A4 type="void __stdcall func(char* manifest@<eax>)"
 WowClientInit 00404130 f end=004042BC
+InitializeEngineCallback 004047E0 f end=00404923
 PatchFiles__EnumPatchArchives 00405A10 f ; int __cdecl PatchFiles::EnumPatchArchives(OS_FILE_DATA *fileData, PatchOnDemand__Cache *cbParam)
 PatchFiles__LoadArchives 00405AB0 f ; int __thiscall PatchFiles::LoadArchives(PatchFiles *this, const char *localeCode, char a3)
-DestroyHandlerPlayer 004066D0 f end=0040673F ; 00005400C
+DestroyEngineCallback 004066D0 f end=0040673F
 InitializeGlobal 004067F0 f end=00406B67
 DestroyGlobal 00406B70 f end=00406C65
 CommonMain 00406C70 f end=00406D64

@@ -15,6 +15,7 @@
 
 DECLARE_ENUM(SCHEDSTATE);
 DECLARE_STRUCT(EvtContext);
+DECLARE_STRUCT(EvtContextQueue);
 DECLARE_STRUCT(EvtTimer);
 DECLARE_HANDLE(HPROPCONTEXT);
 DECLARE_HANDLE(HEVENTCONTEXT);
@@ -32,7 +33,6 @@ COMMON_INSTANCE_ID(EvtContext);
 // class EvtContext : public TSingletonInstanceId<EvtContext, offsetof(TInstanceId<EvtContext>, m_id)> 
 struct EvtContext {
   TSingletonInstanceId_EvtContext b_base;
-  uint32_t unkA;
   // Member variables
   SCritSect m_critsect;
   uint32_t m_currTime;
@@ -45,11 +45,6 @@ struct EvtContext {
   uint32_t m_schedWeight;
   uint32_t m_schedSmoothWeight;
   int32_t m_schedRebalance;
-  int32_t unkXX;
-  int32_t unkXY;
-  int32_t unkXZ;
-  int32_t unkYY;
-  int32_t unkYZ;
   // TSExplicitList<EvtHandler, offsetof(EvtHandler, link)> m_queueHandlerList[EVENTIDS];
   TSExplicitList_EvtHandler m_queueHandlerList[36];
   // TSExplicitList<EvtMessage, offsetof(EvtMessage, link)> m_queueMessageList;
@@ -60,8 +55,17 @@ struct EvtContext {
   EvtIdTable_pointer_to_EvtTimer m_timerIdTable;
   EvtTimerQueue m_timerQueue;
   HPROPCONTEXT m_propContext;
+  int32_t unk264;
+  int32_t unk268;
+  int32_t unk26C;
   void* m_callContext;
   uint32_t m_startWatchdog;
+};
+STORM_TS_PRIORITY_QUEUE(EvtContext);
+
+// class EvtContextQueue : public TSPriorityQueue<EvtContext>
+struct EvtContextQueue {
+  TSPriorityQueue_EvtContext b_base;
 };
 
 #endif

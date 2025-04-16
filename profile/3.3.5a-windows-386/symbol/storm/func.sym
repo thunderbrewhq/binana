@@ -28,6 +28,8 @@ SStrCmp 0076F770 f end=0076F7D2
 SStrStrUTF8I 0076F7E0 f end=0076F852
 SStrDupA 0076F9E0 f end=0076FA35
 SStrToFloat 0076FB80 f end=0076FDA9
+SGetCurrentThreadPriority 0076FDD0 f end=0076FDDE
+SSetCurrentThreadPriority 0076FDE0 f end=0076FDF8
 SSetCurrentProcessAffinityMask 0076FE00 f end=0076FE18
 ILoadValue 007703A0 f end=00770483 type="int32_t __usercall func@<eax>(void* parentKey, char* subKeyName@<eax>, char* valuename, uint32_t* datatype, uint8_t* buffer@<ebx>, uint32_t bytes@<edi>, uint32_t* bytesread@<ecx>)"
 InternalLoadEntry 00770490 f end=00770575 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags, uint32_t* datatype, void* buffer, uint32_t bytes, uint32_t* bytesread@<esi>)"
@@ -56,6 +58,7 @@ SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *t
 SSyncObject__Wait 00774690 f end=007746A4
 SEvent__Set 00774720 f end=0077472A
 SEvent__Reset 00774730 f end=0077473A
+SThread__Create 00774740 f end=0077476F
 PathGetRootChars 007750D0 f end=00775138
 FlushLog 00775140 f end=0077518E
 LockLog 00775190 f end=00775250

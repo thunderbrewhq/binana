@@ -44,6 +44,7 @@
 #include "event/keydown.h"
 #include "event/message.h"
 #include "event/timer.h"
+#include "event/thread.h"
 
 #include "framescript/object.h"
 #include "framescript/event_object.h"

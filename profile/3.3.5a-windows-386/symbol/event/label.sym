@@ -1,3 +1,13 @@
+TInstanceId_EvtContext__v_table 009EA04C l type="TInstanceId_EvtContext__v_table"
+s_threadListContention 00AC0DC0 l type="int32_t"
+s_threadList 00AC0DC4 l type="TSList_EvtThread"
+TSingletonInstanceId_EvtContext__s_idTable 00B41670 l type="TInstanceIdTable_EvtContext"
 s_mainThread 00B417C8 l type="uint32_t"
 s_interactiveCount 00B417D0 l type="int32_t"
+s_threadSlotCount 00B417D4 l type="int32_t"
+s_threadSlots 00B417D8 l type="EvtThread**"
+s_threadSlotCritsects 00B417DC l type="SCritSect*"
+s_netServer 00B417E0 l
+s_threadListCritsect 00B417E8 l type="SCritSect"
+s_shutdownEvent 00B41824 l type="SEvent"
 s_messageRecycler 00B41850 l type="CDataRecycler"

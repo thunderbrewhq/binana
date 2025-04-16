@@ -5,6 +5,7 @@ EventInitialize 0047CFF0 f end=0047D02D
 EventDestroy 0047D030 f end=0047D04E
 EventCreateContextEx 0047D080 f end=0047D089
 EventSetConfirmCloseCallback 0047D090 f end=0047D099
+TInstanceIdTable_EvtContext__Ptr 0047D0E0 f end=0047D16A type="EvtContext* __thiscall func(TInstanceIdTable_EvtContext* this, uint32_t id, int32_t lockMode, int32_t* findMask)"
 EventIsButtonDown 0047D1D0 f end=0047D230
 EventIsKeyDown 0047D230 f end=0047D290
 EventPostCloseEx 0047D290 f end=0047D305
@@ -12,24 +13,30 @@ EventQueuePost 0047D310 f end=0047D3AF
 EventRegisterEx 0047D3C0 f end=0047D443
 EventUnregisterEx 0047D450 f end=0047D4B7
 EventSetTimer 0047D530 f end=0047D59C
-EventKillTimer 0047D620 f end=0047D683
+EventKillTimer 0047D620 f end=0047D683 type="void __stdcall func(uint32_t timerId, void* handlerFunction, char* functionName)"
 EventSetMouseMode 0047D690 f end=0047D6FD
 EventPostClose 0047D760 f end=0047D769
 EventRegister 0047D770 f end=0047D78D
 EventUnregister 0047D790 f end=0047D7A9
 IEvtSchedulerShutdown 0047D990 f end=0047D9EB
+SynthesizeInitialize 0047DB40 f end=0047DB6B
 SynthesizeIdle 0047DBC0 f end=0047DC14
 SynthesizePoll 0047DC20 f end=0047DC50
 SynthesizePaint 0047DC50 f end=0047DC8D
 EventForceIdleProcessing 0047DCA0 f end=0047DE09
 IEvtSchedulerDestroy 0047DEA0 f end=0047E117
+SynthesizeDestroy 0047E2F0 f end=0047E3C5 type="void __usercall func(EvtContext* context@<esi>)"
+GetNextContext 0047E5A0 f end=0047E5FA type="EvtContext* __usercall func@<eax>(uint32_t hThread@<edi>)"
 InitializeSchedulerThread 0047E910 f end=0047EA69
 AttachContextToThread 0047EC10 f
+DetachContextFromThread 0047ED30 f end=0047EDED type="void __stdcall func(uint32_t hThread, EvtContext* context)"
 SchedulerThreadProcProcess 0047EFF0 f end=0047F225
 SchedulerThreadProc 0047F230 f end=0047F2C1 ; IEvtSchedulerProcess as an independent function appears to be optimized out
 EventDoMessageLoop 0047F2D0 f end=0047F2EC
 IEvtSchedulerInitialize 0047F2F0 f end=0047F5BA
 IEvtSchedulerCreateContext 0047F5C0 f end=0047F6B9
+TInstanceId_EvtContext__destructor 0047F6C0 f
+TInstanceId_EvtContext__scalar_deleting_destructor 0047F920 f end=0047F94B
 PostMouseModeChanged 0047FAC0 f end=0047FB22
 IEvtInputDestroy 0047FB80 f end=0047FB92
 IEvtInputInitialize 0047FBA0 f end=0047FBA5
@@ -51,3 +58,4 @@ IEvtTimerGetNextTime 00480F70 f end=00480FCA
 IEvtTimerDispatch 00481100 f end=00481289
 IEvtTimerKill 00481290 f end=0048138F
 IEvtTimerSet 00481390 f end=004814E4
+TInstanceIdTable_EvtContext__Unlock 00774660 f end=00774675

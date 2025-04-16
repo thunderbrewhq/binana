@@ -12,9 +12,14 @@
 // TSingletonInstanceId<T>
 #define COMMON_INSTANCE_ID(T) \
 STORM_TS_LIST(T); \
+typedef struct TInstanceId_##T##__v_table TInstanceId_##T##__v_table; \
 typedef struct TInstanceId_##T TInstanceId_##T; \
 typedef struct TSingletonInstanceId_##T TSingletonInstanceId_##T; \
+struct TInstanceId_##T##__v_table { \
+  void* v_fn_00_scalar_deleting_destructor; \
+}; \
 struct TInstanceId_##T { \
+  TInstanceId_##T##__v_table* v_table; \
   TSLinkedNode_##T b_base; \
   uint32_t m_id; \
 }; \

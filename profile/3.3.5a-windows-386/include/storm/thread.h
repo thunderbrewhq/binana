@@ -11,7 +11,7 @@ DECLARE_STRUCT(SThread);
 typedef struct CSRWLock CSRWLock;
 
 struct SCritSect {
-  uint8_t m_critsect[24];
+  uint8_t m_critsect[40];
 };
 
 struct CSRWLock {

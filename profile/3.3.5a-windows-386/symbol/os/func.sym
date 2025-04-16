@@ -42,6 +42,7 @@ OsIMEInitialize 0086D0A0 f end=0086D0B8
 OsIMEDestroy 0086D0C0 f end=0086D0Df
 OsTlsGetValue 0086D6D0 f end=0086D6DF
 OsCallSetContext 0086F5A0 f end=0086F5EA
+OsCallResetContext 0086F5F0 f end=0086F64E ; 00005410
 OsCallInitialize 0086F760 f end=0086F875
 OsCallInitializeContext 0086F880 f end=0086F902
 OsClipboardGetString 00872280 f end=00872297

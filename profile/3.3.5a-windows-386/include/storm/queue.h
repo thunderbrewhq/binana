@@ -21,11 +21,15 @@ struct CSBasePriority {
 #define STORM_TS_TIMER_PRIORITY(T) \
 typedef struct TSTimerPriority_##T TSTimerPriority_##T; \
 struct TSTimerPriority_##T { \
+  void** v_table; \
   CSBasePriority b_base; \
   T m_val; \
 }
 
 #define STORM_TS_PRIORITY_QUEUE(T) \
-typedef CSBasePriorityQueue TSPriorityQueue_##T
+typedef struct TSPriorityQueue_##T TSPriorityQueue_##T; \
+struct TSPriorityQueue_##T { \
+  CSBasePriority b_base; \
+}
 
 #endif

@@ -12,15 +12,16 @@ AsyncFileReadHandlerTimeoutCallback 00402690 f end=004026A9
 SetPaths 00402B20 f end=00402B8B
 TimingMethodCallback 00403200 f end=00403294
 CCommand_TimingInfo 004032A0 f end=004032FF
-ClientKillTimer 004033B0 f end=004033B9
+ClientKillTimer 004033B0 f end=004033B9 type="void __stdcall ClientKillTimer(uint32_t timerId, void* handlerAddress, char* handlerName)"
 ClientPostClose 004033C0 f end=004033D1
 StartupStreaming 00403600 f end=004036A4 type="void __stdcall func(char* manifest@<eax>)"
 CDataStore__destructor 004038A0 f ; CDataStore::~CDataStore()
 WowClientInit 00404130 f end=004042BC
+InitializeEngineCallback 004047E0 f end=00404923
 WowClientDB_StartupStringsRec__Load 004052F0 f end=0040553D
 PatchFiles__EnumPatchArchives 00405A10 f ; int __cdecl PatchFiles::EnumPatchArchives(OS_FILE_DATA *fileData, PatchOnDemand__Cache *cbParam)
 PatchFiles__LoadArchives 00405AB0 f ; int __thiscall PatchFiles::LoadArchives(PatchFiles *this, const char *localeCode, char a3)
-DestroyHandlerPlayer 004066D0 f end=0040673F ; 00005400C
+DestroyEngineCallback 004066D0 f end=0040673F
 InitializeGlobal 004067F0 f end=00406B67
 DestroyGlobal 00406B70 f end=00406C65
 CommonMain 00406C70 f end=00406D64
@@ -230,7 +231,7 @@ EventInitialize 0047CFF0 f end=0047D02D
 EventDestroy 0047D030 f end=0047D04E
 EventCreateContextEx 0047D080 f end=0047D089
 EventSetConfirmCloseCallback 0047D090 f end=0047D099
-CSRWLock__Enter 0047D0E0 f end=0047D16A
+TInstanceIdTable_EvtContext__Ptr 0047D0E0 f end=0047D16A type="EvtContext* __thiscall func(TInstanceIdTable_EvtContext* this, uint32_t id, int32_t lockMode, int32_t* findMask)"
 EventIsButtonDown 0047D1D0 f end=0047D230
 EventIsKeyDown 0047D230 f end=0047D290
 EventPostCloseEx 0047D290 f end=0047D305
@@ -238,24 +239,30 @@ EventQueuePost 0047D310 f end=0047D3AF
 EventRegisterEx 0047D3C0 f end=0047D443
 EventUnregisterEx 0047D450 f end=0047D4B7
 EventSetTimer 0047D530 f end=0047D59C
-EventKillTimer 0047D620 f end=0047D683
+EventKillTimer 0047D620 f end=0047D683 type="void __stdcall func(uint32_t timerId, void* handlerFunction, char* functionName)"
 EventSetMouseMode 0047D690 f end=0047D6FD
 EventPostClose 0047D760 f end=0047D769
 EventRegister 0047D770 f end=0047D78D
 EventUnregister 0047D790 f end=0047D7A9
 IEvtSchedulerShutdown 0047D990 f end=0047D9EB
+SynthesizeInitialize 0047DB40 f end=0047DB6B
 SynthesizeIdle 0047DBC0 f end=0047DC14
 SynthesizePoll 0047DC20 f end=0047DC50
 SynthesizePaint 0047DC50 f end=0047DC8D
 EventForceIdleProcessing 0047DCA0 f end=0047DE09
 IEvtSchedulerDestroy 0047DEA0 f end=0047E117
+SynthesizeDestroy 0047E2F0 f end=0047E3C5 type="void __usercall func(EvtContext* context@<esi>)"
+GetNextContext 0047E5A0 f end=0047E5FA type="EvtContext* __usercall func@<eax>(uint32_t hThread@<edi>)"
 InitializeSchedulerThread 0047E910 f end=0047EA69
 AttachContextToThread 0047EC10 f
+DetachContextFromThread 0047ED30 f end=0047EDED type="void __stdcall func(uint32_t hThread, EvtContext* context)"
 SchedulerThreadProcProcess 0047EFF0 f end=0047F225
 SchedulerThreadProc 0047F230 f end=0047F2C1 ; IEvtSchedulerProcess as an independent function appears to be optimized out
 EventDoMessageLoop 0047F2D0 f end=0047F2EC
 IEvtSchedulerInitialize 0047F2F0 f end=0047F5BA
 IEvtSchedulerCreateContext 0047F5C0 f end=0047F6B9
+TInstanceId_EvtContext__destructor 0047F6C0 f
+TInstanceId_EvtContext__scalar_deleting_destructor 0047F920 f end=0047F94B
 PostMouseModeChanged 0047FAC0 f end=0047FB22
 IEvtInputDestroy 0047FB80 f end=0047FB92
 IEvtInputInitialize 0047FBA0 f end=0047FBA5
@@ -3074,6 +3081,8 @@ SStrCmp 0076F770 f end=0076F7D2
 SStrStrUTF8I 0076F7E0 f end=0076F852
 SStrDupA 0076F9E0 f end=0076FA35
 SStrToFloat 0076FB80 f end=0076FDA9
+SGetCurrentThreadPriority 0076FDD0 f end=0076FDDE
+SSetCurrentThreadPriority 0076FDE0 f end=0076FDF8
 SSetCurrentProcessAffinityMask 0076FE00 f end=0076FE18
 ILoadValue 007703A0 f end=00770483 type="int32_t __usercall func@<eax>(void* parentKey, char* subKeyName@<eax>, char* valuename, uint32_t* datatype, uint8_t* buffer@<ebx>, uint32_t bytes@<edi>, uint32_t* bytesread@<ecx>)"
 InternalLoadEntry 00770490 f end=00770575 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags, uint32_t* datatype, void* buffer, uint32_t bytes, uint32_t* bytesread@<esi>)"
@@ -3099,10 +3108,11 @@ SCritSect__SCritSect 00774620 f end=0077462E type="SCritSect* __thiscall func(SC
 SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect *this)"
 SCritSect__Enter 00774640 f end=00774648 type="void __thiscall func(SCritSect *this)"
 SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *this)"
-CSRWLock__Leave 00774660 f end=00774675
+TInstanceIdTable_EvtContext__Unlock 00774660 f end=00774675
 SSyncObject__Wait 00774690 f end=007746A4
 SEvent__Set 00774720 f end=0077472A
 SEvent__Reset 00774730 f end=0077473A
+SThread__Create 00774740 f end=0077476F
 PathGetRootChars 007750D0 f end=00775138
 FlushLog 00775140 f end=0077518E
 LockLog 00775190 f end=00775250
@@ -3313,6 +3323,7 @@ OsTimeShutdown 0086D440 f end=0086D445
 OsTlsGetValue 0086D6D0 f end=0086D6DF
 TSExplicitList_CGxBuf__LinkToTail 0086E200 f end=0086E25F type="void __thiscall func(TSExplicitList_CGxBuf* this, CGxBuf* ptr)"
 OsCallSetContext 0086F5A0 f end=0086F5EA
+OsCallResetContext 0086F5F0 f end=0086F64E ; 00005410
 OsCallInitialize 0086F760 f end=0086F875
 OsCallInitializeContext 0086F880 f end=0086F902
 OsClipboardGetString 00872280 f end=00872297
@@ -3556,6 +3567,7 @@ firstByteMark 009E537C l type="uint32_t[7]"
 bytesFromUTF8 009E5398 l type="uint8_t[256]"
 s_noinfo 009E5630 l type="Blizzard__File__FileInfo"
 firstByteMark 009E9EC8 l type="uint32_t[7]"
+TInstanceId_EvtContext__v_table 009EA04C l type="TInstanceId_EvtContext__v_table"
 s_pixelFormatToMipBitsCache 009F1074 l
 CGxDevice__vtable 00A2DDC0 l type="CGxDevice__vtable"
 CGxDeviceOpenGl__vtable 00A2E198 l
@@ -3567,6 +3579,8 @@ System_File__read_func 00AB912C l ; type="int32_t (*)(Blizzard__File__Filesystem
 System_File__write_func 00AB91B4 l ; type="int32_t (*)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Stacked__s_nullstack 00AB91C0 l type="Blizzard__File__Filesystem"
 System_File__Stacked__s_basestack 00AB92C0 l type="Blizzard__File__Filesystem"
+s_threadListContention 00AC0DC0 l type="int32_t"
+s_threadList 00AC0DC4 l type="TSList_EvtThread"
 s_zorderlist 00AC1B9C l type="TSExplicitList_CILayer"
 ClientServices__m_loginState 00AC3DA4 l
 CGGameUI__m_visible 00AC80A8 l
@@ -3837,8 +3851,16 @@ Blizzard__Streaming__s_isStreamingTrial 00B38181 l type="bool"
 System_File__s_read_init 00B38A5C l type="Blizzard__Lock__DoOnceData"
 System_File__s_write_init 00B38A64 l type="Blizzard__Lock__DoOnceData"
 OsFileGetDownloadFolder__s_downloadfolder 00B38A88 l ; OsFileGetDownloadFolder()::s_downloadfolder;
+TSingletonInstanceId_EvtContext__s_idTable 00B41670 l type="TInstanceIdTable_EvtContext"
 s_mainThread 00B417C8 l type="uint32_t"
+s_originalThreadPriority 00B417CC l type="int32_t"
 s_interactiveCount 00B417D0 l type="int32_t"
+s_threadSlotCount 00B417D4 l type="int32_t"
+s_threadSlots 00B417D8 l type="EvtThread**"
+s_threadSlotCritsects 00B417DC l type="SCritSect*"
+s_netServer 00B417E0 l
+s_threadListCritsect 00B417E8 l type="SCritSect"
+s_shutdownEvent 00B41824 l type="SEvent"
 s_messageRecycler 00B41850 l type="CDataRecycler"
 CGlueMgr__m_ffxActive 00B6A180 l
 CGlueMgr__m_deathEffect 00B6A184 l
