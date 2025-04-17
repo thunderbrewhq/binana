@@ -12,7 +12,7 @@ nullsub_155 006B1BA0 f
 nullsub_152 00743550 f
 nullsub_153 00743560 f
 stub_return_one_byte 008A1420 f end=008A1423 ; known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback
-stub_return_zero4 008E5250 f end=008E5253 ; Script_ToggleTris
+stub_return_zero4 008E5250 f end=008E5253 ; known names Script_ToggleTris, CLayoutFrame::IsAttachmentOrigin()
 stub_return_xor_eax 00936900 f end=00936905
 nullsub_7 009D34B0 f
 nullsub_8 009D34C0 f
@@ -158,3 +158,4 @@ nullsub_147 009DE1A0 f
 nullsub_148 009DE1B0 f
 nullsub_149 009DE1C0 f
 nullsub_150 009DE1D0 f
+stub_return_int32_one 008C8DE0 f type="int32_t __stdcall func()" ; Known names: GxDefaultApi, CCommand_Perf

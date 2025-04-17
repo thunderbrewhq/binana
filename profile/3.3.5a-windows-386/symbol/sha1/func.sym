@@ -1,0 +1,8 @@
+SHA1__Process 006CA180 f end=006CA235 ; SHA1::Process(void const*, unsigned int)
+SHA1__Finish 006CA270 f end=006CA329 ; SHA1::Finish(SHA1::Digest&)
+SHA1_Transform 006CA330 f end=006CB5EE
+SHA1_Init 006CB5F0 f end=006CB622 ; SHA1_Init(SHA1_CONTEXT*)
+SHA1_Update 006CB630 f end=006CB6E2 ; SHA1_Update(SHA1_CONTEXT*, unsigned char const*, unsigned int)
+SHA1_Final 006CB6F0 f end=006CB7BE ; SHA1_Final(unsigned char*, SHA1_CONTEXT*)
+SHA1_InterleaveHash 006CB7C0 f end=006CB8FD ; SHA1_InterleaveHash(unsigned char*, unsigned char const*, unsigned int)
+SHA1__Prepare 0077AAA0 f end=0077AAD1 ; SHA1::Prepare()

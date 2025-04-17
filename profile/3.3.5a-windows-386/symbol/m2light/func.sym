@@ -1,0 +1,8 @@
+CM2Light__Initialize 008348D0 f end=008348F2 ; CM2Light::Initialize(CM2Scene*)
+CM2Light__CM2Light 00834A40 f end=00834AA7 ; CM2Light::CM2Light()
+CM2Light__destructor 00834AB0 f end=00834AD4 ; CM2Light::~CM2Light()
+CM2Light__SetDirection 00834AE0 f end=00834B43 ; CM2Light::SetDirection(C3Vector const&)
+CM2Light__Link 00834C70 f end=00834D84 ; CM2Light::Link()
+CM2Light__SetLightType 00835640 f end=00835683 ; CM2Light::SetLightType(M2LIGHTTYPE)
+CM2Light__SetPosition 00835690 f end=008356E2 ; CM2Light::SetPosition(NTempest::C3Vector const&)
+CM2Light__SetVisible 008356F0 f end=0083574C ; CM2Light::SetVisible(int)

@@ -1,9 +1,18 @@
 AsyncFileReadThreadSleepCallback 00402670 f end=00402684
 AsyncFileReadHandlerTimeoutCallback 00402690 f end=004026A9
+AsyncFileInitialize 004026B0 f end=00402719
 AsyncFileReadProgressCallback 004B9910 f end=004B9926
 AsyncFileReadIngameProgressCallback 004B9930 f end=004B9946
-AsyncFileReadPollHandler 004B9B20 f end=004B9BF6
+AsyncFileReadPollHandler 004B9B20 f end=004B9BF6 ; AsyncFileReadPollHandler(void const*, void*)
 AsyncFileReadAddPollHandler 004B9C60 f end=004B9D15
 AsyncFileReadAddStatusHandler 004B9D20 f end=004B9DD5
-AsyncFileReadInitialize 004BAA40 f end=004BAB45
+AsyncFileReadDestroyObject 004B9DE0 f ; AsyncFileReadDestroyObject(CAsyncObject*)
+AsyncFileReadCancel 004B9EA0 f ; AsyncFileReadCancel(CAsyncObject*, void (*)(CAsyncObject*))
+AsyncFileReadWait 004BA060 f ; AsyncFileReadWait(CAsyncObject*)
+AsyncFileReadAllocObject 004BA170 f end=004BA229
+AsyncFileReadLinkObject 004BA3D0 f end=004BA524
+AsyncFileReadThread 004BA680 f end=004BA6C5
+AsyncFileReadInitialize 004BAA40 f end=004BAB45 ; AsyncFileReadInitialize(unsigned int, unsigned int)
+AsyncFileReadObject 004BAB50 f end=004BAC14 ; AsyncFileReadObject(CAsyncObject*, int)
 AsyncFileReadIsReading 004BAD80 f end=004BAE09
+AsyncFileReadWaitAll 004BAE10 f end=004BAEEE

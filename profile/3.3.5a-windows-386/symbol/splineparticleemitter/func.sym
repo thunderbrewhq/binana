@@ -1,0 +1,2 @@
+CSplineParticleEmitter__SetSpline 00981500 f end=0098150F ; CSplineParticleEmitter::SetSpline(C3Vector const*, unsigned int)
+CSplineParticleEmitter__CSplineParticleEmitter 009820F0 f end=00982148 ; CSplineParticleEmitter::CSplineParticleEmitter()

@@ -25,3 +25,7 @@ C33Matrix__operator_assign_C33Matrix 004C51B0 f
 C33Matrix__Rotation 004C5550 f end=004C55A2
 TSGrowableArray_C2Vector__SetCount 0057FDD0 f end=0057FE93 type="void __thiscall func(TSGrowableArray_C2Vector* this, uint32_t count)"
 TSGrowableArray_CImVector__SetCount 00616CA0 f end=00616D07 type="void __thiscall func(TSGrowableArray_CImVector* this, uint32_t count)"
+C3Vector__C3Vector 00982970 f end=009829AD ; C3Vector::C3Vector(CImVector const&)
+C4Vector__C4Vector 00984C90 f end=00984CDC ; C4Vector::C4Vector(CImVector const&)
+C4Quaternion__Slerp 00982460 f end=0098256C ; C4Quaternion::Slerp(float, C4Quaternion const&, C4Quaternion const&)
+C4Quaternion__Nlerp 00982630 f end=0098269F ; C4Quaternion::Nlerp(float, C4Quaternion const&, C4Quaternion const&)

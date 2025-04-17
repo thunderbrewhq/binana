@@ -488,8 +488,7 @@ static import_data_types() {
 	apply_type(0x0086BBA0, "uint64_t __stdcall func()");
 	apply_type(0x0086C6E0, "int32_t __stdcall func(void* parentWindow, int32_t style, const char* message, const char* title)");
 	apply_type(0x0086D430, "void __stdcall func(TimingMethod timingMethod)");
-	apply_type(0x0086E200, "void __thiscall func(TSExplicitList_CGxBuf* this, CGxBuf* ptr)");
-	apply_type(0x008C8DE0, "EGxApi __stdcall func()");
+	apply_type(0x008C8DE0, "int32_t __stdcall func()");
 	apply_type(0x0095BFB0, "int32_t __stdcall func()");
 	apply_type(0x0095F3A0, "void __thiscall func(CSimpleModel* this)");
 	apply_type(0x0095F420, "FrameScript_Object__ScriptIx* __thiscall func(CSimpleModel* this, char* name, FrameScript_Object__ScriptData* data)");

@@ -1,0 +1,1 @@
+CMapChunk__UpdateLights 007C65A0 f end=007C65FE ; public: void __thiscall CMapChunk::UpdateLights(void)

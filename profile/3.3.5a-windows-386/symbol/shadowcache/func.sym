@@ -1,0 +1,3 @@
+CShadowCache__NotifyTexturesRecreate 00873FE0 f end=00873FEB ; CShadowCache::NotifyTexturesRecreate()
+CShadowCache__SetShadowMapGenericGlobal 008744E0 f end=008745CE ; CShadowCache::SetShadowMapGenericGlobal()
+CShadowCache__SetShadowMapGenericInterior 008745D0 f end=00874658 ; CShadowCache::SetShadowMapGenericInterior(int)

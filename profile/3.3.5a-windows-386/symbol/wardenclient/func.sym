@@ -1,0 +1,2 @@
+WardenClient_Destroy 007DA420 f end=007DA4B0 ; WardenClient_Destroy()
+WardenClient_Initialize 007DA8C0 f end=007DA92C ; WardenClient_Initialize()

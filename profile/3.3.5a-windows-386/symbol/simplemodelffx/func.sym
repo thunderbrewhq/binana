@@ -1,0 +1,9 @@
+CSimpleModelFFX__SetModel 004E5ED0 f end=004E5EF7 ; CSimpleModelFFX::SetModel(CM2Model*)
+CSimpleModelFFX__LoadXML 004E5F00 f end=004E5F47 ; CSimpleModelFFX::LoadXML(XMLNode*, CStatus*)
+CSimpleModelFFX__CSimpleModelFFX 004E5F70 f end=004E60A3 ; CSimpleModelFFX::CSimpleModelFFX(CSimpleFrame*)
+CSimpleModelFFX__Render 004E6190 f end=004E6229 ; CSimpleModelFFX::Render(void*)
+CSimpleModelFFX__Create 004E6300 f end=004E632B ; CSimpleModelFFX::Create(CSimpleFrame*)
+CSimpleModelFFX__OnFrameRender 004E6330 f end=004E635E ; CSimpleModelFFX::OnFrameRender(CRenderBatch*, unsigned int)
+CSimpleModelFFX_ResetLights 004E6BE0 f end=004E6C5C
+CSimpleModelFFX_AddLight 004E6C60 f end=004E6D4B
+CSimpleModelFFX__CreateScriptMetaTable 004E6F60 f end=004E6F79 ; CSimpleModelFFX::CreateScriptMetaTable()

@@ -1,1 +1,15 @@
 DayNight__DNGlare__Initialize 009AD000 f end=009AD0A3 type="void __thiscall func(DayNight__DNGlare* this, char* a1)"
+DayNight__Update 007816F0 f end=007819BC ; DayNight::Update(unsigned int, float, float)
+DayNight__CalcFogRate 007ECD00 f end=007ECD76 ; DayNight::CalcFogRate(float, float)
+DayNight__SetOverrideLightParamsID 007ECEC0 f end=007ECEDC ; DayNight::SetOverrideLightParamsID(int)
+DayNight__ClearOverrideLightParamsID 007ECEE0 f end=007ECEEB ; DayNight::ClearOverrideLightParamsID()
+DayNightGetInfo 007ECEF0 f end=007ECEF6
+DayNight__InterpTable 007ED3B0 f end=007ED4C0 ; DayNight::InterpTable(C2Vector const*, unsigned int, float)
+DayNight__ClearOverrideFog 007ED820 f end=007ED86E ; DayNight::ClearOverrideFog()
+DayNight__SetOverrideFog 007ED870 f end=007ED901 ; DayNight::SetOverrideFog(float, float, CImVector, int)
+DayNight__SetDirection 007EEA90 f end=007EECBC ; DayNight::SetDirection()
+DayNight__SetPlanets 007EECC0 f end=007EF6D7 ; DayNight::SetPlanets()
+DayNight__UpdateFog 007F16F0 f end=007F1B0C ; DayNight::UpdateFog()
+DayNightInitialize 007F2790 f end=007F2A1F
+DayNight__SetColors 007F3230 f end=007F3913 ; DayNight::SetColors()
+DayNight__UpdateLighting 007F3920 f end=007F39AA ; DayNight::UpdateLighting()

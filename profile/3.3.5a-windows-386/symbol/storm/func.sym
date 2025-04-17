@@ -1,4 +1,6 @@
 TSList__LinkNode 004F71A0 f end=004F724D
+TSList__LinkToHead 007B5020 f end=007B50AB ; 00005410
+TSList__LinkToTail 0086E200 f end=0086E25F ; 00005410
 TSGrowableArray_CGxMonitorMode__New 0068A090 f end=0068A0ED type="CGxMonitorMode* __thiscall func(TSGrowableArray_CGxMonitorMode* this)"
 TSGrowableArray_CGxMonitorMode__SetCount 0068A0F0 f end=0068A165 type="void __thiscall func(TSGrowableArray_CGxMonitorMode* this, uint32_t count)"
 SMemSetDebugFlags 0076E4A0 f end=0076E4D2 type="void __stdcall func(uint32_t flags, uint8_t changeMask)"

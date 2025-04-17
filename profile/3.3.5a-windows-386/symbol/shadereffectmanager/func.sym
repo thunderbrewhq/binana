@@ -1,0 +1,4 @@
+CShaderEffectManager__GetEffect 00876530 f end=00876543 ; CShaderEffectManager::GetEffect(char const*)
+CShaderEffectManager__CreateEffect 00876BE0 f end=00876C97 ; CShaderEffectManager::CreateEffect(char const*)
+CShaderEffectManager__ParseEffectCallback 00876CA0 f end=00876D8D ; CShaderEffectManager::ParseEffectCallback(CShaderEffectParser::ParsedEffect const&, void*)
+CShaderEffectManager__AddEffectFile 00876D90 f end=00876E2C ; CShaderEffectManager::AddEffectFile(char const*)

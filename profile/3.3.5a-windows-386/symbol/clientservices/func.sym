@@ -1,5 +1,4 @@
 ClientServices__LoadCDKey 006B0190 f end=006B0246
-ClientServices__Disconnect 006B0940 f end=006B095E
 ClientServices__Connection 006B0970 f end=006B098A
 ClientServices__LoginConnection 006B0990 f end=006B0996
 ClientServices__EnterPIN 006B09A0 f end=006B09D3
@@ -34,7 +33,6 @@ ClientServices__GetCharacterRace 006B1070 f end=006B1076
 ClientServices__GetCharacterClass 006B1080 f end=006B1086
 ClientServices__GetCharacterSex 006B1090 f end=006B1096
 ClientServices__GetCharacterLevel 006B10A0 f end=006B10A6
-ClientServices__PollStatus 006B1100 f end=006B11FC
 ClientServices__RequestCharacterCreate 006B1620 f end=006B1785
 ClientServices__CharacterSetInGame 006B1840 f end=006B18B8
 ClientServices__CharacterLogout 006B1930 f end=006B1A02

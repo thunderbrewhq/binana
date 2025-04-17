@@ -17,6 +17,5 @@ quicksort 0047B800 f ; void __cdecl quicksort(unsigned int, unsigned int, int, i
 ConvertPosition 0047FC90 f end=0047FDD4
 NameNeedsDeclensions 0076DD20 f end=0076DD3B
 RussianNameNeedsDeclensions 0076E270 f end=0076E2A6
-MD5Init 00779340 f end=0077936B
-MD5Final 00779AE0 f end=00779B97
 IsRussian 007E1030 f end=007E1049
+CCommand_ReloadUI 00401B00 f end=00401B15
