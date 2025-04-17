@@ -1,7 +1,9 @@
 package symfile
 
 import (
+	"fmt"
 	"io"
+	"strings"
 )
 
 // What kind of Entry is this?
@@ -34,6 +36,21 @@ type Entry struct {
 	//  type=void*
 	// The C syntax type of the data
 	DataType string
+}
+
+func (entry *Entry) String() string {
+	var b strings.Builder
+	fmt.Fprintf(&b, "%s %08X %c", entry.Name, entry.StartAddress, entry.Kind)
+	if entry.EndAddress != 0 {
+		fmt.Fprintf(&b, " end=%08X", entry.EndAddress)
+	}
+	if entry.DataType != "" {
+		fmt.Fprintf(&b, " type=\"%s\"", entry.DataType)
+	}
+	if entry.Comment != "" {
+		fmt.Fprintf(&b, " ; %s", entry.Comment)
+	}
+	return b.String()
 }
 
 type Table interface {

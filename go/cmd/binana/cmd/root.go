@@ -39,6 +39,6 @@ func init() {
 	generate.Flags().BoolP("compress", "c", true, "enable/disable compression of the x64dbg database file")
 
 	rootCmd.AddCommand(generate)
-
+	rootCmd.AddCommand(format_symbols_cmd)
 	rootCmd.AddCommand(x64dbg_typesort)
 }
