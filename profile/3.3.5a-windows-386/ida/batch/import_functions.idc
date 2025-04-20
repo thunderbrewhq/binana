@@ -204,6 +204,9 @@ static import_functions() {
 	set_func_cmt(0x006859E0, "CGxDevice::IRsForceUpdate(EGxRenderState)", 0);
 	set_func_cmt(0x00685A70, "CGxDevice::IRsForceUpdate()", 0);
 	set_func_cmt(0x00689EA0, "UC", 0);
+	set_func_cmt(0x0068E140, "void CGxDeviceD3d::IUnloadD3dLib(HINSTANCE& d3dLib, LPDIRECT3D9& d3d)", 0);
+	set_func_cmt(0x0068E180, "LPDIRECT3DINDEXBUFFER9 CGxDeviceD3d::ICreateD3dIB(EGxPoolUsage usage, uint32_t size)", 0);
+	set_func_cmt(0x0068E250, "void CGxDeviceD3d::ISetPresentParms(D3DPRESENT_PARAMETERS& d3dpp, const CGxFormat& format)", 0);
 	set_func_cmt(0x0069FE10, "UC (invented name)", 0);
 	set_func_cmt(0x006AA350, "UC", 0);
 	set_func_cmt(0x006AA420, "private utility method", 0);

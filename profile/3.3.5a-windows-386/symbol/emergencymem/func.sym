@@ -1,0 +1,1 @@
+EmergencyMem__Lock 00685E90 f end=00685EB0 type="void* __thiscall func(EmergencyMem* this, uint32_t a1)"

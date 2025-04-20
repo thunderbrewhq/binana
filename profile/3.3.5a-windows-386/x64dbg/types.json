@@ -10541,6 +10541,37 @@
       ]
     },
     {
+      "name": "EmergencyMem",
+      "size": 20,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "unk00",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk04",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk08",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk0C",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk10",
+          "offset": 16
+        }
+      ]
+    },
+    {
       "name": "EmotesRec",
       "size": 28,
       "members": [
@@ -47058,54 +47089,10 @@
           "offset": 10432
         },
         {
-          "type": "uint32_t",
-          "name": "unk28C4",
+          "type": "EmergencyMem",
+          "name": "m_emergencyMem",
+          "arrsize": 2,
           "offset": 10436
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk28C8",
-          "offset": 10440
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk28CC",
-          "offset": 10444
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk28D0",
-          "offset": 10448
-        },
-        {
-          "type": "uint8_t",
-          "name": "unk28D4",
-          "offset": 10452
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk28D8",
-          "offset": 10456
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk28DC",
-          "offset": 10460
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk28E0",
-          "offset": 10464
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk28E4",
-          "offset": 10468
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk28E8",
-          "offset": 10472
         },
         {
           "type": "TSFixedArray_CGxAppRenderState",

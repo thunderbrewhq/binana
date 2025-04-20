@@ -24,6 +24,7 @@
 #include "gx/buffer.h"
 #include "gx/texture.h"
 #include "gx/query.h"
+#include "gx/emergencymem.h"
 
 DECLARE_STRUCT(CGxAppRenderState);
 DECLARE_STRUCT(CGxPushedRenderState);
@@ -334,16 +335,8 @@ struct CGxDevice {
   uint32_t m_primVertexSize;
   CGxBuf* m_primIndexBuf;
   int32_t m_primIndexDirty;
-  uint32_t unk28C4;
-  uint32_t unk28C8;
-  uint32_t unk28CC;
-  uint32_t unk28D0;
-  uint8_t unk28D4;
-  uint32_t unk28D8;
-  uint32_t unk28DC;
-  uint32_t unk28E0;
-  uint32_t unk28E4;
-  uint32_t unk28E8;
+  // EmergencyMem unk28C4[GxPoolTargets_Last];
+  EmergencyMem m_emergencyMem[2]; // 0x28C4
   TSFixedArray_CGxAppRenderState m_appRenderStates;
   TSFixedArray_CGxStateBom m_hwRenderStates;
   uint32_t unk2904[3]; // 0x2904 (size 0xC)

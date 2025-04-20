@@ -491,9 +491,11 @@ static import_symbols() {
 	set_name(0x004C5990, "SE2SoundKitProperties__ResetToDefaults");
 	set_name(0x004C6390, "SE2__StopSound");
 	set_name(0x004C6A40, "SE2__PlaySoundKit");
+	set_name(0x004C82E0, "SI2__Init");
 	set_name(0x004C8610, "SI2__SetWeatherKitID");
 	set_name(0x004C93B0, "SI2__StopAllMusic");
 	set_name(0x004D0090, "SI2__PlayItemSound");
+	set_name(0x004D1600, "SI2__RegisterCVars");
 	set_name(0x004D27D0, "HeapUsageDestroy");
 	set_name(0x004D2A30, "HeapUsageInitialize");
 	set_name(0x004D7D20, "CGlueMgr__InitializeFFX");
@@ -2751,6 +2753,7 @@ static import_symbols() {
 	set_name(0x00684C20, "CGxDevice__Log");
 	set_name(0x00684C40, "CGxDevice__Log@2");
 	set_name(0x00684D10, "CGxDevice__Log@3");
+	set_name(0x00684D70, "CGxDevice__Sub684D70");
 	set_name(0x00684FE0, "CGxDevice__DeviceOverride");
 	set_name(0x006853B0, "CGxDevice__AddDeviceRestoredCallback");
 	set_name(0x006853D0, "CGxDevice__RemoveDeviceRestoredCallback");
@@ -2765,6 +2768,7 @@ static import_symbols() {
 	set_name(0x00685A70, "CGxDevice__IRsForceUpdate");
 	set_name(0x00685B50, "CGxDevice__IRsSync");
 	set_name(0x00685C60, "CGxDevice__TexCreate");
+	set_name(0x00685E90, "EmergencyMem__Lock");
 	set_name(0x00685EB0, "CGxDevice__MasterEnableSet");
 	set_name(0x00685F50, "CGxDevice__RsSet_pointer_to_void");
 	set_name(0x00685FB0, "CGxDevice__RsPop");
@@ -2772,6 +2776,7 @@ static import_symbols() {
 	set_name(0x006876D0, "CGxDevice__PoolCreate");
 	set_name(0x006877C0, "CGxDevice__QueryCreate");
 	set_name(0x00687820, "CGxDevice__ShaderDestroy");
+	set_name(0x00687940, "CGxDevice__DeviceCreatePools");
 	set_name(0x00687980, "CGxDevice__TexDestroy");
 	set_name(0x006879F0, "CGxDevice__QueryDestroy");
 	set_name(0x00687A90, "CGxDevice__ICursorDraw");
@@ -3361,6 +3366,7 @@ static import_symbols() {
 	set_name(0x007DC910, "Script_VoiceIsDisabledByClient");
 	set_name(0x007DEEF0, "Script_GetVoiceSessionMemberInfoBySessionID");
 	set_name(0x007DF0B0, "Script_UnitIsTalking");
+	set_name(0x007DFAF0, "ComSatClient_Init");
 	set_name(0x007E1030, "IsRussian");
 	set_name(0x007ECD00, "DayNight__CalcFogRate");
 	set_name(0x007ECEC0, "DayNight__SetOverrideLightParamsID");
@@ -3682,6 +3688,9 @@ static import_symbols() {
 	set_name(0x00876BE0, "CShaderEffectManager__CreateEffect");
 	set_name(0x00876CA0, "CShaderEffectManager__ParseEffectCallback");
 	set_name(0x00876D90, "CShaderEffectManager__AddEffectFile");
+	set_name(0x00877E10, "SI2__Log_Write");
+	set_name(0x00878010, "SI2__Log_Write@2");
+	set_name(0x0087E020, "SI2__InitCapture");
 	set_name(0x008A1420, "stub_return_one_byte");
 	set_name(0x008C0360, "FFX__Destroy");
 	set_name(0x008C8DE0, "stub_return_int32_one");
@@ -4452,6 +4461,7 @@ static import_symbols() {
 	set_name(0x00C5FFF4, "CGxDevice__m_logBytes");
 	set_name(0x00C5FFF8, "CGxDevice__m_log");
 	set_name(0x00C5FFFC, "CGxDevice__s_uiPixelShader");
+	set_name(0x00C60300, "CGxDevice__s_clientAdjust");
 	set_name(0x00C60760, "isIdent");
 	set_name(0x00C79CE4, "ClientServices__m_instance");
 	set_name(0x00C79CE9, "ClientServices__m_selectRealmInfoValid");
