@@ -5,3 +5,4 @@ CGxDevice__s_shadowConstants 00C5DFE0 l
 CGxDevice__m_logBytes 00C5FFF4 l type="uint32_t"
 CGxDevice__m_log 00C5FFF8 l type="HSLOG"
 CGxDevice__s_uiPixelShader 00C5FFFC l
+CGxDevice__s_clientAdjust 00C60300 l type="C2iVector"

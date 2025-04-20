@@ -56,6 +56,7 @@ CGxDevice__VLog 00684BA0 f end=00684C15 type="void __stdcall func(char* format, 
 CGxDevice__Log 00684C20 f end=00684C3E type="void __stdcall func(char* format, ...)"
 CGxDevice__Log 00684C40 f end=00684D07 type="void __stdcall func(CGxCaps* caps)" ; CGxDevice::Log(CGxCaps const&) const
 CGxDevice__Log 00684D10 f end=00684D6C type="void __stdcall func(CGxFormat* format)"
+CGxDevice__Sub684D70 00684D70 f type="int32_t __stdcall func(float aspectRatio, C2iVector* adjust, RECT* rect)"
 CGxDevice__DeviceOverride 00684FE0 f end=00685036 type="void __thiscall func(CGxDevice* this, EGxOverride override, uint32_t value)"
 CGxDevice__AddDeviceRestoredCallback 006853B0 f end=006853C6 type="void __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)"
 CGxDevice__RemoveDeviceRestoredCallback 006853D0 f end=0068545C type="int32_t __thiscall func(CGxDevice* this, DEVICERESTOREDCALLBACK fn)"
@@ -77,6 +78,7 @@ CGxDevice__BufCreate 00687660 f end=006876C9 type="CGxBuf* __thiscall func(CGxDe
 CGxDevice__PoolCreate 006876D0 f end=0068773F type="CGxPool* __thiscall func(CGxDevice* this, EGxPoolTarget target, EGxPoolUsage usage, uint32_t size, EGxPoolHintBits hint, char* name)"
 CGxDevice__QueryCreate 006877C0 f end=00687811 type="void __thiscall func(CGxDevice* this, CGxQuery** query, EGxQueryType queryType)"
 CGxDevice__ShaderDestroy 00687820 f end=00687862 type="void __thiscall func(CGxDevice* this, CGxShader** shader)"
+CGxDevice__DeviceCreatePools 00687940 f end=00687980
 CGxDevice__TexDestroy 00687980 f end=006879E1 type="void __thiscall func(CGxDevice* this, CGxTex* texId)"
 CGxDevice__QueryDestroy 006879F0 f end=00687A8E type="void __thiscall func(CGxDevice* this, CGxQuery** query)"
 CGxDevice__ICursorDraw 00687A90 f end=00687FCA type="void __thiscall func(CGxDevice* this)"
