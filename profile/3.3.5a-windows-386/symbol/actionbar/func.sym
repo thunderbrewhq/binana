@@ -27,3 +27,6 @@ CGActionBar__SetAction 005AAE80 f end=005AAFCB
 CGActionBar__PutActionInSlot 005AB120 f end=005AB7F4
 CGActionBar__UseAction 005ABBC0 f end=005ABE63
 CGActionBar__PickupAction 005ABE70 f end=005ABFF6
+CGActionBar__UpdateShapeShiftBar 005ABAC0 f end=005ABB32
+CGActionBar__UpdateOverrideSpellBar 005ABB40 f end=005ABBB8
+CGActionBar__EnterWorld 005AC0E0 f end=005AC0F4
