@@ -1,0 +1,4 @@
+CGArenaTeamInfo__QueryRoster 005A3600 f end=005A36F1
+CGArenaTeamInfo__UpdateTeams 005A3700 f end=005A37AF
+CGArenaTeamInfo__EnterWorld 005A3DC0 f end=005A3DC9
+CGArenaTeamInfo__InitializeGame 005A40E0 f end=005A41B3

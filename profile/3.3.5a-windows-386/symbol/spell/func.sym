@@ -3,3 +3,4 @@ Spell_C_IsTargeting 007FD620 f end=007FD62C
 Spell_C_IsCursorWorldObjectHousing 007FD7F0 f end=007FD7F6
 Spell_C_CursorWorldObjectRotate 007FD800 f end=007FD82F
 Spell_C_StopTargeting 00809A60 f end=00809A79
+Spell_C_SetAutoRangedCombatSpell 007FE140 f end=007FE180
