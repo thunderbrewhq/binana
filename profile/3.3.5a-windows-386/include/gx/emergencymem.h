@@ -7,7 +7,7 @@ DECLARE_STRUCT(EmergencyMem);
 
 struct EmergencyMem {
   TSGrowableArray_uint8_t m_data;
-
+  bool m_lock;
 };
 
 #endif
