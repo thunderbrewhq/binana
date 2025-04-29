@@ -3,60 +3,11 @@
 
 #include "system/types.h"
 
-#include "external/d3d9/caps.h"
-
-typedef int32_t D3DFORMAT;
-
-DECLARE_STRUCT(D3DDISPLAYMODE);
-DECLARE_STRUCT(IDirect3D9_v_table);
-DECLARE_STRUCT(IDirect3D9);
+DECLARE_STRUCT(IDirect3DDevice9__v_table);
 DECLARE_STRUCT(IDirect3DDevice9);
-DECLARE_STRUCT(IDirect3DDevice9_v_table);
-DECLARE_STRUCT(IDirect3DVertexDeclaration9);
-DECLARE_STRUCT(IDirect3DSurface9__v_table);
-DECLARE_STRUCT(IDirect3DSurface9);
-DECLARE_STRUCT(IDirect3DIndexBuffer9);
-DECLARE_STRUCT(IDirect3DVertexBuffer9);
-DECLARE_STRUCT(IDirect3DTexture9);
-DECLARE_STRUCT(IDirect3DVertexShader9__v_table);
-DECLARE_STRUCT(IDirect3DVertexShader9);
-DECLARE_STRUCT(IDirect3DPixelShader9__v_table);
-DECLARE_STRUCT(IDirect3DPixelShader9);
 
-DECLARE_STRUCT(D3DLOCKED_RECT);
-
-struct D3DDISPLAYMODE {
-  uint32_t Width;
-  uint32_t Height;
-  uint32_t RefreshRate;
-  D3DFORMAT Format;
-};
-
-struct IDirect3D9_v_table {
-  void* v_fn_1_QueryInterface;
-  void* v_fn_2_AddRef;
-  void* v_fn_3_Release;
-  void* v_fn_4_RegisterSoftwareDevice;
-  void* v_fn_5_GetAdapterCount;
-  void* v_fn_6_GetAdapterIdentifier;
-  void* v_fn_7_GetAdapterModeCount;
-  void* v_fn_8_EnumAdapterModes;
-  void* v_fn_9_GetAdapterDisplayMode;
-  void* v_fn_10_CheckDeviceType;
-  void* v_fn_11_CheckDeviceFormat;
-  void* v_fn_12_CheckDeviceMultiSampleType;
-  void* v_fn_13_CheckDepthStencilMatch;
-  void* v_fn_14_CheckDeviceFormatConversion;
-  void* v_fn_15_GetDeviceCaps;
-  void* v_fn_16_GetAdapterMonitor;
-  void* v_fn_17_CreateDevice;
-};
-
-struct IDirect3D9 {
-  IDirect3D9_v_table* v_table;
-};
-
-struct IDirect3DDevice9_v_table {
+struct IDirect3DDevice9__v_table {
+  /*** IUnknown methods ***/
   void* v_fn_0_QueryInterface;
   void* v_fn_1_AddRef;
   void* v_fn_2_Release;
@@ -180,79 +131,9 @@ struct IDirect3DDevice9_v_table {
 };
 
 struct IDirect3DDevice9 {
-  IDirect3DDevice9_v_table* v_table;
+  IDirect3DDevice9__v_table* v_table;
 };
 
-struct IDirect3DVertexDeclaration9 {
-  void** v_table;
-};
-
-struct IDirect3DSurface9__v_table {
-  /*** IUnknown methods ***/
-  void* v_fn_0_QueryInterface;
-  void* v_fn_1_AddRef;
-  void* v_fn_2_Release;
-  /*** IDirect3DResource9 methods ***/
-  void* v_fn_3_GetDevice;
-  void* v_fn_4_SetPrivateData;
-  void* v_fn_5_GetPrivateData;
-  void* v_fn_6_FreePrivateData;
-  void* v_fn_7_SetPriority;
-  void* v_fn_8_GetPriority;
-  void* v_fn_9_PreLoad;
-  void* v_fn_10_GetType;
-  /*** IDirect3DSurface9 methods ***/
-  void* v_fn_11_GetContainer;
-  void* v_fn_12_GetDesc;
-  void* v_fn_13_LockRect;
-  void* v_fn_14_UnlockRect;
-  void* v_fn_15_GetDC;
-  void* v_fn_16_ReleaseDC;
-};
-
-struct IDirect3DSurface9 {
-  IDirect3DSurface9__v_table* v_table;
-};
-
-struct IDirect3DIndexBuffer9 {
-  void** v_table;
-};
-
-struct IDirect3DVertexBuffer9 {
-  void** v_table;
-};
-
-struct IDirect3DTexture9 {
-  void** v_table;
-};
-
-struct D3DLOCKED_RECT {
-  int32_t Pitch;
-  void* pBits;
-};
-
-struct IDirect3DVertexShader9__v_table {
-  void* v_fn_0_QueryInterface;
-  void* v_fn_1_AddRef;
-  void* v_fn_2_Release;
-  void* v_fn_3_GetDevice;
-  void* v_fn_4_GetFunction;
-};
-
-struct IDirect3DVertexShader9 {
-  IDirect3DVertexShader9__v_table* v_table;
-};
-
-struct IDirect3DPixelShader9__v_table {
-  void* v_fn_0_QueryInterface;
-  void* v_fn_1_AddRef;
-  void* v_fn_2_Release;
-  void* v_fn_3_GetDevice;
-  void* v_fn_4_GetFunction;
-};
-
-struct IDirect3DPixelShader9 {
-  IDirect3DPixelShader9__v_table* v_v_table;
-};
+typedef IDirect3DDevice9* LPDIRECT3DDEVICE9;
 
 #endif

@@ -20,7 +20,6 @@ GxAdapterMonitorModes 00681210 f end=00681219 type="int32_t __stdcall func(TSGro
 GxAdapterDesktopMode 00681220 f type="int32_t __stdcall func(CGxMonitorMode* mode)"
 GxDevCreate 00681290 f end=00681301
 GxSceneClear 006813B0 f end=006813CD
-GxTexUpdate 006813D0 f end=006813EC
 GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
 GxSetMaxFPS 00681770 f end=0068177D type="void __stdcall func(uint32_t maxFPS)"
 GxGetMaxFPS 00681780 f end=00681786
@@ -29,8 +28,8 @@ GxGetMaxFPSBk 006817A0 f end=006817A6
 GxLogOpen 006817C0 f end=006817C5 type="void __stdcall func()"
 GxLogClose 006817D0 f end=006817D5
 GxLog 006817E0 f end=006817F5 type="int __stdcall func(char* format, ...)"
-GxTexCreate 00681CB0 f end=00681D87
 GxXformSetViewport 00681F60 f end=00682124 type="void __stdcall func(float minX, float maxX, float minY, float maxY, float minZ, float maxZ)"
 GxScenePresent 00682A00 f end=00682A33
 GxDevDestroy 00682B80 f end=00682C35
 CGxMonitorModeSort 00689E80 f type="int32_t __stdcall func(void* a, void* b)"
+GxTexCopy 006814D0 f end=00681524

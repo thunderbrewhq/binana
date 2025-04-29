@@ -3,7 +3,7 @@
 
 #include "gx/device.h"
 
-#include "external/d3d9/device.h"
+#include "external/d3d9/d3d9.h"
 
 #include "storm/array.h"
 
@@ -199,7 +199,9 @@ enum CGxDeviceD3d__EDeviceState {
 };
 
 struct CGxDeviceD3d__GxVertexDecl {
-  uint32_t m_unk00;
+  uint32_t count;
+  D3DVERTEXELEMENT9 elements[15];
+  IDirect3DVertexDeclaration9* d3dDecl;
 };
 STORM_TS_GROWABLE_ARRAY(CGxDeviceD3d__GxVertexDecl);
 
@@ -210,36 +212,41 @@ struct CGxDeviceD3d {
   uint16_t unk396E;
   int32_t m_ownhwnd;
   void* m_d3dLib;
-  IDirect3D9* m_d3d;
-  IDirect3DDevice9* m_d3dDevice;
+  LPDIRECT3D9 m_d3d;
+  LPDIRECT3DDEVICE9 m_d3dDevice;
   D3DCAPS9 m_d3dCaps;
   int32_t m_d3dIsHwDevice;
   int32_t m_d3dNVAPI; 
   uint32_t m_d3dStereoEnabled; // UC
-  uint32_t unk3ABC;
+  uint32_t m_d3dStereoRestore; // m_d3dStereoRestore
   uint32_t m_d3dStereoHandle; // UC
   float m_d3dStereoConvergence; // UC
   float m_d3dStereoSeparation; // UC
-  int32_t unk3ACC;
-  TSGrowableArray_CGxDeviceD3d__GxVertexDecl m_vertexDecl;
-  IDirect3DVertexDeclaration9* m_d3dVertexDecl[14];
+  int32_t m_d3dStereoDirty; // 3ACC, UC
+  TSGrowableArray_CGxDeviceD3d__GxVertexDecl m_gxVertexDecl;
+  LPDIRECT3DVERTEXDECLARATION9 m_d3dVertexDecl[14];
   D3DDISPLAYMODE m_desktopDisplayMode;
   int32_t m_inScene;
-  uint32_t unk3B2C;
+  // set to zero by  CGxDeviceD3d::IStateSetD3DDefaults
+  // checked in IStateSyncLights
+  int32_t int3B2C;
   D3DFORMAT m_devDepthFormat;
   D3DFORMAT m_devAdapterFormat;
-  uint32_t unk3B38;
-  IDirect3DSurface9* m_defColorSurface;
-  IDirect3DSurface9* m_defDepthSurface;
-  uint32_t unk3B44;
-  uint32_t unk3B48;
-  int32_t m_hwCursorNeedsUpdate;
-  IDirect3DTexture9* m_hwCursorTexture;
-  IDirect3DSurface9* m_hwCursorBitmap;
-  uint32_t unk3B58;
-  IDirect3DVertexDeclaration9* m_d3dCurrentVertexDecl;
-  IDirect3DIndexBuffer9* m_d3dCurrentIndexBuf;
-  IDirect3DVertexBuffer9* m_d3dVertexStreamBuf[8];
+  // used by CGxDeviceD3d::DeviceSetRenderTarget
+  // IDirect3DSurface9* surface3B38;
+  LPDIRECT3DSURFACE9 m_defDepthStencilSurface;
+  LPDIRECT3DSURFACE9 m_defColorSurface;
+  LPDIRECT3DSURFACE9 m_defDepthSurface;
+  // used in DeviceReadPixels
+  LPDIRECT3DSURFACE9 surface3B44; // m_backBufferSurface?
+  LPDIRECT3DQUERY9 m_eventQuery; // m_queryEvent? m_eventQuery?
+  int32_t m_hwCursorDirty;
+  LPDIRECT3DTEXTURE9 m_hwCursorTexture;
+  LPDIRECT3DSURFACE9 m_hwCursorBitmap;
+  CGxTex* texture3B58;
+  LPDIRECT3DVERTEXDECLARATION9 m_d3dCurrentVertexDecl;
+  LPDIRECT3DINDEXBUFFER9 m_d3dCurrentIndexBuf;
+  LPDIRECT3DVERTEXBUFFER9 m_d3dVertexStreamBuf[8];
   uint32_t m_d3dVertexStreamOfs[8];
   uint32_t m_d3dVertexStreamStride[8];
   uint32_t m_deviceStates[182];

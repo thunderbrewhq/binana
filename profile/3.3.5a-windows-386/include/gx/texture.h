@@ -23,6 +23,7 @@ struct CGxTexFlags {
   uint32_t f_flags;
 };
 
+STORM_TS_LIST(CGxTex);
 struct CGxTex {
   CiRect m_updateRect;
   int16_t m_updatePlaneMin;
@@ -38,8 +39,7 @@ struct CGxTex {
   void* m_userFunc;
   void* m_apiSpecificData;
   void* m_apiSpecificData2;
-  uint32_t unk40;
-  uint32_t unk44;
+  TSLink_CGxTex m_link;
   uint32_t unk48;
   uint32_t unk4C;
   uint32_t unk50;

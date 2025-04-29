@@ -5,9 +5,7 @@
 // Types (include all files to expose them in the disassembler)
 
 // external types (c-ified)
-#include "external/d3d9/caps.h"
-#include "external/d3d9/device.h"
-
+#include "external/d3d9/d3d9.h"
 #include "external/lua/lua.h"
 
 #include "async/object.h"
@@ -54,6 +52,7 @@
 #include "gx/caps.h"
 #include "gx/device.h"
 #include "gx/format.h"
+#include "gx/light.h"
 #include "gx/matrix_stack.h"
 #include "gx/monitor_mode.h"
 #include "gx/opengl.h"
@@ -77,6 +76,8 @@
 #include "m2/shadereffect.h"
 #include "m2/shared.h"
 #include "m2/types.h"
+
+#include "nvapi/nvapi.h"
 
 #include "os/processorfeatures.h"
 #include "os/timemanager.h"

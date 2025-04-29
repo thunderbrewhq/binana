@@ -13,11 +13,13 @@
 #include "tempest/box.h"
 #include "tempest/matrix.h"
 #include "tempest/rect.h"
+#include "tempest/plane.h"
 #include "tempest/vector.h"
 
 #include "gx/types.h"
 #include "gx/caps.h"
 #include "gx/format.h"
+#include "gx/light.h"
 #include "gx/state_bom.h"
 #include "gx/shader.h"
 #include "gx/matrix_stack.h"
@@ -31,7 +33,8 @@ DECLARE_STRUCT(CGxPushedRenderState);
 DECLARE_STRUCT(ShaderConstants);
 DECLARE_STRUCT(CGxDevice);
 DECLARE_STRUCT(CGxDevice__TextureTarget);
-DECLARE_STRUCT(CGxDevice__vtable);
+DECLARE_STRUCT(CGxDevice__v_table);
+DECLARE_STRUCT(CGxDevice__GxLight);
 
 typedef void (*DEVICERESTOREDCALLBACK)();
 STORM_TS_GROWABLE_ARRAY(DEVICERESTOREDCALLBACK);
@@ -68,8 +71,15 @@ struct CGxDevice__TextureTarget {
   void* m_apiSpecific;
 };
 
+// GxLight?
+struct CGxDevice__GxLight {
+  CGxLight light;
+  int32_t enable;
+  uint16_t flags;
+};
+
 // 84 functions
-struct CGxDevice__vtable {
+struct CGxDevice__v_table {
   // void ITexMarkAsUpdated(CGxTex* texId);
   void* v_fn_0_ITexMarkAsUpdated;
   // void IRsSendToHw(EGxRenderState rs);
@@ -146,7 +156,7 @@ struct CGxDevice__vtable {
   //   }
   // void DeviceResolveDepthBuffer(CGxTex* texId);
   void* v_fn_26_DeviceResolveDepthBuffer;
-  // void DeviceCopyTex(CGxTex* a1, int32_t a2, CGxTex* a3, int32_t a4);
+  // void DeviceCopyTex(CGxTex* sourceTex, uint32_t sourcePlane, CGxTex* destTex, uint32_t destPlane);
   void* v_fn_27_DeviceCopyTex;
   // void DeviceOverride(EGxOverride override, uint32_t value);
   void* v_fn_28_DeviceOverride;
@@ -164,11 +174,11 @@ struct CGxDevice__vtable {
   void* v_fn_34_RemoveStereoChangedCallback;
   // void CapsWindowSize(CRect& dst);
   void* v_fn_35_CapsWindowSize;
-  // void CapsWindowSize(CRect& dst);
+  // void CapsWindowSizeInScreenCoords(CRect& dst);
   void* v_fn_36_CapsWindowSizeInScreenCoords;
-  // void LogCrashInfo(char* buffer, uint32_t size);
+  // void LogCrashInfo(char* buffer, uint32_t buffersize);
   void* v_fn_37_LogCrashInfo;
-  // void ScenePresent(uint32_t mask);
+  // void ScenePresent();
   void* v_fn_38_ScenePresent;
   // void SceneClear(uint32_t mask, CImVector color);
   void* v_fn_39_SceneClear;
@@ -210,15 +220,15 @@ struct CGxDevice__vtable {
   void* v_fn_57_TexCreate;
   // void TexDestroy(CGxTex* texId);
   void* v_fn_58_TexDestroy;
-  // int32_t TexCopy(CGxTex* a1, CGxTex* a2, const C2iVector& a3, const C2iVector& a4, uint32_t a5, uint32_t a6);
+  // int32_t TexCopy(CGxTex* sourceTex, CGxTex* destTex, const C2iVector& pos, const C2iVector& size, uint32_t level, uint32_t plane);
   void* v_fn_59_TexCopy;
-  // bool TexStretch(CGxTex* a1, CGxTex* a2, const CiRect* a3, const CiRect* a4, uint32_t a5, uint32_t a6);
+  // bool TexStretch(CGxTex* sourceTex, CGxTex* destTex, const CiRect* destRect, const CiRect* sourceRect, uint32_t level, uint32_t plane);
   void* v_fn_60_TexStretch;
   // void TexSetCacheSize(int32_t cacheSize);
   void* v_fn_61_TexSetCacheSize;
-  // void QueryCreate(CGxQuery*& query, EGxQueryType queryType);
+  // void QueryCreate(CGxQuery*& query, EGxQueryType type);
   void* v_fn_62_QueryCreate;
-  // bool QueryDestroy(CGxQuery*& query);
+  // void QueryDestroy(CGxQuery*& query);
   void* v_fn_63_QueryDestroy;
   // bool QueryBegin(CGxQuery* query);
   void* v_fn_64_QueryBegin;
@@ -228,7 +238,7 @@ struct CGxDevice__vtable {
   void* v_fn_66_QueryGetParam;
   // bool QueryGetData(CGxQuery* query, uint32_t* data);
   void* v_fn_67_QueryGetData;
-  // void ShaderCreate(CGxShader*[] shaders[], EGxShTarget target, const char* a3, const char* a4, int32_t permutations);
+  // void ShaderCreate(CGxShader* shaders[], EGxShTarget target, const char* a3, const char* a4, int32_t permutations);
   void* v_fn_68_ShaderCreate;
   // void ShaderDestroy(CGxShader*& shader);
   void* v_fn_69_ShaderDestroy;
@@ -265,7 +275,7 @@ struct CGxDevice__vtable {
 // this class is 14692 bytes in size
 struct CGxDevice {
   // pointer to struct CGxDevice__vtable
-  CGxDevice__vtable* v_vtable; // 0x0 (size: 0x4)
+  CGxDevice__v_table* v_table; // 0x0 (size: 0x4)
   TSGrowableArray_CGxPushedRenderState m_pushedStates; // 0x4 (size: 0x14)
   TSGrowableArray_uint32_t m_stackOffsets; // 0x18 (size: 0x14)
   TSGrowableArray_EGxRenderState m_dirtyStates; // 0x2C (size: 0x14)
@@ -299,19 +309,37 @@ struct CGxDevice {
   // TSHashTable_CGxShader_HASHKEY_STRI m_shaderList[6];
   int32_t (*m_windowProc)(void* window, uint32_t message, uintptr_t wparam, intptr_t lparam);
   int32_t m_context;
+  // Set to zero by CGxDevice::ScenePresent
+  // prevents Draw from working if != 0
   int32_t intF5C;
   int32_t m_windowVisible;
+  // set to 1 by ICursorClip
   int32_t intF64;
-  int32_t intF68;
-  // Invented name, though seems to have the same place as CGxDeviceD3d::m_d3dNeedsReset (Alpha) 
-  int32_t m_needsReset;
+  // Incremented by CGxDevice::ScenePresent
+  int32_t m_frameCount; // m_perfCounter?
+  // seems to have the same place as CGxDeviceD3d::m_d3dNeedsReset (Alpha) 
+  int32_t m_viewportDirty; // m_viewportDirty
   CBoundingBox m_viewport;
   C44Matrix m_projection;
   C44Matrix m_projNative;
   // CGxMatrixStack m_xforms[GxXforms_Last];
   CGxMatrixStack m_xforms[11];
   CGxMatrixStack m_texGen[8];
-  uint32_t unk24D0[102];
+  // used by CGxDevice::ClipPlaneSet
+  // seems to be a bitmask to note which clip planes are set
+  uint32_t m_clipPlaneMask;
+  // used by:
+  //   CGxDevice::ClipPlaneSet
+  C4Plane m_clipPlane[6]; // m_clipPlanes?
+  // used by
+  //   CGxDeviceD3d::DeviceSetRenderTarget
+  //     set to 1
+  //   CGxDeviceD3d::IStateSyncScissorRect
+  int32_t m_scissorRectDirty; // m_scissorRectDirty?
+  CRect m_scissorRect;
+  // something to do with lighting?
+  // uint32_t unk2548[72];
+  CGxDevice__GxLight m_lights[4];
   // uint32_t unk2536[60];
   TSHashTable_CGxShader_HASHKEY_STRI m_shaderList[6];
   uint32_t m_appMasterEnables;
@@ -339,7 +367,9 @@ struct CGxDevice {
   EmergencyMem m_emergencyMem[2]; // 0x28C4
   TSFixedArray_CGxAppRenderState m_appRenderStates;
   TSFixedArray_CGxStateBom m_hwRenderStates;
-  uint32_t unk2904[3]; // 0x2904 (size 0xC)
+  // Accessed by ITexForceRecreation
+  // uint32_t unk2904[3]; // 0x2904 (size 0xC) // possibly: m_textures? TSList<CGxTex> ? 
+  TSExplicitList_CGxTex m_textures;
   CGxDevice__TextureTarget m_textureTarget[2];
   TSExplicitList_CGxQuery m_queryList; // 0x2928
   int32_t m_scrShotClick; // 0x2934

@@ -1,0 +1,14 @@
+#ifndef D3D9_DEVTYPE_H
+#define D3D9_DEVTYPE_H
+
+DECLARE_ENUM(D3DDEVTYPE);
+
+enum D3DDEVTYPE {
+  D3DDEVTYPE_HAL         = 1,
+  D3DDEVTYPE_REF         = 2,
+  D3DDEVTYPE_SW          = 3,
+
+  D3DDEVTYPE_FORCE_DWORD = 0xffffffff
+};
+
+#endif

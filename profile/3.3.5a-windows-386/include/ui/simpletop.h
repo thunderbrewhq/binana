@@ -38,7 +38,8 @@ struct FRAMEPRIORITY {
   CSimpleFrame* frame;
   uint32_t priority;
 };
-COMMON_SIMPLE_SORTED_ARRAY_POINTER_TO(FRAMEPRIORITY);
+typedef FRAMEPRIORITY* pointer_to_FRAMEPRIORITY;
+COMMON_SIMPLE_SORTED_ARRAY(pointer_to_FRAMEPRIORITY);
 
 struct CSimpleTop {
   CLayoutFrame b_base;

@@ -8,7 +8,7 @@ DECLARE_STRUCT(CGxLight);
 struct CGxLight {
   // int32_t m_enabled : 1;
   // int32_t m_isOmni : 1;
-  int32_t m_flags;
+  int32_t f_flags;
   C3Vector m_dir;
   C3Vector m_ambColor;
   C3Vector m_dirColor;

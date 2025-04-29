@@ -38,6 +38,10 @@
     },
     {
       "type": "int",
+      "name": "CGxDeviceD3d__EDeviceState"
+    },
+    {
+      "type": "int",
       "name": "CGxFormat__Format"
     },
     {
@@ -86,11 +90,47 @@
     },
     {
       "type": "long long",
+      "name": "D3DCUBEMAP_FACES"
+    },
+    {
+      "type": "int",
+      "name": "D3DDECLUSAGE"
+    },
+    {
+      "type": "long long",
       "name": "D3DDEVTYPE"
     },
     {
-      "type": "int32_t",
+      "type": "long long",
       "name": "D3DFORMAT"
+    },
+    {
+      "type": "int",
+      "name": "D3DLIGHTTYPE"
+    },
+    {
+      "type": "int",
+      "name": "D3DMULTISAMPLE_TYPE"
+    },
+    {
+      "type": "int",
+      "name": "D3DPOOL"
+    },
+    {
+      "type": "int",
+      "name": "D3DPRIMITIVETYPE"
+    },
+    {
+      "type": "int",
+      "name": "D3DRENDERSTATETYPE"
+    },
+    {
+      "type": "int",
+      "name": "D3DRESOURCETYPE"
+    },
+    {
+      "type": "long long",
+      "name": "D3DSWAPEFFECT"
     },
     {
       "type": "void**",
@@ -277,6 +317,46 @@
       "name": "KEY"
     },
     {
+      "type": "IDirect3D9*",
+      "name": "LPDIRECT3D9"
+    },
+    {
+      "type": "IDirect3DCubeTexture9*",
+      "name": "LPDIRECT3DCUBETEXTURE9"
+    },
+    {
+      "type": "IDirect3DDevice9*",
+      "name": "LPDIRECT3DDEVICE9"
+    },
+    {
+      "type": "IDirect3DIndexBuffer9*",
+      "name": "LPDIRECT3DINDEXBUFFER9"
+    },
+    {
+      "type": "IDirect3DQuery9*",
+      "name": "LPDIRECT3DQUERY9"
+    },
+    {
+      "type": "IDirect3DSurface9*",
+      "name": "LPDIRECT3DSURFACE9"
+    },
+    {
+      "type": "IDirect3DTexture9*",
+      "name": "LPDIRECT3DTEXTURE9"
+    },
+    {
+      "type": "IDirect3DVertexBuffer9*",
+      "name": "LPDIRECT3DVERTEXBUFFER9"
+    },
+    {
+      "type": "IDirect3DVertexDeclaration9*",
+      "name": "LPDIRECT3DVERTEXDECLARATION9"
+    },
+    {
+      "type": "IDirect3DVertexShader9*",
+      "name": "LPDIRECT3DVERTEXSHADER9"
+    },
+    {
       "type": "int",
       "name": "M2BLEND"
     },
@@ -303,6 +383,14 @@
     {
       "type": "int",
       "name": "MipMapAlgorithm"
+    },
+    {
+      "type": "int",
+      "name": "NV_StereoRegistryProfileType"
+    },
+    {
+      "type": "int",
+      "name": "NvAPI_Status"
     },
     {
       "type": "int",
@@ -363,6 +451,26 @@
     {
       "type": "void**",
       "name": "lua_Writer"
+    },
+    {
+      "type": "CBaseManaged*",
+      "name": "pointer_to_CBaseManaged"
+    },
+    {
+      "type": "CFrameStrataNode*",
+      "name": "pointer_to_CFrameStrataNode"
+    },
+    {
+      "type": "EvtTimer*",
+      "name": "pointer_to_EvtTimer"
+    },
+    {
+      "type": "FRAMEPRIORITY*",
+      "name": "pointer_to_FRAMEPRIORITY"
+    },
+    {
+      "type": "void*",
+      "name": "pointer_to_void"
     },
     {
       "type": "int32_t",
@@ -455,6 +563,10 @@
     {
       "type": "TSList_CLayoutFrame__FRAMENODE",
       "name": "TSExplicitList_CLayoutFrame__FRAMENODE"
+    },
+    {
+      "type": "TSList_CGxTex",
+      "name": "TSExplicitList_CGxTex"
     },
     {
       "type": "TSList_RENDERCALLBACKNODE",
@@ -2385,17 +2497,6 @@
       ]
     },
     {
-      "name": "CGxDeviceD3d__GxVertexDecl",
-      "size": 4,
-      "members": [
-        {
-          "type": "uint32_t",
-          "name": "m_unk00",
-          "offset": 0
-        }
-      ]
-    },
-    {
       "name": "CGxDevice__TextureTarget",
       "size": 12,
       "members": [
@@ -2417,7 +2518,7 @@
       ]
     },
     {
-      "name": "CGxDevice__vtable",
+      "name": "CGxDevice__v_table",
       "size": 336,
       "members": [
         {
@@ -9926,6 +10027,32 @@
       ]
     },
     {
+      "name": "D3DCOLORVALUE",
+      "size": 16,
+      "members": [
+        {
+          "type": "float",
+          "name": "r",
+          "offset": 0
+        },
+        {
+          "type": "float",
+          "name": "g",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "b",
+          "offset": 8
+        },
+        {
+          "type": "float",
+          "name": "a",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "D3DLOCKED_RECT",
       "size": 8,
       "members": [
@@ -9969,6 +10096,63 @@
           "type": "int32_t",
           "name": "NumInstructionSlots",
           "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "D3DVECTOR",
+      "size": 12,
+      "members": [
+        {
+          "type": "float",
+          "name": "x",
+          "offset": 0
+        },
+        {
+          "type": "float",
+          "name": "y",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "z",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "D3DVERTEXELEMENT9",
+      "size": 8,
+      "members": [
+        {
+          "type": "uint16_t",
+          "name": "Stream",
+          "offset": 0
+        },
+        {
+          "type": "uint16_t",
+          "name": "Offset",
+          "offset": 2
+        },
+        {
+          "type": "uint8_t",
+          "name": "Type",
+          "offset": 4
+        },
+        {
+          "type": "uint8_t",
+          "name": "Method",
+          "offset": 5
+        },
+        {
+          "type": "uint8_t",
+          "name": "Usage",
+          "offset": 6
+        },
+        {
+          "type": "uint8_t",
+          "name": "UsageIndex",
+          "offset": 7
         }
       ]
     },
@@ -10537,37 +10721,6 @@
           "type": "int32_t",
           "name": "h",
           "offset": 4
-        }
-      ]
-    },
-    {
-      "name": "EmergencyMem",
-      "size": 20,
-      "members": [
-        {
-          "type": "uint32_t",
-          "name": "unk00",
-          "offset": 0
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk04",
-          "offset": 4
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk08",
-          "offset": 8
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk0C",
-          "offset": 12
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk10",
-          "offset": 16
         }
       ]
     },
@@ -18046,14 +18199,14 @@
       "size": 4,
       "members": [
         {
-          "type": "IDirect3D9_v_table*",
+          "type": "IDirect3D9__v_table*",
           "name": "v_table",
           "offset": 0
         }
       ]
     },
     {
-      "name": "IDirect3D9_v_table",
+      "name": "IDirect3D9__v_table",
       "size": 68,
       "members": [
         {
@@ -18144,18 +18297,145 @@
       ]
     },
     {
-      "name": "IDirect3DDevice9",
+      "name": "IDirect3DCubeTexture9",
       "size": 4,
       "members": [
         {
-          "type": "IDirect3DDevice9_v_table*",
+          "type": "IDirect3DCubeTexture9__v_table*",
           "name": "v_table",
           "offset": 0
         }
       ]
     },
     {
-      "name": "IDirect3DDevice9_v_table",
+      "name": "IDirect3DCubeTexture9__v_table",
+      "size": 88,
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_0_QueryInterface",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_1_AddRef",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_2_Release",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_3_GetDevice",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_4_SetPrivateData",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_5_GetPrivateData",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_6_FreePrivateData",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_7_SetPriority",
+          "offset": 28
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_8_GetPriority",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_9_PreLoad",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_10_GetType",
+          "offset": 40
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_11_SetLOD",
+          "offset": 44
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_12_GetLOD",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_13_GetLevelCount",
+          "offset": 52
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_14_SetAutoGenFilterType",
+          "offset": 56
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_15_GetAutoGenFilterType",
+          "offset": 60
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_16_GenerateMipSubLevels",
+          "offset": 64
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_17_GetLevelDesc",
+          "offset": 68
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_18_GetCubeMapSurface",
+          "offset": 72
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_19_LockRect",
+          "offset": 76
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_20_UnlockRect",
+          "offset": 80
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_21_AddDirtyRect",
+          "offset": 84
+        }
+      ]
+    },
+    {
+      "name": "IDirect3DDevice9",
+      "size": 4,
+      "members": [
+        {
+          "type": "IDirect3DDevice9__v_table*",
+          "name": "v_table",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "IDirect3DDevice9__v_table",
       "size": 476,
       "members": [
         {
@@ -18760,9 +19040,85 @@
       "size": 4,
       "members": [
         {
-          "type": "void**",
+          "type": "IDirect3DIndexBuffer9__v_table*",
           "name": "v_table",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "IDirect3DIndexBuffer9__v_table",
+      "size": 56,
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_0_QueryInterface",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_1_AddRef",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_2_Release",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_3_GetDevice",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_4_SetPrivateData",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_5_GetPrivateData",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_6_FreePrivateData",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_7_SetPriority",
+          "offset": 28
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_8_GetPriority",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_9_PreLoad",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_10_GetType",
+          "offset": 40
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_11_Lock",
+          "offset": 44
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_12_Unlock",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_13_GetDesc",
+          "offset": 52
         }
       ]
     },
@@ -18805,6 +19161,63 @@
           "type": "void*",
           "name": "v_fn_4_GetFunction",
           "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "IDirect3DQuery9",
+      "size": 4,
+      "members": [
+        {
+          "type": "IDirect3DQuery9__v_table*",
+          "name": "v_table",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "IDirect3DQuery9__v_table",
+      "size": 32,
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_0_QueryInterface",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_1_AddRef",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_2_Release",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_3_GetDevice",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_4_GetType",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_5_GetDataSize",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_6_Issue",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_7_GetData",
+          "offset": 28
         }
       ]
     },
@@ -18915,9 +19328,125 @@
       "size": 4,
       "members": [
         {
-          "type": "void**",
+          "type": "IDirect3DTexture9__v_table*",
           "name": "v_table",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "IDirect3DTexture9__v_table",
+      "size": 88,
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_0_QueryInterface",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_1_AddRef",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_2_Release",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_3_GetDevice",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_4_SetPrivateData",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_5_GetPrivateData",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_6_FreePrivateData",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_7_SetPriority",
+          "offset": 28
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_8_GetPriority",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_9_PreLoad",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_10_GetType",
+          "offset": 40
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_11_SetLOD",
+          "offset": 44
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_12_GetLOD",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_13_GetLevelCount",
+          "offset": 52
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_14_SetAutoGenFilterType",
+          "offset": 56
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_15_GetAutoGenFilterType",
+          "offset": 60
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_16_GenerateMipSubLevels",
+          "offset": 64
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_17_GetLevelDesc",
+          "offset": 68
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_18_GetSurfaceLevel",
+          "offset": 72
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_19_LockRect",
+          "offset": 76
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_20_UnlockRect",
+          "offset": 80
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_21_AddDirtyRect",
+          "offset": 84
         }
       ]
     },
@@ -18926,9 +19455,85 @@
       "size": 4,
       "members": [
         {
-          "type": "void**",
+          "type": "IDirect3DVertexBuffer9__v_table*",
           "name": "v_table",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "IDirect3DVertexBuffer9__v_table",
+      "size": 56,
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_0_QueryInterface",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_1_AddRef",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_2_Release",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_3_GetDevice",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_4_SetPrivateData",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_5_GetPrivateData",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_6_FreePrivateData",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_7_SetPriority",
+          "offset": 28
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_8_GetPriority",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_9_PreLoad",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_10_GetType",
+          "offset": 40
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_11_Lock",
+          "offset": 44
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_12_Unlock",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_13_GetDesc",
+          "offset": 52
         }
       ]
     },
@@ -18937,9 +19542,40 @@
       "size": 4,
       "members": [
         {
-          "type": "void**",
+          "type": "IDirect3DVertexDeclaration9__v_table*",
           "name": "v_table",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "IDirect3DVertexDeclaration9__v_table",
+      "size": 20,
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_0_QueryInterface",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_1_AddRef",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_2_Release",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_3_GetDevice",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_4_GetDeclaration",
+          "offset": 16
         }
       ]
     },
@@ -26200,7 +26836,7 @@
           "offset": 4
         },
         {
-          "type": "CBaseManaged**",
+          "type": "pointer_to_CBaseManaged*",
           "name": "m_data",
           "offset": 8
         }
@@ -26221,7 +26857,7 @@
           "offset": 4
         },
         {
-          "type": "CFrameStrataNode**",
+          "type": "pointer_to_CFrameStrataNode*",
           "name": "m_data",
           "offset": 8
         }
@@ -26970,7 +27606,7 @@
           "offset": 4
         },
         {
-          "type": "EvtTimer**",
+          "type": "pointer_to_EvtTimer*",
           "name": "m_data",
           "offset": 8
         },
@@ -26996,7 +27632,7 @@
           "offset": 4
         },
         {
-          "type": "FRAMEPRIORITY**",
+          "type": "pointer_to_FRAMEPRIORITY*",
           "name": "m_data",
           "offset": 8
         },
@@ -27022,7 +27658,7 @@
           "offset": 4
         },
         {
-          "type": "void**",
+          "type": "pointer_to_void*",
           "name": "m_data",
           "offset": 8
         },
@@ -27282,6 +27918,22 @@
         },
         {
           "type": "CGxStringBatch*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CGxTex",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGxTex*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CGxTex*",
           "name": "m_next",
           "offset": 4
         }
@@ -29955,6 +30607,68 @@
       ]
     },
     {
+      "name": "CGxLight",
+      "size": 64,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "f_flags",
+          "offset": 0
+        },
+        {
+          "type": "C3Vector",
+          "name": "m_dir",
+          "offset": 4
+        },
+        {
+          "type": "C3Vector",
+          "name": "m_ambColor",
+          "offset": 16
+        },
+        {
+          "type": "C3Vector",
+          "name": "m_dirColor",
+          "offset": 28
+        },
+        {
+          "type": "C3Vector",
+          "name": "m_specColor",
+          "offset": 40
+        },
+        {
+          "type": "float",
+          "name": "m_constantAttenuation",
+          "offset": 52
+        },
+        {
+          "type": "float",
+          "name": "m_linearAttenuation",
+          "offset": 56
+        },
+        {
+          "type": "float",
+          "name": "m_quadraticAttenuation",
+          "offset": 60
+        }
+      ]
+    },
+    {
+      "name": "C4Plane",
+      "size": 16,
+      "members": [
+        {
+          "type": "C3Vector",
+          "name": "n",
+          "offset": 0
+        },
+        {
+          "type": "float",
+          "name": "d",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "CAaBox",
       "size": 24,
       "members": [
@@ -30186,22 +30900,6 @@
       ]
     },
     {
-      "name": "C4Plane",
-      "size": 16,
-      "members": [
-        {
-          "type": "C3Vector",
-          "name": "n",
-          "offset": 0
-        },
-        {
-          "type": "float",
-          "name": "d",
-          "offset": 12
-        }
-      ]
-    },
-    {
       "name": "CGxMatrixStack",
       "size": 280,
       "members": [
@@ -30340,7 +31038,7 @@
         },
         {
           "type": "uint32_t",
-          "name": "backbuffers",
+          "name": "backBufferCount",
           "offset": 28
         },
         {
@@ -30782,149 +31480,8 @@
       ]
     },
     {
-      "name": "CGxTex",
-      "size": 96,
-      "members": [
-        {
-          "type": "CiRect",
-          "name": "m_updateRect",
-          "offset": 0
-        },
-        {
-          "type": "int16_t",
-          "name": "m_updatePlaneMin",
-          "offset": 16
-        },
-        {
-          "type": "int16_t",
-          "name": "m_updatePlaneMax",
-          "offset": 18
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_width",
-          "offset": 20
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_height",
-          "offset": 24
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_depth",
-          "offset": 28
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_target",
-          "offset": 32
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_format",
-          "offset": 36
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_dataFormat",
-          "offset": 40
-        },
-        {
-          "type": "CGxTexFlags",
-          "name": "m_flags",
-          "offset": 44
-        },
-        {
-          "type": "void*",
-          "name": "m_userArg",
-          "offset": 48
-        },
-        {
-          "type": "void*",
-          "name": "m_userFunc",
-          "offset": 52
-        },
-        {
-          "type": "void*",
-          "name": "m_apiSpecificData",
-          "offset": 56
-        },
-        {
-          "type": "void*",
-          "name": "m_apiSpecificData2",
-          "offset": 60
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk40",
-          "offset": 64
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk44",
-          "offset": 68
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk48",
-          "offset": 72
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk4C",
-          "offset": 76
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk50",
-          "offset": 80
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk54",
-          "offset": 84
-        },
-        {
-          "type": "int8_t",
-          "name": "char58",
-          "offset": 88
-        },
-        {
-          "type": "int8_t",
-          "name": "char59",
-          "offset": 89
-        },
-        {
-          "type": "int8_t",
-          "name": "m_needsUpdate",
-          "offset": 90
-        },
-        {
-          "type": "int8_t",
-          "name": "m_needsCreation",
-          "offset": 91
-        },
-        {
-          "type": "int8_t",
-          "name": "m_needsFlagUpdate",
-          "offset": 92
-        },
-        {
-          "type": "int8_t",
-          "name": "char5D",
-          "offset": 93
-        },
-        {
-          "type": "uint16_t",
-          "name": "m_pad",
-          "offset": 94
-        }
-      ]
-    },
-    {
       "name": "D3DDISPLAYMODE",
-      "size": 16,
+      "size": 24,
       "members": [
         {
           "type": "uint32_t",
@@ -30944,7 +31501,222 @@
         {
           "type": "D3DFORMAT",
           "name": "Format",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "D3DSURFACE_DESC",
+      "size": 40,
+      "members": [
+        {
+          "type": "D3DFORMAT",
+          "name": "Format",
+          "offset": 0
+        },
+        {
+          "type": "D3DRESOURCETYPE",
+          "name": "Type",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "Usage",
           "offset": 12
+        },
+        {
+          "type": "D3DPOOL",
+          "name": "Pool",
+          "offset": 16
+        },
+        {
+          "type": "D3DMULTISAMPLE_TYPE",
+          "name": "MultiSampleType",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "MultiSampleQuality",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "Width",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "Height",
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "D3DPRESENT_PARAMETERS",
+      "size": 80,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "BackBufferWidth",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "BackBufferHeight",
+          "offset": 4
+        },
+        {
+          "type": "D3DFORMAT",
+          "name": "BackBufferFormat",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "BackBufferCount",
+          "offset": 16
+        },
+        {
+          "type": "D3DMULTISAMPLE_TYPE",
+          "name": "MultiSampleType",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "MultiSampleQuality",
+          "offset": 24
+        },
+        {
+          "type": "D3DSWAPEFFECT",
+          "name": "SwapEffect",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "hDeviceWindow",
+          "offset": 40
+        },
+        {
+          "type": "int32_t",
+          "name": "Windowed",
+          "offset": 44
+        },
+        {
+          "type": "int32_t",
+          "name": "EnableAutoDepthStencil",
+          "offset": 48
+        },
+        {
+          "type": "D3DFORMAT",
+          "name": "AutoDepthStencilFormat",
+          "offset": 56
+        },
+        {
+          "type": "uint32_t",
+          "name": "Flags",
+          "offset": 64
+        },
+        {
+          "type": "uint32_t",
+          "name": "FullScreen_RefreshRateInHz",
+          "offset": 68
+        },
+        {
+          "type": "uint32_t",
+          "name": "PresentationInterval",
+          "offset": 72
+        }
+      ]
+    },
+    {
+      "name": "D3DLIGHT9",
+      "size": 104,
+      "members": [
+        {
+          "type": "D3DLIGHTTYPE",
+          "name": "Type",
+          "offset": 0
+        },
+        {
+          "type": "D3DCOLORVALUE",
+          "name": "Diffuse",
+          "offset": 4
+        },
+        {
+          "type": "D3DCOLORVALUE",
+          "name": "Specular",
+          "offset": 20
+        },
+        {
+          "type": "D3DCOLORVALUE",
+          "name": "Ambient",
+          "offset": 36
+        },
+        {
+          "type": "D3DVECTOR",
+          "name": "Position",
+          "offset": 52
+        },
+        {
+          "type": "D3DVECTOR",
+          "name": "Direction",
+          "offset": 64
+        },
+        {
+          "type": "float",
+          "name": "Range",
+          "offset": 76
+        },
+        {
+          "type": "float",
+          "name": "Falloff",
+          "offset": 80
+        },
+        {
+          "type": "float",
+          "name": "Attenuation0",
+          "offset": 84
+        },
+        {
+          "type": "float",
+          "name": "Attenuation1",
+          "offset": 88
+        },
+        {
+          "type": "float",
+          "name": "Attenuation2",
+          "offset": 92
+        },
+        {
+          "type": "float",
+          "name": "Theta",
+          "offset": 96
+        },
+        {
+          "type": "float",
+          "name": "Phi",
+          "offset": 100
+        }
+      ]
+    },
+    {
+      "name": "CGxDeviceD3d__GxVertexDecl",
+      "size": 128,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "count",
+          "offset": 0
+        },
+        {
+          "type": "D3DVERTEXELEMENT9",
+          "name": "elements",
+          "arrsize": 15,
+          "offset": 4
+        },
+        {
+          "type": "IDirect3DVertexDeclaration9*",
+          "name": "d3dDecl",
+          "offset": 124
         }
       ]
     },
@@ -33313,6 +34085,17 @@
       ]
     },
     {
+      "name": "EmergencyMem",
+      "size": 16,
+      "members": [
+        {
+          "type": "TSGrowableArray_uint8_t",
+          "name": "m_data",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "TSHashObject_BATCHEDRENDERFONTDESC_HASHKEY_PTR",
       "size": 24,
       "members": [
@@ -33628,6 +34411,153 @@
       "members": [
         {
           "type": "TSLink_CGxStringBatch",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CGxTex",
+      "size": 96,
+      "members": [
+        {
+          "type": "CiRect",
+          "name": "m_updateRect",
+          "offset": 0
+        },
+        {
+          "type": "int16_t",
+          "name": "m_updatePlaneMin",
+          "offset": 16
+        },
+        {
+          "type": "int16_t",
+          "name": "m_updatePlaneMax",
+          "offset": 18
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_width",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_height",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_depth",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_target",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_format",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_dataFormat",
+          "offset": 40
+        },
+        {
+          "type": "CGxTexFlags",
+          "name": "m_flags",
+          "offset": 44
+        },
+        {
+          "type": "void*",
+          "name": "m_userArg",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "m_userFunc",
+          "offset": 52
+        },
+        {
+          "type": "void*",
+          "name": "m_apiSpecificData",
+          "offset": 56
+        },
+        {
+          "type": "void*",
+          "name": "m_apiSpecificData2",
+          "offset": 60
+        },
+        {
+          "type": "TSLink_CGxTex",
+          "name": "m_link",
+          "offset": 64
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk48",
+          "offset": 72
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk4C",
+          "offset": 76
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk50",
+          "offset": 80
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk54",
+          "offset": 84
+        },
+        {
+          "type": "int8_t",
+          "name": "char58",
+          "offset": 88
+        },
+        {
+          "type": "int8_t",
+          "name": "char59",
+          "offset": 89
+        },
+        {
+          "type": "int8_t",
+          "name": "m_needsUpdate",
+          "offset": 90
+        },
+        {
+          "type": "int8_t",
+          "name": "m_needsCreation",
+          "offset": 91
+        },
+        {
+          "type": "int8_t",
+          "name": "m_needsFlagUpdate",
+          "offset": 92
+        },
+        {
+          "type": "int8_t",
+          "name": "char5D",
+          "offset": 93
+        },
+        {
+          "type": "uint16_t",
+          "name": "m_pad",
+          "offset": 94
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CGxTex",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGxTex",
           "name": "m_link",
           "offset": 0
         }
@@ -37748,6 +38678,22 @@
       ]
     },
     {
+      "name": "TSList_CGxTex",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CGxTex",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSList_RENDERCALLBACKNODE",
       "size": 12,
       "members": [
@@ -38105,6 +39051,22 @@
       ]
     },
     {
+      "name": "NvAPI_InterfaceTable",
+      "size": 8,
+      "members": [
+        {
+          "type": "uintptr_t",
+          "name": "func",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "id",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "System_File__Stacked__FileParms",
       "size": 144,
       "members": [
@@ -38331,6 +39293,27 @@
           "type": "BLPHeader__extended",
           "name": "extended",
           "offset": 148
+        }
+      ]
+    },
+    {
+      "name": "CGxDevice__GxLight",
+      "size": 72,
+      "members": [
+        {
+          "type": "CGxLight",
+          "name": "light",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "enable",
+          "offset": 64
+        },
+        {
+          "type": "uint16_t",
+          "name": "flags",
+          "offset": 68
         }
       ]
     },
@@ -46770,11 +47753,11 @@
     },
     {
       "name": "CGxDevice",
-      "size": 14696,
+      "size": 14688,
       "members": [
         {
-          "type": "CGxDevice__vtable*",
-          "name": "v_vtable",
+          "type": "CGxDevice__v_table*",
+          "name": "v_table",
           "offset": 0
         },
         {
@@ -46951,12 +47934,12 @@
         },
         {
           "type": "int32_t",
-          "name": "intF68",
+          "name": "m_frameCount",
           "offset": 3944
         },
         {
           "type": "int32_t",
-          "name": "m_needsReset",
+          "name": "m_viewportDirty",
           "offset": 3948
         },
         {
@@ -46988,9 +47971,30 @@
         },
         {
           "type": "uint32_t",
-          "name": "unk24D0",
-          "arrsize": 102,
+          "name": "m_clipPlaneMask",
           "offset": 9424
+        },
+        {
+          "type": "C4Plane",
+          "name": "m_clipPlane",
+          "arrsize": 6,
+          "offset": 9428
+        },
+        {
+          "type": "int32_t",
+          "name": "m_scissorRectDirty",
+          "offset": 9524
+        },
+        {
+          "type": "CRect",
+          "name": "m_scissorRect",
+          "offset": 9528
+        },
+        {
+          "type": "CGxDevice__GxLight",
+          "name": "m_lights",
+          "arrsize": 4,
+          "offset": 9544
         },
         {
           "type": "TSHashTable_CGxShader_HASHKEY_STRI",
@@ -47097,85 +48101,84 @@
         {
           "type": "TSFixedArray_CGxAppRenderState",
           "name": "m_appRenderStates",
-          "offset": 10476
+          "offset": 10468
         },
         {
           "type": "TSFixedArray_CGxStateBom",
           "name": "m_hwRenderStates",
-          "offset": 10488
+          "offset": 10480
         },
         {
-          "type": "uint32_t",
-          "name": "unk2904",
-          "arrsize": 3,
-          "offset": 10500
+          "type": "TSExplicitList_CGxTex",
+          "name": "m_textures",
+          "offset": 10492
         },
         {
           "type": "CGxDevice__TextureTarget",
           "name": "m_textureTarget",
           "arrsize": 2,
-          "offset": 10512
+          "offset": 10504
         },
         {
           "type": "TSExplicitList_CGxQuery",
           "name": "m_queryList",
-          "offset": 10536
+          "offset": 10528
         },
         {
           "type": "int32_t",
           "name": "m_scrShotClick",
-          "offset": 10548
+          "offset": 10540
         },
         {
           "type": "uint32_t",
           "name": "m_scrShotWidth",
-          "offset": 10552
+          "offset": 10544
         },
         {
           "type": "uint32_t",
           "name": "m_scrShotHeight",
-          "offset": 10556
+          "offset": 10548
         },
         {
           "type": "TSGrowableArray_CImVector",
           "name": "m_scrShotPixels",
-          "offset": 10560
+          "offset": 10552
         },
         {
           "type": "int32_t",
           "name": "m_cursorVisible",
-          "offset": 10576
+          "offset": 10568
         },
         {
           "type": "int32_t",
           "name": "m_hwCursor",
-          "offset": 10580
+          "offset": 10572
         },
         {
           "type": "uint32_t",
           "name": "m_cursorHotspotX",
-          "offset": 10584
+          "offset": 10576
         },
         {
           "type": "uint32_t",
           "name": "m_cursorHotspotY",
-          "offset": 10588
+          "offset": 10580
         },
         {
           "type": "uint32_t",
           "name": "m_cursor",
           "arrsize": 1024,
-          "offset": 10592
+          "offset": 10584
         },
         {
           "type": "CGxTex*",
           "name": "m_cursorTexture",
-          "offset": 14688
+          "offset": 14680
         },
         {
           "type": "float",
           "name": "m_cursorDepth",
-          "offset": 14692
+          "offset": 14684
         }
       ]
     },
@@ -48423,7 +49426,7 @@
     },
     {
       "name": "CGxDeviceOpenGl",
-      "size": 15264,
+      "size": 15256,
       "members": [
         {
           "type": "CGxDevice",
@@ -48434,13 +49437,13 @@
           "type": "uint32_t",
           "name": "unk3968",
           "arrsize": 142,
-          "offset": 14696
+          "offset": 14688
         }
       ]
     },
     {
       "name": "CGxDeviceD3d",
-      "size": 16048,
+      "size": 16056,
       "members": [
         {
           "type": "CGxDevice",
@@ -48450,98 +49453,98 @@
         {
           "type": "void*",
           "name": "m_hwnd",
-          "offset": 14696
+          "offset": 14688
         },
         {
           "type": "uint16_t",
           "name": "m_hwndClass",
-          "offset": 14700
+          "offset": 14692
         },
         {
           "type": "uint16_t",
           "name": "unk396E",
-          "offset": 14702
+          "offset": 14694
         },
         {
           "type": "int32_t",
           "name": "m_ownhwnd",
-          "offset": 14704
+          "offset": 14696
         },
         {
           "type": "void*",
           "name": "m_d3dLib",
-          "offset": 14708
+          "offset": 14700
         },
         {
-          "type": "IDirect3D9*",
+          "type": "LPDIRECT3D9",
           "name": "m_d3d",
-          "offset": 14712
+          "offset": 14704
         },
         {
-          "type": "IDirect3DDevice9*",
+          "type": "LPDIRECT3DDEVICE9",
           "name": "m_d3dDevice",
-          "offset": 14716
+          "offset": 14708
         },
         {
           "type": "D3DCAPS9",
           "name": "m_d3dCaps",
-          "offset": 14720
+          "offset": 14712
         },
         {
           "type": "int32_t",
           "name": "m_d3dIsHwDevice",
-          "offset": 15032
+          "offset": 15024
         },
         {
           "type": "int32_t",
           "name": "m_d3dNVAPI",
-          "offset": 15036
+          "offset": 15028
         },
         {
           "type": "uint32_t",
           "name": "m_d3dStereoEnabled",
-          "offset": 15040
+          "offset": 15032
         },
         {
           "type": "uint32_t",
-          "name": "unk3ABC",
-          "offset": 15044
+          "name": "m_d3dStereoRestore",
+          "offset": 15036
         },
         {
           "type": "uint32_t",
           "name": "m_d3dStereoHandle",
-          "offset": 15048
+          "offset": 15040
         },
         {
           "type": "float",
           "name": "m_d3dStereoConvergence",
-          "offset": 15052
+          "offset": 15044
         },
         {
           "type": "float",
           "name": "m_d3dStereoSeparation",
-          "offset": 15056
+          "offset": 15048
         },
         {
           "type": "int32_t",
-          "name": "unk3ACC",
-          "offset": 15060
+          "name": "m_d3dStereoDirty",
+          "offset": 15052
         },
         {
           "type": "TSGrowableArray_CGxDeviceD3d__GxVertexDecl",
-          "name": "m_vertexDecl",
-          "offset": 15064
+          "name": "m_gxVertexDecl",
+          "offset": 15056
         },
         {
-          "type": "IDirect3DVertexDeclaration9*",
+          "type": "LPDIRECT3DVERTEXDECLARATION9",
           "name": "m_d3dVertexDecl",
           "arrsize": 14,
-          "offset": 15080
+          "offset": 15072
         },
         {
           "type": "D3DDISPLAYMODE",
           "name": "m_desktopDisplayMode",
-          "offset": 15136
+          "offset": 15128
         },
         {
           "type": "int32_t",
@@ -48549,8 +49552,8 @@
           "offset": 15152
         },
         {
-          "type": "uint32_t",
-          "name": "unk3B2C",
+          "type": "int32_t",
+          "name": "int3B2C",
           "offset": 15156
         },
         {
@@ -48561,92 +49564,92 @@
         {
           "type": "D3DFORMAT",
           "name": "m_devAdapterFormat",
-          "offset": 15164
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk3B38",
           "offset": 15168
         },
         {
-          "type": "IDirect3DSurface9*",
-          "name": "m_defColorSurface",
-          "offset": 15172
-        },
-        {
-          "type": "IDirect3DSurface9*",
-          "name": "m_defDepthSurface",
+          "type": "LPDIRECT3DSURFACE9",
+          "name": "m_defDepthStencilSurface",
           "offset": 15176
         },
         {
-          "type": "uint32_t",
-          "name": "unk3B44",
+          "type": "LPDIRECT3DSURFACE9",
+          "name": "m_defColorSurface",
           "offset": 15180
         },
         {
-          "type": "uint32_t",
-          "name": "unk3B48",
+          "type": "LPDIRECT3DSURFACE9",
+          "name": "m_defDepthSurface",
           "offset": 15184
         },
         {
-          "type": "int32_t",
-          "name": "m_hwCursorNeedsUpdate",
+          "type": "LPDIRECT3DSURFACE9",
+          "name": "surface3B44",
           "offset": 15188
         },
         {
-          "type": "IDirect3DTexture9*",
-          "name": "m_hwCursorTexture",
+          "type": "LPDIRECT3DQUERY9",
+          "name": "m_eventQuery",
           "offset": 15192
         },
         {
-          "type": "IDirect3DSurface9*",
-          "name": "m_hwCursorBitmap",
+          "type": "int32_t",
+          "name": "m_hwCursorDirty",
           "offset": 15196
         },
         {
-          "type": "uint32_t",
-          "name": "unk3B58",
+          "type": "LPDIRECT3DTEXTURE9",
+          "name": "m_hwCursorTexture",
           "offset": 15200
         },
         {
-          "type": "IDirect3DVertexDeclaration9*",
-          "name": "m_d3dCurrentVertexDecl",
+          "type": "LPDIRECT3DSURFACE9",
+          "name": "m_hwCursorBitmap",
           "offset": 15204
         },
         {
-          "type": "IDirect3DIndexBuffer9*",
-          "name": "m_d3dCurrentIndexBuf",
+          "type": "CGxTex*",
+          "name": "texture3B58",
           "offset": 15208
         },
         {
-          "type": "IDirect3DVertexBuffer9*",
+          "type": "LPDIRECT3DVERTEXDECLARATION9",
+          "name": "m_d3dCurrentVertexDecl",
+          "offset": 15212
+        },
+        {
+          "type": "LPDIRECT3DINDEXBUFFER9",
+          "name": "m_d3dCurrentIndexBuf",
+          "offset": 15216
+        },
+        {
+          "type": "LPDIRECT3DVERTEXBUFFER9",
           "name": "m_d3dVertexStreamBuf",
           "arrsize": 8,
-          "offset": 15212
+          "offset": 15220
         },
         {
           "type": "uint32_t",
           "name": "m_d3dVertexStreamOfs",
           "arrsize": 8,
-          "offset": 15244
+          "offset": 15252
         },
         {
           "type": "uint32_t",
           "name": "m_d3dVertexStreamStride",
           "arrsize": 8,
-          "offset": 15276
+          "offset": 15284
         },
         {
           "type": "uint32_t",
           "name": "m_deviceStates",
           "arrsize": 182,
-          "offset": 15308
+          "offset": 15316
         },
         {
           "type": "bool",
           "name": "m_texEnabled",
           "arrsize": 8,
-          "offset": 16036
+          "offset": 16044
         }
       ]
     },

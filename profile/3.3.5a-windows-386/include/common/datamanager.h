@@ -14,8 +14,9 @@ DECLARE_ENUM(CBaseManaged__ManagedFlags);
 #include "tempest/vector.h"
 
 typedef HOBJECT HDATAMGR;
+typedef CBaseManaged* pointer_to_CBaseManaged;
 
-STORM_TS_FIXED_ARRAY_POINTER_TO(CBaseManaged);
+STORM_TS_FIXED_ARRAY(pointer_to_CBaseManaged);
 STORM_TS_LIST(CBaseManaged);
 
 enum CBaseManaged__ManagedTypeIds {

@@ -5,6 +5,8 @@
 
 #include "storm/array.h"
 
-STORM_TS_GROWABLE_ARRAY_POINTER_TO(void);
+typedef void* pointer_to_void;
+
+STORM_TS_GROWABLE_ARRAY(pointer_to_void);
 
 #endif

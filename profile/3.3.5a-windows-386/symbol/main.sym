@@ -2673,6 +2673,8 @@ GxAdapterDesktopMode 00681220 f type="int32_t __stdcall func(CGxMonitorMode* mod
 GxDevCreate 00681290 f end=00681301
 GxSceneClear 006813B0 f end=006813CD
 GxTexUpdate 006813D0 f end=006813EC
+GxTexDestroy 00681470 f
+GxTexCopy 006814D0 f end=00681524
 GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
 GxSetMaxFPS 00681770 f end=0068177D type="void __stdcall func(uint32_t maxFPS)"
 GxGetMaxFPS 00681780 f end=00681786
@@ -2687,6 +2689,7 @@ GxPrimIndexPtr 00681AB0 f end=00681AFB type="void __stdcall func(uint32_t indexC
 GxPrimVertexPtr 00681B00 f end=00681B4B type="void __stdcall func(CGxBuf* buf, EGxVertexBufferFormat format)"
 CGxTexFlags__CGxTexFlags 00681BE0 f end=00681CAB ; UC
 GxTexCreate 00681CB0 f end=00681D87
+GxTexUpdate 00681F20 f end=00681F59
 GxXformSetViewport 00681F60 f end=00682124 type="void __stdcall func(float minX, float maxX, float minY, float maxY, float minZ, float maxZ)"
 GxDrawLockedElements 00682340 f end=0068239E type="void __stdcall func(EGxPrim primType, uint32_t, uint16_t*)"
 GxPrimLockIndexPtr 006823A0 f end=006823F8 type="void __stdcall func(EGxPrim primType, uint32_t indexCount, uint16_t* indices)"
@@ -2694,6 +2697,7 @@ GxPrimVertexPtr 00682400 f end=00682781 type="void __stdcall func(uint32_t verte
 GxPrimLockVertexPtrs 006828C0 f end=006828FE type="void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, uint8_t* bone, uint32_t boneStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)"
 GxScenePresent 00682A00 f end=00682A33
 GxDevDestroy 00682B80 f end=00682C35
+EmergencyMem__Unlock 00682C40 f end=00682C45
 CGxDevice__DeviceCreate 00682CB0 f end=00682CCB type="void __thiscall func(CGxDevice* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
 CGxDevice__DeviceCreate 00682CD0 f end=00682CF0 type="void __thiscall func(CGxDevice* this, uintptr_t hwnd, CGxFormat* format)"
 CGxDevice__DeviceDestroy 00682CF0 f end=00682CFB type="void __thiscall func(CGxDevice* this)"
@@ -2726,6 +2730,15 @@ CGxDevice__CursorLock 00683650 f end=00683657 type="uint32_t* __thiscall func(CG
 CGxDevice__CursorSetDepth 00683660 f end=00683670 type="void __thiscall func(CGxDevice* this, float depth)"
 CGxDevice__LogOpen 00683670 f end=006836A4 type="void __stdcall func()" ; static void CGxDevice::LogOpen(void)
 CGxDevice__LogClose 006836B0 f end=006836CA
+CGxDevice__WindowConstrainTopByAspect 00683D60 f end=00683DB0 type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainBottomByAspect 00683DB0 f end=00683DFE type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainLeftByAspect 00683E00 f end=00683E50 type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainRightByAspect 00683E50 f end=00683E9E type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainLeft 00683EA0 f end=00683ECD type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainRight 00683ED0 f end=00683EFD type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainTop 00683F00 f end=00683F2B type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainBottom 00683F30 f end=00683F5C type="void __stdcall func(CiRect* windowRect)"
+CGxLight__CGxLight 00683FB0 f end=0068406C type="CGxLight* __thiscall func(CGxLight* this)"
 CGxDevice__DeviceSetFormat 006840F0 f end=0068416C type="int32_t __thiscall func(CGxDevice* this, CGxFormat* format)"
 CGxDevice__DeviceSetGamma 00684170 f end=00684189 type="void __thiscall func(CGxDevice* this, float gamma)"
 CGxDevice__DeviceSetGamma 00684190 f end=006841AF type="int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)"
@@ -2772,6 +2785,7 @@ CGxDevice__BufCreate 00687660 f end=006876C9 type="CGxBuf* __thiscall func(CGxDe
 CGxDevice__PoolCreate 006876D0 f end=0068773F type="CGxPool* __thiscall func(CGxDevice* this, EGxPoolTarget target, EGxPoolUsage usage, uint32_t size, EGxPoolHintBits hint, char* name)"
 CGxDevice__QueryCreate 006877C0 f end=00687811 type="void __thiscall func(CGxDevice* this, CGxQuery** query, EGxQueryType queryType)"
 CGxDevice__ShaderDestroy 00687820 f end=00687862 type="void __thiscall func(CGxDevice* this, CGxShader** shader)"
+CGxDevice__DeviceCreateStreamBufs 00687900 f end=00687937
 CGxDevice__DeviceCreatePools 00687940 f end=00687980
 CGxDevice__TexDestroy 00687980 f end=006879E1 type="void __thiscall func(CGxDevice* this, CGxTex* texId)"
 CGxDevice__QueryDestroy 006879F0 f end=00687A8E type="void __thiscall func(CGxDevice* this, CGxQuery** query)"
@@ -2831,11 +2845,13 @@ CGxDeviceD3d__scalar_deleting_destructor 0068FE80 f end=0068FEC8 type="void __th
 CGxDeviceD3d__DeviceReadPixels 0068FED0 f end=00690144 type="void __thiscall func(CGxDeviceD3d* this, CiRect* rect, TSGrowableArray_CImVector* pixels)"
 CGxDeviceD3d__IReleaseD3dResources 00690150 f end=00690223 type="void __thiscall func(CGxDeviceD3d* this, int32_t a2)"
 CGxDeviceD3d__DeviceWM 00690230 f end=0069038D type="void __thiscall func(CGxDeviceD3d* this, EGxWM wm, int32_t param1, int32_t param2)"
+CGxDeviceD3d__IDestroyD3d 006903B0 f end=006904C4
 CGxDeviceD3d__DeviceSetFormat 006904D0 f end=006905E8 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxFormat* format)"
 CGxDeviceD3d__DeviceDestroy 006905F0 f end=00690679 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__ICreateD3d 00690680 f end=00690742 type="int32_t __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__DeviceCreate 00690750 f end=00690821 type="void __thiscall func(CGxDeviceD3d* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
 CGxDeviceD3d__DeviceCreate 00690830 f end=00690897 type="void __thiscall func(CGxDeviceD3d* this, uintptr_t hwnd, CGxFormat* format)"
+CGxDeviceD3d__Sub69FAA0 0069FAA0 f end=0069FAFE type="int32_t __thiscall func(CGxDeviceD3d* this, D3DFORMAT format)"
 CGxDeviceD3d__ICreateD3dVB 0069FB00 f end=0069FB68 type="LPDIRECT3DVERTEXBUFFER9 __thiscall func(EGxPoolUsage usage, uint32_t size)"
 CGxDeviceD3d__CreatePoolAPI 0069FB70 f end=0069FBB8 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxPool* pool)"
 CGxDeviceD3d__ICursorClip 0069FE10 f end=0069FE57 type="void __thiscall func(CGxDeviceD3d* this, int32_t a1)" ; UC (invented name)
@@ -2853,6 +2869,7 @@ CGxDeviceD3d__QueryGetData 006A0310 f end=006A035F type="bool __thiscall func(CG
 CGxDeviceD3d__WindowProcD3d 006A0360 f end=006A0834 type="LRESULT __stdcall func(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)"
 CGxDeviceD3d__DeviceReadDepths 006A1950 f end=006A19C4 type="void __thiscall func(CGxDeviceD3d* this, CiRect* rect, TSGrowableArray_float* depths)"
 CGxDeviceD3d9Ex__CGxDeviceD3d9Ex 006A1A90 f end=006A1C24
+CGxDeviceD3d__ITexForceRecreation 006A2AA0 f end=006A2BA3
 CGxDeviceD3d__TexDestroy 006A2BB0 f end=006A2BF1 type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
 CGxDeviceD3d__ITexCreate 006A2C00 f end=006A2D7E type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
 CGxDeviceD3d__ITexUpload 006A2D80 f end=006A3062 type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
@@ -2863,17 +2880,22 @@ CGxDeviceD3d__ISceneBegin 006A3350 f end=006A3417 type="void __thiscall func(CGx
 CGxDeviceD3d__ISceneEnd 006A3420 f end=006A3449 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__ScenePresent 006A3450 f end=006A3611 type="void __thiscall func(CGxDeviceD3d* this, uint32_t mask)"
 CGxDeviceD3d__Draw 006A3620 f end=006A3716 type="void __thiscall func(CGxDeviceD3d* this, CGxBatch* batch)"
+CGxDeviceD3d__GxVertexDecl__Compare 006A3720 f end=006A3807 type="bool __thiscall func(CGxDeviceD3d__GxVertexDecl* this, D3DVERTEXELEMENT9* elements, uint32_t count)"
 CGxDeviceD3d__IStateSyncEnables 006A3810 f end=006A386E type="void __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__IStateSyncClipPlanes 006A3870 f end=006A38C3 type="void __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__IStateSyncScissorRect 006A38D0 f end=006A39D2 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__ISetVertexBuffer 006A39E0 f end=006A3A59 type="void __thiscall func(CGxDeviceD3d* this, uint32_t stream, LPDIRECT3DVERTEXBUFFER9 buffer, uint32_t offset, uint32_t stride)"
 CGxDeviceD3d__IStateSetD3DDefaults 006A3A60 f end=006A3C34 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__DsSet 006A3C40 f end=006A40F2 type="void __thiscall func(CGxDeviceD3d* this, CGxDeviceD3d__EDeviceState state, uint32_t val)"
 CGxDeviceD3d__ISetColorOp 006A4190 f end=006A41EC type="void __thiscall func(CGxDeviceD3d* this, uint32_t a1, uint32_t val)"
 CGxDeviceD3d__ISetAlphaOp 006A41F0 f end=006A424C type="void __thiscall func(CGxDeviceD3d* this, uint32_t a1, uint32_t val)"
+CGxDeviceD3d__IStateSyncLights 006A43D0 f end=006A46F9 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IStateSyncMaterial 006A4700 f end=006A4846 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IStateSyncXforms 006A4850 f end=006A48FE type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__ISetTexture 006A4900 f end=006A4AB3 type="void __thiscall func(CGxDeviceD3d* this, uint32_t tmu, CGxTex* texId)"
 CGxDeviceD3d__IRsSendToHw 006A4C30 f end=006A5499 type="void __thiscall func(CGxDeviceD3d* this, EGxRenderState rs)"
 CGxDeviceD3d__ICreateD3dVertexDecl 006A5540 f end=006A5677 type="LPDIRECT3DVERTEXDECLARATION9 __thiscall func(CGxDeviceD3d* this, D3DVERTEXELEMENT9* elements, uint32_t count)"
+CGxDeviceD3d__IReleaseD3dVertexDecl 006A5680 f end=006A56F2 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IStateSyncVertexPtrs 006A5700 f end=006A5934 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IStateSync 006A5940 f end=006A59f5 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__CapsWindowSize 006A5A00 f end=006A5A25 type="void __thiscall func(CGxDeviceD3d* this, CRect* dst)"
@@ -2883,7 +2905,9 @@ CGxDeviceD3d__IShaderReload 006A5D50 f end=006A5E07 type="void __thiscall func(C
 CGxDeviceD3d__IShaderCreate 006A5E10 f end=006A5E36 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
 CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF type="void __thiscall func(CGxDevice* this, CGxTex* texId, uint32_t* width, uint32_t* height, uint32_t* baseMip, uint32_t* mipCount)"
 CGxDeviceD3d__SceneClear 006A74B0 f end=006A7538 type="void __thiscall func(CGxDeviceD3d* this, uint32_t mask, CImVector color)"
+CGxDeviceD3d__Sub6A7940 006A7940 f end=006A79F1 type="void __thiscall func(CGxDeviceD3d* this, uint32_t width, uint32_t height)"
 CGxDeviceD3d__CapsWindowSizeInScreenCoords 006A9920 f end=006A99D4 type="void __thiscall func(CGxDeviceD3d* this, CRect* dst)"
+CGxDeviceD3d__IXformSetViewport 006A99E0 f end=006A9B35 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__XformSetProjection 006A9B40 f end=006A9D88 type="void __thiscall func(CGxDeviceD3d* this, C44Matrix* matrix)"
 CGxDeviceD3d__XformSetView 006A9E00 f end=006A9E09 type="void __thiscall func(CGxDeviceD3d* this, C44Matrix* matrix)"
 CGxDeviceD3d__IShaderConstantsFlush 006A9FE0 f end=006AA06D type="void __thiscall func(CGxDeviceD3d* this)"
@@ -3687,6 +3711,16 @@ CShaderEffectManager__AddEffectFile 00876D90 f end=00876E2C ; CShaderEffectManag
 SI2__Log_Write 00877E10 f end=00878005
 SI2__Log_Write 00878010 f end=0087807E
 SI2__InitCapture 0087E020 f end=0087EBBD
+NvAPI_Initialize 008A09BA f end=008A0A54
+NvAPI_GetErrorMessage 008A0A54 f end=008A0A5A type="NvAPI_Status __stdcall func(int32_t nr, char* szDesc)"
+NvAPI_Stereo_CreateConfigurationProfileRegistryKey 008A0F88 f end=008A0F8E type="NvAPI_Status __stdcall func(NV_StereoRegistryProfileType registryProfileType)"
+NvAPI_Stereo_Enable 008A0FA0 f end=008A0FA6 type="NvAPI_Status __stdcall func()"
+NvAPI_Stereo_Disable 008A0FA6 f end=008A0FAC type="NvAPI_Status __stdcall func()"
+NvAPI_Stereo_IsEnabled 008A0FAC f end=008A0FB2 type="NvAPI_Status __stdcall func(uint8_t* pIsStereoEnabled)"
+NvAPI_Stereo_CreateHandleFromIUnknown 008A0FB2 f end=008A0FB8 type="NvAPI_Status __stdcall func(IUnknown* pDevice, StereoHandle* pStereoHandle)"
+NvAPI_Stereo_DestroyHandle 008A0FB8 f end=008A0FBE type="NvAPI_Status __stdcall func(StereoHandle stereoHandle)"
+NvAPI_Stereo_SetSeparation 008A0FD6 f end=008A0FDC type="NvAPI_Status __stdcall func(StereoHandle stereoHandle, float newSeparationPercentage)"
+NvAPI_Stereo_SetConvergence 008A0FEE f end=008A0FF4 type="NvAPI_Status __stdcall func(StereoHandle stereoHandle, float newConvergence)"
 stub_return_one_byte 008A1420 f end=008A1423 ; known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback
 FFX__Destroy 008C0360 f end=008C0589
 stub_return_int32_one 008C8DE0 f type="int32_t __stdcall func()" ; Known names: GxDefaultApi, CCommand_Perf
@@ -4075,10 +4109,23 @@ s_noinfo 009E5630 l type="Blizzard__File__FileInfo"
 firstByteMark 009E9EC8 l type="uint32_t[7]"
 TInstanceId_EvtContext__v_table 009EA04C l type="TInstanceId_EvtContext__v_table"
 s_pixelFormatToMipBitsCache 009F1074 l
-CGxDevice__vtable 00A2DDC0 l type="CGxDevice__vtable"
-CGxDeviceOpenGl__vtable 00A2E198 l
-CGxDeviceD3d__vtable 00A2E718 l
+CGxDevice__v_table 00A2DDC0 l type="CGxDevice__v_table"
+CGxDeviceOpenGl__v_table 00A2E198 l type="CGxDevice__v_table"
+CGxDeviceD3d__s_GxFormatToD3dFormat 00A2E4A8 l type="D3DFORMAT[8]"
+CGxDeviceD3d__s_gxAttribToD3dAttribSize 00A2E4C8 l type="uint32_t[7]"
+CGxDeviceD3d__v_table 00A2E718 l type="CGxDevice__v_table"
 CGxDeviceD3d9Ex__vtable 00A2F500 l
+CGxDeviceD3d__s_tolerableTexFmtMapping 00A2F7E8 l type="EGxTexFormat[13]"
+CGxDeviceD3d__s_GxTexFmtToD3dFmt 00A2F81C l type="D3DFORMAT[13]"
+CGxDeviceD3d__s_faceTypes 00A2F850 l type="D3DCUBEMAP_FACES[6]"
+CGxDeviceD3d__s_primitiveConversion 00A2F8D4 l type="D3DPRIMITIVETYPE[6]"
+CGxDeviceD3d__s_gxAttribToD3dAttribUsage 00A2F8EC l type="D3DDECLUSAGE[14]"
+CGxDeviceD3d__s_gxAttribToD3dAttribUsageIndex 00A2F924 l type="uint32_t[14]"
+CGxDeviceD3d__s_srcBlend 00A2F964 l type="D3DBLEND[12]"
+CGxDeviceD3d__s_dstBlend 00A2F994 l type="D3DBLEND[12]"
+CGxDeviceD3d__s_wrapModes 00A2F9C4 l type="D3DTEXTUREADDRESS[2]"
+CGxDeviceD3d__s_cmpFunc 00A2FA14 l type="D3DCMPFUNC[4]"
+CGxDeviceD3d__s_cullMode 00A2FA24 l type="D3DCULL[3]"
 g_startup_StringsDB 00AB6350 l type="WowClientDB_Startup_StringsRec"
 System_File__Stacked__s_manager 00AB90AC l type="Blizzard__File__Filesystem*"
 System_File__read_func 00AB912C l ; type="int32_t (*)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
@@ -4325,6 +4372,10 @@ g_soundFilterDB 00AD50FC l type="WowClientDB_SoundFilterRec" ; 0x1D6
 g_soundFilterElemDB 00AD5120 l type="WowClientDB_SoundFilterElemRec" ; 0x1D7
 formatToInt 00AD87C4 l type="char*[8]"
 g_gxApiNames 00AD87E4 l type="char*[6]"
+CGxDevice__kWinMinSize 00AD8BC0 l type="C2iVector"
+CGxDeviceD3d__s_GxTexFormatToUse 00AD8EF0 l type="EGxTexFormat[13]"
+CGxDeviceD3d__s_gxAttribToD3dAttribType 00AD8F24 l type="D3DDECLTYPE[7]"
+CGxDeviceD3d__s_filterModes 00AD8F40 l type="D3DTEXTUREFILTERTYPE[6][3]"
 CBLPFile__s_eightBitAlphaLookup 00AD90B0 l type="uint8_t[16]"
 CBLPFile__s_oneBitAlphaLookup 00AD90C0 l type="uint8_t[2]"
 s_rect 00ADBAB4 l type="RECTF" ; RECTF
@@ -4350,6 +4401,9 @@ g_lightFloatBandDB 00AF49E0 l type="WowClientDB_LightFloatBandRec" ; 0x15C
 g_lightParamsDB 00AF4A04 l type="WowClientDB_LightParamsRec" ; 0x15E
 g_lightDB 00AF4A28 l type="WowClientDB_LightRec" ; 0x15B
 s_sleepInBackground 00B1D2AC l type="int32_t"
+NvApi__s_initialized 00B2376C l
+result 00B23770 l type="int32_t"
+NvApi__s_interface_table 00B23778 l type="NvApi__InterfaceTable[253]"
 s_streamingdiag 00B2F050 l
 g_clientEventContext 00B2F994 l type="HEVENTCONTEXT"
 Blizzard__Streaming__s_streamingReady 00B38180 l type="bool"
@@ -4452,12 +4506,14 @@ _CURRENT_LANGUAGE 00C5DE9C l type="int32_t"
 s_maxFPSBk 00C5DF74 l type="uint32_t"
 s_maxFPS 00C5DF7C l type="uint32_t"
 g_theGxDevicePtr 00C5DF88 l type="CGxDevice*"
-CGxDevice__s_uiVertexShader 00C5DFDC l
+CGxDevice__s_uiVertexShader 00C5DFD8 l
 CGxDevice__s_shadowConstants 00C5DFE0 l
+CGxDevice__kWinAspect 00C5FFF0 l type="float"
 CGxDevice__m_logBytes 00C5FFF4 l type="uint32_t"
 CGxDevice__m_log 00C5FFF8 l type="HSLOG"
 CGxDevice__s_uiPixelShader 00C5FFFC l
 CGxDevice__s_clientAdjust 00C60300 l type="C2iVector"
+d3dLight 00C606F8 l type="D3DLIGHT9"
 isIdent 00C60760 l
 ClientServices__m_instance 00C79CE4 l
 ClientServices__m_selectRealmInfoValid 00C79CE9 l

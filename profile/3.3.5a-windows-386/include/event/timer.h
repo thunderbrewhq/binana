@@ -20,9 +20,10 @@ struct EvtTimer {
   uint64_t guidParam;
   void* guidParam2;
 };
+typedef EvtTimer* pointer_to_EvtTimer;
 
 STORM_TS_PRIORITY_QUEUE(EvtTimer);
-STORM_TS_GROWABLE_ARRAY_POINTER_TO(EvtTimer);
+STORM_TS_GROWABLE_ARRAY(pointer_to_EvtTimer);
 
 // class EvtTimerQueue : public TSPriorityQueue<EvtTimer>
 struct EvtTimerQueue {

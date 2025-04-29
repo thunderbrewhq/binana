@@ -33,6 +33,14 @@ CGxDevice__CursorLock 00683650 f end=00683657 type="uint32_t* __thiscall func(CG
 CGxDevice__CursorSetDepth 00683660 f end=00683670 type="void __thiscall func(CGxDevice* this, float depth)"
 CGxDevice__LogOpen 00683670 f end=006836A4 type="void __stdcall func()" ; static void CGxDevice::LogOpen(void)
 CGxDevice__LogClose 006836B0 f end=006836CA
+CGxDevice__WindowConstrainTopByAspect 00683D60 f end=00683DB0 type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainBottomByAspect 00683DB0 f end=00683DFE type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainLeftByAspect 00683E00 f end=00683E50 type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainRightByAspect 00683E50 f end=00683E9E type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainLeft 00683EA0 f end=00683ECD type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainRight 00683ED0 f end=00683EFD type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainTop 00683F00 f end=00683F2B type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__WindowConstrainBottom 00683F30 f end=00683F5C type="void __stdcall func(CiRect* windowRect)"
 CGxDevice__DeviceSetFormat 006840F0 f end=0068416C type="int32_t __thiscall func(CGxDevice* this, CGxFormat* format)"
 CGxDevice__DeviceSetGamma 00684170 f end=00684189 type="void __thiscall func(CGxDevice* this, float gamma)"
 CGxDevice__DeviceSetGamma 00684190 f end=006841AF type="int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)"
@@ -99,3 +107,4 @@ CGxDevice__AdapterMonitorModes 0068A4C0 f end=0068A589 type="void __stdcall func
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
 CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF type="void __thiscall func(CGxDevice* this, CGxTex* texId, uint32_t* width, uint32_t* height, uint32_t* baseMip, uint32_t* mipCount)"
+CGxDevice__DeviceCreateStreamBufs 00687900 f end=00687937

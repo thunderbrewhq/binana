@@ -1,0 +1,14 @@
+#ifndef D3D9_LIGHTTYPE_H
+#define D3D9_LIGHTTYPE_H
+
+DECLARE_ENUM(D3DLIGHTTYPE);
+
+enum D3DLIGHTTYPE {
+  D3DLIGHT_POINT          = 1,
+  D3DLIGHT_SPOT           = 2,
+  D3DLIGHT_DIRECTIONAL    = 3,
+
+  D3DLIGHT_FORCE_DWORD    = 0x7fffffff
+};
+
+#endif

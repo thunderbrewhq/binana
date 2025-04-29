@@ -1,0 +1,10 @@
+NvAPI_Initialize 008A09BA f end=008A0A54
+NvAPI_Stereo_IsEnabled 008A0FAC f end=008A0FB2 type="NvAPI_Status __stdcall func(uint8_t* pIsStereoEnabled)"
+NvAPI_Stereo_Enable 008A0FA0 f end=008A0FA6 type="NvAPI_Status __stdcall func()"
+NvAPI_GetErrorMessage 008A0A54 f end=008A0A5A type="NvAPI_Status __stdcall func(int32_t nr, char* szDesc)"
+NvAPI_Stereo_Disable 008A0FA6 f end=008A0FAC type="NvAPI_Status __stdcall func()"
+NvAPI_Stereo_CreateConfigurationProfileRegistryKey 008A0F88 f end=008A0F8E type="NvAPI_Status __stdcall func(NV_StereoRegistryProfileType registryProfileType)"
+NvAPI_Stereo_CreateHandleFromIUnknown 008A0FB2 f end=008A0FB8 type="NvAPI_Status __stdcall func(IUnknown* pDevice, StereoHandle* pStereoHandle)"
+NvAPI_Stereo_SetConvergence 008A0FEE f end=008A0FF4 type="NvAPI_Status __stdcall func(StereoHandle stereoHandle, float newConvergence)"
+NvAPI_Stereo_SetSeparation 008A0FD6 f end=008A0FDC type="NvAPI_Status __stdcall func(StereoHandle stereoHandle, float newSeparationPercentage)"
+NvAPI_Stereo_DestroyHandle 008A0FB8 f end=008A0FBE type="NvAPI_Status __stdcall func(StereoHandle stereoHandle)"

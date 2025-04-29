@@ -18,7 +18,8 @@ struct CFrameStrataNode {
   int32_t batchDirty;
   TSExplicitList_CRenderBatch renderList;
 };
-STORM_TS_FIXED_ARRAY_POINTER_TO(CFrameStrataNode);
+typedef CFrameStrataNode* pointer_to_CFrameStrataNode;
+STORM_TS_FIXED_ARRAY(pointer_to_CFrameStrataNode);
 
 struct CFrameStrata {
   int32_t batchDirty;

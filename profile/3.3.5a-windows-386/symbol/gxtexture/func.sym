@@ -1,1 +1,5 @@
 CGxTexFlags__CGxTexFlags 00681BE0 f end=00681CAB ; UC
+GxTexDestroy 00681470 f
+GxTexUpdate 00681F20 f end=00681F59
+GxTexCreate 00681CB0 f end=00681D87
+GxTexUpdate 006813D0 f end=006813EC
