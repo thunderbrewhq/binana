@@ -1,1 +1,3 @@
 CGNamePlateFrame__SetCastBarValues 0098F040 f end=0098F382
+CGNamePlateFrame__OnGainFocus 0098E910 f end=0098E974
+CGNamePlateFrame__OnLoseFocus 0098E980 f end=0098E9E2

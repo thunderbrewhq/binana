@@ -29,3 +29,4 @@ C3Vector__C3Vector 00982970 f end=009829AD ; C3Vector::C3Vector(CImVector const&
 C4Vector__C4Vector 00984C90 f end=00984CDC ; C4Vector::C4Vector(CImVector const&)
 C4Quaternion__Slerp 00982460 f end=0098256C ; C4Quaternion::Slerp(float, C4Quaternion const&, C4Quaternion const&)
 C4Quaternion__Nlerp 00982630 f end=0098269F ; C4Quaternion::Nlerp(float, C4Quaternion const&, C4Quaternion const&)
+C33Matrix__FromEulerAnglesZYX 004C56D0 f end=004C581A
