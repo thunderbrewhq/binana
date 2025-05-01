@@ -1970,3 +1970,5 @@ Script_VoiceChat_IsPlayingLoopbackSound 00985E30 f end=00985E5D
 Script_VoiceChat_GetCurrentMicrophoneSignalLevel 00985E60 f end=00985E8A
 Script_VoiceChat_ActivatePrimaryCaptureCallback 00985E90 f end=00985E98
 Script_VoiceChat_StartCapture 00985EF0 f end=00985F6B
+Script_GetTokensFromGUID 0060BB70 f end=0060BF06
+Script_SendUnitSignal 0060BF10 f end=0060BF55

@@ -1,3 +1,4 @@
 CGItem_C__Unlock 00707020 f end=00707051
 CGItem_C__GetUseSpell 00707C60 f end=00707DA1
 CGItem_C__CanBeUsed 00708C10 f end=00708C1E
+CGItem_C__Use 00708C20 f end=007093EE

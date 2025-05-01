@@ -11,3 +11,5 @@ SI2__StopGlueMusic 009860E0 f end=00986128
 SI2__PlayVocalErrorSound 00986D00 f end=00986DD6
 SI2__Init 004C82E0 f end=004C8584
 SI2__RegisterCVars 004D1600 f end=004D1EB8
+SI2__DSP_MakeDSPsExpire 004CDC80 f end=004CDD32
+SI2__UpdateTaxiSounds 004D0110 f end=004D032D

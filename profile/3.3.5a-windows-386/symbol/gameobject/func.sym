@@ -1,2 +1,4 @@
 CGGameObject_C__StartInteraction 0070BAB0 f end=0070BAC0
 CGGameObject_C__GetInteractDistanceSquared 0070BAD0 f end=0070BB0D
+CGGameObject_C__CanChangeCursor 0070CE10 f end=0070CEB2
+CGGameObject_C__GetCursorFile 0070CEC0 f end=0070CF2E

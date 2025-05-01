@@ -1,3 +1,6 @@
 CGObject_C__HideHighlightType 00743BC0 f end=00743C6B
 CGObject_C__ShowHighlightType 00743C70 f end=00743D47
 CGObject_C__UpdateAllWorldObjects 007440F0 f end=00744100
+CGObject_C__IsReadyToDraw 00743450 f end=00743487
+CGObject_C__UpdateAllObjectEffectManagers 00744140 f end=00744150
+CGObject_C__GetQuestGiverCursor 00744640 f end=00744695

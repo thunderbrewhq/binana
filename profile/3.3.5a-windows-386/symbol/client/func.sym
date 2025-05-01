@@ -20,3 +20,7 @@ RussianNameNeedsDeclensions 0076E270 f end=0076E2A6
 IsRussian 007E1030 f end=007E1049
 CCommand_ReloadUI 00401B00 f end=00401B15
 PortraitInitialize 00618010 f end=0061810E
+SmartScreenRectClearGrid 00615890 f end=006158B1
+UpdatePendingPortraits 00616E80 f end=00616F8F
+ClientUpdateTaxiBenchmarkMode 00405130 f end=00405274
+ObjectFree 004D3100 f end=004D3130
