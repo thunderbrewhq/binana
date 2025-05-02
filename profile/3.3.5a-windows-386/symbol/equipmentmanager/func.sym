@@ -2,3 +2,6 @@ CGEquipmentManager__GetSetByID 005AE5C0 f end=005AE5F2
 CGEquipmentManager__GetFullIconPath 005AE6B0 f end=005AE751
 CGEquipmentManager__EnterWorld 005AD690 f end=005AD6A2
 CGEquipmentManager__InitializeGame 005AFBB0 f end=005AFC35
+CGEquipmentManager__CanUseEquipmentSets 005AD6B0 f end=005AD6F8
+CGEquipmentManager__SetContainsLockedItems 005AD940 f end=005AD9AF
+CGEquipmentManager__SetUsesLockedSlots 005AE040 f end=005AE0B3

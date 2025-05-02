@@ -31,3 +31,5 @@ RegisterSimpleFrameScriptMethods 0081B870 f end=0081B914
 UnregisterSimpleFrameScriptMethods 0081B920 f end=0081B9B8
 CSimpleFrame__OnLayerCursorExit 00490980 f end=00490A23
 CSimpleFrame__SetFrameStrata 00491020 f end=00491096
+CSimpleFrame__Hide 0048F620 f end=0048F65E
+CSimpleFrame__Show 0048F660 f end=0048F69E
