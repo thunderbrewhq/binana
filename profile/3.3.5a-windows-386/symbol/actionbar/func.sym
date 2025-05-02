@@ -30,3 +30,7 @@ CGActionBar__PickupAction 005ABE70 f end=005ABFF6
 CGActionBar__UpdateShapeShiftBar 005ABAC0 f end=005ABB32
 CGActionBar__UpdateOverrideSpellBar 005ABB40 f end=005ABBB8
 CGActionBar__EnterWorld 005AC0E0 f end=005AC0F4
+CGActionBar__UpdateItem 005AA5C0 f end=005AA91E
+CGActionBar__UpdateMacro 005AA920 f end=005AA9FC
+CGActionBar__UpdateCritter 005AAC00 f end=005AAD38
+CGActionBar__ReplaceSpell 005AAFD0 f end=005AB11A
