@@ -8,3 +8,4 @@ CSimpleTop__RegisterForEvent 00495880 f end=004958F9 ; CSimpleTop::RegisterForEv
 CSimpleTop__EnableEvents 004959F0 f end=00495AF2 ; CSimpleTop::EnableEvents()
 CSimpleTop__CSimpleTop 00495EB0 f end=004960C6 ; CSimpleTop::CSimpleTop()
 CSimpleTop__ShowFrame 004960D0 f end=004960FA ; CSimpleTop::ShowFrame(CSimpleFrame*, int)
+CSimpleTop__RaiseFrame 004951A0 f end=00495261

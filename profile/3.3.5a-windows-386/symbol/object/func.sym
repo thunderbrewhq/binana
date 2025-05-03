@@ -4,3 +4,6 @@ CGObject_C__UpdateAllWorldObjects 007440F0 f end=00744100
 CGObject_C__IsReadyToDraw 00743450 f end=00743487
 CGObject_C__UpdateAllObjectEffectManagers 00744140 f end=00744150
 CGObject_C__GetQuestGiverCursor 00744640 f end=00744695
+CGObject_C__UpdateEffectAttachments 00743AF0 f end=00743B3C
+CGObject_C__HandleScaleUpdate 007441D0 f end=00744228
+CGObject_C__SetInteractIconVisible 00745140 f end=007451AE
