@@ -26,3 +26,7 @@ Spell_C_GetItemCooldown 008090C0 f end=008090FA
 Spell_C_NeedsCooldownEvent 0080AC10 f end=0080AC85
 SpellParserParseText 0057ABC0 f end=0057AC93
 Spell_C_CancelSpell 00806200 f end=0080638A
+Spell_C_PlayMissileTrajectoryCastVisuals 00800DD0 f end=00801018
+Spell_C_CastSpell 0080CCE0 f end=0080DA32
+Spell_C_SetPlayerClass 008007A0 f end=008007D2
+Spell_C_CancelPlayerSpells 00809AC0 f end=00809AE1

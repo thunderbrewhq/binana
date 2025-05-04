@@ -7,3 +7,4 @@ SysMsgSetFilter 004B4EC0 f end=004B4ECD
 SysMsgGetFilter 004B4ED0 f end=004B4ED6
 SysMsgGetSeverityColor 004B4EE0 f end=004B4F2D
 SysMsgInitialize 004B4F30 f end=004B4F59
+SysMsgPrintf 004B5040 f end=004B5089

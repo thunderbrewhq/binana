@@ -1,0 +1,7 @@
+CCharacterComponent__RemoveLinkpt 004E79A0 f end=004E7A26
+CCharacterComponent__RemoveHandItem 004EB070 f end=004EB125
+CCharacterComponent__FreeComponent 004F16C0 f end=004F16E8
+CCharacterComponent__AddCape 004F21E0 f end=004F231E
+CCharacterComponent__AddItem 004F2640 f end=004F2804
+CCharacterComponent__AddItem 004F2830 f end=004F287F
+CCharacterComponent__AddItemBySlot 004F2880 f end=004F2974
