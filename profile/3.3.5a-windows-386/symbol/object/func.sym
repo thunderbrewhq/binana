@@ -7,3 +7,4 @@ CGObject_C__GetQuestGiverCursor 00744640 f end=00744695
 CGObject_C__UpdateEffectAttachments 00743AF0 f end=00743B3C
 CGObject_C__HandleScaleUpdate 007441D0 f end=00744228
 CGObject_C__SetInteractIconVisible 00745140 f end=007451AE
+CGObject_C__ShouldRender 00743300 f end=00743316

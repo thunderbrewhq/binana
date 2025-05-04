@@ -55,3 +55,7 @@ CM2Model__InitializeLoaded 00832EA0 f end=008344DC ; CM2Model::InitializeLoaded(
 CM2Model__AttachToScene 00834540 f end=00834628 ; CM2Model::AttachToScene(CM2Scene*)
 CM2Model__AttachToSceneRecursive 00834630 f end=0083465C ; CM2Model::AttachToSceneRecursive(CM2Scene*)
 CM2Model__Initialize 00834810 f end=008348CA ; CM2Model::Initialize(CM2Scene*, CM2Shared*, CM2Model*, unsigned int)
+CM2Model__ReplaceTexture 00825260 f end=00825404
+CM2Model__GetBoneSequenceId 008267E0 f end=0082686E
+CM2Model__HasAttachment 008273D0 f end=00827455
+CM2Model__DetachFromParent 008274F0 f end=00827553

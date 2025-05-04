@@ -73,3 +73,7 @@ CGGameUI__InitializeGame 0052B550 f end=0052BADA
 DisableFadingScreen 005ED080 f end=005ED116
 EnableFadingScreen 005ED480 f end=005ED587
 UpdateModelForUI 00618110 f end=00618176
+CGGameUI__ClosestObjectMatch 00520190 f end=00520403
+CGGameUI__InitClientControlState 00513880 f end=00513893
+CGGameUI__UpdateActivePlayer 00520F70 f end=00520FD2
+CGGameUI__OnClientControlChanged 00520FE0 f end=00521031

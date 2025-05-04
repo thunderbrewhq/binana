@@ -1,2 +1,4 @@
 CMissile__ClearInFlightMissiles 00703770 f end=00703802
 CMissile__UpdateStaticLists 00703B00 f end=00703B73
+CMissile__Initialize 00703B80 f end=00703BE0
+CMissile__Destroy 00703BE0 f end=00703C10

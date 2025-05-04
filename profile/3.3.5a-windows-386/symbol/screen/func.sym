@@ -3,3 +3,5 @@ ScrnLayerSetRect 004A8500 f end=004A8522
 ScrnLayerCreate 004A8BB0 f end=004A8C83
 ScrnGetStockFont 004A8DC0 f end=004A8DDF
 ScrnGetStockFontHeight 004A8DE0 f end=004A8DFF
+ScrnLayerGetFlags 004A8530 f end=004A853B
+ScrnLayerSetFlags 004A8540 f end=004A854E
