@@ -1,2 +1,4 @@
 CGUIMacros__RunMacro 00564DB0 f end=00564E8C
 CGUIMacros__GetMacroByIndex 00566A70 f end=00566A97
+CGUIMacros__GetMacroIndexByID 00564AB0 f end=00564AD6
+CGUIMacros__GetFullIconPath 00566AC0 f end=00566CC5

@@ -7,3 +7,4 @@ CSimpleTexture__LoadXML 00485F40 f end=00486B11 ; CSimpleTexture::LoadXML(XMLNod
 CSimpleTexture_SetVertexColor 0048C1C0 f end=0048C23E ; CSimpleTexture_SetVertexColor(lua_State*)
 CSimpleTexture_SetAlpha 0048C3E0 f end=0048C4B3 ; CSimpleTexture_SetAlpha(lua_State*)
 CSimpleTexture_SetTexCoord 0048E170 f end=0048E353 ; CSimpleTexture_SetTexCoord(lua_State*)
+CSimpleTexture__Init 00483060 f end=00483098

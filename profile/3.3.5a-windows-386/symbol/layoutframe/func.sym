@@ -17,3 +17,4 @@ CLayoutFrame__ClearAllPoints 0048A510 f end=0048A515 ; CLayoutFrame::ClearAllPoi
 CLayoutFrame__SetDeferredResize 0048A520 f end=0048A5F0 ; CLayoutFrame::SetDeferredResize(int)
 CLayoutFrame__DestroyLayout 0048B130 f end=0048B23B ; CLayoutFrame::DestroyLayout()
 CLayoutFrame__IsProtected 00489BB0 f end=00489C26
+CLayoutFrame__OnProtectedDetach 00489A40 f end=00489A5D

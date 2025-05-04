@@ -59,3 +59,4 @@ IEvtTimerDispatch 00481100 f end=00481289
 IEvtTimerKill 00481290 f end=0048138F
 IEvtTimerSet 00481390 f end=004814E4
 TInstanceIdTable_EvtContext__Unlock 00774660 f end=00774675
+EventInputGetMousePosition 0047D700 f end=0047D75E

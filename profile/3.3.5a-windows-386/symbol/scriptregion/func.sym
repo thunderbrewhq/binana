@@ -1,2 +1,3 @@
 CScriptRegion__CScriptRegion 00488310 f end=00488348 type="void __thiscall func(CScriptRegion* this)"
 CScriptRegion__ProtectedFunctionsAllowed 00488540 f end=0048856A
+CScriptRegion__RegisterScriptMethods 0049CA90 f end=0049CAB0

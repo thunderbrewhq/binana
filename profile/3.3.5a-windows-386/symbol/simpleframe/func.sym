@@ -33,3 +33,7 @@ CSimpleFrame__OnLayerCursorExit 00490980 f end=00490A23
 CSimpleFrame__SetFrameStrata 00491020 f end=00491096
 CSimpleFrame__Hide 0048F620 f end=0048F65E
 CSimpleFrame__Show 0048F660 f end=0048F69E
+CSimpleFrame__RegisterRegion 00490640 f end=00490672
+CSimpleFrame__AddFrameRegion 004906C0 f end=004906FF
+CSimpleFrame__RemoveFrameRegion 00490700 f end=00490765
+CSimpleFrame__SetFrameLevel 004910A0 f end=00491156

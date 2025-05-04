@@ -3,3 +3,4 @@ CameraSetupScreenProjection 004BEE60 f end=004BF0B9
 CameraSetupWorldProjection 004BF0C0 f end=004BF0E2
 CCamera__CCamera 004BF770 f end=004BFA4E
 CameraCreate 004BFCA0 f end=004BFCD4
+CameraGetCoord 004C1290 f end=004C12AA

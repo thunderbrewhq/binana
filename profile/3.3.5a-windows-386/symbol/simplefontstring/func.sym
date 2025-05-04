@@ -1,2 +1,4 @@
 CSimpleFontString__SetText 00483910 f end=00483A3D type="void __thiscall func(CSimpleFontString* this, char* a1, int32_t a2)"
 CSimpleFontString_SetFormattedText 0048D800 f end=0048D88B type="int32_t __stdcall func(lua_State* L)"
+CSimpleFontString__CSimpleFontString 00485240 f end=0048536F
+CSimpleFontString__GetFontHeight 00482290 f end=004822F4
