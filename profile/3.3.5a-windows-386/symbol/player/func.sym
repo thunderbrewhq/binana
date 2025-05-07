@@ -15,3 +15,5 @@ CGPlayer_C__HandleSkinning 006D6F40 f end=006D702E
 CGPlayer_C__LootUnit 006DAD90 f end=006DAF5E
 CGPlayer_C__EquipVisibleItem 006E08C0 f end=006E09D5
 CGPlayer_C__CountEquippedGems 006DE4D0 f end=006DE6C8
+GetInventorySlotToken 005D9F00 f end=005D9F3A
+CGPlayer_C__ValidateSlot 006D4A00 f end=006D4AC9

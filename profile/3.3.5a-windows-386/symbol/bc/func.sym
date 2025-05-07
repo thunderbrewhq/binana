@@ -115,3 +115,7 @@ OsCreateFileMode 00461EF0 f end=00461F68 type="Blizzard__File__Mode __stdcall fu
 OsFileGetDownloadFolder 00461F70 f end=00461F91 type="char* __stdcall func()"
 OsCreateFile 00461FA0 f end=00461FFA type="HOSFILE __stdcall func(char* fileName, uint32_t desiredAccess, uint32_t shareMode, uint32_t createDisposition, uint32_t flagsAndAttributes, uint32_t extendedFileType)"
 OsFileList 00462000 f end=0046209C
+Blizzard__Mopaq__SFileGetLastError 00426A30 f end=00426A36
+Blizzard__Mopaq__SFileUnloadFile 0042BF00 f end=0042BF1C
+Blizzard__Mopaq__SFileReadFile 0045A4B0 f end=0045A607
+Blizzard__Mopaq__SFileLoadFile 0045B5A0 f end=0045B69E

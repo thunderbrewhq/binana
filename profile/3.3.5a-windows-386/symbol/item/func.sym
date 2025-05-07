@@ -11,3 +11,5 @@ CGItem_C__IsBound 00708520 f end=00708538
 CGItem_C__GetRepairCost 00708540 f end=007086AF
 CGItem_C__IsPermanentlyBoundForTrade 00708B40 f end=00708BC3
 CGItem_C__GetInventoryArt 0070AA00 f end=0070AA40
+CGItem_C__GetSubtypeID 00707250 f end=0070727E
+CGItem_C__CanGoInSlot 00708500 f end=0070851E

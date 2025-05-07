@@ -1,1 +1,4 @@
 CCharacterSelection__ClearCharacterList 004E47F0 f end=004E4877
+CCharacterSelection__UpdateCharacterNameDeclension 004E2BD0 f end=004E2C2D
+CCharacterSelection__GetCharacterDisplay 004E2EF0 f end=004E2F10
+CCharacterSelection__Shutdown 004E38F0 f end=004E3A1D

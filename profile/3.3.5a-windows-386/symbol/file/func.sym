@@ -18,3 +18,5 @@ SFile__OpenEx 00424B50 f end=00424E44
 SFile__Load 00424E80 f end=00424F46
 SFile__LoadFile 00424F50 f end=00424F74
 SFile__Open 00424F80 f end=00424F98
+_SFileLoadFileEx 00421FF0 f end=00422031
+_SFileUnloadFile 00422090 f end=004220A9

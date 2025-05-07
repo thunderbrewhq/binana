@@ -19,3 +19,4 @@ CVGxStereoConvergenceCallback 00769C30 f end=00769C54 type="bool __stdcall func(
 CVGxStereoSeparationCallback 00769C60 f end=00769C84 type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxResolutionCallback 0076A220 f end=0076A57F type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxRefreshCallback 0076A580 f end=0076A62D type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
+CVar__Set 00766940 f end=00766982
