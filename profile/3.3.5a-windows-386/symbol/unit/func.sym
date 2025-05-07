@@ -70,3 +70,5 @@ CGUnit_C__IsShapeShifted 00721CA0 f end=00721CEE
 CGUnit_C__CanCurrentFormMount 00721DA0 f end=00721E68
 CGUnit_C__CancelFormPreventingMount 00726F30 f end=00727126
 CGUnit_C__FindRootVehicle 0074C650 f end=0074C749
+CGUnit_C__GetPredictedHealth 0071C2C0 f end=0071C2DC
+CGUnit_C__GetPredictedPower 0071C2E0 f end=0071C31F
