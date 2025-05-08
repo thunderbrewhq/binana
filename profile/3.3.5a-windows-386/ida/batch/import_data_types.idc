@@ -139,6 +139,7 @@ static import_data_types() {
 	apply_type(0x00681630, "void __stdcall func(CGxQuery** query, EGxQueryType type)");
 	apply_type(0x00681770, "void __stdcall func(uint32_t maxFPS)");
 	apply_type(0x00681790, "void __stdcall func(uint32_t maxFPSBk)");
+	apply_type(0x006817B0, "BlitFormat __stdcall func(EGxTexFormat format)");
 	apply_type(0x006817C0, "void __stdcall func()");
 	apply_type(0x006817E0, "int __stdcall func(char* format, ...)");
 	apply_type(0x00681950, "CGxFormat* __thiscall func(CGxFormat* this)");
@@ -150,6 +151,7 @@ static import_data_types() {
 	apply_type(0x006823A0, "void __stdcall func(EGxPrim primType, uint32_t indexCount, uint16_t* indices)");
 	apply_type(0x00682400, "void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)");
 	apply_type(0x006828C0, "void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, uint8_t* bone, uint32_t boneStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)");
+	apply_type(0x00682C50, "void __thiscall func(CGxDevice* this)");
 	apply_type(0x00682CB0, "void __thiscall func(CGxDevice* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)");
 	apply_type(0x00682CD0, "void __thiscall func(CGxDevice* this, uintptr_t hwnd, CGxFormat* format)");
 	apply_type(0x00682CF0, "void __thiscall func(CGxDevice* this)");
@@ -181,6 +183,7 @@ static import_data_types() {
 	apply_type(0x00683650, "uint32_t* __thiscall func(CGxDevice* this)");
 	apply_type(0x00683660, "void __thiscall func(CGxDevice* this, float depth)");
 	apply_type(0x00683670, "void __stdcall func()");
+	apply_type(0x00683B90, "CGxMatrixStack* __thiscall func(CGxMatrixStack* this)");
 	apply_type(0x00683D60, "void __stdcall func(CiRect* windowRect)");
 	apply_type(0x00683DB0, "void __stdcall func(CiRect* windowRect)");
 	apply_type(0x00683E00, "void __stdcall func(CiRect* windowRect)");
@@ -190,6 +193,7 @@ static import_data_types() {
 	apply_type(0x00683F00, "void __stdcall func(CiRect* windowRect)");
 	apply_type(0x00683F30, "void __stdcall func(CiRect* windowRect)");
 	apply_type(0x00683FB0, "CGxLight* __thiscall func(CGxLight* this)");
+	apply_type(0x00684070, "void __thiscall func(CGxGammaRamp* this, float gamma)");
 	apply_type(0x006840F0, "int32_t __thiscall func(CGxDevice* this, CGxFormat* format)");
 	apply_type(0x00684170, "void __thiscall func(CGxDevice* this, float gamma)");
 	apply_type(0x00684190, "int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)");
@@ -202,6 +206,7 @@ static import_data_types() {
 	apply_type(0x00684440, "void __thiscall func(CGxDevice* this, uint32_t a2, C4Plane* plane)");
 	apply_type(0x00684590, "void __thiscall func(CGxDevice* this, CImVector* c)");
 	apply_type(0x006845B0, "void __thiscall func(CGxDevice* this)");
+	apply_type(0x00684620, "CGxApiLight* __thiscall func(CGxApiLight* this, CGxLight* light)");
 	apply_type(0x006847D0, "void __thiscall func(CGxDevice* this, uint32_t a2, CGxLight* light, C3Vector* pos)");
 	apply_type(0x00684850, "void __thiscall func(CGxDevice* this, EGxPoolTarget target, uint32_t itemSize, uint32_t itemCount)");
 	apply_type(0x006848A0, "void __thiscall func(CGxDevice* this, CGxTex* texId, CiRect* updateRect, int32_t immediate)");
@@ -232,6 +237,7 @@ static import_data_types() {
 	apply_type(0x00685EB0, "void __thiscall func(CGxDevice* this, EGxMasterEnables state, int32_t enable)");
 	apply_type(0x00685F50, "void __thiscall func(CGxDevice* this, EGxRenderState which, void* value)");
 	apply_type(0x00685FB0, "void __thiscall func(CGxDevice* this)");
+	apply_type(0x00686120, "void __thiscall func(CGxDevice* this)");
 	apply_type(0x00687660, "CGxBuf* __thiscall func(CGxDevice* this, CGxPool* pool, uint32_t itemSize, uint32_t itemCount, uint32_t index)");
 	apply_type(0x006876D0, "CGxPool* __thiscall func(CGxDevice* this, EGxPoolTarget target, EGxPoolUsage usage, uint32_t size, EGxPoolHintBits hint, char* name)");
 	apply_type(0x006877C0, "void __thiscall func(CGxDevice* this, CGxQuery** query, EGxQueryType queryType)");
@@ -254,6 +260,7 @@ static import_data_types() {
 	apply_type(0x0068A090, "CGxMonitorMode* __thiscall func(TSGrowableArray_CGxMonitorMode* this)");
 	apply_type(0x0068A0F0, "void __thiscall func(TSGrowableArray_CGxMonitorMode* this, uint32_t count)");
 	apply_type(0x0068A4C0, "void __stdcall func(TSGrowableArray_CGxMonitorMode* modes)");
+	apply_type(0x0068A9A0, "void __thiscall func(CGxDeviceOpenGl* this, CGxFormat* format)");
 	apply_type(0x0068BBC0, "void __thiscall func(CGxDeviceOpenGl* this)");
 	apply_type(0x0068BF20, "CGxDevice* __stdcall func()");
 	apply_type(0x0068C220, "CGxDevice* __stdcall func()");
@@ -289,7 +296,7 @@ static import_data_types() {
 	apply_type(0x0068FD50, "void __thiscall func(CGxDeviceD3d* this)");
 	apply_type(0x0068FE80, "void __thiscall func(CGxDeviceD3d* this, uint8_t __flags)");
 	apply_type(0x0068FED0, "void __thiscall func(CGxDeviceD3d* this, CiRect* rect, TSGrowableArray_CImVector* pixels)");
-	apply_type(0x00690150, "void __thiscall func(CGxDeviceD3d* this, int32_t a2)");
+	apply_type(0x00690150, "void __thiscall func(CGxDeviceD3d* this, int32_t freeTextures)");
 	apply_type(0x00690230, "void __thiscall func(CGxDeviceD3d* this, EGxWM wm, int32_t param1, int32_t param2)");
 	apply_type(0x006904D0, "int32_t __thiscall func(CGxDeviceD3d* this, CGxFormat* format)");
 	apply_type(0x006905F0, "void __thiscall func(CGxDeviceD3d* this)");
@@ -312,7 +319,9 @@ static import_data_types() {
 	apply_type(0x006A0240, "bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query)");
 	apply_type(0x006A0310, "bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query, uint32_t* data)");
 	apply_type(0x006A0360, "LRESULT __stdcall func(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)");
+	apply_type(0x006A1690, "void __thiscall func(CGxDeviceD3d* this, int32_t freeQueries)");
 	apply_type(0x006A1950, "void __thiscall func(CGxDeviceD3d* this, CiRect* rect, TSGrowableArray_float* depths)");
+	apply_type(0x006A1C60, "void __thiscall func(CGxDeviceD3d* this, int32_t freePools)");
 	apply_type(0x006A2BB0, "void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)");
 	apply_type(0x006A2C00, "void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)");
 	apply_type(0x006A2D80, "void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)");
@@ -330,8 +339,8 @@ static import_data_types() {
 	apply_type(0x006A39E0, "void __thiscall func(CGxDeviceD3d* this, uint32_t stream, LPDIRECT3DVERTEXBUFFER9 buffer, uint32_t offset, uint32_t stride)");
 	apply_type(0x006A3A60, "void __thiscall func(CGxDeviceD3d* this)");
 	apply_type(0x006A3C40, "void __thiscall func(CGxDeviceD3d* this, CGxDeviceD3d__EDeviceState state, uint32_t val)");
-	apply_type(0x006A4190, "void __thiscall func(CGxDeviceD3d* this, uint32_t a1, uint32_t val)");
-	apply_type(0x006A41F0, "void __thiscall func(CGxDeviceD3d* this, uint32_t a1, uint32_t val)");
+	apply_type(0x006A4190, "void __thiscall func(CGxDeviceD3d* this, uint32_t tmu, uint32_t op)");
+	apply_type(0x006A41F0, "void __thiscall func(CGxDeviceD3d* this, uint32_t tmu, uint32_t op)");
 	apply_type(0x006A43D0, "void __thiscall func(CGxDeviceD3d* this)");
 	apply_type(0x006A4700, "void __thiscall func(CGxDeviceD3d* this)");
 	apply_type(0x006A4850, "void __thiscall func(CGxDeviceD3d* this)");
@@ -343,9 +352,11 @@ static import_data_types() {
 	apply_type(0x006A5940, "void __thiscall func(CGxDeviceD3d* this)");
 	apply_type(0x006A5A00, "void __thiscall func(CGxDeviceD3d* this, CRect* dst)");
 	apply_type(0x006A5A30, "void __thiscall func(CGxDeviceD3d* this)");
+	apply_type(0x006A5AA0, "void __thiscall func(CGxDeviceD3d* this, uint32_t tmu)");
 	apply_type(0x006A5C70, "void __thiscall func(CGxDeviceD3d* this, CGxShader* ps)");
 	apply_type(0x006A5D50, "void __thiscall func(CGxDeviceD3d* this, CGxShader* shader, const char* a2, const char* a3)");
 	apply_type(0x006A5E10, "void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)");
+	apply_type(0x006A5E40, "void __thiscall func(CGxDeviceD3d* this, int32_t freeShaders)");
 	apply_type(0x006A5EF0, "void __thiscall func(CGxDevice* this, CGxTex* texId, uint32_t* width, uint32_t* height, uint32_t* baseMip, uint32_t* mipCount)");
 	apply_type(0x006A74B0, "void __thiscall func(CGxDeviceD3d* this, uint32_t mask, CImVector color)");
 	apply_type(0x006A7940, "void __thiscall func(CGxDeviceD3d* this, uint32_t width, uint32_t height)");
@@ -375,6 +386,25 @@ static import_data_types() {
 	apply_type(0x006AB760, "MipBits* __stdcall func(uint32_t fourCC, uint32_t width, uint32_t height, char* filename, int32_t linenumber)");
 	apply_type(0x006AB810, "void __stdcall func(uint32_t fourCC, uint32_t width, uint32_t height, MipBits* bits)");
 	apply_type(0x006AB860, "void _stdcall func(C4Pixel* dest, uint32_t destWidth, uint32_t destHeight, C4Pixel* source, uint32_t sourceWidth, uint32_t sourceHeight)");
+	apply_type(0x006ABE00, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006ABE30, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006ABE60, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006ABE90, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006ABF40, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006ABFC0, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006AC030, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006AC0B0, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006ACCE0, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006ACCF0, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006ACD70, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006AE440, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006AE4A0, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006AE500, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006AE560, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006AE5C0, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006AE620, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006AE680, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
+	apply_type(0x006AE7C0, "int32_t __stdcall func(C2iVector* size, BlitAlpha alpha, void* src, uint32_t srcStride, BlitFormat srcFmt, void* dst, uint32_t dstStride, BlitFormat dstFmt)");
 	apply_type(0x006AE8B0, "void __thiscall func(CBLPFile* this)");
 	apply_type(0x006AE900, "int32_t __thiscall func(CBLPFile* this, void* fileBits)");
 	apply_type(0x006AE990, "void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t colorSize)");
@@ -605,6 +635,8 @@ static import_data_types() {
 	apply_type(0x009E5630, "Blizzard__File__FileInfo");
 	apply_type(0x009E9EC8, "uint32_t[7]");
 	apply_type(0x009EA04C, "TInstanceId_EvtContext__v_table");
+	apply_type(0x00A2DAF8, "uint32_t[13]");
+	apply_type(0x00A2DB60, "uint32_t[13]");
 	apply_type(0x00A2DDC0, "CGxDevice__v_table");
 	apply_type(0x00A2E198, "CGxDevice__v_table");
 	apply_type(0x00A2E4A8, "D3DFORMAT[8]");
@@ -619,6 +651,8 @@ static import_data_types() {
 	apply_type(0x00A2F964, "D3DBLEND[12]");
 	apply_type(0x00A2F994, "D3DBLEND[12]");
 	apply_type(0x00A2F9C4, "D3DTEXTUREADDRESS[2]");
+	apply_type(0x00A2F9CC, "int32_t[6]");
+	apply_type(0x00A2F9E4, "int32_t[6][2]");
 	apply_type(0x00A2FA14, "D3DCMPFUNC[4]");
 	apply_type(0x00A2FA24, "D3DCULL[3]");
 	apply_type(0x00AB6350, "WowClientDB_Startup_StringsRec");
@@ -929,7 +963,10 @@ static import_data_types() {
 	apply_type(0x00C5FFF4, "uint32_t");
 	apply_type(0x00C5FFF8, "HSLOG");
 	apply_type(0x00C60300, "C2iVector");
+	apply_type(0x00C60618, "uint32_t");
 	apply_type(0x00C606F8, "D3DLIGHT9");
+	apply_type(0x00C60930, "BLIT_FUNCTION[13][13][4]");
+	apply_type(0x00C613C4, "int32_t");
 	apply_type(0x00CA1690, "float");
 	apply_type(0x00CA1694, "int32_t");
 	apply_type(0x00CA1718, "float");
