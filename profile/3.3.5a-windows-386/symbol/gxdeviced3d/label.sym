@@ -10,10 +10,12 @@ CGxDeviceD3d__s_gxAttribToD3dAttribUsageIndex 00A2F924 l type="uint32_t[14]"
 CGxDeviceD3d__s_srcBlend 00A2F964 l type="D3DBLEND[12]"
 CGxDeviceD3d__s_dstBlend 00A2F994 l type="D3DBLEND[12]"
 CGxDeviceD3d__s_wrapModes 00A2F9C4 l type="D3DTEXTUREADDRESS[2]"
+CGxDeviceD3d__s_colorOp 00A2F9CC l type="int32_t[6]"
+CGxDeviceD3d__s_colorArgs 00A2F9E4 l type="int32_t[6][2]"
 CGxDeviceD3d__s_cmpFunc 00A2FA14 l type="D3DCMPFUNC[4]"
 CGxDeviceD3d__s_cullMode 00A2FA24 l type="D3DCULL[3]"
 CGxDeviceD3d__s_GxTexFormatToUse 00AD8EF0 l type="EGxTexFormat[13]"
 CGxDeviceD3d__s_gxAttribToD3dAttribType 00AD8F24 l type="D3DDECLTYPE[7]"
 CGxDeviceD3d__s_filterModes 00AD8F40 l type="D3DTEXTUREFILTERTYPE[6][3]"
-isIdent 00C60760 l
 d3dLight 00C606F8 l type="D3DLIGHT9"
+isIdent 00C60760 l

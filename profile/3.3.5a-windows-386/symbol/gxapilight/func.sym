@@ -1,0 +1,1 @@
+CGxApiLight__operator_equals 00684620 f end=006847C8 type="CGxApiLight* __thiscall func(CGxApiLight* this, CGxLight* light)" ; CGxApiLight::operator=(CGxLight const&)

@@ -8,3 +8,5 @@ CGxDevice__s_uiPixelShader 00C5FFFC l
 CGxDevice__s_clientAdjust 00C60300 l type="C2iVector"
 CGxDevice__kWinMinSize 00AD8BC0 l type="C2iVector"
 CGxDevice__kWinAspect 00C5FFF0 l type="float"
+CGxDevice__s_texFormatBytesPerBlock 00A2DB60 l type="uint32_t[13]"
+CGxDevice__s_texFormatBitDepth 00A2DAF8 l type="uint32_t[13]"
