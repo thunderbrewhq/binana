@@ -19,7 +19,7 @@
 #include "gx/types.h"
 #include "gx/caps.h"
 #include "gx/format.h"
-#include "gx/light.h"
+#include "gx/apilight.h"
 #include "gx/state_bom.h"
 #include "gx/shader.h"
 #include "gx/matrix_stack.h"
@@ -69,13 +69,6 @@ struct CGxDevice__TextureTarget {
   CGxTex* m_texture;
   uint32_t m_plane;
   void* m_apiSpecific;
-};
-
-// GxLight?
-struct CGxDevice__GxLight {
-  CGxLight light;
-  int32_t enable;
-  uint16_t flags;
 };
 
 // 84 functions
@@ -311,6 +304,7 @@ struct CGxDevice {
   int32_t m_context;
   // Set to zero by CGxDevice::ScenePresent
   // prevents Draw from working if != 0
+  // m_inRenderPass?
   int32_t intF5C;
   int32_t m_windowVisible;
   // set to 1 by ICursorClip
@@ -339,7 +333,7 @@ struct CGxDevice {
   CRect m_scissorRect;
   // something to do with lighting?
   // uint32_t unk2548[72];
-  CGxDevice__GxLight m_lights[4];
+  CGxApiLight m_lights[4];
   // uint32_t unk2536[60];
   TSHashTable_CGxShader_HASHKEY_STRI m_shaderList[6];
   uint32_t m_appMasterEnables;

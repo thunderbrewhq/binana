@@ -5,8 +5,7 @@
 
 #include "storm/array.h"
 
-DECLARE_ENUM(BlitAlpha);
-DECLARE_ENUM(BlitFormat);
+
 DECLARE_ENUM(EGxApi);
 DECLARE_ENUM(EGxBlend);
 DECLARE_ENUM(EGxBuffer);
@@ -37,31 +36,6 @@ DECLARE_STRUCT(C4Pixel);
 DECLARE_STRUCT(C4LargePixel);
 DECLARE_STRUCT(MipBits);
 DECLARE_STRUCT(CGxGammaRamp);
-
-enum BlitAlpha {
-  BlitAlpha_0 = 0,
-  BlitAlpha_1 = 1,
-  BlitAlpha_8 = 2,
-  BlitAlpha_Filler = 3,
-  BlitAlphas_Last = 4
-};
-
-enum BlitFormat {
-  BlitFormat_Unknown = 0,
-  BlitFormat_Abgr8888 = 1,
-  BlitFormat_Argb8888 = 2,
-  BlitFormat_Argb4444 = 3,
-  BlitFormat_Argb1555 = 4,
-  BlitFormat_Rgb565 = 5,
-  BlitFormat_Dxt1 = 6,
-  BlitFormat_Dxt3 = 7,
-  BlitFormat_Dxt5 = 8,
-  BlitFormat_Uv88 = 9,
-  BlitFormat_Gr1616F = 10,
-  BlitFormat_R32F = 11,
-  BlitFormat_D24X8 = 12,
-  BlitFormats_Last = 13
-};
 
 enum EGxApi {
   GxApi_OpenGl = 0,
@@ -224,22 +198,22 @@ enum EGxRenderState {
   GxRs_TexGen5 = 58,
   GxRs_TexGen6 = 59,
   GxRs_TexGen7 = 60,
-  GxRs_Unk61 = 61,
-  GxRs_Unk62 = 62,
-  GxRs_Unk63 = 63,
-  GxRs_Unk64 = 64,
-  GxRs_Unk65 = 65,
-  GxRs_Unk66 = 66,
-  GxRs_Unk67 = 67,
-  GxRs_Unk68 = 68,
-  GxRs_Unk69 = 69,
-  GxRs_Unk70 = 70,
-  GxRs_Unk71 = 71,
-  GxRs_Unk72 = 72,
-  GxRs_Unk73 = 73,
-  GxRs_Unk74 = 74,
-  GxRs_Unk75 = 75,
-  GxRs_Unk76 = 76,
+  GxRs_TextureShader0 = 61,
+  GxRs_TextureShader1 = 62,
+  GxRs_TextureShader2 = 63,
+  GxRs_TextureShader3 = 64,
+  GxRs_TextureShader4 = 65,
+  GxRs_TextureShader5 = 66,
+  GxRs_TextureShader6 = 67,
+  GxRs_TextureShader7 = 68,
+  GxRs_TextureCoord0 = 69,
+  GxRs_TextureCoord1 = 70,
+  GxRs_TextureCoord2 = 71,
+  GxRs_TextureCoord3 = 72,
+  GxRs_TextureCoord4 = 73,
+  GxRs_TextureCoord5 = 74,
+  GxRs_TextureCoord6 = 75,
+  GxRs_TextureCoord7 = 76,
   GxRs_VertexShader = 77,
   GxRs_PixelShader = 78,
   GxRs_PointScale = 79,
@@ -247,7 +221,7 @@ enum EGxRenderState {
   GxRs_PointScaleMin = 81,
   GxRs_PointScaleMax = 82,
   GxRs_PointSprite = 83,
-  GxRs_Unk84 = 84,
+  GxRs_LineWidth = 84, // LineWidth?
   GxRs_ColorMaterial = 85,
   GxRenderStates_Last = 86
 };
@@ -299,7 +273,8 @@ enum EGxTexCommand {
   GxTex_Lock = 0,
   GxTex_Latch = 1,
   GxTex_Unlock = 2,
-  GxTexCommands_Last = 3
+  GxTex_3 = 3,
+  GxTexCommands_Last = 4
 };
 
 enum EGxTexFilter {

@@ -1,0 +1,10 @@
+#ifndef WIN_LARGEINTEGER_H
+#define WIN_LARGEINTEGER_H
+
+DECLARE_STRUCT(LARGE_INTEGER);
+
+struct LARGE_INTEGER {
+  int64_t QuadPart;
+};
+
+#endif

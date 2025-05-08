@@ -48,6 +48,7 @@
 #include "framescript/event_object.h"
 
 #include "gx/batch.h"
+#include "gx/blit.h"
 #include "gx/buffer.h"
 #include "gx/caps.h"
 #include "gx/device.h"

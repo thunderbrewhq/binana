@@ -216,9 +216,9 @@ struct CGxDeviceD3d {
   LPDIRECT3DDEVICE9 m_d3dDevice;
   D3DCAPS9 m_d3dCaps;
   int32_t m_d3dIsHwDevice;
-  int32_t m_d3dNVAPI; 
+  int32_t m_d3dNVAPI; // UC
   uint32_t m_d3dStereoEnabled; // UC
-  uint32_t m_d3dStereoRestore; // m_d3dStereoRestore
+  uint32_t m_d3dStereoRestore; // UC m_d3dStereoRestore
   uint32_t m_d3dStereoHandle; // UC
   float m_d3dStereoConvergence; // UC
   float m_d3dStereoSeparation; // UC
@@ -239,11 +239,14 @@ struct CGxDeviceD3d {
   LPDIRECT3DSURFACE9 m_defDepthSurface;
   // used in DeviceReadPixels
   LPDIRECT3DSURFACE9 surface3B44; // m_backBufferSurface?
-  LPDIRECT3DQUERY9 m_eventQuery; // m_queryEvent? m_eventQuery?
+  LPDIRECT3DQUERY9 m_eventQuery; // UC m_queryEvent? m_eventQuery?
   int32_t m_hwCursorDirty;
   LPDIRECT3DTEXTURE9 m_hwCursorTexture;
   LPDIRECT3DSURFACE9 m_hwCursorBitmap;
-  CGxTex* texture3B58;
+  // Used by CGxDeviceD3d::ITexForceRecreation
+  //   8x8 green square
+  //   used as a placeholder when a texture is released
+  CGxTex* texture3B58; // m_placeholderTexture?
   LPDIRECT3DVERTEXDECLARATION9 m_d3dCurrentVertexDecl;
   LPDIRECT3DINDEXBUFFER9 m_d3dCurrentIndexBuf;
   LPDIRECT3DVERTEXBUFFER9 m_d3dVertexStreamBuf[8];

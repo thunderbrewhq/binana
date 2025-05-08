@@ -21,7 +21,7 @@ enum CGxFormat__Format {
 };
 
 struct CGxFormat {
-  uint32_t unk0;
+  uint32_t apiSpecificModeID;
   bool hwTnL;
   bool hwCursor; // 0x5, UC
   int8_t fixLag;
@@ -33,19 +33,15 @@ struct CGxFormat {
                   // set by CVGxTripleBufferCallback
   uint32_t backBufferCount; // buffering? buffer? framebufferCount?
   uint32_t sampleCount;
-  float multisampleQuality; // UC, write at 00769693
+  float sampleQuality; // UC, write at 00769693
   CGxFormat__Format colorFormat;
   uint32_t refreshRate;
   uint32_t vsync;
   bool stereoEnabled; // UC, 34
   // something to do with fixed function?
   // write at 0076AD4C
-  uint32_t unk38;
-  uint32_t unk3C;
-  uint32_t unk40;
-  uint32_t unk44;
-  uint32_t unk48;
-  uint32_t unk4C;
+  // vertexShaderTarget ?
+  int32_t fixedFunction[6];
   C2iVector pos;
 };
 
