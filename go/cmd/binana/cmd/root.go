@@ -10,7 +10,7 @@ import (
 )
 
 // rootCmd represents the base command when called without any subcommands
-var rootCmd = &cobra.Command{
+var root = cobra.Command{
 	Use:   "binana",
 	Short: "Binana helper tool",
 }
@@ -18,27 +18,21 @@ var rootCmd = &cobra.Command{
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
-	err := rootCmd.Execute()
+	err := root.Execute()
 	if err != nil {
 		os.Exit(1)
 	}
 }
 
 func init() {
-	// Here you will define your flags and configuration settings.
-	// Cobra supports persistent flags, which, if defined here,
-	// will be global for your application.
+	generate_cmd.Flags().StringP("profile", "p", "3.3.5a", "the game profile")
+	generate_cmd.Flags().BoolP("compress", "c", true, "enable/disable compression of the x64dbg database file")
 
-	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.binana.yaml)")
+	check_cmd.Flags().Bool("bounds", false, "check for bad function boundaries")
+	check_cmd.Flags().Bool("constructors", false, "check for outdated class constructor names")
 
-	// Cobra also supports local flags, which will only run
-	// when this action is called directly.
-	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-
-	generate.Flags().StringP("profile", "p", "3.3.5a", "the game profile")
-	generate.Flags().BoolP("compress", "c", true, "enable/disable compression of the x64dbg database file")
-
-	rootCmd.AddCommand(generate)
-	rootCmd.AddCommand(format_symbols_cmd)
-	rootCmd.AddCommand(x64dbg_typesort)
+	root.AddCommand(&generate_cmd)
+	root.AddCommand(&format_symbols_cmd)
+	root.AddCommand(&x64dbg_typesort_cmd)
+	root.AddCommand(&check_cmd)
 }

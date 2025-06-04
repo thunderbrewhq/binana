@@ -23,17 +23,19 @@ var (
 )
 
 type info_schema struct {
-	OS         string `json:"os"`
-	Arch       string `json:"arch"`
-	ModuleName string `json:"module_name"`
-	ModuleBase string `json:"module_base"`
+	OS            string `json:"os"`
+	Arch          string `json:"arch"`
+	ModuleName    string `json:"module_name"`
+	ModuleBase    string `json:"module_base"`
+	FunctionCount uint64 `json:"function_count"`
 }
 
 type Info struct {
-	OS         string
-	Arch       string
-	ModuleName string
-	ModuleBase uint64
+	OS            string
+	Arch          string
+	ModuleName    string
+	ModuleBase    uint64
+	FunctionCount uint64
 }
 
 func read_info(filename string, info *Info) (err error) {
@@ -67,6 +69,8 @@ func read_info(filename string, info *Info) (err error) {
 	if err != nil {
 		return
 	}
+
+	info.FunctionCount = is.FunctionCount
 
 	return
 }

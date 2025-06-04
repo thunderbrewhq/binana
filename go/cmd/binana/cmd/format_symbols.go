@@ -81,12 +81,12 @@ func format_symbols(in io.Reader, out io.Writer) {
 	}
 }
 
-func format_symbols_func(cmd *cobra.Command, args []string) {
+func format_symbols_run(cmd *cobra.Command, args []string) {
 	format_symbols(os.Stdin, os.Stdout)
 }
 
-var format_symbols_cmd = &cobra.Command{
+var format_symbols_cmd = cobra.Command{
 	Use:   "format-symbols",
 	Short: "format symbols from stdin",
-	Run:   format_symbols_func,
+	Run:   format_symbols_run,
 }

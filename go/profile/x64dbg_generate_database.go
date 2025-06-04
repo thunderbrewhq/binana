@@ -33,7 +33,7 @@ func (profile *Profile) generate_x64dbg_database(compress bool) (err error) {
 			relative_end_address -= 1
 		}
 
-		if relative_end_address < relative_start_address || relative_end_address-relative_start_address >= 10000 {
+		if relative_end_address < relative_start_address || relative_end_address-relative_start_address >= 50000 {
 			fmt.Printf("Strange symbol %s %08x %08x (offset %d)\n", entry.Name, relative_start_address, relative_end_address, relative_end_address-relative_start_address)
 		}
 

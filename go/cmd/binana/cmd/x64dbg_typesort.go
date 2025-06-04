@@ -8,13 +8,13 @@ import (
 	"github.com/thunderbrewhq/binana/go/x64dbg"
 )
 
-var x64dbg_typesort = &cobra.Command{
+var x64dbg_typesort_cmd = cobra.Command{
 	Use:   "x64dbg-typesort [types.json file]",
 	Short: "sort a x64dbg types file",
-	Run:   x64dbg_typesort_func,
+	Run:   x64dbg_typesort_run,
 }
 
-func x64dbg_typesort_func(cmd *cobra.Command, args []string) {
+func x64dbg_typesort_run(cmd *cobra.Command, args []string) {
 	types, err := x64dbg.LoadTypes(args[0])
 	if err != nil {
 		panic(err)

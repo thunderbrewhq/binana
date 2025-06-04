@@ -13,7 +13,7 @@ const min_columns = 3
 type loader struct {
 	input       *bufio.Reader
 	table       Table
-	line_number int
+	line_number uint64
 }
 
 func (l *loader) read_line() (line string, err error) {
@@ -32,6 +32,7 @@ func (l *loader) parse_line(line string) (err error) {
 		err = fmt.Errorf("%w: line %d", err, l.line_number)
 		return
 	}
+	entry.LineNumber = l.line_number
 
 	err = l.table.Insert(&entry)
 	return

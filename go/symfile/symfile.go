@@ -22,6 +22,7 @@ var (
 
 // An entry in the table
 type Entry struct {
+	LineNumber uint64
 	// Undecorated, raw name
 	Name string
 	// Offset to the start of the function or data
