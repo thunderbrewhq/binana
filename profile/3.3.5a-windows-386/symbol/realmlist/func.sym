@@ -2,5 +2,5 @@ RealmListRegisterScriptFunctions 004DE4D0 f end=004DE4F3
 RealmListUnregisterScriptFunctions 004DE500 f end=004DE51C
 CRealmList__SetPreferredInfo 004DE960 f end=004DEAEB ; CRealmList::SetPreferredInfo(unsigned int, int, int)
 CRealmList__Initialize 004DF580 f end=004DF66C ; CRealmList::Initialize()
-CRealmList__UpdateList 004DF710 f end=004DFA4A ; CRealmList::UpdateList()
 CRealmList__Shutdown 004DF670 f end=004DF710
+CRealmList__UpdateList 004DF710 f end=004DFA4A ; CRealmList::UpdateList()

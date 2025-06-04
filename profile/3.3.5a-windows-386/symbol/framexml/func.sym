@@ -1,9 +1,9 @@
 FrameXML_LoadXML 00812530 f end=008125C0
 FrameXML_RegisterLoadProgressCallback 00812840 f end=00812869
+FrameXML_FreeHashNodes 00812B90 f end=00812B9D ; FrameXML_FreeHashNodes()
 FrameXML_CreateFrame 00812FA0 f end=008131CD
 FrameXML_RegisterFactory 00813D20 f end=00813DEF
 FrameXML_RegisterDefault 00813DF0 f end=00813EDC
 FrameXML_ProcessFile 00813EE0 f end=00814333
 FrameXML_CreateFrames 00814340 f end=008145A3
 FrameXML_CheckSignature 008165E0 f end=00816767
-FrameXML_FreeHashNodes 00812B90 f end=00812B9D ; FrameXML_FreeHashNodes()

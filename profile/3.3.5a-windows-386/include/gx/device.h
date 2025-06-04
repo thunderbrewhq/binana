@@ -213,7 +213,7 @@ struct CGxDevice__v_table {
   void* v_fn_57_TexCreate;
   // void TexDestroy(CGxTex* texId);
   void* v_fn_58_TexDestroy;
-  // int32_t TexCopy(CGxTex* sourceTex, CGxTex* destTex, const C2iVector& pos, const C2iVector& size, uint32_t level, uint32_t plane);
+  // int32_t TexCopy(CGxTex* destTex, CGxTex* sourceTex, const C2iVector& pos, const C2iVector& size, uint32_t level, uint32_t plane);
   void* v_fn_59_TexCopy;
   // bool TexStretch(CGxTex* sourceTex, CGxTex* destTex, const CiRect* destRect, const CiRect* sourceRect, uint32_t level, uint32_t plane);
   void* v_fn_60_TexStretch;
@@ -308,7 +308,7 @@ struct CGxDevice {
   int32_t intF5C;
   int32_t m_windowVisible;
   // set to 1 by ICursorClip
-  int32_t intF64;
+  int32_t m_windowFocus;
   // Incremented by CGxDevice::ScenePresent
   int32_t m_frameCount; // m_perfCounter?
   // seems to have the same place as CGxDeviceD3d::m_d3dNeedsReset (Alpha) 
@@ -357,13 +357,12 @@ struct CGxDevice {
   uint32_t m_primVertexSize;
   CGxBuf* m_primIndexBuf;
   int32_t m_primIndexDirty;
-  // EmergencyMem unk28C4[GxPoolTargets_Last];
+  // EmergencyMem m_emergencyMem[GxPoolTargets_Last];
   EmergencyMem m_emergencyMem[2]; // 0x28C4
   TSFixedArray_CGxAppRenderState m_appRenderStates;
   TSFixedArray_CGxStateBom m_hwRenderStates;
   // Accessed by ITexForceRecreation
-  // uint32_t unk2904[3]; // 0x2904 (size 0xC) // possibly: m_textures? TSList<CGxTex> ? 
-  TSExplicitList_CGxTex m_textures;
+  TSExplicitList_CGxTex m_textures; // 0x2904 (size 0xC)
   CGxDevice__TextureTarget m_textureTarget[2];
   TSExplicitList_CGxQuery m_queryList; // 0x2928
   int32_t m_scrShotClick; // 0x2934

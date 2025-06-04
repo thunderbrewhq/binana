@@ -1,15 +1,17 @@
-C44Matrix__C44Matrix 00407F40 f end=00407F76
-C44Matrix__operator_assign_C44Matrix 00407F80 f end=00407FEA
-CRndSeed__SetSeed 004C1510 f
-C44Matrix__Determinant 004C1930 f
-C44Matrix__Translate 004C1B30 f
-C44Matrix__Scale_C3Vector 004C1B90 f
-C44Matrix__Scale_float 004C1BF0 f
-C44Matrix__C44Matrix_C4Quaternion 004C1DE0 f
-operator_multiply_C44Matrix_C44Matrix 004C1F00 f
-operator_multiply_C3Vector_C44Matrix 004C21B0 f
-C44Matrix__operator_assignment_multiply 004C2370 f
+C44Matrix__constructor 00407F40 f end=00407F76 type="C44Matrix* __thiscall func(C44Matrix* this)"
+C44Matrix__operator_assign_C44Matrix 00407F80 f end=00407FEA type="float __thiscall func(C44Matrix* this, C44Matrix* rhs)"
+CRndSeed__SetSeed 004C1510 f end=004C1584
+C44Matrix__Determinant 004C1930 f type="float __thiscall func(C44Matrix* this)"
+C44Matrix__Translate 004C1B30 f type="void __thiscall func(C44Matrix* this, C3Vector* move)"
+C44Matrix__Scale 004C1B90 f type="void __thiscall func(C44Matrix* this, C3Vector* scale)" ; void C44Matrix::Scale(const C3Vector& scale)
+C44Matrix__Scale 004C1BF0 f type="void __thiscall func(C44Matrix* this, float scale)" ; void C44Matrix::Scale(float scale)
+C44Matrix__constructor 004C1DE0 f type="C44Matrix* __thiscall func(C44Matrix* this, C4Quaternion* a)"
+operator_multiply_C44Matrix_C44Matrix 004C1F00 f type="C44Matrix* __stdcall func(C44Matrix* __return_ptr result, C44Matrix* l, C44Matrix* r)"
+operator_multiply_C44Matrix_float 004C2120 f type="C44Matrix* __stdcall func(C44Matrix* __return_ptr result, C44Matrix* l, float a)"
+operator_multiply_C3Vector_C44Matrix 004C21B0 f type="C3Vector* __stdcall func(C3Vector* __return_ptr result, C3Vector* l, C44Matrix* a)"
+C44Matrix__operator_assignment_multiply_C44Matrix 004C2370 f type="void __thiscall func(C44Matrix* this, C44Matrix* a)"
 C44Matrix__Transpose 004C23D0 f
+C44Matrix__Adjoint 004C2440 f type="C44Matrix* __thiscall func(C44Matrix* this, C44Matrix* __return_ptr result)" ; C44Matrix C44Matrix::Adjoint()
 C44Matrix__Inverse 004C2F90 f
 C44Matrix__AffineInverse 004C2FC0 f
 C44Matrix__AffineInvertInPlace 004C30A0 f
@@ -18,15 +20,16 @@ C44Matrix__RotateAroundX 004C3300 f
 C44Matrix__RotateAroundY 004C3340 f
 C44Matrix__RotateAroundZ 004C3380 f
 C44Matrix__Rotate 004C33C0 f
-C3Vector__Normalize_1 004C3420 f
-C3Vector__Normalize_2 004C3600 f
+C3Vector__Normalize 004C3420 f type="void __thiscall func(C3Vector* this)"
+C3Vector__Normalize 004C3600 f type="void __thiscall func(C3Vector* this)"
 TSGrowableArray_C3Vector__SetCount 004C4B80 f end=004C4C75 type="void __thiscall func(TSGrowableArray_C3Vector* this, uint32_t count)"
 C33Matrix__operator_assign_C33Matrix 004C51B0 f
 C33Matrix__Rotation 004C5550 f end=004C55A2
+C33Matrix__FromEulerAnglesZYX 004C56D0 f end=004C581A
 TSGrowableArray_C2Vector__SetCount 0057FDD0 f end=0057FE93 type="void __thiscall func(TSGrowableArray_C2Vector* this, uint32_t count)"
 TSGrowableArray_CImVector__SetCount 00616CA0 f end=00616D07 type="void __thiscall func(TSGrowableArray_CImVector* this, uint32_t count)"
-C3Vector__C3Vector 00982970 f end=009829AD ; C3Vector::C3Vector(CImVector const&)
-C4Vector__C4Vector 00984C90 f end=00984CDC ; C4Vector::C4Vector(CImVector const&)
+C44Matrix__Inverse 006A43A0 f type="C44Matrix* __thiscall func(C44Matrix *this, C44Matrix* __return_ptr result)"
 C4Quaternion__Slerp 00982460 f end=0098256C ; C4Quaternion::Slerp(float, C4Quaternion const&, C4Quaternion const&)
 C4Quaternion__Nlerp 00982630 f end=0098269F ; C4Quaternion::Nlerp(float, C4Quaternion const&, C4Quaternion const&)
-C33Matrix__FromEulerAnglesZYX 004C56D0 f end=004C581A
+C3Vector__constructor 00982970 f end=009829AD ; C3Vector::C3Vector(CImVector const&)
+C4Vector__constructor 00984C90 f end=00984CDC ; C4Vector::C4Vector(CImVector const&)

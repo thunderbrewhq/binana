@@ -1,5 +1,6 @@
 operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
 operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
+Blizzard__Mopaq__SFileGetLastError 00426A30 f end=00426A36
 Blizzard__Debug__ErrorStackAsText 004270D0 f end=004270E6
 Blizzard__File__Close 004270F0 f end=0042712F
 Blizzard__File__Delete 00427130 f end=0042716F ; Blizzard::File::Delete(char const*)
@@ -41,6 +42,7 @@ Blizzard__Time__FromFileTime 00428F00 f end=00428F56 type="Blizzard__Time__Times
 Blizzard__String__QuickFormat__QuickFormat 00429790 f end=004297C5
 Blizzard__String__MakeUnivPath 0042A9B0 f end=0042A9FB type="void __stdcall func(char* src, char* dst, int32_t count)"
 Blizzard__String__MakeBackslashPath 0042AA00 f end=0042AA4B type="void __stdcall func(char* src, char* dst, int32_t count)"
+Blizzard__Mopaq__SFileUnloadFile 0042BF00 f end=0042BF1C
 Blizzard__File__CreateDirectory 0042CEA0 f end=0042CEE9
 HoistAll 0042CFB0 f end=0042D43E
 System_File__Stacked__file_init 0042D440 f end=0042D4F4 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
@@ -92,6 +94,8 @@ System_File__Write 00455D20 f end=00455D3E type="int32_t __stdcall func(Blizzard
 System_File__read_locked 00457820 f end=00457904
 System_File__write_locked 00457910 f end=004579f4
 System_File__detect_io_mode 00459910 f end=00459998
+Blizzard__Mopaq__SFileReadFile 0045A4B0 f end=0045A607
+Blizzard__Mopaq__SFileLoadFile 0045B5A0 f end=0045B69E
 Blizzard__Mopaq__SFileOpenArchive 0045C480 f end=0045C5BA
 Blizzard__Streaming__InitializeStreaming 004616A0 f end=00461AF8
 OsCloseFile 00461B00 f end=00461B09 type="void __stdcall func(HOSFILE fileHandle)"
@@ -115,7 +119,3 @@ OsCreateFileMode 00461EF0 f end=00461F68 type="Blizzard__File__Mode __stdcall fu
 OsFileGetDownloadFolder 00461F70 f end=00461F91 type="char* __stdcall func()"
 OsCreateFile 00461FA0 f end=00461FFA type="HOSFILE __stdcall func(char* fileName, uint32_t desiredAccess, uint32_t shareMode, uint32_t createDisposition, uint32_t flagsAndAttributes, uint32_t extendedFileType)"
 OsFileList 00462000 f end=0046209C
-Blizzard__Mopaq__SFileGetLastError 00426A30 f end=00426A36
-Blizzard__Mopaq__SFileUnloadFile 0042BF00 f end=0042BF1C
-Blizzard__Mopaq__SFileReadFile 0045A4B0 f end=0045A607
-Blizzard__Mopaq__SFileLoadFile 0045B5A0 f end=0045B69E

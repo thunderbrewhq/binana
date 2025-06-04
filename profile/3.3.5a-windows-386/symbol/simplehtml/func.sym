@@ -1,5 +1,5 @@
 CSimpleHTML__FontUpdated 0096C750 f end=0096C764 ; CSimpleHTML::FontUpdated(CSimpleFontedFrameFont*, int)
-CSimpleHTML__CSimpleHTML 0096C820 f end=0096C922 ; CSimpleHTML::CSimpleHTML(CSimpleFrame*)
+CSimpleHTML__constructor 0096C820 f end=0096C922 ; CSimpleHTML::CSimpleHTML(CSimpleFrame*)
 CSimpleHTML__IsA 0096C960 f end=0096C995 ; CSimpleHTML::IsA(int) const
 CSimpleHTML__ParseIMG 0096C9E0 f end=0096CC8F ; CSimpleHTML::ParseIMG(XMLNode const*, CStatus*)
 CSimpleHTML__AddText 0096CC90 f end=0096CE72 ; CSimpleHTML::AddText(char const*, HTML_TEXT_TYPE, unsigned int)

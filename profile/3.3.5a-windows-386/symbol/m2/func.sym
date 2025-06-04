@@ -1,5 +1,5 @@
+M2CreateScene 0081C080 f end=0081C0AA
 M2GetCacheFlags 0081C0B0 f end=0081C0B6
 M2SetCacheFlags 0081C0C0 f end=0081C0CD
 M2Initialize 0081C6E0 f end=0081C747
-M2CreateScene 0081C080 f end=0081C0AA
 M2CreateScene 0095F650 f end=0095F66F

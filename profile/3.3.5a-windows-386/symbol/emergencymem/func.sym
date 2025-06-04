@@ -1,2 +1,2 @@
-EmergencyMem__Lock 00685E90 f end=00685EB0 type="void* __thiscall func(EmergencyMem* this, uint32_t a1)"
 EmergencyMem__Unlock 00682C40 f end=00682C45
+EmergencyMem__Lock 00685E90 f end=00685EB0 type="void* __thiscall func(EmergencyMem* this, uint32_t a1)"

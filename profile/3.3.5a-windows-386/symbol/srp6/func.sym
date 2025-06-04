@@ -1,5 +1,5 @@
 SRP6_Client__BeginAuthentication 009A8300 f end=009A83DF ; SRP6_Client::BeginAuthentication(char const*, char const*)
 SRP6_Client__CalculateProof 009A83E0 f end=009A88B1 ; SRP6_Client::CalculateProof(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int, SRP6_Random&)
 SRP6_Client__VerifyServerProof 009A88C0 f end=009A897C ; SRP6_Client::VerifyServerProof(unsigned char const*, unsigned int)
-SRP6_Random__SRP6_Random 009A8980 f end=009A89EA ; SRP6_Random::SRP6_Random(void const*, unsigned int)
+SRP6_Random__constructor 009A8980 f end=009A89EA ; SRP6_Random::SRP6_Random(void const*, unsigned int)
 SRP6_Random__GenerateRandomBytes 009A89F0 f end=009A8A9B ; SRP6_Random::GenerateRandomBytes(unsigned char*, unsigned int)

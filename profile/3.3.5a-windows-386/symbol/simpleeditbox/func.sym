@@ -1,11 +1,11 @@
-CSimpleEditBox__PasteFromClipboard 00965ED0 f end=00965F1D
-CSimpleEditBox__Insert 00965CE0 f end=00965D67
 CSimpleEditBox__DeleteSubstring 00962F90 f end=0096313E ; DeleteSubString(int, int, int)
 CSimpleEditBox__HighlightText 00963140 f end=009631A0 ; HighlightText(int, int)
 CSimpleEditBox__UpdateSizes 00963740 f end=00963946
 CSimpleEditBox__FontUpdated 009650E0 f end=00965114 ; FontUpdated(CSimpleFontedFrameFont*, int)
 CSimpleEditBox__OnFrameSizeChanged 009656D0 f end=009656F7 ; OnFrameSizeChanged(float, float)
 CSimpleEditBox__Insert 00965960 f end=00965CDB ; Insert(char const*, char const*, int, int, int)
+CSimpleEditBox__Insert 00965CE0 f end=00965D67
+CSimpleEditBox__PasteFromClipboard 00965ED0 f end=00965F1D
 CSimpleEditBox__SetMultiLine 00965F20 f end=009660D3 ; SetMultiLine(int)
 CSimpleEditBox__SetText 00966580 f end=009665FA ; SetText(char const*, char const*)
 CSimpleEditBox__SetHistoryLines 00966FD0 f end=00967017 ; SetHistoryLines(int)

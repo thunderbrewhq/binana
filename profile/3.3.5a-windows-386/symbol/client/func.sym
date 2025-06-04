@@ -1,4 +1,5 @@
 PatchFiles__qsortpatchfiles 00401200 f ; int __cdecl PatchFiles::qsortpatchfiles(char **, char **)
+CCommand_ReloadUI 00401B00 f end=00401B15
 SetPaths 00402B20 f end=00402B8B
 TimingMethodCallback 00403200 f end=00403294
 CCommand_TimingInfo 004032A0 f end=004032FF
@@ -7,6 +8,7 @@ ClientPostClose 004033C0 f end=004033D1
 StartupStreaming 00403600 f end=004036A4 type="void __stdcall func(char* manifest@<eax>)"
 WowClientInit 00404130 f end=004042BC
 InitializeEngineCallback 004047E0 f end=00404923
+ClientUpdateTaxiBenchmarkMode 00405130 f end=00405274
 PatchFiles__EnumPatchArchives 00405A10 f ; int __cdecl PatchFiles::EnumPatchArchives(OS_FILE_DATA *fileData, PatchOnDemand__Cache *cbParam)
 PatchFiles__LoadArchives 00405AB0 f ; int __thiscall PatchFiles::LoadArchives(PatchFiles *this, const char *localeCode, char a3)
 DestroyEngineCallback 004066D0 f end=0040673F
@@ -15,12 +17,10 @@ DestroyGlobal 00406B70 f end=00406C65
 CommonMain 00406C70 f end=00406D64
 quicksort 0047B800 f ; void __cdecl quicksort(unsigned int, unsigned int, int, int (__cdecl *)(unsigned int, unsigned int, int), int)
 ConvertPosition 0047FC90 f end=0047FDD4
+ObjectFree 004D3100 f end=004D3130
+SmartScreenRectClearGrid 00615890 f end=006158B1
+UpdatePendingPortraits 00616E80 f end=00616F8F
+PortraitInitialize 00618010 f end=0061810E
 NameNeedsDeclensions 0076DD20 f end=0076DD3B
 RussianNameNeedsDeclensions 0076E270 f end=0076E2A6
 IsRussian 007E1030 f end=007E1049
-CCommand_ReloadUI 00401B00 f end=00401B15
-PortraitInitialize 00618010 f end=0061810E
-SmartScreenRectClearGrid 00615890 f end=006158B1
-UpdatePendingPortraits 00616E80 f end=00616F8F
-ClientUpdateTaxiBenchmarkMode 00405130 f end=00405274
-ObjectFree 004D3100 f end=004D3130

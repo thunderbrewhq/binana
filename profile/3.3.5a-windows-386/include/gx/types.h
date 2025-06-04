@@ -24,6 +24,7 @@ DECLARE_ENUM(EGxQueryType);
 DECLARE_ENUM(EGxTexCommand);
 DECLARE_ENUM(EGxTexFilter);
 DECLARE_ENUM(EGxTexFormat);
+DECLARE_ENUM(EGxTexGen);
 DECLARE_ENUM(EGxTexTarget);
 DECLARE_ENUM(EGxTexWrapMode);
 DECLARE_ENUM(EGxXform);
@@ -221,7 +222,7 @@ enum EGxRenderState {
   GxRs_PointScaleMin = 81,
   GxRs_PointScaleMax = 82,
   GxRs_PointSprite = 83,
-  GxRs_LineWidth = 84, // LineWidth?
+  Unk84 = 84, // LineWidth? BlendFactor?
   GxRs_ColorMaterial = 85,
   GxRenderStates_Last = 86
 };
@@ -273,7 +274,7 @@ enum EGxTexCommand {
   GxTex_Lock = 0,
   GxTex_Latch = 1,
   GxTex_Unlock = 2,
-  GxTex_3 = 3,
+  GxTex_3 = 3, // 
   GxTexCommands_Last = 4
 };
 
@@ -302,6 +303,17 @@ enum EGxTexFormat {
   GxTex_R32F = 0xB,
   GxTex_D24X8 = 0xC,
   GxTexFormats_Last = 0xD,
+};
+
+enum EGxTexGen {
+  GxTexGen_Disable = 0x0,
+  GxTexGen_Object = 0x1,
+  GxTexGen_World = 0x2,
+  GxTexGen_View = 0x3,
+  GxTexGen_ViewReflection = 0x4,
+  GxTexGen_ViewNormal = 0x5,
+  GxTexGen_SphereMap = 0x6,
+  GxTexGens_Last = 0x7,
 };
 
 enum EGxTexTarget {

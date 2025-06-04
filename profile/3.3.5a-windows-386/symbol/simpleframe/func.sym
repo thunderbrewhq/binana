@@ -1,10 +1,11 @@
-CSimpleFrame__SetFrameAlpha 0048EA10 f end=0048EA32 type="void __thiscall func(CSimpleFrame* this, uint8_t alpha)" ; CSimpleFrame::SetFrameAlpha(unsigned char)
-CSimpleFrame__SetFrameDepth 0048F5D0 f end=0048F611
-CSimpleFrame_SetAlpha 0049F9E0 f end=0049FAA1 type="void __stdcall func(lua_State* L)"
 CSimpleFrame__GetScriptByName 0048E680 f end=0048E961 ; CSimpleFrame::GetScriptByName(char const*, FrameScript_Object::ScriptData&)
 CSimpleFrame__Raise 0048E9A0 f end=0048E9AF ; CSimpleFrame::Raise()
+CSimpleFrame__SetFrameAlpha 0048EA10 f end=0048EA32 type="void __thiscall func(CSimpleFrame* this, uint8_t alpha)" ; CSimpleFrame::SetFrameAlpha(unsigned char)
 CSimpleFrame__UnregisterForEvents 0048EA80 f end=0048EABE ; CSimpleFrame::UnregisterForEvents(int)
 CSimpleFrame__SetFrameScale 0048F580 f end=0048F5CC ; CSimpleFrame::SetFrameScale(float, bool)
+CSimpleFrame__SetFrameDepth 0048F5D0 f end=0048F611
+CSimpleFrame__Hide 0048F620 f end=0048F65E
+CSimpleFrame__Show 0048F660 f end=0048F69E
 CSimpleFrame__EnableEvent 0048F6A0 f end=0048F6E1 ; CSimpleFrame::EnableEvent(CSimpleEventType, unsigned int)
 CSimpleFrame__GetHitRect 0048F890 f end=0048F8D1 ; CSimpleFrame::GetHitRect(CRect&)
 CSimpleFrame__OnFrameSizeChanged 0048FA20 f end=0048FB0B ; CSimpleFrame::OnFrameSizeChanged(CAaRect const&)
@@ -13,10 +14,16 @@ CSimpleFrame__NotifyDrawLayerChanged 00490270 f end=004902C7 ; CSimpleFrame::Not
 CSimpleFrame__OnFrameSizeChanged 00490330 f end=00490357 ; CSimpleFrame::OnFrameSizeChanged(float, float)
 CSimpleFrame__PostLoadXML 00490410 f end=00490598 ; CSimpleFrame::PostLoadXML(XMLNode*, CStatus*)
 CSimpleFrame__SetBackdrop 004905A0 f end=004905F5 ; CSimpleFrame::SetBackdrop(CBackdropGenerator*)
+CSimpleFrame__RegisterRegion 00490640 f end=00490672
+CSimpleFrame__AddFrameRegion 004906C0 f end=004906FF
+CSimpleFrame__RemoveFrameRegion 00490700 f end=00490765
 CSimpleFrame__OnLayerUpdate 00490770 f end=00490831 ; CSimpleFrame::OnLayerUpdate(float)
 CSimpleFrame__OnFrameRender 00490840 f end=004908A0 ; CSimpleFrame::OnFrameRender(CRenderBatch*, unsigned int)
 CSimpleFrame__OnScreenSizeChanged 004908A0 f end=004908D7 ; CSimpleFrame::OnScreenSizeChanged()
+CSimpleFrame__OnLayerCursorExit 00490980 f end=00490A23
 CSimpleFrame__SetBeingScrolled 00490F60 f end=00491018 ; CSimpleFrame::SetBeingScrolled(int, int)
+CSimpleFrame__SetFrameStrata 00491020 f end=00491096
+CSimpleFrame__SetFrameLevel 004910A0 f end=00491156
 CSimpleFrame__UnparentFrame 00491160 f end=004911A8 ; CSimpleFrame::UnparentFrame(CSimpleFrame*)
 CSimpleFrame__SetParent 004911B0 f end=00491343 ; CSimpleFrame::SetParent(CSimpleFrame*)
 CSimpleFrame__GetBoundsRect 004913C0 f end=00491594 ; CSimpleFrame::GetBoundsRect(CRect&)
@@ -24,16 +31,9 @@ CSimpleFrame__UpdateScale 004915A0 f end=00491677 ; CSimpleFrame::UpdateScale(bo
 CSimpleFrame__HideThis 00491830 f end=004918EC ; CSimpleFrame::HideThis()
 CSimpleFrame__ShowThis 004918F0 f end=004919E4 ; CSimpleFrame::ShowThis(bool)
 CSimpleFrame__OnFrameRender 00491E00 f end=00491FB5 ; CSimpleFrame::OnFrameRender()
-CSimpleFrame__CSimpleFrame 004922F0 f end=004926A7 ; CSimpleFrame::CSimpleFrame(CSimpleFrame*)
+CSimpleFrame__constructor 004922F0 f end=004926A7 ; CSimpleFrame::CSimpleFrame(CSimpleFrame*)
 CSimpleFrame__LoadXML 004932C0 f end=00493A09 ; CSimpleFrame::LoadXML(XMLNode*, CStatus*)
 CSimpleFrame__RegisterScriptMethods 0049E540 f end=0049E560 ; CSimpleFrame::RegisterScriptMethods(lua_State*)
+CSimpleFrame_SetAlpha 0049F9E0 f end=0049FAA1 type="void __stdcall func(lua_State* L)"
 RegisterSimpleFrameScriptMethods 0081B870 f end=0081B914
 UnregisterSimpleFrameScriptMethods 0081B920 f end=0081B9B8
-CSimpleFrame__OnLayerCursorExit 00490980 f end=00490A23
-CSimpleFrame__SetFrameStrata 00491020 f end=00491096
-CSimpleFrame__Hide 0048F620 f end=0048F65E
-CSimpleFrame__Show 0048F660 f end=0048F69E
-CSimpleFrame__RegisterRegion 00490640 f end=00490672
-CSimpleFrame__AddFrameRegion 004906C0 f end=004906FF
-CSimpleFrame__RemoveFrameRegion 00490700 f end=00490765
-CSimpleFrame__SetFrameLevel 004910A0 f end=00491156

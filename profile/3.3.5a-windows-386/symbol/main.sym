@@ -1,6 +1,6 @@
 operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
 operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
-CDataStore__CDataStore 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
+CDataStore__constructor 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
 CDataStore__FetchWrite 00401070 f ; protected: int __thiscall CDataStore::FetchWrite(unsigned int,unsigned int,char const *,int)
 CDataStore__IsRead 004010D0 f ; CDataStore::IsRead() const
 CDataStore__Reset 004010E0 f ; CDataStore::Reset()
@@ -31,8 +31,8 @@ CommonMain 00406C70 f end=00406D64
 LoadingScreenSetTip 00407E30 f end=00407E3D
 LoadingScreenSetScreenTipForRaceData 00407E40 f end=00407E88
 LoadingScreenSetTransparent 00407EA0 f end=00407EE3
-C44Matrix__C44Matrix 00407F40 f end=00407F76
-C44Matrix__operator_assign_C44Matrix 00407F80 f end=00407FEA
+C44Matrix__constructor 00407F40 f end=00407F76 type="C44Matrix* __thiscall func(C44Matrix* this)"
+C44Matrix__operator_assign_C44Matrix 00407F80 f end=00407FEA type="float __thiscall func(C44Matrix* this, C44Matrix* rhs)"
 GxXformSetProjection 00408030 f end=00408049
 GxXformViewport 00408070 f end=004080D9 type="void __stdcall func(float* minX, float* maxX, float* minY, float* maxY, float* minZ, float* maxZ)"
 GxXformProjNativeTranspose 00408110 f end=0040820F
@@ -205,8 +205,8 @@ WowConnection__Disconnect 00466B50 f end=00466B8F ; WowConnection::Disconnect()
 WowConnection__SetEncryptionKey 00466BF0 f end=00466DA9 ; WowConnection::SetEncryptionKey(unsigned char const*, unsigned char, unsigned char, unsigned char const*, unsigned char)
 WowConnection__CloseSocket 00466DE0 f end=00466E29 ; WowConnection::CloseSocket(int)
 WowConnection__DoStreamReads 00466F00 f end=004670CA ; WowConnection::DoStreamReads()
-WowConnection__WowConnection 00467270 f end=00467330 ; WowConnection::WowConnection(int, sockaddr_in*, WowConnectionResponse*)
-WowConnection__WowConnection 00467330 f end=004673B9 ; WowConnection::WowConnection(WowConnectionResponse*, void (*)())
+WowConnection__constructor 00467270 f end=00467330 ; WowConnection::WowConnection(int, sockaddr_in*, WowConnectionResponse*)
+WowConnection__constructor 00467330 f end=004673B9 ; WowConnection::WowConnection(WowConnectionResponse*, void (*)())
 WowConnection__destructor 004673C0 f end=00467536 ; WowConnection::~WowConnection()
 WowConnection__Send 004675F0 f end=00467988 ; WowConnection::Send(CDataStore*, int)
 WowConnection__SendRaw 00467990 f end=00467B96 ; WowConnection::SendRaw(unsigned char*, int)
@@ -340,10 +340,10 @@ CSimpleTexture__Init 00483060 f end=00483098
 CSimpleTexture__SetTexCoord 004831D0 f end=00483220 ; CSimpleTexture::SetTexCoord(CRect const&)
 CSimpleFontString__SetText 00483910 f end=00483A3D type="void __thiscall func(CSimpleFontString* this, char* a1, int32_t a2)"
 CRenderBatch__Finish 00484450 f end=0048446D
-CSimpleTexture__CSimpleTexture 00484470 f end=004845E6 ; CSimpleTexture::CSimpleTexture(CSimpleFrame*, unsigned int, int)
+CSimpleTexture__constructor 00484470 f end=004845E6 ; CSimpleTexture::CSimpleTexture(CSimpleFrame*, unsigned int, int)
 CSimpleRender__DrawBatch 00484B00 f end=0048513D
-CSimpleFontString__CSimpleFontString 00485240 f end=0048536F
-CRenderBatch__CRenderBatch 00485530 f end=00485564
+CSimpleFontString__constructor 00485240 f end=0048536F
+CRenderBatch__constructor 00485530 f end=00485564
 CRenderBatch__QueueCallback 004858E0 f end=0048596F
 CRenderBatch__Clear 00485970 f end=004859D2
 CRenderBatch__Clear 00485F00 f end=00485F35
@@ -355,9 +355,9 @@ CSimpleRegion__HideThis 00487BF0 f type="void __thiscall func(CSimpleRegion* thi
 CSimpleRegion__ShowThis 00487C40 f type="void __thiscall func(CSimpleRegion* this)"
 CSimpleRegion__OnRegionChanged 00487CA0 f type="void __thiscall func(CSimpleRegion* this)"
 CSimpleRegion__OnColorChanged 00487D70 f type="void __thiscall func(CSimpleRegion* this, bool a2)"
-CSimpleRegion__CSimpleRegion 004880E0 f type="void __thiscall func(CSimpleRegion* this, CSimpleFrame* frame, uint32_t drawLayer, int32_t show)"
+CSimpleRegion__constructor 004880E0 f type="void __thiscall func(CSimpleRegion* this, CSimpleFrame* frame, uint32_t drawLayer, int32_t show)"
 CSimpleRegion__destructor 004881D0 f type="void __thiscall func(CSimpleRegion* this)"
-CScriptRegion__CScriptRegion 00488310 f end=00488348 type="void __thiscall func(CScriptRegion* this)"
+CScriptRegion__constructor 00488310 f end=00488348 type="void __thiscall func(CScriptRegion* this)"
 CScriptRegion__ProtectedFunctionsAllowed 00488540 f end=0048856A
 CLayoutFrame__IsResizePending 00488CF0 f end=00488CFA ; CLayoutFrame::IsResizePending()
 CLayoutFrame__GetHeight 00488D00 f end=00488D04 ; CLayoutFrame::GetHeight()
@@ -367,7 +367,7 @@ CLayoutFrame__CalculateRect 004893C0 f end=00489564 ; CLayoutFrame::CalculateRec
 CLayoutFrame__OnFrameResize 00489570 f end=00489690 ; CLayoutFrame::OnFrameResize()
 CLayoutFrame__SetProtectFlag 004896C0 f end=0048970E ; CLayoutFrame::SetProtectFlag(unsigned int)
 CLayoutFrame__ResizePending 004898B0 f end=00489978 ; CLayoutFrame::ResizePending()
-CLayoutFrame__CLayoutFrame 00489980 f end=004899EF
+CLayoutFrame__constructor 00489980 f end=004899EF
 CLayoutFrame__OnProtectedDetach 00489A40 f end=00489A5D
 CLayoutFrame__IsProtected 00489BB0 f end=00489C26
 CLayoutFrame__RegisterResize 00489C30 f end=00489D62 ; CLayoutFrame::RegisterResize(CLayoutFrame*, unsigned int)
@@ -417,7 +417,7 @@ CSimpleFrame__UpdateScale 004915A0 f end=00491677 ; CSimpleFrame::UpdateScale(bo
 CSimpleFrame__HideThis 00491830 f end=004918EC ; CSimpleFrame::HideThis()
 CSimpleFrame__ShowThis 004918F0 f end=004919E4 ; CSimpleFrame::ShowThis(bool)
 CSimpleFrame__OnFrameRender 00491E00 f end=00491FB5 ; CSimpleFrame::OnFrameRender()
-CSimpleFrame__CSimpleFrame 004922F0 f end=004926A7 ; CSimpleFrame::CSimpleFrame(CSimpleFrame*)
+CSimpleFrame__constructor 004922F0 f end=004926A7 ; CSimpleFrame::CSimpleFrame(CSimpleFrame*)
 CSimpleFrame__LoadXML 004932C0 f end=00493A09 ; CSimpleFrame::LoadXML(XMLNode*, CStatus*)
 GxCapsWindowSizeInScreenCoords 00493BF0 f end=00493C09
 CSimpleTop__RoundToPixelHeight 00493E00 f end=00493E85 ; CSimpleTop::RoundToPixelHeight(float)
@@ -431,9 +431,9 @@ CSimpleTop__OnLayerRender 00495410 f end=0049546A
 CSimpleTop__OnDisplaySizeChanged 004955E0 f end=00495667 ; CSimpleTop::OnDisplaySizeChanged(EVENT_DATA_SIZE const*, void*)
 CSimpleTop__RegisterForEvent 00495880 f end=004958F9 ; CSimpleTop::RegisterForEvent(CSimpleFrame*, CSimpleEventType, int, unsigned int)
 CSimpleTop__EnableEvents 004959F0 f end=00495AF2 ; CSimpleTop::EnableEvents()
-CSimpleTop__CSimpleTop 00495EB0 f end=004960C6 ; CSimpleTop::CSimpleTop()
+CSimpleTop__constructor 00495EB0 f end=004960C6 ; CSimpleTop::CSimpleTop()
 CSimpleTop__ShowFrame 004960D0 f end=004960FA ; CSimpleTop::ShowFrame(CSimpleFrame*, int)
-CSimpleFont__CSimpleFont 00496870 f end=00496915
+CSimpleFont__constructor 00496870 f end=00496915
 CScriptRegion__RegisterScriptMethods 0049CA90 f end=0049CAB0
 CSimpleFrame__RegisterScriptMethods 0049E540 f end=0049E560 ; CSimpleFrame::RegisterScriptMethods(lua_State*)
 CSimpleFrame_SetAlpha 0049F9E0 f end=0049FAA1 type="void __stdcall func(lua_State* L)"
@@ -441,7 +441,7 @@ CBackdropGenerator__SetBorderVertexColor 004A2630 f end=004A26C1 type="void __th
 CBackdropGenerator__DestroyTextures 004A26D0 f end=004A2779
 CBackdropGenerator__LoadXML 004A2780 f end=004A29CB ; _CBackdropGenerator::LoadXML(linkObject*, CStatus*)
 CBackdropGenerator__Generate 004A29D0 f end=004A2D34 type="void __thiscall func(CBackdropGenerator* this, CRect*)"
-CBackdropGenerator__CBackdropGenerator 004A2D40 f end=004A2DF9 type="void __thiscall func(CBackdropGenerator* this)"
+CBackdropGenerator__constructor 004A2D40 f end=004A2DF9 type="void __thiscall func(CBackdropGenerator* this)"
 CBackdropGenerator__SetOutput 004A2E00 f end=004A36EE type="void __thiscall func(CBackdropGenerator* this, CSimpleFrame* a1)"
 CScriptObject__RegisterScriptMethods 004A8190 f end=004A81A8
 FrameScript_GetObjectThis 004A81B0 f end=004A8235 ; FrameScript_GetObjectThis(lua_State*, int)
@@ -501,19 +501,22 @@ GxXformProjection 004BEC70 f end=004BEC88
 CCamera__SetupWorldProjection 004BECF0 f end=004BEE5E
 CameraSetupScreenProjection 004BEE60 f end=004BF0B9
 CameraSetupWorldProjection 004BF0C0 f end=004BF0E2
-CCamera__CCamera 004BF770 f end=004BFA4E
+CGxStateBom__operator_not_equal 004BF540 f type="int32_t __thiscall func(CGxStateBom* this, C3Vector* value)" ; bool CGxStateBom::operator!=(C3Vector& value)
+CCamera__constructor 004BF770 f end=004BFA4E
 CameraCreate 004BFCA0 f end=004BFCD4
 CameraGetCoord 004C1290 f end=004C12AA
-CRndSeed__SetSeed 004C1510 f
-C44Matrix__Determinant 004C1930 f
-C44Matrix__Translate 004C1B30 f
-C44Matrix__Scale_C3Vector 004C1B90 f
-C44Matrix__Scale_float 004C1BF0 f
-C44Matrix__C44Matrix_C4Quaternion 004C1DE0 f
-operator_multiply_C44Matrix_C44Matrix 004C1F00 f
-operator_multiply_C3Vector_C44Matrix 004C21B0 f
-C44Matrix__operator_assignment_multiply 004C2370 f
+CRndSeed__SetSeed 004C1510 f end=004C1584
+C44Matrix__Determinant 004C1930 f type="float __thiscall func(C44Matrix* this)"
+C44Matrix__Translate 004C1B30 f type="void __thiscall func(C44Matrix* this, C3Vector* move)"
+C44Matrix__Scale 004C1B90 f type="void __thiscall func(C44Matrix* this, C3Vector* scale)" ; void C44Matrix::Scale(const C3Vector& scale)
+C44Matrix__Scale 004C1BF0 f type="void __thiscall func(C44Matrix* this, float scale)" ; void C44Matrix::Scale(float scale)
+C44Matrix__constructor 004C1DE0 f type="C44Matrix* __thiscall func(C44Matrix* this, C4Quaternion* a)"
+operator_multiply_C44Matrix_C44Matrix 004C1F00 f type="C44Matrix* __stdcall func(C44Matrix* __return_ptr result, C44Matrix* l, C44Matrix* r)"
+operator_multiply_C44Matrix_float 004C2120 f type="C44Matrix* __stdcall func(C44Matrix* __return_ptr result, C44Matrix* l, float a)"
+operator_multiply_C3Vector_C44Matrix 004C21B0 f type="C3Vector* __stdcall func(C3Vector* __return_ptr result, C3Vector* l, C44Matrix* a)"
+C44Matrix__operator_assignment_multiply_C44Matrix 004C2370 f type="void __thiscall func(C44Matrix* this, C44Matrix* a)"
 C44Matrix__Transpose 004C23D0 f
+C44Matrix__Adjoint 004C2440 f type="C44Matrix* __thiscall func(C44Matrix* this, C44Matrix* __return_ptr result)" ; C44Matrix C44Matrix::Adjoint()
 C44Matrix__Inverse 004C2F90 f
 C44Matrix__AffineInverse 004C2FC0 f
 C44Matrix__AffineInvertInPlace 004C30A0 f
@@ -522,8 +525,8 @@ C44Matrix__RotateAroundX 004C3300 f
 C44Matrix__RotateAroundY 004C3340 f
 C44Matrix__RotateAroundZ 004C3380 f
 C44Matrix__Rotate 004C33C0 f
-C3Vector__Normalize_1 004C3420 f
-C3Vector__Normalize_2 004C3600 f
+C3Vector__Normalize 004C3420 f type="void __thiscall func(C3Vector* this)"
+C3Vector__Normalize 004C3600 f type="void __thiscall func(C3Vector* this)"
 TSGrowableArray_C3Vector__SetCount 004C4B80 f end=004C4C75 type="void __thiscall func(TSGrowableArray_C3Vector* this, uint32_t count)"
 C33Matrix__operator_assign_C33Matrix 004C51B0 f
 C33Matrix__Rotation 004C5550 f end=004C55A2
@@ -541,6 +544,10 @@ SI2__RegisterCVars 004D1600 f end=004D1EB8
 HeapUsageDestroy 004D27D0 f end=004D27DC
 HeapUsageInitialize 004D2A30 f end=004D2A95
 ObjectFree 004D3100 f end=004D3130
+ObjectUpdateHandler 004D73A0 f end=004D74CA
+ObjectCompressedUpdateHandler 004D74D0 f end=004D760E
+OnObjectDestroy 004D7610 f end=004D76D1
+ClntObjMgrInitialize 004D76E0 f end=004D7749
 CGlueMgr__InitializeFFX 004D7D20 f end=004D7D93
 CGlueMgr__UpdateWaitQueue 004D7DA0 f end=004D7E3A
 CGlueMgr__SetCurrentAccount 004D7F60 f end=004D7F82
@@ -629,7 +636,7 @@ CGlueMgr__PatchDownloadIdle 004E54D0 f end=004E5722
 CGlueMgr__ScanDLLFinished 004E5940 f end=004E59B1
 CSimpleModelFFX__SetModel 004E5ED0 f end=004E5EF7 ; CSimpleModelFFX::SetModel(CM2Model*)
 CSimpleModelFFX__LoadXML 004E5F00 f end=004E5F47 ; CSimpleModelFFX::LoadXML(XMLNode*, CStatus*)
-CSimpleModelFFX__CSimpleModelFFX 004E5F70 f end=004E60A3 ; CSimpleModelFFX::CSimpleModelFFX(CSimpleFrame*)
+CSimpleModelFFX__constructor 004E5F70 f end=004E60A3 ; CSimpleModelFFX::CSimpleModelFFX(CSimpleFrame*)
 CSimpleModelFFX__Render 004E6190 f end=004E6229 ; CSimpleModelFFX::Render(void*)
 CSimpleModelFFX__Create 004E6300 f end=004E632B ; CSimpleModelFFX::Create(CSimpleFrame*)
 CSimpleModelFFX__OnFrameRender 004E6330 f end=004E635E ; CSimpleModelFFX::OnFrameRender(CRenderBatch*, unsigned int)
@@ -678,7 +685,7 @@ CGWorldFrame__OnLayerUpdate 004FA040 f end=004FA371
 CGWorldFrame__SetupDefaultAction 004FA570 f end=004FA5CE
 CGWorldFrame__UnitClear 004FA5D0 f end=004FA5EF
 CGWorldFrame__OnWorldUpdate 004FA5F0 f end=004FABC5
-CGWorldFrame__CGWorldFrame 004FABD0 f end=004FAF5E
+CGWorldFrame__constructor 004FABD0 f end=004FAF5E
 CGWorldFrame__RenderWorld 004FAF90 f end=004FB079
 CGWorldFrame__OnFrameRender 004FB080 f end=004FB0AD
 Script_LoggingChat 004FBD00 f end=004FBD13
@@ -1671,6 +1678,7 @@ Script_CloseBankFrame 0057B9C0 f end=0057B9E0
 Script_GetNumBankSlots 0057BAB0 f end=0057BB30
 Script_GetBankSlotCost 0057BB30 f end=0057BBB3
 Script_PurchaseSlot 0057BBC0 f end=0057BC8A
+CGxMatrixStack__Identity 0057C340 f end=0057C397 type="void __thiscall func(CGxMatrixStack* this)"
 GxXformPop 0057C420 f end=0057C44A
 Script_GetNumTrackingTypes 0057F170 f end=0057F1AE
 Script_GetTrackingInfo 0057F1B0 f end=0057F37A
@@ -2640,9 +2648,9 @@ Script_PrevView 00604D10 f end=00604D3A
 CGCamera__SetTelescope 006053D0 f end=006056FB
 CGCamera__SetModelCamera 00606570 f end=006066DB
 CGCamera__SetTarget 006066E0 f end=00606967
-CGCamera__CGCamera 00606B30 f end=00606F8E
+CGCamera__constructor 00606B30 f end=00606F8E
 CSimpleCamera__SetFacing 00607BD0 f end=00607BF6
-CSimpleCamera__CSimpleCamera 00607C20 f end=00607C90
+CSimpleCamera__constructor 00607C20 f end=00607C90
 CCameraManager__SetScreenAspect 00607C90 f end=00607CAA
 Script_GetTime 006081F0 f end=0060822A
 Script_GetGameTime 00608230 f end=00608266
@@ -2868,14 +2876,14 @@ NetClient__HandleDisconnect 00632540 f end=00632581 ; 00005400
 NetClient__PongHandler 006325C0 f end=0063268A ; void __thiscall NetClient::PongHandler(class CDataStore *)
 NetClient__WCDisconnected 006326D0 f end=00632728 ; NetClient::WCDisconnected(WowConnection*, unsigned long, NETCONNADDR const*)
 NetClient__AuthChallengeHandler 00632730 f end=00632965 ; 00005410
-NetClient__NetClient 00632A40 f end=00632B43 ; 00005410
+NetClient__constructor 00632A40 f end=00632B43 ; 00005410
 NetClient__Send 00632B50 f end=00632C02 ; NetClient::Send(CDataStore*)
 NetClient__WCCantConnect 00632C10 f end=00632CCD ; NetClient::WCCantConnect(WowConnection*, unsigned long, NETCONNADDR const*)
 NetClient__Ping 00632CD0 f end=00632DA8 ; NetClient::Ping(CONNECTION_ID)
 NetClient__HandleIdle 00632DB0 f end=00632DFD ; 00005400
 NetClient__RedirectHandler 00632E00 f end=00633015 ; 00005410
 NetClient__WCMessageReady 00633330 f end=0063343D ; NetClient::WCMessageReady(WowConnection*, unsigned long, CDataStore*)
-NETEVENTQUEUE__NETEVENTQUEUE 00633440 f end=0063346D ; NETEVENTQUEUE::NETEVENTQUEUE(NetClient*)
+NETEVENTQUEUE__constructor 00633440 f end=0063346D ; NETEVENTQUEUE::NETEVENTQUEUE(NetClient*)
 NETEVENTQUEUE__Poll 006334F0 f end=0063360E ; NETEVENTQUEUE::Poll()
 NETEVENTQUEUE__AddEvent 00633650 f end=0063372A ; NETEVENTQUEUE::AddEvent(EVENTID, void*, NetClient*, void const*, unsigned long)
 NETEVENTQUEUE__destructor 00633730 f end=00633797 ; NETEVENTQUEUE::~NETEVENTQUEUE()
@@ -2911,11 +2919,11 @@ GxGetBlitFormat 006817B0 f end=006817BF type="BlitFormat __stdcall func(EGxTexFo
 GxLogOpen 006817C0 f end=006817C5 type="void __stdcall func()"
 GxLogClose 006817D0 f end=006817D5
 GxLog 006817E0 f end=006817F5 type="int __stdcall func(char* format, ...)"
-CGxFormat__CGxFormat 00681950 f type="CGxFormat* __thiscall func(CGxFormat* this)"
+CGxFormat__constructor 00681950 f type="CGxFormat* __thiscall func(CGxFormat* this)"
 GxDrawLockedElements 00681A60 f end=00681AAB type="void __stdcall func()"
 GxPrimIndexPtr 00681AB0 f end=00681AFB type="void __stdcall func(uint32_t indexCount, uint16_t* indices)"
 GxPrimVertexPtr 00681B00 f end=00681B4B type="void __stdcall func(CGxBuf* buf, EGxVertexBufferFormat format)"
-CGxTexFlags__CGxTexFlags 00681BE0 f end=00681CAB ; UC
+CGxTexFlags__constructor 00681BE0 f end=00681CAB ; UC
 GxTexCreate 00681CB0 f end=00681D87
 GxTexUpdate 00681F20 f end=00681F59
 GxXformSetViewport 00681F60 f end=00682124 type="void __stdcall func(float minX, float maxX, float minY, float maxY, float minZ, float maxZ)"
@@ -2935,6 +2943,7 @@ CGxDevice__DeviceApi 00682D20 f end=00682D27 type="EGxApi __thiscall func(CGxDev
 CGxDevice__DeviceTakeScreenShot 00682D30 f end=00682D3B type="void __thiscall func(CGxDevice* this)"
 CGxDevice__IDevIsWindowed 00682D40 f end=00682D48 type="int32_t __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceCurWindow 00682D70 f end=00682D76 type="CRect* __thiscall func(CGxDevice* this)"
+CGxDevice__DeviceDefWindow 00682D80 f end=00682D87 type="CRect* __thiscall func(CGxDevice* this)"
 CGxDevice__CapsIsWindowVisible 00682DC0 f end=00682DE7 type="int32_t __thiscall func(CGxDevice* this, int32_t a2)"
 CGxDevice__CapsHasContext 00682E20 f end=00682E47 type="int32_t __thiscall func(CGxDevice* this, int32_t a2)"
 CGxDevice__ScenePresent 00682E50 f end=00682E66 type="void __thiscall func(CGxDevice* this)"
@@ -2959,20 +2968,23 @@ CGxDevice__CursorLock 00683650 f end=00683657 type="uint32_t* __thiscall func(CG
 CGxDevice__CursorSetDepth 00683660 f end=00683670 type="void __thiscall func(CGxDevice* this, float depth)"
 CGxDevice__LogOpen 00683670 f end=006836A4 type="void __stdcall func()" ; static void CGxDevice::LogOpen(void)
 CGxDevice__LogClose 006836B0 f end=006836CA
-CGxMatrixStack__CGxMatrixStack 00683B90 f end=00683CE0 type="CGxMatrixStack* __thiscall func(CGxMatrixStack* this)"
-CGxDevice__WindowConstrainTopByAspect 00683D60 f end=00683DB0 type="void __stdcall func(CiRect* windowRect)"
-CGxDevice__WindowConstrainBottomByAspect 00683DB0 f end=00683DFE type="void __stdcall func(CiRect* windowRect)"
-CGxDevice__WindowConstrainLeftByAspect 00683E00 f end=00683E50 type="void __stdcall func(CiRect* windowRect)"
-CGxDevice__WindowConstrainRightByAspect 00683E50 f end=00683E9E type="void __stdcall func(CiRect* windowRect)"
-CGxDevice__WindowConstrainLeft 00683EA0 f end=00683ECD type="void __stdcall func(CiRect* windowRect)"
-CGxDevice__WindowConstrainRight 00683ED0 f end=00683EFD type="void __stdcall func(CiRect* windowRect)"
-CGxDevice__WindowConstrainTop 00683F00 f end=00683F2B type="void __stdcall func(CiRect* windowRect)"
-CGxDevice__WindowConstrainBottom 00683F30 f end=00683F5C type="void __stdcall func(CiRect* windowRect)"
-CGxLight__CGxLight 00683FB0 f end=0068406C type="CGxLight* __thiscall func(CGxLight* this)"
-CGxGammaRamp__Set 00684070 f end=006840ED type="void __thiscall func(CGxGammaRamp* this, float gamma)" 
+CGxDevice__WaitForFPSCap 006836D0 f end=00683754 type="void __thiscall func(CGxDevice* this)"
+CGxMatrixStack__constructor 00683B90 f end=00683CE0 type="CGxMatrixStack* __thiscall func(CGxMatrixStack* this)"
+CGxDevice__ClampRectToWindow 00683CE0 f end=00683D52 type="void __thiscall func(CGxDevice* this, CiRect* rect)"
+CGxDevice__ClampRectTopByAspect 00683D60 f end=00683DB0 type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__ClampRectBottomByAspect 00683DB0 f end=00683DFE type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__ClampRectLeftByAspect 00683E00 f end=00683E50 type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__ClampRectRightByAspect 00683E50 f end=00683E9E type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__ClampRectLeft 00683EA0 f end=00683ECD type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__ClampRectRight 00683ED0 f end=00683EFD type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__ClampRectTop 00683F00 f end=00683F2B type="void __stdcall func(CiRect* windowRect)"
+CGxDevice__ClampRectBottom 00683F30 f end=00683F5C type="void __stdcall func(CiRect* windowRect)"
+CGxLight__constructor 00683FB0 f end=0068406C type="CGxLight* __thiscall func(CGxLight* this)"
+CGxGammaRamp__Set 00684070 f end=006840ED type="void __thiscall func(CGxGammaRamp* this, float gamma)"
 CGxDevice__DeviceSetFormat 006840F0 f end=0068416C type="int32_t __thiscall func(CGxDevice* this, CGxFormat* format)"
 CGxDevice__DeviceSetGamma 00684170 f end=00684189 type="void __thiscall func(CGxDevice* this, float gamma)"
 CGxDevice__DeviceSetGamma 00684190 f end=006841AF type="int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)"
+CGxDevice__DeviceScreenShot 006841D0 f end=00684254 type="void __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceReadScreenShot 00684260 f end=0068429E type="void __thiscall func(CGxDevice* this, uint32_t* w, uint32_t* h, CImVector** pixels)"
 CGxDevice__DeviceSetRenderTarget 006842A0 f end=0068435D type="void __thiscall func(CGxDevice* this, EGxBuffer buffer, CGxTex* texture, uint32_t plane)"
 CGxDevice__DeviceSetDefWindow 00684360 f end=006843B0 type="void __thiscall func(CGxDevice* this, CRect* rect)"
@@ -3023,8 +3035,9 @@ CGxDevice__DeviceCreatePools 00687940 f end=00687980
 CGxDevice__TexDestroy 00687980 f end=006879E1 type="void __thiscall func(CGxDevice* this, CGxTex* texId)"
 CGxDevice__QueryDestroy 006879F0 f end=00687A8E type="void __thiscall func(CGxDevice* this, CGxQuery** query)"
 CGxDevice__ICursorDraw 00687A90 f end=00687FCA type="void __thiscall func(CGxDevice* this)"
+CGxPool__Invalidate 00688230 f end=00688251 type="void __thiscall func(CGxPool* this)"
 CGxDevice__PoolDestroy 00688340 f end=00688372 type="void __thiscall func(CGxDevice* this, CGxPool* pool)"
-CGxDevice__CGxDevice 00688690 f end=0068903F type="void __thiscall func(CGxDevice* this)"
+CGxDevice__constructor 00688690 f end=0068903F type="void __thiscall func(CGxDevice* this)"
 CGxDevice__XformSetProjection 00689040 f end=0068904F type="void __thiscall func(CGxDevice* this, C44Matrix* matrix)"
 CGxDevice__XformSetView 00689050 f end=006890C0 type="void __thiscall func(CGxDevice* this, C44Matrix* matrix)"
 CGxDevice__destructor 006890C0 f end=00689460 type="void __thiscall func(CGxDevice* this)"
@@ -3042,11 +3055,12 @@ TSGrowableArray_CGxMonitorMode__New 0068A090 f end=0068A0ED type="CGxMonitorMode
 TSGrowableArray_CGxMonitorMode__SetCount 0068A0F0 f end=0068A165 type="void __thiscall func(TSGrowableArray_CGxMonitorMode* this, uint32_t count)"
 CGxDevice__AdapterMonitorModes 0068A4C0 f end=0068A589 type="void __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
 CGxDeviceOpenGl__ISetGlCaps 0068A9A0 f end=0068AF34 type="void __thiscall func(CGxDeviceOpenGl* this, CGxFormat* format)"
-CGxDeviceOpenGl__CGxDeviceOpenGl 0068BBC0 f end=0068BD15 type="void __thiscall func(CGxDeviceOpenGl* this)"
+CGxDeviceOpenGl__constructor 0068BBC0 f end=0068BD15 type="void __thiscall func(CGxDeviceOpenGl* this)"
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
 CGxDeviceD3d__IUnloadD3dLib 0068E140 f end=0068E174 type="void __stdcall func(HINSTANCE* hInstance, LPDIRECT3D9* d3dLib)" ; void CGxDeviceD3d::IUnloadD3dLib(HINSTANCE& d3dLib, LPDIRECT3D9& d3d)
 CGxDeviceD3d__ICreateD3dIB 0068E180 f end=0068E1E8 type="LPDIRECT3DINDEXBUFFER9 __thiscall func(CGxDeviceD3d* this, EGxPoolUsage usage, uint32_t size)" ; LPDIRECT3DINDEXBUFFER9 CGxDeviceD3d::ICreateD3dIB(EGxPoolUsage usage, uint32_t size)
+CGxDeviceD3d__IReleaseD3dPool 0068E1F0 f end=0068E247 type="void __thiscall func(CGxDeviceD3d* this, CGxPool* pool)"
 CGxDeviceD3d__ISetPresentParms 0068E250 f end=0068E448 type="void __thiscall func(CGxDeviceD3d* this, D3DPRESENT_PARAMETERS* d3dpp, CGxFormat* format)" ; void CGxDeviceD3d::ISetPresentParms(D3DPRESENT_PARAMETERS& d3dpp, const CGxFormat& format) 
 CGxDeviceD3d__DeviceEvictResources 0068E450 f end=0068E49E type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__DeviceSetBaseMipLevel 0068E4A0 f end=0068E4BD type="void __thiscall func(CGxDeviceD3d* this, uint32_t level)"
@@ -3062,19 +3076,21 @@ CGxDeviceD3d__StereoSetSeparation 0068E9A0 f end=0068E9BA type="void __thiscall 
 CGxDeviceD3d__QueryCreate 0068E9C0 f end=0068EA0A type="void __thiscall func(CGxDeviceD3d* this, CGxQuery** query, EGxQueryType queryType)"
 CGxDeviceD3d__QueryBegin 0068EA10 f end=0068EA81 type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query)"
 CGxDeviceD3d__QueryGetParam 0068EA90 f end=0068EB1D type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query, EGxQueryParam param, uint32_t* data)"
+WindowClassCreate 0068EB20 f end=0068EBA8 type="uint16_t __stdcall func()"
 CGxDeviceD3d__ICreateWindow 0068EBB0 f end=0068ED78 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxFormat* format)"
 CGxDeviceD3d__ILoadD3dLib 0068ED80 f end=0068EE13 type="int32_t __stdcall func(HINSTANCE* hInstance, LPDIRECT3D9* d3dLib)"
 CGxDeviceD3d__ISetCaps 0068EE20 f end=0068F36D type="void __thiscall func(CGxDeviceD3d* this, CGxFormat* format)"
 CGxDeviceD3d__ICreateD3dDevice 0068F3D0 f end=0068F692 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxFormat* format)"
+CGxDeviceD3d__Sub68F6A0 0068F6A0 f end=0068F762 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__DeviceSetRenderTarget 0068F770 f end=0068F8F2 type="void __thiscall func(CGxDeviceD3d* this, EGxBuffer buffer, CGxTex* texture, uint32_t plane)"
 CGxDeviceD3d__DeviceResolveDepthBuffer 0068F900 f end=0068F94A type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
-CGxDeviceD3d__DeviceCopyTex 0068F950 f end=0068FA5E type="void __thiscall func(CGxDeviceD3d* this, CGxTex* a1, int32_t a2, CGxTex* a3, int32_t a4)"
+CGxDeviceD3d__DeviceCopyTex 0068F950 f end=0068FA5E type="void __thiscall func(CGxDeviceD3d* this, CGxTex* sourceTex, uint32_t sourcePlane, CGxTex* destTex, uint32_t destPlane)"
 CGxDeviceD3d__IBufUnlock 0068FA60 f end=0068FADC type="int32_t __thiscall func(CGxDeviceD3d* this, CGxBuf* buf)"
 CGxDeviceD3d__BufUnlock 0068FAE0 f end=0068FB07 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxBuf* buf, uint32_t size)"
 CGxDeviceD3d__IBufLock 0068FB10 f end=0068FCDC type="uint8_t* __thiscall func(CGxDeviceD3d* this, CGxBuf* buf)"
 CGxDeviceD3d__BufLock 0068FCE0 f end=0068FCFE type="char* __thiscall func(CGxDeviceD3d* this, CGxBuf* buf)"
 CGxDeviceD3d__BufData 0068FD00 f end=0068FD49 type="void __thiscall func(CGxDeviceD3d* this, CGxBuf* buf, const void* data, uint32_t size, uint32_t offset)"
-CGxDeviceD3d__CGxDeviceD3d 0068FD50 f end=0068FE80 type="void __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__constructor 0068FD50 f end=0068FE80 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__scalar_deleting_destructor 0068FE80 f end=0068FEC8 type="void __thiscall func(CGxDeviceD3d* this, uint8_t __flags)"
 CGxDeviceD3d__DeviceReadPixels 0068FED0 f end=00690144 type="void __thiscall func(CGxDeviceD3d* this, CiRect* rect, TSGrowableArray_CImVector* pixels)"
 CGxDeviceD3d__IReleaseD3dResources 00690150 f end=00690223 type="void __thiscall func(CGxDeviceD3d* this, int32_t freeTextures)"
@@ -3083,14 +3099,14 @@ CGxDeviceD3d__IDestroyD3d 006903B0 f end=006904C4
 CGxDeviceD3d__DeviceSetFormat 006904D0 f end=006905E8 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxFormat* format)"
 CGxDeviceD3d__DeviceDestroy 006905F0 f end=00690679 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__ICreateD3d 00690680 f end=00690742 type="int32_t __thiscall func(CGxDeviceD3d* this)"
-CGxDeviceD3d__DeviceCreate 00690750 f end=00690821 type="void __thiscall func(CGxDeviceD3d* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
-CGxDeviceD3d__DeviceCreate 00690830 f end=00690897 type="void __thiscall func(CGxDeviceD3d* this, uintptr_t hwnd, CGxFormat* format)"
+CGxDeviceD3d__DeviceCreate 00690750 f end=00690821 type="int32_t __thiscall func(CGxDeviceD3d* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
+CGxDeviceD3d__DeviceCreate 00690830 f end=00690897 type="int32_t __thiscall func(CGxDeviceD3d* this, void* hwnd, CGxFormat* format)"
 ScanString 006908B0 f end=0069090D
 BindGlExtensions 006909A0 f end=0069186D
 CGxDeviceD3d__Sub69FAA0 0069FAA0 f end=0069FAFE type="int32_t __thiscall func(CGxDeviceD3d* this, D3DFORMAT format)"
 CGxDeviceD3d__ICreateD3dVB 0069FB00 f end=0069FB68 type="LPDIRECT3DVERTEXBUFFER9 __thiscall func(EGxPoolUsage usage, uint32_t size)"
 CGxDeviceD3d__CreatePoolAPI 0069FB70 f end=0069FBB8 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxPool* pool)"
-CGxDeviceD3d__ICursorClip 0069FE10 f end=0069FE57 type="void __thiscall func(CGxDeviceD3d* this, int32_t a1)" ; UC (invented name)
+CGxDeviceD3d__ISetWindowFocus 0069FE10 f end=0069FE57 type="void __thiscall func(CGxDeviceD3d* this, int32_t focus)" ; UC (invented name)
 CGxDeviceD3d__DeviceSetGamma 0069FE80 f end=0069FEC4 type="void __thiscall func(CGxDeviceD3d* this, CGxGammaRamp* ramp)"
 CGxDeviceD3d__DeviceWindow 0069FED0 f end=0069FED7 type="void* __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__DeviceOverride 0069FF40 f end=0069FF7F type="void __thiscall func(CGxDeviceD3d* this, EGxOverride override, uint32_t value)"
@@ -3105,14 +3121,14 @@ CGxDeviceD3d__QueryGetData 006A0310 f end=006A035F type="bool __thiscall func(CG
 CGxDeviceD3d__WindowProcD3d 006A0360 f end=006A0834 type="LRESULT __stdcall func(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)"
 CGxDeviceD3d__IReleaseD3dQueries 006A1690 f end=006A16CC type="void __thiscall func(CGxDeviceD3d* this, int32_t freeQueries)"
 CGxDeviceD3d__DeviceReadDepths 006A1950 f end=006A19C4 type="void __thiscall func(CGxDeviceD3d* this, CiRect* rect, TSGrowableArray_float* depths)"
-CGxDeviceD3d9Ex__CGxDeviceD3d9Ex 006A1A90 f end=006A1C24
+CGxDeviceD3d9Ex__constructor 006A1A90 f end=006A1C24
 CGxDeviceD3d__IReleaseD3dPools 006A1C60 f end=006A1CDC type="void __thiscall func(CGxDeviceD3d* this, int32_t freePools)"
 CGxDeviceD3d__ITexForceRecreation 006A2AA0 f end=006A2BA3
 CGxDeviceD3d__TexDestroy 006A2BB0 f end=006A2BF1 type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
 CGxDeviceD3d__ITexCreate 006A2C00 f end=006A2D7E type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
 CGxDeviceD3d__ITexUpload 006A2D80 f end=006A3062 type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
 CGxDeviceD3d__ITexMarkAsUpdated 006A3070 f end=006A30CF type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
-CGxDeviceD3d__TexCopy 006A30D0 f end=006A31D6 type="void __thiscall func(CGxDeviceD3d* this, CGxTex* a1, CGxTex* a2, C2iVector* a3, C2iVector* a4, uint32_t a5, uint32_t a6)"
+CGxDeviceD3d__TexCopy 006A30D0 f end=006A31D6 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxTex* destTex, CGxTex* sourceTex, C2iVector* pos, C2iVector* size, uint32_t level, uint32_t plane)"
 CGxDeviceD3d__TexStretch 006A31E0 f end=006A3349 type="void __thiscall func(CGxDeviceD3d* this, CGxTex* a1, CGxTex* a2, CiRect* a3, CiRect* a4, uint32_t a5, uint32_t a6)"
 CGxDeviceD3d__ISceneBegin 006A3350 f end=006A3417 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__ISceneEnd 006A3420 f end=006A3449 type="void __thiscall func(CGxDeviceD3d* this)"
@@ -3125,12 +3141,17 @@ CGxDeviceD3d__IStateSyncScissorRect 006A38D0 f end=006A39D2 type="void __thiscal
 CGxDeviceD3d__ISetVertexBuffer 006A39E0 f end=006A3A59 type="void __thiscall func(CGxDeviceD3d* this, uint32_t stream, LPDIRECT3DVERTEXBUFFER9 buffer, uint32_t offset, uint32_t stride)"
 CGxDeviceD3d__IStateSetD3DDefaults 006A3A60 f end=006A3C34 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__DsSet 006A3C40 f end=006A40F2 type="void __thiscall func(CGxDeviceD3d* this, CGxDeviceD3d__EDeviceState state, uint32_t val)"
+CGxDeviceD3d__ISetTexCoordIndex 006A4100 f end=006A4190 type="void __thiscall func(CGxDeviceD3d* this, uint32_t tmu, EGxTexGen texGen, uint32_t index)"
 CGxDeviceD3d__ISetColorOp 006A4190 f end=006A41EC type="void __thiscall func(CGxDeviceD3d* this, uint32_t tmu, uint32_t op)"
 CGxDeviceD3d__ISetAlphaOp 006A41F0 f end=006A424C type="void __thiscall func(CGxDeviceD3d* this, uint32_t tmu, uint32_t op)"
+CGxDeviceD3d__ISetMaterial 006A4250 f end=006A439B type="void __thiscall func(CGxDeviceD3d* this, CImVector diffuse, CImVector emissive, CImVector specular, float specularExp)"
+C44Matrix__Inverse 006A43A0 f type="C44Matrix* __thiscall func(C44Matrix *this, C44Matrix* __return_ptr result)"
 CGxDeviceD3d__IStateSyncLights 006A43D0 f end=006A46F9 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IStateSyncMaterial 006A4700 f end=006A4846 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IStateSyncXforms 006A4850 f end=006A48FE type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__ISetTexture 006A4900 f end=006A4AB3 type="void __thiscall func(CGxDeviceD3d* this, uint32_t tmu, CGxTex* texId)"
+CGxDeviceD3d__ISetTexCoord 006A4AC0 f end=006A4AEF type="void __thiscall func(CGxDeviceD3d* this, uint32_t tmu, uint32_t index)"
+CGxDeviceD3d__ISetTexGen 006A4AF0 f end=006A4C2B type="void __thiscall func(CGxDeviceD3d* this, uint32_t tmu, EGxTexGen texGen)"
 CGxDeviceD3d__IRsSendToHw 006A4C30 f end=006A5499 type="void __thiscall func(CGxDeviceD3d* this, EGxRenderState rs)"
 CGxDeviceD3d__ICreateD3dVertexDecl 006A5540 f end=006A5677 type="LPDIRECT3DVERTEXDECLARATION9 __thiscall func(CGxDeviceD3d* this, D3DVERTEXELEMENT9* elements, uint32_t count)"
 CGxDeviceD3d__IReleaseD3dVertexDecl 006A5680 f end=006A56F2 type="void __thiscall func(CGxDeviceD3d* this)"
@@ -3214,7 +3235,7 @@ CBLPFile__Lock2 006AFCE0 f end=006AFF06 type="int32_t __thiscall func(CBLPFile* 
 CBLPFile__Open 006AFF10 f end=006AFFCF type="int32_t __thiscall func(CBLPFile* this, char* filename)"
 CBLPFile__LockChain2 006AFFD0 f end=006B012E type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, MipBits** images, uint32_t mipLevel, int32_t a6)"
 ClientServices__LoadCDKey 006B0190 f end=006B0246
-ClientConnection__ClientConnection 006B0250 f end=006B02B5
+ClientConnection__constructor 006B0250 f end=006B02B5
 ClientConnection__Cleanup 006B0850 f end=006B086B
 ClientConnection__Disconnect 006B0940 f end=006B095E ; ClientConnection::Disconnect(DISCONNECT_REASON)
 nullsub_154 006B0960 f
@@ -3677,7 +3698,7 @@ SCmdProcessCommandLine 00773990 f end=007739AD type="int32_t __stdcall func(CMDE
 StormInitialize 007739E0 f end=007739F4
 StormDestroy 00773A00 f end=00773A2F
 StormSetOption 00773A80 f end=00773C81 type="int32_t __stdcall func(int optname, void* optval, uint32_t optlen)"
-SCritSect__SCritSect 00774620 f end=0077462E type="SCritSect* __thiscall func(SCritSect* this)"
+SCritSect__constructor 00774620 f end=0077462E type="SCritSect* __thiscall func(SCritSect* this)"
 SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect *this)"
 SCritSect__Enter 00774640 f end=00774648 type="void __thiscall func(SCritSect *this)"
 SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *this)"
@@ -3721,7 +3742,7 @@ BigStack__destructor 0077AE80 f end=0077AEB1 type="void __thiscall func(BigStack
 BigBuffer__operator_index 0077AEC0 f end=0077AF2D type="uint32_t* __thiscall func(BigBuffer* this, uint32_t index)" ; public: unsigned int & __thiscall BigBuffer::operator[](unsigned int)const
 BigBuffer__SetCount 0077AF30 f end=0077AF7C type="void __thiscall func(BigBuffer* this, uint32_t count)"
 BigBuffer__Trim 0077AF80 f end=0077AFE3 type="void __thiscall func(BigBuffer* this)" ; public: void __thiscall BigBuffer::Trim(void)const
-BigStack__BigStack 0077AFF0 f end=0077B01F type="void __thiscall func(BigBuffer* this)"
+BigStack__constructor 0077AFF0 f end=0077B01F type="void __thiscall func(BigBuffer* this)"
 Add 0077B020 f end=0077B158 type="void __stdcall func(BigBuffer* a, BigBuffer* b, BigBuffer* c@<esi>)" ; void Add(class BigBuffer &,class BigBuffer const &,class BigBuffer const &)
 Div 0077B160 f end=0077B2A8 type="void __stdcall func(BigBuffer* a, uint32_t* b, BigBuffer* c, uint64_t d)" ; void Div(class BigBuffer &,unsigned int *,class BigBuffer const &,unsigned __int64)
 Mul 0077B2B0 f end=0077B3D2 type="void __stdcall func(BigBuffer* a, BigBuffer* b, uint64_t c)" ; void Mul(class BigBuffer &,class BigBuffer const &,unsigned __int64)
@@ -3752,7 +3773,7 @@ World__Intersect 0077F310 f end=0077F319
 World__Preload 00781500 f end=007815B7
 DayNight__Update 007816F0 f end=007819BC ; DayNight::Update(unsigned int, float, float)
 CMapObj__Init 007AE300 f end=007AE3A6 ; CMapObj::Init()
-CMapObj__CMapObj 007B0580 f end=007B05F9 ; CMapObj::CMapObj()
+CMapObj__constructor 007B0580 f end=007B05F9 ; CMapObj::CMapObj()
 CMapObj__Create 007B0CC0 f end=007B0D37 ; CMapObj::Create(char const*)
 CDetailDoodad__UpdateAlphaRampTexture 007B1270 f end=007B129F ; CDetailDoodad::UpdateAlphaRampTexture(EGxTexCommand, unsigned int, unsigned int, unsigned int, unsigned int, void*, unsigned int&, void const*&)
 CDetailDoodad__InitializeShaderConstants 007B15D0 f end=007B1B05 ; CDetailDoodad::InitializeShaderConstants()
@@ -3766,15 +3787,15 @@ CMap__AllocLight 007C08A0 f end=007C0907 ; public: static class CMapLight * __fa
 CMapDoodadDef__SelectLights 007C1150 f end=007C1371 ; CMapDoodadDef::SelectLights(CM2Lighting*)
 CMapEntity__SelectLights 007C1730 f end=007C1ACA ; CMapEntity::SelectLights(CM2Lighting*)
 CMapChunk__UpdateLights 007C65A0 f end=007C65FE ; public: void __thiscall CMapChunk::UpdateLights(void)
-CMapBaseObj__CMapBaseObj 007D7260 f end=007D7293 ; CMapBaseObj::CMapBaseObj()
+CMapBaseObj__constructor 007D7260 f end=007D7293 ; CMapBaseObj::CMapBaseObj()
 CMapObj__Read 007D80C0 f end=007D81BB ; CMapObj::Read(char const*)
-CMapLight__CMapLight 007D9B10 f end=007D9B8F ; public: __thiscall CMapLight::CMapLight(void)
+CMapLight__constructor 007D9B10 f end=007D9B8F ; public: __thiscall CMapLight::CMapLight(void)
 CMap__CreateLight 007D9BD0 f end=007D9C7B ; CMap::CreateLight(bool, bool)
 CMap__UpdateLightBounds 007D9C80 f end=007D9D4F ; public: static void __cdecl CMap::UpdateLightBounds(class CMapLight *)
 CMap__EnableLight 007D9D50 f end=007D9D66 ; public: static void __cdecl CMap::EnableLight(class CMapLight *)
-CMap__DestroyLight 007D9D70 f end=007D9DDE ; public: static void __cdecl CMap::DestroyLight(class CMapLight *) 
+CMap__DestroyLight 007D9D70 f end=007D9DDE ; public: static void __cdecl CMap::DestroyLight(class CMapLight *)
 CMap__LinkLightToChunks 007D9DE0 f end=007D9F8F ; CMap::LinkLightToChunks(class CMapLight *)
-CMap__LinkLightToMapObjDefs 007D9F90 f end=007DA0F5 ; CMap::LinkLightToMapObjDefs(class CMapLight *) 
+CMap__LinkLightToMapObjDefs 007D9F90 f end=007DA0F5 ; CMap::LinkLightToMapObjDefs(class CMapLight *)
 CMap__UpdateLight 007DA100 f end=007DA187 ; CMap::UpdateLight(class CMapLight *)
 WardenClient_Destroy 007DA420 f end=007DA4B0 ; WardenClient_Destroy()
 WardenClient_Initialize 007DA8C0 f end=007DA92C ; WardenClient_Initialize()
@@ -3795,8 +3816,8 @@ Script_GetVoiceSessionMemberInfoBySessionID 007DEEF0 f end=007DF0AF
 Script_UnitIsTalking 007DF0B0 f end=007DF142
 ComSatClient_Init 007DFAF0 f end=007DFE9C
 IsRussian 007E1030 f end=007E1049
-EffectDeath__EffectDeath 007EA260 f end=007EA416
-EffectNetherWorld__EffectNetherWorld 007EA470 f end=007EA592
+EffectDeath__constructor 007EA260 f end=007EA416
+EffectNetherWorld__constructor 007EA470 f end=007EA592
 DayNight__CalcFogRate 007ECD00 f end=007ECD76 ; DayNight::CalcFogRate(float, float)
 DayNight__SetOverrideLightParamsID 007ECEC0 f end=007ECEDC ; DayNight::SetOverrideLightParamsID(int)
 DayNight__ClearOverrideLightParamsID 007ECEE0 f end=007ECEEB ; DayNight::ClearOverrideLightParamsID()
@@ -3885,7 +3906,7 @@ FrameScript_Object__GetScriptByName 00816830 f end=00816865
 FrameScript_GetCurrentFunction 00817EE0 f end=00817F88
 FrameScript_Sprintf 00818070 f end=0081839F type="void __stdcall func(lua_State* L, int startIndex, char* buffer, uint32_t bufferSize)" ; startIndex is the index of starting argument on stack
 FrameScript_GetErrorHandlerReference 008192F0 f end=008192F6
-FrameScript_Object__FrameScript_Object 00819830 f end=0081984B type="void __thiscall func(FrameScript_Object* this)" ; FrameScript_Object::FrameScript_Object()
+FrameScript_Object__constructor 00819830 f end=0081984B type="void __thiscall func(FrameScript_Object* this)" ; FrameScript_Object::FrameScript_Object()
 FrameScript_Object__destructor 00819850 f end=00819872 ; FrameScript_Object::~FrameScript_Object()
 FrameScript_Object__RegisterScriptObject 00819880 f end=008199B8
 FrameScript_Object__UnregisterScriptObject 008199C0 f end=00819A58 ; FrameScript_Object::UnregisterScriptObject(char const*)
@@ -3920,7 +3941,7 @@ CM2Cache__CreateShared 0081C390 f end=0081C6D5 ; CM2Cache::CreateShared(char con
 M2Initialize 0081C6E0 f end=0081C747
 CM2Cache__UpdateShared 0081C790 f end=0081C832 ; CM2Cache::UpdateShared()
 CM2Cache__LinkToSharedUpdateList 0081C840 f end=0081C862 ; CM2Cache::LinkToSharedUpdateList(CM2Shared*)
-CM2Cache__CM2Cache 0081C900 f end=0081C988 ; CM2Cache::CM2Cache()
+CM2Cache__constructor 0081C900 f end=0081C988 ; CM2Cache::CM2Cache()
 CM2Scene__AdvanceTime 0081C9C0 f end=0081CA09 ; CM2Scene::AdvanceTime(unsigned int)
 CM2Scene__AnimateThread 0081CE70 f end=0081CF14 ; CM2Scene::AnimateThread(void*)
 CM2Scene__SelectLights 0081E400 f end=0081E58F ; CM2Scene::SelectLights(CM2Lighting*)
@@ -3932,7 +3953,7 @@ CM2Scene__SortOpaque 0081EEA0 f end=0081EF15 ; CM2Scene::SortOpaque(unsigned int
 CM2Scene__SortTransparent 0081EF30 f end=0081F0D7 ; CM2Scene::SortTransparent(unsigned int, unsigned int, void const*)
 CM2Scene__SortAdditiveParticles 0081F0E0 f end=0081F1C3 ; CM2Scene::SortAdditiveParticles(unsigned int, unsigned int, void const*)
 CM2Scene__ComputeElementShaders 0081F1D0 f end=0081F327 ; CM2Scene::ComputeElementShaders(M2Element*)
-CM2SceneRender__CM2SceneRender 0081F330 f end=0081F449 ; CM2SceneRender::CM2SceneRender(CM2Scene*)
+CM2SceneRender__constructor 0081F330 f end=0081F449 ; CM2SceneRender::CM2SceneRender(CM2Scene*)
 CM2SceneRender__SetupTextures 0081F450 f end=0081F620 ; CM2SceneRender::SetupTextures()
 CM2SceneRender__SetBatchVertices 0081F700 f end=0081F7FC ; CM2SceneRender::SetBatchVertices(int)
 CM2Scene__CreateModel 0081F8F0 f end=0081F96F ; CM2Scene::CreateModel(char const*, unsigned int)
@@ -3945,7 +3966,7 @@ CM2SceneRender__DrawBatchProj 00820720 f end=00820ADD ; CM2SceneRender::DrawBatc
 CM2SceneRender__DrawBatchDoodad 00820AE0 f end=00820F35 ; CM2SceneRender::DrawBatchDoodad(M2Element*, unsigned int*)
 CM2SceneRender__DrawRibbon 00820F40 f end=0082103B ; CM2SceneRender::DrawRibbon()
 CM2SceneRender__DrawParticle 008214E0 f end=00821667 ; CM2SceneRender::DrawParticle(unsigned int, M2Element*, unsigned int*, unsigned int)
-CM2Scene__CM2Scene 008216C0 f end=00821842 ; CM2Scene::CM2Scene(CM2Cache*)
+CM2Scene__constructor 008216C0 f end=00821842 ; CM2Scene::CM2Scene(CM2Cache*)
 CM2Scene__destructor 00821850 f end=0082192E ; CM2Scene::~CM2Scene()
 CM2Scene__Animate 00821A20 f end=0082303A ; CM2Scene::Animate(C3Vector const&)
 CM2Scene__Release 00823040 f end=00823062 ; CM2Scene::Release()
@@ -3982,7 +4003,7 @@ CM2Model__AnimateST 00828A00 f end=00828F8A ; CM2Model::AnimateST()
 CM2Model__SetIndices 00828F90 f end=00829160 ; CM2Model::SetIndices() const
 CM2Model__SetVertices 00829160 f end=00829296 ; CM2Model::SetVertices(int, M2SkinSection*, unsigned int) const
 CM2Model__RenderModelBatchesForProjectedTexture 00829AA0 f end=00829B94 ; CM2Model::RenderModelBatchesForProjectedTexture()
-CM2Model__CM2Model 0082BE60 f end=0082C1B7 ; CM2Model::CM2Model()
+CM2Model__constructor 0082BE60 f end=0082C1B7 ; CM2Model::CM2Model()
 CM2Model__OptimizeVisibleGeometry 0082C970 f end=0082CEC2 ; CM2Model::OptimizeVisibleGeometry()
 CM2Model__AnimateParticlesMT 0082D2F0 f end=0082D6E1 ; CM2Model::AnimateParticlesMT()
 CM2Model__AnimateTextureTransformsMT 0082D6F0 f end=0082D903 ; CM2Model::AnimateTextureTransformsMT()
@@ -4017,7 +4038,7 @@ CM2Lighting__Initialize 00834900 f end=0083493E ; CM2Lighting::Initialize(CM2Sce
 CM2Lighting__SetFog 00834940 f end=0083498C ; CM2Lighting::SetFog(C3Vector const&, float, float)
 CM2Lighting__SetFog 00834990 f end=008349DB ; CM2Lighting::SetFog(C3Vector const&, float, float, float)
 CM2Lighting__GetPointLight 008349E0 f end=00834A40 ; CM2Lighting::GetPointLight(unsigned int, C3Vector&, C3Vector&, C3Vector&)
-CM2Light__CM2Light 00834A40 f end=00834AA7 ; CM2Light::CM2Light()
+CM2Light__constructor 00834A40 f end=00834AA7 ; CM2Light::CM2Light()
 CM2Light__destructor 00834AB0 f end=00834AD4 ; CM2Light::~CM2Light()
 CM2Light__SetDirection 00834AE0 f end=00834B43 ; CM2Light::SetDirection(C3Vector const&)
 CM2Light__Link 00834C70 f end=00834D84 ; CM2Light::Link()
@@ -4042,7 +4063,7 @@ CM2Shared__AssignBatchTextureComboIndices 008374A0 f end=00837672 ; CM2Shared::A
 CM2Shared__SubstituteSpecializedShaders 00837680 f end=00837A3D ; CM2Shared::SubstituteSpecializedShaders()
 CM2Shared__InitializeSkinProfile 00837A40 f end=00837ED4 ; CM2Shared::InitializeSkinProfile()
 CM2Shared__FinishLoadingSkinProfile 00838490 f end=00838593 ; CM2Shared::FinishLoadingSkinProfile(unsigned int)
-CM2Shared__CM2Shared 0083C5F0 f end=0083C6DC ; CM2Shared::CM2Shared(CM2Cache*)
+CM2Shared__constructor 0083C5F0 f end=0083C6DC ; CM2Shared::CM2Shared(CM2Cache*)
 CM2Shared__InitLowPrioritySequence 0083C6E0 f end=0083CA8D ; CM2Shared::InitLowPrioritySequence(unsigned int, unsigned char*, unsigned int)
 CM2Shared__FinishLoadingLowPrioritySequence 0083CA90 f end=0083CB10 ; CM2Shared::FinishLoadingLowPrioritySequence(unsigned int, CAsyncObject*)
 CM2Shared__SkinProfileLoadedCallback 0083CB10 f end=0083CB3B ; CM2Shared::SkinProfileLoadedCallback(void*)
@@ -4099,7 +4120,7 @@ OsTimeManager__Snapshot 0086ADC0 f end=0086AE20 type="uint64_t __thiscall func(O
 OsGetAsyncTimeMs 0086AE20 f end=0086AE2B
 OsGetAsyncTimeClocks 0086AE30 f end=0086AE68
 OsGetAsyncClocksPerSecond 0086AE70 f end=0086AE94
-OsTimeManager__OsTimeManager 0086AEA0 f end=0086AF15 type="OsTimeManager* __thiscall func(OsTimeManager* this, int32_t a2)"
+OsTimeManager__constructor 0086AEA0 f end=0086AF15 type="OsTimeManager* __thiscall func(OsTimeManager* this, int32_t a2)"
 OsTimeManagerCreate 0086AF20 f end=0086AF58
 OsTimeManagerDestroy 0086AF60 f end=0086AF83
 IOsGetProcessorFeatures 0086AF90 f end=0086B0BE
@@ -4138,6 +4159,8 @@ OsCallSetContext 0086F5A0 f end=0086F5EA
 OsCallResetContext 0086F5F0 f end=0086F64E ; 00005410
 OsCallInitialize 0086F760 f end=0086F875
 OsCallInitializeContext 0086F880 f end=0086F902
+OsGetLastErrorStr 008714E0 f end=0087150C type="char* __stdcall func()"
+OsFreeLastErrorStr 00871510 f end=0087151F type="void __stdcall func(char* str)"
 OsClipboardGetString 00872280 f end=00872297
 OsClipboardPutString 008722A0 f end=008722BF
 IOsClipboardGetString 008726F0 f end=008727BB
@@ -4200,7 +4223,7 @@ GruntLogin__Wait 008CA7F0 f end=008CA875 ; GruntLogin::Wait(char const*, LoginDa
 GruntLogin__EnterPIN 008CA880 f end=008CA9AB ; GruntLogin::EnterPIN(int, unsigned char*)
 GruntLogin__GetVersionChallenge 008CAC00 f end=008CAC07 ; GruntLogin::GetVersionChallenge()
 GruntLogin__Init 008CAC50 f end=008CAC99 ; GruntLogin::Init(LoginResponse*)
-GruntLogin__GruntLogin 008CACA0 f end=008CAD19 ; GruntLogin::GruntLogin()
+GruntLogin__constructor 008CACA0 f end=008CAD19 ; GruntLogin::GruntLogin()
 GruntLogin__Logoff 008CAD20 f end=008CAD32 ; GruntLogin::Logoff()
 GruntLogin__SetMatrixInfo 008CAD40 f end=008CAF95 ; GruntLogin::SetMatrixInfo(bool, unsigned char, unsigned char, unsigned char, unsigned char, bool, unsigned char, unsigned long long, unsigned char const*, unsigned int)
 GruntLogin__ReconnectResult 008CB020 f end=008CB13E ; GruntLogin::ReconnectResult(Grunt::Result, unsigned char const*, unsigned int, unsigned short)
@@ -4251,7 +4274,7 @@ CSimpleModel__SetLight 0095F5C0 f end=0095F5DB type="void __thiscall func(CSimpl
 CSimpleModel__SetSequence 0095F5E0 f end=0095f60A type="void __thiscall func(CSimpleModel* this, uint32_t sequence)"
 CSimpleModel__SetSequenceTime 0095F610 f end=0095F641 type="int32_t __thiscall func(CSimpleModel* this, uint32_t sequence, int32_t time)"
 M2CreateScene 0095F650 f end=0095F66F
-CSimpleModel__CSimpleModel 0095F680 f end=0095F7C5 type="void __thiscall func(CSimpleModel* this)"
+CSimpleModel__constructor 0095F680 f end=0095F7C5 type="void __thiscall func(CSimpleModel* this)"
 CSimpleModel__scalar_deleting_destructor 0095F7D0 f end=0095F7FB type="void __thiscall func(CSimpleModel* this, uint32_t __flags)"
 CSimpleModel__LoadXML 0095F800 f end=0095F989 type="void __thiscall func(CSimpleModel* this, XMLNode* node, CStatus* status)"
 CSimpleModel__SetModel 0095F990 f end=0095F9E8 type="void __thiscall func(CSimpleModel* this, char* sourcefile)"
@@ -4304,7 +4327,7 @@ CSimpleScrollFrame__RunOnScrollRangeChangedScript 0096AFD0 f end=0096B05B
 CSimpleScrollFrame__UnparentFrame 0096B060 f end=0096B082 ; CSimpleScrollFrame::UnparentFrame(CSimpleFrame*)
 CSimpleScrollFrame__UpdateScrollChild 0096B1C0 f end=0096B207 ; void __thiscall CSimpleScrollFrame::UpdateScrollChild(void)
 CSimpleScrollFrame__OnFrameSizeChanged 0096B210 f end=0096B23A ; CSimpleScrollFrame::OnFrameSizeChanged(float, float)
-CSimpleScrollFrame__CSimpleScrollFrame 0096B2D0 f end=0096B33F ; CSimpleScrollFrame::CSimpleScrollFrame(CSimpleFrame*)
+CSimpleScrollFrame__constructor 0096B2D0 f end=0096B33F ; CSimpleScrollFrame::CSimpleScrollFrame(CSimpleFrame*)
 CSimpleScrollFrame__SetScrollChild 0096B3A0 f end=0096B43D ; CSimpleScrollFrame::SetScrollChild(CSimpleFrame*)
 CSimpleScrollFrame__SetVerticalScroll 0096B480 f end=0096B4BE ; CSimpleScrollFrame::SetVerticalScroll(float)
 CSimpleScrollFrame__UpdateScrollChildRect 0096B4C0 f end=0096B59D ; CSimpleScrollFrame::UpdateScrollChildRect(float, float)
@@ -4314,12 +4337,12 @@ CSimpleScrollFrame__LoadXML 0096B920 f end=0096B99B ; CSimpleScrollFrame::LoadXM
 CSimpleScrollFrame__OnFrameRender 0096B9A0 f end=0096B9CE ; CSimpleScrollFrame::OnFrameRender(CRenderBatch*, unsigned int)
 CSimpleScrollFrame__GetBoundsRect 0096B9D0 f end=0096BBAC ; CSimpleScrollFrame::GetBoundsRect(CRect&)
 CSimpleSlider__RunOnMinMaxChangedScript 0096BBB0 f end=0096BC08
-CSimpleSlider__CSimpleSlider 0096BE50 f end=0096BEC9 ; CSimpleSlider::CSimpleSlider(CSimpleFrame*)
+CSimpleSlider__constructor 0096BE50 f end=0096BEC9 ; CSimpleSlider::CSimpleSlider(CSimpleFrame*)
 CSimpleSlider__IsA 0096BF00 f end=0096BF35 ; CSimpleSlider::IsA(int) const
 CSimpleSlider__SetValue 0096C090 f end=0096C1A7 ; CSimpleSlider::SetValue(float, bool)
 CSimpleSlider__SetMinMaxValues 0096C470 f end=0096C4FD ; CSimpleSlider::SetMinMaxValues(float, float)
 CSimpleHTML__FontUpdated 0096C750 f end=0096C764 ; CSimpleHTML::FontUpdated(CSimpleFontedFrameFont*, int)
-CSimpleHTML__CSimpleHTML 0096C820 f end=0096C922 ; CSimpleHTML::CSimpleHTML(CSimpleFrame*)
+CSimpleHTML__constructor 0096C820 f end=0096C922 ; CSimpleHTML::CSimpleHTML(CSimpleFrame*)
 CSimpleHTML__IsA 0096C960 f end=0096C995 ; CSimpleHTML::IsA(int) const
 CSimpleHTML__ParseIMG 0096C9E0 f end=0096CC8F ; CSimpleHTML::ParseIMG(XMLNode const*, CStatus*)
 CSimpleHTML__AddText 0096CC90 f end=0096CE72 ; CSimpleHTML::AddText(char const*, HTML_TEXT_TYPE, unsigned int)
@@ -4340,7 +4363,7 @@ CSimpleEditBox_HighlightText 00976080 f end=00976108
 CSimpleButton_GetButtonState 009771D0 f end=00977272
 CSimpleButton_SetStateTexture 00977A70 f end=00977BD7 ; CSimpleButton_SetStateTexture(lua_State*, CSimpleButtonState, char const*)
 CSimpleButton_SetNormalTexture 00977C70 f end=00977C87 ; CSimpleButton_SetNormalTexture(lua_State*)
-CSimpleHyperlinkedFrame__CSimpleHyperlinkedFrame 00978900 f end=0097894F ; CSimpleHyperlinkedFrame::CSimpleHyperlinkedFrame(CSimpleFrame*)
+CSimpleHyperlinkedFrame__constructor 00978900 f end=0097894F ; CSimpleHyperlinkedFrame::CSimpleHyperlinkedFrame(CSimpleFrame*)
 CParticleEmitter2__SetModel 00978B30 f end=00978B70 ; CParticleEmitter2::SetModel(CM2Scene*, char const*)
 CParticleEmitter2__SetMaterial 00978BF0 f end=00978C34 ; CParticleEmitter2::SetMaterial(CParticleMat const&, CTexture*)
 CParticleEmitter2__SetTextureDimensions 00978C70 f end=00978CF7 ; CParticleEmitter2::SetTextureDimensions(unsigned int, unsigned int)
@@ -4353,7 +4376,7 @@ CParticleEmitter2__GetReplacementColors 0097AB10 f end=0097ABF3 ; CParticleEmitt
 CParticleEmitter2__SetTwinkleScale 0097AC00 f end=0097AC1D ; CParticleEmitter2::SetTwinkleScale(CRange const&)
 CParticleEmitter2__CreateChildEmittersFromModel 0097AEB0 f end=0097AEE4 ; CParticleEmitter2::CreateChildEmittersFromModel(CM2Scene*, char const*)
 CParticleEmitter2__DetermineIfSimple 0097D370 f end=0097D5F5 ; CParticleEmitter2::DetermineIfSimple()
-CParticleEmitter2__CParticleEmitter2 0097E150 f end=0097E3E6 ; CParticleEmitter2::CParticleEmitter2()
+CParticleEmitter2__constructor 0097E150 f end=0097E3E6 ; CParticleEmitter2::CParticleEmitter2()
 CRibbonEmitter__SetDataEnabled 0097F570 f end=0097F5A3 ; CRibbonEmitter::SetDataEnabled(int)
 CRibbonEmitter__SetTexSlot 0097F5F0 f end=0097F60D ; CRibbonEmitter::SetTexSlot(unsigned int)
 CRibbonEmitter__SetAbove 0097F610 f end=0097F620 ; CRibbonEmitter::SetAbove(float)
@@ -4363,16 +4386,16 @@ CRibbonEmitter__SetPos 0097F940 f end=0097FAC8 ; CRibbonEmitter::SetPos(C44Matri
 CRibbonEmitter__SetColor 0097FB60 f end=0097FBA0 ; CRibbonEmitter::SetColor(float, float, float)
 CRibbonEmitter__SetAlpha 0097FBA0 f end=0097FBDA ; CRibbonEmitter::SetAlpha(float)
 CRibbonEmitter__Update 00980090 f end=0098050D ; CRibbonEmitter::Update(float, int)
-CRibbonEmitter__CRibbonEmitter 00980630 f end=0098080C ; CRibbonEmitter::CRibbonEmitter()
+CRibbonEmitter__constructor 00980630 f end=0098080C ; CRibbonEmitter::CRibbonEmitter()
 CRibbonEmitter__Initialize 009808A0 f end=00980B4A ; CRibbonEmitter::Initialize(float, float, CImVector const&, TSGrowableArray<CTexture*> const&, TSGrowableArray<CRibbonMat> const&, TSGrowableArray<unsigned int> const&, CAaRect const&, unsigned int, unsigned int)
-CPlaneParticleEmitter__CPlaneParticleEmitter 00981310 f end=00981343 ; CPlaneParticleEmitter::CPlaneParticleEmitter()
-CSphereParticleEmitter__CSphereParticleEmitter 009813F0 f end=00981423 ; CSphereParticleEmitter::CSphereParticleEmitter()
+CPlaneParticleEmitter__constructor 00981310 f end=00981343 ; CPlaneParticleEmitter::CPlaneParticleEmitter()
+CSphereParticleEmitter__constructor 009813F0 f end=00981423 ; CSphereParticleEmitter::CSphereParticleEmitter()
 CSplineParticleEmitter__SetSpline 00981500 f end=0098150F ; CSplineParticleEmitter::SetSpline(C3Vector const*, unsigned int)
-CSplineParticleEmitter__CSplineParticleEmitter 009820F0 f end=00982148 ; CSplineParticleEmitter::CSplineParticleEmitter()
+CSplineParticleEmitter__constructor 009820F0 f end=00982148 ; CSplineParticleEmitter::CSplineParticleEmitter()
 C4Quaternion__Slerp 00982460 f end=0098256C ; C4Quaternion::Slerp(float, C4Quaternion const&, C4Quaternion const&)
 C4Quaternion__Nlerp 00982630 f end=0098269F ; C4Quaternion::Nlerp(float, C4Quaternion const&, C4Quaternion const&)
-C3Vector__C3Vector 00982970 f end=009829AD ; C3Vector::C3Vector(CImVector const&)
-C4Vector__C4Vector 00984C90 f end=00984CDC ; C4Vector::C4Vector(CImVector const&)
+C3Vector__constructor 00982970 f end=009829AD ; C3Vector::C3Vector(CImVector const&)
+C4Vector__constructor 00984C90 f end=00984CDC ; C4Vector::C4Vector(CImVector const&)
 Script_PlaySound 009858B0 f end=0098594B
 Script_PlayMusic 00985950 f end=009859AA
 Script_PlaySoundFile 009859B0 f end=00985A0A
@@ -4409,7 +4432,7 @@ CGNamePlateFrame__SetCastBarValues 0098F040 f end=0098F382
 SRP6_Client__BeginAuthentication 009A8300 f end=009A83DF ; SRP6_Client::BeginAuthentication(char const*, char const*)
 SRP6_Client__CalculateProof 009A83E0 f end=009A88B1 ; SRP6_Client::CalculateProof(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int, SRP6_Random&)
 SRP6_Client__VerifyServerProof 009A88C0 f end=009A897C ; SRP6_Client::VerifyServerProof(unsigned char const*, unsigned int)
-SRP6_Random__SRP6_Random 009A8980 f end=009A89EA ; SRP6_Random::SRP6_Random(void const*, unsigned int)
+SRP6_Random__constructor 009A8980 f end=009A89EA ; SRP6_Random::SRP6_Random(void const*, unsigned int)
 SRP6_Random__GenerateRandomBytes 009A89F0 f end=009A8A9B ; SRP6_Random::GenerateRandomBytes(unsigned char*, unsigned int)
 BigIntegerFromInt 009A8AA0 f end=009A8AC1 ; BigIntegerFromInt(unsigned int)
 BigIntegerFromBytes 009A8AD0 f end=009A8AF5 ; BigIntegerFromBytes(unsigned char const*, int)
@@ -4858,6 +4881,7 @@ CGxDevice__kWinMinSize 00AD8BC0 l type="C2iVector"
 CGxDeviceD3d__s_GxTexFormatToUse 00AD8EF0 l type="EGxTexFormat[13]"
 CGxDeviceD3d__s_gxAttribToD3dAttribType 00AD8F24 l type="D3DDECLTYPE[7]"
 CGxDeviceD3d__s_filterModes 00AD8F40 l type="D3DTEXTUREFILTERTYPE[6][3]"
+CGxDeviceD3d__s_normalizeNormals 00AD8F88 l type="uint32_t"
 CBLPFile__s_eightBitAlphaLookup 00AD90B0 l type="uint8_t[16]"
 CBLPFile__s_oneBitAlphaLookup 00AD90C0 l type="uint8_t[2]"
 s_rect 00ADBAB4 l type="RECTF" ; RECTF
@@ -4973,7 +4997,8 @@ CGGameUI__m_billingExpireTime 00BD086C l
 CGGameUI__m_lastRegenTime 00BD08A0 l
 s_cvDeselectOnClick 00BD08F0 l type="CVar*"
 s_cvAutoLootDefault 00BD0914 l type="CVar*"
-s_cvPredictedPower 00BD0A08 l type="CVar*"
+g_predictedHealthCVar 00BD0A04 l type="CVar*"
+g_predictedPowerCVar 00BD0A08 l type="CVar*"
 CGBarberShop__m_initialized 00BD19BA l
 CGSpellBook__m_stuckSpell 00BE7D8C l
 CGWorldMap__m_numLandmarks 00BE8EE0 l
@@ -5115,6 +5140,7 @@ glLockArraysEXT 00C60608 l
 glMaxTextureImageUnitsARB 00C6060C l
 glExtCVA 00C60614 l
 glVersion 00C60618 l type="uint32_t"
+d3dMaterial 00C606B0 l type="D3DMATERIAL9"
 d3dLight 00C606F8 l type="D3DLIGHT9"
 isIdent 00C60760 l
 s_blits 00C60930 l type="BLIT_FUNCTION[13][13][4]" ; BLIT_FUNCTION s_blits[BlitFormats_Last][BlitFormats_Last][BlitAlphas_Last];

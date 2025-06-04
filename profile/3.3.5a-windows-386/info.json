@@ -2,5 +2,6 @@
   "os": "windows",
   "arch": "386",
   "module_name": "wow.exe",
-  "module_base": "400000"
+  "module_base": "400000",
+  "function_count": 27234
 }

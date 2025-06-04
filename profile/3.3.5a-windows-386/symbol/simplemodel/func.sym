@@ -6,7 +6,7 @@ CSimpleModel__SetCameraByID 0095F540 f end=0095F5BD type="void __thiscall func(C
 CSimpleModel__SetLight 0095F5C0 f end=0095F5DB type="void __thiscall func(CSimpleModel* this, CM2Light* light)"
 CSimpleModel__SetSequence 0095F5E0 f end=0095f60A type="void __thiscall func(CSimpleModel* this, uint32_t sequence)"
 CSimpleModel__SetSequenceTime 0095F610 f end=0095F641 type="int32_t __thiscall func(CSimpleModel* this, uint32_t sequence, int32_t time)"
-CSimpleModel__CSimpleModel 0095F680 f end=0095F7C5 type="void __thiscall func(CSimpleModel* this)"
+CSimpleModel__constructor 0095F680 f end=0095F7C5 type="void __thiscall func(CSimpleModel* this)"
 CSimpleModel__scalar_deleting_destructor 0095F7D0 f end=0095F7FB type="void __thiscall func(CSimpleModel* this, uint32_t __flags)"
 CSimpleModel__LoadXML 0095F800 f end=0095F989 type="void __thiscall func(CSimpleModel* this, XMLNode* node, CStatus* status)"
 CSimpleModel__SetModel 0095F990 f end=0095F9E8 type="void __thiscall func(CSimpleModel* this, char* sourcefile)"

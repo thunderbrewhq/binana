@@ -1,4 +1,5 @@
 #include "external/d3d9/adapteridentifier.h"
+#include "external/d3d9/basetexture.h"
 #include "external/d3d9/caps.h"
 #include "external/d3d9/colorvalue.h"
 #include "external/d3d9/cubemapfaces.h"
@@ -15,6 +16,7 @@
 #include "external/d3d9/light.h"
 #include "external/d3d9/lighttype.h"
 #include "external/d3d9/lockedrect.h"
+#include "external/d3d9/material.h"
 #include "external/d3d9/pixelshader.h"
 #include "external/d3d9/pool.h"
 #include "external/d3d9/presentparameters.h"

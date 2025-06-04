@@ -1,5 +1,5 @@
 CRenderBatch__Finish 00484450 f end=0048446D
-CRenderBatch__CRenderBatch 00485530 f end=00485564
-CRenderBatch__Clear 00485F00 f end=00485F35
+CRenderBatch__constructor 00485530 f end=00485564
 CRenderBatch__QueueCallback 004858E0 f end=0048596F
 CRenderBatch__Clear 00485970 f end=004859D2
+CRenderBatch__Clear 00485F00 f end=00485F35

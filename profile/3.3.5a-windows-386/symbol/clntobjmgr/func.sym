@@ -1,0 +1,4 @@
+ObjectUpdateHandler 004D73A0 f end=004D74CA
+ObjectCompressedUpdateHandler 004D74D0 f end=004D760E
+OnObjectDestroy 004D7610 f end=004D76D1
+ClntObjMgrInitialize 004D76E0 f end=004D7749

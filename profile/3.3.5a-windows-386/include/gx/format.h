@@ -32,8 +32,8 @@ struct CGxFormat {
   C2iVector size;
                   // set by CVGxTripleBufferCallback
   uint32_t backBufferCount; // buffering? buffer? framebufferCount?
-  uint32_t sampleCount;
-  float sampleQuality; // UC, write at 00769693
+  uint32_t multisampleCount;
+  float multisampleQuality; // UC, write at 00769693
   CGxFormat__Format colorFormat;
   uint32_t refreshRate;
   uint32_t vsync;

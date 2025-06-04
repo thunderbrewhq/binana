@@ -230,6 +230,10 @@
     },
     {
       "type": "int",
+      "name": "EGxTexGen"
+    },
+    {
+      "type": "int",
       "name": "EGxTexTarget"
     },
     {
@@ -329,6 +333,10 @@
       "name": "LPDIRECT3D9"
     },
     {
+      "type": "IDirect3DBaseTexture9*",
+      "name": "LPDIRECT3DBASETEXTURE9"
+    },
+    {
       "type": "IDirect3DCubeTexture9*",
       "name": "LPDIRECT3DCUBETEXTURE9"
     },
@@ -394,11 +402,19 @@
     },
     {
       "type": "int",
+      "name": "NETMESSAGE"
+    },
+    {
+      "type": "int",
       "name": "NV_StereoRegistryProfileType"
     },
     {
       "type": "int",
       "name": "NvAPI_Status"
+    },
+    {
+      "type": "int",
+      "name": "OBJECT_TYPE"
     },
     {
       "type": "int",
@@ -431,6 +447,10 @@
     {
       "type": "long long",
       "name": "TimingMethod"
+    },
+    {
+      "type": "uint64_t",
+      "name": "WOWGUID"
     },
     {
       "type": "int32_t",
@@ -2501,6 +2521,33 @@
           "type": "void*",
           "name": "fn_GetHeaderSpace",
           "offset": 40
+        }
+      ]
+    },
+    {
+      "name": "CGObject",
+      "size": 8,
+      "members": [
+        {
+          "type": "uint32_t*",
+          "name": "m_data",
+          "offset": 0
+        },
+        {
+          "type": "CGObjectData*",
+          "name": "m_obj",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "CGObject_C__v_table",
+      "size": 4,
+      "members": [
+        {
+          "type": "void*",
+          "name": "unk",
+          "offset": 0
         }
       ]
     },
@@ -18368,6 +18415,108 @@
       ]
     },
     {
+      "name": "IDirect3DBaseTexture9",
+      "size": 4,
+      "members": [
+        {
+          "type": "IDirect3DBaseTexture9__v_table*",
+          "name": "v_table",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "IDirect3DBaseTexture9__v_table",
+      "size": 68,
+      "members": [
+        {
+          "type": "void*",
+          "name": "v_fn_0_QueryInterface",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_1_AddRef",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_2_Release",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_3_GetDevice",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_4_SetPrivateData",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_5_GetPrivateData",
+          "offset": 20
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_6_FreePrivateData",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_7_SetPriority",
+          "offset": 28
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_8_GetPriority",
+          "offset": 32
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_9_PreLoad",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_10_GetType",
+          "offset": 40
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_11_SetLOD",
+          "offset": 44
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_12_GetLOD",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_13_GetLevelCount",
+          "offset": 52
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_14_SetAutoGenFilterType",
+          "offset": 56
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_15_GetAutoGenFilterType",
+          "offset": 60
+        },
+        {
+          "type": "void*",
+          "name": "v_fn_16_GenerateMipSubLevels",
+          "offset": 64
+        }
+      ]
+    },
+    {
       "name": "IDirect3DCubeTexture9",
       "size": 4,
       "members": [
@@ -31121,6 +31270,93 @@
       ]
     },
     {
+      "name": "CGObject_C",
+      "size": 220,
+      "members": [
+        {
+          "type": "CGObject_C__v_table*",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "CGObject",
+          "name": "b_base",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk",
+          "arrsize": 42,
+          "offset": 12
+        },
+        {
+          "type": "float",
+          "name": "m_renderScale",
+          "offset": 180
+        },
+        {
+          "type": "uint32_t",
+          "name": "unki",
+          "offset": 184
+        },
+        {
+          "type": "void*",
+          "name": "m_model",
+          "offset": 188
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_highlightTypes",
+          "offset": 192
+        },
+        {
+          "type": "float",
+          "name": "m_objectHeight",
+          "offset": 196
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_worldObject",
+          "offset": 200
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "offset": 204
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fadeStartTime",
+          "offset": 208
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fadeDuration",
+          "offset": 212
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_alpha",
+          "offset": 216
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_startAlpha",
+          "offset": 217
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_endAlpha",
+          "offset": 218
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_maxAlpha",
+          "offset": 219
+        }
+      ]
+    },
+    {
       "name": "CGxFormat",
       "size": 88,
       "members": [
@@ -31176,12 +31412,12 @@
         },
         {
           "type": "uint32_t",
-          "name": "sampleCount",
+          "name": "multisampleCount",
           "offset": 32
         },
         {
           "type": "float",
-          "name": "sampleQuality",
+          "name": "multisampleQuality",
           "offset": 36
         },
         {
@@ -31585,6 +31821,37 @@
           "type": "CSBasePriority",
           "name": "b_base",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "D3DMATERIAL9",
+      "size": 68,
+      "members": [
+        {
+          "type": "D3DCOLORVALUE",
+          "name": "Diffuse",
+          "offset": 0
+        },
+        {
+          "type": "D3DCOLORVALUE",
+          "name": "Ambient",
+          "offset": 16
+        },
+        {
+          "type": "D3DCOLORVALUE",
+          "name": "Specular",
+          "offset": 32
+        },
+        {
+          "type": "D3DCOLORVALUE",
+          "name": "Emissive",
+          "offset": 48
+        },
+        {
+          "type": "float",
+          "name": "Power",
+          "offset": 64
         }
       ]
     },
@@ -35320,6 +35587,37 @@
           "type": "double",
           "name": "timeBegin",
           "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "CGObjectData",
+      "size": 24,
+      "members": [
+        {
+          "type": "WOWGUID",
+          "name": "m_guid",
+          "offset": 0
+        },
+        {
+          "type": "OBJECT_TYPE",
+          "name": "m_type",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "m_entryID",
+          "offset": 12
+        },
+        {
+          "type": "float",
+          "name": "m_scale",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "pad",
+          "offset": 20
         }
       ]
     },
@@ -48072,7 +48370,7 @@
         },
         {
           "type": "int32_t",
-          "name": "intF64",
+          "name": "m_windowFocus",
           "offset": 3940
         },
         {

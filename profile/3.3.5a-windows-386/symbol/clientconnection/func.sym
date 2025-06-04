@@ -1,6 +1,6 @@
-ClientConnection__Cleanup 006B0850 f end=006B086B
 ClientConnection__destructor 00465450 f end=0046547B ; ClientConnection::~ClientConnection()
-ClientConnection__ClientConnection 006B0250 f end=006B02B5
+ClientConnection__constructor 006B0250 f end=006B02B5
+ClientConnection__Cleanup 006B0850 f end=006B086B
 ClientConnection__Disconnect 006B0940 f end=006B095E ; ClientConnection::Disconnect(DISCONNECT_REASON)
 ClientConnection__PollStatus 006B1100 f end=006B11FC ; ClientConnection::PollStatus(WOWCS_OPS&, char const**, int&, int&)
 ClientConnection__Cancel 006B1200 f end=006B1252 ; ClientConnection::Cancel(int)

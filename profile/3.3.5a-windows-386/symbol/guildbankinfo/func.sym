@@ -1,4 +1,4 @@
 CGGuildBankInfo__Unlock 005A4CE0 f end=005A4D24
 CGGuildBankInfo__EnterWorld 005A56F0 f end=005A57FE
-CGGuildBankInfo__InitializeGame 005A77D0 f end=005A7830
 CGGuildBankInfo__DepositMoney 005A5B00 f end=005A5B95
+CGGuildBankInfo__InitializeGame 005A77D0 f end=005A7830

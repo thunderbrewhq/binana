@@ -1,1 +1,1 @@
-CMapLight__CMapLight 007D9B10 f end=007D9B8F ; public: __thiscall CMapLight::CMapLight(void)
+CMapLight__constructor 007D9B10 f end=007D9B8F ; public: __thiscall CMapLight::CMapLight(void)

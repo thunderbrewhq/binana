@@ -1,17 +1,15 @@
-Blit 006AE7C0 f end=006AE817 type="int32_t __stdcall func(C2iVector* size, BlitAlpha alpha, void* src, uint32_t srcStride, BlitFormat srcFmt, void* dst, uint32_t dstStride, BlitFormat dstFmt)" ; Blit(const C2iVector&, BlitAlpha, const void*, uint32_t, BlitFormat, void*, uint32_t, BlitFormat)
-InitBlit 006AE6E0 f end=006AE7BE
 GxGetBlitFormat 006817B0 f end=006817BF type="BlitFormat __stdcall func(EGxTexFormat format)"
-Blit_Argb8888_Abgr8888 006ABF40 f end=006ABFBE type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Argb8888][BlitFormat_Abgr8888][BlitAlpha_0]
-Blit_generic32_generic32 006ACCE0 f end=006ACCE9 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; Argb8888_Argb8888, Gr1616F_Gr1616F, R32F_R32F, D24X8_D24X8
-Blit_Argb8888_Argb8888_A1 006ABFC0 f end=006AC02F type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Argb8888][BlitFormat_Argb8888][BlitAlpha_1]
-Blit_Argb8888_Argb8888_A8 006ACCF0 f end=006ACD67 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Argb8888][BlitFormat_Argb8888][BlitAlpha_8]
 Blit_Argb8888_Argb4444 006ABE00 f end=006ABE2F type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Argb8888][BlitFormat_Argb4444][BlitAlpha_0]
 Blit_Argb8888_Argb1555 006ABE30 f end=006ABE5F type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Argb8888][BlitFormat_Argb1555][BlitAlpha_0]
 Blit_Argb8888_Rgb565 006ABE60 f end=006ABE8F type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Argb8888][BlitFormat_Rgb565][BlitAlpha_0]
-Blit_generic16_generic16 006ACD70 f end=006ACD79 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; Rgb565_Rgb565, Argb4444_Argb4444, Argb1555_Argb1555, Uv88_Uv88
 Blit_Argb4444_Abgr8888 006ABE90 f end=006ABF3F type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Argb4444][BlitFormat_Abgr8888][BlitAlpha_0]
+Blit_Argb8888_Abgr8888 006ABF40 f end=006ABFBE type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Argb8888][BlitFormat_Abgr8888][BlitAlpha_0]
+Blit_Argb8888_Argb8888_A1 006ABFC0 f end=006AC02F type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Argb8888][BlitFormat_Argb8888][BlitAlpha_1]
 Blit_Dxt1_Dxt1 006AC030 f end=006AC0B0 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Dxt1][BlitFormat_Dxt1][BlitAlpha_0]
 Blit_Dxt35_Dxt35 006AC0B0 f end=006AC130 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)"
+Blit_generic32_generic32 006ACCE0 f end=006ACCE9 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; Argb8888_Argb8888, Gr1616F_Gr1616F, R32F_R32F, D24X8_D24X8
+Blit_Argb8888_Argb8888_A8 006ACCF0 f end=006ACD67 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Argb8888][BlitFormat_Argb8888][BlitAlpha_8]
+Blit_generic16_generic16 006ACD70 f end=006ACD79 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; Rgb565_Rgb565, Argb4444_Argb4444, Argb1555_Argb1555, Uv88_Uv88
 Blit_Dxt1_Rgb565 006AE440 f end=006AE494 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Dxt1][BlitFormat_Rgb565][BlitAlpha_0]
 Blit_Dxt1_Argb1555 006AE4A0 f end=006AE4F4 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Dxt1][BlitFormat_Argb1555][BlitAlpha_0]
 Blit_Dxt1_Argb8888 006AE500 f end=006AE554 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Dxt1][BlitFormat_Argb8888][BlitAlpha_0]
@@ -19,3 +17,5 @@ Blit_Dxt3_Argb4444 006AE560 f end=006AE5B4 type="void __stdcall func(C2iVector* 
 Blit_Dxt3_Argb8888 006AE5C0 f end=006AE614 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Dxt3][BlitFormat_Argb8888][BlitAlpha_0]
 Blit_Dxt5_Argb4444 006AE620 f end=006AE674 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Dxt5][BlitFormat_Argb4444][BlitAlpha_0]
 Blit_Dxt5_Argb8888 006AE680 f end=006AE6D4 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Dxt5][BlitFormat_Argb8888][BlitAlpha_0]
+InitBlit 006AE6E0 f end=006AE7BE
+Blit 006AE7C0 f end=006AE817 type="int32_t __stdcall func(C2iVector* size, BlitAlpha alpha, void* src, uint32_t srcStride, BlitFormat srcFmt, void* dst, uint32_t dstStride, BlitFormat dstFmt)" ; Blit(const C2iVector&, BlitAlpha, const void*, uint32_t, BlitFormat, void*, uint32_t, BlitFormat)

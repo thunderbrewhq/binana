@@ -1,4 +1,4 @@
-CEffect__Destroy 006FA3C0 f end=006FA444
 CEffect__AddSpecialEffect 006F9260 f end=006F9394
-CEffect__Release 006FA390 f end=006FA3B2
 CEffect__Create 006F9D70 f end=006F9EBC
+CEffect__Release 006FA390 f end=006FA3B2
+CEffect__Destroy 006FA3C0 f end=006FA444

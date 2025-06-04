@@ -12,6 +12,7 @@ STORM_TS_GROWABLE_ARRAY(HTEXTURE);
 typedef struct CGxTexFlags CGxTexFlags;
 typedef struct CGxTex CGxTex;
 
+// !gxTex->m_flags.m_multiSampled
 struct CGxTexFlags {
   // unsigned __int32 m_filter : 3;
   // unsigned __int32 m_wrapU : 1;
@@ -20,6 +21,8 @@ struct CGxTexFlags {
   // unsigned __int32 m_generateMipMaps : 1;
   // unsigned __int32 m_renderTarget : 1;
   // unsigned __int32 m_maxAnisotropy : 5;
+
+  
   uint32_t f_flags;
 };
 

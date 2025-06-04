@@ -1,5 +1,5 @@
 CSimpleSlider__RunOnMinMaxChangedScript 0096BBB0 f end=0096BC08
-CSimpleSlider__CSimpleSlider 0096BE50 f end=0096BEC9 ; CSimpleSlider::CSimpleSlider(CSimpleFrame*)
+CSimpleSlider__constructor 0096BE50 f end=0096BEC9 ; CSimpleSlider::CSimpleSlider(CSimpleFrame*)
 CSimpleSlider__IsA 0096BF00 f end=0096BF35 ; CSimpleSlider::IsA(int) const
 CSimpleSlider__SetValue 0096C090 f end=0096C1A7 ; CSimpleSlider::SetValue(float, bool)
 CSimpleSlider__SetMinMaxValues 0096C470 f end=0096C4FD ; CSimpleSlider::SetMinMaxValues(float, float)

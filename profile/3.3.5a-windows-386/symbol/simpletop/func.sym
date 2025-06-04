@@ -1,11 +1,11 @@
-CSimpleTop__OnLayerRender 00495410 f end=0049546A
 CSimpleTop__RoundToPixelHeight 00493E00 f end=00493E85 ; CSimpleTop::RoundToPixelHeight(float)
 CSimpleTop__HideFrame 00493F30 f end=00493FA5 ; CSimpleTop::HideFrame(CSimpleFrame*, int)
 CSimpleTop__OnMouseMove 004945A0 f end=0049472A ; CSimpleTop::OnMouseMove(EVENT_DATA_MOUSE const*, void*)
 CSimpleTop__UnregisterFrame 00494FA0 f end=0049504D ; CSimpleTop::UnregisterFrame(CSimpleFrame*)
+CSimpleTop__RaiseFrame 004951A0 f end=00495261
+CSimpleTop__OnLayerRender 00495410 f end=0049546A
 CSimpleTop__OnDisplaySizeChanged 004955E0 f end=00495667 ; CSimpleTop::OnDisplaySizeChanged(EVENT_DATA_SIZE const*, void*)
 CSimpleTop__RegisterForEvent 00495880 f end=004958F9 ; CSimpleTop::RegisterForEvent(CSimpleFrame*, CSimpleEventType, int, unsigned int)
 CSimpleTop__EnableEvents 004959F0 f end=00495AF2 ; CSimpleTop::EnableEvents()
-CSimpleTop__CSimpleTop 00495EB0 f end=004960C6 ; CSimpleTop::CSimpleTop()
+CSimpleTop__constructor 00495EB0 f end=004960C6 ; CSimpleTop::CSimpleTop()
 CSimpleTop__ShowFrame 004960D0 f end=004960FA ; CSimpleTop::ShowFrame(CSimpleFrame*, int)
-CSimpleTop__RaiseFrame 004951A0 f end=00495261

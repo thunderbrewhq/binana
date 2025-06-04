@@ -1,1 +1,2 @@
-CGxMatrixStack__CGxMatrixStack 00683B90 f end=00683CE0 type="CGxMatrixStack* __thiscall func(CGxMatrixStack* this)"
+CGxMatrixStack__Identity 0057C340 f end=0057C397 type="void __thiscall func(CGxMatrixStack* this)"
+CGxMatrixStack__constructor 00683B90 f end=00683CE0 type="CGxMatrixStack* __thiscall func(CGxMatrixStack* this)"

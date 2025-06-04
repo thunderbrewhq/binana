@@ -15,6 +15,7 @@ EventUnregisterEx 0047D450 f end=0047D4B7
 EventSetTimer 0047D530 f end=0047D59C
 EventKillTimer 0047D620 f end=0047D683 type="void __stdcall func(uint32_t timerId, void* handlerFunction, char* functionName)"
 EventSetMouseMode 0047D690 f end=0047D6FD
+EventInputGetMousePosition 0047D700 f end=0047D75E
 EventPostClose 0047D760 f end=0047D769
 EventRegister 0047D770 f end=0047D78D
 EventUnregister 0047D790 f end=0047D7A9
@@ -59,4 +60,3 @@ IEvtTimerDispatch 00481100 f end=00481289
 IEvtTimerKill 00481290 f end=0048138F
 IEvtTimerSet 00481390 f end=004814E4
 TInstanceIdTable_EvtContext__Unlock 00774660 f end=00774675
-EventInputGetMousePosition 0047D700 f end=0047D75E

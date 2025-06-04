@@ -1,4 +1,4 @@
-CM2SceneRender__CM2SceneRender 0081F330 f end=0081F449 ; CM2SceneRender::CM2SceneRender(CM2Scene*)
+CM2SceneRender__constructor 0081F330 f end=0081F449 ; CM2SceneRender::CM2SceneRender(CM2Scene*)
 CM2SceneRender__SetupTextures 0081F450 f end=0081F620 ; CM2SceneRender::SetupTextures()
 CM2SceneRender__SetBatchVertices 0081F700 f end=0081F7FC ; CM2SceneRender::SetBatchVertices(int)
 CM2SceneRender__SetupLighting 0081FB10 f end=0081FE7A ; CM2SceneRender::SetupLighting()

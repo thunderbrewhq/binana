@@ -1,4 +1,4 @@
+EffectDeath__constructor 007EA260 f end=007EA416
+EffectNetherWorld__constructor 007EA470 f end=007EA592
 FFX__Destroy 008C0360 f end=008C0589
-EffectDeath__EffectDeath 007EA260 f end=007EA416
-EffectNetherWorld__EffectNetherWorld 007EA470 f end=007EA592
 FFX__Init 008C12F0 f end=008C1513

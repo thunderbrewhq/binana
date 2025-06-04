@@ -45,8 +45,10 @@ OsCallSetContext 0086F5A0 f end=0086F5EA
 OsCallResetContext 0086F5F0 f end=0086F64E ; 00005410
 OsCallInitialize 0086F760 f end=0086F875
 OsCallInitializeContext 0086F880 f end=0086F902
+OsGetLastErrorStr 008714E0 f end=0087150C type="char* __stdcall func()"
+OsFreeLastErrorStr 00871510 f end=0087151F type="void __stdcall func(char* str)"
 OsClipboardGetString 00872280 f end=00872297
 OsClipboardPutString 008722A0 f end=008722BF
 IOsClipboardGetString 008726F0 f end=008727BB
-IOsClipboardPutString 008727E0 f end=008728B8
 OsClipboardFreeString 008727C0 f end=008727DE
+IOsClipboardPutString 008727E0 f end=008728B8

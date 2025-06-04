@@ -1,5 +1,5 @@
 CVehiclePassenger_C__PostRenderUpdateAll 00747AE0 f end=00747AFB
-CVehiclePassenger_C__InitSystem 0074A070 f end=0074A15F
-CVehiclePassenger_C__UninitSystem 0074A160 f end=0074A1FE
 CVehiclePassenger_C__OnSetActiveMover 00747F40 f end=00747F9F
 CVehiclePassenger_C__GetStoredRootVehicleUnit 00748040 f end=0074806E
+CVehiclePassenger_C__InitSystem 0074A070 f end=0074A15F
+CVehiclePassenger_C__UninitSystem 0074A160 f end=0074A1FE

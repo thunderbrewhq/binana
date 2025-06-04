@@ -7,5 +7,5 @@ CRibbonEmitter__SetPos 0097F940 f end=0097FAC8 ; CRibbonEmitter::SetPos(C44Matri
 CRibbonEmitter__SetColor 0097FB60 f end=0097FBA0 ; CRibbonEmitter::SetColor(float, float, float)
 CRibbonEmitter__SetAlpha 0097FBA0 f end=0097FBDA ; CRibbonEmitter::SetAlpha(float)
 CRibbonEmitter__Update 00980090 f end=0098050D ; CRibbonEmitter::Update(float, int)
-CRibbonEmitter__CRibbonEmitter 00980630 f end=0098080C ; CRibbonEmitter::CRibbonEmitter()
+CRibbonEmitter__constructor 00980630 f end=0098080C ; CRibbonEmitter::CRibbonEmitter()
 CRibbonEmitter__Initialize 009808A0 f end=00980B4A ; CRibbonEmitter::Initialize(float, float, CImVector const&, TSGrowableArray<CTexture*> const&, TSGrowableArray<CRibbonMat> const&, TSGrowableArray<unsigned int> const&, CAaRect const&, unsigned int, unsigned int)

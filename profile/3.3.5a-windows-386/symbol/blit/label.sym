@@ -1,2 +1,2 @@
-initBlit 00C613C4 l type="int32_t"
 s_blits 00C60930 l type="BLIT_FUNCTION[13][13][4]" ; BLIT_FUNCTION s_blits[BlitFormats_Last][BlitFormats_Last][BlitAlphas_Last];
+initBlit 00C613C4 l type="int32_t"

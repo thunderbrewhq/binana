@@ -78,7 +78,11 @@
 #include "m2/shared.h"
 #include "m2/types.h"
 
+#include "net/message.h"
+
 #include "nvapi/nvapi.h"
+
+#include "object/object.h"
 
 #include "os/processorfeatures.h"
 #include "os/timemanager.h"

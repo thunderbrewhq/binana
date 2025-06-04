@@ -1,2 +1,2 @@
-CGxDeviceOpenGl__CGxDeviceOpenGl 0068BBC0 f end=0068BD15 type="void __thiscall func(CGxDeviceOpenGl* this)"
 CGxDeviceOpenGl__ISetGlCaps 0068A9A0 f end=0068AF34 type="void __thiscall func(CGxDeviceOpenGl* this, CGxFormat* format)"
+CGxDeviceOpenGl__constructor 0068BBC0 f end=0068BD15 type="void __thiscall func(CGxDeviceOpenGl* this)"

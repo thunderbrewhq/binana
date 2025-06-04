@@ -234,11 +234,11 @@ struct CGxDeviceD3d {
   D3DFORMAT m_devAdapterFormat;
   // used by CGxDeviceD3d::DeviceSetRenderTarget
   // IDirect3DSurface9* surface3B38;
-  LPDIRECT3DSURFACE9 m_defDepthStencilSurface;
+  LPDIRECT3DSURFACE9 m_defDepthStencilSurface; // OG name in 6.0.2?
   LPDIRECT3DSURFACE9 m_defColorSurface;
   LPDIRECT3DSURFACE9 m_defDepthSurface;
   // used in DeviceReadPixels
-  LPDIRECT3DSURFACE9 surface3B44; // m_backBufferSurface?
+  LPDIRECT3DSURFACE9 surface3B44; // m_defBBSurface? also potential OG name in 6.0.2: !m_defBBView
   LPDIRECT3DQUERY9 m_eventQuery; // UC m_queryEvent? m_eventQuery?
   int32_t m_hwCursorDirty;
   LPDIRECT3DTEXTURE9 m_hwCursorTexture;

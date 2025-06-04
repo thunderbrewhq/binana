@@ -1,6 +1,4 @@
 TSList__LinkNode 004F71A0 f end=004F724D
-TSList__LinkToHead 007B5020 f end=007B50AB ; 00005410
-TSList__LinkToTail 0086E200 f end=0086E25F ; 00005410
 TSGrowableArray_CGxMonitorMode__New 0068A090 f end=0068A0ED type="CGxMonitorMode* __thiscall func(TSGrowableArray_CGxMonitorMode* this)"
 TSGrowableArray_CGxMonitorMode__SetCount 0068A0F0 f end=0068A165 type="void __thiscall func(TSGrowableArray_CGxMonitorMode* this, uint32_t count)"
 SMemSetDebugFlags 0076E4A0 f end=0076E4D2 type="void __stdcall func(uint32_t flags, uint8_t changeMask)"
@@ -53,7 +51,7 @@ SCmdProcessCommandLine 00773990 f end=007739AD type="int32_t __stdcall func(CMDE
 StormInitialize 007739E0 f end=007739F4
 StormDestroy 00773A00 f end=00773A2F
 StormSetOption 00773A80 f end=00773C81 type="int32_t __stdcall func(int optname, void* optval, uint32_t optlen)"
-SCritSect__SCritSect 00774620 f end=0077462E type="SCritSect* __thiscall func(SCritSect* this)"
+SCritSect__constructor 00774620 f end=0077462E type="SCritSect* __thiscall func(SCritSect* this)"
 SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect *this)"
 SCritSect__Enter 00774640 f end=00774648 type="void __thiscall func(SCritSect *this)"
 SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *this)"
@@ -92,7 +90,7 @@ BigStack__destructor 0077AE80 f end=0077AEB1 type="void __thiscall func(BigStack
 BigBuffer__operator_index 0077AEC0 f end=0077AF2D type="uint32_t* __thiscall func(BigBuffer* this, uint32_t index)" ; public: unsigned int & __thiscall BigBuffer::operator[](unsigned int)const
 BigBuffer__SetCount 0077AF30 f end=0077AF7C type="void __thiscall func(BigBuffer* this, uint32_t count)"
 BigBuffer__Trim 0077AF80 f end=0077AFE3 type="void __thiscall func(BigBuffer* this)" ; public: void __thiscall BigBuffer::Trim(void)const
-BigStack__BigStack 0077AFF0 f end=0077B01F type="void __thiscall func(BigBuffer* this)"
+BigStack__constructor 0077AFF0 f end=0077B01F type="void __thiscall func(BigBuffer* this)"
 Add 0077B020 f end=0077B158 type="void __stdcall func(BigBuffer* a, BigBuffer* b, BigBuffer* c@<esi>)" ; void Add(class BigBuffer &,class BigBuffer const &,class BigBuffer const &)
 Div 0077B160 f end=0077B2A8 type="void __stdcall func(BigBuffer* a, uint32_t* b, BigBuffer* c, uint64_t d)" ; void Div(class BigBuffer &,unsigned int *,class BigBuffer const &,unsigned __int64)
 Mul 0077B2B0 f end=0077B3D2 type="void __stdcall func(BigBuffer* a, BigBuffer* b, uint64_t c)" ; void Mul(class BigBuffer &,class BigBuffer const &,unsigned __int64)
@@ -118,3 +116,5 @@ SBigDel 0077C6A0 f end=0077C6F6 type="void __stdcall func(BigData* num)"
 SBigMul 0077C700 f end=0077C71F type="void __stdcall func(BigData* a, BigData* b, BigData* c)"
 PowMod 0077C720 f end=0077C97B type="void __stdcall func(BigBuffer* a, BigBuffer* b, BigBuffer* c, BigBuffer* d, BigStack* stack)"
 SBigPowMod 0077C980 f end=0077C9A4 type="void __stdcall func(BigData* a, BigData* b, BigData* c, BigData* d)"
+TSList__LinkToHead 007B5020 f end=007B50AB ; 00005410
+TSList__LinkToTail 0086E200 f end=0086E25F ; 00005410

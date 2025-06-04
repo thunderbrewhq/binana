@@ -10,4 +10,4 @@ CParticleEmitter2__GetReplacementColors 0097AB10 f end=0097ABF3 ; CParticleEmitt
 CParticleEmitter2__SetTwinkleScale 0097AC00 f end=0097AC1D ; CParticleEmitter2::SetTwinkleScale(CRange const&)
 CParticleEmitter2__CreateChildEmittersFromModel 0097AEB0 f end=0097AEE4 ; CParticleEmitter2::CreateChildEmittersFromModel(CM2Scene*, char const*)
 CParticleEmitter2__DetermineIfSimple 0097D370 f end=0097D5F5 ; CParticleEmitter2::DetermineIfSimple()
-CParticleEmitter2__CParticleEmitter2 0097E150 f end=0097E3E6 ; CParticleEmitter2::CParticleEmitter2()
+CParticleEmitter2__constructor 0097E150 f end=0097E3E6 ; CParticleEmitter2::CParticleEmitter2()

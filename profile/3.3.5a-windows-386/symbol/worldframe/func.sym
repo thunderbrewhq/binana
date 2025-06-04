@@ -27,6 +27,6 @@ CGWorldFrame__OnLayerUpdate 004FA040 f end=004FA371
 CGWorldFrame__SetupDefaultAction 004FA570 f end=004FA5CE
 CGWorldFrame__UnitClear 004FA5D0 f end=004FA5EF
 CGWorldFrame__OnWorldUpdate 004FA5F0 f end=004FABC5
-CGWorldFrame__CGWorldFrame 004FABD0 f end=004FAF5E
+CGWorldFrame__constructor 004FABD0 f end=004FAF5E
 CGWorldFrame__RenderWorld 004FAF90 f end=004FB079
 CGWorldFrame__OnFrameRender 004FB080 f end=004FB0AD

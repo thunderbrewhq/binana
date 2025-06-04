@@ -1,5 +1,7 @@
+Grunt__ClientLink__Send 008CBA40 f end=008CBA8E ; 00005410
 Grunt__ClientLink__Shutdown 008CBA90 f end=008CBADD ; Grunt::ClientLink::Shutdown()
 Grunt__ClientLink__Disconnect 008CBAE0 f end=008CBB09 ; Grunt::ClientLink::Disconnect()
+Grunt__ClientLink__SetState 008CBB10 f end=008CBB3A ; 00005410
 Grunt__ClientLink__Connect 008CBB40 f end=008CBBE3 ; Grunt::ClientLink::Connect(char const*)
 Grunt__ClientLink__CmdRealmList 008CC250 f end=008CC3D2 ; Grunt::ClientLink::CmdRealmList(CDataStore&)
 Grunt__ClientLink__CmdAuthLogonChallenge 008CC3E0 f end=008CC794 ; Grunt::ClientLink::CmdAuthLogonChallenge(CDataStore&)
@@ -19,5 +21,3 @@ Grunt__ClientLink__GetRealmList 008CE0F0 f end=008CE1F5 ; Grunt::ClientLink::Get
 Grunt__ClientLink__ProveVersion 008CE720 f end=008CED10 ; Grunt::ClientLink::ProveVersion(unsigned char const*)
 Grunt__ClientLink__Call 008CF600 f end=008CF67D ; Grunt::ClientLink::Call()
 Grunt__ClientLink__ClientLink 008CF800 f end=008CF905 ; Grunt::ClientLink::ClientLink(Grunt::ClientResponse&)
-Grunt__ClientLink__Send 008CBA40 f end=008CBA8E ; 00005410
-Grunt__ClientLink__SetState 008CBB10 f end=008CBB3A ; 00005410
