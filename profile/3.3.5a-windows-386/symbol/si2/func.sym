@@ -13,3 +13,5 @@ SI2__UnregisterScriptFunctions 00985ED0 f end=00985EEF
 SI2__StopGlueAmbience 00985F70 f end=00985FA2
 SI2__StopGlueMusic 009860E0 f end=00986128
 SI2__PlayVocalErrorSound 00986D00 f end=00986DD6
+SI2__DK_GetPlayerFilterName 004CDA20 f end=004CDA60
+SI2__PlayFoleySound 004CFC10 f end=004CFD17

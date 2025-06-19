@@ -1,3 +1,4 @@
 World__SetLoadProgressCallback 0077EC90 f end=0077ECA6
 World__Intersect 0077F310 f end=0077F319
 World__Preload 00781500 f end=007815B7
+World__ObjectUpdate 00780240 f end=007804F5

@@ -2,3 +2,4 @@ CGCommentator__Update 005689A0 f end=00568F50
 CGCommentator__SnapCameraToPlayer 0056B510 f end=0056B5BD
 CGCommentator__PostInit 0056B830 f end=0056B895
 CGCommentator__InitializeGame 0056C150 f end=0056C1B3
+CGCommentator__UpdateCameraVelocity 0056B5C0 f end=0056B74A
