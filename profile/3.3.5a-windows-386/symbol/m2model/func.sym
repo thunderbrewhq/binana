@@ -59,3 +59,5 @@ CM2Model__InitializeLoaded 00832EA0 f end=008344DC ; CM2Model::InitializeLoaded(
 CM2Model__AttachToScene 00834540 f end=00834628 ; CM2Model::AttachToScene(CM2Scene*)
 CM2Model__AttachToSceneRecursive 00834630 f end=0083465C ; CM2Model::AttachToSceneRecursive(CM2Scene*)
 CM2Model__Initialize 00834810 f end=008348CA ; CM2Model::Initialize(CM2Scene*, CM2Shared*, CM2Model*, unsigned int)
+CM2Model__SetRibbonsEnabled 00824230 f end=008242BC
+CM2Model__SetEmittersEnabled 008279F0 f end=00827A88

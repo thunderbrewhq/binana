@@ -13,3 +13,7 @@ CGItem_C__IsPermanentlyBoundForTrade 00708B40 f end=00708BC3
 CGItem_C__CanBeUsed 00708C10 f end=00708C1E
 CGItem_C__Use 00708C20 f end=007093EE
 CGItem_C__GetInventoryArt 0070AA00 f end=0070AA40
+CGItem_C__Reenable 007069A0 f end=007069DE
+CGItem_C__GetPageTextId 00707180 f end=007071C6
+CGItem_C__GetItemName 007071D0 f end=00707213
+CGItem_C__Disable 0070AFC0 f end=0070B118

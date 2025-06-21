@@ -37,3 +37,4 @@ CGGameUI__m_instanceLockExtending 00BD0860 l
 CGGameUI__m_billingExpireTime 00BD086C l
 CGGameUI__m_lastRegenTime 00BD08A0 l
 CGGameUI__m_luaTainted 00D4139C l
+CGGameUI__m_corpseGUID 00BD0828 l

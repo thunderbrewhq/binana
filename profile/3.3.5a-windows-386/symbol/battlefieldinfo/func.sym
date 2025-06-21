@@ -1,2 +1,4 @@
 CGBattlefieldInfo__EnterWorld 0054CA50 f end=0054CC6C
 CGBattlefieldInfo__InitializeGame 0054E720 f end=0054EA2F
+CGBattlefieldInfo__AddArenaOpponentToSlot 0054B840 f end=0054B918
+CGBattlefieldInfo__AddArenaOpponent 0054D100 f end=0054D1C0
