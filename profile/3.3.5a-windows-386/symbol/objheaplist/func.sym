@@ -1,0 +1,6 @@
+CObjectHeapList__FreeEmptyHeaps 004D2B30 f end=004D2C21
+CObjectHeapList__BlocksAllocated 004D2C30 f end=004D2C4B
+CObjectHeapList__TotalHeaps 004D2C50 f end=004D2C71
+CObjectHeapList__PercentUsed 004D2C80 f end=004D2CB6
+CObjectHeapList__Delete 004D2F00 f end=004D2F86
+CObjectHeapList__New 004D3250 f end=004D332B

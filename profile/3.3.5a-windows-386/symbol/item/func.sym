@@ -17,3 +17,5 @@ CGItem_C__Reenable 007069A0 f end=007069DE
 CGItem_C__GetPageTextId 00707180 f end=007071C6
 CGItem_C__GetItemName 007071D0 f end=00707213
 CGItem_C__Disable 0070AFC0 f end=0070B118
+CGItem_C__SetStorage 00706D30 f end=00706D63
+CGItem_C__CGItem_C 00709840 f end=00709A07

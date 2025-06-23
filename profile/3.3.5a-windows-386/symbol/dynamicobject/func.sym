@@ -8,3 +8,4 @@ CGDynamicObject_C__ObjectVisKitProc 00704F60 f end=007050DD
 CGDynamicObject_C__PostReenable 007050E0 f end=007050FB
 CGDynamicObject_C__GetPosition 007064E0 f end=007064FE
 CGDynamicObject_C__GetRawPosition 00706500 f end=00706524
+CGDynamicObject_C__CGDynamicObject_C 007053A0 f end=007054CC
