@@ -38,3 +38,9 @@ CGGameUI__m_billingExpireTime 00BD086C l
 CGGameUI__m_lastRegenTime 00BD08A0 l
 CGGameUI__m_luaTainted 00D4139C l
 CGGameUI__m_corpseGUID 00BD0828 l
+CGGameUI__m_repopTime 00BD0848 l
+CGGameUI__m_deadNoRepopTimer 00BD084C l
+CGGameUI__m_uiLastInstanceTime 00BD0884 l
+CGGameUI__m_iMapID 00BD0888 l
+CGGameUI__m_iCurrentMapID 00BD088C l
+CGGameUI__m_bOwnsInstance 00BD0890 l

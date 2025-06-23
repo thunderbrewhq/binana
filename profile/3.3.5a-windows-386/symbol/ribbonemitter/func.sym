@@ -9,3 +9,4 @@ CRibbonEmitter__SetAlpha 0097FBA0 f end=0097FBDA ; CRibbonEmitter::SetAlpha(floa
 CRibbonEmitter__Update 00980090 f end=0098050D ; CRibbonEmitter::Update(float, int)
 CRibbonEmitter__constructor 00980630 f end=0098080C ; CRibbonEmitter::CRibbonEmitter()
 CRibbonEmitter__Initialize 009808A0 f end=00980B4A ; CRibbonEmitter::Initialize(float, float, CImVector const&, TSGrowableArray<CTexture*> const&, TSGrowableArray<CRibbonMat> const&, TSGrowableArray<unsigned int> const&, CAaRect const&, unsigned int, unsigned int)
+CRibbonEmitter__IsDead 0097F640 f end=0097F64E

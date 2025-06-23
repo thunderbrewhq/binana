@@ -64,5 +64,6 @@ CGlueMgr__PatchDownloadCancel 004E53A0 f end=004E541F
 CGlueMgr__PatchFailed 004E5420 f end=004E54C8
 CGlueMgr__PatchDownloadIdle 004E54D0 f end=004E5722
 CGlueMgr__ScanDLLFinished 004E5940 f end=004E59B1
+CGlueMgr__AreScriptFunctionsLoaded 004D7880 f end=004D7886
 SystemRegisterFunctions 0060A120 f end=0060A143
 SystemUnregisterFunctions 0060A150 f end=0060A16C

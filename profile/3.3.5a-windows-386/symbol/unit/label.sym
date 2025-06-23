@@ -1,2 +1,4 @@
 CGUnit_C__s_unitThreatPool 00CA1244 l
 CGUnit_C__m_initialized 00CA1254 l
+CGUnit_C__s_deferredClientControlUpdateGUID 00CA1248 l
+CGUnit_C__s_deferredClientControlUpdateState 00CA1250 l
