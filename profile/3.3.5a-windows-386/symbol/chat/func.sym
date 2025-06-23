@@ -1,3 +1,4 @@
 CGChat__ZoneUpdate 00508090 f end=0050825E
 CGChat__Complain 0050DFD0 f end=0050E117
 CGChat__InitializeGame 0050EDD0 f end=0050F3ED
+CGChat__OnUpdateInstance 004FE100 f end=004FE15B

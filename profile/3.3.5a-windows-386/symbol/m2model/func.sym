@@ -61,3 +61,4 @@ CM2Model__AttachToSceneRecursive 00834630 f end=0083465C ; CM2Model::AttachToSce
 CM2Model__Initialize 00834810 f end=008348CA ; CM2Model::Initialize(CM2Scene*, CM2Shared*, CM2Model*, unsigned int)
 CM2Model__SetRibbonsEnabled 00824230 f end=008242BC
 CM2Model__SetEmittersEnabled 008279F0 f end=00827A88
+CM2Model__HasLiveRibbons 008241D0 f end=00824228
