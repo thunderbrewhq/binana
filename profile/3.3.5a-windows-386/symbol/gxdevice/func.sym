@@ -114,3 +114,4 @@ CGxDevice__AdapterMonitorModes 0068A4C0 f end=0068A589 type="void __stdcall func
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
 CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF type="void __thiscall func(CGxDevice* this, CGxTex* texId, uint32_t* width, uint32_t* height, uint32_t* baseMip, uint32_t* mipCount)"
+CGxDevice__TexIsReadyNow 006831C0 f end=006831E7
