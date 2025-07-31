@@ -2,3 +2,4 @@ CMapObj__Init 007AE300 f end=007AE3A6 ; CMapObj::Init()
 CMapObj__constructor 007B0580 f end=007B05F9 ; CMapObj::CMapObj()
 CMapObj__Create 007B0CC0 f end=007B0D37 ; CMapObj::Create(char const*)
 CMapObj__Read 007D80C0 f end=007D81BB ; CMapObj::Read(char const*)
+CMapObj__Initialize 007AFEE0 f end=007B003C
