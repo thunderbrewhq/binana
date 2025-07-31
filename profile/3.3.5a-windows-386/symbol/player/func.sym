@@ -44,3 +44,5 @@ CloseAllLootRolls 006FAFD0 f end=006FB0FD
 PlayerNameTriggerNameRegenerate 007E5130 f end=007E5140
 PlayerNameShowing 007E5150 f end=007E516B
 PlayerNameDelete 007E6320 f end=007E6386
+Player_C_ZoneUpdateHandler 006D7BB0 f end=006D7C28
+AreaListRegisterLocation 0078F020 f end=0078F1EC

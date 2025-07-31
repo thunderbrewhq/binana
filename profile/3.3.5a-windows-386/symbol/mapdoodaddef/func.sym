@@ -1,1 +1,2 @@
 CMapDoodadDef__SelectLights 007C1150 f end=007C1371 ; CMapDoodadDef::SelectLights(CM2Lighting*)
+CMapDoodadDef__CMapDoodadDef 007C21E0 f end=007C234A
