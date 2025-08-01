@@ -1083,6 +1083,9 @@ static import_data_types() {
 	apply_type(0x00CB7220, "int32_t");
 	apply_type(0x00CB732C, "CRITICAL_SECTION");
 	apply_type(0x00CB7358, "CRITICAL_SECTION[4]");
+	apply_type(0x00D25308, "CVar*");
+	apply_type(0x00D25310, "CVar*");
+	apply_type(0x00D25314, "CVar*");
 	apply_type(0x00D3F798, "int32_t");
 	apply_type(0x00D41580, "int32_t");
 	apply_type(0x00D4159C, "OsTimeManager*");

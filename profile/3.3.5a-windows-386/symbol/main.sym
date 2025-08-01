@@ -28,6 +28,9 @@ DestroyEngineCallback 004066D0 f end=0040673F
 InitializeGlobal 004067F0 f end=00406B67
 DestroyGlobal 00406B70 f end=00406C65
 CommonMain 00406C70 f end=00406D64
+Script_port 00406F90 f end=004071CD
+Script_worldport 00407210 f end=00407511
+Script_setrawpos 00407520 f end=00407704
 LoadingScreenSetTip 00407E30 f end=00407E3D
 LoadingScreenSetScreenTipForRaceData 00407E40 f end=00407E88
 LoadingScreenSetTransparent 00407EA0 f end=00407EE3
@@ -368,6 +371,7 @@ CLayoutFrame__OnFrameResize 00489570 f end=00489690 ; CLayoutFrame::OnFrameResiz
 CLayoutFrame__SetProtectFlag 004896C0 f end=0048970E ; CLayoutFrame::SetProtectFlag(unsigned int)
 CLayoutFrame__ResizePending 004898B0 f end=00489978 ; CLayoutFrame::ResizePending()
 CLayoutFrame__constructor 00489980 f end=004899EF
+CGObject_C__GetPageTextID 004899F0 f end=004899F5
 CLayoutFrame__OnProtectedDetach 00489A40 f end=00489A5D
 CLayoutFrame__IsProtected 00489BB0 f end=00489C26
 CLayoutFrame__RegisterResize 00489C30 f end=00489D62 ; CLayoutFrame::RegisterResize(CLayoutFrame*, unsigned int)
@@ -469,6 +473,7 @@ TextureCalcMipCount 004B5510 f end=004B5549 type="int32_t __stdcall func(uint32_
 TextureGenerateMips 004B5550 f end=004B55D7
 TextureFreeMippedImg 004B55E0 f end=004B55FE
 LoadPredrawnMips 004B5A00 f end=004B5BA2
+TextureIsReadyNow 004B62A0 f end=004B62C1
 TextureSetCacheSize 004B6580 f end=004B65D5
 TextureCacheUpdate 004B6AE0 f end=004B6C47
 TextureAllocMippedImg 004B7220 f end=004B72F4 type="MipBits* __stdcall func(PIXEL_FORMAT format, uint32_t width, uint32_t height)"
@@ -537,17 +542,41 @@ SE2__PlaySoundKit 004C6A40 f end=004C713B
 SI2__Init 004C82E0 f end=004C8584
 SI2__SetWeatherKitID 004C8610 f end=004C8622
 SI2__StopAllMusic 004C93B0 f end=004C941B
+SI2__DK_GetPlayerFilterName 004CDA20 f end=004CDA60
 SI2__DSP_MakeDSPsExpire 004CDC80 f end=004CDD32
+SI2__PlayFoleySound 004CFC10 f end=004CFD17
 SI2__PlayItemSound 004D0090 f end=004D0102
 SI2__UpdateTaxiSounds 004D0110 f end=004D032D
 SI2__RegisterCVars 004D1600 f end=004D1EB8
+ChangeHeapAllocTracking 004D2780 f end=004D27C6
 HeapUsageDestroy 004D27D0 f end=004D27DC
 HeapUsageInitialize 004D2A30 f end=004D2A95
+CObjectHeap__Allocate 004D2AA0 f end=004D2B02
+GetObjAllocGlobals 004D2B10 f end=004D2B20
+ReleaseObjAllocGlobals 004D2B20 f end=004D2B2A
+CObjectHeapList__FreeEmptyHeaps 004D2B30 f end=004D2C21
+CObjectHeapList__BlocksAllocated 004D2C30 f end=004D2C4B
+CObjectHeapList__TotalHeaps 004D2C50 f end=004D2C71
+CObjectHeapList__PercentUsed 004D2C80 f end=004D2CB6
+CObjectHeap__New 004D2CC0 f end=004D2D33
+ObjectPtr 004D2D40 f end=004D2D87
+CObjectHeapList__Delete 004D2F00 f end=004D2F86
 ObjectFree 004D3100 f end=004D3130
+CObjectHeapList__New 004D3250 f end=004D332B
+ObjectAlloc 004D3330 f end=004D33BE
+InitObject 004D3FF0 f end=004D4066
+SetupObjectStorage 004D45B0 f end=004D474C
+CMoveSpline__CMoveSplineDtor 004D4F00 f end=004D4FA8
+ClntObjMgrSetObjMirrorHandler 004D5A80 f end=004D5B34
+CGObject_C__GetRawPosition 004D5EC0 f end=004D5ED6
+CGObject_C__GetSelectionHighlightColor 004D5F70 f end=004D5F85
+CGObject_C__GetMatrix 004D5FA0 f end=004D5FDD
+CreateObject 004D6C00 f end=004D6D9F
 ObjectUpdateHandler 004D73A0 f end=004D74CA
 ObjectCompressedUpdateHandler 004D74D0 f end=004D760E
 OnObjectDestroy 004D7610 f end=004D76D1
 ClntObjMgrInitialize 004D76E0 f end=004D7749
+CGlueMgr__AreScriptFunctionsLoaded 004D7880 f end=004D7886
 CGlueMgr__InitializeFFX 004D7D20 f end=004D7D93
 CGlueMgr__UpdateWaitQueue 004D7DA0 f end=004D7E3A
 CGlueMgr__SetCurrentAccount 004D7F60 f end=004D7F82
@@ -595,28 +624,132 @@ CGlueMgr__Idle 004DAB40 f end=004DB9E4
 CGlueMgr__Initialize 004DB9F0 f end=004DBBBF
 CGlueMgr__Shutdown 004DBBC0 f end=004DBC6C
 GlueScriptEventsInitialize 004DBC70 f end=004DBE0B
+Script_IsShiftKeyDown 004DBE10 f end=004DBE5D
+Script_GetBuildInfo 004DBE60 f end=004DBEBD
+Script_SetSavedAccountName 004DBEC0 f end=004DBF0F
+Script_GetUsesToken 004DBF10 f end=004DBF2F
+Script_SetUsesToken 004DBF30 f end=004DBF7E
+Script_SetSavedAccountList 004DBF80 f end=004DBFCF
 Script_GetLocale 004DBFD0 f end=004DBFF3 ; thanks namreeb :^)
+Script_SetCurrentScreen 004DC000 f end=004DC04F
+Script_PlayGlueMusic 004DC070 f end=004DC0B1
+Script_PlayGlueAmbience 004DC0C0 f end=004DC12A
+Script_PlayCreditsMusic 004DC150 f end=004DC191
+Script_LaunchURL 004DC1C0 f end=004DC201
+Script_DefaultServerLogin 004DC260 f end=004DC2C1
+Script_PINEntered 004DC2D0 f end=004DC394
+Script_MatrixEntered 004DC3A0 f end=004DC41E
+Script_GetMatrixCoordinates 004DC440 f end=004DC4D0
+Script_TokenEntered 004DC4D0 f end=004DC4FE
+Script_GetAddOnInfo 004DC560 f end=004DC719
+Script_LaunchAddOnURL 004DC720 f end=004DC7B9
+Script_GetAddOnEnableState 004DC7C0 f end=004DC891
+Script_EnableAddOn 004DC8A0 f end=004DC95C
+Script_EnableAllAddOns 004DC960 f end=004DC9A9
+Script_DisableAddOn 004DC9B0 f end=004DCA6C
+Script_DisableAllAddOns 004DCA70 f end=004DCAB9
+Script_IsAddonVersionCheckEnabled 004DCAE0 f end=004DCB1A
+Script_SetAddonVersionCheck 004DCB20 f end=004DCB53
+Script_GetCursorPosition 004DCB60 f end=004DCBED
+Script_GetClientExpansionLevel 004DCBF0 f end=004DCC20
+Script_GetScreenWidth 004DCC20 f end=004DCC61
+Script_GetScreenHeight 004DCC70 f end=004DCCB1
+Script_SurveyNotificationDone 004DCCC0 f end=004DCCE8
+Script_ScanDLLStart 004DCCF0 f end=004DCD51
+Script_Script_GetCreditText 004DCD60 f end=004DCDEF
 Script_IsWindowsClient 004DCE40 f end=004DCE5E
+Script_SetCVar 004DCE70 f end=004DCF19
+Script_ShowChangedOptionWarnings 004DCF30 f end=004DCF6A
+Script_GetNumDeclensionSets 004DCF70 f end=004DD01D
+Script_DeclineName 004DD020 f end=004DD122
+Script_GetNumGameAccounts 004DD130 f end=004DD1B4
+Script_GetGameAccountInfo 004DD1C0 f end=004DD2AC
+Script_SetGameAccount 004DD2B0 f end=004DD371
+Script_StopAllSFX 004DD380 f end=004DD3A1
+Script_SetClearConfigData 004DD3B0 f end=004DD3F3
 Script_RestartGx 004DD400 f end=004DD412
 Script_RestoreVideoStereoDefaults 004DD420 f end=004DD42D
+Script_RunScript 004DD490 f end=004DD4CD
+Script_IsTrialAccount 004DD4D0 f end=004DD53D
+Script_IsSystemSupported 004DD540 f end=004DD57A
 GlueScriptEventsRegisterFunctions 004DD580 f end=004DD5A6
 GlueScriptEventsUnregisterFunctions 004DD5B0 f end=004DD5CF
 Script_GetMovieResolution 004DD610 f end=004DD671
+Script_GetServerName 004DD900 f end=004DDA02
+Script_GetAddOnDependencies 004DDAC0 f end=004DDB89
 Script_GetExpansionLevel 004DDC20 f end=004DDC51
+Script_GetBillingPlan 004DDC60 f end=004DDD0B
+Script_GetCVar 004DDD10 f end=004DDD82
+Script_GetCVarBool 004DDD90 f end=004DDE0A
+Script_GetCVarDefault 004DDE10 f end=004DDE97
+Script_GetCVarMin 004DDEA0 f end=004DDF73
+Script_GetCVarMax 004DDF80 f end=004DE08E
+Script_GetCVarAbsoluteMin 004DE090 f end=004DE12E
+Script_GetCVarAbsoluteMax 004DE130 f end=004DE1EA
+Script_GetChangedOptionWarnings 004DE1F0 f end=004DE248
+Script_SetRealmSplitState 004DE250 f end=004DE2D5
+Script_RequestRealmSplitInfo 004DE2E0 f end=004DE389
+Script_ReadyForAccountDataTimes 004DE390 f end=004DE42F
+Script_RequestRealmList 004DE430 f end=004DE44D
+Script_RealmListUpdateRate 004DE450 f end=004DE4B0
 RealmListRegisterScriptFunctions 004DE4D0 f end=004DE4F3
 RealmListUnregisterScriptFunctions 004DE500 f end=004DE51C
 CRealmList__SetPreferredInfo 004DE960 f end=004DEAEB ; CRealmList::SetPreferredInfo(unsigned int, int, int)
+Script_GetNumRealms 004DEAF0 f end=004DEBBB
+Script_GetRealmInfo 004DEBC0 f end=004DEFA1
+Script_ChangeRealm 004DEFB0 f end=004DF107
+Script_GetRealmCategories 004DF110 f end=004DF1B9
+Script_IsInvalidTournamentRealmCategory 004DF1C0 f end=004DF269
+Script_IsTournamentRealmCategory 004DF270 f end=004DF2EF
+Script_Script_IsInvalidLocale 004DF2F0 f end=004DF396
+Script_SetPreferredInfo 004DF3A0 f end=004DF41D
+Script_SortRealms 004DF420 f end=004DF4E7
+Script_GetSelectedCategory 004DF4F0 f end=004DF578
 CRealmList__Initialize 004DF580 f end=004DF66C ; CRealmList::Initialize()
 CRealmList__Shutdown 004DF670 f end=004DF710
 CRealmList__UpdateList 004DF710 f end=004DFA4A ; CRealmList::UpdateList()
+Script_Script_IsRaceClassRestricted 004DFA70 f end=004DFC60
+Script_GetRandomName 004DFCA0 f end=004DFCFB
 CharacterCreateUnregisterScriptFunctions 004DFD30 f end=004DFD4F
+Script_SetCharCustomizeFrame 004E05B0 f end=004E0619
+Script_SetCharCustomizeBackground 004E0620 f end=004E0661
+Script_GetNameForRace 004E0670 f end=004E06F0
+Script_GetFactionForRace 004E06F0 f end=004E0822
+Script_GetAvailableClasses 004E0830 f end=004E08F7
+Script_GetHairCustomization 004E0900 f end=004E096E
+Script_GetFacialHairCustomization 004E0970 f end=004E09E8
+Script_GetSelectedSex 004E0A30 f end=004E0A5B
+Script_GetSelectedClass 004E0A60 f end=004E0B4A
+Script_CycleCharCustomization 004E0B50 f end=004E0BD3
+Script_SetCharacterCreateFacing 004E0C10 f end=004E0C5D
+Script_CreateCharacter 004E0C60 f end=004E0C9B
+Script_PaidChange_GetCurrentRaceIndex 004E0CA0 f end=004E0CCD
+Script_PaidChange_GetCurrentClassIndex 004E0CD0 f end=004E0CFD
+Script_IsRaceClassValid 004E0D00 f end=004E0DCB
+Script_GetCreateBackgroundModel 004E0DD0 f end=004E0EB4
+Script_GetAvailableRaces 004E1880 f end=004E1996
+Script_GetClassesForRace 004E19A0 f end=004E1A5C
+Script_SetSelectedSex 004E1A60 f end=004E1AC0
+Script_SetSelectedClass 004E1AC0 f end=004E1B53
+Script_PaidChange_GetName 004E1B70 f end=004E1BC1
 CCharacterCreation__Initialize 004E1C20 f end=004E1E15
 CCharacterCreation__SetToExistingCharacter 004E2330 f end=004E2460
+Script_SetSelectedRace 004E2470 f end=004E24D4
+Script_CustomizeExistingCharacter 004E2500 f end=004E2564
 CharSelectRegisterScriptFunctions 004E2570 f end=004E2593
 CharSelectUnregisterScriptFunctions 004E25A0 f end=004E25BC
 CCharacterSelection__UpdateCharacterNameDeclension 004E2BD0 f end=004E2C2D
 CCharacterSelection__GetCharacterDisplay 004E2EF0 f end=004E2F10
+Script_SetCharSelectModelFrame 004E2F60 f end=004E2FC9
+Script_SetCharacterSelectFacing 004E3030 f end=004E307D
+Script_GetCharacterInfo 004E3170 f end=004E3394
+Script_DeleteCharacter 004E33A0 f end=004E3406
+Script_RenameCharacter 004E3410 f end=004E3521
+Script_DeclineCharacter 004E3530 f end=004E3615
+Script_GetSelectBackgroundModel 004E3620 f end=004E3752
 CCharacterSelection__Shutdown 004E38F0 f end=004E3A1D
+Script_SetCharSelectBackground 004E44E0 f end=004E4521
+Script_SelectCharacter 004E4580 f end=004E4607
 CCharacterSelection__ClearCharacterList 004E47F0 f end=004E4877
 CGlueMgr__SurveyDownloadFeed 004E4880 f end=004E489E
 CGlueMgr__SurveySendResults 004E48A0 f end=004E48D4
@@ -652,8 +785,13 @@ CCharacterComponent__AddCape 004F21E0 f end=004F231E
 CCharacterComponent__AddItem 004F2640 f end=004F2804
 CCharacterComponent__AddItem 004F2830 f end=004F287F
 CCharacterComponent__AddItemBySlot 004F2880 f end=004F2974
+CPassenger__PostInit 004F4280 f end=004F429E
 CPassenger__GetRawPosition 004F4500 f end=004F45AC
+CGObject_C__TotalFieldsSaved 004F4A10 f end=004F4A16
+CMovementStatus__CMovementStatus 004F4C50 f end=004F4C9A
 CalculateFacingTo 004F5130 f end=004F51B1
+CGUnit_C__TotalFieldsSaved 004F52C0 f end=004F52C9
+CGPlayer__TotalFieldsSaved 004F5530 f end=004F553B
 CGWorldFrame__GetActiveCamera 004F5960 f end=004F5973
 CGWorldFrame__SendObjectTrackEvent 004F5980 f end=004F59E2
 CGWorldFrame__CursorTrackObject 004F59F0 f end=004F5A52
@@ -713,6 +851,7 @@ Script_IsVoiceChatAllowed 004FCC60 f end=004FCCA3
 Script_IsVoiceChatAllowedByServer 004FCCB0 f end=004FCCEA
 Script_UnitIsSilenced 004FCCF0 f end=004FCDE9
 Script_GetMuteStatus 004FCDF0 f end=004FCEE7
+CGChat__OnUpdateInstance 004FE100 f end=004FE15B
 Script_ListChannelByName 004FE630 f end=004FE64C
 Script_GetChannelList 004FE650 f end=004FE715
 Script_SetChannelPassword 004FE720 f end=004FE806
@@ -860,8 +999,10 @@ Script_IsDesaturateSupported 00511FB0 f end=00511FE0
 Script_GetThreatStatusColor 00511FE0 f end=0051208A
 Script_ConsoleAddMessage 00512090 f end=005120DD
 CGGameUI__OpenGuildInvite 00512570 f end=0051258F
+CGGameUI__IsPartyMember 005129F0 f end=005129F9
 CGGameUI__IsPartyMember 00512A00 f end=00512A2C
 CGGameUI__UnitModelUpdate 00512B50 f end=00512B59
+CGGameUI__SetActiveCorpse 00512C20 f end=00512C36
 CGGameUI__HandleScreenshot 00512E20 f end=00512E52
 CGGameUI__CloseInteraction 00512E60 f end=005130CF
 CGGameUI__SetMinimapZoneText 005134C0 f end=00513530
@@ -875,7 +1016,10 @@ CGGameUI__GetCursorVirtualItem 005136E0 f end=005136FA
 CGGameUI__IsAutoLooting 00513700 f end=00513740
 CGGameUI__UnlockItem 00513770 f end=005137A0
 CGGameUI__InitClientControlState 00513880 f end=00513893
+CGGameUI__ClearInstanceResetMap 005138A0 f end=005138AD
+CGGameUI__SetOwnsInstance 005138B0 f end=005138BD
 CGGameUI__GetPartyMember 005138D0 f end=005138F1
+CGGameUI__SetRepopTimeLeft 00513A30 f end=00513A55
 CGGameUI__SetInstanceLockTime 00513B20 f end=00513B8A
 CGGameUI__GetPartyMemberState 00513C30 f end=00513C66
 CGGameUI__UpdateUnitHighlights 00513CF0 f end=00513D92
@@ -970,6 +1114,8 @@ CGGameUI__ClearInteractTarget 00518D50 f end=00518DBE
 CGGameUI__SendTarget 00518DC0 f end=00518E36
 CGGameUI__CanPerformAction 005191C0 f end=0051924E
 CGGameUI__ClearCursor 00519280 f end=00519481
+CGGameUI__CanResetInstance 005194E0 f end=005195B4
+CGGameUI__SetLastInstanceTime 005195C0 f end=00519631
 CGGameUI__DoPowerRegen 005196F0 f end=00519774
 CGGameUI__CastTradeItemSpell 005198A0 f end=0051999C
 Script_ClearCursor 0051A3B0 f end=0051A3C2
@@ -1060,6 +1206,7 @@ CGGameUI__SetFocusTarget 0051FF20 f end=0051FFD5
 CGGameUI__ClosestObjectMatch 00520190 f end=00520403
 CGGameUI__CanInspect 00520410 f end=005204B6
 CGGameUI__NewZoneFeedback 005204C0 f end=005206DE
+CGGameUI__UpdateCombatMod 005206E0 f end=00520762
 CGGameUI__SetCursorItem 00520770 f end=0052087C
 CGGameUI__SetCursorMoney 00520880 f end=005208E5
 CGSpellBook__SetCursorSpell 00520960 f end=00520A58
@@ -1067,10 +1214,12 @@ CGGameUI__SetCursorPetAction 00520A80 f end=00520BAF
 CGGameUI__SetCursorPet 00520C60 f end=00520D29
 CGGameUI__SetCursorVirtualItem 00520D30 f end=00520DB3
 CGGameUI__SetCursorEquipmentSet 00520DC0 f end=00520E38
+CGGameUI__UnlockAllItems 00520E40 f end=00520F69
 CGGameUI__UpdateActivePlayer 00520F70 f end=00520FD2
 CGGameUI__OnClientControlChanged 00520FE0 f end=00521031
 CGGameUI__RegisterFrameFactories 00521040 f end=005210CF
 CGGameUI__DisplayError 005216F0 f end=005218AD
+CGGameUI__GetSelectionHighlightColor 00521BF0 f end=005220A6
 CGGameUI__AutoMouseOver 005220B0 f end=0052217B
 Script_ReloadUI 005222E0 f end=00522314
 Script_DeleteCursorItem 00522320 f end=0052247F
@@ -1105,6 +1254,7 @@ CGGameUI__UpdateAreaSpiritHealerDistance 00524010 f end=005240D7
 CGGameUI__HandleDisplaySizeChanged 005240E0 f end=005241A7
 CGGameUI__ClearTarget 005241B0 f end=0052434D
 CGGameUI__BreakTarget 00524350 f end=0052443C
+CGGameUI__SetRegenEnabled 00524600 f end=00524650
 CGGameUI__DeleteCursorItem 00524650 f end=00524712
 Script_StopCinematic 00524980 f end=005249B7
 CGGameUI__AcceptAreaSpiritHeal 00524B60 f end=00524BEE
@@ -1359,6 +1509,7 @@ Script_GetBattlefieldArenaFaction 0054A280 f end=0054A2BA
 Script_GetNumArenaOpponents 0054A2C0 f end=0054A2F4
 Script_GetHolidayBGHonorCurrencyBonuses 0054A300 f end=0054A361
 Script_GetRandomBGHonorCurrencyBonuses 0054A370 f end=0054A3D1
+CGBattlefieldInfo__AddArenaOpponentToSlot 0054B840 f end=0054B918
 Script_GetNumBattlefields 0054BAA0 f end=0054BAD4
 Script_IsBattlefieldArena 0054BAE0 f end=0054BB3D
 Script_SetSelectedBattlefield 0054BB40 f end=0054BBC6
@@ -1378,6 +1529,7 @@ Script_GetNumBattlegroundTypes 0054C870 f end=0054C892
 Script_GetWorldPVPQueueStatus 0054C8A0 f end=0054C9D3
 Script_SortBGList 0054C9F0 f end=0054CA22
 CGBattlefieldInfo__EnterWorld 0054CA50 f end=0054CC6C
+CGBattlefieldInfo__AddArenaOpponent 0054D100 f end=0054D1C0
 Script_GetBattlefieldInfo 0054D770 f end=0054D8E2
 Script_GetBattlefieldInstanceInfo 0054D8F0 f end=0054D990
 Script_JoinBattlefield 0054D990 f end=0054DA10
@@ -1411,8 +1563,19 @@ Script_GetRefreshRates 0054F690 f end=0054F81D
 Script_GetMultisampleFormats 0054F820 f end=0054F8AA
 Script_GetCurrentMultisampleFormat 0054F8B0 f end=0054F97B
 Script_SetMultisampleFormat 0054F980 f end=0054FB0B
+Script_AccountMsg_GetNumTotalMsgs 0054FDE0 f end=0054FE20
+Script_AccountMsg_GetHeaderSubject 0054FE20 f end=0054FEB3
+Script_AccountMsg_GetHeaderPriority 0054FEC0 f end=0054FF67
+Script_AccountMsg_LoadBody 0054FF70 f end=00550013
+Script_AccountMsg_GetBody 00550020 f end=0055007E
 AccountMsg_RegisterScriptFunctions 00550080 f end=005500A3
 AccountMsg_UnregisterScriptFunctions 005500B0 f end=005500CC
+Script_AccountMsg_GetNumUnreadMsgs 00550360 f end=005503D2
+Script_AccountMsg_GetNumUnreadUrgentMsgs 005503E0 f end=0055042F
+Script_AccountMsg_GetIndexHighestPriorityUnreadMsg 00550430 f end=005504D9
+Script_AccountMsg_GetIndexNextUnreadMsg 005504E0 f end=005505AE
+Script_AccountMsg_SetMsgRead 005505B0 f end=00550646
+Script_AccountMsg_LoadHeaders 00550910 f end=00550936
 Script_KBSetup_BeginLoading 00551720 f end=00551759
 Script_KBSetup_IsLoaded 00551760 f end=00551783
 Script_KBSetup_GetLanguageCount 00551790 f end=005517D0
@@ -1440,6 +1603,7 @@ Script_GetLFGTypes 00552DD0 f end=00552E10
 Script_GetLFGRoles 00552E10 f end=00552E84
 Script_GetLFGInfoLocal 00552E90 f end=00552F2F
 Script_GetLFGInfoServer 00552F30 f end=00552FFE
+Script_GetLFGProposalMember 00553000 f end=00553103
 Script_GetLFGProposalMember 00553110 f end=00553119
 Script_GetRandomDungeonBestChoice 00553120 f end=00553163
 Script_CanPartyLFGBackfill 00553170 f end=005531C2
@@ -1451,11 +1615,14 @@ Script_SetLFGComment 00553F50 f end=00553F86
 Script_GetLFGQueueStats 00553F90 f end=00554157
 Script_LeaveLFG 00554160 f end=00554168
 Script_GetLFGProposal 00554370 f end=00554379
+Script_GetLFGProposalEncounter 00554380 f end=0055443A
 Script_GetLFGProposalEncounter 00554440 f end=00554449
 Script_AcceptProposal 005545E0 f end=005545FB
 Script_RejectProposal 00554600 f end=0055460D
 Script_GetLFGRoleUpdate 00554680 f end=00554689
+Script_GetLFGRoleUpdateSlot 00554690 f end=00554738
 Script_GetLFGRoleUpdateSlot 00554740 f end=00554749
+Script_GetLFGRoleUpdateMember 00554750 f end=005548DC
 Script_GetLFGRoleUpdateMember 005548E0 f end=005548E9
 Script_GetAvailableRoles 005548F0 f end=00554958
 Script_SetLFGBootVote 00554A50 f end=00554A59
@@ -1601,6 +1768,7 @@ Script_CommentatorGetSkirmishQueueCount 0056AF60 f end=0056AFB1
 Script_CommentatorGetSkirmishQueuePlayerInfo 0056AFC0 f end=0056B0AB
 Script_CommentatorStartSkirmishMatch 0056B0B0 f end=0056B1DC
 CGCommentator__SnapCameraToPlayer 0056B510 f end=0056B5BD
+CGCommentator__UpdateCameraVelocity 0056B5C0 f end=0056B74A
 CGCommentator__PostInit 0056B830 f end=0056B895
 CGCommentator__InitializeGame 0056C150 f end=0056C1B3
 CGChatBubbleFrame__Render 0056C340 f end=0056C4F5
@@ -1653,6 +1821,7 @@ Script_SetRaidRosterSelection 00572BC0 f end=00572C4F
 Script_GetRaidRosterSelection 00572C50 f end=00572C7D
 Script_GetReadyCheckTimeLeft 00572C80 f end=00572D07
 CGRaidInfo__EnterWorld 00572E40 f end=00572EC1
+CGRaidInfo__EnableMember 00573070 f end=00573148
 Script_GetRaidRosterInfo 00573690 f end=00573A5F
 Script_IsRaidLeader 00573A60 f end=00573AA6
 Script_IsRealRaidLeader 00573AB0 f end=00573AF6
@@ -1678,6 +1847,7 @@ Script_CloseBankFrame 0057B9C0 f end=0057B9E0
 Script_GetNumBankSlots 0057BAB0 f end=0057BB30
 Script_GetBankSlotCost 0057BB30 f end=0057BBB3
 Script_PurchaseSlot 0057BBC0 f end=0057BC8A
+Script_SetZoom 0057BFD0 f end=0057C031
 CGxMatrixStack__Identity 0057C340 f end=0057C397 type="void __thiscall func(CGxMatrixStack* this)"
 GxXformPop 0057C420 f end=0057C44A
 Script_GetNumTrackingTypes 0057F170 f end=0057F1AE
@@ -1709,6 +1879,7 @@ Script_ShowBuybackSellCursor 00585890 f end=00585990
 Script_GetRepairAllCost 00585990 f end=00585C8E
 Script_RepairAllItems 00585C90 f end=00585F57
 CGMerchantInfo__LeaveWorld 00585FE0 f end=00586003
+CGTradeInfo__UpdatePlayerItem 005863C0 f end=0058640C
 Script_GetTradeTargetItemLink 005865F0 f end=005866DB
 Script_AcceptTrade 005866E0 f end=00586722
 Script_CancelTradeAccept 00586730 f end=00586773
@@ -1861,10 +2032,14 @@ Script_CollapseTrainerSkillLine 00596150 f end=005961E4
 Script_ExpandTrainerSkillLine 005961F0 f end=00596282
 Script_GetTrainerServiceItemLink 00596290 f end=005963BF
 CGClassTrainer__RefreshList 00596B00 f end=005970A7
+Script_SetUnit 005978E0 f end=00597956
+Script_SetCreature 00597960 f end=00597A09
+Script_SetRotation 00597A10 f end=00597A7A
 CGTabardCreationFrame__EnterWorld 00598DC0 f end=00598DCD
 Script_GetTabardCreationCost 00598DD0 f end=00598E04
 CGTabardCreationFrame__Open 00598E60 f end=00598EB5
 Script_CloseTabardCreation 00598F30 f end=00598F38
+Script_CycleVariation 00599500 f end=005995CA
 CGGuildRegistrar__EnterWorld 00599DD0 f end=00599DF1
 Script_CloseGuildRegistrar 00599F00 f end=00599F3F
 Script_GetGuildCharterCost 00599F40 f end=00599F74
@@ -2247,6 +2422,7 @@ Script_GetNewSocketInfo 005C4B60 f end=005C4D05
 Script_GetNewSocketLink 005C4D10 f end=005C4DB4
 Script_ClickSocketButton 005C4DC0 f end=005C4E94
 Script_GetSocketItemBoundTradeable 005C4EA0 f end=005C4EDA
+CGItemSocketInfo__RemoveItem 005C4F40 f end=005C4FED
 Script_GetExistingSocketInfo 005C5160 f end=005C533D
 Script_GetExistingSocketLink 005C5340 f end=005C5458
 Script_AcceptSockets 005C5460 f end=005C5468
@@ -2454,6 +2630,7 @@ Script_TradeSkillOnlyShowMakeable 005DD3E0 f end=005DD41A
 Script_TradeSkillOnlyShowSkillUps 005DD420 f end=005DD45A
 Script_CollapseTradeSkillSubClass 005DD460 f end=005DD4F6
 Script_ExpandTradeSkillSubClass 005DD500 f end=005DD594
+CGTradeSkillInfo__RefreshList 005DD5A0 f end=005DE100
 CGTradeSkillInfo__SetTradeSkill 005DE120 f end=005DE2F4
 Script_GetTradeSkillReagentInfo 005DE400 f end=005DE619
 Script_GetTradeSkillTools 005DE620 f end=005DE8B6
@@ -2486,6 +2663,7 @@ Script_SelectQuestLogEntry 005E02F0 f end=005E0337
 Script_GetQuestLogQuestText 005E0340 f end=005E041F
 Script_QuestPOIGetIconInfo 005E0590 f end=005E06C1
 Script_GetQuestLogCompletionText 005E06D0 f end=005E07F7
+CGQuestLog__UpdateQuestItem 005E1250 f end=005E12F1
 Script_GetAbandonQuestItems 005E3D60 f end=005E405D
 Script_AbandonQuest 005E4060 f end=005E4068
 Script_IsUnitOnQuest 005E4070 f end=005E419C
@@ -2577,6 +2755,7 @@ Script_IsVehicleAimPowerAdjustable 005F9FE0 f end=005FA04B
 Script_DetectWowMouse 005FA050 f end=005FA05E
 CGInputControl__SendUIVehicleAngleUpdate 005FA910 f end=005FA9AD
 Script_ToggleRun 005FAAE0 f end=005FAB6D
+CGInputControl__MovePlayer 005FAE70 f end=005FAFAE
 CGInputControl__TurnPlayer 005FB0B0 f end=005FB19B
 Script_VehicleExit 005FB660 f end=005FB6C8
 Script_VehiclePrevSeat 005FB6D0 f end=005FB71B
@@ -2957,6 +3136,7 @@ CGxDevice__MasterEnable 00683100 f end=00683121 type="int32_t __thiscall func(CG
 CGxDevice__BufData 00683130 f end=00683142 type="int32_t __thiscall func(CGxDevice* this, CGxBuf* buf, void *data, uint32_t size, uint32_t offset)"
 CGxDevice__BufLock 00683150 f end=00683171 type="uint8_t* __thiscall func(CGxDevice* this, CGxBuf* buf)"
 CGxDevice__BufUnlock 00683180 f end=006831A0 type="int32_t __thiscall func(CGxDevice* this, CGxBuf* buf, uint32_t size)"
+CGxDevice__TexIsReadyNow 006831C0 f end=006831E7
 CGxDevice__ShaderConstantsClear 006833A0 f end=006833DD type="void __thiscall func(CGxDevice* this)"
 CGxDevice__ShaderConstantsSet 006833E0 f end=00683554 type="void __thiscall func(CGxDevice* this, EGxShTarget target, uint32_t index, float* constants, uint32_t count)"
 CGxDevice__ShaderConstantsLock 00683560 f end=00683577 type="uint8_t* __thiscall func(CGxDevice* this, EGxShTarget target)"
@@ -3375,26 +3555,60 @@ CGPlayer_C__SetAutoLoot 006CDE50 f end=006CDE81
 CGPlayer_C__ClearLootingObject 006CEDD0 f end=006CEDE7
 CGPlayer_C__GetPendingMovie 006CF290 f end=006CF296
 CGPlayer_C__GetPlayedTime 006CF440 f end=006CF468
+CGPlayer_C__SetStorage 006D1CF0 f end=006D1D26
 CGPlayer_C__ValidateSlot 006D4A00 f end=006D4AC9
+CGPlayer_C__UpdateQuestStatus 006D5000 f end=006D507A
+CGPlayer_C__UpdateQuestStatus 006D5080 f end=006D50BC
+CGPlayer_C__UpdateQuestStatusAll 006D50C0 f end=006D5126
+CGPlayer_C__UpdateTaxiStatus 006D5130 f end=006D51E6
 CGPlayer_C__ClearAFK 006D52D0 f end=006D53A4
 CGPlayer_C__CanLoot 006D5A60 f end=006D5BD7
+CGPlayer_C__MeleeModeLeave 006D5F70 f end=006D5FB1
+CGPlayer_C__GetClientStandState 006D64E0 f end=006D6515
 CGPlayer_C__OnLevelChange 006D66E0 f end=006D6720
+CGPlayer_C__GetSpellCastingTime 006D68D0 f end=006D69EB
 CGPlayer_C__GetPVPFactionIndex 006D6E90 f end=006D6EFA
 CGPlayer_C__HandleSkinning 006D6F40 f end=006D702E
 CGPlayer_C__VehicleAllowsInteraction 006D7AA0 f end=006D7B2B
+CGPlayer_C__CastRandomCritter 006D7B30 f end=006D7B64
+Player_C_ZoneUpdateHandler 006D7BB0 f end=006D7C28
 CGPlayer_C__LootUnit 006DAD90 f end=006DAF5E
+CGPlayer_C__UpdateRepopTimer 006DC070 f end=006DC0E1
+CGPlayer_C__OnDeath 006DC0F0 f end=006DC1B5
+CGPlayer_C__GetExpandedSkillRank 006DC230 f end=006DC2B2
+CGPlayer_C__GetSpellRank 006DC330 f end=006DC3E5
+CGPlayer_C__UpdateInteractStatusAll 006DC5A0 f end=006DC633
+CGPlayer_C__UnitIsTrivial 006DE130 f end=006DE1C0
+CGPlayer_C__GetCombatRatingBonus 006DE410 f end=006DE48F
 CGPlayer_C__CountEquippedGems 006DE4D0 f end=006DE6C8
+CGPlayer_C__GetDefenseSkillRank 006DE6D0 f end=006DE749
+CGPlayer_C__GetVirtualItem 006E04D0 f end=006E05C3
+CGPlayer_C__GetVirtualItemDisplayID 006E05D0 f end=006E063B
 CGPlayer_C__EquipVisibleItem 006E08C0 f end=006E09D5
+CGPlayer_C__GetAttackSkillRank 006E0C30 f end=006E0D2B
+CGPlayer_C__UpdatePartyMemberState 006E15A0 f end=006E165C
 CGPlayer_C__CombatModeLeave 006E1660 f end=006E1776
+CGPlayer_C__PostReenable 006E1D70 f end=006E1E05
 CGPlayer_C__ToggleFarSight 006E2880 f end=006E2AFF
+CGPlayer_C__AutoCombatModeEventHandler 006E2BE0 f end=006E2E03
 CGPlayer_C__CombatModeEnter 006E4950 f end=006E4B76
+CGPlayer_C__DestructActivePlayer 006E5090 f end=006E5178
+CGPlayer_C__Disable 006E6020 f end=006E614A
+CGPlayer_C__Reenable 006E6150 f end=006E61A1
+CGPlayer_C__CGPlayer_C 006E6B40 f end=006E6E94
+CGUnit_C__GetPosition 006E6F10 f end=006E6F31
+CGUnit_C__UpdateObjectNameString 006E6FA0 f end=006E6FBE
 CMovement_C__OnClientControlLost 006E9A60 f end=006E9A6F
 CMovement_C__UpdateHeartbeatTimerA 006E9B70 f end=006E9BAB
+CMovement_C__OnMoveStartLocal 006ECB50 f end=006ECBB0
 CMovement_C__OnMoveStopLocal 006ECDE0 f end=006ECE39
 CMovement_C__OnTurnStopLocal 006ECEA0 f end=006ECF06
+CMovement_C__OnDismissControlledVehicleLocal 006EF540 f end=006EF599
 MovementDestroy 006F0C30 f end=006F0C6E
 CObjectEffectManager__ExitState 006F61D0 f end=006F6413
 CObjectEffectManager__EnterState 006F7270 f end=006F7365
+GetSpecialSpellVisualEffectNameRec 006F75B0 f end=006F75E0
+CEffect__ConnectToLightningThisFrame 006F7900 f end=006F7945
 CEffect__AddSpecialEffect 006F9260 f end=006F9394
 CEffect__Create 006F9D70 f end=006F9EBC
 CEffect__Release 006FA390 f end=006FA3B2
@@ -3402,19 +3616,53 @@ CEffect__Destroy 006FA3C0 f end=006FA444
 CloseAllLootRolls 006FAFD0 f end=006FB0FD
 CGUnit_C__StopMissileTrajectoryTargeting 006FBF00 f end=006FBF7B
 CGUnit_C__InitMissileTrajectorySystem 006FC8E0 f end=006FC918
+CMissileCollision__Free 006FC950 f end=006FC9AE
 CGUnit_C__SendFinalMissileTrajectoryUpdate 006FD6B0 f end=006FDA1E
 CGUnit_C__UpdateMissileTrajectory 006FE7E0 f end=006FE9A8
+CMissile__CMissileDtor 00702190 f end=007022CD
+CMissile__DeleteSelf 00703730 f end=00703765
 CMissile__ClearInFlightMissiles 00703770 f end=00703802
+CMissile__WaitForModelFX 00703810 f end=00703900
+CMissile__ClearInFlightMissilesWithTarget 00703A80 f end=00703ADF
 CMissile__UpdateStaticLists 00703B00 f end=00703B73
 CMissile__Initialize 00703B80 f end=00703BE0
 CMissile__Destroy 00703BE0 f end=00703C10
+CGDynamicObject_C__Disable 00704940 f end=0070498A
+CGDynamicObject_C__Reenable 00704990 f end=007049C8
+CGDynamicObject_C__ShouldRender 007049D0 f end=007049FF
+CGDynamicObject_C__HandleOutOfRange 00704A70 f end=00704AEF
+CGDynamicObject_C__GetMatrix 00704CC0 f end=00704D84
+CGDynamicObject_C__ModelLoaded 00704D90 f end=00704F1C
+CGDynamicObject_C__ObjectVisKitProc 00704F60 f end=007050DD
+CGDynamicObject_C__PostReenable 007050E0 f end=007050FB
+CGDynamicObject_C__CGDynamicObject_C 007053A0 f end=007054CC
+CGCorpse_C__PostReenable 00705610 f end=00705626
+CGCorpse_C__GetModelFileName 00705670 f end=00705796
+CGCorpse_C__ShouldRender 007057E0 f end=00705850
+CGCorpse_C__ModelLoaded 00705850 f end=007058AE
+CGCorpse_C__ShouldFadeout 007058B0 f end=007058EC
 CGCorpse_C__CanBeLooted 007058F0 f end=007058FD
 CGCorpse_C__GetFactionTemplate 00705A80 f end=00705AB2
+CGCorpse_C__Disable 00705F30 f end=00705F9D
+CGCorpse_C__Reenable 00705FA0 f end=00706008
+CGCorpse_C__OnRightClick 00706010 f end=00706111
+CGCorpse_C__RenderTargetSelection 007062F0 f end=0070642A
+CGCorpse_C__CGCorpse_C 00706430 f end=007064DA
+CGDynamicObject_C__GetPosition 007064E0 f end=007064FE
+CGDynamicObject_C__GetRawPosition 00706500 f end=00706524
+CGCorpse_C__GetTrueScale 00706570 f end=00706586
+CGCorpse_C__Animate 007068D0 f end=00706954
+CGContainer_C__SetStorage 00706960 f end=00706996
+CGItem_C__Reenable 007069A0 f end=007069DE
+CGContainer_C__CGContainer_C 00706A20 f end=00706AC2
 CGItem_C__GetUseSpell 00706B90 f end=00706BEF
 CGItem_C__NumBaseCharges 00706BF0 f end=00706C4F
 CGItem_C__GetCooldowns 00706C50 f end=00706CE5
+CGItem_C__SetStorage 00706D30 f end=00706D63
 CGItem_C__NumBaseCharges 00706F40 f end=00706F9E
 CGItem_C__Unlock 00707020 f end=00707051
+CGItem_C__GetPageTextId 00707180 f end=007071C6
+CGItem_C__GetItemName 007071D0 f end=00707213
 CGItem_C__GetSubtypeID 00707250 f end=0070727E
 CGItem_C__GetUseSpell 00707C60 f end=00707DA1
 CGItem_C__GetCooldowns 00707E90 f end=00707F44
@@ -3424,30 +3672,73 @@ CGItem_C__GetRepairCost 00708540 f end=007086AF
 CGItem_C__IsPermanentlyBoundForTrade 00708B40 f end=00708BC3
 CGItem_C__CanBeUsed 00708C10 f end=00708C1E
 CGItem_C__Use 00708C20 f end=007093EE
+CGItem_C__CGItem_C 00709840 f end=00709A07
 CGItem_C__GetInventoryArt 0070AA00 f end=0070AA40
+CGItem_C__Disable 0070AFC0 f end=0070B118
+CGGameObject_C__Animate 0070B930 f end=0070B951
+CGGameObject_C__ShouldRender 0070B960 f end=0070B993
 CGGameObject_C__CanUse 0070BA00 f end=0070BA0D
 CGGameObject_C__CanUseNow 0070BA10 f end=0070BA24
 CGGameObject_C__StartInteraction 0070BAB0 f end=0070BAC0
 CGGameObject_C__GetInteractDistanceSquared 0070BAD0 f end=0070BB0D
+CGUnit_C__SetStorage 0070CBA0 f end=0070CBD3
+CGGameObject_C__UpdateWorldObject 0070CBE0 f end=0070CDE8
+CGGameObject_C__GetObjectName 0070CDF0 f end=0070CE07
 CGGameObject_C__CanChangeCursor 0070CE10 f end=0070CEB2
 CGGameObject_C__GetCursorFile 0070CEC0 f end=0070CF2E
+CGGameObject_C__UpdateInteractIconAttach 0070CF30 f end=0070D003
+CGGameObject_C__ShowLootEffect 0070D080 f end=0070D15F
+CGGameObject_C__Reenable 0070ED50 f end=0070EDCC
+CGGameObject_C__CanHighlight 0070F580 f end=0070F628
+CGGameObject_C__FloatingTooltip 0070F630 f end=0070F675
+CGGameObject_C__GetNamePosition 0070F940 f end=0070F9AD
+CGGameObject_C__GetPageTextID 00710280 f end=007102B7
+CGGameObject_C__RefreshInteractIcon 007111A0 f end=00711207
+CGGameObject_C__CheckForPassiveHighlight 00711210 f end=00711297
+CGGameObject_C__UpdateInteractIcon 007124A0 f end=007124B0
+CGGameObject_C__IsPointInside 00712E90 f end=00712EA1
+CGGameObject_C__AddPassenger 00712EB0 f end=00712ED1
+CGGameObject_C__Disable 007130A0 f end=0071312E
+CGGameObject_C__PostReenable 00713130 f end=007131A9
+CGGameObject_C__Destructor 00713F20 f end=00713F4B
+CGGameObject_C__CGGameObject_C 00714250 f end=00714996
 CGUnit_C__IsLocalClientControlled 00714AC0 f end=00714ACD
+CGUnit_C__ShouldFadeout 00714C40 f end=00714C74
 CGUnit_C__ForceFacingChange 00715270 f end=007152AD
 CGUnit_C__NamePlateUpdateLevels 007153A0 f end=007153BB
+CGUnit_C__ObjectNameVisibilityChanged 00715560 f end=007155C9
+CGUnit_C__GetRenderFacing 007156A0 f end=007156B6
 CGUnit_C__RegisterScript 007158C0 f end=007158F4
 CGUnit_C__UnregisterScript 00715900 f end=00715929
 CGUnit_C__SetCastingAutoRepeat 00715AC0 f end=00715AE5
 CGUnit_C__StopNamePlateSpellbar 00715B20 f end=00715B46
 CGUnit_C__GetNamePlateFocus 00715C30 f end=00715C36
 CGUnit_C__ClearNamePlateFocus 00715C40 f end=00715C5A
+CGUnit_C__TriggerDamageFeedback 00715D60 f end=00715D70
+CGUnit_C__IsBossMob 00715D70 f end=00715D87
 CGUnit_C__GetCursorOverride 00715EA0 f end=00715F1C
 CGUnit_C__GetCursorFile 00715F20 f end=00715F6F
 CGUnit_C__MountedCombatAllowed 00715F70 f end=00715F87
+CGUnit_C__ShouldFadeIn 00716650 f end=0071670B
+CGUnit_C__GetModelFileName 00717B20 f end=00717B53
 CGUnit_C__CanBeLooted 00717B60 f end=00717B98
 CGUnit_C__InitActiveMover 00717C50 f end=00717D84
 CGUnit_C__GetMaxCameraHeight 00718080 f end=007180B5
+CGUnit_C__GetSelectionHighlightColor 00718AC0 f end=00718B10
+CGUnit_C__GetVirtualItemDisplayID 00718B10 f end=00718B21
 CGUnit_C__UnitReaction 00718C20 f end=00718C9B
+CGUnit_C__UpdatePetReaction 00718FB0 f end=00718FBF
+CGUnit_C__IsDisarmed 00718FC0 f end=00719049
+CGUnit_C__UpdateInteractIconAttach 00719310 f end=007193B2
+CGUnit_C__UpdateInteractIconScale 007193C0 f end=007193E4
+CGUnit_C__GetDisplayRace 0071A470 f end=0071A489
+CGUnit_C__GetDisplaySex 0071A490 f end=0071A4A9
+CGUnit_C__GetSpellRank 0071AA70 f end=0071AAA2
+CGUnit_C__IsCastNotInterruptible 0071AB20 f end=0071AB73
+CGUnit_C__ApplyAlpha 0071AC30 f end=0071ACE7
+CGUnit_C__OnMoveStopLocal 0071AE10 f end=0071AE1F
 CGUnit_C__OnTurnStopLocal 0071AE40 f end=0071AE4F
+CGUnit_C__TrackingStopMove 0071AEE0 f end=0071AF66
 CGUnit_C__IsInMelee 0071AF90 f end=0071AFA7
 CGUnit_C__CanAutoDismount 0071B0C0 f end=0071B123
 CGUnit_C__CanAutoUnshift 0071B130 f end=0071B1D8
@@ -3456,49 +3747,104 @@ CGUnit_C__GetPredictedPower 0071C2E0 f end=0071C31F
 CGUnit_C__GetCameraRelativeTo 0071C4D0 f end=0071C4F1
 CGUnit_C__SetLocalClientControl 0071C930 f end=0071C9C4
 CGUnit_C__BuildComponentObject 0071D010 f end=0071D1E1
+CGUnit_C__DisengageFromActivePlayer 0071EE70 f end=0071EF15
+CGUnit_C__GetVirtualItem 0071F440 f end=0071F533
 CGUnit_C__CanAssist 0071F890 f end=0071F8A6
+CGUnit_C__GetNamePosition 0071FEF0 f end=0071FFBD
 CGUnit_C__UpdateSelectionRadius 00720330 f end=007203FF
 CGUnit_C__ShowHandItemSpellEffects 00720400 f end=0072069D
 CGUnit_C__PlayNPCSound 00720860 f end=00720955
+CGUnit_C__GetAppropriateSpellVisual 00720F80 f end=0072118F
 CGUnit_C__UpdateObjectEffectMovementStates 00721300 f end=007219EB
 CGUnit_C__IsShapeShifted 00721CA0 f end=00721CEE
 CGUnit_C__CanCurrentFormMount 00721DA0 f end=00721E68
 CGUnit_C__TrackingMakeRelativeTo 00722010 f end=00722082
+CGUnit_C__GetMatrix 00722B50 f end=00722C4A
+CGUnit_C__ScaleChangeUpdate 00724DF0 f end=00724E1F
+CGUnit_C__ScaleChangeFinished 00724E20 f end=00724E64
+CGUnit_C__RenderTargetSelection 00725980 f end=00725BE2
+CGUnit_C__RenderPetTargetSelection 00725BF0 f end=00725DE7
 CGUnit_C__IsSpellKnown 007260E0 f end=00726160
 CGUnit_C__CancelFormPreventingMount 00726F30 f end=00727126
 CGUnit_C__SetNamePlateFocus 007271D0 f end=007272B5
 CGUnit_C__ClearTrackingTarget 007272C0 f end=007273F7
+CGUnit_C__RenderAutoTrackCursor 007275C0 f end=0072775A
+CGUnit_C__DelaySpellVisualKi 00728050 f end=00728138
 CGUnit_C__DoPowerRegen 00728A20 f end=00728B09
+CGUnit_C__OnDeath 00729220 f end=007293CD
 CGUnit_C__CanInteractNow 00729620 f end=0072973B
 CGUnit_C__IsValidFollowTarget 00729BD0 f end=00729C6A
+CGUnit_C__ShouldRenderObjectName 00729C70 f end=00729F3C
+CGUnit_C__RefreshInteractIcon 00729F40 f end=00729FFD
 CGUnit_C__HandleNPCFeedback 0072A680 f end=0072A7E9
+CGUnit_C__PlaySpellVisualKit_DelayLightningEffects 0072AF60 f end=0072AFDF
 CGUnit_C__CancelRangedMode 0072AFE0 f end=0072B05E
 CGUnit_C__SetTrackingTarget 0072B4A0 f end=0072B63D
 CGUnit_C__VerifyAttackIconPressed 0072BDB0 f end=0072C2AD
 CGUnit_C__UpdateModelScale 0072CBB0 f end=0072CC28
+CGUnit_C__UpdateObjectNameStringForUnit 0072D4F0 f end=0072D936
 CGUnit_C__OnLevelChange 0072E3A0 f end=0072E430
+CGUnit_C__OnMoveStartLocal 0072E5D0 f end=0072E673
 CGUnit_C__OnMovementInitiated 0072EAD0 f end=0072EB76
 CGUnit_C__SpellInterrupted 0072ED80 f end=0072EE11
 CGUnit_C__SetTrackingDirection 0072F040 f end=0072F1E8
 CGUnit_C__InitializeComponent 00730100 f end=00730281
 CGUnit_C__ShouldRender 00730F30 f end=00731092
+CGUnit_C__GetDefenseSkillRank 00734F70 f end=00734F94
+CGUnit_C__GetAttackSkillRank 00734FA0 f end=00734FC4
+CGUnit_C__SetSheatheState 00736D30 f end=007370CB
+CGUnit_C__UpdateWorldObject 007370D0 f end=0073738B
 CGUnit_C__UpdateAllSmoothFacing 00739630 f end=00739648
 CGUnit_C__CheckAndReportSpellInhibitFlags 00739650 f end=0073A51E
+CGUnit_C__PlaySpellVisualKit_HandleWeapon 0073A6C0 f end=0073A7EC
 CGUnit_C__UpdateLootAnimKit 0073AC30 f end=0073ACFC
+CGUnit_C__PlaySpellVisualKit_PlayAnims 0073B140 f end=0073B508
+CGUnit_C__PlayFallLandAnimation 0073D2B0 f end=0073D3CC
+CGUnit_C__OnCollideFallLand 0073D3D0 f end=0073D491
+CGUnit_C__OnLife 0073D530 f end=0073D5C9
+CGUnit_C__ModelLoaded 0073E840 f end=0073EB4C
+CGUnit_C__CGUnit_C 0073F660 f end=0073FCB3
+CGUnit_C__PostReenable 007402B0 f end=00740448
 CGUnit_C__Dismount 007412E0 f end=007413EA
+CGObject_C__SetTypeByTypeId 00743130 f end=007431B5
+CGObject_C__OnSpellEffectClear 00743250 f end=007432DD
+CGObject_C__GetAppropriateSpellVisual 007432E0 f end=007432F3
 CGObject_C__ShouldRender 00743300 f end=00743316
+CGObject_C__Animate 00743330 f end=00743389
 CGObject_C__IsReadyToDraw 00743450 f end=00743487
+CGObject_C__ObjectNameVisibilityChanged 00743490 f end=007434DC
+CGObject_C__UpdateObjectNameString 007434E0 f end=00743530
+CGObject_C__ShouldRenderObjectName 00743530 f end=0074354F
 nullsub_152 00743550 f
 nullsub_153 00743560 f
+CGObject_C__SetStorage 00743640 f end=00743653
+CGObject_C__AddWorldObject 00743760 f end=007438DE
+CGObject_C__UpdateWorldObject 007438E0 f end=00743AEF
 CGObject_C__UpdateEffectAttachments 00743AF0 f end=00743B3C
 CGObject_C__HideHighlightType 00743BC0 f end=00743C6B
 CGObject_C__ShowHighlightType 00743C70 f end=00743D47
+CGObject_C__ApplyAlpha 00743E10 f end=00743EB9
 CGObject_C__UpdateAllWorldObjects 007440F0 f end=00744100
 CGObject_C__UpdateAllObjectEffectManagers 00744140 f end=00744150
 CGObject_C__HandleScaleUpdate 007441D0 f end=00744228
+CGObject_C__ModelChanged 00744230 f end=007442DC
+CGObject_C__ModelLoaded 007442E0 f end=00744326
+CGObject_C__ConnectToLightningThisFrame 00744330 f end=00744374
+CGObject_C__RemoveInteractIcon 007443D0 f end=007443FF
+CGObject_C__UpdateInteractIconAttach 00744460 f end=007444D5
+CGObject_C__UpdateInteractIconScale 007444E0 f end=00744637
 CGObject_C__GetQuestGiverCursor 00744640 f end=00744695
+CGObject_C__PlayEffectName 00744790 f end=0074486A
+CGObject_C__Reenable 00744DB0 f end=00744E0F
 CGObject_C__SetInteractIconVisible 00745140 f end=007451AE
+CGObject_C__GetNamePosition 007451B0 f end=00745226
+CGObject_C__PlaySpellVisualKit 00745230 f end=00745D7C
+CGObject_C__CGObject_C 00745E60 f end=00745F8B
+CGameObjectDef__GetPropNum 00746190 f end=007461D4
+CGUnit_C__PlayFoleySound 007464D0 f end=00746536
+CGUnit_C__PlayUnitSound 00747310 f end=007474A2
 UnitSoundShutdown 00747810 f end=00747848
+UnitSoundInitialize 00747860 f end=007478EE
 CVehiclePassenger_C__PostRenderUpdateAll 00747AE0 f end=00747AFB
 CVehiclePassenger_C__OnSetActiveMover 00747F40 f end=00747F9F
 CVehiclePassenger_C__GetStoredRootVehicleUnit 00748040 f end=0074806E
@@ -3508,11 +3854,13 @@ MovementUpdateCameraYaw 0074B380 f end=0074B3E1
 CGUnit_C__VehiclePassengerInitWorldCameraState 0074B880 f end=0074B892
 CGUnit_C__HasVehicleTranspor 0074B8B0 f end=0074B8F5
 CGUnit_C__IsStrafingDisabled 0074B9A0 f end=0074B9AB
+CGUnit_C__OnDismissControlledVehicleLocal 0074BB20 f end=0074BB2F
 CGUnit_C__IsVehicleCurrentlyUnstoppable 0074BB90 f end=0074BBC8
 CGUnit_C__SignalPlayerGainsVehicleDataEvent 0074BBD0 f end=0074BC45
 CGUnit_C__OnVehicleCameraPossiblyUnneeded 0074C4E0 f end=0074C550
 CGUnit_C__UpdateVehicleUISliders 0074C5A0 f end=0074C64D
 CGUnit_C__FindRootVehicle 0074C650 f end=0074C749
+CGUnit_C__VehiclePassengerRequestSwitchToVirtualSeat 0074CA90 f end=0074CC34
 CGUnit_C__VehiclePassengerMaybeAutoExit 0074CCE0 f end=0074CD5F
 CGUnit_C__DestroyVehicleCamera 0074CD60 f end=0074CDD3
 CGUnit_C__OnVehicleCameraPossiblyNeeded 0074CE40 f end=0074CF22
@@ -3528,17 +3876,29 @@ Script_CombatLogSetCurrentEntry 0074FAE0 f end=0074FC20
 Script_CombatLogAdvanceEntry 0074FC20 f end=0074FD36
 Script_CombatLogAddFilter 0074FF70 f end=00750206
 Script_CombatLogClearEntries 00751120 f end=0075114B
+UnitCombatLog 00751150 f end=007512A1
 CGBag_C__GetItemPointer 00754390 f end=007543F4
 CGBag_C__FindItemOfType 00754A20 f end=00754A46
 CGBag_C__FindItemByName 00754AF0 f end=00754B84
 CGBag_C__GetItemTypeCharges 00754D50 f end=00754D86
+CGBag_C__UnlockItemsOfType 00754D90 f end=00754DC3
+CGUnit_C__HandleEnvironmentDamage 00755270 f end=00755373
+CGUnit_C__StopAttack 007559E0 f end=00755A54
+UnitCombatClientInitialize 00756BD0 f end=00756C85
 CVehicle_C__InitSystem 00756E30 f end=00756E8B
 CVehicle_C__UninitSystem 00756E90 f end=00756EB3
 CVehicle_C__GetVehicleSeatRec 00756EC0 f end=00756F00
 CVehicle_C__EnterWorld 00757180 f end=007571C0
+CVehicle_C__UpdateLargestPassengerBoundsRadius 00757D10 f end=00757E61
 CSimpleScriptManager__UnregisterCallback 007581A0 f end=007581EB
 CSimpleScriptManager__RegisterCallback 007581F0 f end=0075821A
+VisibleItem_C__GetClassID 00758D30 f end=00758D74
+VisibleItem_C__GetSubtypeID 00758D80 f end=00758DC4
+VisibleItem_C__GetInventoryType 00758DD0 f end=00758E49
 VisibleItem_C__GetDisplayID 00758E50 f end=00758EC9
+VisibleItem_C__GetMaterial 00758ED0 f end=00758F4C
+VisibleItem_C__GetSheatheType 00758F50 f end=00758FCC
+VisibleItem_C__GetSoundOverrideSubclassID 00758FD0 f end=00759041
 CVehicleCamera_C__InitSystem 00759160 f end=007591CF
 CVehicleCamera_C__UninitSystem 007591D0 f end=007591FD
 CVehicleCamera_C__ComputeSafeCurWorldPos 00759580 f end=007597C1
@@ -3546,6 +3906,8 @@ CVehicleCamera_C__GetRelativeTo 007599D0 f end=00759A56
 CVehicleCamera_C__Destroy 00759D60 f end=00759D7C
 CVehicleCamera_C__AttachToHierarchy 0075A720 f end=0075A7CE
 CVehicleCamera_C__Create 0075B1A0 f end=0075B3DD
+CGPlayer_C__PlayUnitSound 007631A0 f end=007633E3
+CGPlayer_C__PlayFoleySound 007633F0 f end=007634E2
 GenerateNodeString 00763680 f end=0076372C type="void __stdcall func(CONSOLELINE* node)"
 SetInputString 00763730 f end=007637CD type="void __stdcall func(char* text)" ; UC
 ReserveInputSpace 007637D0 f end=0076382B type="void __fastcall func(CONSOLELINE* lineptr, uint32_t chars)"
@@ -3768,25 +4130,66 @@ SBigDel 0077C6A0 f end=0077C6F6 type="void __stdcall func(BigData* num)"
 SBigMul 0077C700 f end=0077C71F type="void __stdcall func(BigData* a, BigData* b, BigData* c)"
 PowMod 0077C720 f end=0077C97B type="void __stdcall func(BigBuffer* a, BigBuffer* b, BigBuffer* c, BigBuffer* d, BigStack* stack)"
 SBigPowMod 0077C980 f end=0077C9A4 type="void __stdcall func(BigData* a, BigData* b, BigData* c, BigData* d)"
+World__MapIsDungeon 0077EC80 f end=0077EC8B
 World__SetLoadProgressCallback 0077EC90 f end=0077ECA6
 World__Intersect 0077F310 f end=0077F319
+World__ObjectUpdate 00780240 f end=007804F5
+World__PrepareAreaOfInterest 00780860 f end=00780CCF
+World__Initialize 00780F50 f end=0078142F
+World__LoadMap 00781430 f end=007814F2
 World__Preload 00781500 f end=007815B7
 DayNight__Update 007816F0 f end=007819BC ; DayNight::Update(unsigned int, float, float)
+AreaListRegisterLocation 0078F020 f end=0078F1EC
+CBarrier__Initialize 00799730 f end=007997C5
+CWorldScene__Initialize 007997D0 f end=00799891
+CAaBsp__CAaBsp 0079B070 f end=0079B0C8
+Particulate__InitParticles 0079B8E0 f end=0079BA22
+Particulate__InitMovement 0079BCC0 f end=0079BE44
+Particulate__SetTexture 0079DFF0 f end=0079E080
+Particulate__Particulate 0079E100 f end=0079E191
+CMap__Initialize 0079E7C0 f end=0079EFD4
+CMap__Destroy 0079F320 f end=0079F646
+CPassenger__Disable 0079F820 f end=0079F858
+CMapEntity__CMapEntity 007A0FE0 f end=007A1098
 CMapObj__Init 007AE300 f end=007AE3A6 ; CMapObj::Init()
+CMapObj__Initialize 007AFEE0 f end=007B003C
 CMapObj__constructor 007B0580 f end=007B05F9 ; CMapObj::CMapObj()
 CMapObj__Create 007B0CC0 f end=007B0D37 ; CMapObj::Create(char const*)
 CDetailDoodad__UpdateAlphaRampTexture 007B1270 f end=007B129F ; CDetailDoodad::UpdateAlphaRampTexture(EGxTexCommand, unsigned int, unsigned int, unsigned int, unsigned int, void*, unsigned int&, void const*&)
 CDetailDoodad__InitializeShaderConstants 007B15D0 f end=007B1B05 ; CDetailDoodad::InitializeShaderConstants()
 CDetailDoodad__Initialize 007B2760 f end=007B29AA ; CDetailDoodad::Initialize()
 CDetailDoodad__InitializeRenderState 007B2D30 f end=007B304E ; CDetailDoodad::InitializeRenderState()
+CMapObjDefGroup__CMapObjDefGroup 007B3DE0 f end=007B3EFC
+CMapObjDef__CMapObjDef 007B4350 f end=007B44FE
 TSList__LinkToHead 007B5020 f end=007B50AB ; 00005410
+CShadowQuery__Initialize 007BD3A0 f end=007BD44D
+CMap__Preload 007BD9F0 f end=007BDA62
 CMap__LoadWdt 007BF8B0 f end=007BFCDC ; CMap::LoadWdt()
 CMap__Load 007BFCE0 f end=007BFE33 ; public: static void __cdecl CMap::Load(char const *, int)
 CMap__AllocMapObj 007BFF20 f end=007BFF6B ; CMap::AllocMapObj()
+CMap__FreeMapObj 007BFF70 f end=007BFFD6
+CMap__AllocMapObjGroup 007BFFE0 f end=007C002B
+CMap__FreeArea 007C00A0 f end=007C0104
+CMap__FreeChunk 007C0180 f end=007C01E4
+CMap__AllocDoodadDef 007C01F0 f end=007C023C
+CMap__FreeDoodadDef 007C0240 f end=007C02CC
+CMap__FreeEntity 007C02D0 f end=007C0334
+CMap__FreeMapObjDefGroup 007C0370 f end=007C03D4
+CMap__AllocMapObjDef 007C03E0 f end=007C042C
+CMap__AllocEntity 007C0670 f end=007C06D9
+CMap__AllocArea 007C07C0 f end=007C0827
 CMap__AllocLight 007C08A0 f end=007C0907 ; public: static class CMapLight * __fastcall CMap::AllocLight(void)
+CMap__AllocMapObjDefGroup 007C0910 f end=007C0977
+CMap__FreeBaseObjLink 007C09F0 f end=007C0A8B
 CMapDoodadDef__SelectLights 007C1150 f end=007C1371 ; CMapDoodadDef::SelectLights(CM2Lighting*)
 CMapEntity__SelectLights 007C1730 f end=007C1ACA ; CMapEntity::SelectLights(CM2Lighting*)
+CMapDoodadDef__CMapDoodadDef 007C21E0 f end=007C234A
+CMapChunk__Initialize 007C3D90 f end=007C3DAD
 CMapChunk__UpdateLights 007C65A0 f end=007C65FE ; public: void __thiscall CMapChunk::UpdateLights(void)
+CMapObjGroup__Init 007C9BC0 f end=007C9CB0
+CMapObjGroup__CMapObjGroup 007CB700 f end=007CB7A8
+CMap__LoadWdl 007CC310 f end=007CC761
+CMapArea__CMapArea 007D7050 f end=007D711F
 CMapBaseObj__constructor 007D7260 f end=007D7293 ; CMapBaseObj::CMapBaseObj()
 CMapObj__Read 007D80C0 f end=007D81BB ; CMapObj::Read(char const*)
 CMapLight__constructor 007D9B10 f end=007D9B8F ; public: __thiscall CMapLight::CMapLight(void)
@@ -3816,6 +4219,11 @@ Script_GetVoiceSessionMemberInfoBySessionID 007DEEF0 f end=007DF0AF
 Script_UnitIsTalking 007DF0B0 f end=007DF142
 ComSatClient_Init 007DFAF0 f end=007DFE9C
 IsRussian 007E1030 f end=007E1049
+ClientGameTimeTickHandler 007E27F0 f end=007E280D
+PlayerNameTriggerColorUpdate 007E50F0 f end=007E5100
+PlayerNameTriggerNameRegenerate 007E5130 f end=007E5140
+PlayerNameShowing 007E5150 f end=007E516B
+PlayerNameDelete 007E6320 f end=007E6386
 EffectDeath__constructor 007EA260 f end=007EA416
 EffectNetherWorld__constructor 007EA470 f end=007EA592
 DayNight__CalcFogRate 007ECD00 f end=007ECD76 ; DayNight::CalcFogRate(float, float)
@@ -3832,6 +4240,7 @@ DayNightInitialize 007F2790 f end=007F2A1F
 DayNight__SetColors 007F3230 f end=007F3913 ; DayNight::SetColors()
 DayNight__UpdateLighting 007F3920 f end=007F39AA ; DayNight::UpdateLighting()
 MinimapSetCorpsePOI 007F4990 f end=007F49FE
+SpellVisualsBlizzardStop 007F9EE0 f end=007F9EF8
 SpellVisualsClear 007FC9F0 f end=007FCA29
 Spell_C_IsTargeting 007FD620 f end=007FD62C
 Spell_C_GetTargetingSpell 007FD630 f end=007FD640
@@ -3859,6 +4268,7 @@ Spell_C_GetMinMaxRange 007FF480 f end=007FF766
 Spell_C_GetSpellReagentUses 007FFA30 f end=007FFABF
 Spell_C_SetPlayerClass 008007A0 f end=008007D2
 Script_SpellTargetItem 008007E0 f end=008008C7
+Spell_C_SpellVisualHasChainEffect 00800BF0 f end=00800CFC
 Spell_C_PlayMissileTrajectoryCastVisuals 00800DD0 f end=00801018
 Spell_C_GetPowerCost 008012F0 f end=0080164E
 Spell_C_GetSpellReagentUses 00801770 f end=008017D2
@@ -3870,6 +4280,9 @@ Spell_C_HandleSpriteRay 00803A50 f end=00803ED6
 Script_SpellCanTargetUnit 00804190 f end=0080421D
 Script_CancelUnitBuff 00804220 f end=00804420
 Spell_C_CancelSpell 00806200 f end=0080638A
+Spell_C_CancelSpellByTarget 008063E0 f end=00806431
+Spell_C_CancelMeleeSpells 00806480 f end=0080654E
+Spell_C_CancelAutoRepeat 00807560 f end=00807645
 SpellHistory__GetCooldown 00807980 f end=00807D3E
 SpellHistory__IsOnHold 00807DA0 f end=00807F07
 Spell_C__GetSpellCooldown 00809000 f end=00809029
@@ -3887,6 +4300,7 @@ Spell_C_CastSpell 0080CCE0 f end=0080DA32
 Spell_C_CastSpell 0080DA40 f end=0080DA7C
 Script_SpellTargetUnit 0080DC00 f end=0080DCE3
 Spell_C__SystemInitialize 008100E0 f end=00810320
+SpellTableLookupAbility 00812410 f end=0081252A
 FrameXML_LoadXML 00812530 f end=008125C0
 FrameXML_RegisterLoadProgressCallback 00812840 f end=00812869
 FrameXML_FreeHashNodes 00812B90 f end=00812B9D ; FrameXML_FreeHashNodes()
@@ -3978,6 +4392,8 @@ CM2Model__SetAnimating 00823F10 f end=00823F89 ; CM2Model::SetAnimating(int)
 CM2Model__SetSequenceCallback 00823FE0 f end=0082405E ; CM2Model::SetSequenceCallback(void (*)(CM2Model*, unsigned int, unsigned int, int, unsigned int, unsigned long long, int), unsigned long long)
 CM2Model__SetEventCallback 00824060 f end=008240E1 ; CM2Model::SetEventCallback(void (*)(CM2Model*, unsigned int, unsigned int, unsigned int, C3Vector const&, unsigned int, unsigned long long), unsigned long long)
 CM2Model__GetCameraByIndex 00824170 f end=008241CA ; CM2Model::GetCameraByIndex(unsigned int)
+CM2Model__HasLiveRibbons 008241D0 f end=00824228
+CM2Model__SetRibbonsEnabled 00824230 f end=008242BC
 CM2Model__LinkToCallbackListTail 008244F0 f end=0082450E ; CM2Model::LinkToCallbackListTail()
 CM2Model__UnlinkFromCallbackList 00824510 f end=00824542 ; CM2Model::UnlinkFromCallbackList()
 CM2Model__IsBatchDoodadCompatible 00824550 f end=008245A4 ; CM2Model::IsBatchDoodadCompatible(M2Batch*) const
@@ -3998,6 +4414,7 @@ CM2Model__HasAttachment 008273D0 f end=00827455
 CM2Model__DetachFromParent 008274F0 f end=00827553
 CM2Model__DetachAllChildrenById 00827560 f end=008275E9 ; CM2Model::DetachAllChildrenById(unsigned int)
 CM2Model__GetCameraById 00827960 f end=008279E3 ; CM2Model::GetCameraById(unsigned int)
+CM2Model__SetEmittersEnabled 008279F0 f end=00827A88
 CM2Model__FindKey 008284D0 f end=00828674 ; CM2Model::FindKey(M2ModelBoneSeq*, M2TrackBase const&, unsigned int&, unsigned int&, float&)
 CM2Model__AnimateST 00828A00 f end=00828F8A ; CM2Model::AnimateST()
 CM2Model__SetIndices 00828F90 f end=00829160 ; CM2Model::SetIndices() const
@@ -4382,6 +4799,7 @@ CRibbonEmitter__SetTexSlot 0097F5F0 f end=0097F60D ; CRibbonEmitter::SetTexSlot(
 CRibbonEmitter__SetAbove 0097F610 f end=0097F620 ; CRibbonEmitter::SetAbove(float)
 CRibbonEmitter__SetBelow 0097F620 f end=0097F630 ; CRibbonEmitter::SetBelow(float)
 CRibbonEmitter__SetGravity 0097F630 f end=0097F640 ; CRibbonEmitter::SetGravity(float)
+CRibbonEmitter__IsDead 0097F640 f end=0097F64E
 CRibbonEmitter__SetPos 0097F940 f end=0097FAC8 ; CRibbonEmitter::SetPos(C44Matrix const&, C3Vector const&, C44Matrix const*)
 CRibbonEmitter__SetColor 0097FB60 f end=0097FBA0 ; CRibbonEmitter::SetColor(float, float, float)
 CRibbonEmitter__SetAlpha 0097FBA0 f end=0097FBDA ; CRibbonEmitter::SetAlpha(float)
@@ -4425,8 +4843,10 @@ SI2__StopGlueAmbience 00985F70 f end=00985FA2
 SI2__StopGlueMusic 009860E0 f end=00986128
 SI2__PlayVocalErrorSound 00986D00 f end=00986DD6
 CMovementShared__Root 0098B540 f end=0098B570
+CGNamePlateFrame__TriggerDamageFeedback 0098E5B0 f end=0098E5E1
 CGNamePlateFrame__OnGainFocus 0098E910 f end=0098E974
 CGNamePlateFrame__OnLoseFocus 0098E980 f end=0098E9E2
+CGNamePlateFrame__UpdateColorDisplay 0098EE30 f end=0098EF0A
 CGNamePlateFrame__UpdateLevelDisplay 0098EF10 f end=0098F040
 CGNamePlateFrame__SetCastBarValues 0098F040 f end=0098F382
 SRP6_Client__BeginAuthentication 009A8300 f end=009A83DF ; SRP6_Client::BeginAuthentication(char const*, char const*)
@@ -4448,6 +4868,7 @@ BigIntegerModExp 009A8C60 f end=009A8C7A ; BigIntegerModExp(void*, void*, void*,
 BigIntegerFree 009A8C80 f end=009A8C8E ; BigIntegerFree(void*)
 BigIntegerBitLen 009A8C90 f end=009A8CA8 ; BigIntegerBitLen(void*)
 DayNight__DNGlare__Initialize 009AD000 f end=009AD0A3 type="void __thiscall func(DayNight__DNGlare* this, char* a1)"
+Script_SendEvent 009C0070 f end=009C010C
 nullsub_7 009D34B0 f
 nullsub_8 009D34C0 f
 nullsub_9 009D4260 f
@@ -4901,6 +5322,10 @@ s_smallCull 00ADBEC0 l type="float[4][2]"
 s_distCull 00ADBEE0 l type="float[4][2]"
 s_farClip 00ADBF00 l type="float[5][2]"
 g_videoHardwareDB 00ADBF88 l type="WowClientDB_VideoHardwareRec"
+World__loadMax 00ADEEC4 l
+World__loadMin 00ADEEC8 l
+World__s_nearClip 00ADEED4 l
+CMap__bPreload 00ADFBC8 l
 g_lightSkyboxDB 00AF4998 l type="WowClientDB_LightSkyboxRec" ; 0x15F
 g_lightIntBandDB 00AF49BC l type="WowClientDB_LightIntBandRec" ; 0x15D
 g_lightFloatBandDB 00AF49E0 l type="WowClientDB_LightFloatBandRec" ; 0x15C
@@ -4943,6 +5368,7 @@ CGlueMgr__m_indleState 00B6AA38 l
 ClientServices__m_matrixRemaining 00B6AF40 l
 CGlueMgr__m_estimatedWaitTime 00B6AF44 l
 CGlueMgr__m_characterInfo 00B6AF4C l
+CGlueMgr__s_scriptFunctionsLoaded 00B6AF79 l
 CGlueMgr__m_screenWidgth 00B6AF7C l
 CGlueMgr__m_screenHeight 00B6AF80 l
 CGlueMgr__m_aspect 00B6AF84 l
@@ -4989,11 +5415,18 @@ CGGameUI__m_aspect 00BD07F8 l
 CGGameUI__m_inCinematic 00BD07FC l
 CGGameUI__m_corpseMapID 00BD0818 l
 CGGameUI__m_corpseActualMapID 00BD081C l
+CGGameUI__m_corpseGUID 00BD0828 l
 CGGameUI__m_areaSpiritHealerGUID 00BD0838 l
+CGGameUI__m_repopTime 00BD0848 l
+CGGameUI__m_deadNoRepopTimer 00BD084C l
 CGGameUI__m_instanceLockTime 00BD0858 l
 CGGameUI__m_instanceLockComletedMask 00BD085C l
 CGGameUI__m_instanceLockExtending 00BD0860 l
 CGGameUI__m_billingExpireTime 00BD086C l
+CGGameUI__m_uiLastInstanceTime 00BD0884 l
+CGGameUI__m_iMapID 00BD0888 l
+CGGameUI__m_iCurrentMapID 00BD088C l
+CGGameUI__m_bOwnsInstance 00BD0890 l
 CGGameUI__m_lastRegenTime 00BD08A0 l
 s_cvDeselectOnClick 00BD08F0 l type="CVar*"
 s_cvAutoLootDefault 00BD0914 l type="CVar*"
@@ -5012,6 +5445,7 @@ CGLookingForGroup__m_lastProposalID 00BEAA18 l
 CGUIMacros__m_sortedMacros 00BEAE20 l
 CGUIMacros__m_macroRunning 00BEAF48 l
 CGUIMacros__m_macroButton 00BEAF4C l
+CGLootInfo__m_itemsPending 00BFA688 l
 CGLootInfo__m_object 00BFA8DC l
 CGClassTrainer__m_trainer 00C0E490 l
 CGClassTrainer__m_trainerType 00C0E498 l
@@ -5031,6 +5465,7 @@ CGGMTicketInfo__m_ticketID 00C1E8D0 l
 CGGMTicketInfo__m_responseID 00C1E8D4 l
 CGCalendar__m_initialize 00C207F0 l
 CGTalentInfo_Inspect__m_inspectTarget 00C21008 l
+CGQuestLog__m_numQuest 00C23AD0 l
 CGRuneInfo__m_numRunes 00C24384 l
 CGRuneInfo__m_predictedRunes 00C24388 l
 s_cursorFile 00C25CD0 l type="int8_t" ; wonder why it's this type
@@ -5153,6 +5588,8 @@ ClientServices__s_characterInfo 00C79D10 l
 CMissile__s_inFlightMissileList 00CA0B58 l
 CMissile__s_missileDestroyList 00CA0B5C l
 CGUnit_C__s_unitThreatPool 00CA1244 l
+CGUnit_C__s_deferredClientControlUpdateGUID 00CA1248 l
+CGUnit_C__s_deferredClientControlUpdateState 00CA1250 l
 CGUnit_C__m_initialized 00CA1254 l
 CVehicle_C__s_vehiclePool 00CA1604 l
 CSimpleScriptManager__s_callbacks 00CA1610 l
@@ -5240,6 +5677,47 @@ g_opt 00CAE958 l type="STORMOPTIONS"
 s_logsysteminit 00CB7220 l type="int32_t"
 s_defaultdir_critsect 00CB732C l type="CRITICAL_SECTION"
 s_critsect 00CB7358 l type="CRITICAL_SECTION[4]"
+World__s_pervFarClip 00CD7744 l
+World__s_farClip 00CD7748 l
+World__enables 00CD774C l
+World__groupAoi_b_x 00CD7784 l
+World__groupAoi_b_y 00CD7788 l
+World__groupAoi_b_z 00CD778C l
+World__groupAoi_t_x 00CD7790 l
+World__groupAoi_t_y 00CD7794 l
+World__groupAoi_t_z 00CD7798 l
+World__objectAoi_b_x 00CD779C l
+World__objectAoi_b_y 00CD77A0 l
+World__objectAoi_b_z 00CD77A4 l
+World__objectAoi_t_x 00CD77A8 l
+World__objectAoi_t_y 00CD77AC l
+World__objectAoi_t_z 00CD77B0 l
+CBarrier__s_pattern 00CD8608 l
+CBarrier__s_mask 00CD860C l
+CWorldScene__s_defaultBlendTexture 00CD8614 l
+CWorldScene__s_defaultTexture 00CD8618 l
+CMap__wdtFilename 00CE05D0 l
+CMap__mapName 00CE06D0 l
+CMap__mapPath 00CE07D0 l
+CMap__bActive 00CF08F0 l
+CMap__bDungeon 00CF08F4 l
+s_cvShadowCull 00D25308 l type="CVar*"
+s_cvShadowScissor 00D25310 l type="CVar*"
+s_cvShadowInstancing 00D25314 l type="CVar*"
+CMap__lightHeap 00D253FC l
+CMap__mapObjGroupHeap 00D25404 l
+CMap__mapObjHeap 00D25408 l
+CMap__baseObjLinkHeap 00D2540C l
+CMap__areaHeap 00D25410 l
+CMap__areaMedHeap 00D25414 l
+CMap__areaLowHeap 00D25418 l
+CMap__chunkHeap 00D2541C l
+CMap__doodadDefHeap 00D25420 l
+CMap__entityHeap 00D25424 l
+CMap__mapObjDefGroupHeap 00D25428 l
+CMap__mapObjDefHeap 00D2542C l
+CMap__chunkLiquidHeap 00D25430 l
+CMapChunk__s_geoToTex 00D25488 l
 FrameScript_Object__s_objectType 00D3F778 l
 s_scriptProfileEnabled 00D3F798 l type="int32_t"
 CGGameUI__m_luaTainted 00D4139C l
