@@ -6,3 +6,5 @@ World__MapIsDungeon 0077EC80 f end=0077EC8B
 World__PrepareAreaOfInterest 00780860 f end=00780CCF
 World__Initialize 00780F50 f end=0078142F
 World__LoadMap 00781430 f end=007814F2
+World__Render 0077EFF0 f end=0077F00C
+World__ObjectTestConvexVolume 0077FFB0 f end=00780122

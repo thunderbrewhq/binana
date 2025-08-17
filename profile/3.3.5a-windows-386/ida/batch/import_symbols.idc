@@ -480,6 +480,7 @@ static import_symbols() {
 	set_name(0x004B62A0, "TextureIsReadyNow");
 	set_name(0x004B6580, "TextureSetCacheSize");
 	set_name(0x004B6AE0, "TextureCacheUpdate");
+	set_name(0x004B6CB0, "TextureGetGxTex");
 	set_name(0x004B7220, "TextureAllocMippedImg");
 	set_name(0x004B7300, "TextureFreeMippedImg@2");
 	set_name(0x004B78A0, "LoadTgaMips");
@@ -4136,7 +4137,9 @@ static import_symbols() {
 	set_name(0x0077C980, "SBigPowMod");
 	set_name(0x0077EC80, "World__MapIsDungeon");
 	set_name(0x0077EC90, "World__SetLoadProgressCallback");
+	set_name(0x0077EFF0, "World__Render");
 	set_name(0x0077F310, "World__Intersect");
+	set_name(0x0077FFB0, "World__ObjectTestConvexVolume");
 	set_name(0x00780240, "World__ObjectUpdate");
 	set_name(0x00780860, "World__PrepareAreaOfInterest");
 	set_name(0x00780F50, "World__Initialize");
@@ -4144,9 +4147,15 @@ static import_symbols() {
 	set_name(0x00781500, "World__Preload");
 	set_name(0x007816F0, "DayNight__Update");
 	set_name(0x0078F020, "AreaListRegisterLocation");
+	set_name(0x0078FB00, "CWorldScene__FrustumXform");
+	set_name(0x00791100, "CWorldScene__FrustumSet");
+	set_name(0x00795D40, "CWorldScene__LocateViewer3");
+	set_name(0x007964A0, "CWorldScene__RenderMapObjDefGroups");
 	set_name(0x00799730, "CBarrier__Initialize");
 	set_name(0x007997D0, "CWorldScene__Initialize");
+	set_name(0x0079A870, "CWorldScene__Render");
 	set_name(0x0079B070, "CAaBsp__constructor");
+	set_name(0x0079B2C0, "CAaBsp__Clear");
 	set_name(0x0079B760, "CMapObjGroup__QueryLiquidSounds");
 	set_name(0x0079B8E0, "Particulate__InitParticles");
 	set_name(0x0079BBF0, "CMapObj__QueryLiquidSounds");
@@ -4157,6 +4166,8 @@ static import_symbols() {
 	set_name(0x0079F320, "CMap__Destroy");
 	set_name(0x0079F820, "CPassenger__Disable");
 	set_name(0x007A0FE0, "CMapEntity__constructor");
+	set_name(0x007A4C10, "CMap__TestQueryAdd");
+	set_name(0x007A5330, "CMap__GetChunkFacets");
 	set_name(0x007A8520, "CMapObj__UpdateMaterials");
 	set_name(0x007A9BF0, "CMapObj__RenderGroupLightmapTex");
 	set_name(0x007A9D30, "CMapObj__RenderGroupColorTex");
@@ -4209,6 +4220,7 @@ static import_symbols() {
 	set_name(0x007B3DE0, "CMapObjDefGroup__constructor");
 	set_name(0x007B4350, "CMapObjDef__constructor");
 	set_name(0x007B5020, "TSList__LinkToHead");
+	set_name(0x007B6110, "CMap__PrepareMapObjDefs");
 	set_name(0x007BD3A0, "CShadowQuery__Initialize");
 	set_name(0x007BD9F0, "CMap__Preload");
 	set_name(0x007BF8B0, "CMap__LoadWdt");
@@ -4257,6 +4269,7 @@ static import_symbols() {
 	set_name(0x007CB9D0, "CMapObjGroup__Destroy");
 	set_name(0x007CBE80, "CMapObjGroup__Clear");
 	set_name(0x007CC310, "CMap__LoadWdl");
+	set_name(0x007D59B0, "CMap__LocateViewerMapObjs");
 	set_name(0x007D7050, "CMapArea__constructor");
 	set_name(0x007D7260, "CMapBaseObj__constructor");
 	set_name(0x007D72D0, "CMapObj__CreateMaterials");

@@ -1,1 +1,6 @@
 CWorldScene__Initialize 007997D0 f end=00799891
+CWorldScene__FrustumXform 0078FB00 f end=0078FB20
+CWorldScene__FrustumSet 00791100 f end=00791120
+CWorldScene__LocateViewer3 00795D40 f end=00795F7F
+CWorldScene__RenderMapObjDefGroups 007964A0 f end=007968C2
+CWorldScene__Render 0079A870 f end=0079ADBB
