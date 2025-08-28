@@ -78,6 +78,9 @@
 #include "m2/shared.h"
 #include "m2/types.h"
 
+#include "map/WMOchunks.h"
+#include "map/CMapObj.h"
+
 #include "net/message.h"
 
 #include "nvapi/nvapi.h"

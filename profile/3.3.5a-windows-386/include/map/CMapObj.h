@@ -1,0 +1,180 @@
+#ifndef CMAPOBJ_H
+#define CMAPOBJ_H
+
+#include "tempest/box.h"
+#include "async/object.h"
+#include "WMOchunks.h"
+#include "tempest/vector.h"
+
+DECLARE_STRUCT(CMapObj);
+DECLARE_STRUCT(CMapObjGroup);
+
+struct CMapObjGroup;
+
+struct CMapObj
+{
+    int objectIndex;
+    int unk_04;
+    int unk_08;
+    int unk_0C;
+    int unk_10;
+    int unk_14;
+    int unk_18;
+    char m_wmoName[260];
+    SMOHeader *header;
+    char* textureNameList;
+    char* groupNameList;
+    char* skybox;
+    SMOGroupInfo* groupInfo;
+    C3Vector* portalVertexList;
+    SMOPortal* portalList;
+    SMOPortalRef* portalRefList;
+    C3Vector* visBlockVertList;
+    SMOVisibleBlock* visBlockList;
+    SMOLight* lightList;
+    SMODoodadSet* doodadSetList;
+    char* doodadNameList;
+    SMODoodadDef* doodadDefList;
+    SMOFog* fogList;
+    C4Plane* convexVolumePlanes;
+    SMOMaterial* materialList;
+    int texturesSize;
+    int groupNameSize;
+    int groupInfoCount;
+    int planeVertCount;
+    int portalsCount;
+    int portalRefCount;
+    int visBlockVertCount;
+    int visBlockCount;
+    int ligtsCount;
+    int doodadSetCount;
+    int doodadNameSize;
+    int doodadDefCount;
+    int fogsCount;
+    int convexVolumePlaneCount;
+    int materialsCount;
+    uint32_t argb_color;
+    int unk_1A4;
+    CAaBox bbox;
+    float distToCamera;
+    int unk_1C4;
+    int unk_1C8;
+    void* pWmoData;
+    int wmoFileSize;
+    int refCount;
+    float flushTimer;
+    CAsyncObject* asyncObject;
+    int isGroupLoaded;
+    int unk_1E4;
+    int TSExplicitList__m_linkOffset;
+    void* TSExplicitList__ptr1;
+    void* TSExplicitList__ptr2;
+    int mapObjGroupCount;
+    CMapObjGroup* mapObjGroupArray[512];
+};
+
+struct CMapObjGroup
+{
+    int objectIndex;
+    int unk_04;
+    int unk_08;
+    int unk_0C;
+    int unk_10;
+    int unk_14;
+    float timer;
+    int unk_1C;
+    int unk_20;
+    int unk_24;
+    int unk_28;
+    int unk_2C;
+    int flags;
+    CAaBox bbox;
+    float distToCamera;
+    int portalStart;
+    int portalCount;
+    int fogs;
+    uint16_t transparencyBatchesCount;
+    uint16_t intBatchCount;
+    int extBatchCount;
+    void* CAaBspNodePtr;
+    void* CAaBspNodePtr;
+    uint16_t* nodeFaceIndices;
+    int bspNodesCount;
+    int nodeFaceIndicesCount;
+    int unk_7C;
+    int unk_80;
+    int unk_84;
+    int unk_88;
+    int unk_8C;
+    int unk_90;
+    int unk_94;
+    int unk_98;
+    int unk_9C;
+    int unk_A0;
+    int unk_A4;
+    int unk_A8;
+    int unk_AC;
+    int unk_B0;
+    CAaBox bbox2;
+    int unk_CC;
+    int unkFlags;
+    int unk_D4;
+    int unk_D8;
+    char* groupName;
+    SMOPoly* polyList;
+    uint16_t* indices;
+    int unk_E8;
+    C3Vector* vertexList;
+    C3Vector* normalList;
+    C2Vector* textureVertexList;
+    int unk_F8;
+    SMOBatch* batchList;
+    int unk_100;
+    int unk_104;
+    uint16_t* doodadRefList;
+    CImVector* colorVertexList;
+    CImVector* colorVertexListExtra;
+    int unk_114;
+    C2iVector liquidVerts;
+    C2iVector liquidTiles;
+    C3Vector liquidCorner;
+    int luquidMaterialId;
+    SMOLiquidVert* liquidVertexList;
+    SMOLTile* liquidTileList;
+    float liquidHeight;
+    int unk_144;
+    int unk_148;
+    int unkFlag;
+    int unk_150;
+    int polyListSize;
+    int indicesCount;
+    int unk_15C;
+    int vertexListCount;
+    int normalListCount;
+    int textureVertexListCount;
+    int unk_16C;
+    int batchListCount;
+    int unk_174;
+    int doodadRefListCount;
+    int colorVertexListSize;
+    int colorVertexListExtraSize;
+
+    int wmoGroupId;
+    void* filePtr;
+    int fileSize;
+    CMapObj* parent;
+    int unk_194;
+    CAsyncObject* asyncObjPtr;
+    int unkLoadedFlag;
+    int unkIndexMin1;
+    int unkIndexMax1;
+    uint16_t unkIndexMin2;
+    uint16_t unkIndexMax2;
+    int TSExplicitList__m_linkoffset;
+    void* TSExplicitList__ptr;
+    void* TSExplicitList__ptr2;
+    CMapObjGroup* perv;
+    CMapObjGroup* next;
+};
+
+#endif
