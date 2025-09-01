@@ -2,3 +2,5 @@ CDetailDoodad__UpdateAlphaRampTexture 007B1270 f end=007B129F ; CDetailDoodad::U
 CDetailDoodad__InitializeShaderConstants 007B15D0 f end=007B1B05 ; CDetailDoodad::InitializeShaderConstants()
 CDetailDoodad__Initialize 007B2760 f end=007B29AA ; CDetailDoodad::Initialize()
 CDetailDoodad__InitializeRenderState 007B2D30 f end=007B304E ; CDetailDoodad::InitializeRenderState()
+CDetailDoodad__UpdatePools 007B2A80 f end=007B2C92
+CDetailDoodad__FreeInst 007B3960 f end=007B3987

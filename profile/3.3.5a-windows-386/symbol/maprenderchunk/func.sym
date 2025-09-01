@@ -1,0 +1,4 @@
+CMapRenderChunk__Initialize 007BA340 f end=007BA3C7
+CMapRenderChunk__UpdatePools 007BA600 f end=007BA7B6
+CMapRenderChunk__RenderPrepBufs 007D02C0 f end=007D0419
+CMapRenderChunk__UseStreamingBufs 007D0420 f end=007D049B

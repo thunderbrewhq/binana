@@ -50,5 +50,6 @@ CMapObj__AttenTransVerts 007D78C0 f end=007D7C24
 CMapObj__CreateData 007D7EB0 f end=007D7F4A
 CMapObj__AsyncPostloadCallback 007D8050 f end=007D80B6
 CMapObj__ReadGroup 007D85E0 f end=007D872B
+CMapObj__AsyncFailedCallback 007AE110 f end=007AE138
 GetMinimapQuads 007AF8D0 f end=007AFC70
 GetMinimapQuads 007AFE70 f end=007AFED2
