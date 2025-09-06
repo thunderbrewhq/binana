@@ -78,6 +78,8 @@
 #include "m2/shared.h"
 #include "m2/types.h"
 
+#include "map/ADTchunks.h"
+#include "map/CMapArea.h"
 #include "map/WMOchunks.h"
 #include "map/CMapObj.h"
 
