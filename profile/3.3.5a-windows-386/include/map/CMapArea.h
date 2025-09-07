@@ -70,7 +70,7 @@ struct CMapArea
     int32_t* textureFlags;
     uint8_t* unk_B8; //MH20
     
-    CMapChunk mapChunks[256];
+    CMapChunk* mapChunks[256];
 };
 
 struct CMapChunk
