@@ -23,11 +23,10 @@ STORM_TS_GROWABLE_ARRAY(CMapAreaTexture);
 struct CMapArea
 {
     void** vtable;
-    int32_t objectIndex;
+    uint32_t objectIndex;
     uint16_t flags;
     uint16_t pad_0A;
-    int32_t unk_0C;
-
+    uint32_t unk_0C;
     CMapArea* perv;
     CMapArea* next;
 
@@ -76,12 +75,12 @@ struct CMapArea
 struct CMapChunk
 {
     void** vtable;
-    int32_t objectIndex;
-    int32_t unk_08;
-
-    int32_t TSExplicitList__m_linkoffset_0C;
-    void* TSExplicitList__ptr1_10;
-    void* TSExplicitList__ptr2_14;
+    uint32_t objectIndex;
+    uint16_t flags;
+    uint16_t pad_0A;
+    uint32_t unk_0C;
+    CMapChunk* prev;
+    CMapChunk* next;
 
     int32_t TSExplicitList__m_linkoffset_18;
     void* TSExplicitList__ptr1_1C;
