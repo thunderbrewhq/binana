@@ -82,6 +82,7 @@
 #include "map/CMapArea.h"
 #include "map/WMOchunks.h"
 #include "map/CMapObj.h"
+#include "map/CChunkLiquid.h"
 
 #include "net/message.h"
 

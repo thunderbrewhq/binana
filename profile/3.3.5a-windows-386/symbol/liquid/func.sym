@@ -1,0 +1,6 @@
+Liquid__CInstance__AddRef 008A1700 f end=008A1705
+Liquid__CInstance__Purge 008A1710 f end=008A171A
+Liquid__CInstance__Release 008A1AC0 f end=008A1AFC
+Liquid__CInstance__Create 008A1B00 f end=008A1B25
+Liquid__CMaterialBank__GetMaterial 008A1FA0 f end=008A20BD
+Liquid__CSettingsBank__GetSettings 008A28F0 f end=008A2974
