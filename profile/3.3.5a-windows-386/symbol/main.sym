@@ -4226,6 +4226,7 @@ CMapObjDefGroup__constructor 007B3DE0 f end=007B3EFC
 CMapObjDef__constructor 007B4350 f end=007B44FE
 CMap__UpdateArea 007B4DF0 f end=007B4F06
 TSList__LinkToHead 007B5020 f end=007B50AB ; 00005410
+CMap__ProcessChunkLiquidUpdateList 007B5420 f end=007B549A
 CMap__PreUpdateAreas 007B5950 f end=007B5CFF
 CMap__PrepareMapObjDefs 007B6110 f end=007B64ED
 CMap__PrepareUpdate 007B6B00 f end=007B6ECF
@@ -4308,6 +4309,15 @@ CMapObjGroup__Destroy 007CB9D0 f end=007CB9EE
 CMapObjGroup__Clear 007CBE80 f end=007CBF3F
 CMap__LoadWdl 007CC310 f end=007CC761
 CChunkLiquid__Purge 007CDE10 f end=007CDE28
+CChunkLiquid__UpdateResourcePurging 007CDE30 f end=007CDE72
+CChunkLiquid__CreateVertXY 007CDF80 f end=007CE0A9
+CChunkLiquid__GetRadius 007CE520 f end=007CE5CC
+CChunkLiquid__GetTris 007CE5D0 f end=007CE95B
+CChunkLiquid__GetTris 007CE960 f end=007CEB71
+CChunkLiquid__GetTris 007CEB80 f end=007CEC6E
+CChunkLiquid__destructor 007CEEF0 f end=007CEFC3
+CChunkLiquid__Batch 007CF200 f end=007CF78D
+CChunkLiquid__RenderPrep 007CF9A0 f end=007CF9D2
 CMapRenderChunk__RenderPrepBufs 007D02C0 f end=007D0419
 CMapRenderChunk__UseStreamingBufs 007D0420 f end=007D049B
 CMapChunk__CreateDetailDoodads 007D3390 f end=007D3E01
@@ -4773,6 +4783,12 @@ NvAPI_Stereo_DestroyHandle 008A0FB8 f end=008A0FBE type="NvAPI_Status __stdcall 
 NvAPI_Stereo_SetSeparation 008A0FD6 f end=008A0FDC type="NvAPI_Status __stdcall func(StereoHandle stereoHandle, float newSeparationPercentage)"
 NvAPI_Stereo_SetConvergence 008A0FEE f end=008A0FF4 type="NvAPI_Status __stdcall func(StereoHandle stereoHandle, float newConvergence)"
 stub_return_one_byte 008A1420 f end=008A1423 ; known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback
+Liquid__CInstance__AddRef 008A1700 f end=008A1705
+Liquid__CInstance__Purge 008A1710 f end=008A171A
+Liquid__CInstance__Release 008A1AC0 f end=008A1AFC
+Liquid__CInstance__Create 008A1B00 f end=008A1B25
+Liquid__CMaterialBank__GetMaterial 008A1FA0 f end=008A20BD
+Liquid__CSettingsBank__GetSettings 008A28F0 f end=008A2974
 FFX__Destroy 008C0360 f end=008C0589
 FFX__Init 008C12F0 f end=008C1513
 stub_return_int32_one 008C8DE0 f type="int32_t __stdcall func()" ; Known names: GxDefaultApi, CCommand_Perf
@@ -5479,6 +5495,7 @@ World__loadMax 00ADEEC4 l
 World__loadMin 00ADEEC8 l
 World__s_nearClip 00ADEED4 l
 CMap__bPreload 00ADFBC8 l
+CMap__s_mapChunkLiquidUpdateList 00ADFC3C l
 g_lightSkyboxDB 00AF4998 l type="WowClientDB_LightSkyboxRec" ; 0x15F
 g_lightIntBandDB 00AF49BC l type="WowClientDB_LightIntBandRec" ; 0x15D
 g_lightFloatBandDB 00AF49E0 l type="WowClientDB_LightFloatBandRec" ; 0x15C

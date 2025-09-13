@@ -4230,6 +4230,7 @@ static import_symbols() {
 	set_name(0x007B4350, "CMapObjDef__constructor");
 	set_name(0x007B4DF0, "CMap__UpdateArea");
 	set_name(0x007B5020, "TSList__LinkToHead");
+	set_name(0x007B5420, "CMap__ProcessChunkLiquidUpdateList");
 	set_name(0x007B5950, "CMap__PreUpdateAreas");
 	set_name(0x007B6110, "CMap__PrepareMapObjDefs");
 	set_name(0x007B6B00, "CMap__PrepareUpdate");
@@ -4312,6 +4313,15 @@ static import_symbols() {
 	set_name(0x007CBE80, "CMapObjGroup__Clear");
 	set_name(0x007CC310, "CMap__LoadWdl");
 	set_name(0x007CDE10, "CChunkLiquid__Purge");
+	set_name(0x007CDE30, "CChunkLiquid__UpdateResourcePurging");
+	set_name(0x007CDF80, "CChunkLiquid__CreateVertXY");
+	set_name(0x007CE520, "CChunkLiquid__GetRadius");
+	set_name(0x007CE5D0, "CChunkLiquid__GetTris");
+	set_name(0x007CE960, "CChunkLiquid__GetTris@2");
+	set_name(0x007CEB80, "CChunkLiquid__GetTris@3");
+	set_name(0x007CEEF0, "CChunkLiquid__destructor");
+	set_name(0x007CF200, "CChunkLiquid__Batch");
+	set_name(0x007CF9A0, "CChunkLiquid__RenderPrep");
 	set_name(0x007D02C0, "CMapRenderChunk__RenderPrepBufs");
 	set_name(0x007D0420, "CMapRenderChunk__UseStreamingBufs");
 	set_name(0x007D3390, "CMapChunk__CreateDetailDoodads");
@@ -4777,6 +4787,12 @@ static import_symbols() {
 	set_name(0x008A0FD6, "NvAPI_Stereo_SetSeparation");
 	set_name(0x008A0FEE, "NvAPI_Stereo_SetConvergence");
 	set_name(0x008A1420, "stub_return_one_byte");
+	set_name(0x008A1700, "Liquid__CInstance__AddRef");
+	set_name(0x008A1710, "Liquid__CInstance__Purge");
+	set_name(0x008A1AC0, "Liquid__CInstance__Release");
+	set_name(0x008A1B00, "Liquid__CInstance__Create");
+	set_name(0x008A1FA0, "Liquid__CMaterialBank__GetMaterial");
+	set_name(0x008A28F0, "Liquid__CSettingsBank__GetSettings");
 	set_name(0x008C0360, "FFX__Destroy");
 	set_name(0x008C12F0, "FFX__Init");
 	set_name(0x008C8DE0, "stub_return_int32_one");
@@ -5483,6 +5499,7 @@ static import_symbols() {
 	set_name(0x00ADEEC8, "World__loadMin");
 	set_name(0x00ADEED4, "World__s_nearClip");
 	set_name(0x00ADFBC8, "CMap__bPreload");
+	set_name(0x00ADFC3C, "CMap__s_mapChunkLiquidUpdateList");
 	set_name(0x00AF4998, "g_lightSkyboxDB");
 	set_name(0x00AF49BC, "g_lightIntBandDB");
 	set_name(0x00AF49E0, "g_lightFloatBandDB");
