@@ -83,6 +83,7 @@
 #include "map/WMOchunks.h"
 #include "map/CMapObj.h"
 #include "map/CChunkLiquid.h"
+#include "map/CDetailDoodadInst.h"
 
 #include "net/message.h"
 
