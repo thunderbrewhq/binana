@@ -4137,17 +4137,22 @@ World__Render 0077EFF0 f end=0077F00C
 World__Intersect 0077F310 f end=0077F319
 World__ObjectTestConvexVolume 0077FFB0 f end=00780122
 World__ObjectUpdate 00780240 f end=007804F5
+World__SetDetailDoodadDensity 00780710 f end=0078072F
+World__SetDetailDoodadDist 00780730 f end=00780761
 World__PrepareAreaOfInterest 00780860 f end=00780CCF
 World__Initialize 00780F50 f end=0078142F
 World__LoadMap 00781430 f end=007814F2
 World__Preload 00781500 f end=007815B7
 DayNight__Update 007816F0 f end=007819BC ; DayNight::Update(unsigned int, float, float)
 World__PrepareUpdate 007831A0 f end=007834FE
+CWorldParam__GroundEffectDensityCallback 0078DAB0 f end=0078DB0B
+CWorldParam__GroundEffectDistCallback 0078DB10 f end=0078DB8A
 AreaListRegisterLocation 0078F020 f end=0078F1EC
 CWorldScene__FrustumXform 0078FB00 f end=0078FB20
 CWorldScene__FrustumSet 00791100 f end=00791120
 CWorldScene__LocateViewer3 00795D40 f end=00795F7F
 CWorldScene__RenderMapObjDefGroups 007964A0 f end=007968C2
+CWorldScene__RenderDetailDoodads 007984A0 f end=00798794
 CBarrier__Initialize 00799730 f end=007997C5
 CWorldScene__Initialize 007997D0 f end=00799891
 CWorldScene__Render 0079A870 f end=0079ADBB
@@ -4159,6 +4164,7 @@ CMapObj__QueryLiquidSounds 0079BBF0 f end=0079BCC0
 Particulate__InitMovement 0079BCC0 f end=0079BE44
 Particulate__SetTexture 0079DFF0 f end=0079E080
 Particulate__constructor 0079E100 f end=0079E191
+CMap__ClearChunkDetailDoodads 0079E730 f end=0079E774
 CMap__Initialize 0079E7C0 f end=0079EFD4
 CMap__Destroy 0079F320 f end=0079F646
 CPassenger__Disable 0079F820 f end=0079F858
@@ -4216,11 +4222,22 @@ CMapObj__AllocOccluder 007B0250 f end=007B025B
 CMapObj__FreeMapObj 007B0260 f end=007B0304
 CMapObj__constructor 007B0580 f end=007B05F9 ; CMapObj::CMapObj()
 CMapObj__Create 007B0CC0 f end=007B0D37 ; CMapObj::Create(char const*)
+CM2Lighting__Initialize 007B0F10 f end=007B0FF8
+CDetailDoodad__CreateAlphaRampTexture 007B11B0 f end=007B1264
 CDetailDoodad__UpdateAlphaRampTexture 007B1270 f end=007B129F ; CDetailDoodad::UpdateAlphaRampTexture(EGxTexCommand, unsigned int, unsigned int, unsigned int, unsigned int, void*, unsigned int&, void const*&)
+CDetailDoodad__DestroyModels 007B1380 f end=007B13EA
 CDetailDoodad__InitializeShaderConstants 007B15D0 f end=007B1B05 ; CDetailDoodad::InitializeShaderConstants()
+CDetailDoodadData__ModelLoadedCallback 007B1B10 f end=007B1B49
 CDetailDoodad__Initialize 007B2760 f end=007B29AA ; CDetailDoodad::Initialize()
 CDetailDoodad__UpdatePools 007B2A80 f end=007B2C92
 CDetailDoodad__InitializeRenderState 007B2D30 f end=007B304E ; CDetailDoodad::InitializeRenderState()
+CDetailDoodadData__Load 007B3050 f end=007B30C7
+CDetailDoodadInst__AddDoodad 007B31E0 f end=007B3390
+CDetailDoodad__Destroy 007B3480 f end=007B3521
+CDetailDoodad__LoadModel 007B3530 f end=007B3560
+CDetailDoodadInst__constructor 007B36E0 f end=007B3778
+CDetailDoodadInst__destructor 007B3780 f end=007B390E
+CDetailDoodad__AllocInst 007B3910 f end=007B3959
 CDetailDoodad__FreeInst 007B3960 f end=007B3987
 CMapObjDefGroup__constructor 007B3DE0 f end=007B3EFC
 CMapObjDef__constructor 007B4350 f end=007B44FE
@@ -4320,6 +4337,7 @@ CChunkLiquid__Batch 007CF200 f end=007CF78D
 CChunkLiquid__RenderPrep 007CF9A0 f end=007CF9D2
 CMapRenderChunk__RenderPrepBufs 007D02C0 f end=007D0419
 CMapRenderChunk__UseStreamingBufs 007D0420 f end=007D049B
+CMapChunk__LoadDetailDoodadModels 007D05F0 f end=007D069A
 CMapChunk__CreateDetailDoodads 007D3390 f end=007D3E01
 CMapChunk__CreateDetailDoodadInst 007D3FE0 f end=007D4091
 CMap__LocateViewerMapObjs 007D59B0 f end=007D5CC9
@@ -4765,6 +4783,8 @@ CShaderEffect__SetLocalLighting 00873CA0 f end=00873ED2 ; CShaderEffect::SetLoca
 CShadowCache__NotifyTexturesRecreate 00873FE0 f end=00873FEB ; CShadowCache::NotifyTexturesRecreate()
 CShadowCache__SetShadowMapGenericGlobal 008744E0 f end=008745CE ; CShadowCache::SetShadowMapGenericGlobal()
 CShadowCache__SetShadowMapGenericInterior 008745D0 f end=00874658 ; CShadowCache::SetShadowMapGenericInterior(int)
+CShadowCache__SetShadowMapTerrain 00874660 f end=00874757
+CShadowCache__SetShadowMapDetailDoodad 00874760 f end=0087488D
 CShaderEffectManager__GetEffect 00876530 f end=00876543 ; CShaderEffectManager::GetEffect(char const*)
 CShaderEffectManager__CreateEffect 00876BE0 f end=00876C97 ; CShaderEffectManager::CreateEffect(char const*)
 CShaderEffectManager__ParseEffectCallback 00876CA0 f end=00876D8D ; CShaderEffectManager::ParseEffectCallback(CShaderEffectParser::ParsedEffect const&, void*)
@@ -5491,11 +5511,13 @@ s_smallCull 00ADBEC0 l type="float[4][2]"
 s_distCull 00ADBEE0 l type="float[4][2]"
 s_farClip 00ADBF00 l type="float[5][2]"
 g_videoHardwareDB 00ADBF88 l type="WowClientDB_VideoHardwareRec"
+World__groundEffectDistValue 00ADEEB8 l
 World__loadMax 00ADEEC4 l
 World__loadMin 00ADEEC8 l
 World__s_nearClip 00ADEED4 l
 CMap__bPreload 00ADFBC8 l
 CMap__s_mapChunkLiquidUpdateList 00ADFC3C l
+CMap__mapChunkPointer 00AEEDAC l
 g_lightSkyboxDB 00AF4998 l type="WowClientDB_LightSkyboxRec" ; 0x15F
 g_lightIntBandDB 00AF49BC l type="WowClientDB_LightIntBandRec" ; 0x15D
 g_lightFloatBandDB 00AF49E0 l type="WowClientDB_LightFloatBandRec" ; 0x15C
@@ -5847,6 +5869,9 @@ g_opt 00CAE958 l type="STORMOPTIONS"
 s_logsysteminit 00CB7220 l type="int32_t"
 s_defaultdir_critsect 00CB732C l type="CRITICAL_SECTION"
 s_critsect 00CB7358 l type="CRITICAL_SECTION[4]"
+World__detailDoodadAlphaRef 00CD766C l
+World__groundEffectDistValueSqr 00CD7674 l
+World__detailDoodadDensity 00CD773C l
 World__s_pervFarClip 00CD7744 l
 World__s_farClip 00CD7748 l
 World__enables 00CD774C l
@@ -5875,6 +5900,17 @@ CMap__bDungeon 00CF08F4 l
 CMapObjRenderGroupExterior_ptr 00CFBEC4 l
 CMapObjRenderGroupInterior_ptr 00CFBECC l
 CMapObj__sMinimapTag 00D1C418 l
+CDetailDoodad__s_pixelShader 00D1C488 l
+CDetailDoodad__s_vertexShader 00D1C4A8 l
+CDetailDoodad__s_bPoolDirty 00D1C4C0 l
+CDetailDoodad__s_idxBufItems 00D1C4CC l
+CDetailDoodad__s_vtxBufItems 00D1C4D0 l
+CDetailDoodad__s_gxIndexPool 00D1C4D4 l
+CDetailDoodad__s_gxVertexPool 00D1C4D8 l
+CDetailDoodad__s_alphaRmapTexture 00D1C4E0 l
+CDetailDoodad__s_instHeap 00D1C4E4 l
+CDetailDoodad__s_bUseShaders 00D1C4F0 l
+CDetailDoodad__s_doodadList 00D1C4FC l
 s_cvShadowCull 00D25308 l type="CVar*"
 s_cvShadowScissor 00D25310 l type="CVar*"
 s_cvShadowInstancing 00D25314 l type="CVar*"
@@ -5910,3 +5946,4 @@ s_cpuTicksPerSecond 00D415C8 l type="uint64_t"
 s_gotPowerProfFrequency 00D415D0 l type="int32_t"
 s_checkedPowerProfInfo 00D415D4 l type="int32_t"
 CShaderEffect__s_enableShaders 00D43020 l type="int32_t"
+CShadowCache__s_shadowMode 00D43154 l

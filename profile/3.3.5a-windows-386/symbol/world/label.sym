@@ -16,3 +16,7 @@ World__objectAoi_t_z 00CD77B0 l
 World__loadMax 00ADEEC4 l
 World__loadMin 00ADEEC8 l
 World__enables 00CD774C l
+World__groundEffectDistValue 00ADEEB8 l
+World__groundEffectDistValueSqr 00CD7674 l
+World__detailDoodadAlphaRef 00CD766C l
+World__detailDoodadDensity 00CD773C l

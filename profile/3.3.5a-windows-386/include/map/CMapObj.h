@@ -96,8 +96,8 @@ struct CMapObjGroup
     uint16_t transparencyBatchesCount;
     uint16_t intBatchCount;
     int32_t extBatchCount;
-    void* CAaBspNodePtr;
-    void* CAaBspNodePtr;
+    void* CAaBspNodePtr1;
+    void* CAaBspNodePtr2;
     uint16_t* nodeFaceIndices;
     int32_t bspNodesCount;
     int32_t nodeFaceIndicesCount;

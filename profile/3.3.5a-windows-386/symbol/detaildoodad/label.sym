@@ -1,0 +1,11 @@
+CDetailDoodad__s_pixelShader 00D1C488 l
+CDetailDoodad__s_vertexShader 00D1C4A8 l
+CDetailDoodad__s_bPoolDirty 00D1C4C0 l
+CDetailDoodad__s_idxBufItems 00D1C4CC l
+CDetailDoodad__s_vtxBufItems 00D1C4D0 l
+CDetailDoodad__s_gxIndexPool 00D1C4D4 l
+CDetailDoodad__s_gxVertexPool 00D1C4D8 l
+CDetailDoodad__s_alphaRmapTexture 00D1C4E0 l
+CDetailDoodad__s_instHeap 00D1C4E4 l
+CDetailDoodad__s_bUseShaders 00D1C4F0 l
+CDetailDoodad__s_doodadList 00D1C4FC l

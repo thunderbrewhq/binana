@@ -20,3 +20,4 @@ CMapChunk__CreateDetailDoodadInst 007D3FE0 f end=007D4091
 CMapChunk__Intersect 007D8730 f end=007D883E
 CMapChunk__Intersect 007D8840 f end=007D8DF6
 CMapChunk__Intersect 007D8E00 f end=007D91E5
+CMapChunk__LoadDetailDoodadModels 007D05F0 f end=007D069A
