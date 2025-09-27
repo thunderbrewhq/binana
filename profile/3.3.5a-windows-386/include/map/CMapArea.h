@@ -99,8 +99,8 @@ struct CMapChunk
     float distToCamera;
     CAaBox bbox2;
     
-    void* detailDoodadInstPtr;
-    void* renderChunkPtr;
+    void* detailDoodadInst;
+    void* renderChunk;
 
     int32_t unk_AC;
     int32_t areaId;
