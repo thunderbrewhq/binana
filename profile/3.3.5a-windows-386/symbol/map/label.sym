@@ -21,3 +21,6 @@ CMap__s_holeMask 00A3FAF0 l
 CMap__m_areaTable 00CE48D0 l
 CMap__s_mapChunkLiquidUpdateList 00ADFC3C l
 CMap__mapChunkPointer 00AEEDAC l
+CMap__enableTerrainShaderVertex 00CE049F l
+CMap__enableTerrainShaderPixel 00CE049E l
+CMap__s_mapRenderChunkUpdateList 00ADFC30 l

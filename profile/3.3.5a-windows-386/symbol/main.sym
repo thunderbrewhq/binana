@@ -254,7 +254,7 @@ j_nullsub_3 0047B760 f
 quicksort 0047B800 f ; void __cdecl quicksort(unsigned int, unsigned int, int, int (__cdecl *)(unsigned int, unsigned int, int), int)
 ConvertUTF16toUTF8 0047B9E0 f end=0047BB9C type="int __stdcall func(char* dst, uint32_t dstMaxChars, uint16_t* src, uint32_t srcMaxChars, uint32_t* dstChars, uint32_t* srcChars)"
 sgetu8 0047BD40 f ; int __cdecl sgetu8(_BYTE *, _DWORD *)
-HandleClose 0047BF30 f end=0047BF46
+TextureRelease 0047BF30 f end=0047BF46
 HandleCreate 0047BF50 f end=0047BF6B
 HandleDuplicate 0047BF70 f end=0047BF82
 CoordinateSetAspectRatio 0047BF90 f end=0047BFC8
@@ -475,6 +475,7 @@ TextureFreeMippedImg 004B55E0 f end=004B55FE
 LoadPredrawnMips 004B5A00 f end=004B5BA2
 TextureIsReadyNow 004B62A0 f end=004B62C1
 TextureSetCacheSize 004B6580 f end=004B65D5
+TextureAllocGxTex 004B6760 f end=004B6920
 TextureCacheUpdate 004B6AE0 f end=004B6C47
 TextureGetGxTex 004B6CB0 f end=004B6D82
 TextureAllocMippedImg 004B7220 f end=004B72F4 type="MipBits* __stdcall func(PIXEL_FORMAT format, uint32_t width, uint32_t height)"
@@ -483,6 +484,7 @@ LoadTgaMips 004B78A0 f end=004B7AA0 type="int32_t __usercall func@<eax>(char* ex
 TextureInitialize 004B7F80 f end=004B7FF7
 LoadBlpMips 004B8070 f end=004B81CE type="int32_t __usercall func@<eax>(char* ext@<eax>, char* filename@<ebx>, int32_t a3, MipBits** mipBits, uint32_t* width, uint32_t* height, uint32_t* isOpaque, uint32_t* alphaBits, PIXEL_FORMAT* dataFormat)"
 TextureLoadImage 004B81D0 f end=004B8385 type="MipBits* func(const char* filename, uint32_t* width, uint32_t* height, PIXEL_FORMAT* dataFormat, int32_t* isOpaque, CStatus* status, uint32_t* alphaBits, int32_t a8)"
+TextureCreate 004B8C80 f end=004B8D6A
 AsyncFileReadProgressCallback 004B9910 f end=004B9926
 AsyncFileReadIngameProgressCallback 004B9930 f end=004B9946
 AsyncFileReadPollHandler 004B9B20 f end=004B9BF6 ; AsyncFileReadPollHandler(void const*, void*)
@@ -3088,6 +3090,7 @@ GxAdapterDesktopMode 00681220 f type="int32_t __stdcall func(CGxMonitorMode* mod
 GxDevCreate 00681290 f end=00681301
 GxSceneClear 006813B0 f end=006813CD
 GxTexUpdate 006813D0 f end=006813EC
+GxTexSetWrap 00681450 f end=0068146C
 GxTexDestroy 00681470 f
 GxTexCopy 006814D0 f end=00681524
 GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
@@ -3202,6 +3205,7 @@ CGxDevice__IRsForceUpdate_EGxRenderState 006859E0 f end=00685A65 type="void __th
 CGxDevice__IRsForceUpdate 00685A70 f end=00685B4E type="void __thiscall func(CGxDevice* this)" ; CGxDevice::IRsForceUpdate()
 CGxDevice__IRsSync 00685B50 f end=00685BFE type="void __thiscall func(CGxDevice* this, int32_t force)"
 CGxDevice__TexCreate 00685C60 f end=00685CCB type="void __thiscall func(CGxDevice* this, EGxTexTarget target, uint32_t width, uint32_t height, uint32_t depth, EGxTexFormat format, EGxTexFormat dataFormat, CGxTexFlags flags, void* userArg, void (*userFunc)(EGxTexCommand, uint32_t, uint32_t, uint32_t, uint32_t, void*, uint32_t*, void**), char* name, CGxTex** texId)"
+CGxDevice__TexSetWrap 00685D40 f end=00685DBF
 EmergencyMem__Lock 00685E90 f end=00685EB0 type="void* __thiscall func(EmergencyMem* this, uint32_t a1)"
 CGxDevice__MasterEnableSet 00685EB0 f end=00685F33 type="void __thiscall func(CGxDevice* this, EGxMasterEnables state, int32_t enable)"
 CGxDevice__RsSet_pointer_to_void 00685F50 f end=00685FB0 type="void __thiscall func(CGxDevice* this, EGxRenderState which, void* value)"
@@ -4150,9 +4154,11 @@ CWorldParam__GroundEffectDistCallback 0078DB10 f end=0078DB8A
 AreaListRegisterLocation 0078F020 f end=0078F1EC
 CWorldScene__FrustumXform 0078FB00 f end=0078FB20
 CWorldScene__FrustumSet 00791100 f end=00791120
+CWorldScene__RenderChunksZoneDebug 00793C30 f end=00793D11
 CWorldScene__LocateViewer3 00795D40 f end=00795F7F
 CWorldScene__RenderMapObjDefGroups 007964A0 f end=007968C2
 CWorldScene__RenderDetailDoodads 007984A0 f end=00798794
+CWorldScene__RenderChunksSinglePass 007989C0 f end=00798D9F
 CBarrier__Initialize 00799730 f end=007997C5
 CWorldScene__Initialize 007997D0 f end=00799891
 CWorldScene__Render 0079A870 f end=0079ADBB
@@ -4165,9 +4171,9 @@ Particulate__InitMovement 0079BCC0 f end=0079BE44
 Particulate__SetTexture 0079DFF0 f end=0079E080
 Particulate__constructor 0079E100 f end=0079E191
 CMap__ClearChunkDetailDoodads 0079E730 f end=0079E774
+CMap__ClearChunkBufs 0079E780 f end=0079E7B6
 CMap__Initialize 0079E7C0 f end=0079EFD4
 CMap__Destroy 0079F320 f end=0079F646
-CPassenger__Disable 0079F820 f end=0079F858
 CMap__QueryGroundTypeTerrain 007A0530 f end=007A0699
 CMapEntity__constructor 007A0FE0 f end=007A1098
 CMap__TestQueryAdd 007A4C10 f end=007A4EDD
@@ -4244,10 +4250,44 @@ CMapObjDef__constructor 007B4350 f end=007B44FE
 CMap__UpdateArea 007B4DF0 f end=007B4F06
 TSList__LinkToHead 007B5020 f end=007B50AB ; 00005410
 CMap__ProcessChunkLiquidUpdateList 007B5420 f end=007B549A
+CMap__ProcessRenderChunkUpdateList 007B5500 f end=007B5589
 CMap__PreUpdateAreas 007B5950 f end=007B5CFF
 CMap__PrepareMapObjDefs 007B6110 f end=007B64ED
 CMap__PrepareUpdate 007B6B00 f end=007B6ECF
+CMapRenderChunk__DirtyPools 007B7320 f end=007B732B
+CMapRenderChunk__SetVertexFormat 007B7330 f end=007B7347
+CMapRenderChunk__FreeLayers 007B7350 f end=007B73D5
+CMapRenderChunk__UpdateLoaded 007B73E0 f end=007B7419
+CMapRenderChunk__UnpackAlphaBitsUnfixed4444Mip0 007B76F0 f end=007B77C3
+CMapRenderChunk__UnpackAlphaBitsUnfixed4444Mip1 007B77D0 f end=007B7859
+CMapRenderChunk__AllocTexture 007B7A70 f end=007B7AEA
+CMapRenderChunk__SelectLights 007B7BD0 f end=007B7C5D
+CMapRenderChunk__UnpackAlphaShadowBitsFixed8888Mip0 007B7C60 f end=007B7DB7
+CMapRenderChunk__UnpackAlphaShadowBitsFixed8888Mip1 007B7DC0 f end=007B8065
+CMapRenderChunk__UnpackAlphaShadowBitsFixed4444Mip0 007B8070 f end=007B8190
+CMapRenderChunk__UnpackAlphaShadowBitsFixed4444Mip1 007B8190 f end=007B8499
+CMapRenderChunk__UnpackAlphaShadowBitsUnfixed4444Mip0 007B85A0 f end=007B861C
+CMapRenderChunk__UnpackAlphaShadowBitsUnfixed4444Mip1 007B8620 f end=007B87E5
+CMapRenderChunk__UnpackAlphaShadowBits 007B87F0 f end=007B88CA
+CMapRenderChunk__UnpackAlphaBits 007B8E20 f end=007B8F13
+CMapRenderChunk__CreateLayer 007B9250 f end=007B9331
+CMapRenderChunk__constructor 007B9690 f end=007B976B
+CMapRenderChunk__CreateLayers 007B9770 f end=007B9821
+CMapRenderChunk__FreeBuf 007B9830 f end=007B9885
+CMapRenderChunk__CreateLayerTexture 007B9890 f end=007B9941
+CMapRenderChunk__UnpackShadowBits 007B9950 f end=007B99A3
+CMapRenderChunk__CreateShaderTexture 007B99B0 f end=007B9BBE
+CMapRenderChunk__UpdateLayerGxTexture 007B9BC0 f end=007B9C04
+CMapRenderChunk__UpdateShadowGxTexture 007B9C20 f end=007B9C50
+CMapRenderChunk__UpdateShaderGxTexture 007B9C60 f end=007B9CA0
+CMapRenderChunk__destructor 007B9D60 f end=007B9DDF
+CMapRenderChunk__AllocLayerTexture 007B9DE0 f end=007B9EDB
+CMapRenderChunk__AllocShadowTexture 007B9EE0 f end=007B9F85
+CMapRenderChunk__AllocShaderTexture 007B9F90 f end=007BA046
+CMapRenderChunk__AllocLayerTextures 007BA050 f end=007BA0E0
 CMapRenderChunk__Initialize 007BA340 f end=007BA3C7
+CMapRenderChunk__DestroyBufs 007BA3D0 f end=007BA5A0
+CMapRenderChunk__Destroy 007BA5A0 f end=007BA600
 CMapRenderChunk__UpdatePools 007BA600 f end=007BA7B6
 CShadowQuery__Initialize 007BD3A0 f end=007BD44D
 CMap__Preload 007BD9F0 f end=007BDA62
@@ -4335,10 +4375,17 @@ CChunkLiquid__GetTris 007CEB80 f end=007CEC6E
 CChunkLiquid__destructor 007CEEF0 f end=007CEFC3
 CChunkLiquid__Batch 007CF200 f end=007CF78D
 CChunkLiquid__RenderPrep 007CF9A0 f end=007CF9D2
+CMapRenderChunk__InitializeVertexShaderConstants 007CFBE0 f end=007D004A
+CMapRenderChunk__SetVertexShader 007D0050 f end=007D02B4
 CMapRenderChunk__RenderPrepBufs 007D02C0 f end=007D0419
 CMapRenderChunk__UseStreamingBufs 007D0420 f end=007D049B
+CMapRenderChunk__RenderSetup 007D04A0 f end=007D05E6
 CMapChunk__LoadDetailDoodadModels 007D05F0 f end=007D069A
+CMapRenderChunk__RenderSinglePassPixelShader 007D28B0 f end=007D2D6D
+CMapRenderChunk__RenderSinglePassVertexPixelShader 007D2D70 f end=007D300D
 CMapChunk__CreateDetailDoodads 007D3390 f end=007D3E01
+CMapRenderChunk__SetShaders 007D3E10 f end=007D3F6D
+CMapRenderChunk__RenderPrep 007D3F70 f end=007D3FDC
 CMapChunk__CreateDetailDoodadInst 007D3FE0 f end=007D4091
 CMap__LocateViewerMapObjs 007D59B0 f end=007D5CC9
 CMap__LoadTerrainTexture 007D6980 f end=007D6A8F
@@ -5516,6 +5563,7 @@ World__loadMax 00ADEEC4 l
 World__loadMin 00ADEEC8 l
 World__s_nearClip 00ADEED4 l
 CMap__bPreload 00ADFBC8 l
+CMap__s_mapRenderChunkUpdateList 00ADFC30 l
 CMap__s_mapChunkLiquidUpdateList 00ADFC3C l
 CMap__mapChunkPointer 00AEEDAC l
 g_lightSkyboxDB 00AF4998 l type="WowClientDB_LightSkyboxRec" ; 0x15F
@@ -5891,6 +5939,8 @@ CBarrier__s_pattern 00CD8608 l
 CBarrier__s_mask 00CD860C l
 CWorldScene__s_defaultBlendTexture 00CD8614 l
 CWorldScene__s_defaultTexture 00CD8618 l
+CMap__enableTerrainShaderPixel 00CE049E l
+CMap__enableTerrainShaderVertex 00CE049F l
 CMap__wdtFilename 00CE05D0 l
 CMap__mapName 00CE06D0 l
 CMap__mapPath 00CE07D0 l
@@ -5911,6 +5961,14 @@ CDetailDoodad__s_alphaRmapTexture 00D1C4E0 l
 CDetailDoodad__s_instHeap 00D1C4E4 l
 CDetailDoodad__s_bUseShaders 00D1C4F0 l
 CDetailDoodad__s_doodadList 00D1C4FC l
+CMapRenderChunk__s_bPoolsDirty 00D1D058 l
+CMapRenderChunk__s_pnEstimateIndex 00D1D05C l
+CMapRenderChunk__s_pnEstimateVertex 00D1D060 l
+CMapRenderChunk__s_gxIndexPool 00D1D064 l
+CMapRenderChunk__s_gxVertexPool 00D1D068 l
+CMapRenderChunk__s_gxBufVertexFormat 00D1D06C l
+s_defaultTex 00D1D098 l
+CMapRenderChunk__s_renderLayersFunc 00D25098 l
 s_cvShadowCull 00D25308 l type="CVar*"
 s_cvShadowScissor 00D25310 l type="CVar*"
 s_cvShadowInstancing 00D25314 l type="CVar*"

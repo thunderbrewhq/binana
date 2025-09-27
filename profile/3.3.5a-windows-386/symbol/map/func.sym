@@ -50,3 +50,5 @@ CMap__LoadArea 007D9A20 f end=007D9A6B
 CMap__PrepareArea 007D9A70 f end=007D9B0E
 CMap__ProcessChunkLiquidUpdateList 007B5420 f end=007B549A
 CMap__ClearChunkDetailDoodads 0079E730 f end=0079E774
+CMap__ClearChunkBufs 0079E780 f end=0079E7B6
+CMap__ProcessRenderChunkUpdateList 007B5500 f end=007B5589

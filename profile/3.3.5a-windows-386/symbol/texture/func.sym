@@ -50,3 +50,6 @@ CBLPFile__Open 006AFF10 f end=006AFFCF type="int32_t __thiscall func(CBLPFile* t
 CBLPFile__LockChain2 006AFFD0 f end=006B012E type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, MipBits** images, uint32_t mipLevel, int32_t a6)"
 TextureIsReadyNow 004B62A0 f end=004B62C1
 TextureGetGxTex 004B6CB0 f end=004B6D82
+TextureRelease 0047BF30 f end=0047BF46
+TextureAllocGxTex 004B6760 f end=004B6920
+TextureCreate 004B8C80 f end=004B8D6A

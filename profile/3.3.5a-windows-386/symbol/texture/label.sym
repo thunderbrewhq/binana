@@ -1,3 +1,4 @@
 s_pixelFormatToMipBitsCache 009F1074 l
 CBLPFile__s_eightBitAlphaLookup 00AD90B0 l type="uint8_t[16]"
 CBLPFile__s_oneBitAlphaLookup 00AD90C0 l type="uint8_t[2]"
+s_defaultTex 00D1D098 l
