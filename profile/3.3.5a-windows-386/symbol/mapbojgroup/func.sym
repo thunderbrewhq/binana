@@ -31,3 +31,4 @@ CMapObjGroup__Create 007D82E0 f end=007D856F
 CMapObjGroup__AsyncPostloadCallback 007D8570 f end=007D85D6
 CMapObjGroup__AsyncFailedCallback 007C75E0 f end=007C7608
 CMapObjGroup__GetNumSharedTiles 007C8BF0 f end=007C8C5E
+CMapObjGroup__GetFacesForLinking 007CB260 f end=007CB2E5

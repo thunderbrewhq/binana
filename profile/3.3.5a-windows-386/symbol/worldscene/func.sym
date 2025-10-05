@@ -7,3 +7,6 @@ CWorldScene__Render 0079A870 f end=0079ADBB
 CWorldScene__RenderDetailDoodads 007984A0 f end=00798794
 CWorldScene__RenderChunksZoneDebug 00793C30 f end=00793D11
 CWorldScene__RenderChunksSinglePass 007989C0 f end=00798D9F
+CWorldScene__FrustumCull 0078FB20 f end=0078FB47
+CWorldScene__FrustumPop 0078FB50 f end=0078FB58
+CWorldScene__ClipBufferCull 0078FDC0 f end=0078FF99

@@ -85,6 +85,7 @@
 #include "map/CChunkLiquid.h"
 #include "map/CDetailDoodadInst.h"
 #include "map/CMapRenderChunk.h"
+#include "map/CMapObjDef.h"
 
 #include "net/message.h"
 
