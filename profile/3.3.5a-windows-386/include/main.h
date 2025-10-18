@@ -86,6 +86,8 @@
 #include "map/CDetailDoodadInst.h"
 #include "map/CMapRenderChunk.h"
 #include "map/CMapObjDef.h"
+#include "map/CMapDoodadDef.h"
+#include "map/CMapEntity.h"
 
 #include "net/message.h"
 
