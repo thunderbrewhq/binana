@@ -1,3 +1,6 @@
 CMapDoodadDef__SelectLights 007C1150 f end=007C1371 ; CMapDoodadDef::SelectLights(CM2Lighting*)
 CMapDoodadDef__constructor 007C21E0 f end=007C234A
 CMapDoodadDef__Purge 007C3020 f end=007C30A6
+CMapDoodadDef__Update 007C1380 f end=007C15ED
+CMapDoodadDef__QueryInteriorLighting 007C1C40 f end=007C1DB8
+CMapDoodadDef__SelectUnderwater 007C23F0 f end=007C25C5
