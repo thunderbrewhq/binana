@@ -9,22 +9,46 @@ DECLARE_STRUCT(CMapObjDefGroup);
 #include "tempest/matrix.h"
 #include "tempest/vector.h"
 #include "storm/array.h"
+#include "storm/list.h"
+#include "map/CMapDoodadDef.h"
+#include "map/CMapArea.h"
 
 STORM_TS_GROWABLE_ARRAY(CMapObjDefGroup);
+
+struct CMapChunk;
+typedef struct CMapObjDefMapChunkLink CMapObjDefMapChunkLink;
+STORM_TS_LIST(CMapObjDefMapChunkLink);
+struct CMapObjDefMapChunkLink
+{
+    uint32_t objectIndex; //0x00
+    CMapObjDef* owner; //0x04
+    CMapChunk* ref; //0x08
+    TSLink_CMapObjDefMapChunkLink refLink; //0x0C - 0x14
+    TSLink_CMapObjDefMapChunkLink ownerLink; //0x14 - 0x1C
+};
+
+typedef struct CMapObjDefMapObjDefGroupLink CMapObjDefMapObjDefGroupLink;
+STORM_TS_LIST(CMapObjDefMapObjDefGroupLink);
+struct CMapObjDefMapObjDefGroupLink
+{
+    uint32_t objectIndex; //0x00
+    CMapObjDefGroup* owner; //0x04
+    CMapObjDef* ref; //0x08
+    TSLink_CMapObjDefMapObjDefGroupLink refLink; //0x0C - 0x14
+    TSLink_CMapObjDefMapObjDefGroupLink ownerLink; //0x14 - 0x1C
+};
 
 struct CMapObjDef
 {
     void** vtable; //0x00
     int32_t objectIndex; //0x04
-    uint16_t flags; //0x08
-    uint16_t pad_0A; //0x0A
+    uint16_t type; //0x08
+    uint16_t refCount; //0x0A
     int32_t unk_C; //0x0C
     CMapObjDef* prev; //0x10
     CMapObjDef* next; //0x14
     
-    int32_t TSExplicitList__m_linkoffset_unk_18; //0x18
-    void* TSExplicitList__m_ptr1_unk_1C; //0x1C
-    void* TSExplicitList__m_ptr2_unk_1C; //0x20
+    TSExplicitList_CMapObjDefMapChunkLink linkList;
 
     void* unk_24; //0x24
     void* unk_28; //0x28
@@ -49,9 +73,7 @@ struct CMapObjDef
     int32_t unk_10C; //0x10C
     int32_t unk_110; //0x110
 
-    int32_t TSExplicitList__m_linkoffset_unk_114; //0x114
-    void* TSExplicitList__m_ptr1_unk_118; //0x118
-    void* TSExplicitList__m_ptr2_unk_11C; //0x11C
+    TSExplicitList_CMapObjDefMapObjDefGroupLink mapObjDefGroupLinkList;
     
     TSGrowableArray_CMapObjDefGroup defGroups;
     
@@ -69,19 +91,39 @@ struct CMapObjDef
     void* unk_154; //0x154
 };
 
+typedef struct CMapObjDefGroupMapObjDefLink CMapObjDefGroupMapObjDefLink;
+STORM_TS_LIST(CMapObjDefGroupMapObjDefLink);
+struct CMapObjDefGroupMapObjDefLink
+{
+    uint32_t objectIndex; //0x00
+    CMapObjDefGroup* owner; //0x04
+    CMapObjDef* ref; //0x08
+    TSLink_CMapObjDefGroupMapObjDefLink refLink; //0x0C - 0x14
+    TSLink_CMapObjDefGroupMapObjDefLink ownerLink; //0x14 - 0x1C
+};
+
+typedef struct CMapObjDefGroupDoodadDefLink CMapObjDefGroupDoodadDefLink;
+STORM_TS_LIST(CMapObjDefGroupDoodadDefLink);
+struct CMapObjDefGroupDoodadDefLink
+{
+    uint32_t objectIndex; //0x00
+    CMapDoodadDef* owner; //0x04
+    CMapObjDef* ref; //0x08
+    TSLink_CMapObjDefGroupDoodadDefLink refLink; //0x0C - 0x14
+    TSLink_CMapObjDefGroupDoodadDefLink ownerLink; //0x14 - 0x1C
+};
+
 struct CMapObjDefGroup
 {
     void* vtable; //0x00
     int32_t objectIndex; //0x04
-    uint16_t flags; //0x08
-    uint16_t pad_0A; //0x0A
+    uint16_t type; //0x08
+    uint16_t refCount; //0x0A
     int32_t unk_C; //0x0C
     CMapObjDefGroup* prev; //0x10
     CMapObjDefGroup* next; //0x14
 
-    int32_t TSExplicitList__m_linkoffset_unk_18; //0x18
-    void* TSExplicitList__m_ptr1_unk_1C; //0x1C
-    void* TSExplicitList__m_ptr2_unk_1C; //0x20
+    TSExplicitList_CMapObjDefGroupMapObjDefLink linkList;
 
     CAaBox bbox;
     CAaSphere sphere;
@@ -96,13 +138,13 @@ struct CMapObjDefGroup
     int32_t unk_64; //0x64
     int32_t unk_68; //0x68
     
+    //CWFrustum
     int32_t TSExplicitList__m_linkoffset_unk_6C; //0x6C
     void* TSExplicitList__m_ptr1_unk_70; //0x70
     void* TSExplicitList__m_ptr2_unk_74; //0x74
     
-    int32_t TSExplicitList__m_linkoffset_unk_78; //0x78
-    void* TSExplicitList__m_ptr1_unk_7C; //0x7C
-    void* TSExplicitList__m_ptr2_unk_80; //0x80
+    // CMapDoodadDef
+    TSExplicitList_CMapObjDefGroupDoodadDefLink doodadDefLinkList;
     
     int32_t TSExplicitList__m_linkoffset_unk_84; //0x84
     void* TSExplicitList__m_ptr1_unk_88; //0x88

@@ -14,25 +14,49 @@ struct CMapAreaTexture
 struct CMapChunk;
 
 #include "async/object.h"
-#include "ADTchunks.h"
+#include "map/ADTchunks.h"
 #include "storm/array.h"
 #include "texture/texture.h"
+#include "map/CMapBaseObj.h"
+#include "map/CMapBaseObjLink.h"
+#include "map/CMapDoodadDef.h"
+#include "map/CMapObjDef.h"
 
 STORM_TS_GROWABLE_ARRAY(CMapAreaTexture);
+
+typedef struct CMapAreaLink CMapAreaLink;
+STORM_TS_LIST(CMapAreaLink);
+struct CMapAreaLink
+{
+    uint32_t objectIndex; //0x00
+    CMapArea* owner; //0x04
+    void* ref; //0x08
+    TSLink_CMapAreaLink refLink; //0x0C - 0x14
+    TSLink_CMapAreaLink ownerLink; //0x14 - 0x1C
+};
+
+typedef struct CMapAreaChunkLink CMapAreaChunkLink;
+STORM_TS_LIST(CMapAreaChunkLink);
+struct CMapAreaChunkLink
+{
+    uint32_t objectIndex; //0x00
+    CMapChunk* owner; //0x04
+    CMapArea* ref; //0x08
+    TSLink_CMapAreaChunkLink refLink; //0x0C - 0x14
+    TSLink_CMapAreaChunkLink ownerLink; //0x14 - 0x1C
+}; 
 
 struct CMapArea
 {
     void** vtable;
     uint32_t objectIndex;
-    uint16_t flags;
-    uint16_t pad_0A;
+    uint16_t type;
+    uint16_t refCount;
     uint32_t unk_0C;
     CMapArea* perv;
     CMapArea* next;
 
-    int32_t TSExplicitList__m_linkoffset_18;
-    void* TSExplicitList__ptr_1C;
-    void* TSExplicitList__ptr2_20;
+    TSExplicitList_CMapAreaLink linkList;
 
     C3Vector bottomRight;
     C3Vector topLeft;
@@ -48,9 +72,7 @@ struct CMapArea
     int32_t unk_6C;
     CAsyncObject* asyncObject;
     
-    int32_t TSExplicitList__m_linkoffset_unk_74;
-    void* TSExplicitList__ptr_unk_78;
-    void* TSExplicitList__ptr2_unk_7C;
+    TSExplicitList_CMapAreaChunkLink chunkLinkList;
     
     void* filePtr;
     int32_t fileSize;
@@ -72,19 +94,54 @@ struct CMapArea
     CMapChunk* mapChunks[256];
 };
 
+
+typedef struct CMapChunkLink CMapChunkLink;
+STORM_TS_LIST(CMapChunkLink);
+struct CMapChunkLink
+{
+    uint32_t objectIndex; //0x00
+    CMapChunk* owner; //0x04
+    CMapArea* ref; //0x08
+    TSLink_CMapChunkLink refLink; //0x0C - 0x14
+    TSLink_CMapChunkLink ownerLink; //0x14 - 0x1C
+};
+
+typedef struct CMapChunkDoodadDefLink CMapChunkDoodadDefLink;
+STORM_TS_LIST(CMapChunkDoodadDefLink);
+struct CMapChunkDoodadDefLink
+{
+    uint32_t objectIndex; //0x00
+    CMapDoodadDef* owner; //0x04
+    CMapChunk* ref; //0x08
+    TSLink_CMapChunkDoodadDefLink refLink; //0x0C - 0x14
+    TSLink_CMapChunkDoodadDefLink ownerLink; //0x14 - 0x1C
+};
+
+typedef struct CMapChunkMapObjDefLink CMapChunkMapObjDefLink;
+STORM_TS_LIST(CMapChunkMapObjDefLink);
+struct CMapChunkMapObjDefLink
+{
+    uint32_t objectIndex; //0x00
+    CMapObjDef* owner; //0x04
+    CMapChunk* ref; //0x08
+    TSLink_CMapChunkMapObjDefLink refLink; //0x0C - 0x14
+    TSLink_CMapChunkMapObjDefLink ownerLink; //0x14 - 0x1C
+};
+
+typedef struct CChunkLiquid CChunkLiquid;
+STORM_TS_LIST(CChunkLiquid);
+
 struct CMapChunk
 {
     void** vtable;
     uint32_t objectIndex;
-    uint16_t flags;
-    uint16_t pad_0A;
+    uint16_t type;
+    uint16_t refCount;
     uint32_t unk_0C;
     CMapChunk* prev;
     CMapChunk* next;
 
-    int32_t TSExplicitList__m_linkoffset_18;
-    void* TSExplicitList__ptr1_1C;
-    void* TSExplicitList__ptr2_20;
+    TSExplicitList_CMapChunkLink linkList;
 
     C2iVector aIndex;
     C2iVector sOffset;
@@ -109,15 +166,8 @@ struct CMapChunk
     int32_t unk_BC;
     int32_t unk_C0;
     
-    // CMapDoodadDef
-    int32_t TSExplicitList__m_linkoffset_C4;
-    void* TSExplicitList__ptr_C8;
-    void* TSExplicitList__ptr2_CC;
-    
-    // CMapObjDef
-    int32_t TSExplicitList__m_linkoffset_D0;
-    void* TSExplicitList__ptr_D4;
-    void* TSExplicitList__ptr2_D8;
+    TSExplicitList_CMapChunkDoodadDefLink doodadDefLinkList;
+    TSExplicitList_CMapChunkMapObjDefLink mapObjDefLinkList;    
     
     int32_t TSExplicitList__m_linkoffset_DC;
     void* TSExplicitList__ptr_E0;
@@ -134,9 +184,7 @@ struct CMapChunk
     void* TSExplicitList__ptr2_FC;
 
     // CChunkLiquid
-    int32_t TSExplicitList__m_linkoffset_100;
-    void* TSExplicitList__ptr_104;
-    void* TSExplicitList__ptr2_108;
+    TSExplicitList_CChunkLiquid liquidChunkLinkList;
 
     uint8_t* chunkInfoBeginPtr;
     SMChunk* header;

@@ -3,11 +3,14 @@
 
 #include "tempest/box.h"
 #include "async/object.h"
-#include "WMOchunks.h"
+#include "map/WMOchunks.h"
 #include "tempest/vector.h"
+#include "storm/list.h"
 
 DECLARE_STRUCT(CMapObj);
 DECLARE_STRUCT(CMapObjGroup);
+
+STORM_TS_LIST(CMapObjGroup);
 
 struct CMapObjGroup;
 
@@ -66,9 +69,7 @@ struct CMapObj
     CAsyncObject* asyncObject;
     int32_t isGroupLoaded;
     int32_t unk_1E4;
-    int32_t TSExplicitList__m_linkOffset;
-    void* TSExplicitList__ptr1;
-    void* TSExplicitList__ptr2;
+    TSExplicitList_CMapObjGroup mapObjGroupList;
     int32_t mapObjGroupCount;
     CMapObjGroup* mapObjGroupArray[512];
 };

@@ -657,6 +657,66 @@
       "name": "TSExplicitList_CShaderEffect"
     },
     {
+      "type": "TSList_CMapBaseObjLink",
+      "name": "TSExplicitList_CMapBaseObjLink"
+    },
+    {
+      "type": "TSList_CMapDoodadDefMapChunkLink",
+      "name": "TSExplicitList_CMapDoodadDefMapChunkLink"
+    },
+    {
+      "type": "TSList_CMapObjDefMapChunkLink",
+      "name": "TSExplicitList_CMapObjDefMapChunkLink"
+    },
+    {
+      "type": "TSList_CMapObjDefMapObjDefGroupLink",
+      "name": "TSExplicitList_CMapObjDefMapObjDefGroupLink"
+    },
+    {
+      "type": "TSList_CMapObjDefGroupMapObjDefLink",
+      "name": "TSExplicitList_CMapObjDefGroupMapObjDefLink"
+    },
+    {
+      "type": "TSList_CMapObjDefGroupDoodadDefLink",
+      "name": "TSExplicitList_CMapObjDefGroupDoodadDefLink"
+    },
+    {
+      "type": "TSList_CMapAreaLink",
+      "name": "TSExplicitList_CMapAreaLink"
+    },
+    {
+      "type": "TSList_CMapAreaChunkLink",
+      "name": "TSExplicitList_CMapAreaChunkLink"
+    },
+    {
+      "type": "TSList_CMapChunkLink",
+      "name": "TSExplicitList_CMapChunkLink"
+    },
+    {
+      "type": "TSList_CMapChunkDoodadDefLink",
+      "name": "TSExplicitList_CMapChunkDoodadDefLink"
+    },
+    {
+      "type": "TSList_CMapChunkMapObjDefLink",
+      "name": "TSExplicitList_CMapChunkMapObjDefLink"
+    },
+    {
+      "type": "TSList_CChunkLiquid",
+      "name": "TSExplicitList_CChunkLiquid"
+    },
+    {
+      "type": "TSList_CMapObjGroup",
+      "name": "TSExplicitList_CMapObjGroup"
+    },
+    {
+      "type": "TSList_CMapStaticEntityMapChunkLink",
+      "name": "TSExplicitList_CMapStaticEntityMapChunkLink"
+    },
+    {
+      "type": "TSList_CMapEntityMapChunkLink",
+      "name": "TSExplicitList_CMapEntityMapChunkLink"
+    },
+    {
       "type": "TSList_CILayer",
       "name": "TSExplicitList_CILayer"
     },
@@ -8557,6 +8617,58 @@
           "type": "char*",
           "name": "errorstr",
           "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "CMapAreaTexture",
+      "size": 8,
+      "members": [
+        {
+          "type": "char*",
+          "name": "textureName",
+          "offset": 0
+        },
+        {
+          "type": "CTexture*",
+          "name": "texture",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "CMapRenderChunkLayer",
+      "size": 20,
+      "members": [
+        {
+          "type": "int16_t",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "int16_t",
+          "name": "layerIndex",
+          "offset": 2
+        },
+        {
+          "type": "CTexture*",
+          "name": "texture",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "unkIndex",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "unkValue",
+          "offset": 12
+        },
+        {
+          "type": "CMapRenderChunk*",
+          "name": "owner",
+          "offset": 16
         }
       ]
     },
@@ -23238,6 +23350,364 @@
       "size": 0
     },
     {
+      "name": "SLTiles",
+      "size": 64,
+      "members": [
+        {
+          "type": "char",
+          "name": "tiles",
+          "arrsize": 64,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "SMLayer",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "textureId",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "offsetInMCAL",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "offectId",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "SMMapHeader",
+      "size": 64,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "mcin",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "mtex",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "mmdx",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "mmid",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "mwmo",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "mwid",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "mddf",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "modf",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "mfbo",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "mh2o",
+          "offset": 40
+        },
+        {
+          "type": "uint32_t",
+          "name": "mtxf",
+          "offset": 44
+        },
+        {
+          "type": "uint8_t",
+          "name": "mamp_value",
+          "offset": 48
+        },
+        {
+          "type": "uint8_t",
+          "name": "padding",
+          "arrsize": 3,
+          "offset": 49
+        },
+        {
+          "type": "uint32_t",
+          "name": "unused",
+          "arrsize": 3,
+          "offset": 52
+        }
+      ]
+    },
+    {
+      "name": "SMOBatch",
+      "size": 24,
+      "members": [
+        {
+          "type": "int8_t",
+          "name": "unused",
+          "arrsize": 12,
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "indexStart",
+          "offset": 12
+        },
+        {
+          "type": "uint16_t",
+          "name": "indexCount",
+          "offset": 16
+        },
+        {
+          "type": "uint16_t",
+          "name": "vertexStart",
+          "offset": 18
+        },
+        {
+          "type": "uint16_t",
+          "name": "vertexEnd",
+          "offset": 20
+        },
+        {
+          "type": "uint8_t",
+          "name": "flags",
+          "offset": 22
+        },
+        {
+          "type": "uint8_t",
+          "name": "texture",
+          "offset": 23
+        }
+      ]
+    },
+    {
+      "name": "SMODoodadSet",
+      "size": 32,
+      "members": [
+        {
+          "type": "char",
+          "name": "name",
+          "arrsize": 20,
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "startIdx",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "count",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "pad",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "SMOLTile",
+      "size": 1,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "flags",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "SMOMVert",
+      "size": 8,
+      "members": [
+        {
+          "type": "int16_t",
+          "name": "s",
+          "offset": 0
+        },
+        {
+          "type": "int16_t",
+          "name": "t",
+          "offset": 2
+        },
+        {
+          "type": "float",
+          "name": "height",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "SMOPoly",
+      "size": 2,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "materialId",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "name": "SMOPortalRef",
+      "size": 8,
+      "members": [
+        {
+          "type": "uint16_t",
+          "name": "portalIndex",
+          "offset": 0
+        },
+        {
+          "type": "uint16_t",
+          "name": "groupIndex",
+          "offset": 2
+        },
+        {
+          "type": "int16_t",
+          "name": "side",
+          "offset": 4
+        },
+        {
+          "type": "uint16_t",
+          "name": "filler",
+          "offset": 6
+        }
+      ]
+    },
+    {
+      "name": "SMOVisibleBlock",
+      "size": 4,
+      "members": [
+        {
+          "type": "uint16_t",
+          "name": "firstVertex",
+          "offset": 0
+        },
+        {
+          "type": "uint16_t",
+          "name": "count",
+          "offset": 2
+        }
+      ]
+    },
+    {
+      "name": "SMOWVert",
+      "size": 8,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "flow1",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "flow2",
+          "offset": 1
+        },
+        {
+          "type": "uint8_t",
+          "name": "flow1Pct",
+          "offset": 2
+        },
+        {
+          "type": "uint8_t",
+          "name": "filler",
+          "offset": 3
+        },
+        {
+          "type": "float",
+          "name": "height",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "SMVert",
+      "size": 8,
+      "members": [
+        {
+          "type": "uint16_t",
+          "name": "s",
+          "offset": 0
+        },
+        {
+          "type": "uint16_t",
+          "name": "t",
+          "offset": 2
+        },
+        {
+          "type": "float",
+          "name": "height",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "SOVert",
+      "size": 4,
+      "members": [
+        {
+          "type": "char",
+          "name": "depth",
+          "offset": 0
+        },
+        {
+          "type": "char",
+          "name": "foam",
+          "offset": 1
+        },
+        {
+          "type": "char",
+          "name": "wet",
+          "offset": 2
+        },
+        {
+          "type": "char",
+          "name": "filler",
+          "offset": 3
+        }
+      ]
+    },
+    {
       "name": "SSyncObject",
       "size": 4,
       "members": [
@@ -23306,6 +23776,37 @@
           "type": "int32_t",
           "name": "opt28",
           "offset": 40
+        }
+      ]
+    },
+    {
+      "name": "SWVert",
+      "size": 8,
+      "members": [
+        {
+          "type": "char",
+          "name": "depth",
+          "offset": 0
+        },
+        {
+          "type": "char",
+          "name": "flow0Pct",
+          "offset": 1
+        },
+        {
+          "type": "char",
+          "name": "flow1Pct",
+          "offset": 2
+        },
+        {
+          "type": "char",
+          "name": "filler",
+          "offset": 3
+        },
+        {
+          "type": "float",
+          "name": "height",
+          "offset": 4
         }
       ]
     },
@@ -27173,6 +27674,32 @@
       ]
     },
     {
+      "name": "TSGrowableArray_CDetailDoodadGeomVertex",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "CDetailDoodadGeomVertex*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_CGxDeviceD3d__GxVertexDecl",
       "size": 16,
       "members": [
@@ -27266,6 +27793,58 @@
         },
         {
           "type": "CImVector*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_CMapAreaTexture",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "CMapAreaTexture*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_CMapObjDefGroup",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "CMapObjDefGroup*",
           "name": "m_data",
           "offset": 8
         },
@@ -28043,6 +28622,22 @@
       ]
     },
     {
+      "name": "TSLink_CChunkLiquid",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CChunkLiquid*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CChunkLiquid*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSLink_CGxBuf",
       "size": 8,
       "members": [
@@ -28229,6 +28824,230 @@
         },
         {
           "type": "CMDDEF*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapAreaChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapAreaChunkLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapAreaChunkLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapAreaLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapAreaLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapAreaLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapBaseObjLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapBaseObjLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapBaseObjLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapChunkDoodadDefLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapChunkDoodadDefLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapChunkDoodadDefLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapChunkLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapChunkLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapChunkMapObjDefLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapChunkMapObjDefLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapChunkMapObjDefLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapDoodadDefMapChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapDoodadDefMapChunkLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapDoodadDefMapChunkLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapEntityMapChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapEntityMapChunkLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapEntityMapChunkLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapObjDefGroupDoodadDefLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapObjDefGroupDoodadDefLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapObjDefGroupDoodadDefLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapObjDefGroupMapObjDefLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapObjDefGroupMapObjDefLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapObjDefGroupMapObjDefLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapObjDefMapChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapObjDefMapChunkLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapObjDefMapChunkLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapObjDefMapObjDefGroupLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapObjDefMapObjDefGroupLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapObjDefMapObjDefGroupLink*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapObjGroup",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapObjGroup*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapObjGroup*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CMapStaticEntityMapChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapStaticEntityMapChunkLink*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CMapStaticEntityMapChunkLink*",
           "name": "m_next",
           "offset": 4
         }
@@ -31131,6 +31950,373 @@
       ]
     },
     {
+      "name": "SMDoodadDef",
+      "size": 36,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "nameId",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "uniqueId",
+          "offset": 4
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 8
+        },
+        {
+          "type": "C3Vector",
+          "name": "rotation",
+          "offset": 20
+        },
+        {
+          "type": "uint16_t",
+          "name": "scale",
+          "offset": 32
+        },
+        {
+          "type": "uint16_t",
+          "name": "flags",
+          "offset": 34
+        }
+      ]
+    },
+    {
+      "name": "SMChunk",
+      "size": 128,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "C2iVector",
+          "name": "index",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "nLayers",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "nDoodadRefs",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "ofsHeight",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "ofsNormal",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "ofsLayer",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "ofsRefs",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "ofsAlpha",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "sizeAlpha",
+          "offset": 40
+        },
+        {
+          "type": "uint32_t",
+          "name": "ofsShadow",
+          "offset": 44
+        },
+        {
+          "type": "uint32_t",
+          "name": "sizeShadow",
+          "offset": 48
+        },
+        {
+          "type": "uint32_t",
+          "name": "areaid",
+          "offset": 52
+        },
+        {
+          "type": "uint32_t",
+          "name": "nMapObjRefs",
+          "offset": 56
+        },
+        {
+          "type": "uint32_t",
+          "name": "holes",
+          "offset": 60
+        },
+        {
+          "type": "uint8_t",
+          "name": "low_quality_texture_map",
+          "arrsize": 16,
+          "offset": 64
+        },
+        {
+          "type": "uint32_t",
+          "name": "predTex",
+          "offset": 80
+        },
+        {
+          "type": "uint32_t",
+          "name": "nEffectDoodad",
+          "offset": 84
+        },
+        {
+          "type": "uint32_t",
+          "name": "ofsSndEmitters",
+          "offset": 88
+        },
+        {
+          "type": "uint32_t",
+          "name": "nSndEmitters",
+          "offset": 92
+        },
+        {
+          "type": "uint32_t",
+          "name": "ofsLiquid",
+          "offset": 96
+        },
+        {
+          "type": "uint32_t",
+          "name": "sizeLiquid",
+          "offset": 100
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 104
+        },
+        {
+          "type": "uint32_t",
+          "name": "ofsMCCV",
+          "offset": 116
+        },
+        {
+          "type": "uint32_t",
+          "name": "unused1",
+          "offset": 120
+        },
+        {
+          "type": "uint32_t",
+          "name": "unused2",
+          "offset": 124
+        }
+      ]
+    },
+    {
+      "name": "CWSoundEmitter",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "entry_id",
+          "offset": 0
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 4
+        },
+        {
+          "type": "C3Vector",
+          "name": "size",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "CChunkLiquid",
+      "size": 1092,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_004",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_008",
+          "offset": 8
+        },
+        {
+          "type": "C3Vector",
+          "name": "topLeftCoords",
+          "offset": 12
+        },
+        {
+          "type": "C3Vector",
+          "name": "center",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "radius",
+          "offset": 36
+        },
+        {
+          "type": "C2Vector",
+          "name": "height",
+          "offset": 40
+        },
+        {
+          "type": "float",
+          "name": "resPurgeTimer",
+          "offset": 48
+        },
+        {
+          "type": "C2iVector",
+          "name": "tileBegin",
+          "offset": 52
+        },
+        {
+          "type": "C2iVector",
+          "name": "tileEnd",
+          "offset": 60
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_044",
+          "offset": 68
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_048",
+          "offset": 72
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_04C",
+          "offset": 76
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_050",
+          "offset": 80
+        },
+        {
+          "type": "uint8_t*",
+          "name": "tiles",
+          "offset": 84
+        },
+        {
+          "type": "uint8_t*",
+          "name": "liquidInstPtr",
+          "offset": 88
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "owner",
+          "offset": 92
+        },
+        {
+          "type": "CChunkLiquid*",
+          "name": "prev",
+          "offset": 96
+        },
+        {
+          "type": "CChunkLiquid*",
+          "name": "next",
+          "offset": 100
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_068",
+          "offset": 104
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_06C",
+          "offset": 108
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_070",
+          "offset": 112
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_074",
+          "offset": 116
+        },
+        {
+          "type": "C3Vector",
+          "name": "verts",
+          "arrsize": 81,
+          "offset": 120
+        }
+      ]
+    },
+    {
+      "name": "CDetailDoodadGeomVertex",
+      "size": 44,
+      "members": [
+        {
+          "type": "uint16_t",
+          "name": "unk_00",
+          "offset": 0
+        },
+        {
+          "type": "uint16_t",
+          "name": "unk_02",
+          "offset": 2
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_04",
+          "offset": 4
+        },
+        {
+          "type": "C3Vector",
+          "name": "pos",
+          "offset": 8
+        },
+        {
+          "type": "float",
+          "name": "angle",
+          "offset": 20
+        },
+        {
+          "type": "float",
+          "name": "scale",
+          "offset": 24
+        },
+        {
+          "type": "C3Vector",
+          "name": "unkVec",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "color",
+          "offset": 40
+        }
+      ]
+    },
+    {
       "name": "CGxMatrixStack",
       "size": 280,
       "members": [
@@ -31633,6 +32819,217 @@
       ]
     },
     {
+      "name": "SMOLight",
+      "size": 48,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "type",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "atten",
+          "offset": 1
+        },
+        {
+          "type": "uint8_t",
+          "name": "pad",
+          "arrsize": 2,
+          "offset": 2
+        },
+        {
+          "type": "CImVector",
+          "name": "color",
+          "offset": 4
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 8
+        },
+        {
+          "type": "float",
+          "name": "intensity",
+          "offset": 20
+        },
+        {
+          "type": "C4Quaternion",
+          "name": "rotation",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "attenStart",
+          "offset": 40
+        },
+        {
+          "type": "float",
+          "name": "attenEnd",
+          "offset": 44
+        }
+      ]
+    },
+    {
+      "name": "SMODoodadDef",
+      "size": 40,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 4
+        },
+        {
+          "type": "C4Quaternion",
+          "name": "orientation",
+          "offset": 16
+        },
+        {
+          "type": "float",
+          "name": "scale",
+          "offset": 32
+        },
+        {
+          "type": "CImVector",
+          "name": "color",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "SMOFog",
+      "size": 48,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "smallerRadius",
+          "offset": 16
+        },
+        {
+          "type": "float",
+          "name": "largerRadius",
+          "offset": 20
+        },
+        {
+          "type": "float",
+          "name": "fogEnd",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "fogStartScalar",
+          "offset": 28
+        },
+        {
+          "type": "CImVector",
+          "name": "fogColor",
+          "offset": 32
+        },
+        {
+          "type": "float",
+          "name": "uwFogEnd",
+          "offset": 36
+        },
+        {
+          "type": "float",
+          "name": "uwFogStartScalar",
+          "offset": 40
+        },
+        {
+          "type": "CImVector",
+          "name": "uwFogColor",
+          "offset": 44
+        }
+      ]
+    },
+    {
+      "name": "SMOMaterial",
+      "size": 64,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "shader",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "blendMode",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "texture1",
+          "offset": 12
+        },
+        {
+          "type": "CImVector",
+          "name": "sidnColor",
+          "offset": 16
+        },
+        {
+          "type": "CImVector",
+          "name": "frameSidnColor",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "texture2",
+          "offset": 24
+        },
+        {
+          "type": "CImVector",
+          "name": "diffColor",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "groundType",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "texture3",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "color2",
+          "offset": 40
+        },
+        {
+          "type": "uint32_t",
+          "name": "flags2",
+          "offset": 44
+        },
+        {
+          "type": "uint32_t",
+          "name": "runTimeData",
+          "arrsize": 4,
+          "offset": 48
+        }
+      ]
+    },
+    {
       "name": "ARGLIST",
       "size": 16,
       "members": [
@@ -31696,6 +33093,123 @@
           "type": "CMDPARAMS__0024",
           "name": "",
           "offset": 24
+        }
+      ]
+    },
+    {
+      "name": "CMapRenderChunk",
+      "size": 168,
+      "members": [
+        {
+          "type": "CMapRenderChunk*",
+          "name": "renderChunkPtr1",
+          "offset": 0
+        },
+        {
+          "type": "CMapRenderChunk*",
+          "name": "renderChunkPtr2",
+          "offset": 4
+        },
+        {
+          "type": "uint8_t",
+          "name": "unkFlags",
+          "offset": 8
+        },
+        {
+          "type": "uint8_t",
+          "name": "layersCount",
+          "offset": 9
+        },
+        {
+          "type": "int16_t",
+          "name": "unk_0A",
+          "offset": 10
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0C",
+          "offset": 12
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "mapChunkPtr1",
+          "offset": 16
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "mapChunkPtr2",
+          "offset": 20
+        },
+        {
+          "type": "C3Vector",
+          "name": "vec1",
+          "offset": 24
+        },
+        {
+          "type": "C3Vector",
+          "name": "vec2",
+          "offset": 36
+        },
+        {
+          "type": "float",
+          "name": "radius",
+          "offset": 48
+        },
+        {
+          "type": "CMapRenderChunkLayer",
+          "name": "layers",
+          "arrsize": 4,
+          "offset": 52
+        },
+        {
+          "type": "CTexture*",
+          "name": "terrainBlendTexture",
+          "offset": 132
+        },
+        {
+          "type": "CTexture*",
+          "name": "shadowTexture",
+          "offset": 136
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "vertexBuf",
+          "offset": 140
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "indicesBuf",
+          "offset": 144
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_94",
+          "offset": 148
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_98",
+          "offset": 152
+        },
+        {
+          "type": "int16_t",
+          "name": "unk_9C",
+          "offset": 156
+        },
+        {
+          "type": "int16_t",
+          "name": "unk_9E",
+          "offset": 158
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_A0",
+          "offset": 160
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_A4",
+          "offset": 164
         }
       ]
     },
@@ -33718,6 +35232,32 @@
       ]
     },
     {
+      "name": "SMChunkInfo",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "offset",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "size",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 8
+        },
+        {
+          "type": "SMChunkInfo__0012",
+          "name": "",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "SEvent",
       "size": 4,
       "members": [
@@ -33810,6 +35350,42 @@
           "type": "TSFixedArray_pointer_to_CFrameStrataNode",
           "name": "levels",
           "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "CDetailDoodadGeom",
+      "size": 36,
+      "members": [
+        {
+          "type": "CTexture*",
+          "name": "texture",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "unkVertexCount",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "unkIndexCount",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "unkVertBufStream",
+          "offset": 12
+        },
+        {
+          "type": "void*",
+          "name": "unkIdxBufStream",
+          "offset": 16
+        },
+        {
+          "type": "TSGrowableArray_CDetailDoodadGeomVertex",
+          "name": "data",
+          "offset": 20
         }
       ]
     },
@@ -34724,6 +36300,17 @@
       ]
     },
     {
+      "name": "TSLinkedNode_CChunkLiquid",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CChunkLiquid",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "TSLinkedNode_CGxBuf",
       "size": 8,
       "members": [
@@ -35105,6 +36692,563 @@
       "members": [
         {
           "type": "TSLink_CMDDEF",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapAreaChunkLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "CMapArea*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapAreaChunkLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapAreaChunkLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapAreaChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapAreaChunkLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapAreaLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapArea*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapAreaLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapAreaLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapAreaLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapAreaLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapBaseObjLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapBaseObj*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "CMapBaseObj*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapBaseObjLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapBaseObjLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapBaseObjLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapBaseObjLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapChunkDoodadDefLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapDoodadDef*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapChunkDoodadDefLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapChunkDoodadDefLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapChunkDoodadDefLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapChunkDoodadDefLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapChunkLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "CMapArea*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapChunkLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapChunkLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapChunkLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapChunkMapObjDefLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapObjDef*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapChunkMapObjDefLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapChunkMapObjDefLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapChunkMapObjDefLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapChunkMapObjDefLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapDoodadDefMapChunkLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapDoodadDef*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "CMapBaseObj*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapDoodadDefMapChunkLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapDoodadDefMapChunkLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapDoodadDefMapChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapDoodadDefMapChunkLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapEntityMapChunkLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapEntity*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapEntityMapChunkLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapEntityMapChunkLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapEntityMapChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapEntityMapChunkLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapObjDefGroupDoodadDefLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapDoodadDef*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "CMapObjDef*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapObjDefGroupDoodadDefLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapObjDefGroupDoodadDefLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapObjDefGroupDoodadDefLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapObjDefGroupDoodadDefLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapObjDefGroupMapObjDefLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapObjDefGroup*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "CMapObjDef*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapObjDefGroupMapObjDefLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapObjDefGroupMapObjDefLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapObjDefGroupMapObjDefLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapObjDefGroupMapObjDefLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapObjDefMapChunkLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapObjDef*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapObjDefMapChunkLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapObjDefMapChunkLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapObjDefMapChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapObjDefMapChunkLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapObjDefMapObjDefGroupLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapObjDefGroup*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "CMapObjDef*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapObjDefMapObjDefGroupLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapObjDefMapObjDefGroupLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapObjDefMapObjDefGroupLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapObjDefMapObjDefGroupLink",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapObjGroup",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapObjGroup",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CMapStaticEntityMapChunkLink",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CMapStaticEntity*",
+          "name": "owner",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "ref",
+          "offset": 8
+        },
+        {
+          "type": "TSLink_CMapStaticEntityMapChunkLink",
+          "name": "refLink",
+          "offset": 12
+        },
+        {
+          "type": "TSLink_CMapStaticEntityMapChunkLink",
+          "name": "ownerLink",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CMapStaticEntityMapChunkLink",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CMapStaticEntityMapChunkLink",
           "name": "m_link",
           "offset": 0
         }
@@ -39396,6 +41540,246 @@
       ]
     },
     {
+      "name": "TSList_CMapBaseObjLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapBaseObjLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapDoodadDefMapChunkLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapDoodadDefMapChunkLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapObjDefMapChunkLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapObjDefMapChunkLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapObjDefMapObjDefGroupLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapObjDefMapObjDefGroupLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapObjDefGroupMapObjDefLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapObjDefGroupMapObjDefLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapObjDefGroupDoodadDefLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapObjDefGroupDoodadDefLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapAreaLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapAreaLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapAreaChunkLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapAreaChunkLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapChunkLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapChunkLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapChunkDoodadDefLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapChunkDoodadDefLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapChunkMapObjDefLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapChunkMapObjDefLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CChunkLiquid",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CChunkLiquid",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapObjGroup",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapObjGroup",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapStaticEntityMapChunkLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapStaticEntityMapChunkLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CMapEntityMapChunkLink",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CMapEntityMapChunkLink",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSList_CILayer",
       "size": 12,
       "members": [
@@ -39759,6 +42143,27 @@
       ]
     },
     {
+      "name": "SMOPortal",
+      "size": 20,
+      "members": [
+        {
+          "type": "uint16_t",
+          "name": "startVertex",
+          "offset": 0
+        },
+        {
+          "type": "uint16_t",
+          "name": "count",
+          "offset": 2
+        },
+        {
+          "type": "C4Plane",
+          "name": "plane",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "CM2Shared",
       "size": 424,
       "members": [
@@ -39967,6 +42372,645 @@
       ]
     },
     {
+      "name": "SMMapObjDef",
+      "size": 64,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "nameId",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "uniqueId",
+          "offset": 4
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 8
+        },
+        {
+          "type": "C3Vector",
+          "name": "rotation",
+          "offset": 20
+        },
+        {
+          "type": "CAaBox",
+          "name": "extents",
+          "offset": 32
+        },
+        {
+          "type": "uint16_t",
+          "name": "flags",
+          "offset": 56
+        },
+        {
+          "type": "uint16_t",
+          "name": "doodadSet",
+          "offset": 58
+        },
+        {
+          "type": "uint16_t",
+          "name": "nameSet",
+          "offset": 60
+        },
+        {
+          "type": "uint16_t",
+          "name": "scale",
+          "offset": 62
+        }
+      ]
+    },
+    {
+      "name": "SMOHeader",
+      "size": 64,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "nTextures",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "nGroups",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "nPortals",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "nLights",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "nDoodadNames",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "nDoodadDefs",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "nDoodadSets",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "ambColor",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "wmoID",
+          "offset": 32
+        },
+        {
+          "type": "CAaBox",
+          "name": "bounding_box",
+          "offset": 36
+        },
+        {
+          "type": "uint16_t",
+          "name": "flags",
+          "offset": 60
+        },
+        {
+          "type": "uint16_t",
+          "name": "numLod",
+          "offset": 62
+        }
+      ]
+    },
+    {
+      "name": "SMOGroupInfo",
+      "size": 32,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "nameOffset",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "CMapObjGroup",
+      "size": 444,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_04",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_08",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0C",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_10",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_14",
+          "offset": 20
+        },
+        {
+          "type": "float",
+          "name": "timer",
+          "offset": 24
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_1C",
+          "offset": 28
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_20",
+          "offset": 32
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_24",
+          "offset": 36
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_28",
+          "offset": 40
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_2C",
+          "offset": 44
+        },
+        {
+          "type": "int32_t",
+          "name": "flags",
+          "offset": 48
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 52
+        },
+        {
+          "type": "float",
+          "name": "distToCamera",
+          "offset": 76
+        },
+        {
+          "type": "int32_t",
+          "name": "portalStart",
+          "offset": 80
+        },
+        {
+          "type": "int32_t",
+          "name": "portalCount",
+          "offset": 84
+        },
+        {
+          "type": "int32_t",
+          "name": "fogs",
+          "offset": 88
+        },
+        {
+          "type": "uint16_t",
+          "name": "transparencyBatchesCount",
+          "offset": 92
+        },
+        {
+          "type": "uint16_t",
+          "name": "intBatchCount",
+          "offset": 94
+        },
+        {
+          "type": "int32_t",
+          "name": "extBatchCount",
+          "offset": 96
+        },
+        {
+          "type": "void*",
+          "name": "CAaBspNodePtr1",
+          "offset": 100
+        },
+        {
+          "type": "void*",
+          "name": "CAaBspNodePtr2",
+          "offset": 104
+        },
+        {
+          "type": "uint16_t*",
+          "name": "nodeFaceIndices",
+          "offset": 108
+        },
+        {
+          "type": "int32_t",
+          "name": "bspNodesCount",
+          "offset": 112
+        },
+        {
+          "type": "int32_t",
+          "name": "nodeFaceIndicesCount",
+          "offset": 116
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_7C",
+          "offset": 120
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_80",
+          "offset": 124
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_84",
+          "offset": 128
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_88",
+          "offset": 132
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_8C",
+          "offset": 136
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_90",
+          "offset": 140
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_94",
+          "offset": 144
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_98",
+          "offset": 148
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_9C",
+          "offset": 152
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_A0",
+          "offset": 156
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_A4",
+          "offset": 160
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_A8",
+          "offset": 164
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_AC",
+          "offset": 168
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_B0",
+          "offset": 172
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox2",
+          "offset": 176
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_CC",
+          "offset": 200
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags",
+          "offset": 204
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_D4",
+          "offset": 208
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_D8",
+          "offset": 212
+        },
+        {
+          "type": "char*",
+          "name": "groupName",
+          "offset": 216
+        },
+        {
+          "type": "SMOPoly*",
+          "name": "polyList",
+          "offset": 220
+        },
+        {
+          "type": "uint16_t*",
+          "name": "indices",
+          "offset": 224
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_E8",
+          "offset": 228
+        },
+        {
+          "type": "C3Vector*",
+          "name": "vertexList",
+          "offset": 232
+        },
+        {
+          "type": "C3Vector*",
+          "name": "normalList",
+          "offset": 236
+        },
+        {
+          "type": "C2Vector*",
+          "name": "textureVertexList",
+          "offset": 240
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_F8",
+          "offset": 244
+        },
+        {
+          "type": "SMOBatch*",
+          "name": "batchList",
+          "offset": 248
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_100",
+          "offset": 252
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_104",
+          "offset": 256
+        },
+        {
+          "type": "uint16_t*",
+          "name": "doodadRefList",
+          "offset": 260
+        },
+        {
+          "type": "CImVector*",
+          "name": "colorVertexList",
+          "offset": 264
+        },
+        {
+          "type": "CImVector*",
+          "name": "colorVertexListExtra",
+          "offset": 268
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_114",
+          "offset": 272
+        },
+        {
+          "type": "C2iVector",
+          "name": "liquidVerts",
+          "offset": 276
+        },
+        {
+          "type": "C2iVector",
+          "name": "liquidTiles",
+          "offset": 284
+        },
+        {
+          "type": "C3Vector",
+          "name": "liquidCorner",
+          "offset": 292
+        },
+        {
+          "type": "int32_t",
+          "name": "luquidMaterialId",
+          "offset": 304
+        },
+        {
+          "type": "SMOLiquidVert*",
+          "name": "liquidVertexList",
+          "offset": 308
+        },
+        {
+          "type": "SMOLTile*",
+          "name": "liquidTileList",
+          "offset": 312
+        },
+        {
+          "type": "float",
+          "name": "liquidHeight",
+          "offset": 316
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_144",
+          "offset": 320
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_148",
+          "offset": 324
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlag",
+          "offset": 328
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_150",
+          "offset": 332
+        },
+        {
+          "type": "int32_t",
+          "name": "polyListSize",
+          "offset": 336
+        },
+        {
+          "type": "int32_t",
+          "name": "indicesCount",
+          "offset": 340
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_15C",
+          "offset": 344
+        },
+        {
+          "type": "int32_t",
+          "name": "vertexListCount",
+          "offset": 348
+        },
+        {
+          "type": "int32_t",
+          "name": "normalListCount",
+          "offset": 352
+        },
+        {
+          "type": "int32_t",
+          "name": "textureVertexListCount",
+          "offset": 356
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_16C",
+          "offset": 360
+        },
+        {
+          "type": "int32_t",
+          "name": "batchListCount",
+          "offset": 364
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_174",
+          "offset": 368
+        },
+        {
+          "type": "int32_t",
+          "name": "doodadRefListCount",
+          "offset": 372
+        },
+        {
+          "type": "int32_t",
+          "name": "colorVertexListSize",
+          "offset": 376
+        },
+        {
+          "type": "int32_t",
+          "name": "colorVertexListExtraSize",
+          "offset": 380
+        },
+        {
+          "type": "int32_t",
+          "name": "wmoGroupId",
+          "offset": 384
+        },
+        {
+          "type": "void*",
+          "name": "filePtr",
+          "offset": 388
+        },
+        {
+          "type": "int32_t",
+          "name": "fileSize",
+          "offset": 392
+        },
+        {
+          "type": "CMapObj*",
+          "name": "parent",
+          "offset": 396
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_194",
+          "offset": 400
+        },
+        {
+          "type": "CAsyncObject*",
+          "name": "asyncObjPtr",
+          "offset": 404
+        },
+        {
+          "type": "int32_t",
+          "name": "unkLoadedFlag",
+          "offset": 408
+        },
+        {
+          "type": "int32_t",
+          "name": "unkIndexMin1",
+          "offset": 412
+        },
+        {
+          "type": "int32_t",
+          "name": "unkIndexMax1",
+          "offset": 416
+        },
+        {
+          "type": "uint16_t",
+          "name": "unkIndexMin2",
+          "offset": 420
+        },
+        {
+          "type": "uint16_t",
+          "name": "unkIndexMax2",
+          "offset": 422
+        },
+        {
+          "type": "int32_t",
+          "name": "TSExplicitList__m_linkoffset",
+          "offset": 424
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__ptr",
+          "offset": 428
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__ptr2",
+          "offset": 432
+        },
+        {
+          "type": "CMapObjGroup*",
+          "name": "perv",
+          "offset": 436
+        },
+        {
+          "type": "CMapObjGroup*",
+          "name": "next",
+          "offset": 440
+        }
+      ]
+    },
+    {
       "name": "M2ModelColor",
       "size": 32,
       "members": [
@@ -40127,6 +43171,37 @@
           "type": "C4Plane",
           "name": "m_liquidPlane",
           "offset": 180
+        }
+      ]
+    },
+    {
+      "name": "SWFlowv",
+      "size": 40,
+      "members": [
+        {
+          "type": "CAaSphere",
+          "name": "sphere",
+          "offset": 0
+        },
+        {
+          "type": "C3Vector",
+          "name": "dir",
+          "offset": 16
+        },
+        {
+          "type": "float",
+          "name": "velocity",
+          "offset": 28
+        },
+        {
+          "type": "float",
+          "name": "amplitude",
+          "offset": 32
+        },
+        {
+          "type": "float",
+          "name": "frequency",
+          "offset": 36
         }
       ]
     },
@@ -40564,6 +43639,28 @@
       ]
     },
     {
+      "name": "SMOLiquidVert",
+      "size": 8,
+      "members": [
+        {
+          "type": "SMOLiquidVert__0000",
+          "name": "",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "SLVert",
+      "size": 8,
+      "members": [
+        {
+          "type": "SLVert__0000",
+          "name": "",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "TGAHeader",
       "size": 20,
       "members": [
@@ -40642,6 +43739,43 @@
           "type": "RCString",
           "name": "m_name",
           "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "CDetailDoodadInst",
+      "size": 164,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "CDetailDoodadGeom",
+          "name": "geom",
+          "arrsize": 4,
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "unkCounter",
+          "offset": 148
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "mapChunkOwner",
+          "offset": 152
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_09C",
+          "offset": 156
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0A0",
+          "offset": 160
         }
       ]
     },
@@ -47722,6 +50856,44 @@
       ]
     },
     {
+      "name": "SMLiquidChunk",
+      "size": 804,
+      "members": [
+        {
+          "type": "float",
+          "name": "minHeight",
+          "offset": 0
+        },
+        {
+          "type": "float",
+          "name": "maxHeight",
+          "offset": 4
+        },
+        {
+          "type": "SLVert",
+          "name": "verts",
+          "arrsize": 81,
+          "offset": 8
+        },
+        {
+          "type": "SLTiles",
+          "name": "tiles",
+          "offset": 656
+        },
+        {
+          "type": "uint32_t",
+          "name": "nFlowvs",
+          "offset": 720
+        },
+        {
+          "type": "SWFlowv",
+          "name": "flowvs",
+          "arrsize": 2,
+          "offset": 724
+        }
+      ]
+    },
+    {
       "name": "CTgaFile",
       "size": 68,
       "members": [
@@ -48620,6 +51792,1768 @@
           "type": "float",
           "name": "m_cursorDepth",
           "offset": 14692
+        }
+      ]
+    },
+    {
+      "name": "CMapBaseObj",
+      "size": 36,
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "objectIndex",
+          "offset": 4
+        },
+        {
+          "type": "uint16_t",
+          "name": "type",
+          "offset": 8
+        },
+        {
+          "type": "uint16_t",
+          "name": "refCount",
+          "offset": 10
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_C",
+          "offset": 12
+        },
+        {
+          "type": "CMapBaseObj*",
+          "name": "prev",
+          "offset": 16
+        },
+        {
+          "type": "CMapBaseObj*",
+          "name": "next",
+          "offset": 20
+        },
+        {
+          "type": "TSExplicitList_CMapBaseObjLink",
+          "name": "list",
+          "offset": 24
+        }
+      ]
+    },
+    {
+      "name": "CMapDoodadDef",
+      "size": 368,
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "objectIndex",
+          "offset": 4
+        },
+        {
+          "type": "uint16_t",
+          "name": "type",
+          "offset": 8
+        },
+        {
+          "type": "uint16_t",
+          "name": "refCount",
+          "offset": 10
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_C",
+          "offset": 12
+        },
+        {
+          "type": "CMapDoodadDef*",
+          "name": "prev",
+          "offset": 16
+        },
+        {
+          "type": "CMapDoodadDef*",
+          "name": "next",
+          "offset": 20
+        },
+        {
+          "type": "TSExplicitList_CMapDoodadDefMapChunkLink",
+          "name": "linkList",
+          "offset": 24
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_024",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "unkFlags_28",
+          "offset": 40
+        },
+        {
+          "type": "int32_t",
+          "name": "unkCounter",
+          "offset": 44
+        },
+        {
+          "type": "float",
+          "name": "unk_030",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "unk_m2Model_034",
+          "offset": 52
+        },
+        {
+          "type": "C3Vector",
+          "name": "vec1",
+          "offset": 56
+        },
+        {
+          "type": "float",
+          "name": "unk_044",
+          "offset": 68
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 72
+        },
+        {
+          "type": "C3Vector",
+          "name": "vec2",
+          "offset": 96
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 108
+        },
+        {
+          "type": "float",
+          "name": "scale",
+          "offset": 120
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_07C",
+          "offset": 124
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_080",
+          "offset": 128
+        },
+        {
+          "type": "CImVector",
+          "name": "m2AmbietColor",
+          "offset": 132
+        },
+        {
+          "type": "CImVector",
+          "name": "m2DiffuseColor",
+          "offset": 136
+        },
+        {
+          "type": "float",
+          "name": "unk_08C",
+          "offset": 140
+        },
+        {
+          "type": "uint32_t",
+          "name": "unkFlags_090",
+          "offset": 144
+        },
+        {
+          "type": "void*",
+          "name": "unk_094",
+          "offset": 148
+        },
+        {
+          "type": "void*",
+          "name": "unk_098",
+          "offset": 152
+        },
+        {
+          "type": "void*",
+          "name": "prevMapDoodadDef_09C",
+          "offset": 156
+        },
+        {
+          "type": "void*",
+          "name": "nextMapDoodadDef_0A0",
+          "offset": 160
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0A4",
+          "offset": 164
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0A8",
+          "offset": 168
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0AC",
+          "offset": 172
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0B0",
+          "offset": 176
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0B4",
+          "offset": 180
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0B8",
+          "offset": 184
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0BC",
+          "offset": 188
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 192
+        },
+        {
+          "type": "C44Matrix",
+          "name": "mat",
+          "offset": 216
+        },
+        {
+          "type": "C44Matrix",
+          "name": "identity",
+          "offset": 280
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_158",
+          "offset": 344
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_15C",
+          "offset": 348
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_160",
+          "offset": 352
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_164",
+          "offset": 356
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_168",
+          "offset": 360
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_16C",
+          "offset": 364
+        }
+      ]
+    },
+    {
+      "name": "CMapObjDef",
+      "size": 344,
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "objectIndex",
+          "offset": 4
+        },
+        {
+          "type": "uint16_t",
+          "name": "type",
+          "offset": 8
+        },
+        {
+          "type": "uint16_t",
+          "name": "refCount",
+          "offset": 10
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_C",
+          "offset": 12
+        },
+        {
+          "type": "CMapObjDef*",
+          "name": "prev",
+          "offset": 16
+        },
+        {
+          "type": "CMapObjDef*",
+          "name": "next",
+          "offset": 20
+        },
+        {
+          "type": "TSExplicitList_CMapObjDefMapChunkLink",
+          "name": "linkList",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "unk_24",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "unk_28",
+          "offset": 40
+        },
+        {
+          "type": "void*",
+          "name": "unk_2C",
+          "offset": 44
+        },
+        {
+          "type": "void*",
+          "name": "unk_30",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "unk_34",
+          "offset": 52
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_38",
+          "offset": 56
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 60
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 72
+        },
+        {
+          "type": "CAaSphere",
+          "name": "sphere",
+          "offset": 96
+        },
+        {
+          "type": "C44Matrix",
+          "name": "mat",
+          "offset": 112
+        },
+        {
+          "type": "C44Matrix",
+          "name": "invMat",
+          "offset": 176
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_F0",
+          "offset": 240
+        },
+        {
+          "type": "void*",
+          "name": "CMapObjPtr_owner",
+          "offset": 244
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_F8",
+          "offset": 248
+        },
+        {
+          "type": "uint32_t",
+          "name": "unkFlags",
+          "offset": 252
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_100",
+          "offset": 256
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_104",
+          "offset": 260
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_108",
+          "offset": 264
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_10C",
+          "offset": 268
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_110",
+          "offset": 272
+        },
+        {
+          "type": "TSExplicitList_CMapObjDefMapObjDefGroupLink",
+          "name": "mapObjDefGroupLinkList",
+          "offset": 276
+        },
+        {
+          "type": "TSGrowableArray_CMapObjDefGroup",
+          "name": "defGroups",
+          "offset": 288
+        },
+        {
+          "type": "void*",
+          "name": "unk_130",
+          "offset": 304
+        },
+        {
+          "type": "int32_t",
+          "name": "TSGrowableArray__m_alloc",
+          "offset": 308
+        },
+        {
+          "type": "int32_t",
+          "name": "TSGrowableArray__m_count",
+          "offset": 312
+        },
+        {
+          "type": "void*",
+          "name": "TSGrowableArray__m_data",
+          "offset": 316
+        },
+        {
+          "type": "int32_t",
+          "name": "TSGrowableArray__m_chunk",
+          "offset": 320
+        },
+        {
+          "type": "uint32_t",
+          "name": "argbColor",
+          "offset": 324
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_148",
+          "offset": 328
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_14C",
+          "offset": 332
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_150",
+          "offset": 336
+        },
+        {
+          "type": "void*",
+          "name": "unk_154",
+          "offset": 340
+        }
+      ]
+    },
+    {
+      "name": "CMapObjDefGroup",
+      "size": 192,
+      "members": [
+        {
+          "type": "void*",
+          "name": "vtable",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "objectIndex",
+          "offset": 4
+        },
+        {
+          "type": "uint16_t",
+          "name": "type",
+          "offset": 8
+        },
+        {
+          "type": "uint16_t",
+          "name": "refCount",
+          "offset": 10
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_C",
+          "offset": 12
+        },
+        {
+          "type": "CMapObjDefGroup*",
+          "name": "prev",
+          "offset": 16
+        },
+        {
+          "type": "CMapObjDefGroup*",
+          "name": "next",
+          "offset": 20
+        },
+        {
+          "type": "TSExplicitList_CMapObjDefGroupMapObjDefLink",
+          "name": "linkList",
+          "offset": 24
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 36
+        },
+        {
+          "type": "CAaSphere",
+          "name": "sphere",
+          "offset": 60
+        },
+        {
+          "type": "float",
+          "name": "unk_4C",
+          "offset": 76
+        },
+        {
+          "type": "uint32_t",
+          "name": "groupNum",
+          "offset": 80
+        },
+        {
+          "type": "uint32_t",
+          "name": "unkFlags",
+          "offset": 84
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_58",
+          "offset": 88
+        },
+        {
+          "type": "uint32_t",
+          "name": "ambientColor",
+          "offset": 92
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_60",
+          "offset": 96
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_64",
+          "offset": 100
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_68",
+          "offset": 104
+        },
+        {
+          "type": "int32_t",
+          "name": "TSExplicitList__m_linkoffset_unk_6C",
+          "offset": 108
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__m_ptr1_unk_70",
+          "offset": 112
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__m_ptr2_unk_74",
+          "offset": 116
+        },
+        {
+          "type": "TSExplicitList_CMapObjDefGroupDoodadDefLink",
+          "name": "doodadDefLinkList",
+          "offset": 120
+        },
+        {
+          "type": "int32_t",
+          "name": "TSExplicitList__m_linkoffset_unk_84",
+          "offset": 132
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__m_ptr1_unk_88",
+          "offset": 136
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__m_ptr2_unk_8C",
+          "offset": 140
+        },
+        {
+          "type": "int32_t",
+          "name": "TSExplicitList__m_linkoffset_unk_90",
+          "offset": 144
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__m_ptr1_unk_94",
+          "offset": 148
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__m_ptr2_unk_98",
+          "offset": 152
+        },
+        {
+          "type": "int32_t",
+          "name": "TSExplicitList__m_linkoffset_unk_9C",
+          "offset": 156
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__m_ptr1_unk_A0",
+          "offset": 160
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__m_ptr2_unk_A4",
+          "offset": 164
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_A8",
+          "offset": 168
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_AC",
+          "offset": 172
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_B0",
+          "offset": 176
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_B4",
+          "offset": 180
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_B8",
+          "offset": 184
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_BC",
+          "offset": 188
+        }
+      ]
+    },
+    {
+      "name": "CMapArea",
+      "size": 1212,
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 4
+        },
+        {
+          "type": "uint16_t",
+          "name": "type",
+          "offset": 8
+        },
+        {
+          "type": "uint16_t",
+          "name": "refCount",
+          "offset": 10
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_0C",
+          "offset": 12
+        },
+        {
+          "type": "CMapArea*",
+          "name": "perv",
+          "offset": 16
+        },
+        {
+          "type": "CMapArea*",
+          "name": "next",
+          "offset": 20
+        },
+        {
+          "type": "TSExplicitList_CMapAreaLink",
+          "name": "linkList",
+          "offset": 24
+        },
+        {
+          "type": "C3Vector",
+          "name": "bottomRight",
+          "offset": 36
+        },
+        {
+          "type": "C3Vector",
+          "name": "topLeft",
+          "offset": 48
+        },
+        {
+          "type": "C3Vector",
+          "name": "topLeft2",
+          "offset": 60
+        },
+        {
+          "type": "C2iVector",
+          "name": "index",
+          "offset": 72
+        },
+        {
+          "type": "C2iVector",
+          "name": "tileChunkIndex",
+          "offset": 80
+        },
+        {
+          "type": "TSGrowableArray_CMapAreaTexture",
+          "name": "textures",
+          "offset": 88
+        },
+        {
+          "type": "SMMapHeader*",
+          "name": "header",
+          "offset": 104
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_6C",
+          "offset": 108
+        },
+        {
+          "type": "CAsyncObject*",
+          "name": "asyncObject",
+          "offset": 112
+        },
+        {
+          "type": "TSExplicitList_CMapAreaChunkLink",
+          "name": "chunkLinkList",
+          "offset": 116
+        },
+        {
+          "type": "void*",
+          "name": "filePtr",
+          "offset": 128
+        },
+        {
+          "type": "int32_t",
+          "name": "fileSize",
+          "offset": 132
+        },
+        {
+          "type": "SMChunkInfo*",
+          "name": "chunkInfo",
+          "offset": 136
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_8C",
+          "offset": 140
+        },
+        {
+          "type": "SMDoodadDef*",
+          "name": "doodadDef",
+          "offset": 144
+        },
+        {
+          "type": "SMMapObjDef*",
+          "name": "mapObjDef",
+          "offset": 148
+        },
+        {
+          "type": "int32_t",
+          "name": "doodadDefCount",
+          "offset": 152
+        },
+        {
+          "type": "int32_t",
+          "name": "mapObjDefCount",
+          "offset": 156
+        },
+        {
+          "type": "char*",
+          "name": "m2FileNames",
+          "offset": 160
+        },
+        {
+          "type": "char*",
+          "name": "wmoFileNames",
+          "offset": 164
+        },
+        {
+          "type": "uint32_t*",
+          "name": "modelFilenamesOffsets",
+          "offset": 168
+        },
+        {
+          "type": "uint32_t*",
+          "name": "wmoFilenamesOffsets",
+          "offset": 172
+        },
+        {
+          "type": "int16_t*",
+          "name": "flyingBbox",
+          "offset": 176
+        },
+        {
+          "type": "int32_t*",
+          "name": "textureFlags",
+          "offset": 180
+        },
+        {
+          "type": "uint8_t*",
+          "name": "unk_B8",
+          "offset": 184
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "mapChunks",
+          "arrsize": 256,
+          "offset": 188
+        }
+      ]
+    },
+    {
+      "name": "CMapChunk",
+      "size": 344,
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 4
+        },
+        {
+          "type": "uint16_t",
+          "name": "type",
+          "offset": 8
+        },
+        {
+          "type": "uint16_t",
+          "name": "refCount",
+          "offset": 10
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_0C",
+          "offset": 12
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "prev",
+          "offset": 16
+        },
+        {
+          "type": "CMapChunk*",
+          "name": "next",
+          "offset": 20
+        },
+        {
+          "type": "TSExplicitList_CMapChunkLink",
+          "name": "linkList",
+          "offset": 24
+        },
+        {
+          "type": "C2iVector",
+          "name": "aIndex",
+          "offset": 36
+        },
+        {
+          "type": "C2iVector",
+          "name": "sOffset",
+          "offset": 44
+        },
+        {
+          "type": "C2iVector",
+          "name": "cOffset",
+          "offset": 52
+        },
+        {
+          "type": "C3Vector",
+          "name": "center",
+          "offset": 60
+        },
+        {
+          "type": "float",
+          "name": "radius",
+          "offset": 72
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 76
+        },
+        {
+          "type": "C3Vector",
+          "name": "bottomRight",
+          "offset": 100
+        },
+        {
+          "type": "C3Vector",
+          "name": "topLeft",
+          "offset": 112
+        },
+        {
+          "type": "C3Vector",
+          "name": "topLeftCoords",
+          "offset": 124
+        },
+        {
+          "type": "float",
+          "name": "distToCamera",
+          "offset": 136
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox2",
+          "offset": 140
+        },
+        {
+          "type": "void*",
+          "name": "detailDoodadInst",
+          "offset": 164
+        },
+        {
+          "type": "void*",
+          "name": "renderChunk",
+          "offset": 168
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_AC",
+          "offset": 172
+        },
+        {
+          "type": "int32_t",
+          "name": "areaId",
+          "offset": 176
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_B4",
+          "offset": 180
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_B8",
+          "offset": 184
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_BC",
+          "offset": 188
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_C0",
+          "offset": 192
+        },
+        {
+          "type": "TSExplicitList_CMapChunkDoodadDefLink",
+          "name": "doodadDefLinkList",
+          "offset": 196
+        },
+        {
+          "type": "TSExplicitList_CMapChunkMapObjDefLink",
+          "name": "mapObjDefLinkList",
+          "offset": 208
+        },
+        {
+          "type": "int32_t",
+          "name": "TSExplicitList__m_linkoffset_DC",
+          "offset": 220
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__ptr_E0",
+          "offset": 224
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__ptr2_E4",
+          "offset": 228
+        },
+        {
+          "type": "int32_t",
+          "name": "TSExplicitList__m_linkoffset_E8",
+          "offset": 232
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__ptr_EC",
+          "offset": 236
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__ptr2_F0",
+          "offset": 240
+        },
+        {
+          "type": "int32_t",
+          "name": "TSExplicitList__m_linkoffset_F4",
+          "offset": 244
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__ptr_F8",
+          "offset": 248
+        },
+        {
+          "type": "void*",
+          "name": "TSExplicitList__ptr2_FC",
+          "offset": 252
+        },
+        {
+          "type": "TSExplicitList_CChunkLiquid",
+          "name": "liquidChunkLinkList",
+          "offset": 256
+        },
+        {
+          "type": "uint8_t*",
+          "name": "chunkInfoBeginPtr",
+          "offset": 268
+        },
+        {
+          "type": "SMChunk*",
+          "name": "header",
+          "offset": 272
+        },
+        {
+          "type": "uint8_t*",
+          "name": "lowQualityTexMap",
+          "offset": 276
+        },
+        {
+          "type": "uint8_t*",
+          "name": "predTexture",
+          "offset": 280
+        },
+        {
+          "type": "float*",
+          "name": "vertices",
+          "offset": 284
+        },
+        {
+          "type": "uint32_t*",
+          "name": "vertexShading",
+          "offset": 288
+        },
+        {
+          "type": "int8_t*",
+          "name": "normals",
+          "offset": 292
+        },
+        {
+          "type": "uint8_t*",
+          "name": "shadowMap",
+          "offset": 296
+        },
+        {
+          "type": "SMLayer*",
+          "name": "layers",
+          "offset": 300
+        },
+        {
+          "type": "uint8_t*",
+          "name": "additionalShadowmap",
+          "offset": 304
+        },
+        {
+          "type": "uint8_t*",
+          "name": "MCRF_ptr",
+          "offset": 308
+        },
+        {
+          "type": "SMLiquidChunk*",
+          "name": "liquid",
+          "offset": 312
+        },
+        {
+          "type": "CWSoundEmitter*",
+          "name": "soundEmitters",
+          "offset": 316
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_140",
+          "offset": 320
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_144",
+          "offset": 324
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_148",
+          "offset": 328
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_14C",
+          "offset": 332
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_150",
+          "offset": 336
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_154",
+          "offset": 340
+        }
+      ]
+    },
+    {
+      "name": "CMapObj",
+      "size": 2552,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "objectIndex",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_04",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_08",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0C",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_10",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_14",
+          "offset": 20
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_18",
+          "offset": 24
+        },
+        {
+          "type": "char",
+          "name": "m_wmoName",
+          "arrsize": 260,
+          "offset": 28
+        },
+        {
+          "type": "SMOHeader*",
+          "name": "header",
+          "offset": 288
+        },
+        {
+          "type": "char*",
+          "name": "textureNameList",
+          "offset": 292
+        },
+        {
+          "type": "char*",
+          "name": "groupNameList",
+          "offset": 296
+        },
+        {
+          "type": "char*",
+          "name": "skybox",
+          "offset": 300
+        },
+        {
+          "type": "SMOGroupInfo*",
+          "name": "groupInfo",
+          "offset": 304
+        },
+        {
+          "type": "C3Vector*",
+          "name": "portalVertexList",
+          "offset": 308
+        },
+        {
+          "type": "SMOPortal*",
+          "name": "portalList",
+          "offset": 312
+        },
+        {
+          "type": "SMOPortalRef*",
+          "name": "portalRefList",
+          "offset": 316
+        },
+        {
+          "type": "C3Vector*",
+          "name": "visBlockVertList",
+          "offset": 320
+        },
+        {
+          "type": "SMOVisibleBlock*",
+          "name": "visBlockList",
+          "offset": 324
+        },
+        {
+          "type": "SMOLight*",
+          "name": "lightList",
+          "offset": 328
+        },
+        {
+          "type": "SMODoodadSet*",
+          "name": "doodadSetList",
+          "offset": 332
+        },
+        {
+          "type": "char*",
+          "name": "doodadNameList",
+          "offset": 336
+        },
+        {
+          "type": "SMODoodadDef*",
+          "name": "doodadDefList",
+          "offset": 340
+        },
+        {
+          "type": "SMOFog*",
+          "name": "fogList",
+          "offset": 344
+        },
+        {
+          "type": "C4Plane*",
+          "name": "convexVolumePlanes",
+          "offset": 348
+        },
+        {
+          "type": "SMOMaterial*",
+          "name": "materialList",
+          "offset": 352
+        },
+        {
+          "type": "int32_t",
+          "name": "texturesSize",
+          "offset": 356
+        },
+        {
+          "type": "int32_t",
+          "name": "groupNameSize",
+          "offset": 360
+        },
+        {
+          "type": "int32_t",
+          "name": "groupInfoCount",
+          "offset": 364
+        },
+        {
+          "type": "int32_t",
+          "name": "planeVertCount",
+          "offset": 368
+        },
+        {
+          "type": "int32_t",
+          "name": "portalsCount",
+          "offset": 372
+        },
+        {
+          "type": "int32_t",
+          "name": "portalRefCount",
+          "offset": 376
+        },
+        {
+          "type": "int32_t",
+          "name": "visBlockVertCount",
+          "offset": 380
+        },
+        {
+          "type": "int32_t",
+          "name": "visBlockCount",
+          "offset": 384
+        },
+        {
+          "type": "int32_t",
+          "name": "ligtsCount",
+          "offset": 388
+        },
+        {
+          "type": "int32_t",
+          "name": "doodadSetCount",
+          "offset": 392
+        },
+        {
+          "type": "int32_t",
+          "name": "doodadNameSize",
+          "offset": 396
+        },
+        {
+          "type": "int32_t",
+          "name": "doodadDefCount",
+          "offset": 400
+        },
+        {
+          "type": "int32_t",
+          "name": "fogsCount",
+          "offset": 404
+        },
+        {
+          "type": "int32_t",
+          "name": "convexVolumePlaneCount",
+          "offset": 408
+        },
+        {
+          "type": "int32_t",
+          "name": "materialsCount",
+          "offset": 412
+        },
+        {
+          "type": "uint32_t",
+          "name": "argb_color",
+          "offset": 416
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_1A4",
+          "offset": 420
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 424
+        },
+        {
+          "type": "float",
+          "name": "distToCamera",
+          "offset": 448
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_1C4",
+          "offset": 452
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_1C8",
+          "offset": 456
+        },
+        {
+          "type": "void*",
+          "name": "pWmoData",
+          "offset": 460
+        },
+        {
+          "type": "int32_t",
+          "name": "wmoFileSize",
+          "offset": 464
+        },
+        {
+          "type": "int32_t",
+          "name": "refCount",
+          "offset": 468
+        },
+        {
+          "type": "float",
+          "name": "flushTimer",
+          "offset": 472
+        },
+        {
+          "type": "CAsyncObject*",
+          "name": "asyncObject",
+          "offset": 476
+        },
+        {
+          "type": "int32_t",
+          "name": "isGroupLoaded",
+          "offset": 480
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_1E4",
+          "offset": 484
+        },
+        {
+          "type": "TSExplicitList_CMapObjGroup",
+          "name": "mapObjGroupList",
+          "offset": 488
+        },
+        {
+          "type": "int32_t",
+          "name": "mapObjGroupCount",
+          "offset": 500
+        },
+        {
+          "type": "CMapObjGroup*",
+          "name": "mapObjGroupArray",
+          "arrsize": 512,
+          "offset": 504
+        }
+      ]
+    },
+    {
+      "name": "CMapStaticEntity",
+      "size": 144,
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "objectIndex",
+          "offset": 4
+        },
+        {
+          "type": "uint16_t",
+          "name": "type",
+          "offset": 8
+        },
+        {
+          "type": "uint16_t",
+          "name": "refCount",
+          "offset": 10
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_C",
+          "offset": 12
+        },
+        {
+          "type": "CMapStaticEntity*",
+          "name": "prev",
+          "offset": 16
+        },
+        {
+          "type": "CMapStaticEntity*",
+          "name": "next",
+          "offset": 20
+        },
+        {
+          "type": "TSExplicitList_CMapStaticEntityMapChunkLink",
+          "name": "linkList",
+          "offset": 24
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_024",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "unkFlags_28",
+          "offset": 40
+        },
+        {
+          "type": "int32_t",
+          "name": "unkCounter",
+          "offset": 44
+        },
+        {
+          "type": "float",
+          "name": "unk_030",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "unk_m2Model_034",
+          "offset": 52
+        },
+        {
+          "type": "C3Vector",
+          "name": "vec1",
+          "offset": 56
+        },
+        {
+          "type": "float",
+          "name": "unk_044",
+          "offset": 68
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 72
+        },
+        {
+          "type": "C3Vector",
+          "name": "vec2",
+          "offset": 96
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 108
+        },
+        {
+          "type": "float",
+          "name": "scale",
+          "offset": 120
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_07C",
+          "offset": 124
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_080",
+          "offset": 128
+        },
+        {
+          "type": "CImVector",
+          "name": "m2AmbietColor",
+          "offset": 132
+        },
+        {
+          "type": "CImVector",
+          "name": "m2DiffuseColor",
+          "offset": 136
+        },
+        {
+          "type": "float",
+          "name": "unk_08C",
+          "offset": 140
+        }
+      ]
+    },
+    {
+      "name": "CMapEntity",
+      "size": 208,
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "objectIndex",
+          "offset": 4
+        },
+        {
+          "type": "uint16_t",
+          "name": "type",
+          "offset": 8
+        },
+        {
+          "type": "uint16_t",
+          "name": "refCount",
+          "offset": 10
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_C",
+          "offset": 12
+        },
+        {
+          "type": "CMapEntity*",
+          "name": "prev",
+          "offset": 16
+        },
+        {
+          "type": "CMapEntity*",
+          "name": "next",
+          "offset": 20
+        },
+        {
+          "type": "TSExplicitList_CMapEntityMapChunkLink",
+          "name": "linkList",
+          "offset": 24
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_024",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "unkFlags_28",
+          "offset": 40
+        },
+        {
+          "type": "int32_t",
+          "name": "unkCounter",
+          "offset": 44
+        },
+        {
+          "type": "float",
+          "name": "unk_030",
+          "offset": 48
+        },
+        {
+          "type": "void*",
+          "name": "unk_m2Model_034",
+          "offset": 52
+        },
+        {
+          "type": "C3Vector",
+          "name": "vec1",
+          "offset": 56
+        },
+        {
+          "type": "float",
+          "name": "unk_044",
+          "offset": 68
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 72
+        },
+        {
+          "type": "C3Vector",
+          "name": "vec2",
+          "offset": 96
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 108
+        },
+        {
+          "type": "float",
+          "name": "scale",
+          "offset": 120
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_07C",
+          "offset": 124
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_080",
+          "offset": 128
+        },
+        {
+          "type": "CImVector",
+          "name": "m2AmbietColor",
+          "offset": 132
+        },
+        {
+          "type": "CImVector",
+          "name": "m2DiffuseColor",
+          "offset": 136
+        },
+        {
+          "type": "float",
+          "name": "unk_08C",
+          "offset": 140
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_090",
+          "offset": 144
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_094",
+          "offset": 148
+        },
+        {
+          "type": "uint64_t",
+          "name": "guid",
+          "offset": 152
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0A0",
+          "offset": 160
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0A4",
+          "offset": 164
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0A8",
+          "offset": 168
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0AC",
+          "offset": 172
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0B0",
+          "offset": 176
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0B4",
+          "offset": 180
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0B8",
+          "offset": 184
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0BC",
+          "offset": 188
+        },
+        {
+          "type": "CImVector",
+          "name": "ambientTarget",
+          "offset": 192
+        },
+        {
+          "type": "float",
+          "name": "dirLightScaleTarget",
+          "offset": 196
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0C8",
+          "offset": 200
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0CC",
+          "offset": 204
         }
       ]
     },
@@ -50716,6 +55650,20 @@
       ]
     },
     {
+      "name": "SMChunkInfo__0012",
+      "members": [
+        {
+          "type": "char",
+          "name": "pad",
+          "arrsize": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "asyncId"
+        }
+      ]
+    },
+    {
       "name": "ubyte4__0000",
       "members": [
         {
@@ -50753,6 +55701,36 @@
         {
           "type": "uint32_t",
           "name": "boneNameCRC"
+        }
+      ]
+    },
+    {
+      "name": "SMOLiquidVert__0000",
+      "members": [
+        {
+          "type": "SMOWVert",
+          "name": "waterVert"
+        },
+        {
+          "type": "SMOMVert",
+          "name": "magmaVert"
+        }
+      ]
+    },
+    {
+      "name": "SLVert__0000",
+      "members": [
+        {
+          "type": "SWVert",
+          "name": "waterVert"
+        },
+        {
+          "type": "SOVert",
+          "name": "oceanVert"
+        },
+        {
+          "type": "SMVert",
+          "name": "magmaVert"
         }
       ]
     },

@@ -78,6 +78,7 @@
 #include "m2/shared.h"
 #include "m2/types.h"
 
+#include "map/CMapBaseObj.h"
 #include "map/ADTchunks.h"
 #include "map/CMapArea.h"
 #include "map/WMOchunks.h"
@@ -86,8 +87,10 @@
 #include "map/CDetailDoodadInst.h"
 #include "map/CMapRenderChunk.h"
 #include "map/CMapObjDef.h"
+#include "map/CMapStaticEntity.h"
 #include "map/CMapDoodadDef.h"
 #include "map/CMapEntity.h"
+#include "map/CMapBaseObjLink.h"
 
 #include "net/message.h"
 

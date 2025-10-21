@@ -19,6 +19,8 @@ DECLARE_STRUCT(SMOPoly);
 DECLARE_STRUCT(SMOBatch);
 DECLARE_STRUCT(SMOLiquidVert);
 DECLARE_STRUCT(SMOLTile);
+DECLARE_STRUCT(SMOWVert);
+DECLARE_STRUCT(SMOMVert);
 
 struct SMOHeader
 {
@@ -32,13 +34,14 @@ struct SMOHeader
     uint32_t ambColor;
     uint32_t wmoID;
     CAaBox bounding_box;
-    uint16_t flag_do_not_attenuate_vertices_based_on_distance_to_portal : 1;
+    /*uint16_t flag_do_not_attenuate_vertices_based_on_distance_to_portal : 1;
     uint16_t flag_use_unified_render_path : 1;
     uint16_t flag_use_liquid_type_dbc_id : 1;
     uint16_t flag_do_not_fix_vertex_color_alpha: 1;
     uint16_t flag_lod : 1;
     uint16_t flag_default_max_lod : 1;
-    uint16_t : 10;
+    uint16_t : 10;*/
+    uint16_t flags;
     uint16_t numLod;
 };
 
@@ -96,12 +99,13 @@ struct SMODoodadSet
 
 struct SMODoodadDef
 {
-    uint32_t nameIndex : 24;
+    /*uint32_t nameIndex : 24;
     uint32_t flag_AcceptProjTex : 1;
     uint32_t flag_0x2 : 1;
     uint32_t flag_0x4 : 1;
     uint32_t flag_0x8 : 1;
-    uint32_t unk : 4;
+    uint32_t unk : 4;*/
+    uint32_t flags;
     C3Vector position;
     C4Quaternion orientation;
     float scale;
@@ -110,10 +114,11 @@ struct SMODoodadDef
 
 struct SMOFog
 {
-    uint32_t flag_infinite_radius : 1;
+    /*uint32_t flag_infinite_radius : 1;
     uint32_t : 3;
     uint32_t flag_0x10 : 1;
-    uint32_t : 27;
+    uint32_t : 27;*/
+    uint32_t flags;
 
     C3Vector position;
     float smallerRadius;
@@ -131,7 +136,7 @@ struct SMOFog
 
 struct SMOMaterial
 {
-    uint32_t F_UNLIT    : 1;
+    /*uint32_t F_UNLIT    : 1;
     uint32_t F_UNFOGGED : 1;
     uint32_t F_UNCULLED : 1;
     uint32_t F_EXTLIGHT : 1;
@@ -140,7 +145,8 @@ struct SMOMaterial
     uint32_t F_CLAMP_S  : 1;
     uint32_t F_CLAMP_T  : 1;
     uint32_t flag_0x100 : 1;
-    uint32_t : 23;
+    uint32_t : 23;*/
+    uint32_t flags;
 
     uint32_t shader;
 
@@ -163,14 +169,15 @@ struct SMOMaterial
 
 struct SMOPoly
 {
-    uint8_t F_UNK_0x01: 1;
+    /*uint8_t F_UNK_0x01: 1;
     uint8_t F_NOCAMCOLLIDE : 1;
     uint8_t F_DETAIL : 1;
     uint8_t F_COLLISION : 1;
     uint8_t F_HINT : 1;
     uint8_t F_RENDER : 1;
     uint8_t F_CULL_OBJECTS : 1;
-    uint8_t F_COLLIDE_HIT : 1;
+    uint8_t F_COLLIDE_HIT : 1;*/
+    uint8_t flags;
 
     uint8_t materialId;
 };
@@ -186,35 +193,39 @@ struct SMOBatch
     uint8_t texture;
 };
 
+struct SMOWVert
+{
+    uint8_t flow1;
+    uint8_t flow2;
+    uint8_t flow1Pct;
+    uint8_t filler;
+    float height;
+};
+
+struct SMOMVert
+{
+    int16_t s;
+    int16_t t;
+    float height;
+};
+
 struct SMOLiquidVert
 {
     union
     {
-        struct SMOWVert
-        {
-            uint8_t flow1;
-            uint8_t flow2;
-            uint8_t flow1Pct;
-            uint8_t filler;
-            float height;
-        } waterVert;
-
-        struct SMOMVert
-        {
-            int16_t s;
-            int16_t t;
-            float height;
-        } magmaVert;
+        SMOWVert waterVert;
+        SMOMVert magmaVert;
     };
 };
 
 struct SMOLTile
 {
-    uint8_t legacyLiquidType : 4;
+    /*uint8_t legacyLiquidType : 4;
     uint8_t unknown1 : 1;
     uint8_t unknown2 : 1;
     uint8_t fishable : 1;
-    uint8_t shared : 1;
+    uint8_t shared : 1;*/
+    uint8_t flags;
 };
 
 

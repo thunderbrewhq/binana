@@ -6,21 +6,31 @@ DECLARE_STRUCT(CMapDoodadDef);
 #include "tempest/box.h"
 #include "tempest/matrix.h"
 #include "tempest/vector.h"
+#include "storm/list.h"
+#include "map/CMapArea.h"
 
+typedef struct CMapDoodadDefMapChunkLink CMapDoodadDefMapChunkLink;
+STORM_TS_LIST(CMapDoodadDefMapChunkLink);
+struct CMapDoodadDefMapChunkLink
+{
+    uint32_t objectIndex; //0x00
+    CMapDoodadDef* owner; //0x04
+    CMapBaseObj* ref; //0x08 //could be CMapChunk* or CMapObjDefGroup*
+    TSLink_CMapDoodadDefMapChunkLink refLink; //0x0C - 0x14
+    TSLink_CMapDoodadDefMapChunkLink ownerLink; //0x14 - 0x1C
+};
 
 struct CMapDoodadDef
 {
     void** vtable; //0x00
     int32_t objectIndex; //0x04
-    uint16_t flags; //0x08
-    uint16_t pad_0A; //0x0A
+    uint16_t type; //0x08
+    uint16_t refCount; //0x0A
     int32_t unk_C; //0x0C
-    void* prev; //0x10
-    void* next; //0x14
+    CMapDoodadDef* prev; //0x10
+    CMapDoodadDef* next; //0x14
     
-    int32_t TSExplicitList__m_linkoffset_unk_18; //0x18
-    void* TSExplicitList__m_ptr1_unk_1C; //0x1C
-    void* TSExplicitList__m_ptr2_unk_20; //0x20
+    TSExplicitList_CMapDoodadDefMapChunkLink linkList;
     
     //CMapStaticEntity fields
     int32_t unk_024; //0x24

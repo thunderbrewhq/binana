@@ -6,21 +6,32 @@ DECLARE_STRUCT(CMapEntity);
 #include "system/types.h"
 #include "tempest/vector.h"
 #include "tempest/box.h"
+#include "storm/list.h"
+#include "map/CMapBaseObj.h"
+
+typedef struct CMapEntityMapChunkLink CMapEntityMapChunkLink;
+STORM_TS_LIST(CMapEntityMapChunkLink);
+struct CMapEntityMapChunkLink
+{
+    uint32_t objectIndex; //0x00
+    CMapEntity* owner; //0x04
+    void* ref; //0x08 //could be CMapChunk* or CMapObjDefGroup*
+    TSLink_CMapEntityMapChunkLink refLink; //0x0C - 0x14
+    TSLink_CMapEntityMapChunkLink ownerLink; //0x14 - 0x1C
+};
 
 struct CMapEntity
 {
     //CMapBaseObj fields
     void** vtable; //0x00
     int32_t objectIndex; //0x04
-    uint16_t flags; //0x08
-    uint16_t pad_0A; //0x0A
+    uint16_t type; //0x08
+    uint16_t refCount; //0x0A
     int32_t unk_C; //0x0C
     CMapEntity* prev; //0x10
     CMapEntity* next; //0x14
     
-    int32_t TSExplicitList__m_linkoffset_unk_18; //0x18
-    void* TSExplicitList__m_ptr1_unk_1C; //0x1C
-    void* TSExplicitList__m_ptr2_unk_20; //0x20
+    TSExplicitList_CMapEntityMapChunkLink linkList;
     //end
 
     //CMapStaticEntity fields

@@ -6,7 +6,13 @@ DECLARE_STRUCT(SMChunkInfo);
 DECLARE_STRUCT(SMDoodadDef);
 DECLARE_STRUCT(SMMapObjDef);
 DECLARE_STRUCT(SMChunk);
+DECLARE_STRUCT(SLVert);
 DECLARE_STRUCT(SMLayer);
+DECLARE_STRUCT(SLTiles);
+DECLARE_STRUCT(SWFlowv);
+DECLARE_STRUCT(SOVert);
+DECLARE_STRUCT(SMVert);
+DECLARE_STRUCT(SWVert);
 DECLARE_STRUCT(SMLiquidChunk);
 DECLARE_STRUCT(CWSoundEmitter);
 
@@ -106,52 +112,65 @@ struct SMLayer
     uint32_t offectId;
 };
 
+struct SWVert
+{
+    char depth;
+    char flow0Pct;
+    char flow1Pct;
+    char filler;
+    float height;
+};
+
+struct SOVert
+{
+    char depth;
+    char foam;
+    char wet;
+    char filler;
+};
+
+struct SMVert
+{
+    uint16_t s;
+    uint16_t t;
+    float height;
+};
+
+struct SLVert
+{
+    union
+    {
+        SWVert waterVert;
+        SOVert oceanVert;
+        SMVert magmaVert;
+    };
+};
+
+struct SLTiles
+{
+  char tiles[8][8];
+};
+
+struct SWFlowv
+{
+    CAaSphere sphere;
+    C3Vector dir;
+    float velocity;
+    float amplitude;
+    float frequency;
+};
+
 struct SMLiquidChunk
 {
     float minHeight;
     float maxHeight;
-    struct SLVert
-    {
-        union
-        {
-            struct SWVert
-            {
-                char depth;
-                char flow0Pct;
-                char flow1Pct;
-                char filler;
-                float height;
-            } waterVert;
-            struct SOVert
-            {
-                char depth;
-                char foam;
-                char wet;
-                char filler;
-            } oceanVert;
-            struct SMVert
-            {
-                uint16_t s;
-                uint16_t t;
-                float height;
-            } magmaVert;
-        };
-    } verts[9*9];
+    
+    SLVert verts[9*9];
 
-    struct SLTiles
-    {
-      char tiles[8][8];
-    } tiles;
+    SLTiles tiles;
 
     uint32_t nFlowvs;
-    struct SWFlowv
-    {
-        CAaSphere sphere;
-        C3Vector dir;
-        float velocity;
-        float amplitude;
-        float frequency;
-    } flowvs[2];
+    SWFlowv flowvs[2];
 };
 
 struct CWSoundEmitter
