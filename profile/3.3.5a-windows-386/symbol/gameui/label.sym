@@ -44,3 +44,7 @@ CGGameUI__m_uiLastInstanceTime 00BD0884 l
 CGGameUI__m_iMapID 00BD0888 l
 CGGameUI__m_iCurrentMapID 00BD088C l
 CGGameUI__m_bOwnsInstance 00BD0890 l
+CGGameUI__m_corpseTransportGUID 00BD0830 l
+CGGameUI__m_cursorMacro 00BD07E8 l
+g_spellMissStrings 00ADBFAC l
+s_physicalDamageClassID 00AD2F90 l

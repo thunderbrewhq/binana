@@ -24,3 +24,6 @@ WowConnection__StartConnect 00468BA0 f end=00468D00 ; WowConnection::StartConnec
 WowConnection__Connect 00468D20 f end=00468D8B ; WowConnection::Connect(char const*, unsigned short, int)
 WowConnection__InitOsNet 00468D90 f end=00468E4F ; WowConnection::InitOsNet(bool (*)(NETADDR const*), void (*)(), int, bool)
 WowConnection__Connect 00468E50 f end=00468ED5 ; WowConnection::Connect(char const*, int)
+WowConnection__DestroyOsNet 00466B90 f end=00466BE6
+WowConnection__Stop 00469080 f end=0046915A
+WowConnection__Start 00469320 f end=00469419

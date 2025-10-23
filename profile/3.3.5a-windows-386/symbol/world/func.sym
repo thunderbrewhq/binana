@@ -13,3 +13,5 @@ World__SetDetailDoodadDensity 00780710 f end=0078072F
 World__SetDetailDoodadDist 00780730 f end=00780761
 World__ObjectIsDrawable 0077FCD0 f end=0077FD07
 World__ObjectDestroy 007826E0 f end=00782732
+World__ValidateFarClip 00780770 f end=007807F8
+

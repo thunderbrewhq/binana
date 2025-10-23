@@ -1,4 +1,5 @@
 CVar__Set 00766940 f end=00766982
+CVar__SaveAll 007670E0 f end=007670FE
 CVGxColorBitsCallback 00769240 f end=007692CF type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxDepthBitsCallback 007692D0 f end=0076935F type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxTripleBufferCallback 00769360 f end=007693AB type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"

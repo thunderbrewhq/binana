@@ -46,3 +46,4 @@ ClientServices__SetSelectedRealmInfo 006B2CF0 f end=006B2DED
 ClientServices__SelectRealm 006B2DF0 f end=006B2E2C
 ClientServices__GetRealmInfoByIndex 006B2EB0 f end=006B2F12
 ClientServices__JoinRealmResult 006B3070 f end=006B318F
+ClientServices__Destroy 006B1BB0 f end=006B1C6B

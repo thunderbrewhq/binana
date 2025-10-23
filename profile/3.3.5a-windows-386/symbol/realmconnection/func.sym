@@ -1,1 +1,7 @@
 RealmConnection__SetSelectedRealm 00464490 f end=004644B2
+RealmConnection__HandleConnect 00464350 f end=0046438B
+RealmConnection__HandleDisconnect 00464390 f end=004643C9
+RealmConnection__HandleCantConnect 004643D0 f end=00464409
+RealmConnection__HandleAuthResponse 00464640 f end=00464728
+RealmConnection__HandleAuthChallenge 00464830 f end=00464A40
+RealmConnection__MessageHandler 00464F50 f end=004650B1

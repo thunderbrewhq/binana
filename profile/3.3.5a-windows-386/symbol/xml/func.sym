@@ -1,3 +1,4 @@
 XMLNode__GetAttributeByName 00814730 f end=00814793
 XMLNode__Recycle 00814CE0 f end=00814D53
 XMLTree__Free 00814D60 f end=00814D87
+XMLNode__GetChildByName 008146F0 f end=0081472A

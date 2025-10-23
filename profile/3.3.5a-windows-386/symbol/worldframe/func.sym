@@ -30,3 +30,5 @@ CGWorldFrame__OnWorldUpdate 004FA5F0 f end=004FABC5
 CGWorldFrame__constructor 004FABD0 f end=004FAF5E
 CGWorldFrame__RenderWorld 004FAF90 f end=004FB079
 CGWorldFrame__OnFrameRender 004FB080 f end=004FB0AD
+CGWorldFrame__OnMouseModeNormal 004F5D20 f end=004F5D28
+CGWorldFrame__OnMouseModeRelative 004F5D30 f end=004F5D7F

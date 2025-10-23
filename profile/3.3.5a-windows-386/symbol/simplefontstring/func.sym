@@ -3,3 +3,4 @@ CSimpleFontString__SetText 00483910 f end=00483A3D type="void __thiscall func(CS
 CSimpleFontString__constructor 00485240 f end=0048536F
 CSimpleFontString__UpdateString 00486B20 f end=00486E2A
 CSimpleFontString_SetFormattedText 0048D800 f end=0048D88B type="int32_t __stdcall func(lua_State* L)"
+CSimpleFontString__SetJustificationOffset 00483C40 f end=00483CC8
