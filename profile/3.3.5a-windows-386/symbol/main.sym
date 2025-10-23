@@ -1,3 +1,4 @@
+
 operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
 operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
 CDataStore__constructor 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
@@ -64,7 +65,9 @@ SFile__SetBasePath 00421A80 f end=00421AE5
 SFile__SetDataPath 00421AF0 f end=00421B4A
 SFile__SetFilePointer 00421BB0 f end=00421C98
 SFile__Unload 00421CA0 f end=00421CB8
+_SFileCloseArchive 00421FA0 f end=00421FB9
 _SFileLoadFileEx 00421FF0 f end=00422031
+_SFileOpenArchive 00422040 f end=00422081
 _SFileUnloadFile 00422090 f end=004220A9
 SFile__SetStreamingStatus 004220B0 f end=004220F1
 SFile__InitializeStreaming 00422100 f end=00422125
@@ -198,13 +201,24 @@ OsFileGetDownloadFolder 00461F70 f end=00461F91 type="char* __stdcall func()"
 OsCreateFile 00461FA0 f end=00461FFA type="HOSFILE __stdcall func(char* fileName, uint32_t desiredAccess, uint32_t shareMode, uint32_t createDisposition, uint32_t flagsAndAttributes, uint32_t extendedFileType)"
 OsFileList 00462000 f end=0046209C
 CGlueMgr__PatchDownloadExecuteCommand 00462190 f end=004621EB
+RealmConnection__HandleConnect 00464350 f end=0046438B
+RealmConnection__HandleDisconnect 00464390 f end=004643C9
+RealmConnection__HandleCantConnect 004643D0 f end=00464409
 RealmConnection__SetSelectedRealm 00464490 f end=004644B2
+RealmConnection__HandleAuthResponse 00464640 f end=00464728
+RealmConnection__HandleAuthChallenge 00464830 f end=00464A40
+RealmConnection__MessageHandler 00464F50 f end=004650B1
 ClientConnection__destructor 00465450 f end=0046547B ; ClientConnection::~ClientConnection()
+LoginResponse__UpdateLoginStatus 00465480 f end=0046551A
+Login__GetFileStatus 00465550 f end=00465600
+WDataStore__StaticInitialize 00466050 f end=00466131
+WDataStore__FreeBuffer 00466230 f end=004662AF
 WowConnection__SetResponse 004666D0 f end=00466748 ; WowConnection::SetResponse(WowConnectionResponse*, bool)
 WowConnection__SetType 004667F0 f end=0046681A ; WowConnection::SetType(WOWC_TYPE)
 WowConnection__SetEncryption 00466820 f end=004668A0 ; WowConnection::SetEncryption(WC_ENCRYPT_TYPE)
 WowConnection__Init 004669D0 f end=00466B48 ; WowConnection::Init(WowConnectionResponse*, void (*)())
 WowConnection__Disconnect 00466B50 f end=00466B8F ; WowConnection::Disconnect()
+WowConnection__DestroyOsNet 00466B90 f end=00466BE6
 WowConnection__SetEncryptionKey 00466BF0 f end=00466DA9 ; WowConnection::SetEncryptionKey(unsigned char const*, unsigned char, unsigned char, unsigned char const*, unsigned char)
 WowConnection__CloseSocket 00466DE0 f end=00466E29 ; WowConnection::CloseSocket(int)
 WowConnection__DoStreamReads 00466F00 f end=004670CA ; WowConnection::DoStreamReads()
@@ -225,6 +239,8 @@ WowConnection__StartConnect 00468BA0 f end=00468D00 ; WowConnection::StartConnec
 WowConnection__Connect 00468D20 f end=00468D8B ; WowConnection::Connect(char const*, unsigned short, int)
 WowConnection__InitOsNet 00468D90 f end=00468E4F ; WowConnection::InitOsNet(bool (*)(NETADDR const*), void (*)(), int, bool)
 WowConnection__Connect 00468E50 f end=00468ED5 ; WowConnection::Connect(char const*, int)
+WowConnection__Stop 00469080 f end=0046915A
+WowConnection__Start 00469320 f end=00469419
 nullsub_2 0047ADD0 f
 CDataStore__GetBufferParams 0047ADE0 f ; CDataStore::GetBufferParams(void const**, unsigned int*, unsigned int*)
 CDataStore__DetachBuffer 0047AE10 f ; CDataStore::DetachBuffer(void**, unsigned int*, unsigned int*)
@@ -342,6 +358,7 @@ CSimpleRender__Init 00482E90 f end=00482EB4
 CSimpleTexture__Init 00483060 f end=00483098
 CSimpleTexture__SetTexCoord 004831D0 f end=00483220 ; CSimpleTexture::SetTexCoord(CRect const&)
 CSimpleFontString__SetText 00483910 f end=00483A3D type="void __thiscall func(CSimpleFontString* this, char* a1, int32_t a2)"
+CSimpleFontString__SetJustificationOffset 00483C40 f end=00483CC8
 CRenderBatch__Finish 00484450 f end=0048446D
 CSimpleTexture__constructor 00484470 f end=004845E6 ; CSimpleTexture::CSimpleTexture(CSimpleFrame*, unsigned int, int)
 CSimpleRender__DrawBatch 00484B00 f end=0048513D
@@ -597,6 +614,7 @@ CGlueMgr__QuitGame 004D8350 f end=004D8359
 CGlueMgr__DownloadFeed 004D8380 f end=004D83A3
 CGlueMgr__HandleBattlenetDisconnect 004D84A0 f end=004D8520
 CGlueMgr__ShowChangedOptionWarnings 004D8570 f end=004D857D
+CGlueMgr__ProcessAgreements 004D8650 f end=004D8857
 CGlueMgr__HandleDisplaySizeChanged 004D8860 f end=004D8924
 CGlueMgr__Suspend 004D8930 f end=004D8A2D
 CGlueMgr__LoginServerLogin 004D8A30 f end=004D8B9C
@@ -604,6 +622,7 @@ CGlueMgr__ChangeRealm 004D8BD0 f end=004D8C56
 CGlueMgr__CreateCharacter 004D8C60 f end=004D8CB8
 CGlueMgr__DeleteCharacter 004D8CC0 f end=004D8D20
 CGlueMgr__RenameCharacter 004D8D20 f end=004D8E0B
+CGlueMgr__CustomizeCharacter 004D8E10 f end=004D8F1C
 CGlueMgr__GetSelectedCharInfo 004D9160 f end=004D9182
 CGlueMgr__OnCharCustomizeResult 004D9190 f end=004D92C7
 CGlueMgr__OnCharFactionChangeResult 004D92D0 f end=004D9480
@@ -763,12 +782,14 @@ CGlueMgr__SurveyExecute 004E4B30 f end=004E4E75
 CGlueMgr__SurveyDownloadEnd 004E4E80 f end=004E4F66
 CGlueMgr__PatchDownloadExtractCommand 004E4F70 f end=004E4FFD
 CGlueMgr__PatchDownloadDeleteCommand 004E5000 f end=004E5064
+CGlueMgr__PatchDownloadExecutePrepatch 004E5070 f end=004E51BB
 CGlueMgr__PatchDownloadFeed 004E51C0 f end=004E51DE
 CGlueMgr__GetPatchFolder 004E51E0 f end=004E51F8
 CGlueMgr__PatchDownloadStart 004E5200 f end=004E53A0
 CGlueMgr__PatchDownloadCancel 004E53A0 f end=004E541F
 CGlueMgr__PatchFailed 004E5420 f end=004E54C8
 CGlueMgr__PatchDownloadIdle 004E54D0 f end=004E5722
+CGlueMgr__PatchDownloadApply 004E5730 f end=004E585D
 CGlueMgr__ScanDLLFinished 004E5940 f end=004E59B1
 CSimpleModelFFX__SetModel 004E5ED0 f end=004E5EF7 ; CSimpleModelFFX::SetModel(CM2Model*)
 CSimpleModelFFX__LoadXML 004E5F00 f end=004E5F47 ; CSimpleModelFFX::LoadXML(XMLNode*, CStatus*)
@@ -800,6 +821,8 @@ CGWorldFrame__SendObjectTrackEvent 004F5980 f end=004F59E2
 CGWorldFrame__CursorTrackObject 004F59F0 f end=004F5A52
 CGWorldFrame__OnFrameSizeChanged 004F5A90 f end=004F5C10
 CGWorldFrame__OnLayerCursorExit 004F5C10 f end=004F5C78
+CGWorldFrame__OnMouseModeNormal 004F5D20 f end=004F5D28
+CGWorldFrame__OnMouseModeRelative 004F5D30 f end=004F5D7F
 CGWorldFrame__SetNamePlateUpdate 004F5D80 f end=004F5D88
 CM2Model__GetBoundingBox 004F5E20 f
 CGWorldFrame__GetCameraFacing 004F6680 f end=004F66B4
@@ -1001,13 +1024,17 @@ Script_DownloadSettings 00511FA0 f end=00511FA8
 Script_IsDesaturateSupported 00511FB0 f end=00511FE0
 Script_GetThreatStatusColor 00511FE0 f end=0051208A
 Script_ConsoleAddMessage 00512090 f end=005120DD
+CGGameUI__SequenceMusicIsPlaying 005124D0 f end=005124D6
 CGGameUI__OpenGuildInvite 00512570 f end=0051258F
 CGGameUI__IsPartyMember 005129F0 f end=005129F9
 CGGameUI__IsPartyMember 00512A00 f end=00512A2C
 CGGameUI__UnitModelUpdate 00512B50 f end=00512B59
 CGGameUI__SetActiveCorpse 00512C20 f end=00512C36
+CGGameUI__OnMouseModeRelative 00512D60 f end=00512DB4
+CGGameUI__OnMouseModeNormal 00512DC0 f end=00512E1E
 CGGameUI__HandleScreenshot 00512E20 f end=00512E52
 CGGameUI__CloseInteraction 00512E60 f end=005130CF
+CGGameUI__ShowSpellMissFeedback 00513410 f end=00513478
 CGGameUI__SetMinimapZoneText 005134C0 f end=00513530
 CGGameUI__ShowBlockedActionFeedback 00513530 f end=00513640
 CGGameUI__ShowBlockedFrameFeedback 00513640 f end=00513653
@@ -1027,6 +1054,7 @@ CGGameUI__SetInstanceLockTime 00513B20 f end=00513B8A
 CGGameUI__GetPartyMemberState 00513C30 f end=00513C66
 CGGameUI__UpdateUnitHighlights 00513CF0 f end=00513D92
 CGGameUI__LastErrorMessage 00513DF0 f end=00513DF6
+CGGameUI__MirrorTimerToIndex 00513E40 f end=00513E96
 Script_IsModifierKeyDown 00514430 f end=005144B1
 Script_IsLeftShiftKeyDown 005144C0 f end=00514518
 Script_IsRightShiftKeyDown 00514520 f end=0051457A
@@ -1212,8 +1240,10 @@ CGGameUI__NewZoneFeedback 005204C0 f end=005206DE
 CGGameUI__UpdateCombatMod 005206E0 f end=00520762
 CGGameUI__SetCursorItem 00520770 f end=0052087C
 CGGameUI__SetCursorMoney 00520880 f end=005208E5
+CGGameUI__SetCursorMoney 005208F0 f end=0052095B
 CGSpellBook__SetCursorSpell 00520960 f end=00520A58
 CGGameUI__SetCursorPetAction 00520A80 f end=00520BAF
+CGGameUI__SetCursorMacro 00520BE0 f end=00520C57
 CGGameUI__SetCursorPet 00520C60 f end=00520D29
 CGGameUI__SetCursorVirtualItem 00520D30 f end=00520DB3
 CGGameUI__SetCursorEquipmentSet 00520DC0 f end=00520E38
@@ -1251,6 +1281,7 @@ Script_AcceptLevelGrant 00523360 f end=00523368
 Script_EndRefund 00523370 f end=005233C5
 Script_EndBoundTradeable 005233D0 f end=0052349D
 CGGameUI__CloseLoot 00523640 f end=005237D2
+CGGameUI__SetCorpseLocation 00523DB0 f end=00523E7D
 CGGameUI__GetCorpseLocation 00523E80 f end=00523EA7
 CGGameUI__SetAreaSpiritHealer 00523EB0 f end=00523F74
 CGGameUI__UpdateAreaSpiritHealerDistance 00524010 f end=005240D7
@@ -1260,6 +1291,7 @@ CGGameUI__BreakTarget 00524350 f end=0052443C
 CGGameUI__SetRegenEnabled 00524600 f end=00524650
 CGGameUI__DeleteCursorItem 00524650 f end=00524712
 Script_StopCinematic 00524980 f end=005249B7
+CGGameUI__NextCinematic 005249C0 f end=00524A23
 CGGameUI__AcceptAreaSpiritHeal 00524B60 f end=00524BEE
 CGGameUI__Target 00524BF0 f end=00524FB6
 CGGameUI__TargetNearestUnit 00524FC0 f end=005252C4
@@ -1284,6 +1316,7 @@ Script_SetRaidDifficulty 005261A0 f end=005262C4
 Script_AcceptAreaSpiritHeal 005262D0 f end=005262D8
 Script_TargetTotem 005262E0 f end=00526362
 CGGameUI__StartCinematicCamera 00526370 f end=005264ED
+CGGameUI__SaveSavedVariables 00527130 f end=0052735C
 CGGameUI__OnTerrainClick 00527360 f end=005274E7
 CGGameUI__HandleTerrainClick 00527830 f end=00527863
 CGGameUI__HandleWorldClick 005278C0 f end=00527A2A
@@ -1675,20 +1708,28 @@ Script_PartyLFGStartBackfill 0055A0C0 f end=0055A130
 Script_RefreshLFGList 0055D280 f end=0055D2A1
 Script_SearchLFGSort 0055D2B0 f end=0055D43D
 CGLookingForGroup__InitializeGame 0055D440 f end=0055D6A8
+CGUIBindings__AddMetaPrefix 0055D990 f end=0055DAA8
 Script_GetNumBindings 0055DC00 f end=0055DC23
 Script_GetCurrentBindingSet 0055DC30 f end=0055DC57
 Script_GetNumModifiedClickActions 0055DC60 f end=0055DC84
+CGUIBindings__MouseEventToString 0055E340 f end=0055E46D
+CGUIBindings__GetCommandKey 0055E750 f end=0055E7DE
 Script_GetBinding 0055E8D0 f end=0055E9B0
 Script_GetBindingKey 0055E9B0 f end=0055EA67
 Script_GetModifiedClickAction 0055EA70 f end=0055EACE
+CGUIBindings__SaveBindings 0055F1B0 f end=0055F398
 CGUIBindings__IsModifiedClick 0055F940 f end=0055FAC8
 Script_RunBinding 0055FAD0 f end=0055FB81
 Script_SetModifiedClick 0055FB90 f end=0055FC1F
 Script_GetModifiedClick 0055FC20 f end=0055FCB9
 Script_IsModifiedClick 0055FCC0 f end=0055FD13
 Script_ClearOverrideBindings 00560560 f end=005605EC
+CGUIBindings__Initialize 005620F0 f end=00562135
 Script_GetBindingAction 00562550 f end=005625F0
 Script_GetBindingByKey 005625F0 f end=0056269B
+CGUIBindings__CopyBindings 00562B80 f end=00562D5E
+CGUIBindings__FinishLoadBindings 00562D60 f end=00562DC7
+CGUIBindings__Bind 00562ED0 f end=00563142
 CGUIBindings__ExecKey 00563150 f end=00563476
 Script_SetBinding 00563520 f end=005635DF
 Script_SetBindingSpell 005635E0 f end=00563700
@@ -1703,6 +1744,10 @@ Script_SetOverrideBindingClick 00563F10 f end=00564067
 Script_LoadBindings 00564070 f end=005640B2
 Script_SaveBindings 005640C0 f end=00564123
 Script_GetClickFrame 00564130 f end=005641BC
+CGUIBindings__LoadBindings 005641C0 f end=0056430D
+CGUIBindings__LoadBindingsCallback 00564310 f end=005643A5
+CGUIBindings__LoadBindings 005643B0 f end=0056446A
+CGUIBindings__LoadBinding 00564470 f end=00564754
 CGActionBar__IsMacro 005648A0 f end=005648C8
 CGActionBar__GetMacroID 005648D0 f end=005648FC
 CGUIMacros__GetMacroIndexByID 00564AB0 f end=00564AD6
@@ -3069,6 +3114,7 @@ NETEVENTQUEUE__constructor 00633440 f end=0063346D ; NETEVENTQUEUE::NETEVENTQUEU
 NETEVENTQUEUE__Poll 006334F0 f end=0063360E ; NETEVENTQUEUE::Poll()
 NETEVENTQUEUE__AddEvent 00633650 f end=0063372A ; NETEVENTQUEUE::AddEvent(EVENTID, void*, NetClient*, void const*, unsigned long)
 NETEVENTQUEUE__destructor 00633730 f end=00633797 ; NETEVENTQUEUE::~NETEVENTQUEUE()
+GetPhysicalDamageClassMask 006337B0 f end=006337BE
 StaticDBLoadAll 006337D0 f end=0063478E ; 00005400
 ClientDBShutdown 00634C60 f end=00634CBB ; 00005400
 ClientDBInitialize 00634E00 f end=00634E62 ; ClientDBInitialize()
@@ -3471,6 +3517,7 @@ ClientServices__RequestCharacterDelete 006B1A70 f end=006B1B62
 nullsub_151 006B1B80 f
 nullsub_6 006B1B90 f
 nullsub_155 006B1BA0 f
+ClientServices__Destroy 006B1BB0 f end=006B1C6B
 ClientServices__GetClientStamp 006B1C70 f end=006B1DFE
 ClientServices__LoginServerStatus 006B1E00 f end=006B1EE9
 ClientServices__CharacterForceLogout 006B21F0 f end=006B21FA
@@ -3511,6 +3558,7 @@ Script_RemoveFriend 006B7BD0 f end=006B7C8A
 Script_SetFriendNotes 006B7C90 f end=006B7D6F
 Script_DelIgnore 006B7D70 f end=006B7D9B
 Script_DelMute 006B7DA0 f end=006B7DCB
+LoadAccountData 006B9050 f end=006B90D7
 AccountDataInitializeBasicSystem 006B9900 f end=006B996D
 GxuFontAddToBatch 006BCE10 f end=006BCE32
 GxuFontRenderBatch 006BCE40 f end=006BCE52
@@ -3962,6 +4010,7 @@ CVar__Reset 00766990 f end=00766A14 ; public: void __thiscall CVar::Reset(void)
 CVar__Default 00766A20 f end=00766AA4 type="bool __thiscall func(CVar* this)" ; public: bool __thiscall CVar::Default(void)
 CVar__Update 00766AB0 f end=00766B1F type="bool __thiscall func(CVar* this)" ; CVar::Update()
 CVar__IterateForArchive 00767030 f end=007670DA type="int32_t __stdcall func(uint32_t a1, uint32_t a2, void* callback, void* param)" ; CVar::IterateForArchive(unsigned int, unsigned int, int (*)(char const*, char const*, void*), void*)
+CVar__SaveAll 007670E0 f end=007670FE
 CVarSaveFile 00767100 f end=0076719C type="void __stdcall func()"
 CVar__LogAll 007671A0 f end=007671CF ; CVar::LogAll(char*, unsigned long, unsigned int, unsigned int)
 CvarListCommandHandler 00767220 f end=0076734A ; 00005410
@@ -4144,6 +4193,7 @@ World__ObjectTestConvexVolume 0077FFB0 f end=00780122
 World__ObjectUpdate 00780240 f end=007804F5
 World__SetDetailDoodadDensity 00780710 f end=0078072F
 World__SetDetailDoodadDist 00780730 f end=00780761
+World__ValidateFarClip 00780770 f end=007807F8
 World__PrepareAreaOfInterest 00780860 f end=00780CCF
 CMapStaticEntity__ModelLightingCallback 00780CD0 f end=00780E1F
 World__Initialize 00780F50 f end=0078142F
@@ -4152,8 +4202,18 @@ World__Preload 00781500 f end=007815B7
 DayNight__Update 007816F0 f end=007819BC ; DayNight::Update(unsigned int, float, float)
 World__ObjectDestroy 007826E0 f end=00782732
 World__PrepareUpdate 007831A0 f end=007834FE
+CWorldParam__WorldPoolUsageCallback 0078DA10 f end=0078DA4E
+CWorldParam__TerrainAlphaBitDepthCallback 0078DA50 f end=0078DAAA
 CWorldParam__GroundEffectDensityCallback 0078DAB0 f end=0078DB0B
 CWorldParam__GroundEffectDistCallback 0078DB10 f end=0078DB8A
+CWorldParam__ObjectFadeCallback 0078DB90 f end=0078DBD8
+CWorldParam__ObjectFadeZFillCallback 0078DBE0 f end=0078DC28
+CWorldParam__ProjectedTexturesCallback 0078DCF0 f end=0078DD32
+CWorldParam__BaseMipCallback 0078DF00 f end=0078DF90
+CWorldParam__BspCacheCallback 0078DF90 f end=0078E067
+CWorldParam__HWPCFCallback 0078E070 f end=0078E105
+CWorldParam__GxTextureCacheSizeCallback 0078E110 f end=0078E196
+CWorldParam__Initialize 0078E400 f end=0078E94A
 AreaListRegisterLocation 0078F020 f end=0078F1EC
 CWorldScene__FrustumXform 0078FB00 f end=0078FB20
 CWorldScene__FrustumCull 0078FB20 f end=0078FB47
@@ -4533,6 +4593,7 @@ DayNight__SetOverrideFog 007ED870 f end=007ED901 ; DayNight::SetOverrideFog(floa
 DayNight__SetDirection 007EEA90 f end=007EECBC ; DayNight::SetDirection()
 DayNight__SetPlanets 007EECC0 f end=007EF6D7 ; DayNight::SetPlanets()
 DayNight__UpdateFog 007F16F0 f end=007F1B0C ; DayNight::UpdateFog()
+CWorldParam__CloudLODCallback 007F1CD0 f end=007F1D2D
 DayNightInitialize 007F2790 f end=007F2A1F
 DayNight__SetColors 007F3230 f end=007F3913 ; DayNight::SetColors()
 DayNight__UpdateLighting 007F3920 f end=007F39AA ; DayNight::UpdateLighting()
@@ -4607,6 +4668,7 @@ FrameXML_RegisterFactory 00813D20 f end=00813DEF
 FrameXML_RegisterDefault 00813DF0 f end=00813EDC
 FrameXML_ProcessFile 00813EE0 f end=00814333
 FrameXML_CreateFrames 00814340 f end=008145A3
+XMLNode__GetChildByName 008146F0 f end=0081472A
 XMLNode__GetAttributeByName 00814730 f end=00814793
 XMLNode__Recycle 00814CE0 f end=00814D53
 XMLTree__Free 00814D60 f end=00814D87
@@ -5373,6 +5435,7 @@ CGBattlefieldInfo__m_logFilterFaction 00ACD170 l
 CGBattlefieldInfo__m_allowJoin 00ACD174 l
 CGAuctionHouse__m_desiredDelayTime 00ACF628 l
 s_cursorNames 00AD2808 l type="char*[53]"
+s_physicalDamageClassID 00AD2F90 l
 g_achievementDB 00AD305C l type="WowClientDB_AchievementRec" ; 0xEB
 g_achievement_CriteriaDB 00AD3080 l type="WowClientDB_Achievement_CriteriaRec" ; 0xEC
 g_achievement_CategoryDB 00AD30A4 l type="WowClientDB_Achievement_CategoryRec" ; 0xED
@@ -5631,6 +5694,7 @@ s_smallCull 00ADBEC0 l type="float[4][2]"
 s_distCull 00ADBEE0 l type="float[4][2]"
 s_farClip 00ADBF00 l type="float[5][2]"
 g_videoHardwareDB 00ADBF88 l type="WowClientDB_VideoHardwareRec"
+g_spellMissStrings 00ADBFAC l
 World__groundEffectDistValue 00ADEEB8 l
 World__loadMax 00ADEEC4 l
 World__loadMin 00ADEEC8 l
@@ -5693,6 +5757,7 @@ CCharacterCreation__m_charPreferences 00B6B0D0 l
 CCharacterCreation__m_raceIndex 00B6B180 l
 CGlueMgr__m_surveyDownload 00B6B250 l
 CGlueMgr__m_patchDownload 00B6B25C l
+CGlueMgr__m_deleteLocalPatch 00B6B260 l
 CGChat__s_activeDisplayChannelName 00B743E0 l
 CGChat__s_displayChannels 00B74468 l
 CGChat__m_whisperDstHistory 00BCEB60 l
@@ -5724,11 +5789,13 @@ CGGameUI__m_lastEnemyTarget 00BD07C0 l
 CGGameUI__m_lastFriendTraget 00BD07C8 l
 CGGameUI__m_directionalTarget 00BD07D8 l
 CGGameUI__m_cursorSpell 00BD07E0 l
+CGGameUI__m_cursorMacro 00BD07E8 l
 CGGameUI__m_aspect 00BD07F8 l
 CGGameUI__m_inCinematic 00BD07FC l
 CGGameUI__m_corpseMapID 00BD0818 l
 CGGameUI__m_corpseActualMapID 00BD081C l
 CGGameUI__m_corpseGUID 00BD0828 l
+CGGameUI__m_corpseTransportGUID 00BD0830 l
 CGGameUI__m_areaSpiritHealerGUID 00BD0838 l
 CGGameUI__m_repopTime 00BD0848 l
 CGGameUI__m_deadNoRepopTimer 00BD084C l
@@ -5755,6 +5822,7 @@ CGWorldStateInfo__m_nextUpdateTime 00BE8F48 l
 CGWorldStateInfo__m_areaID 00BE8F50 l
 CGWorldStateInfo__m_mapID 00BE8F54 l
 CGLookingForGroup__m_lastProposalID 00BEAA18 l
+CGUIBindings__s_bindings 00BEADD8 l
 CGUIMacros__m_sortedMacros 00BEAE20 l
 CGUIMacros__m_macroRunning 00BEAF48 l
 CGUIMacros__m_macroButton 00BEAF4C l
