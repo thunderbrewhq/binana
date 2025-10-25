@@ -502,6 +502,7 @@ TextureInitialize 004B7F80 f end=004B7FF7
 LoadBlpMips 004B8070 f end=004B81CE type="int32_t __usercall func@<eax>(char* ext@<eax>, char* filename@<ebx>, int32_t a3, MipBits** mipBits, uint32_t* width, uint32_t* height, uint32_t* isOpaque, uint32_t* alphaBits, PIXEL_FORMAT* dataFormat)"
 TextureLoadImage 004B81D0 f end=004B8385 type="MipBits* func(const char* filename, uint32_t* width, uint32_t* height, PIXEL_FORMAT* dataFormat, int32_t* isOpaque, CStatus* status, uint32_t* alphaBits, int32_t a8)"
 TextureCreate 004B8C80 f end=004B8D6A
+TextureCreate 004B9200 f end=004B9235
 AsyncFileReadProgressCallback 004B9910 f end=004B9926
 AsyncFileReadIngameProgressCallback 004B9930 f end=004B9946
 AsyncFileReadPollHandler 004B9B20 f end=004B9BF6 ; AsyncFileReadPollHandler(void const*, void*)
@@ -802,13 +803,102 @@ CNameGen__LoadNames 004E6790 f end=004E68D6
 CSimpleModelFFX_ResetLights 004E6BE0 f end=004E6C5C
 CSimpleModelFFX_AddLight 004E6C60 f end=004E6D4B
 CSimpleModelFFX__CreateScriptMetaTable 004E6F60 f end=004E6F79 ; CSimpleModelFFX::CreateScriptMetaTable()
+CCharacterComponent__ComponentCloseFingers 004E7700 f end=004E774B
+CCharacterComponent__ComponentOpenFingers 004E7750 f end=004E778F
+CCharacterComponent__ApplyMonsterGeosets 004E7790 f end=004E77FA
 CCharacterComponent__RemoveLinkpt 004E79A0 f end=004E7A26
+CCharacterComponent__GetNumSkins 004E7B80 f end=004E7C0C
+CCharacterComponent__GetNumHairStylesForColor 004E7C10 f end=004E7CA8
+CCharacterComponent__GetNumHairColorsForStyle 004E7CB0 f end=004E7D4A
+CCharacterComponent__GetNumFacesForSkin 004E7D50 f end=004E7DE8
+CCharacterComponent__GetNumFacialFeaturesForHairColor 004E7DF0 f end=004E7E8C
+CCharacterComponent__GetNthFacialFeatureIndex 004E80E0 f end=004E81BF
+CCharacterComponent__CreateRequestAU 004E8E70 f end=004E8EF4
+CCharacterComponent__CreateRequestAL 004E8F00 f end=004E8F84
+CCharacterComponent__CreateRequestHA 004E8F90 f end=004E8FE9
+CCharacterComponent__CreateRequestHU 004E8FF0 f end=004E90D8
+CCharacterComponent__CreateRequestHL 004E90E0 f end=004E91C8
+CCharacterComponent__CreateRequestTU 004E91D0 f end=004E9274
+CCharacterComponent__CreateRequestTL 004E9280 f end=004E9304
+CCharacterComponent__CreateRequestLU 004E9310 f end=004E93F8
+CCharacterComponent__CreateRequestLL 004E9400 f end=004E94A6
+CCharacterComponent__CreateRequestFO 004E94B0 f end=004E9509
+CCharacterComponent__UpdateSections 004E9510 f end=004E95A1
+CCharacterComponent__ValidateComponentData 004E9D50 f end=004E9FFD
+CCharacterComponent__ReplaceExtraSkinTexture 004EA0B0 f end=004EA142
+CCharacterComponent__ReplaceHairTexture 004EA150 f end=004EA1F0
+CCharacterComponent__LoadBaseVariation 004EA1F0 f end=004EA2E7
+CCharacterComponent__SetHairColor 004EA2F0 f end=004EA3DC
+CCharacterComponent__SetHairStyle 004EA3E0 f end=004EA48B
+CCharacterComponent__SetFace 004EA490 f end=004EA586
+CCharacterComponent__SetBeardStyle 004EA590 f end=004EA6A6
+CCharacterComponent__SetSkinColor 004EA6B0 f end=004EA876
+CCharacterComponent__ComponentUtilAddItemVisual 004EA8F0 f end=004EA9D1
+CCharacterComponent__AddLink 004EAA70 f end=004EAB4D
+CCharacterComponent__MakeAmmoModel 004EAB50 f end=004EACCC
+CCharacterComponent__AddHandItem 004EACD0 f end=004EAF33
 CCharacterComponent__RemoveHandItem 004EB070 f end=004EB125
+CCharacterComponent__SetNextSkin 004EB150 f end=004EB290
+CCharacterComponent__SetPrevSkin 004EB290 f end=004EB3D2
+CCharacterComponent__SetRandomSkin 004EB3E0 f end=004EB462
+CCharacterComponent__SetRandomHairStyle 004EB470 f end=004EB4F6
+CCharacterComponent__SetNextHairColor 004EB500 f end=004EB5BD
+CCharacterComponent__SetPrevHairColor 004EB5C0 f end=004EB67E
+CCharacterComponent__SetRandomHairColor 004EB680 f end=004EB708
+CCharacterComponent__SetNextFace 004EB710 f end=004EB98A
+CCharacterComponent__SetPrevFace 004EB990 f end=004EBC08
+CCharacterComponent__SetRandomFace 004EBC10 f end=004EBC98
+CCharacterComponent__SetNextFacialFeature 004EBCA0 f end=004EBE73
+CCharacterComponent__SetPrevFacialFeature 004EBE80 f end=004EC049
+CCharacterComponent__SetRandomFacialFeature 004EC050 f end=004EC0E0
+CCharacterComponent__ClearGuildTabard 004EC0E0 f end=004EC1B8
+CCharacterComponent__TurnOffGuildTabardPurchase 004EC510 f end=004EC54B
+CCharacterComponent__GeosRenderPrep 004ED900 f end=004EE0C1
+CCharacterComponent__RemoveItem 004EE460 f end=004EE699
+CCharacterComponent__RemoveItemBySlot 004EE6D0 f end=004EEAE7
+CCharacterComponent__AddHelm 004EF0D0 f end=004EF250
+CCharacterComponent__BuildShoulderItemPaths 004EF4B0 f end=004EF70C
+CCharacterComponent__AreShoulderModelsCorrect 004EF710 f end=004EF839
+CCharacterComponent__constructor 004EFBE0 f end=004EFC96
+CCharacterComponent__UpdateBaseTexture 004EFDF0 f end=004EFEB1
+CCharacterComponent__CreateBaseTexture 004EFF10 f end=004EFF97
+CCharacterComponent__SetNextHairStyle 004F0490 f end=004F062B
+CCharacterComponent__SetPrevHairStyle 004F0630 f end=004F07CA
+CCharacterComponent__AllocComponent 004F0980 f end=004F09CC
+CCharacterComponent__ProcessFinishedRequest 004F0E80 f end=004F0EE0
+CCharacterComponent__CreateComponentFreeLists 004F0F70 f end=004F10DB
+CCharacterComponent__AllocComponentRequest 004F10E0 f end=004F1176
+CCharacterComponent__ProcessComponentFinishedList 004F1180 f end=004F12A6
+CCharacterComponent__RenderPrep 004F1520 f end=004F15DF
 CCharacterComponent__FreeComponent 004F16C0 f end=004F16E8
+CCharacterComponent__ThreadInitialize 004F16F0 f end=004F1789
+CCharacterComponent__CreateComponentRequest 004F1790 f end=004F184B
+CCharacterComponent__Update 004F18F0 f end=004F1A16
+CCharacterComponent__Initialize 004F1A20 f end=004F1EC5
+CCharacterComponent__ThreadDestroy 004F1ED0 f end=004F1FB9
+CCharacterComponent__SkinNpc 004F1FC0 f end=004F20BB
+CCharacterComponent__ReplaceMonsterSkin 004F20C0 f end=004F21DF
 CCharacterComponent__AddCape 004F21E0 f end=004F231E
+CCharacterComponent__Destroy 004F2320 f end=004F24C9
+CCharacterComponent__Init 004F24D0 f end=004F2635
 CCharacterComponent__AddItem 004F2640 f end=004F2804
 CCharacterComponent__AddItem 004F2830 f end=004F287F
 CCharacterComponent__AddItemBySlot 004F2880 f end=004F2974
+CCharacterComponent__AddItemByType 004F29C0 f end=004F2AE2
+TextureCacheCopyTexture 004F2CE0 f end=004F2CF5
+TextureCacheHasMips 004F2D80 f end=004F2DA7
+TextureCacheResetLoadCount 004F2DB0 f end=004F2DBB
+TextureCacheDestroyTexture 004F31A0 f end=004F31EA
+TextureCacheCreateTexture 004F3930 f end=004F3999
+ComponentFlagsMatch 004F39A0 f end=004F3A15
+GetSelectionFromContext 004F3A40 f end=004F3A80
+GetContextFromSelection 004F3A90 f end=004F3ABB
+ComponentGetNumVariations 004F3AE0 f end=004F3B09
+ComponentGetNumColors 004F3B10 f end=004F3B4E
+ComponentValidateBase 004F3B50 f end=004F3B9F
+ComponentGetSectionsRecord 004F3BA0 f end=004F3C0C
+BuildComponentArray 004F3DD0 f end=004F3DE2
+CountFacialFeatures 004F41B0 f end=004F422A
 CPassenger__PostInit 004F4280 f end=004F429E
 CPassenger__GetRawPosition 004F4500 f end=004F45AC
 CGObject_C__TotalFieldsSaved 004F4A10 f end=004F4A16
@@ -4782,6 +4872,7 @@ CM2Model__SetIndices 00828F90 f end=00829160 ; CM2Model::SetIndices() const
 CM2Model__SetVertices 00829160 f end=00829296 ; CM2Model::SetVertices(int, M2SkinSection*, unsigned int) const
 CM2Model__RenderModelBatchesForProjectedTexture 00829AA0 f end=00829B94 ; CM2Model::RenderModelBatchesForProjectedTexture()
 CM2Model__constructor 0082BE60 f end=0082C1B7 ; CM2Model::CM2Model()
+CM2Model__SetGeometryVisible 0082C7C0 f end=0082C89B
 CM2Model__OptimizeVisibleGeometry 0082C970 f end=0082CEC2 ; CM2Model::OptimizeVisibleGeometry()
 CM2Model__AnimateParticlesMT 0082D2F0 f end=0082D6E1 ; CM2Model::AnimateParticlesMT()
 CM2Model__AnimateTextureTransformsMT 0082D6F0 f end=0082D903 ; CM2Model::AnimateTextureTransformsMT()
@@ -5460,6 +5551,7 @@ g_charSectionsDB 00AD332C l type="WowClientDB_CharSectionsRec" ; 0xFF
 g_charStartOutfitDB 00AD3350 l type="WowClientDB_CharStartOutfitRec" ; 0x100
 g_charTitlesDB 00AD3374 l type="WowClientDB_CharTitlesRec" ; 0x101
 g_characterFacialHairStylesDB 00AD3398 l type="WowClientDB_CharacterFacialHairStylesRec" ; 0x102
+g_characterFacialHairStylesDB 00AD33A0 l
 g_chatChannelsDB 00AD33BC l type="WowClientDB_ChatChannelsRec" ; 0x103
 g_chatProfanityDB 00AD33E0 l type="WowClientDB_ChatProfanityRec" ; 0x104
 g_chrClassesDB 00AD3404 l type="WowClientDB_ChrClassesRec" ; 0x105
@@ -5755,9 +5847,22 @@ CGlueMgr__m_numChangedOptionWarnings 00B6AF9C l
 CGlueMgr__m_showedDisconnect 00B6AFA0 l
 CCharacterCreation__m_charPreferences 00B6B0D0 l
 CCharacterCreation__m_raceIndex 00B6B180 l
+CCharacterComponent__m_skinIndex 00B6B18C l
 CGlueMgr__m_surveyDownload 00B6B250 l
 CGlueMgr__m_patchDownload 00B6B25C l
 CGlueMgr__m_deleteLocalPatch 00B6B260 l
+CCharacterComponent__s_threadPropContext 00B6B4E0 l
+CCharacterComponent__s_bComponentCompression 00B6B4E4 l
+CCharacterComponent__s_bComponentThread 00B6B4E8 l
+CCharacterComponent__s_mipLevels 00B6B4F4 l
+CCharacterComponent__s_gxFormatHigh 00B6B704 l
+CCharacterComponent__s_gxFormat 00B6B85C l
+CCharacterComponent__s_characterFacialHairStylesList 00B6B860 l
+CCharacterComponent__s_chrVarArray 00B6B864 l
+CCharacterComponent__s_chrVarArrayLength 00B6B874 l
+CCharacterComponent__s_thread 00B6B9C8 l
+CCharacterComponent__s_threadBeginEvent 00B6B9CC l
+s_loadCount 00B6BA50 l
 CGChat__s_activeDisplayChannelName 00B743E0 l
 CGChat__s_displayChannels 00B74468 l
 CGChat__m_whisperDstHistory 00BCEB60 l
