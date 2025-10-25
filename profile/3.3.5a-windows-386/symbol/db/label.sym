@@ -236,3 +236,4 @@ g_lightIntBandDB 00AF49BC l type="WowClientDB_LightIntBandRec" ; 0x15D
 g_lightFloatBandDB 00AF49E0 l type="WowClientDB_LightFloatBandRec" ; 0x15C
 g_lightParamsDB 00AF4A04 l type="WowClientDB_LightParamsRec" ; 0x15E
 g_lightDB 00AF4A28 l type="WowClientDB_LightRec" ; 0x15B
+g_characterFacialHairStylesDB 00AD33A0 l
