@@ -42,7 +42,7 @@ struct CMapEntity
     void* unk_m2Model_034; //0x34    
     C3Vector vec1;
     float unk_044; //0x44
-    CAaBox bbox;
+    CAaBox bboxStaticEntity;
     C3Vector vec2;    
     C3Vector position;
     float scale; //0x78    

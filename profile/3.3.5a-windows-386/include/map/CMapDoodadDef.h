@@ -40,7 +40,7 @@ struct CMapDoodadDef
     void* unk_m2Model_034; //0x34    
     C3Vector vec1;
     float unk_044; //0x44
-    CAaBox bbox;
+    CAaBox bboxStaticEntity;
     C3Vector vec2;    
     C3Vector position;
     float scale; //0x78    
@@ -64,7 +64,7 @@ struct CMapDoodadDef
     int32_t unk_0B4; //0xB4
     int32_t unk_0B8; //0xB8
     int32_t unk_0BC; //0xBC    
-	CAaBox bbox;
+	CAaBox bboxDoodadDef;
 	C44Matrix mat;	
     C44Matrix identity;	
     int32_t unk_158; //0x158 sound

@@ -9541,6 +9541,79 @@
       ]
     },
     {
+      "name": "ComponentData",
+      "size": 380,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "raceID",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "sexID",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "classID",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "hairColorID",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "skinID",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "faceID",
+          "offset": 20
+        },
+        {
+          "type": "int32_t",
+          "name": "facialHairStyleID",
+          "offset": 24
+        },
+        {
+          "type": "int32_t",
+          "name": "hairStyleID",
+          "offset": 28
+        },
+        {
+          "type": "CM2Model*",
+          "name": "m2Model",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 36
+        },
+        {
+          "type": "char",
+          "name": "npcBackedTexturePath",
+          "arrsize": 260,
+          "offset": 40
+        },
+        {
+          "type": "uint32_t",
+          "name": "geosets",
+          "arrsize": 19,
+          "offset": 300
+        },
+        {
+          "type": "CTexture*",
+          "name": "characterBaseSkin",
+          "offset": 376
+        }
+      ]
+    },
+    {
       "name": "CpuHardware",
       "size": 24,
       "members": [
@@ -20279,6 +20352,29 @@
           "type": "int32_t",
           "name": "m_itemLevel",
           "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "ItemDisplay",
+      "size": 60,
+      "members": [
+        {
+          "type": "void*",
+          "name": "texture",
+          "arrsize": 7,
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "displayID",
+          "arrsize": 7,
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "displayFlag",
+          "offset": 56
         }
       ]
     },
@@ -34414,6 +34510,96 @@
           "type": "SoundHardware*",
           "name": "soundHw",
           "offset": 48
+        }
+      ]
+    },
+    {
+      "name": "CCharacterComponent",
+      "size": 1328,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unk_000",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_004",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "flags",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "sections",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "objectIndex",
+          "offset": 16
+        },
+        {
+          "type": "EGxTexFormat",
+          "name": "texFormat",
+          "offset": 20
+        },
+        {
+          "type": "ComponentData",
+          "name": "componentData",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "m_textureVariation",
+          "arrsize": 15,
+          "offset": 404
+        },
+        {
+          "type": "ItemDisplay",
+          "name": "itemDisplayInfo",
+          "arrsize": 10,
+          "offset": 464
+        },
+        {
+          "type": "uint32_t",
+          "name": "itemModels",
+          "arrsize": 11,
+          "offset": 1064
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_454",
+          "offset": 1108
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_458",
+          "offset": 1112
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_45C",
+          "offset": 1116
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_460",
+          "offset": 1120
+        },
+        {
+          "type": "uint32_t",
+          "name": "unkArray",
+          "arrsize": 50,
+          "offset": 1124
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_52C",
+          "offset": 1324
         }
       ]
     },
@@ -51922,7 +52108,7 @@
         },
         {
           "type": "CAaBox",
-          "name": "bbox",
+          "name": "bboxStaticEntity",
           "offset": 72
         },
         {
@@ -52027,7 +52213,7 @@
         },
         {
           "type": "CAaBox",
-          "name": "bbox",
+          "name": "bboxDoodadDef",
           "offset": 192
         },
         {
@@ -53437,7 +53623,7 @@
         },
         {
           "type": "CAaBox",
-          "name": "bbox",
+          "name": "bboxStaticEntity",
           "offset": 72
         },
         {

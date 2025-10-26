@@ -92,6 +92,8 @@
 #include "map/CMapEntity.h"
 #include "map/CMapBaseObjLink.h"
 
+#include "character/CCharacterComponent.h"
+
 #include "net/message.h"
 
 #include "nvapi/nvapi.h"
