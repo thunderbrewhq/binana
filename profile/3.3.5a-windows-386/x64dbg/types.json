@@ -9542,7 +9542,7 @@
     },
     {
       "name": "ComponentData",
-      "size": 380,
+      "size": 376,
       "members": [
         {
           "type": "int32_t",
@@ -9596,7 +9596,7 @@
         },
         {
           "type": "char",
-          "name": "npcBackedTexturePath",
+          "name": "npcBakedTexturePath",
           "arrsize": 260,
           "offset": 40
         },
@@ -9605,11 +9605,6 @@
           "name": "geosets",
           "arrsize": 19,
           "offset": 300
-        },
-        {
-          "type": "CTexture*",
-          "name": "characterBaseSkin",
-          "offset": 376
         }
       ]
     },
@@ -34551,6 +34546,11 @@
           "type": "ComponentData",
           "name": "componentData",
           "offset": 24
+        },
+        {
+          "type": "CTexture*",
+          "name": "characterBaseSkin",
+          "offset": 400
         },
         {
           "type": "void*",
