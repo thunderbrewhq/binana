@@ -1,4 +1,5 @@
 
+
 operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
 operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
 CDataStore__constructor 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
@@ -4107,6 +4108,8 @@ CvarListCommandHandler 00767220 f end=0076734A ; 00005410
 CVar__DeleteAccountCVars 007673A0 f end=007673E4 ; 00005400
 CVar__Destroy 007673F0 f end=00767434 type="void __stdcall func()"
 CVar__Lookup 00767440 f end=0076745B ; CVar::Lookup(char const*)
+CVar__Reset 00767840 f end=007678F0
+CVar__Default 007678F0 f end=007679A0
 CVar__Register 00767FC0 f end=007681E9 type="CVar* __stdcall func(char* name, char* help, uint32_t flags, const char* value, void* fcn, uint32_t category, bool a7, void* arg, bool a9)"
 CVar__Initialize 00768340 f end=00768402 type="void __stdcall func(char* filename)"
 ConsoleCommand_Quit 00768410 f end=0076841B type="int32_t __stdcall func(char* command, char* arguments)"
@@ -5804,8 +5807,45 @@ s_sleepInBackground 00B1D2AC l type="int32_t"
 NvApi__s_initialized 00B2376C l
 result 00B23770 l type="int32_t"
 NvApi__s_interface_table 00B23778 l type="NvApi__InterfaceTable[253]"
+s_cvM2ForceAdditiveParticleSort 00B2F000 l type="CVar*"
+s_cvM2BatchParticles 00B2F004 l type="CVar*"
+s_cvM2BatchDoodads 00B2F008 l type="CVar*"
+s_cvM2UseThreads 00B2F00C l type="CVar*"
+s_cvM2UseClipPlanes 00B2F010 l type="CVar*"
+s_cvM2UseZFill 00B2F014 l type="CVar*"
+s_cvM2FasterDebug 00B2F018 l type="CVar*"
+s_cvM2Faster 00B2F01C l type="CVar*"
+s_cvDesktopGamma 00B2F020 l type="CVar*"
+s_cvGamma 00B2F024 l type="CVar*"
+s_cvErrorFilter 00B2F028 l type="CVar*"
+s_cvErrorLevelMax 00B2F02C l type="CVar*"
+s_cvErrorLevelMin 00B2F030 l type="CVar*"
+s_cvShowErrors 00B2F034 l type="CVar*"
+s_cvErrors 00B2F038 l type="CVar*"
+s_cvMouseSpeed 00B2F03C l type="CVar*"
+s_cvScreenshotQuality 00B2F04C l type="CVar*"
 s_streamingdiag 00B2F050 l
+s_cvScreenshotFormat 00B2F85C l type="CVar*"
+s_cvReadContest 00B2F960 l type="CVar*"
+s_cvReadScanning 00B2F964 l type="CVar*"
+s_cvReadTerminationWithoutNotice 00B2F968 l type="CVar*"
+s_cvReadEULA 00B2F96C l type="CVar*"
+s_cvReadTOS 00B2F970 l type="CVar*"
+s_cvLastCharacterIndex 00B2F974 l type="CVar*"
+s_cvCheckAddonVersion 00B2F978 l type="CVar*"
+s_cvMovieSubtitle 00B2F97C l type="CVar*"
+s_cvExpansionMovie 00B2F980 l type="CVar*"
+s_cvMovie 00B2F984 l type="CVar*"
+s_cvAccountList 00B2F98C l type="CVar*"
+s_cvAccountName 00B2F990 l type="CVar*"
 g_clientEventContext 00B2F994 l type="HEVENTCONTEXT"
+s_cvComponentTextureLevel 00B2F9EC l type="CVar*"
+s_cvComponentThread 00B2F9F0 l type="CVar*"
+s_cvComponentCompress 00B2F9F4 l type="CVar*"
+s_cvUIFaster 00B2F9F8 l type="CVar*"
+s_cvTextureCacheSize 00B2F9FC l type="CVar*"
+s_cvTextureFilteringMode 00B2FA00 l type="CVar*"
+s_cvAsyncHandlerTimeout 00B2FA08 l type="CVar*"
 Blizzard__Streaming__s_streamingReady 00B38180 l type="bool"
 Blizzard__Streaming__s_isStreamingTrial 00B38181 l type="bool"
 System_File__s_read_init 00B38A5C l type="Blizzard__Lock__DoOnceData"
@@ -5822,6 +5862,7 @@ s_netServer 00B417E0 l
 s_threadListCritsect 00B417E8 l type="SCritSect"
 s_shutdownEvent 00B41824 l type="SEvent"
 s_messageRecycler 00B41850 l type="CDataRecycler"
+s_cvHeapAllocTracking 00B4AFBC l type="CVar*"
 CGlueMgr__m_ffxActive 00B6A180 l
 CGlueMgr__m_deathEffect 00B6A184 l
 CGlueMgr__m_glowEffect 00B6A188 l
@@ -5913,10 +5954,92 @@ CGGameUI__m_iMapID 00BD0888 l
 CGGameUI__m_iCurrentMapID 00BD088C l
 CGGameUI__m_bOwnsInstance 00BD0890 l
 CGGameUI__m_lastRegenTime 00BD08A0 l
+s_cvTaintLog 00BD08E4 l type="CVar*"
+s_cvScriptErrors 00BD08E8 l type="CVar*"
+s_cvScriptProfile 00BD08EC l type="CVar*"
 s_cvDeselectOnClick 00BD08F0 l type="CVar*"
+s_cvAutoStand 00BD08F8 l type="CVar*"
+s_cvAutoDismount 00BD08FC l type="CVar*"
+s_cvAutoDismountFlying 00BD0900 l type="CVar*"
+s_cvAutoUnshift 00BD0904 l type="CVar*"
+s_cvAutoClearAFK 00BD0908 l type="CVar*"
+s_cvBlockTrades 00BD090C l type="CVar*"
+s_cvLootUnderMouse 00BD0910 l type="CVar*"
 s_cvAutoLootDefault 00BD0914 l type="CVar*"
+s_cvAssistAttack 00BD0918 l type="CVar*"
+s_cvAutoRangedCombat 00BD091C l type="CVar*"
+s_cvAutoSelfCast 00BD0920 l type="CVar*"
+s_cvStopAutoAttackOnTargetChange 00BD0924 l type="CVar*"
+s_cvShowTargetOfTarget 00BD0928 l type="CVar*"
+s_cvTargetOfTargetMode 00BD092C l type="CVar*"
+s_cvShowTargetCastbar 00BD0930 l type="CVar*"
+s_cvShowVKeyCastbar 00BD0934 l type="CVar*"
+s_cvBuffDurations 00BD0938 l type="CVar*"
+s_cvRotateMinimap 00BD093C l type="CVar*"
+s_cvMinimapZoom 00BD0940 l type="CVar*"
+s_cvMinimapInsideZoom 00BD0944 l type="CVar*"
+s_cvScreenEdgeFlash 00BD094C l type="CVar*"
+s_cvShowLootSpam 00BD0950 l type="CVar*"
+s_cvDisplayFreeBagSlots 00BD0954 l type="CVar*"
+s_cvDisplayWorldPVPObjectives 00BD0958 l type="CVar*"
+s_cvProfanityFilter 00BD095C l type="CVar*"
+s_cvSpamFilter 00BD0960 l type="CVar*"
+s_cvChatBubbles 00BD0964 l type="CVar*"
+s_cvChatBubblesParty 00BD0968 l type="CVar*"
+s_cvRemoveChatDelay 00BD096C l type="CVar*"
+s_cvGuildShowOffline 00BD0970 l type="CVar*"
+s_cvGuildMemberNotify 00BD0974 l type="CVar*"
+s_cvGuildRecruitmentChannel 00BD0978 l type="CVar*"
+s_cvSecureAbilityToggle 00BD097C l type="CVar*"
+s_cvCombatDamage 00BD0980 l type="CVar*"
+s_cvCombatLogPeriodicSpells 00BD0984 l type="CVar*"
+s_cvPetMeleeDamage 00BD0988 l type="CVar*"
+s_cvPetSpellDamage 00BD098C l type="CVar*"
+s_cvCombatHealing 00BD0990 l type="CVar*"
+s_cvCalendarShowWeeklyHolidays 00BD0998 l type="CVar*"
+s_cvCalendarShowDarkmoon 00BD099C l type="CVar*"
+s_cvCalendarShowBattlegrounds 00BD09A0 l type="CVar*"
+s_cvCalendarShowLockouts 00BD09A4 l type="CVar*"
+s_cvCalendarShowResets 00BD09A8 l type="CVar*"
+s_cvUseUiScale 00BD09B0 l type="CVar*"
+s_cvNameplateShowEnemies 00BD09B8 l type="CVar*"
+s_cvNameplateShowEnemyPets 00BD09BC l type="CVar*"
+s_cvNameplateShowEnemyGuardians 00BD09C0 l type="CVar*"
+s_cvNameplateShowEnemyTotems 00BD09C4 l type="CVar*"
+s_cvNameplateShowFriends 00BD09C8 l type="CVar*"
+s_cvNameplateShowFriendlyPets 00BD09CC l type="CVar*"
+s_cvNameplateShowFriendlyGuardians 00BD09D0 l type="CVar*"
+s_cvNameplateShowFriendlyTotems 00BD09D4 l type="CVar*"
+s_cvNameplateAllowOverlap 00BD09D8 l type="CVar*"
+s_cvUnitHighlights 00BD09DC l type="CVar*"
+s_cvEnablePVPNotifyAFK 00BD09E0 l type="CVar*"
+s_cvServiceTypeFilter 00BD09E4 l type="CVar*"
+s_cvAutojoinPartyVoice 00BD09E8 l type="CVar*"
+s_cvAutojoinBGVoice 00BD09EC l type="CVar*"
+s_cvCombatLogRetentionTime 00BD09F0 l type="CVar*"
+s_cvCurrencyTokensUnused1 00BD09F4 l type="CVar*"
+s_cvCurrencyTokensUnused2 00BD09F8 l type="CVar*"
+s_cvCurrencyTokensBackpack1 00BD09FC l type="CVar*"
+s_cvCurrencyTokensBackpack2 00BD0A00 l type="CVar*"
 g_predictedHealthCVar 00BD0A04 l type="CVar*"
 g_predictedPowerCVar 00BD0A08 l type="CVar*"
+s_cvThreatWarning 00BD0A0C l type="CVar*"
+s_cvThreatWorldText 00BD0A10 l type="CVar*"
+s_cvThreatShowNumeric 00BD0A14 l type="CVar*"
+s_cvThreatPlaySounds 00BD0A18 l type="CVar*"
+s_cvShowAllSpellRanks 00BD0A1C l type="CVar*"
+s_cvShowClassColorInNameplate 00BD0A20 l type="CVar*"
+s_cvPreviewTalents 00BD0A24 l type="CVar*"
+s_cvLfgSelectedRoles 00BD0A28 l type="CVar*"
+s_cvLfdCollapsedHeaders 00BD0A2C l type="CVar*"
+s_cvLfdSelectedDungeons 00BD0A30 l type="CVar*"
+s_cvQuestLogCollapseFilter 00BD0A34 l type="CVar*"
+s_cvAutoFilledMultiCastSlots 00BD0A38 l type="CVar*"
+s_cvQuestPOI 00BD0A3C l type="CVar*"
+s_cvTrackerSorting 00BD0A40 l type="CVar*"
+s_cvShowToastFriendRequest 00BD0A44 l type="CVar*"
+s_cvShowToastOnline 00BD0A48 l type="CVar*"
+s_cvShowToastOffline 00BD0A4C l type="CVar*"
 CGBarberShop__m_initialized 00BD19BA l
 CGSpellBook__m_stuckSpell 00BE7D8C l
 CGWorldMap__m_numLandmarks 00BE8EE0 l
@@ -5952,8 +6075,57 @@ CGGMTicketInfo__m_responseID 00C1E8D4 l
 CGCalendar__m_initialize 00C207F0 l
 CGTalentInfo_Inspect__m_inspectTarget 00C21008 l
 CGQuestLog__m_numQuest 00C23AD0 l
+s_cvPOIShiftComplete 00C23AFC l type="CVar*"
 CGRuneInfo__m_numRunes 00C24384 l
 CGRuneInfo__m_predictedRunes 00C24388 l
+s_cvCinematicJoystick 00C2495C l type="CVar*"
+s_cvCameraSmoothTimeMax 00C24970 l type="CVar*"
+s_cvCameraSmoothTimeMin 00C24974 l type="CVar*"
+s_cvCameraYawSmoothMax 00C24978 l type="CVar*"
+s_cvCameraYawSmoothMin 00C2497C l type="CVar*"
+s_cvCameraPitchSmoothMax 00C24980 l type="CVar*"
+s_cvCameraPitchSmoothMin 00C24984 l type="CVar*"
+s_cvCameraDistanceMaxFactor 00C24988 l type="CVar*"
+s_cvCameraDistanceMax 00C2498C l type="CVar*"
+s_cvCameraSubmergeFinalPitch 00C24990 l type="CVar*"
+s_cvCameraSurfaceFinalPitch 00C24994 l type="CVar*"
+s_cvCameraSubmergePitch 00C24998 l type="CVar*"
+s_cvCameraSurfacePitch 00C2499C l type="CVar*"
+s_cvCameraDive 00C249A0 l type="CVar*"
+s_cvCameraPivotDYMin 00C249A4 l type="CVar*"
+s_cvCameraPivotDXMax 00C249A8 l type="CVar*"
+s_cvCameraPivot 00C249AC l type="CVar*"
+s_cvCameraHeightIgnoreStandState 00C249B0 l type="CVar*"
+s_cvCameraWaterCollision 00C249B4 l type="CVar*"
+s_cvCameraTerrainTiltTimeMax 00C249B8 l type="CVar*"
+s_cvCameraTerrainTiltTimeMin 00C249BC l type="CVar*"
+s_cvCameraTerrainTilt 00C24C18 l type="CVar*"
+s_cvCameraSmoothStyle 00C24C1C l type="CVar*"
+s_cvCameraSmoothYaw 00C24DB0 l type="CVar*"
+s_cvCameraSmoothTrackingStyle 00C24DB4 l type="CVar*"
+s_cvCameraSmoothPitch 00C24DB8 l type="CVar*"
+s_cvCamerasmooth 00C24DBC l type="CVar*"
+s_cvCameraCustomViewSmoothing 00C24DC0 l type="CVar*"
+s_cvCameraView 00C24DC4 l type="CVar*"
+s_cvCameraViewBlendStyle 00C24E28 l type="CVar*"
+s_cvCameraFlyingMountHeightSmoothSpeed 00C24E2C l type="CVar*"
+s_cvCameraYawSmoothSpeed 00C24E30 l type="CVar*"
+s_cvCameraTargetSmoothSpeed 00C24E34 l type="CVar*"
+s_cvCameraPitchSmoothSpeed 00C24E38 l type="CVar*"
+s_cvCameraHeightSmoothSpeed 00C24E3C l type="CVar*"
+s_cvCameraGroundSmoothSpeed 00C24E40 l type="CVar*"
+s_cvCameraFoVSmoothSpeed 00C24E44 l type="CVar*"
+s_cvCameraDistanceSmoothSpeed 00C24E48 l type="CVar*"
+s_cvCameraBobbingSmoothSpeed 00C24E4C l type="CVar*"
+s_cvCameraYawMoveSpeed 00C24E50 l type="CVar*"
+s_cvCameraPitchMoveSpeed 00C24E54 l type="CVar*"
+s_cvCameraDistanceMoveSpeed 00C24E58 l type="CVar*"
+s_cvCameraBobbing 00C24E68 l type="CVar*"
+s_cvMouseInvertPitch 00C24E6C l type="CVar*"
+s_cvMouseInvertYaw 00C24E70 l type="CVar*"
+s_cvCameraSavedPitch 00C24E74 l type="CVar*"
+s_cvCameraSavedVehicleDistance 00C24E78 l type="CVar*"
+s_cvCameraSavedDistance 00C24E7C l type="CVar*"
 s_cursorFile 00C25CD0 l type="int8_t" ; wonder why it's this type
 s_cursorItemMipsWidth 00C25DD4 l
 s_cursorItemMipsHeight 00C25DD8 l
@@ -6071,12 +6243,16 @@ ClientServices__m_selectRealmInfoValid 00C79CE9 l
 ClientServices__s_loginObj 00C79CEC l
 ClientServices__m_currentConnection 00C79CF4 l
 ClientServices__s_characterInfo 00C79D10 l
+s_cvSplineOpt 00C9ECC4 l type="CVar*"
 CMissile__s_inFlightMissileList 00CA0B58 l
 CMissile__s_missileDestroyList 00CA0B5C l
+s_cvPathDistTol 00CA1194 l type="CVar*"
 CGUnit_C__s_unitThreatPool 00CA1244 l
 CGUnit_C__s_deferredClientControlUpdateGUID 00CA1248 l
 CGUnit_C__s_deferredClientControlUpdateState 00CA1250 l
 CGUnit_C__m_initialized 00CA1254 l
+s_cvObjectSelectionCircle 00CA12C8 l type="CVar*"
+s_cvFootstepSounds 00CA12D0 l type="CVar*"
 CVehicle_C__s_vehiclePool 00CA1604 l
 CSimpleScriptManager__s_callbacks 00CA1610 l
 CSimpleScriptManager__s_callbackCount 00CA1654 l
@@ -6181,6 +6357,36 @@ World__objectAoi_b_z 00CD77A4 l
 World__objectAoi_t_x 00CD77A8 l
 World__objectAoi_t_y 00CD77AC l
 World__objectAoi_t_z 00CD77B0 l
+s_cvUseWeatherShaders 00CD852C l type="CVar*"
+s_cvMaxLights 00CD856C l type="CVar*"
+s_cvMapShadows 00CD8574 l type="CVar*"
+s_cvShadowLevel 00CD8578 l type="CVar*"
+s_cvTexLodBias 00CD857C l type="CVar*"
+s_cvFarclip 00CD8580 l type="CVar*"
+s_cvNearclip 00CD8584 l type="CVar*"
+s_cvSpecular 00CD858C l type="CVar*"
+s_cvMapObjLightLOD 00CD8590 l type="CVar*"
+s_cvParticleDensity 00CD8594 l type="CVar*"
+s_cvWaterLOD 00CD8598 l type="CVar*"
+s_cvBaseMip 00CD859C l type="CVar*"
+s_cvHorizonFarclipScale 00CD85A0 l type="CVar*"
+s_cvHorizonNearclipScale 00CD85A4 l type="CVar*"
+s_cvShowfootprints 00CD85A8 l type="CVar*"
+s_cvBspcache 00CD85AC l type="CVar*"
+s_cvFootstepBias 00CD85B0 l type="CVar*"
+s_cvOcclusion 00CD85B4 l type="CVar*"
+s_cvWorldPoolUsage 00CD85B8 l type="CVar*"
+s_cvGroundEffectDensity 00CD85BC l type="CVar*"
+s_cvGroundEffectDist 00CD85C0 l type="CVar*"
+s_cvTerrainAlphaBitDepth 00CD85C4 l type="CVar*"
+s_cvFarClipOverride 00CD85C8 l type="CVar*"
+s_cvObjectFade 00CD85CC l type="CVar*"
+s_cvObjectFadeZFill 00CD85D0 l type="CVar*"
+s_cvEnvironmentDetail 00CD85D4 l type="CVar*"
+s_cvHwPCF 00CD85D8 l type="CVar*"
+s_cvExtShadowQuality 00CD85DC l type="CVar*"
+s_cvProjectedTextures 00CD85E0 l type="CVar*"
+s_cvGxTextureCacheSize 00CD85E4 l type="CVar*"
 CBarrier__s_pattern 00CD8608 l
 CBarrier__s_mask 00CD860C l
 CWorldScene__s_defaultBlendTexture 00CD8614 l
@@ -6236,6 +6442,8 @@ CMap__mapObjDefHeap 00D2542C l
 CMap__chunkLiquidHeap 00D25430 l
 CMapChunk__s_geoToTex 00D25488 l
 CMapChunk__m_vertexListXY 00D25498 l
+s_cvShadowLOD 00D3804C l type="CVar*"
+s_cvSkyCloudLOD 00D38AC8 l type="CVar*"
 FrameScript_Object__s_objectType 00D3F778 l
 s_scriptProfileEnabled 00D3F798 l type="int32_t"
 CGGameUI__m_luaTainted 00D4139C l
