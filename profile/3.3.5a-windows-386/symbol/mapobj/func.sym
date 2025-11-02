@@ -54,5 +54,7 @@ CMapObj__AsyncFailedCallback 007AE110 f end=007AE138
 CMapObj__CullBatch 007A7630 f end=007A76BF
 CMapObj__VectorIntersectPortals 007AF520 f end=007AF73E
 CMapObj__QueryLiquidStatus 007AEB90 f end=007AEC23
+CMapObj__RenderMapObjGroupsShadowMap 007AB760 f end=007ABAB6
+CMapObj__VectorIntersect 007AECB0 f end=007AEEFC
 GetMinimapQuads 007AF8D0 f end=007AFC70
 GetMinimapQuads 007AFE70 f end=007AFED2

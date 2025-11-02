@@ -42,3 +42,7 @@ CMapRenderChunk__RenderSinglePassPixelShader 007D28B0 f end=007D2D6D
 CMapRenderChunk__RenderSinglePassVertexPixelShader 007D2D70 f end=007D300D
 CMapRenderChunk__SetShaders 007D3E10 f end=007D3F6D
 CMapRenderChunk__RenderPrep 007D3F70 f end=007D3FDC
+CMapRenderChunk__RenderMultiPassAdditive 007D0760 f end=007D0D6E
+CMapRenderChunk__RenderMultiPassAlpha 007D0D70 f end=007D13E8
+CMapRenderChunk__RenderSolid 007D3010 f end=007D3226
+CMapRenderChunk__RenderSolidVertexPixelShader 007D3240 f end=007D3383

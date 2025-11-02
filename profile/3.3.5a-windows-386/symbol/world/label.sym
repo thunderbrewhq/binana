@@ -20,3 +20,5 @@ World__groundEffectDistValue 00ADEEB8 l
 World__groundEffectDistValueSqr 00CD7674 l
 World__detailDoodadAlphaRef 00CD766C l
 World__detailDoodadDensity 00CD773C l
+World__shadowModTexture 00CD7554 l
+World__shadowColor 00CD7878 l

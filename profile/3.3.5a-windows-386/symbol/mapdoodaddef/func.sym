@@ -4,3 +4,4 @@ CMapDoodadDef__Purge 007C3020 f end=007C30A6
 CMapDoodadDef__Update 007C1380 f end=007C15ED
 CMapDoodadDef__QueryInteriorLighting 007C1C40 f end=007C1DB8
 CMapDoodadDef__SelectUnderwater 007C23F0 f end=007C25C5
+CMapDoodadDef__destructor 007C2350 f end=007C23E1

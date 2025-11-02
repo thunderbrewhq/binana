@@ -12,3 +12,4 @@ CMapEntity__QueryMapObjMatrix 007A1980 f end=007A1A26
 CMapEntity__UpdateMapObjLiquid 007A1A30 f end=007A1B0A
 CMapEntity__QueryLiquidSounds 007A1B10 f end=007A1BB3
 CMapEntity__Tick 007A1E90 f end=007A2064
+CMapEntity__destructor 007A10A0 f end=007A1117

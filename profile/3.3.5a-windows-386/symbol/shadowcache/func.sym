@@ -3,3 +3,4 @@ CShadowCache__SetShadowMapGenericGlobal 008744E0 f end=008745CE ; CShadowCache::
 CShadowCache__SetShadowMapGenericInterior 008745D0 f end=00874658 ; CShadowCache::SetShadowMapGenericInterior(int)
 CShadowCache__SetShadowMapTerrain 00874660 f end=00874757
 CShadowCache__SetShadowMapDetailDoodad 00874760 f end=0087488D
+CShadowCache__SetShadowScale 00874030 f end=0087403E

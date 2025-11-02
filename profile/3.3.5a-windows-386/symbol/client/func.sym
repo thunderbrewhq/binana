@@ -25,3 +25,5 @@ NameNeedsDeclensions 0076DD20 f end=0076DD3B
 RussianNameNeedsDeclensions 0076E270 f end=0076E2A6
 IsRussian 007E1030 f end=007E1049
 ClientGameTimeTickHandler 007E27F0 f end=007E280D
+ClntObjMgrPush 004D36C0 f end=004D36F6
+ClntObjMgrPop 004D3700 f end=004D372A

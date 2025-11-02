@@ -117,3 +117,4 @@ CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF type="void __thiscall func(CG
 CGxDevice__TexIsReadyNow 006831C0 f end=006831E7
 CGxDevice__TexSetWrap 00685D40 f end=00685DBF
 GxTexSetWrap 00681450 f end=0068146C
+CGxDevice__BuffSizeSet 006831A0 f end=006831C0

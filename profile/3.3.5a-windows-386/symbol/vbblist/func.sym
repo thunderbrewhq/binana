@@ -1,0 +1,5 @@
+VBBList__Block__Set 007C8500 f end=007C8560
+VBBList__AllocBlock 007CB3B0 f end=007CB519
+VBBList__FreeVBB 007CB9F0 f end=007CBB2D
+VBBList__AssignBlock 007CBB30 f end=007CBBBC
+VBBList__AllocVBB 007CBBC0 f end=007CBCAC

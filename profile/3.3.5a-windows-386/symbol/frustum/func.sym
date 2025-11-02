@@ -1,1 +1,4 @@
 CFrustum__Cull 00983D70 f end=00983E61
+CFrustum__Translate 00983AE0 f end=00983D13
+CFrustum__Cull 009839E0 f end=00983A5C
+CFrustum__Transform 00983F40 f end=00983FA5

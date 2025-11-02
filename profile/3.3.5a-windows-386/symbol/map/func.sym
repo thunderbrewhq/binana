@@ -74,3 +74,4 @@ CMap__LinkStaticEntity 007C28F0 f end=007C2A67
 CMap__LinkStaticEntitySingle2 007C2A70 f end=007C2BE1
 CMap__LinkStaticEntityMultiple2 007C2E70 f end=007C2F76
 CMap__LinkStaticEntity 007C2F80 f end=007C2FE4
+CMap__Unload 007C3830 f end=007C39FA

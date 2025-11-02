@@ -78,3 +78,13 @@ PrintStartupError 0076B5A0 f end=0076B616 type="void __usercall __noreturn func(
 ConsoleDetectSaveHardware 0076B620 f end=0076B7DB
 ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9 type="void __stdcall func(Hardware* hardware, bool* hwChanged)" ; ConsoleDetectDetectHardware(Hardware&, bool&)
 ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
+ConsoleScreenDestroy 007662A0 f end=0076631B
+ConsoleCommandWriteHelp 00768AE0 f end=00768AF6
+ConsoleCommandInitialize 007691C0 f end=00769213
+CConsole__PrintError 00772A80 f end=00772A99
+CComand_MaxLOD 0077F600 f end=0077F64C
+CComand_WaterRipples 0077F690 f end=0077F6B0
+CComand_DetailDoodadAlpha 0077F700 f end=0077F749
+CComand_CharacterAmbient 0077F750 f end=0077F7D1
+CComand_SetShadow 00780E20 f end=00780F41
+ConsoleCommandInvalidPtrCheck 0086B5A0 f end=0086B5F5
