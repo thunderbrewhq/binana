@@ -4,3 +4,4 @@ Liquid__CInstance__Release 008A1AC0 f end=008A1AFC
 Liquid__CInstance__Create 008A1B00 f end=008A1B25
 Liquid__CMaterialBank__GetMaterial 008A1FA0 f end=008A20BD
 Liquid__CSettingsBank__GetSettings 008A28F0 f end=008A2974
+Liquid__CreateProceduralTextures 008A2E20 f end=008A2EF5

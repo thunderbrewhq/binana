@@ -10,3 +10,5 @@ CCharacterComponent__s_characterFacialHairStylesList 00B6B860 l
 CCharacterComponent__s_gxFormatHigh 00B6B704 l
 CCharacterComponent__s_mipLevels 00B6B4F4 l
 CCharacterComponent__s_chrVarArrayLength 00B6B874 l
+CCharacterComponent__m_activePlayerComponet 00B6B878 l
+

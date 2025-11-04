@@ -75,3 +75,6 @@ CMap__LinkStaticEntitySingle2 007C2A70 f end=007C2BE1
 CMap__LinkStaticEntityMultiple2 007C2E70 f end=007C2F76
 CMap__LinkStaticEntity 007C2F80 f end=007C2FE4
 CMap__Unload 007C3830 f end=007C39FA
+CMap__QueryLiquidTerrain 007A0820 f end=007A09C6
+CMap__CreateImpassableFacets 007A43D0 f end=007A4582
+CMap__CreateFlightBoundsFacets 007A4590 f end=007A4AE8

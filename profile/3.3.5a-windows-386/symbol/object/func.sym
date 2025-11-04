@@ -36,3 +36,4 @@ CGObject_C__SetTypeByTypeId 00743130 f end=007431B5
 CGObject_C__AddWorldObject 00743760 f end=007438DE
 CGObject_C__constructor 00745E60 f end=00745F8B
 CGObject_C__SetCircleRenderStates 00744EB0 f end=007450AA
+CGObject_C__GetFocusObject 007450B0 f end=0074513A

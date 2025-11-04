@@ -15,3 +15,7 @@ World__ObjectIsDrawable 0077FCD0 f end=0077FD07
 World__ObjectDestroy 007826E0 f end=00782732
 World__ValidateFarClip 00780770 f end=007807F8
 World__SetShadowColor 00780660 f end=0078070D
+World__Destroy 007837F0 f end=007BA834
+World__GetFacets 00783910 f end=00783A36
+World__GetFacets 00783A40 f end=00783A5E
+

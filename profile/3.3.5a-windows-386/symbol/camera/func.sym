@@ -9,3 +9,4 @@ CGCamera__CommentatorSetViewAndPosition 006038A0 f end=006038F1
 CGCamera__UpdateTargetFacing 00604490 f end=00604636
 CGCamera__MakeRelativeTo 00604A70 f end=00604B89
 CGCamera__SetTelescope 006053D0 f end=006056FB
+CGCamera__HasModelCamera 005FE310 f end=005FE319

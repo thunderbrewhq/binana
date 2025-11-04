@@ -8,3 +8,6 @@ CChunkLiquid__GetTris 007CEB80 f end=007CEC6E
 CChunkLiquid__destructor 007CEEF0 f end=007CEFC3
 CChunkLiquid__Batch 007CF200 f end=007CF78D
 CChunkLiquid__RenderPrep 007CF9A0 f end=007CF9D2
+CChunkLiquid__GetAaBox 007CDE80 f end=007CDEC0
+CChunkLiquid__GetHeight 007CE0B0 f end=007CE17F
+CChunkLiquid__TileExists 007CE1F0 f end=007CE26F

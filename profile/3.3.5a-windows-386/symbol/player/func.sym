@@ -53,3 +53,6 @@ PlayerNameDelete 007E6320 f end=007E6386
 Player_C_ZoneUpdateHandler 006D7BB0 f end=006D7C28
 AreaListRegisterLocation 0078F020 f end=0078F1EC
 PlayerNameTriggerColorUpdate 007E50F0 f end=007E5100
+PlayerNameUpdateLate 007E5580 f end=007E55E8
+WorldTextDelete 007E6A90 f end=007E6AB3
+WorldTextRenderBatch 007E7490 f end=007E7BA5

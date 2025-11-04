@@ -48,3 +48,4 @@ Spell_C_CancelAutoRepeat 00807560 f end=00807645
 SpellTableLookupAbility 00812410 f end=0081252A
 GetSpecialSpellVisualEffectNameRec 006F75B0 f end=006F75E0
 SpellVisualsBlizzardStop 007F9EE0 f end=007F9EF8
+SpellVisualsTick 007FCA30 f end=007FCBB7
