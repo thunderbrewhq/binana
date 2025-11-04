@@ -4,3 +4,4 @@ CMapStaticEntity__ModelEventCallback 007BD5A0 f end=007BD8A0
 CMapStaticEntity__SelectUnderwater 007C10C0 f end=007C1141
 CMapStaticEntity__AdjustLightmap 007C1AD0 f end=007C1C3A
 CMapStaticEntity__destructor 007A0C10 f end=007A0C62
+CMapStaticEntity__constructor 007A0B50 f end=007A0C0A

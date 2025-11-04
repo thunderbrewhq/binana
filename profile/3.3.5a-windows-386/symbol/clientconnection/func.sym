@@ -8,3 +8,6 @@ ClientConnection__HandleConnect 006B1260 f end=006B12C3 ; ClientConnection::Hand
 ClientConnection__Connect 006B1390 f end=006B1450 ; ClientConnection::Connect()
 ClientConnection__GetCharacterList 006B14C0 f end=006B1553 ; ClientConnection::GetCharacterList()
 ClientConnection__CharacterLogin 006B1790 f end=006B183F
+ClientConnection__SendCharEnumOpcode 00464A40 f end=00464AA6
+ClientConnection__SendPlayerLoginOpcode 00464AB0 f end=00464B28
+ClientConnection__HandleCharEnum 00464C10 f end=00464F4D

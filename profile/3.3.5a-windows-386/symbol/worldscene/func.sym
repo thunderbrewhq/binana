@@ -21,3 +21,5 @@ CWorldScene__CullChunks 00799D40 f end=00799F71
 CWorldScene__CullMapObjDefGroups 0079A160 f end=0079A259
 CWorldScene__CullSortTable 0079A790 f end=0079A861
 CWorldScene__ClearObjectFadeoutList 00782E40 f end=00782F17
+CWorldScene__RenderChunksSolid 00793B10 f end=00793C2D
+CWorldScene__RenderChunks 00798DA0 f end=00799303

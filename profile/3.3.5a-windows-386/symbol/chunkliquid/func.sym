@@ -11,3 +11,4 @@ CChunkLiquid__RenderPrep 007CF9A0 f end=007CF9D2
 CChunkLiquid__GetAaBox 007CDE80 f end=007CDEC0
 CChunkLiquid__GetHeight 007CE0B0 f end=007CE17F
 CChunkLiquid__TileExists 007CE1F0 f end=007CE26F
+CChunkLiquid__constructor 007CEE10 f end=007CEEE1

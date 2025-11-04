@@ -134,6 +134,7 @@ CGUnit_C__NamePlateSetResortAll 00715380 f end=0071539B
 CGUnit_C__NamePlateUpdateColor 007153C0 f end=007153DB
 CGUnit_C__InitializeActivePlayerComponent 0071CFA0 f end=0071D006
 CGUnit_C__SetMaxAlpha 00737390 f end=007374B7
+CGUnit_C__IsPartyMember 0052C8C0 f end=0052C9A0
 UnitCombatLogInvalidateName 0074F400 f end=0074F4CC
 UnitCombatLog 00751150 f end=007512A1
 UnitSoundInitialize 00747860 f end=007478EE

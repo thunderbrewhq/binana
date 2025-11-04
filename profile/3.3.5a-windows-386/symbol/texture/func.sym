@@ -61,3 +61,4 @@ TextureCacheDestroyTexture 004F31A0 f end=004F31EA
 TextureCacheCreateTexture 004F3930 f end=004F3999
 TextureGetDimensions 004B6610 f end=004B666A
 TextureAddRef 0047BF70 f end=0047BF82
+TextureCacheAllocEntry 004F3110 f end=004F31A0

@@ -18,4 +18,10 @@ World__SetShadowColor 00780660 f end=0078070D
 World__Destroy 007837F0 f end=007BA834
 World__GetFacets 00783910 f end=00783A36
 World__GetFacets 00783A40 f end=00783A5E
+World__TriDataToFacetData 00782740 f end=00782E32
+World__UnloadMap 00783180 f end=0078319E
+World__QueryMapId 0077F080 f end=0077F086
+World__QueryObjectInside 0077F090 f end=0077F0A4
+World__QueryMapObjAreaTable 0077F1B0 f end=0077F1D1
+World__Update 007815C0 f end=00781604
 
