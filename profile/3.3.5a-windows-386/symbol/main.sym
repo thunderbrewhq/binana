@@ -1,4 +1,6 @@
 
+
+
 operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
 operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
 CDataStore__constructor 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
@@ -272,7 +274,7 @@ ConvertUTF16toUTF8 0047B9E0 f end=0047BB9C type="int __stdcall func(char* dst, u
 sgetu8 0047BD40 f ; int __cdecl sgetu8(_BYTE *, _DWORD *)
 TextureRelease 0047BF30 f end=0047BF46
 HandleCreate 0047BF50 f end=0047BF6B
-HandleDuplicate 0047BF70 f end=0047BF82
+TextureAddRef 0047BF70 f end=0047BF82
 CoordinateSetAspectRatio 0047BF90 f end=0047BFC8
 CoordinateGetAspectRatio 0047BFD0 f end=0047BFD7
 CoordinateGetAspectCompensation 0047BFE0 f end=0047BFE7
@@ -924,6 +926,7 @@ CGWorldFrame__OnMouseModeNormal 004F5D20 f end=004F5D28
 CGWorldFrame__OnMouseModeRelative 004F5D30 f end=004F5D7F
 CGWorldFrame__SetNamePlateUpdate 004F5D80 f end=004F5D88
 CM2Model__GetBoundingBox 004F5E20 f
+CGWorldFrame__AddObjectToHitTestList 004F6270 f end=004F62D7
 CGWorldFrame__GetCameraFacing 004F6680 f end=004F66B4
 CGWorldFrame__OnLayerTrackTerrain 004F66C0 f end=004F6961
 CGWorldFrame__OnLayerMouseDown 004F6C10 f end=004F6C89
@@ -937,7 +940,10 @@ CGWorldFrame__PerformDefaultAction 004F7880 f end=004F7A3B
 CGWorldFrame__CursorTrackUnit 004F7A50 f end=004F7FE7
 CGWorldFrame__CursorTrackCorpse 004F8000 f end=004F8182
 CGWorldFrame__OnLayerTrackObject 004F8190 f end=004F837C
+CGWorldFrame__UpdateDayNight 004F8410 f end=004F865B
+CGWorldFrame__SetPlayerFadeCameraValue 004F8660 f end=004F8730
 CGWorldFrame__UpdateScreenEffect 004F88B0 f end=004F89D1
+CGWorldFrame__UpdateObject 004F8D10 f end=004F8E98
 CGWorldFrame__OnWorldRender 004F8EA0 f end=004F9298
 CGWorldFrame__MoveToFreeList 004F9310 f end=004F940F
 CGWorldFrame__FindClosestModel 004F9550 f end=004F992E
@@ -945,6 +951,7 @@ CGWorldFrame__HitTest 004F9930 f end=004F9D94
 CGWorldFrame__HitTestPoint 004F9DA0 f end=004F9F6B
 CGWorldFrame__ObjectEnumProc 004F9F70 f end=004FA040
 CGWorldFrame__OnLayerUpdate 004FA040 f end=004FA371
+CGWorldFrame__destructor 004FA390 f end=004FA55E
 CGWorldFrame__SetupDefaultAction 004FA570 f end=004FA5CE
 CGWorldFrame__UnitClear 004FA5D0 f end=004FA5EF
 CGWorldFrame__OnWorldUpdate 004FA5F0 f end=004FABC5
@@ -1043,6 +1050,7 @@ Script_SetSavedInstanceExtend 0050DC10 f end=0050DDD5
 CGChat__Complain 0050DFD0 f end=0050E117
 Script_ComplainChat 0050ED00 f end=0050EDC5
 CGChat__InitializeGame 0050EDD0 f end=0050F3ED
+CGWorldFrame__Create 0050F3F0 f end=0050F41B
 CGxDevice__CapsAspectRatio 0050F7C0 f end=0050F824
 Script_FrameXML_Debug 0050F830 f end=0050F884
 Script_GetBuildInfo 0050F890 f end=0050F8E7
@@ -1593,6 +1601,7 @@ Script_ShowWorldMapArrowFrame 005434E0 f end=00543533
 Script_ShowMiniWorldMapArrowFrame 00543540 f end=00543593
 Script_GetWintergraspWaitTime 005435A0 f end=005435FD
 Script_CanQueueForWintergrasp 00543600 f end=00543642
+CGWorldFrame__TranslateToMapCoords 00544140 f end=00544415
 CGWorldMap__GetPlayerPosition 005444F0 f end=005445EB
 Script_GetMapContinents 00544B20 f end=00544B8D
 Script_GetMapZones 00544B90 f end=00544C3B
@@ -2002,7 +2011,13 @@ Script_GetTrackingInfo 0057F1B0 f end=0057F37A
 Script_SetTracking 0057F380 f end=0057F4F0
 Script_GetTrackingTexture 0057F4F0 f end=0057F5CE
 TSGrowableArray_C2Vector__SetCount 0057FDD0 f end=0057FE93 type="void __thiscall func(TSGrowableArray_C2Vector* this, uint32_t count)"
+CGMinimapFrame__RenderInsideTexture 00581290 f end=00581739
+CGMinimapFrame__RenderInside 00581740 f end=00581CC4
+CGMinimapFrame__MinimapTextureCallback 00581CD0 f end=00581E7F
+CGMinimapFrame__Render 00581E80 f end=005831A9
 CGMinimapFrame__EnterWorld 005831C0 f end=00583291
+CGMinimapFrame__RenderCallback 005832A0 f end=005832B2
+CGMinimapFrame__OnFrameRender 005832C0 f end=005832ED
 CGMinimapFrame__InitializeGame 005832F0 f end=0058385E
 Script_GetMerchantNumItems 005841D0 f end=005841F2
 Script_GetMerchantItemLink 00584200 f end=005842C4
@@ -2943,6 +2958,7 @@ Script_VehicleAimUpStart 005FC8E0 f end=005FC920
 Script_VehicleAimDownStart 005FC920 f end=005FC960
 Script_MouselookStart 005FCC10 f end=005FCC59
 Script_SetMouselookOverrideBinding 005FD550 f end=005FD5B8
+CGCamera__HasModelCamera 005FE310 f end=005FE319
 CGCamera__ResetModelCamera 005FE320 f end=005FE357
 CGCamera__ClearModelCamera 005FE360 f end=005FE398
 CGCamera__GetCollisionQueryFlags 005FEC50 f end=005FEC67
@@ -3861,7 +3877,9 @@ CGGameObject_C__constructor 00714250 f end=00714996
 CGUnit_C__IsLocalClientControlled 00714AC0 f end=00714ACD
 CGUnit_C__ShouldFadeout 00714C40 f end=00714C74
 CGUnit_C__ForceFacingChange 00715270 f end=007152AD
+CGUnit_C__NamePlateSetResortAll 00715380 f end=0071539B
 CGUnit_C__NamePlateUpdateLevels 007153A0 f end=007153BB
+CGUnit_C__NamePlateUpdateColor 007153C0 f end=007153DB
 CGUnit_C__ObjectNameVisibilityChanged 00715560 f end=007155C9
 CGUnit_C__GetRenderFacing 007156A0 f end=007156B6
 CGUnit_C__RegisterScript 007158C0 f end=007158F4
@@ -3902,6 +3920,7 @@ CGUnit_C__GetPredictedHealth 0071C2C0 f end=0071C2DC
 CGUnit_C__GetPredictedPower 0071C2E0 f end=0071C31F
 CGUnit_C__GetCameraRelativeTo 0071C4D0 f end=0071C4F1
 CGUnit_C__SetLocalClientControl 0071C930 f end=0071C9C4
+CGUnit_C__InitializeActivePlayerComponent 0071CFA0 f end=0071D006
 CGUnit_C__BuildComponentObject 0071D010 f end=0071D1E1
 CGUnit_C__DisengageFromActivePlayer 0071EE70 f end=0071EF15
 CGUnit_C__GetVirtualItem 0071F440 f end=0071F533
@@ -3950,6 +3969,7 @@ CGUnit_C__GetDefenseSkillRank 00734F70 f end=00734F94
 CGUnit_C__GetAttackSkillRank 00734FA0 f end=00734FC4
 CGUnit_C__SetSheatheState 00736D30 f end=007370CB
 CGUnit_C__UpdateWorldObject 007370D0 f end=0073738B
+CGUnit_C__SetMaxAlpha 00737390 f end=007374B7
 CGUnit_C__UpdateAllSmoothFacing 00739630 f end=00739648
 CGUnit_C__CheckAndReportSpellInhibitFlags 00739650 f end=0073A51E
 CGUnit_C__PlaySpellVisualKit_HandleWeapon 0073A6C0 f end=0073A7EC
@@ -3993,6 +4013,7 @@ CGObject_C__GetQuestGiverCursor 00744640 f end=00744695
 CGObject_C__PlayEffectName 00744790 f end=0074486A
 CGObject_C__Reenable 00744DB0 f end=00744E0F
 CGObject_C__SetCircleRenderStates 00744EB0 f end=007450AA
+CGObject_C__GetFocusObject 007450B0 f end=0074513A
 CGObject_C__SetInteractIconVisible 00745140 f end=007451AE
 CGObject_C__GetNamePosition 007451B0 f end=00745226
 CGObject_C__PlaySpellVisualKit 00745230 f end=00745D7C
@@ -4320,7 +4341,11 @@ World__LoadMap 00781430 f end=007814F2
 World__Preload 00781500 f end=007815B7
 DayNight__Update 007816F0 f end=007819BC ; DayNight::Update(unsigned int, float, float)
 World__ObjectDestroy 007826E0 f end=00782732
+CWorldScene__ClearObjectFadeoutList 00782E40 f end=00782F17
 World__PrepareUpdate 007831A0 f end=007834FE
+World__Destroy 007837F0 f end=007BA834
+World__GetFacets 00783910 f end=00783A36
+World__GetFacets 00783A40 f end=00783A5E
 CWorldParam__TerrainLOD 0078D610 f end=0078D652
 CWorldParam__TerrainShadows 0078D660 f end=0078D6A2
 CWorldParam__MaxLights 0078D6B0 f end=0078D6E2
@@ -4353,29 +4378,42 @@ CWorldParam__HWPCFCallback 0078E070 f end=0078E105
 CWorldParam__GxTextureCacheSizeCallback 0078E110 f end=0078E196
 CWorldParam__Initialize 0078E400 f end=0078E94A
 AreaListRegisterLocation 0078F020 f end=0078F1EC
+CBarrier__Destroy 0078F510 f end=0078F56C
 CWorldScene__FrustumXform 0078FB00 f end=0078FB20
 CWorldScene__FrustumCull 0078FB20 f end=0078FB47
 CWorldScene__FrustumPop 0078FB50 f end=0078FB58
 CWorldScene__ClipBufferCull 0078FDC0 f end=0078FF99
+CWorldScene__FrustumSet 00790AF0 f end=00790E1B
+CWorldScene__FrustumSet 00790E20 f end=007910FE
 CWorldScene__FrustumSet 00791100 f end=00791120
 CFacet__Set 007912C0 f end=00791378
+CWorldScene__FrustumPush 00791950 f end=00791976
+CWorldScene__CullEntitys 00793060 f end=00793269
+CWorldScene__CullLiquid 007935A0 f end=00793755
 CWorldScene__RenderChunksZoneDebug 00793C30 f end=00793D11
+CWorldScene__Update 00795400 f end=00795CF3
 CWorldScene__LocateViewer3 00795D40 f end=00795F7F
 CWorldScene__RenderMapObjDefGroups 007964A0 f end=007968C2
+CWorldScene__Destroy 00798310 f end=007CCBD4
 CWorldScene__RenderDetailDoodads 007984A0 f end=00798794
 CWorldScene__RenderChunksSinglePass 007989C0 f end=00798D9F
 CBarrier__Initialize 00799730 f end=007997C5
 CWorldScene__Initialize 007997D0 f end=00799891
+CWorldScene__CullChunks 00799D40 f end=00799F71
+CWorldScene__CullMapObjDefGroups 0079A160 f end=0079A259
+CWorldScene__CullSortTable 0079A790 f end=0079A861
 CWorldScene__Render 0079A870 f end=0079ADBB
 CAaBsp__constructor 0079B070 f end=0079B0C8
 CAaBspDigestCache__Reset 0079B1C0 f end=0079B1E8
 CAaBsp__Clear 0079B2C0 f end=0079B308
+Particulate__SetScale 0079B360 f end=0079B370
 CMapObjGroup__QueryLiquidSounds 0079B760 f end=0079B86A
 Particulate__InitParticles 0079B8E0 f end=0079BA22
 CMapObj__QueryLiquidSounds 0079BBF0 f end=0079BCC0
 Particulate__InitMovement 0079BCC0 f end=0079BE44
 Particulate__SetTexture 0079DFF0 f end=0079E080
 Particulate__constructor 0079E100 f end=0079E191
+CWaterRipple__Initizalize 0079E1A0 f end=0079E2C3
 CMap__ClearChunkDetailDoodads 0079E730 f end=0079E774
 CMap__ClearChunkBufs 0079E780 f end=0079E7B6
 CMap__Initialize 0079E7C0 f end=0079EFD4
@@ -4383,6 +4421,7 @@ CMap__Destroy 0079F320 f end=0079F646
 CMap__QueryAreaIdTerrain 007A0490 f end=007A0530
 CMap__QueryGroundTypeTerrain 007A0530 f end=007A0699
 CMap__QueryShadow 007A06A0 f end=007A0811
+CMap__QueryLiquidTerrain 007A0820 f end=007A09C6
 CMap__QueryLiquidStatusMapObjsExt 007A09D0 f end=007A0AFF
 CMap__QueryLiquidStatus 007A0B00 f end=007A0B42
 CMapStaticEntity__destructor 007A0C10 f end=007A0C62
@@ -4402,22 +4441,28 @@ CMapEntity__UpdateMapObjLiquid 007A1A30 f end=007A1B0A
 CMapEntity__QueryLiquidSounds 007A1B10 f end=007A1BB3
 CMap__UpdateEntity 007A1BC0 f end=007A1E83
 CMapEntity__Tick 007A1E90 f end=007A2064
+CMap__CreateImpassableFacets 007A43D0 f end=007A4582
+CMap__CreateFlightBoundsFacets 007A4590 f end=007A4AE8
 CMap__TestQueryAdd 007A4C10 f end=007A4EDD
 CMap__GetChunkFacets 007A5330 f end=007A55DC
 CMap__GetChunkFacets 007A5A60 f end=007A5DC8
 CMap__GetFacets 007A5F20 f end=007A6136
 CMap__GetTriSubchunk 007A6260 f end=007A6623
+CMapObj__SetGroupRenderCallback 007A6B40 f end=007A6B56
 CMapObj__CullBatch 007A7630 f end=007A76BF
 CMapObj__UpdateMaterials 007A8520 f end=007A85D1
 CMapObj__RenderGroupLightmapTex 007A9BF0 f end=007A9D21
 CMapObj__RenderGroupColorTex 007A9D30 f end=007A9ECF
 CMapObj__RenderMapObjGroupsShadowMap 007AB760 f end=007ABAB6
 CMapObj__RenderGroup 007ABF50 f end=007AC059
+CMapObj__RRenderThruPortals 007AC060 f end=007AC697
 CMapObj__ExtRender 007AC6A0 f end=007AC9EF
 CMapObj__IntRender 007AC9F0 f end=007AD015
 CMapObj__PrepareUpdate 007AD020 f end=007AD1EC
 CMap__GetHeightTerrain 007AD3B0 f end=007AD6F1
 CMapObj__Delete 007AE030 f end=007AE050
+CMapObj__DesrtoyPools 007AE050 f end=007AE05B
+CMapObj__UpdatePools 007AE060 f end=007AE06B
 CMapObj__AsyncFailedCallback 007AE110 f end=007AE138
 CMapObj__ReadGroup 007AE1A0 f end=007AE1B2
 CMapObj__WaitLoad 007AE1C0 f end=007AE1E5
@@ -4658,7 +4703,10 @@ CMapObjGroup__Clear 007CBE80 f end=007CBF3F
 CMap__LoadWdl 007CC310 f end=007CC761
 CChunkLiquid__Purge 007CDE10 f end=007CDE28
 CChunkLiquid__UpdateResourcePurging 007CDE30 f end=007CDE72
+CChunkLiquid__GetAaBox 007CDE80 f end=007CDEC0
 CChunkLiquid__CreateVertXY 007CDF80 f end=007CE0A9
+CChunkLiquid__GetHeight 007CE0B0 f end=007CE17F
+CChunkLiquid__TileExists 007CE1F0 f end=007CE26F
 CChunkLiquid__GetRadius 007CE520 f end=007CE5CC
 CChunkLiquid__GetTris 007CE5D0 f end=007CE95B
 CChunkLiquid__GetTris 007CE960 f end=007CEB71
@@ -4743,7 +4791,11 @@ ClientGameTimeTickHandler 007E27F0 f end=007E280D
 PlayerNameTriggerColorUpdate 007E50F0 f end=007E5100
 PlayerNameTriggerNameRegenerate 007E5130 f end=007E5140
 PlayerNameShowing 007E5150 f end=007E516B
+PLAYERNAMEDESC__destructor 007E54D0 f end=007E5543
+PlayerNameUpdateLate 007E5580 f end=007E55E8
 PlayerNameDelete 007E6320 f end=007E6386
+WorldTextDelete 007E6A90 f end=007E6AB3
+WorldTextRenderBatch 007E7490 f end=007E7BA5
 EffectDeath__constructor 007EA260 f end=007EA416
 EffectNetherWorld__constructor 007EA470 f end=007EA592
 DayNight__CalcFogRate 007ECD00 f end=007ECD76 ; DayNight::CalcFogRate(float, float)
@@ -4765,7 +4817,12 @@ MinimapUpdate 007F5BA0 f end=007F6539
 CWorldMath__TransformAABox 007F9430 f end=007F9472
 CWorldMath__VectorIntersectAABox2 007F9480 f end=007F9650
 SpellVisualsBlizzardStop 007F9EE0 f end=007F9EF8
+LightningObject__Tick 007FAE90 f end=007FB213
+LightningObject__destructor 007FB6E0 f end=007FB7EA
+MountTransitionObject__Tick 007FB7F0 f end=007FBB7B
+BlizzardObject__destructor 007FC0F0 f end=007FC1F4
 SpellVisualsClear 007FC9F0 f end=007FCA29
+SpellVisualsTick 007FCA30 f end=007FCBB7
 Spell_C_IsTargeting 007FD620 f end=007FD62C
 Spell_C_GetTargetingSpell 007FD630 f end=007FD640
 Spell_C_CanTargetUnits 007FD650 f end=007FD661
@@ -5159,6 +5216,7 @@ Liquid__CInstance__Release 008A1AC0 f end=008A1AFC
 Liquid__CInstance__Create 008A1B00 f end=008A1B25
 Liquid__CMaterialBank__GetMaterial 008A1FA0 f end=008A20BD
 Liquid__CSettingsBank__GetSettings 008A28F0 f end=008A2974
+Liquid__CreateProceduralTextures 008A2E20 f end=008A2EF5
 FFX__Destroy 008C0360 f end=008C0589
 FFX__Init 008C12F0 f end=008C1513
 stub_return_int32_one 008C8DE0 f type="int32_t __stdcall func()" ; Known names: GxDefaultApi, CCommand_Perf
@@ -5360,7 +5418,9 @@ CFacet__constructor 00983940 f end=0098398F
 CFrustum__Cull 009839E0 f end=00983A5C
 CFrustum__Translate 00983AE0 f end=00983D13
 CFrustum__Cull 00983D70 f end=00983E61
+CFrustum__CalcPlanesFromCorners 00983E70 f end=00983F39
 CFrustum__Transform 00983F40 f end=00983FA5
+CFrustum__CalcPlanesFromCorners 00984240 f end=00984310
 CAaBox__Bounding 00984930 f end=00984C6D
 C4Vector__constructor 00984C90 f end=00984CDC ; C4Vector::C4Vector(CImVector const&)
 NTempest__DistanceFromPolygonEdge 00984DB0 f end=00984E41
@@ -5418,6 +5478,9 @@ BigIntegerMod 009A8C40 f end=009A8C56 ; BigIntegerMod(void*, void*, void*)
 BigIntegerModExp 009A8C60 f end=009A8C7A ; BigIntegerModExp(void*, void*, void*, void*)
 BigIntegerFree 009A8C80 f end=009A8C8E ; BigIntegerFree(void*)
 BigIntegerBitLen 009A8C90 f end=009A8CA8 ; BigIntegerBitLen(void*)
+CLightning__SetTexture 009A8CB0 f end=009A8CE0
+CLightning__SetSrcPos 009A96A0 f end=009A96BA
+CLightning__SetDstPos 009A96C0 f end=009A96DB
 DayNight__DNGlare__Initialize 009AD000 f end=009AD0A3 type="void __thiscall func(DayNight__DNGlare* this, char* a1)"
 Script_SendEvent 009C0070 f end=009C010C
 nullsub_7 009D34B0 f
@@ -5989,9 +6052,11 @@ CCharacterComponent__s_gxFormat 00B6B85C l
 CCharacterComponent__s_characterFacialHairStylesList 00B6B860 l
 CCharacterComponent__s_chrVarArray 00B6B864 l
 CCharacterComponent__s_chrVarArrayLength 00B6B874 l
+CCharacterComponent__m_activePlayerComponet 00B6B878 l
 CCharacterComponent__s_thread 00B6B9C8 l
 CCharacterComponent__s_threadBeginEvent 00B6B9CC l
 s_loadCount 00B6BA50 l
+pWorldFrame 00B7436C l
 CGChat__s_activeDisplayChannelName 00B743E0 l
 CGChat__s_displayChannels 00B74468 l
 CGChat__m_whisperDstHistory 00BCEB60 l
@@ -6427,6 +6492,7 @@ g_opt 00CAE958 l type="STORMOPTIONS"
 s_logsysteminit 00CB7220 l type="int32_t"
 s_defaultdir_critsect 00CB732C l type="CRITICAL_SECTION"
 s_critsect 00CB7358 l type="CRITICAL_SECTION[4]"
+CWorldScene__s_m2Scene 00CD754C l
 World__shadowModTexture 00CD7554 l
 World__detailDoodadAlphaRef 00CD766C l
 World__groundEffectDistValueSqr 00CD7674 l
@@ -6485,6 +6551,10 @@ CWorldScene__frustumIndex 00CD8798 l
 CWorldScene__camTargetEntity 00CD87A8 l
 CWorldScene__frustumStack 00CDB168 l
 g_BspDigestCache 00CDD7A0 l
+CWaterRipple__s_nextUnitRipple 00CDF7C8 l
+CWaterRipple__s_nextPlayerRipple 00CDF7CC l
+CWaterRipple__s_vsWaterRipples 00CDFFD4 l
+CWaterRipple__s_psWaterRipples 00CDFFD8 l
 CMap__enableTerrainShaderPixel 00CE049E l
 CMap__enableTerrainShaderVertex 00CE049F l
 CMap__wdtFilename 00CE05D0 l
@@ -6495,6 +6565,10 @@ CMap__bActive 00CF08F0 l
 CMap__bDungeon 00CF08F4 l
 CMapObjRenderGroupExterior_ptr 00CFBEC4 l
 CMapObjRenderGroupInterior_ptr 00CFBECC l
+CMapObj__gRenderCallback 00D1BED8 l
+CMapObj__gRenderUserParam 00D1BEDC l
+CMapObj__occluderHeap 00D1C40C l
+CMapObj__bPoolsDirty 00D1C410 l
 CMapObj__sMinimapTag 00D1C418 l
 CDetailDoodad__s_pixelShader 00D1C488 l
 CDetailDoodad__s_vertexShader 00D1C4A8 l
