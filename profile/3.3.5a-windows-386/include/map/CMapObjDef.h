@@ -12,6 +12,8 @@ DECLARE_STRUCT(CMapObjDefGroup);
 #include "storm/list.h"
 #include "map/CMapDoodadDef.h"
 #include "map/CMapArea.h"
+#include "map/CMapObj.h"
+#include "map/CMapEntity.h"
 
 STORM_TS_GROWABLE_ARRAY(CMapObjDefGroup);
 
@@ -64,7 +66,7 @@ struct CMapObjDef
     C44Matrix invMat;
 
     int32_t unk_F0; //0xF0
-    void* CMapObjPtr_owner; //0xF4
+    CMapObj* owner; //0xF4
     int32_t unk_F8; //0xF8
     uint32_t unkFlags; //0xFC
     int32_t unk_100; //0x100
@@ -113,6 +115,17 @@ struct CMapObjDefGroupDoodadDefLink
     TSLink_CMapObjDefGroupDoodadDefLink ownerLink; //0x14 - 0x1C
 };
 
+typedef struct CMapObjDefGroupMapEntityLink CMapObjDefGroupMapEntityLink;
+STORM_TS_LIST(CMapObjDefGroupMapEntityLink);
+struct CMapObjDefGroupMapEntityLink
+{
+    uint32_t objectIndex; //0x00
+    CMapEntity* owner; //0x04
+    CMapObjDef* ref; //0x08
+    TSLink_CMapObjDefGroupMapEntityLink refLink; //0x0C - 0x14
+    TSLink_CMapObjDefGroupMapEntityLink ownerLink; //0x14 - 0x1C
+};
+
 struct CMapObjDefGroup
 {
     void* vtable; //0x00
@@ -143,12 +156,8 @@ struct CMapObjDefGroup
     void* TSExplicitList__m_ptr1_unk_70; //0x70
     void* TSExplicitList__m_ptr2_unk_74; //0x74
     
-    // CMapDoodadDef
     TSExplicitList_CMapObjDefGroupDoodadDefLink doodadDefLinkList;
-    
-    int32_t TSExplicitList__m_linkoffset_unk_84; //0x84
-    void* TSExplicitList__m_ptr1_unk_88; //0x88
-    void* TSExplicitList__m_ptr2_unk_8C; //0x8C
+    TSExplicitList_CMapObjDefGroupMapEntityLink mapEntityLinkList;
     
     int32_t TSExplicitList__m_linkoffset_unk_90; //0x90
     void* TSExplicitList__m_ptr1_unk_94; //0x94

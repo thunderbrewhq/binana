@@ -6,6 +6,8 @@ DECLARE_STRUCT(CMapStaticEntity);
 #include "system/types.h"
 #include "tempest/vector.h"
 #include "tempest/box.h"
+#include "tempest/sphere.h"
+#include "m2/model.h"
 #include "storm/list.h"
 #include "map/CMapBaseObj.h"
 
@@ -37,9 +39,8 @@ struct CMapStaticEntity
     uint32_t unkFlags_28; //0x28
     int32_t unkCounter; //0x2C    
     float unk_030; //0x30
-    void* unk_m2Model_034; //0x34    
-    C3Vector vec1;
-    float unk_044; //0x44
+    CM2Model* model;
+    CAaSphere sphere;
     CAaBox bbox;
     C3Vector vec2;    
     C3Vector position;
