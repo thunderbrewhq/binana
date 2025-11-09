@@ -1,2 +1,6 @@
 CGCharacterInfo__InitializeGame 005E8440 f end=005E8466
 CGCharacterInfo__UpdateItem 005E84C0 f end=005E85C8
+CGCharacterInfo__PickupItem 005E85D0 f end=005E8A55
+CGCharacterInfo__PickupBag 005E8C30 f end=005E8D2D
+CGCharacterInfo__UseItem 005E8A60 f end=005E8BBC
+CGCharacterInfo__PutItemInBag 005E8D30 f end=005E8FD2

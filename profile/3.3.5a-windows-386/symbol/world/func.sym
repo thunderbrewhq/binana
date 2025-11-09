@@ -24,4 +24,5 @@ World__QueryMapId 0077F080 f end=0077F086
 World__QueryObjectInside 0077F090 f end=0077F0A4
 World__QueryMapObjAreaTable 0077F1B0 f end=0077F1D1
 World__Update 007815C0 f end=00781604
+World__SetFarClip 00780800 f end=0078085F
 

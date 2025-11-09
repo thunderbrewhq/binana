@@ -4,3 +4,7 @@ CWorldScene__frustumIndex 00CD8798 l
 CWorldScene__frustumStack 00CDB168 l
 CWorldScene__camTargetEntity 00CD87A8 l
 CWorldScene__s_m2Scene 00CD754C l
+CWorldScene__s_fadeDistMaxSqr 00ADF3B4 l
+CWorldScene__s_fadeDistMinSqr 00ADF3DC l
+CWorldScene__s_fadeDistMin 00ADF3C8 l
+CWorldScene__s_fadeRangeDefault 00ADF38C l

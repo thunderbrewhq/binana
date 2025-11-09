@@ -7,3 +7,7 @@ CGEquipmentManager__GetSetByID 005AE5C0 f end=005AE5F2
 CGEquipmentManager__GetSetByName 005AE600 f end=005AE655
 CGEquipmentManager__GetFullIconPath 005AE6B0 f end=005AE751
 CGEquipmentManager__InitializeGame 005AFBB0 f end=005AFC35
+CGEquipmentManager__ShutdownGame 005AE1B0 f end=005AE253
+CGEquipmentManager__UseEquipmentSet 005ADA20 f end=005ADE4A
+CGEquipmentManager__GetSetList 005AE380 f end=005AE489
+CGEquipmentManager__OnEquipmentSetResult 005AF710 f end=005AF7D7

@@ -1,4 +1,5 @@
 SE2SoundKitProperties__ResetToDefaults 004C5990 f end=004C5A18
 SE2__StopSound 004C6390 f end=004C6410
 SE2__PlaySoundKit 004C6A40 f end=004C713B
+SE2__PlaySoundKit 004C74A0 f end=004C74E9
 UnitSoundShutdown 00747810 f end=00747848

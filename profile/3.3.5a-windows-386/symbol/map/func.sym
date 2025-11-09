@@ -94,3 +94,4 @@ CMap__AllocMapChunk 007C0830 f end=007C0897
 CMap__AllocAreaLow 007C0A90 f end=007C0ADB
 CMap__QueryAreaId 00782560 f end=0078267C
 CMap__LoadTexture 007D9990 f end=007D9A1C
+CMap__CreateDoodadDef 007BECD0 f end=007BEF32

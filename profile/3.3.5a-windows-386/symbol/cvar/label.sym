@@ -235,4 +235,4 @@ s_cvUseUiScale 00BD09B0 l type="CVar*"
 s_cvUseWeatherShaders 00CD852C l type="CVar*"
 s_cvWaterLOD 00CD8598 l type="CVar*"
 s_cvWorldPoolUsage 00CD85B8 l type="CVar*"
-
+s_cvShowFootPrintParticles 00CA11A0 l type="CVar*"

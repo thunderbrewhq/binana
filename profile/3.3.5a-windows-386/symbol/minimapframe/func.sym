@@ -6,3 +6,4 @@ CGMinimapFrame__MinimapTextureCallback 00581CD0 f end=00581E7F
 CGMinimapFrame__Render 00581E80 f end=005831A9
 CGMinimapFrame__RenderCallback 005832A0 f end=005832B2
 CGMinimapFrame__OnFrameRender 005832C0 f end=005832ED
+CGMinimapFrame__PostLoadXML 0057BEA0 f end=0057BF2C

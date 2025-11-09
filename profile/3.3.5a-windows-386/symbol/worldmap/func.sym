@@ -1,2 +1,7 @@
 CGWorldMap__GetPlayerPosition 005444F0 f end=005445EB
 CGWorldMap__InitializeGame 00547EB0 f end=00548568
+CGWorldMap__CreateArrowFrame 00544750 f end=005448A0
+CGWorldMap__CreateMiniArrowFrame 005448A0 f end=005449F0
+CGWorldMap__SetMap 00546310 f end=005468E2
+CGWorldMap__ProcessClick 005468F0 f end=005469D8
+CGWorldMap__SetMapToCurrentZone 00547170 f end=00547A65
