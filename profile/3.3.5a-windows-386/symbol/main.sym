@@ -1,6 +1,3 @@
-
-
-
 operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
 operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
 CDataStore__constructor 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
@@ -578,6 +575,7 @@ C33Matrix__FromEulerAnglesZYX 004C56D0 f end=004C581A
 SE2SoundKitProperties__ResetToDefaults 004C5990 f end=004C5A18
 SE2__StopSound 004C6390 f end=004C6410
 SE2__PlaySoundKit 004C6A40 f end=004C713B
+SE2__PlaySoundKit 004C74A0 f end=004C74E9
 SI2__Init 004C82E0 f end=004C8584
 SI2__StopZoneAmbience 004C85F0 f end=004C85FD
 SI2__SetWeatherKitID 004C8610 f end=004C8622
@@ -586,8 +584,11 @@ SI2__OverrideZoneSounds 004CCA30 f end=004CCA9E
 SI2__DK_GetPlayerFilterName 004CDA20 f end=004CDA60
 SI2__DSP_MakeDSPsExpire 004CDC80 f end=004CDD32
 SI2__PlayFoleySound 004CFC10 f end=004CFD17
+SI2__PlayItemSound 004D0020 f end=004D008B
 SI2__PlayItemSound 004D0090 f end=004D0102
 SI2__UpdateTaxiSounds 004D0110 f end=004D032D
+SI2__PlayMissedSound 004D0850 f end=004D089E
+SI2__RegisterCVars 004D1050 f end=004D13DC
 SI2__RegisterCVars 004D1600 f end=004D1EB8
 ChangeHeapAllocTracking 004D2780 f end=004D27C6
 HeapUsageDestroy 004D27D0 f end=004D27DC
@@ -1177,6 +1178,7 @@ CGGameUI__GetCursorSpell 005136C0 f end=005136C6
 CGGameUI__GetCursorVirtualItem 005136D0 f end=005136D6
 CGGameUI__GetCursorVirtualItem 005136E0 f end=005136FA
 CGGameUI__IsAutoLooting 00513700 f end=00513740
+CGGameUI__LockItem 00513740 f end=00513770
 CGGameUI__UnlockItem 00513770 f end=005137A0
 CGGameUI__InitClientControlState 00513880 f end=00513893
 CGGameUI__ClearInstanceResetMap 005138A0 f end=005138AD
@@ -1384,6 +1386,7 @@ CGGameUI__UnlockAllItems 00520E40 f end=00520F69
 CGGameUI__UpdateActivePlayer 00520F70 f end=00520FD2
 CGGameUI__OnClientControlChanged 00520FE0 f end=00521031
 CGGameUI__RegisterFrameFactories 00521040 f end=005210CF
+CGGameUI__CastItemSpell 005210D0 f end=005216EB
 CGGameUI__DisplayError 005216F0 f end=005218AD
 CGGameUI__GetSelectionHighlightColor 00521BF0 f end=005220A6
 CGGameUI__AutoMouseOver 005220B0 f end=0052217B
@@ -1633,6 +1636,8 @@ Script_GetWintergraspWaitTime 005435A0 f end=005435FD
 Script_CanQueueForWintergrasp 00543600 f end=00543642
 CGWorldFrame__TranslateToMapCoords 00544140 f end=00544415
 CGWorldMap__GetPlayerPosition 005444F0 f end=005445EB
+CGWorldMap__CreateArrowFrame 00544750 f end=005448A0
+CGWorldMap__CreateMiniArrowFrame 005448A0 f end=005449F0
 Script_GetMapContinents 00544B20 f end=00544B8D
 Script_GetMapZones 00544B90 f end=00544C3B
 Script_DungeonUsesTerrainMap 00544C40 f end=00544C9D
@@ -1653,11 +1658,14 @@ Script_CreateMiniWorldMapArrowFrame 00545F20 f end=00545FD2
 Script_UpdateWorldMapArrowFrames 00545FE0 f end=00545FE8
 Script_InitWorldMapPing 00545FF0 f end=005460F7
 Script_GetNumDungeonMapLevels 00546290 f end=005462BA
+CGWorldMap__SetMap 00546310 f end=005468E2
+CGWorldMap__ProcessClick 005468F0 f end=005469D8
 Script_SetMapZoom 005469E0 f end=00546A83
 Script_ZoomOut 00546A90 f end=00546C4C
 Script_SetMapByID 00546C50 f end=00546E76
 Script_ProcessMapClick 00546E80 f end=00546EEA
 Script_ClickLandmark 00546EF0 f end=00546FDB
+CGWorldMap__SetMapToCurrentZone 00547170 f end=00547A65
 Script_SetDungeonMapLevel 00547B80 f end=00547C02
 Script_SetMapToCurrentZone 00547C10 f end=00547C1D
 CGWorldMap__InitializeGame 00547EB0 f end=00548568
@@ -1846,6 +1854,8 @@ Script_PartyLFGStartBackfill 0055A0C0 f end=0055A130
 Script_RefreshLFGList 0055D280 f end=0055D2A1
 Script_SearchLFGSort 0055D2B0 f end=0055D43D
 CGLookingForGroup__InitializeGame 0055D440 f end=0055D6A8
+CGUIBindings__StripModifiers 0055D740 f end=0055D851
+CGUIBindings__AddModifiers 0055D860 f end=0055D98E
 CGUIBindings__AddMetaPrefix 0055D990 f end=0055DAA8
 Script_GetNumBindings 0055DC00 f end=0055DC23
 Script_GetCurrentBindingSet 0055DC30 f end=0055DC57
@@ -1863,10 +1873,14 @@ Script_GetModifiedClick 0055FC20 f end=0055FCB9
 Script_IsModifiedClick 0055FCC0 f end=0055FD13
 Script_ClearOverrideBindings 00560560 f end=005605EC
 CGUIBindings__Initialize 005620F0 f end=00562135
+CGUIBindings__GetKeyBinding 00562140 f end=005622D1
+CGUIBindings__GetReducedKeyBinding 005622E0 f end=00562487
+CGUIBindings__GetCommandAction 00562490 f end=0056254F
 Script_GetBindingAction 00562550 f end=005625F0
 Script_GetBindingByKey 005625F0 f end=0056269B
 CGUIBindings__CopyBindings 00562B80 f end=00562D5E
 CGUIBindings__FinishLoadBindings 00562D60 f end=00562DC7
+CGUIBindings__LoadModifiedClick 00562DD0 f end=00562ECA
 CGUIBindings__Bind 00562ED0 f end=00563142
 CGUIBindings__ExecKey 00563150 f end=00563476
 Script_SetBinding 00563520 f end=005635DF
@@ -1886,6 +1900,7 @@ CGUIBindings__LoadBindings 005641C0 f end=0056430D
 CGUIBindings__LoadBindingsCallback 00564310 f end=005643A5
 CGUIBindings__LoadBindings 005643B0 f end=0056446A
 CGUIBindings__LoadBinding 00564470 f end=00564754
+CGUIBindings__Load 00564760 f end=005648A0
 CGActionBar__IsMacro 005648A0 f end=005648C8
 CGActionBar__GetMacroID 005648D0 f end=005648FC
 CGUIMacros__GetMacroIndexByID 00564AB0 f end=00564AD6
@@ -2033,6 +2048,7 @@ Script_CloseBankFrame 0057B9C0 f end=0057B9E0
 Script_GetNumBankSlots 0057BAB0 f end=0057BB30
 Script_GetBankSlotCost 0057BB30 f end=0057BBB3
 Script_PurchaseSlot 0057BBC0 f end=0057BC8A
+CGMinimapFrame__PostLoadXML 0057BEA0 f end=0057BF2C
 Script_SetZoom 0057BFD0 f end=0057C031
 CGxMatrixStack__Identity 0057C340 f end=0057C397 type="void __thiscall func(CGxMatrixStack* this)"
 GxXformPop 0057C420 f end=0057C44A
@@ -2379,6 +2395,7 @@ Script_GetActionInfo 005A8F10 f end=005A91BB
 Script_GetActionCooldown 005A91C0 f end=005A9288
 Script_GetActionAutocast 005A9290 f end=005A9357
 CGActionBar__IsConsumableAction 005A9360 f end=005A946E
+CGActionBar__HasValidTarget 005A94C0 f end=005A95D6
 CGActionBar__ActionHasRange 005A95E0 f end=005A96D0
 CGActionBar__GetTexture 005A97F0 f end=005A9B0C
 Script_GetActionTexture 005A9B30 f end=005A9B99
@@ -2438,8 +2455,11 @@ Script_EquipmentManagerClearIgnoredSlotsForSave 005AD820 f end=005AD828
 Script_EquipmentManagerUnignoreSlotForSave 005AD830 f end=005AD872
 Script_CanUseEquipmentSets 005AD880 f end=005AD8E3
 CGEquipmentManager__SetContainsLockedItems 005AD940 f end=005AD9AF
+CGEquipmentManager__UseEquipmentSet 005ADA20 f end=005ADE4A
 CGEquipmentManager__SetUsesLockedSlots 005AE040 f end=005AE0B3
+CGEquipmentManager__ShutdownGame 005AE1B0 f end=005AE253
 CGEquipmentManager__DeleteEquipmentSet 005AE260 f end=005AE37B
+CGEquipmentManager__GetSetList 005AE380 f end=005AE489
 CGEquipmentManager__GetSetByID 005AE5C0 f end=005AE5F2
 CGEquipmentManager__GetSetByName 005AE600 f end=005AE655
 CGEquipmentManager__GetFullIconPath 005AE6B0 f end=005AE751
@@ -2453,6 +2473,7 @@ Script_PickupEquipmentSetByName 005AF250 f end=005AF2BB
 Script_PickupEquipmentSet 005AF2C0 f end=005AF317
 Script_EquipmentSetContainsLockedItems 005AF320 f end=005AF380
 Script_UseEquipmentSet 005AF380 f end=005AF3F1
+CGEquipmentManager__OnEquipmentSetResult 005AF710 f end=005AF7D7
 Script_RenameEquipmentSet 005AF910 f end=005AF9BA
 Script_SaveEquipmentSet 005AF9C0 f end=005AFBAF
 CGEquipmentManager__InitializeGame 005AFBB0 f end=005AFC35
@@ -2617,6 +2638,7 @@ Script_GetNewSocketLink 005C4D10 f end=005C4DB4
 Script_ClickSocketButton 005C4DC0 f end=005C4E94
 Script_GetSocketItemBoundTradeable 005C4EA0 f end=005C4EDA
 CGItemSocketInfo__RemoveItem 005C4F40 f end=005C4FED
+CGItemSocketInfo__Accept 005C4FF0 f end=005C50DC
 Script_GetExistingSocketInfo 005C5160 f end=005C533D
 Script_GetExistingSocketLink 005C5340 f end=005C5458
 Script_AcceptSockets 005C5460 f end=005C5468
@@ -2907,6 +2929,10 @@ Script_GetInventoryAlertStatus 005E7FA0 f end=005E8030
 Script_GetInspectArenaTeamData 005E8030 f end=005E8284
 CGCharacterInfo__InitializeGame 005E8440 f end=005E8466
 CGCharacterInfo__UpdateItem 005E84C0 f end=005E85C8
+CGCharacterInfo__PickupItem 005E85D0 f end=005E8A55
+CGCharacterInfo__UseItem 005E8A60 f end=005E8BBC
+CGCharacterInfo__PickupBag 005E8C30 f end=005E8D2D
+CGCharacterInfo__PutItemInBag 005E8D30 f end=005E8FD2
 Script_GetInventoryItemsForSlot 005E95C0 f end=005E9BB5
 Script_GetInventoryItemTexture 005E9BC0 f end=005E9D71
 Script_GetInventoryItemBroken 005E9D80 f end=005E9E31
@@ -3779,6 +3805,8 @@ CGPlayer_C__VehicleAllowsInteraction 006D7AA0 f end=006D7B2B
 CGPlayer_C__CastRandomCritter 006D7B30 f end=006D7B64
 Player_C_ZoneUpdateHandler 006D7BB0 f end=006D7C28
 CGPlayer_C__LootUnit 006DAD90 f end=006DAF5E
+CGPlayer_C__SplitItem 006DB9D0 f end=006DBADF
+CGPlayer_C__AutoStoreItemInBag 006DBAE0 f end=006DBBD6
 CGPlayer_C__UpdateRepopTimer 006DC070 f end=006DC0E1
 CGPlayer_C__OnDeath 006DC0F0 f end=006DC1B5
 CGPlayer_C__GetExpandedSkillRank 006DC230 f end=006DC2B2
@@ -3866,6 +3894,7 @@ CGItem_C__NumBaseCharges 00706BF0 f end=00706C4F
 CGItem_C__GetCooldowns 00706C50 f end=00706CE5
 CGItem_C__SetStorage 00706D30 f end=00706D63
 CGItem_C__NumBaseCharges 00706F40 f end=00706F9E
+CGItem_C__Lock 00706FE0 f end=00707011
 CGItem_C__Unlock 00707020 f end=00707051
 CGItem_C__GetPageTextId 00707180 f end=007071C6
 CGItem_C__GetItemName 007071D0 f end=00707213
@@ -3999,6 +4028,7 @@ CGUnit_C__SpellInterrupted 0072ED80 f end=0072EE11
 CGUnit_C__SetTrackingDirection 0072F040 f end=0072F1E8
 CGUnit_C__InitializeComponent 00730100 f end=00730281
 CGUnit_C__ShouldRender 00730F30 f end=00731092
+CGUnit_C__HandleAnimEvent 00732650 f end=00732FEC
 CGUnit_C__GetDefenseSkillRank 00734F70 f end=00734F94
 CGUnit_C__GetAttackSkillRank 00734FA0 f end=00734FC4
 CGUnit_C__SetSheatheState 00736D30 f end=007370CB
@@ -4008,6 +4038,7 @@ CGUnit_C__UpdateAllSmoothFacing 00739630 f end=00739648
 CGUnit_C__CheckAndReportSpellInhibitFlags 00739650 f end=0073A51E
 CGUnit_C__PlaySpellVisualKit_HandleWeapon 0073A6C0 f end=0073A7EC
 CGUnit_C__UpdateLootAnimKit 0073AC30 f end=0073ACFC
+CGUnit_C__PlayDeathAnim 0073AF80 f end=0073B04C
 CGUnit_C__PlaySpellVisualKit_PlayAnims 0073B140 f end=0073B508
 CGUnit_C__PlayFallLandAnimation 0073D2B0 f end=0073D3CC
 CGUnit_C__OnCollideFallLand 0073D3D0 f end=0073D491
@@ -4370,6 +4401,7 @@ World__SetShadowColor 00780660 f end=0078070D
 World__SetDetailDoodadDensity 00780710 f end=0078072F
 World__SetDetailDoodadDist 00780730 f end=00780761
 World__ValidateFarClip 00780770 f end=007807F8
+World__SetFarClip 00780800 f end=0078085F
 World__PrepareAreaOfInterest 00780860 f end=00780CCF
 CMapStaticEntity__ModelLightingCallback 00780CD0 f end=00780E1F
 CComand_SetShadow 00780E20 f end=00780F41
@@ -4422,6 +4454,7 @@ AreaListGetName 0078ED80 f end=0078EE22
 AreaListRegisterLocation 0078F020 f end=0078F1EC
 AreaListZoneHasBreathParticles 0078F1F0 f end=0078F2E5
 CBarrier__Destroy 0078F510 f end=0078F56C
+CWorldScene__ScaleFadeDist 0078F570 f end=0078F6A0
 CWorldScene__FrustumXform 0078FB00 f end=0078FB20
 CWorldScene__FrustumCull 0078FB20 f end=0078FB47
 CWorldScene__FrustumPop 0078FB50 f end=0078FB58
@@ -4431,7 +4464,10 @@ CWorldScene__FrustumSet 00790E20 f end=007910FE
 CWorldScene__FrustumSet 00791100 f end=00791120
 CFacet__Set 007912C0 f end=00791378
 CWorldScene__FrustumPush 00791950 f end=00791976
+CWorldScene__AddDoodadDefModelToModelScene 00791CB0 f end=00791EA5
+CWorldScene__AddViewerGroup 00792FC0 f end=00793056
 CWorldScene__CullEntitys 00793060 f end=00793269
+CWorldScene__CullEntitysInterior 00793270 f end=00793444
 CWorldScene__CullLiquid 007935A0 f end=00793755
 CWorldScene__RenderChunksSolid 00793B10 f end=00793C2D
 CWorldScene__RenderChunksZoneDebug 00793C30 f end=00793D11
@@ -4440,10 +4476,14 @@ CWorldScene__LocateViewer3 00795D40 f end=00795F7F
 CWorldScene__RenderMapObjDefGroups 007964A0 f end=007968C2
 CWorldScene__Destroy 00798310 f end=007CCBD4
 CWorldScene__RenderDetailDoodads 007984A0 f end=00798794
+CWorldScene__CullDoodads 007987A0 f end=007989B5
 CWorldScene__RenderChunksSinglePass 007989C0 f end=00798D9F
 CWorldScene__RenderChunks 00798DA0 f end=00799303
 CBarrier__Initialize 00799730 f end=007997C5
 CWorldScene__Initialize 007997D0 f end=00799891
+CWorldScene__AddDoodadDefs 007998A0 f end=00799977
+CWorldScene__CullDoodadsExterior 00799980 f end=00799B62
+CWorldScene__CullDoodadsInterior 00799B70 f end=00799D36
 CWorldScene__CullChunks 00799D40 f end=00799F71
 CWorldScene__CullMapObjDefGroups 0079A160 f end=0079A259
 CWorldScene__CullSortTable 0079A790 f end=0079A861
@@ -4578,6 +4618,7 @@ CDetailDoodad__AllocInst 007B3910 f end=007B3959
 CDetailDoodad__FreeInst 007B3960 f end=007B3987
 CMapObjDef__TestAABox 007B3990 f end=007B39AB
 CMapObjDef__GetGroundType 007B39B0 f end=007B3A08
+CWorldScene__CullMapObjDefGroupFromExterior 007B3A10 f end=007B3B1A
 CMapObjDefGroup__destructor 007B3BE0 f end=007B3DD6
 CMapObjDefGroup__constructor 007B3DE0 f end=007B3EFC
 CMapObjDefGroup__UpdateLights 007B4090 f end=007B40ED
@@ -4653,6 +4694,7 @@ CMapStaticEntity__ModelEventCallback 007BD5A0 f end=007BD8A0
 CMap__Preload 007BD9F0 f end=007BDA62
 CMap__CreateMapObjDefGroups 007BDE50 f end=007BDFDE
 CMap__CreateDoodadDef 007BEB40 f end=007BECCA
+CMap__CreateDoodadDef 007BECD0 f end=007BEF32
 CMap__CreateDoodadDef 007BEF40 f end=007BF120
 CMap__CreateMapObjDef 007BF460 f end=007BF738
 CMap__CreateMapObjDefGroupDoodads 007BF740 f end=007BF8A8
@@ -5224,6 +5266,7 @@ OsIMEInitialize 0086D0A0 f end=0086D0B8
 OsIMEDestroy 0086D0C0 f end=0086D0Df
 OsTimeStartup 0086D430 f end=0086D439 type="void __stdcall func(TimingMethod timingMethod)"
 OsTimeShutdown 0086D440 f end=0086D445
+OsGetTimeStamp 0086D490 f end=0086D4C0
 OsTlsGetValue 0086D6D0 f end=0086D6DF
 TSList__LinkToTail 0086E200 f end=0086E25F ; 00005410
 OsCallSetContext 0086F5A0 f end=0086F5EA
@@ -5486,6 +5529,7 @@ NTempest__Intersect 009836B0 f end=009838C7
 CFacet__Set 009838D0 f end=0098393E
 CFacet__constructor 00983940 f end=0098398F
 CFrustum__Cull 009839E0 f end=00983A5C
+CFrustum__InvCull 00983A60 f end=00983ADC
 CFrustum__Translate 00983AE0 f end=00983D13
 CFrustum__Cull 00983D70 f end=00983E61
 CFrustum__CalcPlanesFromCorners 00983E70 f end=00983F39
@@ -5522,6 +5566,9 @@ SI2__UnregisterScriptFunctions 00985ED0 f end=00985EEF
 Script_VoiceChat_StartCapture 00985EF0 f end=00985F6B
 SI2__StopGlueAmbience 00985F70 f end=00985FA2
 SI2__StopGlueMusic 009860E0 f end=00986128
+SI2__StartGlueMusic 009861C0 f end=009862BE
+SI2__StartCreditMusic 009862C0 f end=0098638F
+SI2__VoiceChat_AmplifyMicrophoneInput 00986520 f end=009865BA
 SI2__PlayVocalErrorSound 00986D00 f end=00986DD6
 CMovementShared__Root 0098B540 f end=0098B570
 CGNamePlateFrame__TriggerDamageFeedback 0098E5B0 f end=0098E5E1
@@ -6015,6 +6062,10 @@ World__groundEffectDistValue 00ADEEB8 l
 World__loadMax 00ADEEC4 l
 World__loadMin 00ADEEC8 l
 World__s_nearClip 00ADEED4 l
+CWorldScene__s_fadeRangeDefault 00ADF38C l
+CWorldScene__s_fadeDistMaxSqr 00ADF3B4 l
+CWorldScene__s_fadeDistMin 00ADF3C8 l
+CWorldScene__s_fadeDistMinSqr 00ADF3DC l
 CMap__bPreload 00ADFBC8 l
 CMap__s_mapRenderChunkUpdateList 00ADFC30 l
 CMap__s_mapChunkLiquidUpdateList 00ADFC3C l
@@ -6295,6 +6346,10 @@ CGActionBar__m_bonusBarOffset 00C1E59C l
 CGActionBar__m_tempPageActiveFlags 00C1E5A0 l
 CGGMTicketInfo__m_ticketID 00C1E8D0 l
 CGGMTicketInfo__m_responseID 00C1E8D4 l
+CGEquipmentManager__m_lastCanUseEquipmentSetsValue 00C1E954 l
+CGEquipmentManager__m_swapPending 00C1E956 l
+CGEquipmentManager__m_pendingSetID 00C1E958 l
+CGEquipmentManager__s_EquipmentSetHeap 00C1E95C l
 CGCalendar__m_initialize 00C207F0 l
 CGTalentInfo_Inspect__m_inspectTarget 00C21008 l
 CGQuestLog__m_numQuest 00C23AD0 l
@@ -6470,6 +6525,7 @@ s_cvSplineOpt 00C9ECC4 l type="CVar*"
 CMissile__s_inFlightMissileList 00CA0B58 l
 CMissile__s_missileDestroyList 00CA0B5C l
 s_cvPathDistTol 00CA1194 l type="CVar*"
+s_cvShowFootPrintParticles 00CA11A0 l type="CVar*"
 CGUnit_C__s_unitThreatPool 00CA1244 l
 CGUnit_C__s_deferredClientControlUpdateGUID 00CA1248 l
 CGUnit_C__s_deferredClientControlUpdateState 00CA1250 l
@@ -6562,6 +6618,7 @@ g_opt 00CAE958 l type="STORMOPTIONS"
 s_logsysteminit 00CB7220 l type="int32_t"
 s_defaultdir_critsect 00CB732C l type="CRITICAL_SECTION"
 s_critsect 00CB7358 l type="CRITICAL_SECTION[4]"
+World__particulate 00CD7548 l
 CWorldScene__s_m2Scene 00CD754C l
 World__shadowModTexture 00CD7554 l
 World__detailDoodadAlphaRef 00CD766C l

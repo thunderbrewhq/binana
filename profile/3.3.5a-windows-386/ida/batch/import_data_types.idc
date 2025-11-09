@@ -1172,6 +1172,7 @@ static import_data_types() {
 	apply_type(0x00C613C4, "int32_t");
 	apply_type(0x00C9ECC4, "CVar*");
 	apply_type(0x00CA1194, "CVar*");
+	apply_type(0x00CA11A0, "CVar*");
 	apply_type(0x00CA12C8, "CVar*");
 	apply_type(0x00CA12D0, "CVar*");
 	apply_type(0x00CA1690, "float");
