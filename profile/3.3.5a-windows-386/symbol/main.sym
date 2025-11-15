@@ -1,3 +1,4 @@
+
 operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
 operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
 CDataStore__constructor 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
@@ -409,6 +410,7 @@ CLayoutFrame__ClearAllPoints 0048A510 f end=0048A515 ; CLayoutFrame::ClearAllPoi
 CLayoutFrame__SetDeferredResize 0048A520 f end=0048A5F0 ; CLayoutFrame::SetDeferredResize(int)
 CLayoutFrame__DestroyLayout 0048B130 f end=0048B23B ; CLayoutFrame::DestroyLayout()
 CScriptObject__GetScriptObjectByName 0048B5F0 f end=0048B671
+CImVector__Set 0048BD20 f end=0048BDDA
 CSimpleTexture_SetVertexColor 0048C1C0 f end=0048C23E ; CSimpleTexture_SetVertexColor(lua_State*)
 CSimpleTexture_SetAlpha 0048C3E0 f end=0048C4B3 ; CSimpleTexture_SetAlpha(lua_State*)
 CSimpleFontString_SetFormattedText 0048D800 f end=0048D88B type="int32_t __stdcall func(lua_State* L)"
@@ -562,6 +564,7 @@ C44Matrix__RotateAroundY 004C3340 f
 C44Matrix__RotateAroundZ 004C3380 f
 C44Matrix__Rotate 004C33C0 f
 C3Vector__Normalize 004C3420 f type="void __thiscall func(C3Vector* this)"
+C44Matrix__Rotation 004C3460 f end=004C3593
 C3Vector__Normalize 004C3600 f type="void __thiscall func(C3Vector* this)"
 TSGrowableArray_C3Vector__SetCount 004C4B80 f end=004C4C75 type="void __thiscall func(TSGrowableArray_C3Vector* this, uint32_t count)"
 C2Vector__C2Vector 004C4DF0 f end=004C4E06
@@ -572,6 +575,8 @@ CMath__NormalizeAngle0to2pi 004C5090 f end=004C50B4
 C33Matrix__operator_assign_C33Matrix 004C51B0 f
 C33Matrix__Rotation 004C5550 f end=004C55A2
 C33Matrix__FromEulerAnglesZYX 004C56D0 f end=004C581A
+C33Matrix__Rotation 004C5820 f end=004C5932
+C33Matrix__Rotate 004C5940 f end=004C5984
 SE2SoundKitProperties__ResetToDefaults 004C5990 f end=004C5A18
 SE2__StopSound 004C6390 f end=004C6410
 SE2__PlaySoundKit 004C6A40 f end=004C713B
@@ -4386,6 +4391,7 @@ SBigPowMod 0077C980 f end=0077C9A4 type="void __stdcall func(BigData* a, BigData
 World__MapIsDungeon 0077EC80 f end=0077EC8B
 World__SetLoadProgressCallback 0077EC90 f end=0077ECA6
 World__Render 0077EFF0 f end=0077F00C
+CWorldScene__RenderWeather 0077F030 f end=0077F03B
 World__QueryMapId 0077F080 f end=0077F086
 World__QueryObjectInside 0077F090 f end=0077F0A4
 World__QueryMapObjAreaTable 0077F1B0 f end=0077F1D1
@@ -4397,6 +4403,7 @@ CComand_CharacterAmbient 0077F750 f end=0077F7D1
 World__ObjectIsDrawable 0077FCD0 f end=0077FD07
 World__ObjectTestConvexVolume 0077FFB0 f end=00780122
 World__ObjectUpdate 00780240 f end=007804F5
+World__GetCamPos 00780640 f end=00780646
 World__SetShadowColor 00780660 f end=0078070D
 World__SetDetailDoodadDensity 00780710 f end=0078072F
 World__SetDetailDoodadDist 00780730 f end=00780761
@@ -4419,6 +4426,44 @@ World__PrepareUpdate 007831A0 f end=007834FE
 World__Destroy 007837F0 f end=007BA834
 World__GetFacets 00783910 f end=00783A36
 World__GetFacets 00783A40 f end=00783A5E
+Weather__GetType 00783B60 f end=00783B8C
+Weather__FillInDefaultPrecipTexturePath 00783B90 f end=00783BCE
+Rain__GetMotionBlurMatrix 00784140 f end=0078426F
+Rain__RealizePacket 007842D0 f end=007843D9
+Weather__SetType 007846A0 f end=0078484C
+Weather__SetStormIntensity 00784850 f end=00784A24
+Snow__InitFlake 00785880 f end=00785D55
+Snow__UpdatePacket 00785D60 f end=00785E9F
+Sand__InitGrain 00785EA0 f end=0078620E
+Sand__UpdatePacket 00786210 f end=00786330
+Mists__CreateMist 00786330 f end=00786559
+Mists__Render 00786E10 f end=00787779
+Weather__constructor 00787780 f end=0078791A
+Rain__UpdatePackets 00787CE0 f end=00788090
+Snow__UpdatePacketsSW 00788090 f end=00788657
+Sand__UpdatePacketsSW 00788660 f end=00788927
+Rain__destructor 00789110 f end=007891A8
+Rain__RenderPatterPacketsSW 007891B0 f end=007898A0
+Rain__RenderDropPacketsSW 007898A0 f end=0078A029
+Rain__RenderPatterPackets 0078A030 f end=0078A63F
+Rain__RenderDropPackets 0078A640 f end=0078AE1D
+Rain__Render 0078AE20 f end=0078AE6A
+Snow__destructor 0078AE70 f end=0078AED1
+Snow__RenderPackets 0078AEE0 f end=0078B363
+Snow__RenderPackets 0078B370 f end=0078BA51
+Snow__Render 0078BA60 f end=0078BA9C
+Sand__destructor 0078BAA0 f end=0078BAF6
+Sand__RenderPackets 0078BB00 f end=0078BED3
+Sand__RenderPackets 0078BEE0 f end=0078C3D3
+Sand__Render 0078C3E0 f end=0078C41C
+Mists__constructor 0078C420 f end=0078C4F8
+Weather__Render 0078CA50 f end=0078CA8C
+Rain__constructor 0078CA90 f end=0078CD2A
+Snow__constructor 0078CD30 f end=0078CF1F
+Sand__constructor 0078CF20 f end=0078D0A8
+Weather__Clear 0078D0B0 f end=0078D12A
+Weather__Update 0078D170 f end=0078D53C
+Weather__destructor 0078D540 f end=0078D602
 CWorldParam__TerrainLOD 0078D610 f end=0078D652
 CWorldParam__TerrainShadows 0078D660 f end=0078D6A2
 CWorldParam__MaxLights 0078D6B0 f end=0078D6E2

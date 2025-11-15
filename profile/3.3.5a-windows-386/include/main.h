@@ -91,6 +91,7 @@
 #include "map/CMapDoodadDef.h"
 #include "map/CMapEntity.h"
 #include "map/CMapBaseObjLink.h"
+#include "map/Weather.h"
 
 #include "character/CCharacterComponent.h"
 
