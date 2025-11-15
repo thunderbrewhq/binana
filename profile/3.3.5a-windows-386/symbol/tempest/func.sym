@@ -46,3 +46,7 @@ CFacet__Set 007912C0 f end=00791378
 CFacet__constructor 00983940 f end=0098398F
 CAaBox__Bounding 00984930 f end=00984C6D
 CFacet__Set 009838D0 f end=0098393E
+CImVector__Set 0048BD20 f end=0048BDDA
+C44Matrix__Rotation 004C3460 f end=004C3593
+C33Matrix__Rotation 004C5820 f end=004C5932
+C33Matrix__Rotate 004C5940 f end=004C5984
