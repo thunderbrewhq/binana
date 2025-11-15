@@ -33141,6 +33141,173 @@
       ]
     },
     {
+      "name": "Weather",
+      "size": 408,
+      "members": [
+        {
+          "type": "float",
+          "name": "intensity",
+          "offset": 0
+        },
+        {
+          "type": "float",
+          "name": "lastIntensity",
+          "offset": 4
+        },
+        {
+          "type": "float",
+          "name": "currStormItensity",
+          "offset": 8
+        },
+        {
+          "type": "float",
+          "name": "targetSkyDark",
+          "offset": 12
+        },
+        {
+          "type": "float",
+          "name": "startSkyDark",
+          "offset": 16
+        },
+        {
+          "type": "float",
+          "name": "currSkyDark",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "weatherStartMs",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "weatherStartMs2",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "weatherType",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "abrupt",
+          "offset": 36
+        },
+        {
+          "type": "float",
+          "name": "transitionSkyBox",
+          "offset": 40
+        },
+        {
+          "type": "float",
+          "name": "transitionSkyBoxNotAbrupt",
+          "offset": 44
+        },
+        {
+          "type": "float",
+          "name": "transitionSkyBoxNoWeather",
+          "offset": 48
+        },
+        {
+          "type": "CImVector",
+          "name": "color",
+          "offset": 52
+        },
+        {
+          "type": "char",
+          "name": "texturePath",
+          "arrsize": 260,
+          "offset": 56
+        },
+        {
+          "type": "void*",
+          "name": "RainPtr",
+          "offset": 316
+        },
+        {
+          "type": "void*",
+          "name": "SnowPtr",
+          "offset": 320
+        },
+        {
+          "type": "void*",
+          "name": "SandPtr",
+          "offset": 324
+        },
+        {
+          "type": "void*",
+          "name": "unkObject",
+          "offset": 328
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_14C",
+          "offset": 332
+        },
+        {
+          "type": "void*",
+          "name": "unk_ptr_150",
+          "offset": 336
+        },
+        {
+          "type": "void*",
+          "name": "unk_ptr_154",
+          "offset": 340
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_158",
+          "offset": 344
+        },
+        {
+          "type": "void*",
+          "name": "unk_ptr_15C",
+          "offset": 348
+        },
+        {
+          "type": "void*",
+          "name": "unk_ptr_160",
+          "offset": 352
+        },
+        {
+          "type": "C3Vector",
+          "name": "velocity",
+          "offset": 356
+        },
+        {
+          "type": "C3Vector",
+          "name": "unkVec",
+          "offset": 368
+        },
+        {
+          "type": "C3Vector",
+          "name": "playerPos",
+          "offset": 380
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_188",
+          "offset": 392
+        },
+        {
+          "type": "float",
+          "name": "facingAngle",
+          "offset": 396
+        },
+        {
+          "type": "float",
+          "name": "moveSpeed",
+          "offset": 400
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_194",
+          "offset": 404
+        }
+      ]
+    },
+    {
       "name": "ARGLIST",
       "size": 16,
       "members": [

@@ -6663,6 +6663,7 @@ g_opt 00CAE958 l type="STORMOPTIONS"
 s_logsysteminit 00CB7220 l type="int32_t"
 s_defaultdir_critsect 00CB732C l type="CRITICAL_SECTION"
 s_critsect 00CB7358 l type="CRITICAL_SECTION[4]"
+World__s_weather 00CD7544 l
 World__particulate 00CD7548 l
 CWorldScene__s_m2Scene 00CD754C l
 World__shadowModTexture 00CD7554 l
