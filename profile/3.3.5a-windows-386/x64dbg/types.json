@@ -22824,6 +22824,190 @@
       ]
     },
     {
+      "name": "PacketList_Packet_RainDrop",
+      "size": 32,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unk_00",
+          "offset": 0
+        },
+        {
+          "type": "Packet_RainDrop*",
+          "name": "prev",
+          "offset": 4
+        },
+        {
+          "type": "Packet_RainDrop*",
+          "name": "next",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "activePacketsCount",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "freePacketsCount",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_14",
+          "offset": 20
+        },
+        {
+          "type": "Packet_RainDrop*",
+          "name": "unk_18",
+          "offset": 24
+        },
+        {
+          "type": "Packet_RainDrop*",
+          "name": "unk_1C",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "PacketList_Packet_RainPatter",
+      "size": 32,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unk_00",
+          "offset": 0
+        },
+        {
+          "type": "Packet_RainPatter*",
+          "name": "prev",
+          "offset": 4
+        },
+        {
+          "type": "Packet_RainPatter*",
+          "name": "next",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "activePacketsCount",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "freePacketsCount",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_14",
+          "offset": 20
+        },
+        {
+          "type": "Packet_RainPatter*",
+          "name": "unk_18",
+          "offset": 24
+        },
+        {
+          "type": "Packet_RainPatter*",
+          "name": "unk_1C",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "PacketList_Packet_SandGrain",
+      "size": 32,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unk_00",
+          "offset": 0
+        },
+        {
+          "type": "Packet_SandGrain*",
+          "name": "prev",
+          "offset": 4
+        },
+        {
+          "type": "Packet_SandGrain*",
+          "name": "next",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "activePacketsCount",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "freePacketsCount",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_14",
+          "offset": 20
+        },
+        {
+          "type": "Packet_SandGrain*",
+          "name": "unk_18",
+          "offset": 24
+        },
+        {
+          "type": "Packet_SandGrain*",
+          "name": "unk_1C",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "PacketList_Packet_SnowFlake",
+      "size": 32,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unk_00",
+          "offset": 0
+        },
+        {
+          "type": "Packet_SnowFlake*",
+          "name": "prev",
+          "offset": 4
+        },
+        {
+          "type": "Packet_SnowFlake*",
+          "name": "next",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "activePacketsCount",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "freePacketsCount",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_14",
+          "offset": 20
+        },
+        {
+          "type": "Packet_SnowFlake*",
+          "name": "unk_18",
+          "offset": 24
+        },
+        {
+          "type": "Packet_SnowFlake*",
+          "name": "unk_1C",
+          "offset": 28
+        }
+      ]
+    },
+    {
       "name": "PageTextMaterialRec",
       "size": 8,
       "members": [
@@ -32428,6 +32612,191 @@
       ]
     },
     {
+      "name": "Mists",
+      "size": 84,
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable",
+          "offset": 0
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_10",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_14",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_18",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "scale",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_20",
+          "offset": 32
+        },
+        {
+          "type": "float",
+          "name": "rotationSpeed",
+          "offset": 36
+        },
+        {
+          "type": "float",
+          "name": "fadeSpeed",
+          "offset": 40
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_2C",
+          "offset": 44
+        },
+        {
+          "type": "float",
+          "name": "opacity",
+          "offset": 48
+        },
+        {
+          "type": "float",
+          "name": "lifeTime",
+          "offset": 52
+        },
+        {
+          "type": "float",
+          "name": "spawnRate",
+          "offset": 56
+        },
+        {
+          "type": "uint8_t",
+          "name": "unk_3C",
+          "offset": 60
+        },
+        {
+          "type": "uint8_t",
+          "name": "padding",
+          "arrsize": 3,
+          "offset": 61
+        },
+        {
+          "type": "CTexture*",
+          "name": "mistTexture",
+          "offset": 64
+        },
+        {
+          "type": "uint32_t",
+          "name": "particleCount",
+          "offset": 68
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_48",
+          "offset": 72
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_4C",
+          "offset": 76
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_50",
+          "offset": 80
+        }
+      ]
+    },
+    {
+      "name": "RainPatterParticle",
+      "size": 24,
+      "members": [
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 0
+        },
+        {
+          "type": "float",
+          "name": "lifetime",
+          "offset": 12
+        },
+        {
+          "type": "float",
+          "name": "size",
+          "offset": 16
+        },
+        {
+          "type": "float",
+          "name": "unk",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "SnowFlakeParticle",
+      "size": 32,
+      "members": [
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 0
+        },
+        {
+          "type": "C3Vector",
+          "name": "velocity",
+          "offset": 12
+        },
+        {
+          "type": "float",
+          "name": "lifetime",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "size",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "SandGrainParticle",
+      "size": 32,
+      "members": [
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 0
+        },
+        {
+          "type": "C3Vector",
+          "name": "velocity",
+          "offset": 12
+        },
+        {
+          "type": "float",
+          "name": "lifetime",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "size",
+          "offset": 28
+        }
+      ]
+    },
+    {
       "name": "CGxMatrixStack",
       "size": 280,
       "members": [
@@ -33221,18 +33590,18 @@
           "offset": 56
         },
         {
-          "type": "void*",
-          "name": "RainPtr",
+          "type": "Rain*",
+          "name": "rain",
           "offset": 316
         },
         {
-          "type": "void*",
-          "name": "SnowPtr",
+          "type": "Snow*",
+          "name": "snow",
           "offset": 320
         },
         {
-          "type": "void*",
-          "name": "SandPtr",
+          "type": "Sand*",
+          "name": "sand",
           "offset": 324
         },
         {
@@ -33304,6 +33673,37 @@
           "type": "int32_t",
           "name": "unk_194",
           "offset": 404
+        }
+      ]
+    },
+    {
+      "name": "RainDropParticle",
+      "size": 36,
+      "members": [
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 0
+        },
+        {
+          "type": "C3Vector",
+          "name": "velocity",
+          "offset": 12
+        },
+        {
+          "type": "CImVector",
+          "name": "color",
+          "offset": 24
+        },
+        {
+          "type": "float",
+          "name": "size",
+          "offset": 28
+        },
+        {
+          "type": "float",
+          "name": "unk",
+          "offset": 32
         }
       ]
     },
@@ -43637,6 +44037,270 @@
       ]
     },
     {
+      "name": "Rain",
+      "size": 212,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "useWeatherShaders",
+          "offset": 0
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 4
+        },
+        {
+          "type": "Mists",
+          "name": "mists",
+          "offset": 28
+        },
+        {
+          "type": "PacketList_Packet_RainDrop",
+          "name": "rainDropPacketList",
+          "offset": 112
+        },
+        {
+          "type": "PacketList_Packet_RainPatter",
+          "name": "rainPatterPacketList",
+          "offset": 144
+        },
+        {
+          "type": "Packet_RainDrop*",
+          "name": "rainDropPacketPtr",
+          "offset": 176
+        },
+        {
+          "type": "float",
+          "name": "unk_B4",
+          "offset": 180
+        },
+        {
+          "type": "Packet_RainPatter*",
+          "name": "rainPatterPacketPtr",
+          "offset": 184
+        },
+        {
+          "type": "CTexture*",
+          "name": "rainDropTex",
+          "offset": 188
+        },
+        {
+          "type": "CGxShader*",
+          "name": "shaderRain",
+          "offset": 192
+        },
+        {
+          "type": "CTexture*",
+          "name": "rainDropSplashTex",
+          "offset": 196
+        },
+        {
+          "type": "CGxShader*",
+          "name": "shaderPatter",
+          "offset": 200
+        },
+        {
+          "type": "float",
+          "name": "particlesPerFrame",
+          "offset": 204
+        },
+        {
+          "type": "float",
+          "name": "intensity",
+          "offset": 208
+        }
+      ]
+    },
+    {
+      "name": "Snow",
+      "size": 168,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "useWeatherShaders",
+          "offset": 0
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 4
+        },
+        {
+          "type": "Mists",
+          "name": "mists",
+          "offset": 28
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_70",
+          "offset": 112
+        },
+        {
+          "type": "void*",
+          "name": "unk_74",
+          "offset": 116
+        },
+        {
+          "type": "void*",
+          "name": "unk_78",
+          "offset": 120
+        },
+        {
+          "type": "int32_t",
+          "name": "activePacketsCount",
+          "offset": 124
+        },
+        {
+          "type": "int32_t",
+          "name": "freePacketsCount",
+          "offset": 128
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_84",
+          "offset": 132
+        },
+        {
+          "type": "void*",
+          "name": "unk_88",
+          "offset": 136
+        },
+        {
+          "type": "void*",
+          "name": "unk_8C",
+          "offset": 140
+        },
+        {
+          "type": "Packet_SnowFlake*",
+          "name": "snowFlakePacketPtr",
+          "offset": 144
+        },
+        {
+          "type": "float",
+          "name": "unk_94",
+          "offset": 148
+        },
+        {
+          "type": "CTexture*",
+          "name": "snowFlakeTex",
+          "offset": 152
+        },
+        {
+          "type": "CGxShader*",
+          "name": "shaderPtr",
+          "offset": 156
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_A0",
+          "offset": 160
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_A4",
+          "offset": 164
+        }
+      ]
+    },
+    {
+      "name": "Sand",
+      "size": 160,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "useWeatherShaders",
+          "offset": 0
+        },
+        {
+          "type": "CAaBox",
+          "name": "bbox",
+          "offset": 4
+        },
+        {
+          "type": "Mists",
+          "name": "mists",
+          "offset": 28
+        },
+        {
+          "type": "PacketList_Packet_SandGrain",
+          "name": "sandGrainPacketList",
+          "offset": 112
+        },
+        {
+          "type": "Packet_SandGrain*",
+          "name": "sandGrainPacketPtr",
+          "offset": 144
+        },
+        {
+          "type": "float",
+          "name": "unk_94",
+          "offset": 148
+        },
+        {
+          "type": "CGxShader*",
+          "name": "shader",
+          "offset": 152
+        },
+        {
+          "type": "float",
+          "name": "unk_9C",
+          "offset": 156
+        }
+      ]
+    },
+    {
+      "name": "RainPatterParticleBuffer",
+      "size": 147460,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "particleCount",
+          "offset": 0
+        },
+        {
+          "type": "RainPatterParticle",
+          "name": "particles",
+          "arrsize": 6144,
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "SnowFlakeParticleBuffer",
+      "size": 196612,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "particleCount",
+          "offset": 0
+        },
+        {
+          "type": "SnowFlakeParticle",
+          "name": "particles",
+          "arrsize": 6144,
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "SandGrainParticleBuffer",
+      "size": 196612,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "particleCount",
+          "offset": 0
+        },
+        {
+          "type": "SandGrainParticle",
+          "name": "particles",
+          "arrsize": 6144,
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "M2ModelBone",
       "size": 164,
       "members": [
@@ -43741,6 +44405,23 @@
           "type": "uint32_t",
           "name": "m_stackDepth",
           "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "RainParticleBuffer",
+      "size": 221188,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "particleCount",
+          "offset": 0
+        },
+        {
+          "type": "RainDropParticle",
+          "name": "particles",
+          "arrsize": 6144,
+          "offset": 4
         }
       ]
     },
@@ -51031,6 +51712,270 @@
           "type": "uint32_t",
           "name": "dword2EC",
           "offset": 732
+        }
+      ]
+    },
+    {
+      "name": "Packet_RainPatter",
+      "size": 147504,
+      "members": [
+        {
+          "type": "Packet_RainPatter*",
+          "name": "prev",
+          "offset": 0
+        },
+        {
+          "type": "Packet_RainPatter*",
+          "name": "next",
+          "offset": 4
+        },
+        {
+          "type": "RainPatterParticleBuffer",
+          "name": "particlesBuffer",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "currParticle",
+          "offset": 147468
+        },
+        {
+          "type": "uint32_t",
+          "name": "packetStartTick",
+          "offset": 147472
+        },
+        {
+          "type": "uint32_t",
+          "name": "packetEndTick",
+          "offset": 147476
+        },
+        {
+          "type": "float",
+          "name": "packetBuildTime",
+          "offset": 147480
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_9007",
+          "offset": 147484
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_9008",
+          "offset": 147488
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_9009",
+          "offset": 147492
+        },
+        {
+          "type": "CGxPool*",
+          "name": "gxPool",
+          "offset": 147496
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "vertexBufHandle",
+          "offset": 147500
+        }
+      ]
+    },
+    {
+      "name": "Packet_SnowFlake",
+      "size": 196656,
+      "members": [
+        {
+          "type": "Packet_SnowFlake*",
+          "name": "prev",
+          "offset": 0
+        },
+        {
+          "type": "Packet_SnowFlake*",
+          "name": "next",
+          "offset": 4
+        },
+        {
+          "type": "SnowFlakeParticleBuffer",
+          "name": "particlesBuffer",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "currParticle",
+          "offset": 196620
+        },
+        {
+          "type": "uint32_t",
+          "name": "packetStartTick",
+          "offset": 196624
+        },
+        {
+          "type": "uint32_t",
+          "name": "packetEndTick",
+          "offset": 196628
+        },
+        {
+          "type": "float",
+          "name": "packetBuildTime",
+          "offset": 196632
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_C007",
+          "offset": 196636
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_C008",
+          "offset": 196640
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_C009",
+          "offset": 196644
+        },
+        {
+          "type": "CGxPool*",
+          "name": "gxPool",
+          "offset": 196648
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "vertexBufHandle",
+          "offset": 196652
+        }
+      ]
+    },
+    {
+      "name": "Packet_SandGrain",
+      "size": 196656,
+      "members": [
+        {
+          "type": "Packet_SandGrain*",
+          "name": "prev",
+          "offset": 0
+        },
+        {
+          "type": "Packet_SandGrain*",
+          "name": "next",
+          "offset": 4
+        },
+        {
+          "type": "SandGrainParticleBuffer",
+          "name": "particlesBuffer",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "currParticle",
+          "offset": 196620
+        },
+        {
+          "type": "uint32_t",
+          "name": "packetStartTick",
+          "offset": 196624
+        },
+        {
+          "type": "uint32_t",
+          "name": "packetEndTick",
+          "offset": 196628
+        },
+        {
+          "type": "float",
+          "name": "packetBuildTime",
+          "offset": 196632
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_C007",
+          "offset": 196636
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_C008",
+          "offset": 196640
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_C009",
+          "offset": 196644
+        },
+        {
+          "type": "CGxPool*",
+          "name": "gxPool",
+          "offset": 196648
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "vertexBufHandle",
+          "offset": 196652
+        }
+      ]
+    },
+    {
+      "name": "Packet_RainDrop",
+      "size": 221232,
+      "members": [
+        {
+          "type": "Packet_RainDrop*",
+          "name": "prev",
+          "offset": 0
+        },
+        {
+          "type": "Packet_RainDrop*",
+          "name": "next",
+          "offset": 4
+        },
+        {
+          "type": "RainParticleBuffer",
+          "name": "particlesBuffer",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "currParticle",
+          "offset": 221196
+        },
+        {
+          "type": "uint32_t",
+          "name": "packetStartTick",
+          "offset": 221200
+        },
+        {
+          "type": "uint32_t",
+          "name": "packetEndTick",
+          "offset": 221204
+        },
+        {
+          "type": "float",
+          "name": "packetBuildTime",
+          "offset": 221208
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_D807",
+          "offset": 221212
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_D808",
+          "offset": 221216
+        },
+        {
+          "type": "uint32_t",
+          "name": "field_D809",
+          "offset": 221220
+        },
+        {
+          "type": "CGxPool*",
+          "name": "gxPool",
+          "offset": 221224
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "vertexBufHandle",
+          "offset": 221228
         }
       ]
     },
