@@ -32797,6 +32797,22 @@
       ]
     },
     {
+      "name": "LiquidParticle",
+      "size": 16,
+      "members": [
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 0
+        },
+        {
+          "type": "float",
+          "name": "size",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "CGxMatrixStack",
       "size": 280,
       "members": [
@@ -44297,6 +44313,84 @@
           "name": "particles",
           "arrsize": 6144,
           "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "Particulate",
+      "size": 64064,
+      "members": [
+        {
+          "type": "LiquidParticle",
+          "name": "particles",
+          "arrsize": 4000,
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "maxParticles",
+          "offset": 64000
+        },
+        {
+          "type": "C3Vector",
+          "name": "prevCameraPos",
+          "offset": 64004
+        },
+        {
+          "type": "CTexture*",
+          "name": "texture",
+          "offset": 64016
+        },
+        {
+          "type": "uint8_t",
+          "name": "unk_byte",
+          "offset": 64020
+        },
+        {
+          "type": "uint8_t",
+          "name": "padding",
+          "arrsize": 3,
+          "offset": 64021
+        },
+        {
+          "type": "float",
+          "name": "particleSize",
+          "offset": 64024
+        },
+        {
+          "type": "float",
+          "name": "spawnAreaSize",
+          "offset": 64028
+        },
+        {
+          "type": "float",
+          "name": "unk_float1",
+          "offset": 64032
+        },
+        {
+          "type": "uint32_t",
+          "name": "unkValue",
+          "offset": 64036
+        },
+        {
+          "type": "C3Vector",
+          "name": "direction",
+          "offset": 64040
+        },
+        {
+          "type": "float",
+          "name": "speed",
+          "offset": 64052
+        },
+        {
+          "type": "float",
+          "name": "timer",
+          "offset": 64056
+        },
+        {
+          "type": "float",
+          "name": "rotationSpeed",
+          "offset": 64060
         }
       ]
     },

@@ -4555,11 +4555,15 @@ static import_symbols() {
 	set_name(0x0079B070, "CAaBsp__constructor");
 	set_name(0x0079B1C0, "CAaBspDigestCache__Reset");
 	set_name(0x0079B2C0, "CAaBsp__Clear");
+	set_name(0x0079B340, "Particulate__destructor");
 	set_name(0x0079B360, "Particulate__SetScale");
 	set_name(0x0079B760, "CMapObjGroup__QueryLiquidSounds");
 	set_name(0x0079B8E0, "Particulate__InitParticles");
 	set_name(0x0079BBF0, "CMapObj__QueryLiquidSounds");
 	set_name(0x0079BCC0, "Particulate__InitMovement");
+	set_name(0x0079BE50, "Particulate__ComputeMovement");
+	set_name(0x0079BF40, "Particulate__Update");
+	set_name(0x0079CA70, "Particulate__Render");
 	set_name(0x0079DFF0, "Particulate__SetTexture");
 	set_name(0x0079E100, "Particulate__constructor");
 	set_name(0x0079E1A0, "CWaterRipple__Initizalize");
