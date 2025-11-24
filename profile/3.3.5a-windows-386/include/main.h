@@ -92,6 +92,7 @@
 #include "map/CMapEntity.h"
 #include "map/CMapBaseObjLink.h"
 #include "map/Weather.h"
+#include "map/Particulate.h"
 
 #include "character/CCharacterComponent.h"
 

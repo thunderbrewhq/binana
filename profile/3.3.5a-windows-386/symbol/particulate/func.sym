@@ -3,3 +3,7 @@ Particulate__InitMovement 0079BCC0 f end=0079BE44
 Particulate__SetTexture 0079DFF0 f end=0079E080
 Particulate__constructor 0079E100 f end=0079E191
 Particulate__SetScale 0079B360 f end=0079B370
+Particulate__destructor 0079B340 f end=0079B352
+Particulate__ComputeMovement 0079BE50 f end=0079BF3B
+Particulate__Update 0079BF40 f end=0079C106
+Particulate__Render 0079CA70 f end=0079CF3C
