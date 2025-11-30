@@ -37,3 +37,6 @@ CMapObjGroup__SetVertexVB0 007C9CB0 f end=007C9D12
 CMapObjGroup__SetIndexVB 007C9D80 f end=007C9DCB
 CMapObjGroup__AllocVB 007CBCB0 f end=007CBD64
 CMapObjGroup__FreeVB 007CBD70 f end=007CBDC0
+CMapObjGroup__Initialize 007CB990 f end=007CB9C8
+CMapObjGroup__AllocLiquidVB 007CBDC0 f end=007CBE2D
+CMapObjGroup__FreeLiquidVB 007CBE30 f end=007CBE7C

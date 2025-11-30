@@ -24,3 +24,4 @@ CMap__mapChunkPointer 00AEEDAC l
 CMap__enableTerrainShaderVertex 00CE049F l
 CMap__enableTerrainShaderPixel 00CE049E l
 CMap__s_mapRenderChunkUpdateList 00ADFC30 l
+CMap__s_sunLigh 00CE04A8 l

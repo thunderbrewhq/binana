@@ -137,6 +137,7 @@ CGUnit_C__SetMaxAlpha 00737390 f end=007374B7
 CGUnit_C__IsPartyMember 0052C8C0 f end=0052C9A0
 CGUnit_C__HandleAnimEvent 00732650 f end=00732FEC
 CGUnit_C__PlayDeathAnim 0073AF80 f end=0073B04C
+CGUnit_C__GetDisplayClassNameFromRecord 007159E0 f end=00715A46
 UnitCombatLogInvalidateName 0074F400 f end=0074F4CC
 UnitCombatLog 00751150 f end=007512A1
 UnitSoundInitialize 00747860 f end=007478EE

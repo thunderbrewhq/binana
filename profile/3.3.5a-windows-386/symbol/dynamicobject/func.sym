@@ -9,3 +9,4 @@ CGDynamicObject_C__PostReenable 007050E0 f end=007050FB
 CGDynamicObject_C__GetPosition 007064E0 f end=007064FE
 CGDynamicObject_C__GetRawPosition 00706500 f end=00706524
 CGDynamicObject_C__constructor 007053A0 f end=007054CC
+CGDynamicObject_C__UpdateDisplay 007051B0 f end=0070522E
