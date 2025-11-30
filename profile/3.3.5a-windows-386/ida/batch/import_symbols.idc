@@ -361,6 +361,7 @@ static import_symbols() {
 	set_name(0x00481620, "CSimpleTexture__SetBlendMode");
 	set_name(0x00481640, "CSimpleTexture__SetTexCoord");
 	set_name(0x00482290, "CSimpleFontString__GetFontHeight");
+	set_name(0x004829A0, "C3Vector__Subtract");
 	set_name(0x004829D0, "GxBufLock");
 	set_name(0x004829F0, "GxBufUnlock");
 	set_name(0x00482A20, "GxBufStream");
@@ -816,6 +817,8 @@ static import_symbols() {
 	set_name(0x004E3530, "Script_DeclineCharacter");
 	set_name(0x004E3620, "Script_GetSelectBackgroundModel");
 	set_name(0x004E38F0, "CCharacterSelection__Shutdown");
+	set_name(0x004E3C10, "CCharacterSelection__SetBackgroundModel");
+	set_name(0x004E3CD0, "CCharacterSelection__SelectCharacter");
 	set_name(0x004E44E0, "Script_SetCharSelectBackground");
 	set_name(0x004E4580, "Script_SelectCharacter");
 	set_name(0x004E47F0, "CCharacterSelection__ClearCharacterList");
@@ -1509,6 +1512,7 @@ static import_symbols() {
 	set_name(0x0052E9B0, "Script_GetHairCustomization@2");
 	set_name(0x0052E9D0, "Script_GetFacialHairCustomization@2");
 	set_name(0x0052E9F0, "CGBarberShop__DisableBarberShop");
+	set_name(0x0052EBA0, "CGBarberShop__GetTotalCost");
 	set_name(0x0052ED60, "Script_GetBarberShopTotalCost");
 	set_name(0x0052ED80, "Script_CancelBarberShop");
 	set_name(0x0052EEF0, "Script_ApplyBarberShopStyle");
@@ -1679,6 +1683,8 @@ static import_symbols() {
 	set_name(0x00547EB0, "CGWorldMap__InitializeGame");
 	set_name(0x00548570, "CGWorldStateInfo__InitializeGame");
 	set_name(0x00548720, "Script_GetNumWorldStateUI");
+	set_name(0x00548760, "CGWorldStateInfo__RequestUITime");
+	set_name(0x005488F0, "CGWorldStateInfo__TimerUpdate");
 	set_name(0x00548D40, "Script_GetWorldStateUIInfo");
 	set_name(0x00549AD0, "Script_IsActiveBattlefieldArena");
 	set_name(0x00549B40, "Script_CloseBattlefield");
@@ -2470,6 +2476,7 @@ static import_symbols() {
 	set_name(0x005AE380, "CGEquipmentManager__GetSetList");
 	set_name(0x005AE5C0, "CGEquipmentManager__GetSetByID");
 	set_name(0x005AE600, "CGEquipmentManager__GetSetByName");
+	set_name(0x005AE660, "CGEquipmentManager__EquipSet");
 	set_name(0x005AE6B0, "CGEquipmentManager__GetFullIconPath");
 	set_name(0x005AE800, "Script_DeleteEquipmentSet");
 	set_name(0x005AE860, "Script_GetEquipmentSetLocations");
@@ -3877,6 +3884,7 @@ static import_symbols() {
 	set_name(0x00704D90, "CGDynamicObject_C__ModelLoaded");
 	set_name(0x00704F60, "CGDynamicObject_C__ObjectVisKitProc");
 	set_name(0x007050E0, "CGDynamicObject_C__PostReenable");
+	set_name(0x007051B0, "CGDynamicObject_C__UpdateDisplay");
 	set_name(0x007053A0, "CGDynamicObject_C__constructor");
 	set_name(0x00705610, "CGCorpse_C__PostReenable");
 	set_name(0x00705670, "CGCorpse_C__GetModelFileName");
@@ -3955,6 +3963,7 @@ static import_symbols() {
 	set_name(0x007156A0, "CGUnit_C__GetRenderFacing");
 	set_name(0x007158C0, "CGUnit_C__RegisterScript");
 	set_name(0x00715900, "CGUnit_C__UnregisterScript");
+	set_name(0x007159E0, "CGUnit_C__GetDisplayClassNameFromRecord");
 	set_name(0x00715AC0, "CGUnit_C__SetCastingAutoRepeat");
 	set_name(0x00715B20, "CGUnit_C__StopNamePlateSpellbar");
 	set_name(0x00715C30, "CGUnit_C__GetNamePlateFocus");
@@ -4130,6 +4139,7 @@ static import_symbols() {
 	set_name(0x00751150, "UnitCombatLog");
 	set_name(0x00754390, "CGBag_C__GetItemPointer");
 	set_name(0x00754A20, "CGBag_C__FindItemOfType");
+	set_name(0x00754A50, "CGBag_C__FindItemOfType@2");
 	set_name(0x00754AF0, "CGBag_C__FindItemByName");
 	set_name(0x00754D50, "CGBag_C__GetItemTypeCharges");
 	set_name(0x00754D90, "CGBag_C__UnlockItemsOfType");
@@ -4535,6 +4545,7 @@ static import_symbols() {
 	set_name(0x007935A0, "CWorldScene__CullLiquid");
 	set_name(0x00793B10, "CWorldScene__RenderChunksSolid");
 	set_name(0x00793C30, "CWorldScene__RenderChunksZoneDebug");
+	set_name(0x007944C0, "CBarrier__AddAxisAlignedWall");
 	set_name(0x00795400, "CWorldScene__Update");
 	set_name(0x00795D40, "CWorldScene__LocateViewer3");
 	set_name(0x007964A0, "CWorldScene__RenderMapObjDefGroups");
@@ -4564,6 +4575,7 @@ static import_symbols() {
 	set_name(0x0079BE50, "Particulate__ComputeMovement");
 	set_name(0x0079BF40, "Particulate__Update");
 	set_name(0x0079CA70, "Particulate__Render");
+	set_name(0x0079D2B0, "CMap__QueryLiquidSounds");
 	set_name(0x0079DFF0, "Particulate__SetTexture");
 	set_name(0x0079E100, "Particulate__constructor");
 	set_name(0x0079E1A0, "CWaterRipple__Initizalize");
@@ -4599,6 +4611,9 @@ static import_symbols() {
 	set_name(0x007A2180, "CMap__VectorIntersectSY");
 	set_name(0x007A2230, "CMap__VectorIntersectDX");
 	set_name(0x007A23E0, "CMap__VectorIntersectDY");
+	set_name(0x007A2760, "CMap__VectorIntersectDoodadDefs");
+	set_name(0x007A2960, "CMap__VectorIntersectEntitys");
+	set_name(0x007A30D0, "CMap__VectorIntersect");
 	set_name(0x007A3570, "CMap__VectorIntersectSubChunks");
 	set_name(0x007A39F0, "CMap__VectorIntersectTerrain");
 	set_name(0x007A43D0, "CMap__CreateImpassableFacets");
@@ -4626,6 +4641,7 @@ static import_symbols() {
 	set_name(0x007AE050, "CMapObj__DesrtoyPools");
 	set_name(0x007AE060, "CMapObj__UpdatePools");
 	set_name(0x007AE110, "CMapObj__AsyncFailedCallback");
+	set_name(0x007AE140, "CMapObj__CreateWmoIgnoreFlags");
 	set_name(0x007AE1A0, "CMapObj__ReadGroup");
 	set_name(0x007AE1C0, "CMapObj__WaitLoad");
 	set_name(0x007AE300, "CMapObj__Init");
@@ -4637,8 +4653,11 @@ static import_symbols() {
 	set_name(0x007AE670, "CMapObj__GetGroupBounds");
 	set_name(0x007AE720, "CMapObj__GetGroupBounds@2");
 	set_name(0x007AE7B0, "CMapObj__GetGroupFlags");
-	set_name(0x007AE840, "CMapObj__TestBounds");
+	set_name(0x007AE7E0, "CMapObj__TestBounds");
+	set_name(0x007AE840, "CMapObj__TestBounds@2");
 	set_name(0x007AE880, "CMapObj__TestGroupBounds");
+	set_name(0x007AE8D0, "CMapObj__TestGroupBounds@2");
+	set_name(0x007AE920, "CMapObj__TestGroupBounds@3");
 	set_name(0x007AEA10, "CMapObj__TestConvexVolume");
 	set_name(0x007AEA80, "CMapObj__GetGroup");
 	set_name(0x007AEAB0, "CMapObj__WaitLoadGroup");
@@ -4703,6 +4722,7 @@ static import_symbols() {
 	set_name(0x007B4700, "CMapObjDef__IsAllDrawable");
 	set_name(0x007B4760, "CMapObjDef__IsAllLoaded");
 	set_name(0x007B4A50, "CMap__SnapBaseObjToSubChunk");
+	set_name(0x007B4BC0, "CMap__UpdateBarriers");
 	set_name(0x007B4DF0, "CMap__UpdateArea");
 	set_name(0x007B5020, "TSList__LinkToHead");
 	set_name(0x007B5420, "CMap__ProcessChunkLiquidUpdateList");
@@ -4868,12 +4888,16 @@ static import_symbols() {
 	set_name(0x007CB520, "CMapObjGroup__AllocVertArray");
 	set_name(0x007CB700, "CMapObjGroup__constructor");
 	set_name(0x007CB7B0, "CMapObjGroup__GetTris@3");
+	set_name(0x007CB870, "VBBList__Destroy");
+	set_name(0x007CB990, "CMapObjGroup__Initialize");
 	set_name(0x007CB9D0, "CMapObjGroup__Destroy");
 	set_name(0x007CB9F0, "VBBList__FreeVBB");
 	set_name(0x007CBB30, "VBBList__AssignBlock");
 	set_name(0x007CBBC0, "VBBList__AllocVBB");
 	set_name(0x007CBCB0, "CMapObjGroup__AllocVB");
 	set_name(0x007CBD70, "CMapObjGroup__FreeVB");
+	set_name(0x007CBDC0, "CMapObjGroup__AllocLiquidVB");
+	set_name(0x007CBE30, "CMapObjGroup__FreeLiquidVB");
 	set_name(0x007CBE80, "CMapObjGroup__Clear");
 	set_name(0x007CC310, "CMap__LoadWdl");
 	set_name(0x007CDE10, "CChunkLiquid__Purge");
@@ -4911,6 +4935,7 @@ static import_symbols() {
 	set_name(0x007D6A90, "CMapArea__PurgeChunks");
 	set_name(0x007D6B30, "CMapArea__PrepareChunk");
 	set_name(0x007D6BF0, "CMapArea__Update");
+	set_name(0x007D6D20, "CMapArea__LoadTextures");
 	set_name(0x007D6E10, "CMapArea__destructor");
 	set_name(0x007D6EF0, "CMapArea__Create");
 	set_name(0x007D7020, "CMapArea__AsyncLoadCallback");
@@ -4923,10 +4948,12 @@ static import_symbols() {
 	set_name(0x007D7380, "CMapObjGroup__FixColorVertexAlpha");
 	set_name(0x007D7470, "CMapObj__CreateDataPointers");
 	set_name(0x007D7710, "CMapObj__CreateMaterial");
+	set_name(0x007D77C0, "CMapObj__DistFromClosestExtPortal");
 	set_name(0x007D78C0, "CMapObj__AttenTransVerts");
 	set_name(0x007D7C30, "CMapObjGroup__CreateOptionalDataPointers");
 	set_name(0x007D7EB0, "CMapObj__CreateData");
 	set_name(0x007D7F50, "CMapObjGroup__CreateDataPointers");
+	set_name(0x007D8010, "CMapObj__DistFromClosestExtPortal@2");
 	set_name(0x007D8050, "CMapObj__AsyncPostloadCallback");
 	set_name(0x007D80C0, "CMapObj__Read");
 	set_name(0x007D81C0, "CMapObjGroup__CreateOccluders");
@@ -5039,6 +5066,7 @@ static import_symbols() {
 	set_name(0x00803A50, "Spell_C_HandleSpriteRay");
 	set_name(0x00804190, "Script_SpellCanTargetUnit");
 	set_name(0x00804220, "Script_CancelUnitBuff");
+	set_name(0x00804CC0, "Spell_C_IsSpellInTransit");
 	set_name(0x00806200, "Spell_C_CancelSpell");
 	set_name(0x008063E0, "Spell_C_CancelSpellByTarget");
 	set_name(0x00806480, "Spell_C_CancelMeleeSpells");
@@ -5119,7 +5147,13 @@ static import_symbols() {
 	set_name(0x0081C900, "CM2Cache__constructor");
 	set_name(0x0081C9C0, "CM2Scene__AdvanceTime");
 	set_name(0x0081CAB0, "CM2Scene__PurgeModelCache");
+	set_name(0x0081CAD0, "CM2Scene__AllocateSpaceForHitList");
 	set_name(0x0081CE70, "CM2Scene__AnimateThread");
+	set_name(0x0081CF20, "CM2Scene__ComputeRayDirAndLen");
+	set_name(0x0081CFF0, "CM2Scene__SphereTestModels");
+	set_name(0x0081DAF0, "CM2Scene__HitTestGeometry");
+	set_name(0x0081DD50, "CM2Scene__HitTestCollision");
+	set_name(0x0081DF10, "CM2Scene__EndHitTest");
 	set_name(0x0081E400, "CM2Scene__SelectLights");
 	set_name(0x0081EA90, "CM2Scene__SortDoodadProxy");
 	set_name(0x0081EAD0, "CM2Scene__SortOpaqueGeoBatches");
@@ -5591,6 +5625,7 @@ static import_symbols() {
 	set_name(0x00982950, "C3Vector__C3Vector");
 	set_name(0x00982970, "C3Vector__constructor");
 	set_name(0x009829B0, "C3Vector__MajorAxis");
+	set_name(0x00982F80, "NTempest__Intersect2d");
 	set_name(0x00982FB0, "NTempest__Intersect");
 	set_name(0x009830D0, "NTempest__Intersect@2");
 	set_name(0x009836B0, "NTempest__Intersect@3");
@@ -5606,6 +5641,7 @@ static import_symbols() {
 	set_name(0x00984930, "CAaBox__Bounding");
 	set_name(0x00984C90, "C4Vector__constructor");
 	set_name(0x00984DB0, "NTempest__DistanceFromPolygonEdge");
+	set_name(0x00984E50, "NTempest__DistanceFromPolygon");
 	set_name(0x00985200, "C3Ray__FromStartEnd");
 	set_name(0x009858B0, "Script_PlaySound");
 	set_name(0x00985950, "Script_PlayMusic");
@@ -6138,6 +6174,8 @@ static import_symbols() {
 	set_name(0x00ADFC30, "CMap__s_mapRenderChunkUpdateList");
 	set_name(0x00ADFC3C, "CMap__s_mapChunkLiquidUpdateList");
 	set_name(0x00AEEDAC, "CMap__mapChunkPointer");
+	set_name(0x00AEEE58, "CMapObjGroup__vertexVBList");
+	set_name(0x00AEEE80, "CMapObjGroup__indexVBList");
 	set_name(0x00AF4998, "g_lightSkyboxDB");
 	set_name(0x00AF49BC, "g_lightIntBandDB");
 	set_name(0x00AF49E0, "g_lightFloatBandDB");
@@ -6753,6 +6791,7 @@ static import_symbols() {
 	set_name(0x00CDFFD8, "CWaterRipple__s_psWaterRipples");
 	set_name(0x00CE049E, "CMap__enableTerrainShaderPixel");
 	set_name(0x00CE049F, "CMap__enableTerrainShaderVertex");
+	set_name(0x00CE04A8, "CMap__s_sunLigh");
 	set_name(0x00CE05D0, "CMap__wdtFilename");
 	set_name(0x00CE06D0, "CMap__mapName");
 	set_name(0x00CE07D0, "CMap__mapPath");
