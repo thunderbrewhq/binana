@@ -6,6 +6,7 @@
 #include "map/WMOchunks.h"
 #include "tempest/vector.h"
 #include "storm/list.h"
+#include "map/VBBList.h"
 
 DECLARE_STRUCT(CMapObj);
 DECLARE_STRUCT(CMapObjGroup);
@@ -19,9 +20,9 @@ struct CMapObj
     int32_t objectIndex;
     int32_t unk_04;
     int32_t unk_08;
-    int32_t unk_0C;
+    CMapObj* mapObjPtr1;
     int32_t unk_10;
-    int32_t unk_14;
+    CMapObj* mapObjPtr2;
     int32_t unk_18;
     char m_wmoName[260];
     SMOHeader *header;
@@ -77,17 +78,17 @@ struct CMapObj
 struct CMapObjGroup
 {
     int32_t objectIndex;
-    int32_t unk_04;
-    int32_t unk_08;
-    int32_t unk_0C;
-    int32_t unk_10;
-    int32_t unk_14;
+    VBBList_Block* vertsBlock;
+    VBBList_Block* transparencyVertsBlock;
+    VBBList_Block* indicesBlock;
+    VBBList_Block* liquidVertsBlock;
+    VBBList_Block* liquidIndicesBlock;
     float timer;
-    int32_t unk_1C;
+    void* unk_1C;
     int32_t unk_20;
     int32_t unk_24;
     int32_t unk_28;
-    int32_t unk_2C;
+    int16_t unk_2C[2];
     int32_t flags;
     CAaBox bbox;
     float distToCamera;
@@ -120,7 +121,7 @@ struct CMapObjGroup
     int32_t unk_CC;
     int32_t unkFlags;
     int32_t unk_D4;
-    int32_t unk_D8;
+    int32_t minimapTag;
     char* groupName;
     SMOPoly* polyList;
     uint16_t* indices;
