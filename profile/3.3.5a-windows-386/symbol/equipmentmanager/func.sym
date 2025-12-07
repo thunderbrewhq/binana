@@ -12,3 +12,4 @@ CGEquipmentManager__UseEquipmentSet 005ADA20 f end=005ADE4A
 CGEquipmentManager__GetSetList 005AE380 f end=005AE489
 CGEquipmentManager__OnEquipmentSetResult 005AF710 f end=005AF7D7
 CGEquipmentManager__EquipSet 005AE660 f end=005AE6AA
+CGEquipmentManager__SaveSet 005ADE50 f end=005AE03C

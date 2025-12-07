@@ -49,6 +49,7 @@ CGPlayer__TotalFieldsSaved 004F5530 f end=004F553B
 CGPlayer_C__SetPlayedTime 006CF470 f end=006CF494
 CGPlayer_C__SplitItem 006DB9D0 f end=006DBADF
 CGPlayer_C__AutoStoreItemInBag 006DBAE0 f end=006DBBD6
+CGPlayer_C__UpdateGhostStatus 006DF710 f end=006DF795
 CloseAllLootRolls 006FAFD0 f end=006FB0FD
 PlayerNameTriggerNameRegenerate 007E5130 f end=007E5140
 PlayerNameShowing 007E5150 f end=007E516B

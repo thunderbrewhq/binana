@@ -1,3 +1,5 @@
 CBarrier__Initialize 00799730 f end=007997C5
 CBarrier__Destroy 0078F510 f end=0078F56C
 CBarrier__AddAxisAlignedWall 007944C0 f end=007946C1
+CBarrier__AddBarrierConvexPoly 00792360 f end=007927D6
+CBarrier__AddBarrier 007946D0 f end=00794AC1

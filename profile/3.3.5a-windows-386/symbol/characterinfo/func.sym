@@ -4,3 +4,4 @@ CGCharacterInfo__PickupItem 005E85D0 f end=005E8A55
 CGCharacterInfo__PickupBag 005E8C30 f end=005E8D2D
 CGCharacterInfo__UseItem 005E8A60 f end=005E8BBC
 CGCharacterInfo__PutItemInBag 005E8D30 f end=005E8FD2
+CGCharacterInfo__LeaveWorld 005EAF70 f end=005EB031

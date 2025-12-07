@@ -1,0 +1,4 @@
+CMapChunkBuf__Valid 007CDF50 f end=007CDF7F
+CMapChunkBuf__CreateBuf 007CEFD0 f end=007CF0BF
+CMapChunkBuf__Alloc 007CF140 f end=007CF200
+CMapChunkBuf__Free 007CF790 f end=007CF837

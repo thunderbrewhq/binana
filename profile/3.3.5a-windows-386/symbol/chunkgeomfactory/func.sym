@@ -1,0 +1,7 @@
+CChunkGeomFactory__Purge 007D4390 f end=007D43AC
+CChunkGeomFactory__Release 007D4760 f end=007D4782
+CChunkGeomFactory__SetTransform 007D4790 f end=007D47CC
+CChunkGeomFactory__constructor 007D4850 f end=007D48BE
+CChunkGeomFactory__destructor 007D48C0 f end=007D491B
+CChunkGeomFactory__Create 007D49D0 f end=007D4AAC
+CChunkGeomFactory__GetBuffers 007D4AB0 f end=007D4F06

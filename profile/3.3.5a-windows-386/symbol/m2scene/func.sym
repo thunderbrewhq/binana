@@ -24,3 +24,5 @@ CM2Scene__SphereTestModels 0081CFF0 f end=0081D2B1
 CM2Scene__HitTestGeometry 0081DAF0 f end=0081DD4B
 CM2Scene__HitTestCollision 0081DD50 f end=0081DF0E
 CM2Scene__EndHitTest 0081DF10 f end=0081E10B
+CM2Scene__BeginHitTest 0081CAC0 f end=0081CAC5
+CM2Scene__EndHitTestCollisionWorld 0081E110 f end=0081E3FE

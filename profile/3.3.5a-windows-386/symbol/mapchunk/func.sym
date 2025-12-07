@@ -23,3 +23,5 @@ CMapChunk__Intersect 007D8E00 f end=007D91E5
 CMapChunk__LoadDetailDoodadModels 007D05F0 f end=007D069A
 CMapChunk__destructor 007C5E50 f end=007C6059
 CMapChunk__constructor 007C5C50 f end=007C5E4B
+CMapChunk__GetLiquidHeight 007C55D0 f end=007C568E
+CMapChunk__SelectLights 007B3F30 f end=007B408C

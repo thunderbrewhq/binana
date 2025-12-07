@@ -1,0 +1,4 @@
+WoWTime__constructor 0076C190 f end=0076C1AF
+WoWTime__GetDaysSinceEpoch 0076C1F0 f end=0076C276
+WoWTime__GetHourAndMinutes 0076C360 f end=0076C37B
+WoWTime__SetDate 0076C480 f end=0076C4BE
