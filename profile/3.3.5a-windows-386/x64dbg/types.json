@@ -8641,6 +8641,62 @@
       ]
     },
     {
+      "name": "CMapChunkBuf",
+      "size": 40,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "unk_00",
+          "offset": 0
+        },
+        {
+          "type": "float",
+          "name": "flushTimer",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "vertexDataSize",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "indexDataSize",
+          "offset": 12
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "vertexBuf",
+          "offset": 16
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "indexBuf",
+          "offset": 20
+        },
+        {
+          "type": "CGxPool*",
+          "name": "vertexPool",
+          "offset": 24
+        },
+        {
+          "type": "CGxPool*",
+          "name": "indexPool",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_20",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_24",
+          "offset": 36
+        }
+      ]
+    },
+    {
       "name": "CMapRenderChunkLayer",
       "size": 20,
       "members": [
@@ -32841,6 +32897,87 @@
       ]
     },
     {
+      "name": "CChunkGeomFactory",
+      "size": 116,
+      "members": [
+        {
+          "type": "void**",
+          "name": "vtable",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_04",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_08",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_0C",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_10",
+          "offset": 16
+        },
+        {
+          "type": "CChunkLiquid*",
+          "name": "liquidChunk",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_18",
+          "offset": 24
+        },
+        {
+          "type": "CMapChunkBuf*",
+          "name": "mapChunkBuf",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_20",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_24",
+          "offset": 36
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_28",
+          "offset": 40
+        },
+        {
+          "type": "uint16_t",
+          "name": "unk_flags_2C",
+          "offset": 44
+        },
+        {
+          "type": "uint16_t",
+          "name": "unk_flags_2E",
+          "offset": 46
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_30",
+          "offset": 48
+        },
+        {
+          "type": "C44Matrix",
+          "name": "matrix",
+          "offset": 52
+        }
+      ]
+    },
+    {
       "name": "M2ModelTrack_C4Quaternion",
       "size": 24,
       "members": [
@@ -34958,6 +35095,108 @@
           "type": "int32_t",
           "name": "int138",
           "offset": 312
+        }
+      ]
+    },
+    {
+      "name": "VBBList_Block",
+      "size": 32,
+      "members": [
+        {
+          "type": "VBBList_Block*",
+          "name": "next",
+          "offset": 0
+        },
+        {
+          "type": "VBBList_Block*",
+          "name": "prev",
+          "offset": 4
+        },
+        {
+          "type": "EGxPoolUsage",
+          "name": "poolUsage",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "offset",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "capacity",
+          "offset": 16
+        },
+        {
+          "type": "CGxPool*",
+          "name": "pool",
+          "offset": 20
+        },
+        {
+          "type": "CGxBuf*",
+          "name": "buffer",
+          "offset": 24
+        },
+        {
+          "type": "VBBList_Block**",
+          "name": "listHead",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "VBBList",
+      "size": 40,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "singlePool",
+          "offset": 0
+        },
+        {
+          "type": "EGxPoolTarget",
+          "name": "target",
+          "offset": 4
+        },
+        {
+          "type": "EGxPoolUsage",
+          "name": "usage",
+          "offset": 8
+        },
+        {
+          "type": "CGxPool*",
+          "name": "pool",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_10",
+          "offset": 16
+        },
+        {
+          "type": "VBBList_Block*",
+          "name": "listHeadA",
+          "offset": 20
+        },
+        {
+          "type": "VBBList_Block*",
+          "name": "freeCandidate",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk_1C",
+          "offset": 28
+        },
+        {
+          "type": "VBBList_Block*",
+          "name": "listHeadB",
+          "offset": 32
+        },
+        {
+          "type": "VBBList_Block*",
+          "name": "allBlocks",
+          "offset": 36
         }
       ]
     },
@@ -43279,28 +43518,28 @@
           "offset": 0
         },
         {
-          "type": "int32_t",
-          "name": "unk_04",
+          "type": "VBBList_Block*",
+          "name": "vertsBlock",
           "offset": 4
         },
         {
-          "type": "int32_t",
-          "name": "unk_08",
+          "type": "VBBList_Block*",
+          "name": "transparencyVertsBlock",
           "offset": 8
         },
         {
-          "type": "int32_t",
-          "name": "unk_0C",
+          "type": "VBBList_Block*",
+          "name": "indicesBlock",
           "offset": 12
         },
         {
-          "type": "int32_t",
-          "name": "unk_10",
+          "type": "VBBList_Block*",
+          "name": "liquidVertsBlock",
           "offset": 16
         },
         {
-          "type": "int32_t",
-          "name": "unk_14",
+          "type": "VBBList_Block*",
+          "name": "liquidIndicesBlock",
           "offset": 20
         },
         {
@@ -43309,7 +43548,7 @@
           "offset": 24
         },
         {
-          "type": "int32_t",
+          "type": "void*",
           "name": "unk_1C",
           "offset": 28
         },
@@ -43329,8 +43568,9 @@
           "offset": 40
         },
         {
-          "type": "int32_t",
+          "type": "int16_t",
           "name": "unk_2C",
+          "arrsize": 2,
           "offset": 44
         },
         {
@@ -43495,7 +43735,7 @@
         },
         {
           "type": "int32_t",
-          "name": "unk_D8",
+          "name": "minimapTag",
           "offset": 212
         },
         {
@@ -53557,8 +53797,8 @@
           "offset": 8
         },
         {
-          "type": "int32_t",
-          "name": "unk_0C",
+          "type": "CMapObj*",
+          "name": "mapObjPtr1",
           "offset": 12
         },
         {
@@ -53567,8 +53807,8 @@
           "offset": 16
         },
         {
-          "type": "int32_t",
-          "name": "unk_14",
+          "type": "CMapObj*",
+          "name": "mapObjPtr2",
           "offset": 20
         },
         {
