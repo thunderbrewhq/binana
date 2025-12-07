@@ -93,6 +93,8 @@
 #include "map/CMapBaseObjLink.h"
 #include "map/Weather.h"
 #include "map/Particulate.h"
+#include "map/CChunkGeomFactory.h"
+#include "map/CMapChunkBuf.h"
 
 #include "character/CCharacterComponent.h"
 
