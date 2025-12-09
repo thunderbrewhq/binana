@@ -11,3 +11,5 @@ ClientConnection__CharacterLogin 006B1790 f end=006B183F
 ClientConnection__SendCharEnumOpcode 00464A40 f end=00464AA6
 ClientConnection__SendPlayerLoginOpcode 00464AB0 f end=00464B28
 ClientConnection__HandleCharEnum 00464C10 f end=00464F4D
+ClientConnection__HandleDisconnect 006B12D0 f end=006B1311
+ClientConnection__HandleCantConnect 006B1320 f end=006B1383

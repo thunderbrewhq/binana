@@ -1,3 +1,6 @@
 CGBarberShop__DisableBarberShop 0052E9F0 f end=0052EB91
 CGBarberShop__InitializeGame 0052FE60 f end=0052FE8D
 CGBarberShop__GetTotalCost 0052EBA0 f end=0052ED58
+CGBarberShop__ResetAppearance 0052E630 f end=0052E6C4
+CGBarberShop__Reset 0052F7D0 f end=0052F8FF
+CGBarberShop__SetNextBarberShopStyle 0052FC80 f end=0052FDB5

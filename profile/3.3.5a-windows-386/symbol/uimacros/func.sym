@@ -5,3 +5,4 @@ CGUIMacros__UpdateDynamicMacros 00566660 f end=005666A0
 CGUIMacros__GetMacroByIndex 00566A70 f end=00566A97
 CGUIMacros__FindMacro 00566AA0 f end=00566ABA
 CGUIMacros__GetFullIconPath 00566AC0 f end=00566CC5
+CGUIMacros__LoadIcons 00565840 f end=00565ACD

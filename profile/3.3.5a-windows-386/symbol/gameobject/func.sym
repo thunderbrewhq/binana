@@ -24,3 +24,4 @@ CGGameObject_C__Disable 007130A0 f end=0071312E
 CGGameObject_C__PostReenable 00713130 f end=007131A9
 CGGameObject_C__Destructor 00713F20 f end=00713F4B
 CGGameObject_C__constructor 00714250 f end=00714996
+CGGameObject_C__GetPageTextLanguage 007102C0 f end=007102F3

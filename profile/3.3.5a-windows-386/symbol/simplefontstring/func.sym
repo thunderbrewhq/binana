@@ -4,3 +4,4 @@ CSimpleFontString__constructor 00485240 f end=0048536F
 CSimpleFontString__UpdateString 00486B20 f end=00486E2A
 CSimpleFontString_SetFormattedText 0048D800 f end=0048D88B type="int32_t __stdcall func(lua_State* L)"
 CSimpleFontString__SetJustificationOffset 00483C40 f end=00483CC8
+CSimpleFontString__OnColorChanged 004856F0 f end=00485850

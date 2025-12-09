@@ -11,3 +11,5 @@ CGTooltip__SetEquipmentSet 00622DD0 f end=006230C5
 CGTooltip__AddSpellReagents 00623590 f end=00623752
 CGTooltip__SetSpell 006238A0 f end=006252F1
 CGTooltip__SetItem 006277F0 f end=0062D924
+CGTooltip__ShowThis 0061CFF0 f end=0061D031
+CGTooltip__AddTalentPrereqs 006224F0 f end=006227F5

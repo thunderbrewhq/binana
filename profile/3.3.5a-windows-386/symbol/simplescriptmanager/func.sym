@@ -1,2 +1,4 @@
 CSimpleScriptManager__UnregisterCallback 007581A0 f end=007581EB
 CSimpleScriptManager__RegisterCallback 007581F0 f end=0075821A
+CSimpleScriptManager__Init 00758B80 f end=00758C43
+CSimpleScriptManager__Create 00758C50 f end=00758CCB

@@ -5,3 +5,6 @@ CShadowCache__SetShadowMapTerrain 00874660 f end=00874757
 CShadowCache__SetShadowMapDetailDoodad 00874760 f end=0087488D
 CShadowCache__SetShadowScale 00874030 f end=0087403E
 CShadowCache__SetMatrixCallback 00873FA0 f end=00873FAD
+CShadowCache__SetDebugParams 00874010 f end=00874026
+CShadowCache__PostUpdate 008750B0 f end=008753E6
+CShadowCache__PreUpdate 00875C10 f end=00875D2F

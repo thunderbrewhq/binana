@@ -4,3 +4,7 @@ CCharacterSelection__Shutdown 004E38F0 f end=004E3A1D
 CCharacterSelection__ClearCharacterList 004E47F0 f end=004E4877
 CCharacterSelection__SetBackgroundModel 004E3C10 f end=004E3C97
 CCharacterSelection__SelectCharacter 004E3CD0 f end=004E44DA
+CCharacterSelection__UpdateCharacterName 004E2870 f end=004E29D1
+CCharacterSelection__UpdateCharacterInfo 004E29E0 f end=004E2BC6
+CCharacterSelection__OnHide 004E3120 f end=004E3134
+CCharacterSelection__UpdateCharacterList 004E4610 f end=004E47EA

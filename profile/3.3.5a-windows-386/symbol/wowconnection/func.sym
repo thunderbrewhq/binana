@@ -27,3 +27,6 @@ WowConnection__Connect 00468E50 f end=00468ED5 ; WowConnection::Connect(char con
 WowConnection__DestroyOsNet 00466B90 f end=00466BE6
 WowConnection__Stop 00469080 f end=0046915A
 WowConnection__Start 00469320 f end=00469419
+WowConnectionNet__Service 00468FF0 f end=0046905B
+WowConnectionNet__Delete 004692C0 f end=004692FD
+WowConnectionNet__constructor 004695F0 f end=004696D2

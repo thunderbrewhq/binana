@@ -2100,3 +2100,4 @@ Script_SetCreature 00597960 f end=00597A09
 Script_SetRotation 00597A10 f end=00597A7A
 Script_CycleVariation 00599500 f end=005995CA
 Script_SendEvent 009C0070 f end=009C010C
+Script_GetUnitAuraInfo 006110A0 f end=00611121

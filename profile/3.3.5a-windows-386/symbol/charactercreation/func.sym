@@ -6,3 +6,7 @@ CCharacterCreation__SetSelectedClass 004E1740 f end=004E17EF
 CCharacterCreation__SetSelectedSex 004E1540 f end=004E173C
 CCharacterCreation__CreateCharacter 004E0380 f end=004E04FE
 CCharacterCreation__CycleCharCustomization 004E01F0 f end=004E0360
+CCharacterCreation__GetRandomRaceAndSex 004DFF10 f end=004DFF9B
+CCharacterCreation__OnHide 004DFFC0 f end=004DFFD4
+CCharacterCreation__GetRandomClassID 004E0F50 f end=004E0FCA
+CCharacterCreation__CalcClasses 004E1ED0 f end=004E1FCE

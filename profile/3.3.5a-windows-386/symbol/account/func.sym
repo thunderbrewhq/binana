@@ -1,3 +1,5 @@
-AccountMsg_RegisterScriptFunctions 00550080 f end=005500A3
-AccountMsg_UnregisterScriptFunctions 005500B0 f end=005500CC
+CAccountMsg_RegisterScriptFunctions 00550080 f end=005500A3
+CAccountMsg_UnregisterScriptFunctions 005500B0 f end=005500CC
 AccountDataInitializeBasicSystem 006B9900 f end=006B996D
+CAccountMsgBody__LoadBody 0054FC50 f end=0054FDB0
+CAccountMsgHeaders__LoadHeaders 005506A0 f end=00550802
