@@ -2,4 +2,7 @@ SE2SoundKitProperties__ResetToDefaults 004C5990 f end=004C5A18
 SE2__StopSound 004C6390 f end=004C6410
 SE2__PlaySoundKit 004C6A40 f end=004C713B
 SE2__PlaySoundKit 004C74A0 f end=004C74E9
+SE2__IsChatSoundInitialized 00878CC0 f end=00878CC6
+SE2__StartCapture 00879500 f end=00879577
+SE2__VoiceChat_StartCapture 009868C0 f end=009868CF
 UnitSoundShutdown 00747810 f end=00747848

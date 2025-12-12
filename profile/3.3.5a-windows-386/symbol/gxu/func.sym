@@ -21,4 +21,6 @@ GxuXformCalcFrustumCorners 006BF6D0 f end=006BFB60
 GxuUpdateSingleColorTexture 006BFDA0 f end=006BFDFE
 GxuXformCreateProjection_SG 006BFE00 f end=006BFE5C
 GxuXformCreateLookAtSgCompat 006BFE60 f end=006C004D
+GxuFontStringSetGradient 006BD140 f end=006BD15E
+GxuFontGetStringPosition 006BD550 f end=006BD596
 IGxuFontGlyphRenderGlyph 006C8CC0 f end=006C8E6B

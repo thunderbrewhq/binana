@@ -3,3 +3,5 @@ CShadowQuery__Clear 007BB830 f end=007BB9C2
 CShadowQuery__Render 007BBC50 f end=007BC482
 CShadowQuery__GetMatrix 007BAC10 f end=007BAFCE
 CShadowQuery__Update 007BB570 f end=007BB668
+CShadowQuery__FrustumCallback 007BAFD0 f end=007BB3DA
+CShadowQuery__QueryCallback 007BD200 f end=007BD392

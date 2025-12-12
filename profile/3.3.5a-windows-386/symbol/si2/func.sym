@@ -23,3 +23,5 @@ SI2__RegisterCVars 004D1050 f end=004D13DC
 SI2__StartGlueMusic 009861C0 f end=009862BE
 SI2__StartCreditMusic 009862C0 f end=0098638F
 SI2__VoiceChat_AmplifyMicrophoneInput 00986520 f end=009865BA
+SI2__StopLuaMusic 004C8680 f end=004C86A6
+

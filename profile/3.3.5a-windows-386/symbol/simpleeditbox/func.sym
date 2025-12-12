@@ -12,3 +12,6 @@ CSimpleEditBox__SetHistoryLines 00966FD0 f end=00967017 ; SetHistoryLines(int)
 CSimpleEditBox__LoadXML 00967290 f end=00967670 ; LoadXML(XMLNode*, CStatus*)
 CSimpleEditBox_SetText 00975E80 f end=00975F02
 CSimpleEditBox_HighlightText 00976080 f end=00976108
+CSimpleEditBox__GenNumToLen 00962D50 f end=00962E9B
+CSimpleEditBox__ConvertCoordinateToIndex 00964790 f end=009649CD
+CSimpleEditBox__MakeTextVisible 009649D0 f end=00964A83

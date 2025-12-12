@@ -45,3 +45,4 @@ CGActionBar__UseAction 005ABBC0 f end=005ABE63
 CGActionBar__PickupAction 005ABE70 f end=005ABFF6
 CGActionBar__EnterWorld 005AC0E0 f end=005AC0F4
 CGActionBar__HasValidTarget 005A94C0 f end=005A95D6
+CGActionBar__RemoveMacro 005AADD0 f end=005AAE20

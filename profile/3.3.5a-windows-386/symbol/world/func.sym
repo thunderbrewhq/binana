@@ -50,3 +50,6 @@ World__QueryObjectLiquidFlags 0077F220 f end=0077F257
 World__ObjectSetUpdateCallback 0077F2C0 f end=0077F2DA
 World__QueryLiquidStatus 0077F360 f end=0077F38C
 World__ObjectSetDoodadEmittersIgnoresDistance 0077FE80 f end=0077FE9F
+World__GetFramerate 0077F440 f end=0077F485
+World__ObjectSetAlwaysExterior 0077FE20 f end=0077FE3E
+World__ObjectSetRenderEnabled 00783A60 f end=00783B05

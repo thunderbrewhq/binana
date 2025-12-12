@@ -8,3 +8,4 @@ CursorGrabMoney 00616510 f end=006165A2
 CursorGrabSpell 006165B0 f end=00616625
 CursorDropItem 006167E0 f end=006167F9
 CursorSetMode 00616800 f end=0061682E type="void __stdcall func(CURSORMODE mode)"
+CursorDestroy 00616220 f end=00616251

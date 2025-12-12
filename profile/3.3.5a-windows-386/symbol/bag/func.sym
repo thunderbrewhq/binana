@@ -4,3 +4,4 @@ CGBag_C__FindItemByName 00754AF0 f end=00754B84
 CGBag_C__GetItemTypeCharges 00754D50 f end=00754D86
 CGBag_C__UnlockItemsOfType 00754D90 f end=00754DC3
 CGBag_C__FindItemOfType 00754A50 f end=00754A71
+CGBag_C__FindItemByFullName 00754C30 f end=00754CC4
