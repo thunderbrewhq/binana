@@ -8,3 +8,4 @@ CGBattlefieldInfo__RequestPlayerPositions 0054CF60 f end=0054D009
 CGBattlefieldInfo__AddArenaOpponentPet 0054D1C0 f end=0054D276
 CGBattlefieldInfo__LeaveWorld 0054E330 f end=0054E385
 CGBattlefieldInfo__RequestBattlegroundInstanceInfo 0054E5B0 f end=0054E6C9
+CGBattlefieldInfo__OnBattlefieldManagerEntered 005498C0 f end=005499BF

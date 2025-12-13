@@ -7,3 +7,5 @@ CGPartyInfo__SetOptOutOfLoot 0052CB40 f end=0052CBBA
 CGPartyInfo__LeaveWorld 0052D1E0 f end=0052D207
 CGPartyInfo__IsMemberOrPet 0052D310 f end=0052D40A
 CGPartyInfo__ResetLootMethod 0052D8A0 f end=0052D8C8
+CGPartyInfo__ShutdownGame 0052BC10 f end=0052BC46
+CGPartyInfo__OnChangePlayerDifficultyResult 0052C460 f end=0052C653

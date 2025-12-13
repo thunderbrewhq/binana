@@ -3,3 +3,5 @@ CGAuctionHouse__InitializeGame 005A0BA0 f end=005A0DF6
 CGAuctionHouse__SellNextItem 0059BA80 f end=0059BC8C
 CGAuctionHouse__SetAuctioneer 0059F000 f end=0059F14D
 CGAuctionHouse__AuctionItemExpired 0059F2F0 f end=0059F59A
+CGAuctionHouse__SortNameToType 0059A850 f end=0059A9CE
+CGAuctionHouse__TableNameToType 0059A9D0 f end=0059AA42

@@ -22,3 +22,5 @@ SFile__OpenEx 00424B50 f end=00424E44
 SFile__Load 00424E80 f end=00424F46
 SFile__LoadFile 00424F50 f end=00424F74
 SFile__Open 00424F80 f end=00424F98
+SFile__OpenArchive 00421950 f end=00421A05
+SFile__RebuildHash 00423D70 f end=00423DBD

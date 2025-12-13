@@ -21,3 +21,4 @@ CGItem_C__SetStorage 00706D30 f end=00706D63
 CGItem_C__constructor 00709840 f end=00709A07
 CGItem_C__Lock 00706FE0 f end=00707011
 CGItem_C__SetTranslated 00707060 f end=0070706B
+CGItem_C__GetFullItemName 00706D70 f end=00706E60

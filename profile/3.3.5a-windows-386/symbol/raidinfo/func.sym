@@ -7,3 +7,6 @@ CGRaidInfo__IsPVPRaid 00572F50 f end=00572F8F
 CGRaidInfo__ClearRoster 00572F90 f end=00573070
 CGRaidInfo__IsPlayerOrPetInRaid 00573200 f end=005732AB
 CGRaidInfo__UpdateRoster 00574F10 f end=005756B6
+CGRaidInfo__GetMapNameWithDifficulty 004FE070 f end=004FE0F8
+CGRaidInfo__CheckReadyCheckTime 00573390 f end=00573664
+CGRaidInfo__OnReadyCheckConfirm 005744F0 f end=005747CD
