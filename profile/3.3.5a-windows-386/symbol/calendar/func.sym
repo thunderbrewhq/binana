@@ -1,4 +1,5 @@
 CGCalendar__GetHolidayName 005B9430 f end=005B9487
 CGCalendar__InitializeGame 005C4240 f end=005C43B0
+CGCalendar__InvalidatePlayer 005BDE60 f end=005BDEF7
 CalendarRegisterScriptFunctions 005B8C30 f end=005B8C56
 CalendarUnregisterScriptFunctions 005B8C60 f end=005B8C7F

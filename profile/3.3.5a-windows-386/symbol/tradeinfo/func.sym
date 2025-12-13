@@ -1,2 +1,7 @@
 CGTradeInfo__UpdatePlayerItem 005863C0 f end=0058640C
 CGTradeInfo__SetEnchantingItem 00586C00 f end=00586C78
+CGTradeInfo__IsItemBeingTraded 005864D0 f end=00586519
+CGTradeInfo__SetPlayerItem 005869A0 f end=00586A95
+CGTradeInfo__AddCursorItem 00586B50 f end=00586BFC
+CGTradeInfo__AddPlayerItem 005877B0 f end=0058793B
+CGTradeInfo__InitiateTrade 00703CF0 f end=00703DF4

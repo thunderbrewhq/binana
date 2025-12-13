@@ -1,0 +1,7 @@
+CGCharacterModelBase__Create 005142B0 f end=005142F9
+CGCharacterModelBase__RotateModel 005970F0 f end=005971A3
+CGCharacterModelBase__UpdateModel 005971B0 f end=0059720B
+CGCharacterModelBase__constructor 00597370 f end=0059745F
+CGCharacterModelBase__SetUpModel 00597700 f end=005977BF
+CGCharacterModelBase__SetCreature 00597840 f end=00597870
+CGCharacterModelBase__CreateScriptMetaTable 00597A80 f end=00597A99
