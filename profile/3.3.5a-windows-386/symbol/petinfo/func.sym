@@ -3,3 +3,4 @@ CGPetInfo__ShowGrid 005D3070 f end=005D3080
 CGPetInfo__GetPet 005D3390 f end=005D33B3
 CGPetInfo__PetClearTarget 005D4650 f end=005D46EB
 CGPetInfo__UpdatePetTempBar 005D4AD0 f end=005D4C2D
+CGPetInfo__OnPetSpells 005D6B90 f end=005D6D8F

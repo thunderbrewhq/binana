@@ -2,3 +2,7 @@ WoWTime__constructor 0076C190 f end=0076C1AF
 WoWTime__GetDaysSinceEpoch 0076C1F0 f end=0076C276
 WoWTime__GetHourAndMinutes 0076C360 f end=0076C37B
 WoWTime__SetDate 0076C480 f end=0076C4BE
+WoWTime__AddDays 0076C280 f end=0076C358
+WoWTime__SetHourAndMinutes 0076C3C0 f end=0076C3E2
+WoWTime__WoWEncodeTime 0076CA50 f end=0076CAA7
+WoWTime__WoWDecodeTime 0076CAB0 f end=0076CADD
