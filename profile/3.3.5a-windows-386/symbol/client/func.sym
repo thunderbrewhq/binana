@@ -54,3 +54,6 @@ qsort 0040BE50 f end=0040C0F7
 ListInterfaceArchive 00404A80 f end=00404AC3
 AreaListShutdown 0078E960 f end=0078E991
 GetPhysicalDamageClassID 006337A0 f end=006337A6
+GetAddOnEnableState 005F7D70 f end=005F7E89
+IsAddOnLoadable 005F7E90 f end=005F7FED
+LoadAddOnFileCount 005F7FF0 f end=005F80AD
