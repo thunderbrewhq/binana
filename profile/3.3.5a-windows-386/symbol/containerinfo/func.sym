@@ -2,3 +2,5 @@ CGContainerInfo__UpdateItem 005D7320 f end=005D737B
 CGContainerInfo__UpdateContainers 005D9960 f end=005D9B3B
 CGContainerInfo__EnterWorld 005D9C20 f end=005D9D8F
 CGContainerInfo__UpdateContents 005D7070 f end=005D710A
+CGContainerInfo__OpenContainer 005D7110 f end=005D717C
+CGContainerInfo__GetLuaBagAndSlot 005D7380 f end=005D748C

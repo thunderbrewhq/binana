@@ -14,3 +14,4 @@ CGQuestLog__AddQuestWatch 005E64D0 f end=005E65A2
 CGQuestLog__LoadTrackedQuests 005E65B0 f end=005E6650
 CGQuestLog__Update 005E6940 f end=005E6DD7
 CGQuestLog__ShutdownGame 005E6F30 f end=005E6F93
+CGQuestLog__GetQuestWorldMapAreaID 005E2B60 f end=005E2EA5

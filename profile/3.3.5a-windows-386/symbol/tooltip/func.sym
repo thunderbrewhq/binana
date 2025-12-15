@@ -13,3 +13,7 @@ CGTooltip__SetSpell 006238A0 f end=006252F1
 CGTooltip__SetItem 006277F0 f end=0062D924
 CGTooltip__ShowThis 0061CFF0 f end=0061D031
 CGTooltip__AddTalentPrereqs 006224F0 f end=006227F5
+CGTooltip__GetItemHyperlinkString 0061E360 f end=0061E395
+CGTooltip__SetOwner 0061EA00 f end=0061EAAA
+CGTooltip__SetCorpse 00622410 f end=006224EC
+CGTooltip__SetObject 00626720 f end=00626E18

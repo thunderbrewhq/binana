@@ -53,3 +53,4 @@ World__ObjectSetDoodadEmittersIgnoresDistance 0077FE80 f end=0077FE9F
 World__GetFramerate 0077F440 f end=0077F485
 World__ObjectSetAlwaysExterior 0077FE20 f end=0077FE3E
 World__ObjectSetRenderEnabled 00783A60 f end=00783B05
+World__QueryOutdoors 0077FBF0 f end=0077FCC6

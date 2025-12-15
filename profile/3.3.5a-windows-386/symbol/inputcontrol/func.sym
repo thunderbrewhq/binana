@@ -3,3 +3,5 @@ CGInputControl__SendUIVehicleAngleUpdate 005FA910 f end=005FA9AD
 CGInputControl__TurnPlayer 005FB0B0 f end=005FB19B
 CGInputControl__MovePlayer 005FAE70 f end=005FAFAE
 CGInputControl__Reset 005FAC60 f end=005FAC84
+CGInputControl__OnMouseMoveRel 005FBA60 f end=005FBBC0
+CGInputControl__OnFocusChange 005FC960 f end=005FC9B2

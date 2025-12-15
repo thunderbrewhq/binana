@@ -1,2 +1,5 @@
 CGTradeSkillInfo__SetTradeSkill 005DE120 f end=005DE2F4
 CGTradeSkillInfo__RefreshList 005DD5A0 f end=005DE100
+CGTradeSkillInfo__IsCollapsedHeader 005DA830 f end=005DA8A6
+CGTradeSkillInfo__GetTradeSkillListLink 005DB060 f end=005DB292
+CGTradeSkillInfo__SetLink 005DE300 f end=005DE3F2
