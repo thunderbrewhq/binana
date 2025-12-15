@@ -5,3 +5,6 @@ CGCharacterModelBase__constructor 00597370 f end=0059745F
 CGCharacterModelBase__SetUpModel 00597700 f end=005977BF
 CGCharacterModelBase__SetCreature 00597840 f end=00597870
 CGCharacterModelBase__CreateScriptMetaTable 00597A80 f end=00597A99
+CGCharacterModelBase__RegisterScriptMethods 00597230 f end=00597250
+CGCharacterModelBase__ConfigureCamera 005974A0 f end=005975A6
+CGCharacterModelBase__OnModelLoaded 005977C0 f end=005977DB

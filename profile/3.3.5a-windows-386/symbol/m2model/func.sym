@@ -63,3 +63,4 @@ CM2Model__SetRibbonsEnabled 00824230 f end=008242BC
 CM2Model__SetEmittersEnabled 008279F0 f end=00827A88
 CM2Model__HasLiveRibbons 008241D0 f end=00824228
 CM2Model__SetGeometryVisible 0082C7C0 f end=0082C89B
+CM2Model__GetSequenceInfo 0082CED0 f end=0082D192

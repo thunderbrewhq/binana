@@ -14,3 +14,5 @@ CGCamera__CollideCameraWithWorld 00605D60 f end=006061C4
 CGCamera__GetCameraDistance 006059E0 f end=00605D51
 CGCamera__AddShake 00606330 f end=0060640D
 CGCamera__AddShake 00606410 f end=00606477
+CameraSetCoord 004C12B0 f end=004C135C
+CameraSetFloat 004C1360 f end=004C13AE

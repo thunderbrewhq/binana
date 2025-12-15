@@ -8,3 +8,4 @@ CCharacterSelection__UpdateCharacterName 004E2870 f end=004E29D1
 CCharacterSelection__UpdateCharacterInfo 004E29E0 f end=004E2BC6
 CCharacterSelection__OnHide 004E3120 f end=004E3134
 CCharacterSelection__UpdateCharacterList 004E4610 f end=004E47EA
+CCharacterSelection__GenericLightingCallback 004E3A20 f end=004E3C05

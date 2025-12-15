@@ -91,6 +91,7 @@ CCharacterComponent__GetSheatheLink 004E7940 f end=004E7982
 CCharacterComponent__GetTabardBackgroundFileName 004E81C0 f end=004E8206
 CCharacterComponent__GetTabardEmblemFileName 004E8210 f end=004E825E
 CCharacterComponent__GetTabardBorderFileName 004E8260 f end=004E82AE
+CCharacterComponent__RenderPrepSections 004F14A0 f end=004F1514
 ComponentFlagsMatch 004F39A0 f end=004F3A15
 GetSelectionFromContext 004F3A40 f end=004F3A80
 GetContextFromSelection 004F3A90 f end=004F3ABB

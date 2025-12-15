@@ -55,6 +55,7 @@ CGPlayer_C__Invite 006D4300 f end=006D43B7
 CGPlayer_C__SetFarSightFocus 006E4940 f end=006E4949
 CGPlayer_C__OnGuildChanged 006DF7A0 f end=006DF844
 CGPlayer_C__PlayerInitializeMessageHandlers 006E83B0 f end=006E8ED6
+CGPlayer_C__GetPackAndSlot 006DCCC0 f end=006DCD66
 CloseAllLootRolls 006FAFD0 f end=006FB0FD
 PlayerNameTriggerNameRegenerate 007E5130 f end=007E5140
 PlayerNameShowing 007E5150 f end=007E516B

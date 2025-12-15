@@ -8,3 +8,6 @@ CGBarberShop__ApplyAppearanceChange 0052EDA0 f end=0052EEEE
 CGBarberShop__GetStyle 0052F760 f end=0052F7C6
 CGBarberShop__RegisterScriptFunctions 0052E520 f end=0052E543
 CGBarberShop__UnregisterScriptFunctions 0052E550 f end=0052E56C
+CGBarberShop__IsCurrentStyle 0052E490 f end=0052E4C9
+CGBarberShop__OnBarberShopResult 0052E5B0 f end=0052E617
+CGBarberShop__OnEnableBarberShop 0052F9B0 f end=0052FC7F

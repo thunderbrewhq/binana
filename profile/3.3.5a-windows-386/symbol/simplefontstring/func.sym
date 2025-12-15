@@ -9,6 +9,5 @@ CSimpleFontString__SetAlphaGradient 00482230 f end=00482270
 CSimpleFontString__GetNumCharsWithinWidth 00482510 f end=004825D8
 CSimpleFontString__GetNumCharsWithinWidthFromEnd 004825E0 f end=004826A8
 CSimpleFontString__AddAnimTranslation 00482720 f end=00482764
+CSimpleFontString__GetDisplayText 00483A40 f end=00483C3C
 ApplyTranslationAnim 0048B800 f end=0048B81A
-TextBlockSetGradient 004BD900 f end=004BD91C
-TextBlockGetStringPos 004BDC50 f end=004BDC9E
