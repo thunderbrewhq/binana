@@ -71,5 +71,6 @@ CGlueMgr__PatchDownloadExecutePrepatch 004E5070 f end=004E51BB
 CGlueMgr__PatchDownloadApply 004E5730 f end=004E585D
 CGlueMgr__FactionChange 004D8F20 f end=004D9039
 CGlueMgr__RaceChange 004D9040 f end=004D9159
+CGlueMgr__ProcessAttachment 004E2C30 f end=004E2CDA
 SystemRegisterFunctions 0060A120 f end=0060A143
 SystemUnregisterFunctions 0060A150 f end=0060A16C

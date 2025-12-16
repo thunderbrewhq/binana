@@ -2,3 +2,5 @@ CGWorldStateInfo__InitializeGame 00548570 f end=005485A3
 CGWorldStateInfo__RequestUITime 00548760 f end=005487C6
 CGWorldStateInfo__TimerUpdate 005488F0 f end=00548962
 CGWorldStateInfo__OnUITime 005486E0 f end=005486FA
+CGWorldStateInfo__GetUITime 00548700 f end=00548713
+CGWorldStateInfo__GetWorldState 00548D10 f end=00548D37
