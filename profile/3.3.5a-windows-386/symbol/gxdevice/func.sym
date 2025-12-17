@@ -60,7 +60,7 @@ CGxDevice__PrimColor 00684590 f end=006845AC type="void __thiscall func(CGxDevic
 CGxDevice__PrimDrawElements 006845B0 f end=0068461D type="void __thiscall func(CGxDevice* this)"
 CGxDevice__LightSet 006847D0 f end=00684843 type="void __thiscall func(CGxDevice* this, uint32_t a2, CGxLight* light, C3Vector* pos)"
 CGxDevice__BufStream 00684850 f end=0068489F type="void __thiscall func(CGxDevice* this, EGxPoolTarget target, uint32_t itemSize, uint32_t itemCount)"
-CGxDevice__TexMarkForUpdate 006848A0 f end=000684900 type="void __thiscall func(CGxDevice* this, CGxTex* texId, CiRect* updateRect, int32_t immediate)"
+CGxDevice__TexMarkForUpdate 006848A0 f end=00684900 type="void __thiscall func(CGxDevice* this, CGxTex* texId, CiRect* updateRect, int32_t immediate)"
 CGxDevice__ITexMarkAsUpdated 00684900 f end=0068492D type="void __thiscall func(CGxDevice* this, CGxTex* texId)"
 CGxDevice__IShaderLoad 00684970 f end=00684AC8 type="int32_t __thiscall func(CGxDevice* this, CGxShader** shaders, EGxShTarget target, char* a4, char* a5, int32_t permutations)"
 CGxDevice__ICursorCreate 00684AD0 f end=00684B4A type="void __thiscall func(CGxDevice* this, CGxFormat* format)"

@@ -2,3 +2,4 @@ CGTalentInfo_Inspect__EnterWorld 005C57C0 f end=005C57CD
 CGTalentInfo__EnterWorld 005C9D50 f end=005C9DB4
 CGTalentInfo_Inspect__SetInspectTarget 005C9F70 f end=005C9FE3
 CGTalentInfo__GetTab 005C5C60 f end=005C5CB8
+TalentInfoGetTalentGroup 005C6080 f end=005C60BA
