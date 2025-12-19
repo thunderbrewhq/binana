@@ -6,3 +6,7 @@ CGAchievementInfo__OnAllAchievementData 005B32F0 f end=005B3498
 CGAchievementInfo__OnAchievementDeleted 005B3610 f end=005B36E7
 CGAchievementInfo__OnCriteriaDeleted 005B36F0 f end=005B37C0
 CGAchievementInfo__GetAchievement 005B37C0 f end=005B383A
+CGAchievementInfo__IsCriteriaStat 005B0DE0 f end=005B0E9A
+CGAchievementInfo__UpdateCriteria 005B2520 f end=005B28C9
+CGAchievementInfo__UpdateAchievement 005B28D0 f end=005B2AAB
+CGAchievementInfo__UpdateInspectCriteria 005B2CB0 f end=005B2FA1

@@ -15,3 +15,4 @@ FrameXML_GuessNumFiles 008125E0 f end=0081262D
 XMLTree_Cleanup 008147A0 f end=008147FB
 _XML_GetBuffer 009AD180 f end=009AD28E
 _XML_ParserFree 009AEF20 f end=009AF140
+LoadXML_Color 00815C30 f end=00815DEF

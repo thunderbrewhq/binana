@@ -1,1 +1,3 @@
 CGGuildRegistrar__EnterWorld 00599DD0 f end=00599DF1
+CGGuildRegistrar__ValidateAndReportGuildName 00599ED0 f end=00599EFE
+CGGuildRegistrar__BuyGuildCharter 0059A050 f end=0059A12A

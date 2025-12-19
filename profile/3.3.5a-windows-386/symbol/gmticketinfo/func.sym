@@ -1,3 +1,6 @@
 CGGMTicketInfo__EnterWorld 005AC160 f end=005AC16D
 CGGMTicketInfo__InitializeGame 005AD600 f end=005AD68F
 CGGMTicketInfo__CreateTicket 005AC8F0 f end=005ACB49
+CGGMTicketInfo__UpdateTicket 005ACB50 f end=005ACBE1
+CGGMTicketInfo__GetTicket 005ACBF0 f end=005ACC56
+CGGMTicketInfo__OnTicketMessage 005AD240 f end=005AD5B4

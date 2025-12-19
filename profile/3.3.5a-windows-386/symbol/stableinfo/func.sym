@@ -1,1 +1,5 @@
 CGStableInfo__InitializeGame 005A1ED0 f end=005A1EF6
+CGStableInfo__CloseStables 005A0F10 f end=005A0F56
+CGStableInfo__LeaveWorld 005A1160 f end=005A119D
+CGStableInfo__OnStableList 005A11A0 f end=005A132D
+CGStableInfo__OnStableCommandResult 005A17F0 f end=005A192A
