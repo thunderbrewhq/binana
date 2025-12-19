@@ -19,3 +19,4 @@ CGPartyInfo__IsPlayerOrPetInParty 0052C8C0 f end=0052C9A0
 CGPartyInfo__IsMemberPet 0052D210 f end=0052D30B
 CGPartyInfo__AddMember 0052D410 f end=0052D6D3
 CGPartyInfo__ChangeRaidDifficulty 0052D8D0 f end=0052D98D
+CGPartyInfo__RemoveAll 0052D6E0 f end=0052D89B

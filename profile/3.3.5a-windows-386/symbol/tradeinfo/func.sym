@@ -7,3 +7,5 @@ CGTradeInfo__AddPlayerItem 005877B0 f end=0058793B
 CGTradeInfo__InitiateTrade 00703CF0 f end=00703DF4
 CGTradeInfo__AddMoney 00704220 f end=00704313
 CGTradeInfo__RemoveMoney 00704320 f end=007043B2
+CGTradeInfo__OnTradeStatus 005873E0 f end=0058774E
+CGTradeInfo__Initialize 007048D0 f end=00704910

@@ -1,1 +1,5 @@
 CGTaxiMap__GetNodeCost 00591350 f end=005914A5
+CGTaxiMap__GetNodeType 00590C70 f end=00590D09
+CGTaxiMap__TakeTaxi 005914B0 f end=005915D4
+CGTaxiMap__TaxiNodeSetCurrent 00591AD0 f end=00591E5D
+CGTaxiMap__SetupMap 005932E0 f end=00593830

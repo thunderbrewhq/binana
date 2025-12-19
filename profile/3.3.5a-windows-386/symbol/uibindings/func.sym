@@ -25,3 +25,4 @@ CGUIBindings__SaveBindingsCallback 0055F3A0 f end=0055F3CA
 CGUIBindings__SaveBindings 0055F3D0 f end=0055F426
 CGUIBindings__ClearOverrideBindings 005604F0 f end=00560557
 CGUIBindings__constructor 00561B80 f end=00561C52
+CGUIBindings__SetOverrideBinding 00563480 f end=00563515

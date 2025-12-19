@@ -1,0 +1,4 @@
+CGCooldown__OnFrameRender 005EBD20 f end=005EBE04
+CGCooldown__AnimateVerts 005EC1E0 f end=005EC785
+CGCooldown__OnLayerUpdate 005EC8F0 f end=005EC99B
+CGCooldown__SetCooldown 005ECD70 f end=005ECE76

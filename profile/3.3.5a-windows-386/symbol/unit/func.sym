@@ -153,6 +153,7 @@ CGUnit_C__UpdateUnitNameText 00715500 f end=00715528
 CGUnit_C__SetPredictedPowerSlot 00722C50 f end=00722CF0
 CGUnit_C__IsOutdoors 0071B7F0 f end=0071B806
 CGUnit_C__ChatBubbleShow 00720010 f end=0072012E
+CGUnit_C__ChatBubbleRemove 007157E0 f end=00715802
 UnitCombatLogInvalidateName 0074F400 f end=0074F4CC
 UnitCombatLog 00751150 f end=007512A1
 UnitSoundInitialize 00747860 f end=007478EE

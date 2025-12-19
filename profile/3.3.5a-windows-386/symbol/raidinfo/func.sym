@@ -16,3 +16,4 @@ CGRaidInfo__SendReadyCheck 005732B0 f end=0057338E
 CGRaidInfo__OnRaidTargetUpdate 005743B0 f end=005744E3
 CGRaidInfo__InitiateReadyCheck 005747D0 f end=0057487B
 CGRaidInfo__OnReadyCheck 00574D50 f end=00574F06
+CGRaidInfo__RosterUpdateRefreshReadyCheck 00574880 f end=005749FA

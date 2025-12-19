@@ -1,1 +1,6 @@
 CGameTime__GameTimeGetDayProgression 0076CFF0 f end=0076D051
+CGameTime__GameTimeSetMinutesPerSecond 0076CFA0 f end=0076CFE6
+CGameTime__TickMinute 0076D740 f end=0076D7AD
+CGameTime__GameTimeSetTime 0076D810 f end=0076D8FD
+CGameTime__GameTimeUpdate 0076D900 f end=0076D996
+CGameTime__GameTimeSync 0076D9A0 f end=0076DB24

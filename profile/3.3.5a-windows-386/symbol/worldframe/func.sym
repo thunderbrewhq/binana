@@ -39,3 +39,4 @@ CGWorldFrame__UpdateObject 004F8D10 f end=004F8E98
 CGWorldFrame__destructor 004FA390 f end=004FA55E
 CGWorldFrame__Create 0050F3F0 f end=0050F41B
 CGWorldFrame__TranslateToMapCoords 00544140 f end=00544415
+CGWorldFrame__SpellEffectEnumProc 004F5930 f end=004F595A

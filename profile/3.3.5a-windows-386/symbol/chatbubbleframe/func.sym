@@ -4,3 +4,5 @@ CGChatBubbleFrame__OnWorldLayerUpdate 0056D050 f end=0056D235
 CGChatBubbleFrame__Initialize 0056C7F0 f end=0056C9B4
 CGChatBubbleFrame__constructor 0056CAD0 f end=0056CDAA
 CGChatBubbleFrame__GetNewChatBubble 0056CEA0 f end=0056CEF7
+CGChatBubbleFrame__Update 0056C500 f end=0056C791
+CGChatBubbleFrame__Remove 0056CE80 f end=0056CE9C

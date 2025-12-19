@@ -1,2 +1,5 @@
 CGCurrencyTypes__BuildDisplayList 005B0030 f end=005B0339
 CGCurrencyTypes__EnterWorld 005B0660 f end=005B0675
+CGCurrencyTypes__CategoryHasKnownTypes 005AFE30 f end=005AFF02
+CGCurrencyTypes__DisplayListSortCallback 005AFF10 f end=005AFFD0
+CGCurrencyTypes__GetBackpackCurrencyInfo 005B0340 f end=005B0438
