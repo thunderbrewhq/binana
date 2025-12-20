@@ -6,3 +6,6 @@ CGReputationInfo__SortFactions 005D1880 f end=005D1C0C
 CGReputationInfo__SetFactionInactive 005D1C10 f end=005D1D1D
 CGReputationInfo__CollapseHeader 005D1D20 f end=005D1E43
 CGReputationInfo__OnSetFactionVisible 005D2050 f end=005D209D
+CGReputationInfo__AddHeader 005CFE70 f end=005CFED9
+CGReputationInfo__AddFactionHeader 005D01F0 f end=005D02E4
+CGReputationInfo__EnterWorld 005D2BC0 f end=005D2E21

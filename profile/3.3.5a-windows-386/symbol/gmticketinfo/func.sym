@@ -4,3 +4,5 @@ CGGMTicketInfo__CreateTicket 005AC8F0 f end=005ACB49
 CGGMTicketInfo__UpdateTicket 005ACB50 f end=005ACBE1
 CGGMTicketInfo__GetTicket 005ACBF0 f end=005ACC56
 CGGMTicketInfo__OnTicketMessage 005AD240 f end=005AD5B4
+CGGMTicketInfo__DeleteTicket 005ACC60 f end=005ACCD6
+CGGMTicketInfo__ResponseResolve 005ACCE0 f end=005ACD4E

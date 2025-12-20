@@ -12,3 +12,7 @@ CGAuctionHouse__CloseAuctionHouse 0059F150 f end=0059F231
 CGAuctionHouse__LeaveWorld 0059FF30 f end=0059FF35
 CGAuctionHouse__OnAuctionHello 0059FF40 f end=0059FFAB
 CGAuctionHouse__OnAuctionCommandResult 0059FFB0 f end=005A0441
+CGAuctionHouse__IsItemForSell 0059AA50 f end=0059AA9B
+CGAuctionHouse__GetOwnerList 0059CC50 f end=0059CD89
+CGAuctionHouse__GetBidderList 0059CE50 f end=0059CF83
+CGAuctionHouse__IsSellItemValid 0059D0B0 f end=0059D270

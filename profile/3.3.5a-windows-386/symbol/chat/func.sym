@@ -78,3 +78,5 @@ CGChat__IsVoiceChatEnabled 004FBAB0 f end=004FBAEA
 CGChat__NewVoiceSession 004FFFC0 f end=0050002A
 CGChat__UpdateRosterMember 00500FB0 f end=0050102F
 CGChat__JoiningParty 00505F50 f end=00505FF5
+CGChat__LeaveWorld 004FB190 f end=004FB19B
+CGChat__ChatTokenToGUID 004FB580 f end=004FB5BE

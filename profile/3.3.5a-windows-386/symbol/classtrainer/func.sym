@@ -1,3 +1,6 @@
 CGClassTrainer__EnterWorld 00593CC0 f end=00593CDC
 CGClassTrainer__FilterAndSortServices 00594BA0 f end=00594D9B
 CGClassTrainer__RefreshList 00596B00 f end=005970A7
+CGClassTrainer__SetTrainer 005940E0 f end=0059416D
+CGClassTrainer__LeaveWorld 005947B0 f end=005947CF
+CGClassTrainer__BuyService 00594E50 f end=00594E76

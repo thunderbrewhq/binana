@@ -6,3 +6,4 @@ CGBag_C__UnlockItemsOfType 00754D90 f end=00754DC3
 CGBag_C__FindItemOfType 00754A50 f end=00754A71
 CGBag_C__FindItemByFullName 00754C30 f end=00754CC4
 CGBag_C__FindItemSlot 00754040 f end=007540AA
+UnlockItemTypeCallback 00753FA0 f end=00754015

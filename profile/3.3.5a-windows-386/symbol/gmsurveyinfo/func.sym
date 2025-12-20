@@ -1,0 +1,4 @@
+CGGMSurveyInfo__GetQuestion 005AC530 f end=005AC5AD
+CGGMSurveyInfo__GetAnswer 005AC5B0 f end=005AC677
+CGGMSurveyInfo__GetNumAnswers 005AC680 f end=005AC74D
+CGGMSurveyInfo__Submit 005ACD50 f end=005ACF22
