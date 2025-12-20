@@ -43,3 +43,7 @@ CSimpleModel_SetFogFar 009613A0 f end=00961418 type="int32_t __stdcall func(lua_
 CSimpleModel_GetFogFar 00961420 f end=00961463 type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_ClearFog 00961470 f end=009614A7 type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_SetGlow 009614B0 f end=00961534 type="int32_t __stdcall func(lua_State* L)"
+CSimpleModel__GetWidth 0095FAA0 f end=0095FAEC
+CSimpleModel__GetHeight 0095FAF0 f end=0095FB3C
+CSimpleModel__ReplaceTexture 00960320 f end=009603C1
+CSimpleModel__CreateScriptMetaTable 00961540 f end=00961559

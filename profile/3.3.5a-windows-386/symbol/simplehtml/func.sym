@@ -9,3 +9,6 @@ CSimpleHTML__ParseBODY 0096D740 f end=0096D883 ; CSimpleHTML::ParseBODY(XMLNode 
 CSimpleHTML__SetText 0096D890 f end=0096DA31 ; CSimpleHTML::SetText(char const*, CStatus*)
 CSimpleHTML__LoadXML 0096DA40 f end=0096DC2A ; CSimpleHTML::LoadXML(XMLNode*, CStatus*)
 CSimpleHTML_SetText 009750D0 f end=0097511B
+CSimpleHTML__SetHyperlinkFormat 0096C770 f end=0096C7B0
+CSimpleHTML__RefreshHyperlinks 0096D500 f end=0096D6C7
+CSimpleHTML__OnLayerUpdate 0096D700 f end=0096D731

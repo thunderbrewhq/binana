@@ -12,3 +12,7 @@ CGxString__destructor 006C7760 f end=006C78EC ; CGxString::~CGxString()
 CGxString__SetGradient 006C78F0 f end=006C7A9C ; CGxString::SetGradient(int, int)
 CGxString__GetNewString 006C7AA0 f end=006C7B0E ; CGxString::GetNewString(int)
 CGxString__CreateGeometry 006C7B10 f end=006C7FFA ; CGxString::CreateGeometry()
+CGxString__SetColor 006C6C30 f end=006C6C6C
+CGxString__HandleScreenSizeChange 006C6C70 f end=006C6CC8
+CGxString__Initialize 006C74D0 f end=006C75D7
+CGxString__constructor 006C7640 f end=006C775B

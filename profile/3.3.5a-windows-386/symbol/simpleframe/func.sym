@@ -35,5 +35,13 @@ CSimpleFrame__constructor 004922F0 f end=004926A7 ; CSimpleFrame::CSimpleFrame(C
 CSimpleFrame__LoadXML 004932C0 f end=00493A09 ; CSimpleFrame::LoadXML(XMLNode*, CStatus*)
 CSimpleFrame__RegisterScriptMethods 0049E540 f end=0049E560 ; CSimpleFrame::RegisterScriptMethods(lua_State*)
 CSimpleFrame_SetAlpha 0049F9E0 f end=0049FAA1 type="void __stdcall func(lua_State* L)"
+CSimpleFrame__RegisterForEvents 0048EA40 f end=0048EA80
+CSimpleFrame__SetClampRectInsets 0048EB00 f end=0048EB2B
+CSimpleFrame__DisableEvent 0048F6F0 f end=0048F72F
+CSimpleFrame__OnLayerTrackUpdate 0048F950 f end=0048FA1E
+CSimpleFrame__EnableDrawLayer 00490600 f end=0049061B
+CSimpleFrame__DisableDrawLayer 00490620 f end=0049063B
+CSimpleFrame__LockHighlight 00490A30 f end=00490A7D
+CSimpleFrame__CreateScriptMetaTable 004A1E60 f end=004A1E79
 RegisterSimpleFrameScriptMethods 0081B870 f end=0081B914
 UnregisterSimpleFrameScriptMethods 0081B920 f end=0081B9B8

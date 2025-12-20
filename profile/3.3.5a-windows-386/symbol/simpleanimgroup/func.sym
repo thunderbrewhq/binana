@@ -1,0 +1,6 @@
+CSimpleAnimGroup__PreLoadXML 00497770 f end=004977A1
+CSimpleAnimGroup__SetInitialOffset 004985A0 f end=004985E7
+CSimpleAnimGroup__constructor 00499EB0 f end=00499FA2
+CSimpleAnimGroup__LoadXML 0049A060 f end=0049A57E
+CSimpleAnimGroup__ComputeDuration 0049AC80 f end=0049ACF0
+CSimpleAnimGroup__PostLoadXML 0049C2A0 f end=0049C30A

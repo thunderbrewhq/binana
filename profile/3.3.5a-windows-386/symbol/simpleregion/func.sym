@@ -8,3 +8,4 @@ CSimpleRegion__OnColorChanged 00487D70 f type="void __thiscall func(CSimpleRegio
 CSimpleRegion__constructor 004880E0 f type="void __thiscall func(CSimpleRegion* this, CSimpleFrame* frame, uint32_t drawLayer, int32_t show)"
 CSimpleRegion__destructor 004881D0 f type="void __thiscall func(CSimpleRegion* this)"
 CSimpleRegion__SetFrame 00487ED0 f end=00487FF9
+CSimpleRegion__SetVertexGradient 00487B00 f end=00487BE2

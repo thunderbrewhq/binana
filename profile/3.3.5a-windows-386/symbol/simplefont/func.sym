@@ -1,2 +1,4 @@
 CSimpleFont__constructor 00496870 f end=00496915
+CSimpleFont__GetFont 00496F70 f end=00497064
+CSimpleFont__LoadXML 00497070 f end=004974F3
 StringToJustify 00815080 f end=008150CA

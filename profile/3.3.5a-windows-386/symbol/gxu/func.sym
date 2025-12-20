@@ -24,3 +24,4 @@ GxuXformCreateLookAtSgCompat 006BFE60 f end=006C004D
 GxuFontStringSetGradient 006BD140 f end=006BD15E
 GxuFontGetStringPosition 006BD550 f end=006BD596
 IGxuFontGlyphRenderGlyph 006C8CC0 f end=006C8E6B
+GxuFontSetStringColor 006BD070 f end=006BD095

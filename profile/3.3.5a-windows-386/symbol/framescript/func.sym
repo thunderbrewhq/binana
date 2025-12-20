@@ -20,3 +20,5 @@ FrameScript_SignalEvent 0081B530 f end=0081B549 ; FrameScript_SignalEvent(unsign
 FrameScript_CreateEvents 0081B5F0 f end=0081B714 ; FrameScript_CreateEvents(char const**, unsigned int)
 FrameScript_ExecuteBuffer 00818E50 f end=00818F52
 FrameScript_ExecuteFile 00818F60 f end=008190BE
+FrameScript_Object__SetScript 0049EC80 f end=0049EDA7
+FrameScript_Object__HookScript 0049EDB0 f end=0049EFD8
