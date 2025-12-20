@@ -11,3 +11,4 @@ CGBarberShop__UnregisterScriptFunctions 0052E550 f end=0052E56C
 CGBarberShop__IsCurrentStyle 0052E490 f end=0052E4C9
 CGBarberShop__OnBarberShopResult 0052E5B0 f end=0052E617
 CGBarberShop__OnEnableBarberShop 0052F9B0 f end=0052FC7F
+CGBarberShop__AppearanceApplied 0052E4D0 f end=0052E4E5

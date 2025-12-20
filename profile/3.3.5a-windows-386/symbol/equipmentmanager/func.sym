@@ -13,3 +13,7 @@ CGEquipmentManager__GetSetList 005AE380 f end=005AE489
 CGEquipmentManager__OnEquipmentSetResult 005AF710 f end=005AF7D7
 CGEquipmentManager__EquipSet 005AE660 f end=005AE6AA
 CGEquipmentManager__SaveSet 005ADE50 f end=005AE03C
+CGEquipmentManager__HasSet 005AE490 f end=005AE4E2
+CGEquipmentManager__ModifyEquipmentSet 005AF400 f end=005AF459
+CGEquipmentManager__OnEquipmentSet 005AF490 f end=005AF6BA
+CGEquipmentManager__CreateEquipmentSet 005AF7E0 f end=005AF8D2

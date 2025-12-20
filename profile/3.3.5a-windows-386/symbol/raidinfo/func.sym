@@ -17,3 +17,6 @@ CGRaidInfo__OnRaidTargetUpdate 005743B0 f end=005744E3
 CGRaidInfo__InitiateReadyCheck 005747D0 f end=0057487B
 CGRaidInfo__OnReadyCheck 00574D50 f end=00574F06
 CGRaidInfo__RosterUpdateRefreshReadyCheck 00574880 f end=005749FA
+CGRaidInfo__IsPlayerRaidOfficer 00572740 f end=005727B0
+CGRaidInfo__SetRaidTarget 00572ED0 f end=00572F48
+CGRaidInfo__ShutdownGame 00574310 f end=005743AC

@@ -2,3 +2,6 @@ CGArenaTeamInfo__QueryRoster 005A3600 f end=005A36F1
 CGArenaTeamInfo__UpdateTeams 005A3700 f end=005A37AF
 CGArenaTeamInfo__EnterWorld 005A3DC0 f end=005A3DC9
 CGArenaTeamInfo__InitializeGame 005A40E0 f end=005A41B3
+CGArenaTeamInfo__UpdateRoster 005A28E0 f end=005A2923
+CGArenaTeamInfo__CheckPersonalAndTeamRating 005A37B0 f end=005A385D
+CGArenaTeamInfo__OnArenaTeamRoster 005A3E10 f end=005A40DF

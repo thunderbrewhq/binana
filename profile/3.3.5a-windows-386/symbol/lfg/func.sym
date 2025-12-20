@@ -19,4 +19,6 @@ CGLookingForGroup__LeaveLFGSearch 00558F90 f end=00559042
 CGLookingForGroup__SetLFGDungeon 00559B70 f end=00559C3F
 CGLookingForGroup__ClearPartyInfo 0055B120 f end=0055B199
 CGLookingForGroup__OnLFGMessage 0055BDC0 f end=0055D145
+CGLookingForGroup__OnOpenFromGossip 005528D0 f end=005528FF
+CGLookingForGroup__OnLFGList 0055B770 f end=0055BDB8
 PushDungeonEncounterInfo 005538B0 f end=0055399C

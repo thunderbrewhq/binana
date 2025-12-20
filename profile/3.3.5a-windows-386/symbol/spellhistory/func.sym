@@ -1,2 +1,3 @@
 SpellHistory__GetCooldown 00807980 f end=00807D3E
 SpellHistory__IsOnHold 00807DA0 f end=00807F07
+SpellHistory__RecentlyCast 00807D40 f end=00807D98

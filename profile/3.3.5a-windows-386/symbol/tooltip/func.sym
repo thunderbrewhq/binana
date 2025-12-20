@@ -46,3 +46,4 @@ CGTooltip__SetTalent 00626E20 f end=0062721A
 CGTooltip__SetAchievement 00627220 f end=006276DB
 CGTooltip__SetItemDelta 0062D930 f end=0062DAD9
 CGTooltip__SetMacro 00630D20 f end=00630FFC
+CGTooltip__OnLayerUpdate 0061B2E0 f end=0061B467
