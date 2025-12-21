@@ -2108,3 +2108,5 @@ Script_SendItemSignal 0060BFE0 f end=0060C1B6
 Script_GetUnitFromName 0060C1F0 f end=0060C236
 Script_SendUniqueSignal 006143F0 f end=006144CE
 Script_SendUniqueSignal 00615020 f end=00615042
+GetCurrencyTextureString 007E7E10 f end=007E7E4E
+StringToGUID 0074D120 f end=0074D19F

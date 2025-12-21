@@ -10,3 +10,4 @@ TextBlockGetMaxCharsWithinWidthAndHeight 004BDEF0 f end=004BDF88
 TextBlockGetMaxCharsWithinWidthFromEnd 004BDF90 f end=004BE03C
 TextBlockSetGradient 004BD900 f end=004BD91C
 TextBlockGetStringPos 004BDC50 f end=004BDC9E
+TextBlockGetStringPtr 004BD9F0 f end=004BDA0A
