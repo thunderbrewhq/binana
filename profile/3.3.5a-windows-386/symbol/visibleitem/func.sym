@@ -5,3 +5,4 @@ VisibleItem_C__GetInventoryType 00758DD0 f end=00758E49
 VisibleItem_C__GetMaterial 00758ED0 f end=00758F4C
 VisibleItem_C__GetSheatheType 00758F50 f end=00758FCC
 VisibleItem_C__GetSoundOverrideSubclassID 00758FD0 f end=00759041
+VisibleItem_C__GetItemEnchantmentVisualID 00759050 f end=0075912B

@@ -1,2 +1,3 @@
 CPassenger__GetRawPosition 004F4500 f end=004F45AC
-CPassenger__PostInit 004F4280 f end=004F429E
+CPassenger__Reenable 004F4280 f end=004F429E
+CPassenger__PostInit 004F4230 f end=004F4274
