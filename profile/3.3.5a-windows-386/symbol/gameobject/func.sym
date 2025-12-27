@@ -34,3 +34,5 @@ CGGameObject_C__SetStats 00712400 f end=00712491
 CGGameObject_C__PostInit 00712F30 f end=00713093
 CGGameObject_C__Initialize 007140A0 f end=0071414B
 CGGameObject_C__Shutdown 00714150 f end=007141C5
+CGGameObject_C__CheckRange 0070BA30 f end=0070BA3D
+CGGameObject_C__Use 0070F680 f end=0070F7AF
