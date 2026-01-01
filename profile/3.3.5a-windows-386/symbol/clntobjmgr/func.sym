@@ -31,3 +31,5 @@ ClntObjMgrUnsetTypeMirrorHandler 004D5C40 f end=004D5C71
 ClntObjMgrDestroyShared 004D5C80 f end=004D5D6B
 ClntObjMgrLinkInNewObject 004D6BC0 f end=004D6BFC
 ClntObjMgrInitializeStd 004D7750 f end=004D77DC
+FindActiveObj 004D4BB0 f end=004D4C1F
+AssignMirrorHandler 004D5850 f end=004D58F8

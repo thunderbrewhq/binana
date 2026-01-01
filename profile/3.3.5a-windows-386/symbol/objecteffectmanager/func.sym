@@ -1,2 +1,5 @@
 CObjectEffectManager__ExitState 006F61D0 f end=006F6413
 CObjectEffectManager__EnterState 006F7270 f end=006F7365
+CObjectEffectManager__constructor 006F5900 f end=006F5966
+CObjectEffectManager__destructor 006F7370 f end=006F7417
+CObjectEffectManager__Init 006F7420 f end=006F7474

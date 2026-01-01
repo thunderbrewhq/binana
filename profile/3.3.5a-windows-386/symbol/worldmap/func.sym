@@ -7,3 +7,4 @@ CGWorldMap__ProcessClick 005468F0 f end=005469D8
 CGWorldMap__SetMapToCurrentZone 00547170 f end=00547A65
 CGWorldMap__UpdateArrowFrames 005449F0 f end=00544B12
 CGWorldMap__SetDungeonLevel 00547A70 f end=00547B7D
+CGWorldMap__EnterWorld 00547120 f end=00547147

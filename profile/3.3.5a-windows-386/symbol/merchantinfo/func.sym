@@ -6,3 +6,5 @@ CGMerchantInfo__SetMerchant 00584500 f end=005845A1
 CGMerchantInfo__CanRepair 005845B0 f end=005845F1
 CGMerchantInfo__CloseMerchant 00584600 f end=00584680
 CGMerchantInfo__IsBuybackItem 00584D90 f end=00584E06
+CGMerchantInfo__SortBuybackItems 00584BB0 f end=00584D86
+CGMerchantInfo__EnterWorld 00585F80 f end=00585FDA
