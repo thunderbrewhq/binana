@@ -2,3 +2,4 @@ CMath__sqrt 004C4E10 f end=004C4E89
 CMath__log2 004C4E90 f end=004C4F3B
 CMath__exp2 004C4F40 f end=004C4FFB
 CMath__NormalizeAngle0to2pi 004C5090 f end=004C50B4
+CMath__NormalizeAngleNegPiToPi 004C50C0 f end=004C50FF

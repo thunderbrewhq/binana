@@ -1,0 +1,7 @@
+CMovementData_C__Disable 006EC390 f end=006EC3A4
+CMovementData_C__ForceSetTransportInt 006EC400 f end=006EC7A2
+CMovementData_C__ForceSetTransport 006F0C70 f end=006F0CE1
+CMovementData_C__GetStepUpHeight 006E8FC0 f end=006E8FE2
+CMovementData_C__FixupQueuedSetFacingEvents 006EC3B0 f end=006EC3F9
+CMovementData_C__SetTransport 006EC7B0 f end=006EC83A
+CMovementData_C__constructor 006EBD30 f end=006EBE4B

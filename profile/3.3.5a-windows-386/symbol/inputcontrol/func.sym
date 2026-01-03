@@ -21,3 +21,6 @@ CGInputControl__SetControlBit 005FBE10 f end=005FBE70
 CGInputControl__CameraPitchPlayer 005FBE70 f end=005FBF08
 CGInputControl__StopMovementAndTurning 005FBF10 f end=005FBF80
 CGInputControl__SetMouselookOverrideBindings 005FCB20 f end=005FCB75
+CGInputControl__OnTurnToAngleStop 005F9650 f end=005F966A
+CGInputControl__StrafePlayer 005FAFB0 f end=005FB0A3
+CGInputControl__OnPitchToAngleStop 005FB510 f end=005FB553

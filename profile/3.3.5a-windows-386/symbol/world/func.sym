@@ -54,3 +54,5 @@ World__GetFramerate 0077F440 f end=0077F485
 World__ObjectSetAlwaysExterior 0077FE20 f end=0077FE3E
 World__ObjectSetRenderEnabled 00783A60 f end=00783B05
 World__QueryOutdoors 0077FBF0 f end=0077FCC6
+World__IsValidPosition 00406DE0 f end=00406E8A
+World__ObjectGetExtents 00780130 f end=0078018F
