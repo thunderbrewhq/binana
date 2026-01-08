@@ -103,6 +103,7 @@
 #include "nvapi/nvapi.h"
 
 #include "object/object.h"
+#include "object/CMovementData.h"
 
 #include "os/processorfeatures.h"
 #include "os/timemanager.h"
