@@ -32869,6 +32869,372 @@
       ]
     },
     {
+      "name": "CMovementData",
+      "size": 328,
+      "members": [
+        {
+          "type": "void*",
+          "name": "transportPtr1",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "transportPtr2",
+          "offset": 4
+        },
+        {
+          "type": "uint64_t",
+          "name": "TransportGUID",
+          "offset": 8
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlag",
+          "offset": 28
+        },
+        {
+          "type": "float",
+          "name": "Facing",
+          "offset": 32
+        },
+        {
+          "type": "float",
+          "name": "Pitch",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "dataPtr",
+          "offset": 40
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlag2",
+          "offset": 44
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_030",
+          "offset": 48
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_034",
+          "offset": 52
+        },
+        {
+          "type": "C3Vector",
+          "name": "groundNormal",
+          "offset": 56
+        },
+        {
+          "type": "int32_t",
+          "name": "moveFlag1",
+          "offset": 68
+        },
+        {
+          "type": "int32_t",
+          "name": "moveFlag2",
+          "offset": 72
+        },
+        {
+          "type": "C3Vector",
+          "name": "anchorPosition",
+          "offset": 76
+        },
+        {
+          "type": "float",
+          "name": "AnchorFacing",
+          "offset": 88
+        },
+        {
+          "type": "float",
+          "name": "AnchorPitch",
+          "offset": 92
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_060",
+          "offset": 96
+        },
+        {
+          "type": "C3Vector",
+          "name": "direction",
+          "offset": 100
+        },
+        {
+          "type": "C2Vector",
+          "name": "direction2d",
+          "offset": 112
+        },
+        {
+          "type": "float",
+          "name": "cosAnchorPitch",
+          "offset": 120
+        },
+        {
+          "type": "float",
+          "name": "sinAnchorPitch",
+          "offset": 124
+        },
+        {
+          "type": "int32_t",
+          "name": "FallTime",
+          "offset": 128
+        },
+        {
+          "type": "float",
+          "name": "StartFallHeight",
+          "offset": 132
+        },
+        {
+          "type": "float",
+          "name": "unkFloat",
+          "offset": 136
+        },
+        {
+          "type": "float",
+          "name": "MoveSpeed",
+          "offset": 140
+        },
+        {
+          "type": "float",
+          "name": "WalkSpeed",
+          "offset": 144
+        },
+        {
+          "type": "float",
+          "name": "RunSpeed",
+          "offset": 148
+        },
+        {
+          "type": "float",
+          "name": "BackSpeed",
+          "offset": 152
+        },
+        {
+          "type": "float",
+          "name": "SwimSpeed",
+          "offset": 156
+        },
+        {
+          "type": "float",
+          "name": "BackSwimSpeed",
+          "offset": 160
+        },
+        {
+          "type": "float",
+          "name": "FlyMountSpeed",
+          "offset": 164
+        },
+        {
+          "type": "float",
+          "name": "FlyMountBackSpeed",
+          "offset": 168
+        },
+        {
+          "type": "float",
+          "name": "TurnSpeed",
+          "offset": 172
+        },
+        {
+          "type": "float",
+          "name": "FlyMountUnkUpDownRotationSpeed1",
+          "offset": 176
+        },
+        {
+          "type": "float",
+          "name": "FlyMountUnkUpDownRotationSpeed2",
+          "offset": 180
+        },
+        {
+          "type": "float",
+          "name": "FallSpeed",
+          "offset": 184
+        },
+        {
+          "type": "void*",
+          "name": "CGMoveSplinePtr",
+          "offset": 188
+        },
+        {
+          "type": "int32_t",
+          "name": "PerfCount",
+          "offset": 192
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlag3",
+          "offset": 196
+        },
+        {
+          "type": "float",
+          "name": "CollisonBoxHalfWidth",
+          "offset": 200
+        },
+        {
+          "type": "float",
+          "name": "CollisionBoxHeight",
+          "offset": 204
+        },
+        {
+          "type": "float",
+          "name": "ObjectScale",
+          "offset": 208
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0D4",
+          "offset": 212
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0D8",
+          "offset": 216
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0DC",
+          "offset": 220
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0E0",
+          "offset": 224
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_0E4",
+          "offset": 228
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_00",
+          "offset": 232
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_01",
+          "offset": 236
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_02",
+          "offset": 240
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_03",
+          "offset": 244
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_04",
+          "offset": 248
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_05",
+          "offset": 252
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_06",
+          "offset": 256
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_07",
+          "offset": 260
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_08",
+          "offset": 264
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_09",
+          "offset": 268
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_10",
+          "offset": 272
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_11",
+          "offset": 276
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_12",
+          "offset": 280
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_13",
+          "offset": 284
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_14",
+          "offset": 288
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFlags_15",
+          "offset": 292
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_128",
+          "offset": 296
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_12C",
+          "offset": 300
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_130",
+          "offset": 304
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_134",
+          "offset": 308
+        },
+        {
+          "type": "int32_t",
+          "name": "unk_138",
+          "offset": 312
+        },
+        {
+          "type": "void*",
+          "name": "linkedList_ptr1",
+          "offset": 316
+        },
+        {
+          "type": "void*",
+          "name": "linkedList_ptr2",
+          "offset": 320
+        },
+        {
+          "type": "void*",
+          "name": "objectPtr",
+          "offset": 324
+        }
+      ]
+    },
+    {
       "name": "CGxMatrixStack",
       "size": 280,
       "members": [
