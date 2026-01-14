@@ -21,6 +21,7 @@ CGGameUI__m_interactMaxDistSq 00BD0798 l
 CGGameUI__m_cursorMoney 00BD079C l
 CGGameUI__m_currentObjectTrack 00BD07A0 l
 CGGameUI__m_interactTarget 00BD07AC l
+CGGameUI__m_lockedTarget 00BD07B0 l
 CGGameUI__m_lastTarget 00BD07B8 l
 CGGameUI__m_lastEnemyTarget 00BD07C0 l
 CGGameUI__m_lastFriendTraget 00BD07C8 l

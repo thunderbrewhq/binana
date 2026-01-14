@@ -33,7 +33,7 @@ CalcLevelSize 006AB620 f end=006AB6B9 type="uint32_t __cdecl func(uint32_t level
 CalcLevelCount 006AB700 f end=006AB75C type="uint32_t __stdcall func(uint32_t width, uint32_t height)"
 MippedImgAllocA 006AB760 f end=006AB7DF type="MipBits* __stdcall func(uint32_t fourCC, uint32_t width, uint32_t height, char* filename, int32_t linenumber)"
 MippedImgSet 006AB810 f end=006AB85E type="void __stdcall func(uint32_t fourCC, uint32_t width, uint32_t height, MipBits* bits)"
-FullShrink 006AB860 f end=006ABAAF type="void _stdcall func(C4Pixel* dest, uint32_t destWidth, uint32_t destHeight, C4Pixel* source, uint32_t sourceWidth, uint32_t sourceHeight)"
+FullShrink 006AB860 f end=006ABAAF type="void __stdcall func(C4Pixel* dest, uint32_t destWidth, uint32_t destHeight, C4Pixel* source, uint32_t sourceWidth, uint32_t sourceHeight)"
 CBLPFile__Close 006AE8B0 f end=006AE8DA type="void __thiscall func(CBLPFile* this)"
 CBLPFile__Source 006AE900 f end=006AE990 type="int32_t __thiscall func(CBLPFile* this, void* fileBits)"
 CBLPFile__DecompPalFastPath 006AE990 f end=006AE9D6 type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t colorSize)"

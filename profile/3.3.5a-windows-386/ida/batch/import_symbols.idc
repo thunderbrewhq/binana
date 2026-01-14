@@ -8269,6 +8269,7 @@ static import_symbols() {
 	set_name(0x00BD079C, "CGGameUI__m_cursorMoney");
 	set_name(0x00BD07A0, "CGGameUI__m_currentObjectTrack");
 	set_name(0x00BD07AC, "CGGameUI__m_interactTarget");
+	set_name(0x00BD07B0, "CGGameUI__m_lockedTarget");
 	set_name(0x00BD07B8, "CGGameUI__m_lastTarget");
 	set_name(0x00BD07C0, "CGGameUI__m_lastEnemyTarget");
 	set_name(0x00BD07C8, "CGGameUI__m_lastFriendTraget");

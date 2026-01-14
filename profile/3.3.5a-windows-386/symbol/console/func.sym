@@ -18,7 +18,7 @@ ConsolePostClose 00763C50 f end=00763C5D type="void __stdcall func()"
 EventCloseCallback 00763D60 f end=00763D71 type="int32_t __stdcall func(void* param)"
 DrawBackground 00763DF0 f end=00764039 type="void __stdcall func()"
 DrawHighLight 00764040 f end=00764196 type="void __stdcall func()"
-DrawCaret 007641A0 f end=007643EA type="void ___stdcall func(C3Vector* caretpos)"
+DrawCaret 007641A0 f end=007643EA type="void __stdcall func(C3Vector* caretpos)"
 PaintBackground 007643F0 f end=00764413 type="void __stdcall func()"
 EnforceMaxLines 007644B0 f end=0076451C
 GetInputLine 00764520 f end=007645D3 type="CONSOLELINE* __stdcall func()"

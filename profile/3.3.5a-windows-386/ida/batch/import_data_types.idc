@@ -414,7 +414,7 @@ static import_data_types() {
 	apply_type(0x006AB700, "uint32_t __stdcall func(uint32_t width, uint32_t height)");
 	apply_type(0x006AB760, "MipBits* __stdcall func(uint32_t fourCC, uint32_t width, uint32_t height, char* filename, int32_t linenumber)");
 	apply_type(0x006AB810, "void __stdcall func(uint32_t fourCC, uint32_t width, uint32_t height, MipBits* bits)");
-	apply_type(0x006AB860, "void _stdcall func(C4Pixel* dest, uint32_t destWidth, uint32_t destHeight, C4Pixel* source, uint32_t sourceWidth, uint32_t sourceHeight)");
+	apply_type(0x006AB860, "void __stdcall func(C4Pixel* dest, uint32_t destWidth, uint32_t destHeight, C4Pixel* source, uint32_t sourceWidth, uint32_t sourceHeight)");
 	apply_type(0x006ABE00, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
 	apply_type(0x006ABE30, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
 	apply_type(0x006ABE60, "void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)");
@@ -466,7 +466,7 @@ static import_data_types() {
 	apply_type(0x00763D60, "int32_t __stdcall func(void* param)");
 	apply_type(0x00763DF0, "void __stdcall func()");
 	apply_type(0x00764040, "void __stdcall func()");
-	apply_type(0x007641A0, "void ___stdcall func(C3Vector* caretpos)");
+	apply_type(0x007641A0, "void __stdcall func(C3Vector* caretpos)");
 	apply_type(0x007643F0, "void __stdcall func()");
 	apply_type(0x00764520, "CONSOLELINE* __stdcall func()");
 	apply_type(0x007645E0, "void __stdcall func(void* param, RECTF* rect, RECTF* visible, float elapsedSec)");
