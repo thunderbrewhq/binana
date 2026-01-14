@@ -1,5 +1,8 @@
 all: generate
 
+ce-lua:
+	./script/build-cheatengine-scripts cheatengine profile/3.3.5a-windows-386/cheatengine
+
 compile-symbols:
 	./script/compile-symbols profile/3.3.5a-windows-386
 

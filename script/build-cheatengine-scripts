@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 0 ]
+  then
+    echo "Select a version to use"
+    exit 1
+fi
+
+./script/build-ce-loader-script -i $1/cgunit.lua -o $2/Load_CGUnit.lua
+./script/build-ce-loader-script -i $1/cgplayer.lua -o $2/Load_CGPlayer.lua
