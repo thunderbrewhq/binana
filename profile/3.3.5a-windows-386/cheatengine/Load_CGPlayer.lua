@@ -716,56 +716,46 @@ function GetCGObjectAddr(guidValue)
         return nil
     end
 
-    local CGUNIT_C_VTABLE   = 0xa34d90
-    local CGPLAYER_C_VTABLE = 0xa326c8
+    local VTABLE_TYPES = {
+        [0xA34D90] = "unit",
+        [0xA326C8] = "player",
+        [0xA33428] = "item",
+        [0xA332D0] = "container",
+        [0xA331C8] = "corpse",
+    }
 
     local memScan   = createMemScan()
     local foundList = createFoundList(memScan)
 
+    local function cleanup()
+        foundList.destroy()
+        memScan.destroy()
+    end
+
     memScan.firstScan(
-        soExactValue,
-        vtQword,
-        rtRounded,
+        soExactValue, vtQword, rtRounded,
         string.format("%016X", guidValue),
-        nil,
-        0x0,
-        0x7FFFFFFFFFFFFFFF,
-        "",
-        fsmNotAligned,
-        nil,
-        true,
-        false,
-        false,
-        false
+        nil, 0x0, 0x7FFFFFFFFFFFFFFF,
+        "", fsmNotAligned, nil,
+        true, false, false, false
     )
 
     memScan.waitTillDone()
     foundList.initialize()
 
-    local resultAddr, resultType = nil, nil
-
     for i = 0, foundList.Count - 1 do
-        local addrGUIDvalue = tonumber(foundList.Address[i], 16)
-        if addrGUIDvalue then
-            local base = addrGUIDvalue - 0x30
-            local vtbl = readInteger(base)
-
-            if vtbl == CGPLAYER_C_VTABLE then
-                resultAddr, resultType = base, "player"
-                break
-            elseif vtbl == CGUNIT_C_VTABLE then
-                resultAddr, resultType = base, "unit"
-                break
+        local addr = tonumber(foundList.Address[i], 16)
+        if addr then
+            local base = addr - 0x30
+            local objType = VTABLE_TYPES[readInteger(base)]
+            if objType then
+                cleanup()
+                return base, objType
             end
         end
     end
 
-    foundList.destroy()
-    memScan.destroy()
-
-    if resultAddr then
-        return resultAddr, resultType
-    end
+    cleanup()
     return nil
 end
 
@@ -787,7 +777,7 @@ CGObject:field("m_objectScalingEndMS", "int32") -- 0x00A0
 CGObject:field("m_objectLastScale", "float") -- 0x00A4
 CGObject:ptr("specialEffectPtr") -- 0x00A8
 CGObject:field("objectHeight", "float") -- 0x00AC
-CGObject:ptr("unkPlayerNamePtr", "int32") -- 0x00B0
+CGObject:ptr("unkPlayerNamePtr") -- 0x00B0
 CGObject:ptr("CM2Model", "m_model") -- 0x00B4
 CGObject:ptr("cmapEntityPtr") -- 0x00B8
 CGObject:hex("unkMovementFlags", "int32") -- 0x00BC

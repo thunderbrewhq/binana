@@ -8,3 +8,6 @@ fi
 
 ./script/build-ce-loader-script -i $1/cgunit.lua -o $2/Load_CGUnit.lua
 ./script/build-ce-loader-script -i $1/cgplayer.lua -o $2/Load_CGPlayer.lua
+./script/build-ce-loader-script -i $1/cgitem.lua -o $2/Load_CGItem.lua
+./script/build-ce-loader-script -i $1/cgcontainer.lua -o $2/Load_CGContainer.lua
+./script/build-ce-loader-script -i $1/cgcorpse.lua -o $2/Load_CGCorpse.lua

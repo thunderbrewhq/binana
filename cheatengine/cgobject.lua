@@ -18,7 +18,7 @@ CGObject:field("m_objectScalingEndMS", "int32") -- 0x00A0
 CGObject:field("m_objectLastScale", "float") -- 0x00A4
 CGObject:ptr("specialEffectPtr") -- 0x00A8
 CGObject:field("objectHeight", "float") -- 0x00AC
-CGObject:ptr("unkPlayerNamePtr", "int32") -- 0x00B0
+CGObject:ptr("unkPlayerNamePtr") -- 0x00B0
 CGObject:ptr("CM2Model", "m_model") -- 0x00B4
 CGObject:ptr("cmapEntityPtr") -- 0x00B8
 CGObject:hex("unkMovementFlags", "int32") -- 0x00BC
