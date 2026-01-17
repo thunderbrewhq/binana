@@ -17,6 +17,11 @@ You can use the information here to get a headstart when working on the [Whoa pr
 - [x64dbg](#x64dbg)
   * [Importing database](#importing-database)
   * [Importing types](#importing-types)
+- [How to Inspect Object Fields in Cheat Engine](#how-to-inspect-object-fields-in-cheat-engine)
+- [How to generate a C struct](#how-to-generate-a-c-struct)
+  * [Generating dependent structs](#generating-dependent-structs)
+  * [Options for `toCStruct` and `toCStructWithDeps`](#options-for-tocstruct-and-tocstructwithdeps)
+  * [Examples](#examples)
 
 # Dependencies (optional)
 
@@ -151,3 +156,62 @@ To load the type information JSON file:
   1. Open the binary in x32dbg.exe
   2. in the console, type: `LoadTypes <full path to local binana repository>\profile\<game version>\x32dbg\types.json` 
 
+# How to Inspect Object Fields in Cheat Engine
+
+**How to Build the Loading Scripts**
+
+```bash
+make ce-lua
+```
+
+**For Units**
+*   Select a target unit (it must be of type Unit).
+*   Execute the script: [Load_CGUnit.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGUnit.lua)  
+    *(Menu: Table -> Show Cheat Table Lua Script)*
+
+**For Player (your character)**
+*   Execute the script: [Load_CGPlayer.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGPlayer.lua)
+
+**For Corpses**
+*   Execute the script: [Load_CGCorpse.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGCorpse.lua)
+*   Then hover your mouse cursor over the corpse.
+
+**For Items** (items in the main 16-slot backpack)
+*   Execute the script: [Load_CGItem.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGItem.lua)
+
+**For Containers** (only for equipped bags)
+*   Execute the script: [Load_CGContainer.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGContainer.lua)
+
+# How to generate a C struct
+
+To generate a C struct, open the file you’re interested in, remove the Cheat Engine loading code, and add this line at the end of the file (using `CGCorpse` as an example):
+
+```lua
+print(CGCorpse:toCStruct())
+```
+
+Then run:
+
+```bash
+lua Load_CGCorpse.lua
+```
+
+## Generating dependent structs
+
+If you also need dependent (referenced) structs, use:
+
+```lua
+print(CGCorpse:toCStructWithDeps())
+```
+
+## Options for `toCStruct` and `toCStructWithDeps`
+
+- `collapsePadding` — if `false`, `unk_` fields will be grouped into arrays (default: `true`)
+- `flattenInheritance` — if `true`, embedded fields and parent fields will be inlined into the struct (default: `false`)
+
+## Examples
+
+```lua
+print(CGCorpse:toCStructWithDeps({ flattenInheritance = true }))
+print(CGCorpse:toCStructWithDeps({ collapsePadding = false, flattenInheritance = true }))
+```
