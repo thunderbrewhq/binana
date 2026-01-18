@@ -8,3 +8,11 @@ CWorldScene__s_fadeDistMaxSqr 00ADF3B4 l
 CWorldScene__s_fadeDistMinSqr 00ADF3DC l
 CWorldScene__s_fadeDistMin 00ADF3C8 l
 CWorldScene__s_fadeRangeDefault 00ADF38C l
+CWorldScene__clipBuffer 00CD8938 l
+CWorldScene__camPos_x 00CD8F5C l
+CWorldScene__camPos_y 00CD8F60 l
+CWorldScene__camPos_z 00CD8F64 l
+CWorldScene__camTarg_x 00CD8F68 l
+CWorldScene__camTarg_y 00CD8F6C l
+CWorldScene__camTarg_z 00CD8F70 l
+CWorldScene__sortTable 00CD9048 l

@@ -26,3 +26,5 @@ CM2Scene__HitTestCollision 0081DD50 f end=0081DF0E
 CM2Scene__EndHitTest 0081DF10 f end=0081E10B
 CM2Scene__BeginHitTest 0081CAC0 f end=0081CAC5
 CM2Scene__EndHitTestCollisionWorld 0081E110 f end=0081E3FE
+CM2Scene__SetProjectTextureCallback 0081CC30 f end=0081CC49
+CM2Scene__SetProjectPositionCallback 0081E590 f end=0081E5B4

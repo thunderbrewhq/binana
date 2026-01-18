@@ -51,3 +51,7 @@ CGObject_C__ClearEffectList 00744AC0 f end=00744BC8
 CGObject_C__Disable 00744D20 f end=00744DB0
 CGObject_C__destructor 00745F90 f end=007460B3
 CGObject_C__Initialize 007460C0 f end=00746185
+CGObject_C__GetPosition 004D5EA0 f end=004D5EB4
+CGObject_C__GetFacing 004D5EE0 f end=004D5EE3
+CGObject_C__Shutdown 00744E50 f end=00744EAA
+CGObject_C__UpdateInteractIcon 00745DA0 f end=00745E5B

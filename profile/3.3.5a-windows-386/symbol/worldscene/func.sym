@@ -34,3 +34,4 @@ CWorldScene__CullDoodadsInterior 00799B70 f end=00799D36
 CWorldScene__CullMapObjDefGroupFromExterior 007B3A10 f end=007B3B1A
 CWorldScene__RenderWeather 0077F030 f end=0077F03B
 CWorldScene__UpdateViewerLiquid 00790920 f end=00790A73
+CWorldScene__CullHorizon 00791980 f end=00791CA6

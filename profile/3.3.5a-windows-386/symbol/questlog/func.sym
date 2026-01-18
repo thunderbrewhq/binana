@@ -24,3 +24,4 @@ CGQuestLog__GetQuestLeaderBoardForKill 005E2370 f end=005E2625
 CGQuestLog__GetQuestLeaderBoardForItem 005E2630 f end=005E2851
 CGQuestLog__ClearQuest 005DEC10 f end=005DEC3F
 CGQuestLog__HasNoObjectives 005E10B0 f end=005E11CC
+CGQuestLog__AbandonSelectedQuest 005E0CC0 f end=005E0D20

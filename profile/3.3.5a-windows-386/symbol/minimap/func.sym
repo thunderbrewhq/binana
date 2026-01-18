@@ -2,3 +2,6 @@ MinimapSetCorpsePOI 007F4990 f end=007F49FE
 MinimapUpdate 007F5BA0 f end=007F6539
 MinimapInitialize 007F6730 f end=007F698D
 MinimapSetDynamicPOI 007F4870 f end=007F4928
+MinimapGetZoom 007F3B40 f end=007F3B54
+MinimapGetZoomLevels 007F3B60 f end=007F3B66
+MinimapGetViewRadius 007F3B90 f end=007F3BDB

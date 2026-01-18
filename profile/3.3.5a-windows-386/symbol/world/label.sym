@@ -24,3 +24,5 @@ World__shadowModTexture 00CD7554 l
 World__shadowColor 00CD7878 l
 World__particulate 00CD7548 l
 World__s_weather 00CD7544 l
+World__s_horizonFarClipScale 00ADEECC l
+World__s_horizonNearClipScale 00ADEED0 l

@@ -79,3 +79,7 @@ CM2Model__TransformVerticesNoUVSelect_cpp 00829F40 f end=0082A210
 CM2Model__ForceAnimate 00830F90 f end=00830FA8
 CM2Model__GetAttachmentPosition 00831330 f end=0083140F
 CM2Model__AnimateSM 00831990 f end=00831AEA
+CM2Model__RenderBatchShadowMap 00829BA0 f end=00829E34
+CM2Model__RenderModelBatchListShadowMap 00829E40 f end=00829F37
+CM2Model__RenderModelBatchesShadowMap 0082DA40 f end=0082DAB7
+CM2Model__GetEventPosition 008317E0 f end=00831892
