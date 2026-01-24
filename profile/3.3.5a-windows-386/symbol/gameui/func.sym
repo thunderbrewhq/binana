@@ -145,3 +145,6 @@ EnableFadingScreen 005ED480 f end=005ED587
 UpdateModelForUI 00618110 f end=00618176
 GetPhysicalDamageClassMask 006337B0 f end=006337BE
 SaveAccountData 006B9050 f end=006B90D7
+LoadScriptFunctions 005120E0 f end=00530F86
+CursorGrabItem 00616630 f end=0061671B
+CursorGrabVirtualItem 00616720 f end=006167DA

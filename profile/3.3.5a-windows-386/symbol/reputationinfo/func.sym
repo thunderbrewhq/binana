@@ -9,3 +9,4 @@ CGReputationInfo__OnSetFactionVisible 005D2050 f end=005D209D
 CGReputationInfo__AddHeader 005CFE70 f end=005CFED9
 CGReputationInfo__AddFactionHeader 005D01F0 f end=005D02E4
 CGReputationInfo__EnterWorld 005D2BC0 f end=005D2E21
+CGReputationInfo__OnInitializeFactions 005D2E30 f end=005D2EA3

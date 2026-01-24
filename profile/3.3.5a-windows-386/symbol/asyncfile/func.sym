@@ -16,3 +16,4 @@ AsyncFileReadInitialize 004BAA40 f end=004BAB45 ; AsyncFileReadInitialize(unsign
 AsyncFileReadObject 004BAB50 f end=004BAC14 ; AsyncFileReadObject(CAsyncObject*, int)
 AsyncFileReadIsReading 004BAD80 f end=004BAE09
 AsyncFileReadWaitAll 004BAE10 f end=004BAEEE
+AsyncFileReadDestroy 004BAC50 f end=004BAD7F

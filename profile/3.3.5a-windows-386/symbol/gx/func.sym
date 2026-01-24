@@ -34,3 +34,4 @@ GxScenePresent 00682A00 f end=00682A33
 GxDevDestroy 00682B80 f end=00682C35
 CGxMonitorModeSort 00689E80 f type="int32_t __stdcall func(void* a, void* b)"
 GxVertexSize 00681230 f end=0068123F
+GxVertexAttribOffset 00681240 f end=0068125E

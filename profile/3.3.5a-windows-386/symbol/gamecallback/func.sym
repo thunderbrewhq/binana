@@ -1,0 +1,4 @@
+GameCallback__NotifyLocalTalkerStart 007DCDC0 f end=007DCDFC
+GameCallback__NotifyLocalTalkerStop 007DCE00 f end=007DCE36
+GameCallback__NotifyTalkerStart 007DCE40 f end=007DCE74
+GameCallback__NotifyTalkerStop 007DCE80 f end=007DCEB4

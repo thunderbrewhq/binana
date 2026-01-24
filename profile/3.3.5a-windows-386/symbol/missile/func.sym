@@ -6,3 +6,6 @@ CMissile__CMissileDtor 00702190 f end=007022CD
 CMissile__DeleteSelf 00703730 f end=00703765
 CMissile__WaitForModelFX 00703810 f end=00703900
 CMissile__ClearInFlightMissilesWithTarget 00703A80 f end=00703ADF
+CMissile__CalcMissFade 006FFCD0 f end=006FFD6A
+CMissile__CalcPosition 007015D0 f end=00701F41
+CMissile__UpdateAttachments 00703900 f end=00703A7F

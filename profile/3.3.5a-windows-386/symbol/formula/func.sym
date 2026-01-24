@@ -1,1 +1,5 @@
 CFormula__GetVariableValue 005782D0 f end=00578BB5
+CFormula__GetToken 00576BB0 f end=00576C7D
+CFormula__Expect 00576C80 f end=00576CC6
+CFormula__CompileElement 00577530 f end=00577799
+CFormula__CompileMult 005777A0 f end=005777E8

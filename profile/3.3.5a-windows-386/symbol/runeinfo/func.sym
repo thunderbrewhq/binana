@@ -7,3 +7,4 @@ CGRuneInfo__GetRuneLastUsedTime 005EE110 f end=005EE140
 CGRuneInfo__ComputeRuneRechargeTime 005EE140 f end=005EE1E1
 CGRuneInfo__SetPredictedRunes 005EE240 f end=005EE3CE
 CGRuneInfo__ResyncRunes 005EE440 f end=005EE51E
+CGRuneInfo__AddRunePower 005EE520 f end=005EE5AA

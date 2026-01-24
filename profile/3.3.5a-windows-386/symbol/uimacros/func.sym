@@ -16,3 +16,4 @@ CGUIMacros__EditMacro 00566CD0 f end=00566D46
 CGUIMacros__DeleteMacro 00566D50 f end=00566DB2
 CGUIMacros__LoadMacrosCallback 00567C10 f end=00567FC1
 CGUIMacros__CreateMacro 00568020 f end=00568158
+EvaluateMacroOptions 005F0DF0 f end=005F0FF5

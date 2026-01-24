@@ -1,0 +1,5 @@
+CShaderEffectParser__ExtractFuncKeyword 00876E30 f end=00876F0B
+CShaderEffectParser__ParseFixedFunc 00876FB0 f end=00877149
+CShaderEffectParser__ParseShader 00877150 f end=00877283
+CShaderEffectParser__ParseEffect 00877290 f end=00877356
+CShaderEffectParser__ParseEffectFile 00877360 f end=008773E2

@@ -74,3 +74,4 @@ CGlueMgr__RaceChange 004D9040 f end=004D9159
 CGlueMgr__ProcessAttachment 004E2C30 f end=004E2CDA
 SystemRegisterFunctions 0060A120 f end=0060A143
 SystemUnregisterFunctions 0060A150 f end=0060A16C
+ProcessAgreement 004D7940 f end=004D7CCE

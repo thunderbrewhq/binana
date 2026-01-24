@@ -24,3 +24,5 @@ CGInputControl__SetMouselookOverrideBindings 005FCB20 f end=005FCB75
 CGInputControl__OnTurnToAngleStop 005F9650 f end=005F966A
 CGInputControl__StrafePlayer 005FAFB0 f end=005FB0A3
 CGInputControl__OnPitchToAngleStop 005FB510 f end=005FB553
+CGInputControl__CameraCanTurnPlayer 005FA6B0 f end=005FA783
+CGInputControl__AscendDescendPlayer 005FACE0 f end=005FAE70

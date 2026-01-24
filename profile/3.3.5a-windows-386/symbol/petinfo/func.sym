@@ -30,3 +30,6 @@ CGPetInfo__SetAction 005D64D0 f end=005D64EB
 CGPetInfo__SetPetCount 005D64F0 f end=005D6546
 CGPetInfo__OnPetGUIDs 005D6550 f end=005D65BE
 CGPetInfo__InitializeGame 005D6D90 f end=005D6E5B
+CGPetInfo__SetPossessedSpell 005D30E0 f end=005D3114
+CGPetInfo__OnPetSpellChanges 005D4C30 f end=005D4D9B
+CGPetInfo__OnPetActionFeedback 005D4DA0 f end=005D4EAC

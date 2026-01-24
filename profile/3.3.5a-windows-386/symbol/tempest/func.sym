@@ -56,3 +56,7 @@ CImVector__operator_assign 009851A0 f end=009851FB
 C44Matrix__Rotation 004C3460 f end=004C3593
 C33Matrix__Rotation 004C5820 f end=004C5932
 C33Matrix__Rotate 004C5940 f end=004C5984
+NTempest__Intersect 00983490 f end=009836A9
+NTempest__DistanceSquared 00984CE0 f end=00984DA9
+C33Matrix__Scale 004C5230 f end=004C5280
+C33Matrix__ToEulerAnglesZYX 004C5630 f end=004C56D0

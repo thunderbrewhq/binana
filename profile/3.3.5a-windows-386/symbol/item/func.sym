@@ -40,3 +40,4 @@ CGItem_C__GetNumSockets 007094E0 f end=00709542
 CGItem_C__IsBoundForTrade 00709550 f end=00709572
 CGItem_C__GetItemByFullName 00709DE0 f end=00709E1F
 CGItem_C__GetInventoryArt 0070A910 f end=0070A9FA
+CGItem__TotalFieldsSaved 004F51C0 f end=004F51C9

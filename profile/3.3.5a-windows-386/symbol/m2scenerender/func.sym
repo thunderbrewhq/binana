@@ -10,3 +10,5 @@ CM2SceneRender__DrawRibbon 00820F40 f end=0082103B ; CM2SceneRender::DrawRibbon(
 CM2SceneRender__DrawParticle 008214E0 f end=00821667 ; CM2SceneRender::DrawParticle(unsigned int, M2Element*, unsigned int*, unsigned int)
 CM2SceneRender__DrawCallback 008230D0 f end=0082312A ; CM2SceneRender::DrawCallback()
 CM2SceneRender__Draw 00823130 f end=00823C8D ; CM2SceneRender::Draw(M2PASS, M2Element*, unsigned int*, unsigned int*)
+CM2SceneRender__RenderBatchedParticle 00821040 f end=008210F8
+CM2SceneRender__DrawBatchedParticle 00821100 f end=008214DA

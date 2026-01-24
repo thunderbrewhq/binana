@@ -17,3 +17,4 @@ CGMailInfo__CloseMail 00571730 f end=005717AC
 CGMailInfo__OnMailCommandResult 005717B0 f end=005719AA
 CGMailInfo__OnMailListResult 00571C50 f end=00572207
 CGMailInfo__SetObject 0056DA60 f end=0056DA96
+CGMailInfo__SetSendMoney 0056FDA0 f end=0056FE21

@@ -69,5 +69,6 @@ CMapObj__CreateWmoIgnoreFlags 007AE140 f end=007AE199
 CMapObj__TestBounds 007AE7E0 f end=007AE80B
 CMapObj__TestGroupBounds 007AE8D0 f end=007AE91B
 CMapObj__TestGroupBounds 007AE920 f end=007AE965
+CMapObj__RenderGroupCollidable 007AB1E0 f end=007AB4BA
 GetMinimapQuads 007AF8D0 f end=007AFC70
 GetMinimapQuads 007AFE70 f end=007AFED2

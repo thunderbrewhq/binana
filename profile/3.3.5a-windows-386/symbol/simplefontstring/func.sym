@@ -14,4 +14,5 @@ CSimpleFontString__GetTextWidth 00482380 f end=0048244B
 CSimpleFontString__SetFont 00483750 f end=0048388A
 CSimpleFontString__AddShadow 00483CD0 f end=00483DCF
 CSimpleFontString__GetStringWidth 00483E80 f end=00483F2C
+CSimpleFontString__LoadXML 004873E0 f end=0048798A
 ApplyTranslationAnim 0048B800 f end=0048B81A

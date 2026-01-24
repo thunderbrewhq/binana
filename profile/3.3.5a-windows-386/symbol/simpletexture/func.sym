@@ -10,3 +10,5 @@ CSimpleTexture_SetAlpha 0048C3E0 f end=0048C4B3 ; CSimpleTexture_SetAlpha(lua_St
 CSimpleTexture_SetTexCoord 0048E170 f end=0048E353 ; CSimpleTexture_SetTexCoord(lua_State*)
 CSimpleTexture__SetTexture 00481520 f end=00481584
 CSimpleTexture__SetTexture 004859E0 f end=00485AEE
+CSimpleTexture__PreLoadXML 004814F0 f end=00481519
+CSimpleTexture__PostLoadXML 004830E0 f end=0048311E

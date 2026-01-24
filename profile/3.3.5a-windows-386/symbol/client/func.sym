@@ -80,3 +80,7 @@ FontFlagsToString 008151E0 f end=00815237
 StringToSmoothWeights 00815240 f end=008152A0
 StringToLoopType 008152A0 f end=008152EA
 StringToCurveType 00815370 f end=008153BA
+ClientDestroyGame 00406510 f end=004066C5
+memcpy 0040CB10 f end=0040CE75
+IsNumeric 007E0F10 f end=007E0F27
+IsAlphaEnglish 007E0F90 f end=007E0FB6

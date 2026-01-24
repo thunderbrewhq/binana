@@ -23,3 +23,6 @@ CM2Shared__LowPrioritySequenceLoadedCallback 0083D840 f end=0083D9E1 ; CM2Shared
 CM2Shared__LowPrioritySequenceFailedCallback 0083D9F0 f end=0083DA10 ; CM2Shared::LowPrioritySequenceFailedCallback(void*)
 CM2Shared__LoadLowPrioritySequence 0083DA10 f end=0083DC8D ; CM2Shared::LoadLowPrioritySequence(unsigned short)
 CM2Shared__Release 0083DC90 f end=0083DCE8 ; CM2Shared::Release()
+CM2Shared__DestroyBuffers 008368B0 f end=00836978
+CM2Shared__AllocInstances 00836DF0 f end=00836E35
+CM2Shared__FinishLoading 0083CF00 f end=0083D2C2
