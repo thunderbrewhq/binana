@@ -26,3 +26,6 @@ CGInputControl__StrafePlayer 005FAFB0 f end=005FB0A3
 CGInputControl__OnPitchToAngleStop 005FB510 f end=005FB553
 CGInputControl__CameraCanTurnPlayer 005FA6B0 f end=005FA783
 CGInputControl__AscendDescendPlayer 005FACE0 f end=005FAE70
+CGInputControl__IsMouseDragging 005F9600 f end=005F964F
+CGInputControl__IsMouseDragMoving 005FA420 f end=005FA44D
+CGInputControl__PitchPlayer 005FB1A0 f end=005FB255

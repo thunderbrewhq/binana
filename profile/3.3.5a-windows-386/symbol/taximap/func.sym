@@ -9,3 +9,4 @@ CGTaxiMap__LeaveWorld 00591AC0 f end=00591ACA
 CGTaxiMap__CalculateAccurateDistance 00592580 f end=005926B8
 CGTaxiMap__RecursePath 005926C0 f end=00592BA1
 CGTaxiMap__GeneratePaths 00592BB0 f end=00592D01
+CGTaxiMap__UnregisterScriptFunctions 00590780 f end=0059079C

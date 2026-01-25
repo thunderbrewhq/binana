@@ -5,3 +5,5 @@ MinimapSetDynamicPOI 007F4870 f end=007F4928
 MinimapGetZoom 007F3B40 f end=007F3B54
 MinimapGetZoomLevels 007F3B60 f end=007F3B66
 MinimapGetViewRadius 007F3B90 f end=007F3BDB
+UpdatePointsOfInterest 007F44A0 f end=007F4806
+MinimapSetQuestPOI 007F4930 f end=007F498D

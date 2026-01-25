@@ -16,3 +16,4 @@ DayNight__DNGlare__Initialize 009AD000 f end=009AD0A3 type="void __thiscall func
 DayNight__UnloadMap 007F1D30 f end=007F1E97
 DayNight__GetOverrideSky 007F30C0 f end=007F31C0
 DayNight__SetBlendSky 007F31C0 f end=007F322A
+DayNight__DarkenColor 007ED790 f end=007ED815

@@ -36,3 +36,5 @@ CGGameObject_C__Initialize 007140A0 f end=0071414B
 CGGameObject_C__Shutdown 00714150 f end=007141C5
 CGGameObject_C__CheckRange 0070BA30 f end=0070BA3D
 CGGameObject_C__Use 0070F680 f end=0070F7AF
+CGGameObject_C__IsValidTargetForSpell 0070F010 f end=0070F15B
+CGGameObject_C__GetPageTextMaterial 00710300 f end=00710333

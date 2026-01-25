@@ -10,3 +10,5 @@ CGAchievementInfo__IsCriteriaStat 005B0DE0 f end=005B0E9A
 CGAchievementInfo__UpdateCriteria 005B2520 f end=005B28C9
 CGAchievementInfo__UpdateAchievement 005B28D0 f end=005B2AAB
 CGAchievementInfo__UpdateInspectCriteria 005B2CB0 f end=005B2FA1
+CGAchievementInfo__IsRealAchievement 005B0D50 f end=005B0DDA
+CGAchievementInfo__ReleaseInspect 005B2FB0 f end=005B301E

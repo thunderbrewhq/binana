@@ -50,3 +50,4 @@ CGActionBar__UpdateSelection 005A7CB0 f end=005A7CC0
 CGActionBar__UpdateCooldowns 005A7CC0 f end=005A7CD0
 CGActionBar__UpdateAttackAction 005AA4E0 f end=005AA541
 CGActionBar__UpdateRangedAttackAction 005AA550 f end=005AA5B1
+CGActionBar__IsAttackAction 005A96D0 f end=005A9752

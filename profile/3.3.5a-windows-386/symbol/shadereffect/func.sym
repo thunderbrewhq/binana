@@ -16,3 +16,6 @@ CShaderEffect__SetDiffuse 00873900 f end=00873A4B ; CShaderEffect::SetDiffuse(C4
 CShaderEffect__SetEmissive 00873A50 f end=00873B9B ; CShaderEffect::SetEmissive(C4Vector const&)
 CShaderEffect__SetAlphaRef 00873BA0 f end=00873C1A ; CShaderEffect::SetAlphaRef(float)
 CShaderEffect__SetLocalLighting 00873CA0 f end=00873ED2 ; CShaderEffect::SetLocalLighting(CM2Lighting*, int, C3Vector const*)
+CShaderEffect__ComputeLocalLights 00872900 f end=00872AC5
+CShaderEffect__SetTexMtx_TexGen 00873730 f end=008738F3
+CShaderEffect__SetAlphaRefDefault 00873EE0 f end=00873F23

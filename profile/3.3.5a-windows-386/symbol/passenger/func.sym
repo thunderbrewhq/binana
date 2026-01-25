@@ -5,3 +5,5 @@ CPassenger__GetPosition 004F4460 f end=004F44FD
 CPassenger__RemoveFromTransportFinish 004F46E0 f end=004F47A1
 CPassenger__AddToTransport 004F47B0 f end=004F48DB
 CPassenger__ForceSetTransport 004F4970 f end=004F4A0E
+CPassenger__GetRawFacing 004F42E0 f end=004F4312
+CPassenger__RemoveFromTransport 004F4930 f end=004F496D

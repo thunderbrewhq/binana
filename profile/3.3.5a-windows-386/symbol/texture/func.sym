@@ -48,6 +48,8 @@ CBLPFile__DecompPal 006AF810 f end=006AF984 type="int32_t __thiscall func(CBLPFi
 CBLPFile__Lock2 006AFCE0 f end=006AFF06 type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, uint32_t mipLevel, unsigned char* data, uint32_t* stride)"
 CBLPFile__Open 006AFF10 f end=006AFFCF type="int32_t __thiscall func(CBLPFile* this, char* filename)"
 CBLPFile__LockChain2 006AFFD0 f end=006B012E type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, MipBits** images, uint32_t mipLevel, int32_t a6)"
+CBLPFile__Unlock 006AF6E0 f end=006AF728
+CBLPFile__Lock 006AF990 f end=006AFB55
 TextureIsReadyNow 004B62A0 f end=004B62C1
 TextureGetGxTex 004B6CB0 f end=004B6D82
 TextureRelease 0047BF30 f end=0047BF46

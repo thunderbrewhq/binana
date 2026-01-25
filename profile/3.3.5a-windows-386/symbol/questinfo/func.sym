@@ -13,3 +13,7 @@ CGQuestInfo__AcceptQuest 0058CD20 f end=0058CDFF
 CGQuestInfo__GetReward 0058CFA0 f end=0058D048
 CGQuestInfo__EndQuestList 0058BA70 f end=0058BA80
 CGQuestInfo__AddItemRequest 0058BA80 f end=0058BB58
+CGQuestInfo__EnterWorld 0058B940 f end=0058B983
+CGQuestInfo__GetNumQuestChoices 0058BBA0 f end=0058BBBC
+CGQuestInfo__GiveQuestItems 0058CF40 f end=0058CF9C
+CGQuestInfo__AddReward 0058DD50 f end=0058DFD8

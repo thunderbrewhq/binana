@@ -11,3 +11,6 @@ CGTradeSkillInfo__GetSubClassIndexFromSkill 005DA7D0 f end=005DA82E
 CGTradeSkillInfo__ClearItemCallbacks 005DAD10 f end=005DADF1
 CGTradeSkillInfo__FilterAndSortSkills 005DCC40 f end=005DCEF9
 CGTradeSkillInfo__SetItemNameFilter 005DCF60 f end=005DD02F
+CGTradeSkillInfo__GetSelectionIndex 005DA670 f end=005DA6A8
+CGTradeSkillInfo__SetSubClassFilter 005DCF00 f end=005DCF2C
+CGTradeSkillInfo__SetInvTypeFilter 005DCF30 f end=005DCF53

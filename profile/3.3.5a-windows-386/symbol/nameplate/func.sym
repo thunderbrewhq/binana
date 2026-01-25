@@ -9,3 +9,4 @@ CGNamePlateFrame__Initialize 0098F390 f end=0098F786
 CGNamePlateFrame__constructor 0098F790 f end=0098FFC9
 CGNamePlateFrame__UpdateNameDisplay 0098E580 f end=0098E5A5
 CGNamePlateFrame__OnLayerUpdate 0098E9F0 f end=0098EE23
+CGNamePlateFrame__GetNewNameplateFrame 007254E0 f end=0072552B

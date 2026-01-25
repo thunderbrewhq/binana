@@ -363,6 +363,7 @@ CGUnit_C__UnitReaction 007251C0 f end=007254DE
 CGUnit_C__CanAssist 007293D0 f end=0072952F
 CGUnit_C__DisplayInfoNeedsUpdate 0072A480 f end=0072A557
 CGUnit_C__RefreshDataPointers 0072D940 f end=0072DBB5
+CGUnit_C__ConvertVehicleCameraRelativeFacingToTransportRelativeFacing 0074C550 f end=0074C59F
 SpellVisualsIsMountTransitionFinished 007F9F70 f end=007F9F80
 SpellVisualsCancelMountTransition 007FC9D0 f end=007FC9E7
 UnitCombatLogInvalidateName 0074F400 f end=0074F4CC

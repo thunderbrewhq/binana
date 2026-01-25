@@ -31,3 +31,5 @@ CGMiniMapFrame__SetCorpsePOIArrowTexture 00583BC0 f end=00583CDF
 CGMiniMapFrame__SetIconTexture 00583CE0 f end=00583DFF
 CGMiniMapFrame__SetBlipTexture 00583E00 f end=00583F52
 CGMiniMapFrame__SetClassBlipTexture 00583F60 f end=0058407F
+CGMinimapFrame__RenderInsideQuad 0057E7F0 f end=0057E973
+CGMinimapFrame__Shutdown 0057FBD0 f end=0057FCA8

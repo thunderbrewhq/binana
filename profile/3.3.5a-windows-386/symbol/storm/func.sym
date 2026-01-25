@@ -118,3 +118,4 @@ PowMod 0077C720 f end=0077C97B type="void __stdcall func(BigBuffer* a, BigBuffer
 SBigPowMod 0077C980 f end=0077C9A4 type="void __stdcall func(BigData* a, BigData* b, BigData* c, BigData* d)"
 TSList__LinkToHead 007B5020 f end=007B50AB ; 00005410
 TSList__LinkToTail 0086E200 f end=0086E25F ; 00005410
+SCreateProcess 00770290 f end=00770397
