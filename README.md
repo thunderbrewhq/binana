@@ -164,23 +164,7 @@ To load the type information JSON file:
 make ce-lua
 ```
 
-**For Units**
-*   Select a target unit (it must be of type Unit).
-*   Execute the script: [Load_CGUnit.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGUnit.lua)  
-    *(Menu: Table -> Show Cheat Table Lua Script)*
-
-**For Player (your character)**
-*   Execute the script: [Load_CGPlayer.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGPlayer.lua)
-
-**For Corpses**
-*   Execute the script: [Load_CGCorpse.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGCorpse.lua)
-*   Then hover your mouse cursor over the corpse.
-
-**For Items** (items in the main 16-slot backpack)
-*   Execute the script: [Load_CGItem.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGItem.lua)
-
-**For Containers** (only for equipped bags)
-*   Execute the script: [Load_CGContainer.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGContainer.lua)
+[Read cheat engine script info](CheatEngineScriptsInfo.md)
 
 # How to generate a C struct
 

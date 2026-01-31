@@ -1,0 +1,17 @@
+-- #include "cmapbaseobj.lua"
+
+local CMapStaticEntity = Struct("CMapStaticEntity", CMapBaseObj)
+    :paddingTo(0x28)
+    :field("unkFlags", "uint32")
+    :field("unkCounter", "int32")
+    :field("unk_030", "float")
+    :ptr("CM2Model", "model")
+    :embed("sphere", CAaSphere)
+    :embed("bbox", CAaBox)
+    :embed("vec2", C3Vector)
+    :embed("position", C3Vector)
+    :field("scale", "float")
+    :paddingTo(0x84)
+    :embed("m2AmbietColor", CImVector)
+    :embed("m2DiffuseColor", CImVector)
+    :field("unk_08C", "float")
