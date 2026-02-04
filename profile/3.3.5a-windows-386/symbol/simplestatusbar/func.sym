@@ -2,3 +2,4 @@ CSimpleStatusBar__SetBarTexture 00961720 f end=009617E0
 CSimpleStatusBar__constructor 00961A00 f end=00961A64
 CSimpleStatusBar__SetBarTexture 00961AC0 f end=00961B71
 CSimpleStatusBar__SetBarTexture 00971650 f end=009717F1
+CSimpleStatusBar_SetMinMaxValues 009713C0 f end=009714EC

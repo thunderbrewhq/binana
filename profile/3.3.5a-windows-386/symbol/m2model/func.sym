@@ -83,3 +83,6 @@ CM2Model__RenderBatchShadowMap 00829BA0 f end=00829E34
 CM2Model__RenderModelBatchListShadowMap 00829E40 f end=00829F37
 CM2Model__RenderModelBatchesShadowMap 0082DA40 f end=0082DAB7
 CM2Model__GetEventPosition 008317E0 f end=00831892
+CM2Model__SetBoneFlags 008265E0 f end=008266AE
+CM2Model__SetBoneProceduralTransform 008272F0 f end=008273D0
+CM2Model__GetEventPivot 008276F0 f end=00827774

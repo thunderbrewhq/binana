@@ -10,3 +10,7 @@ CSimpleColorSelect__OnLayerTrackUpdate 0096E3F0 f end=0096E551
 CSimpleColorSelect__SetColorWheelThumbTexture 0096E560 f end=0096E601
 CSimpleColorSelect__SetColorValueThumbTexture 0096E610 f end=0096E6B1
 CSimpleColorSelect__SetColorWheelTexture 0096E6C0 f end=0096E877
+CSimpleColorSelect_SetColorWheelTexture 009708B0 f end=009709DD
+CSimpleColorSelect_SetColorWheelThumbTexture 00970A60 f end=00970BB8
+CSimpleColorSelect_SetColorValueTexture 00970C40 f end=00970D6D
+CSimpleColorSelect_SetColorValueThumbTexture 00970DF0 f end=00970F48

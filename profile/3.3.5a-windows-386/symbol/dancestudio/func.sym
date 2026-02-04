@@ -7,3 +7,4 @@ CGDanceStudio__DisplayDance 00575BE0 f end=00575D06
 CGDanceStudio__LoadDance 00575D70 f end=00575DBD
 CGDanceStudio__RequestDance 00576100 f end=005761C3
 CGDanceStudio__HasDance 005761D0 f end=005761E9
+CGDanceStudio__UnregisterScriptFunctions 00575840 f end=0057584D

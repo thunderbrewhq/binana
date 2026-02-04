@@ -35,3 +35,4 @@ FrameScript_Execute 00819210 f end=008192DD
 FrameScript_PackVariable 00819300 f end=00819679
 FrameScript_GetText 00819D40 f end=00819E4F
 FrameScript_GetEventListeners 0081B510 f end=0081B52E
+FrameScript_GetContext 00817DB0 f end=00817DB6

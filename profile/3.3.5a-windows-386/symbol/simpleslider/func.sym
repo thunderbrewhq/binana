@@ -15,3 +15,6 @@ CSimpleSlider__SetValueStep 0096C1B0 f end=0096C20A
 CSimpleSlider__OnLayerTrackUpdate 0096C320 f end=0096C3F2
 CSimpleSlider__LoadXML 0096C500 f end=0096C746
 CSimpleSlider__CreateScriptMetaTable 009720C0 f end=009720D9
+CSimpleSlider_SetThumbTexture 00971B10 f end=00971C6C
+CSimpleSlider_SetValueStep 00971FD0 f end=0097204D
+CSimpleSlider__OnLayerMouseDown 0096C400 f end=0096C437

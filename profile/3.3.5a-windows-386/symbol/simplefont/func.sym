@@ -2,3 +2,6 @@ CSimpleFont__constructor 00496870 f end=00496915
 CSimpleFont__GetFont 00496F70 f end=00497064
 CSimpleFont__LoadXML 00497070 f end=004974F3
 StringToJustify 00815080 f end=008150CA
+CSimpleFont_SetFont 004A3A50 f end=004A3B52
+CSimpleFont_SetJustifyH 004A4930 f end=004A49B7
+CSimpleFont_SetJustifyV 004A49C0 f end=004A4A47

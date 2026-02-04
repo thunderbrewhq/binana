@@ -370,3 +370,7 @@ UnitCombatLogInvalidateName 0074F400 f end=0074F4CC
 UnitCombatLog 00751150 f end=007512A1
 UnitSoundInitialize 00747860 f end=007478EE
 UnitCombatClientInitialize 00756BD0 f end=00756C85
+CGUnit_C__RemoveAuraEffect 0071E930 f end=0071EC7F
+CGUnit_C__CanAttack 00729740 f end=00729A6F
+CGUnit_C__OnAuraUpdate 0072F5D0 f end=0072FDFF
+CGUnit_C__VehiclePassengerStartWaitingForVehicleTransitionAnim 0074BE10 f end=0074C036

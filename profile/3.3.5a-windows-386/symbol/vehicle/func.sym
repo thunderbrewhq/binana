@@ -13,3 +13,6 @@ CVehicle_C__GetVirtualSeatInfo 007579E0 f end=00757AD9
 CVehicle_C__Destroy 00757BB0 f end=00757BD2
 CVehicle_C__BuildWorldMatrix 00757BE0 f end=00757D0B
 CVehicle_C__UpdateSeatVacancy 00757EF0 f end=00757F96
+CVehicle_C__GetVirtualSeatCount 00757470 f end=00757541
+CVehicle_C__Create 00757FA0 f end=007580E8
+CVehicle_C__UpdateWorldMatrix 00758130 f end=00758196

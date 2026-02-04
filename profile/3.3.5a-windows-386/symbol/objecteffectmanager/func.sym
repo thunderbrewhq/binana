@@ -6,3 +6,4 @@ CObjectEffectManager__Init 006F7420 f end=006F7474
 CObjectEffectManager__PlayOneShotEffect 006F60E0 f end=006F61C8
 CObjectEffectManager__PlayLoopingEffect 006F6420 f end=006F66A8
 CObjectEffectManager__ShutDown 006F70B0 f end=006F7270
+CObjectEffectManager__UpdateAllPlayingEffects 006F39B0 f end=006F3ACA

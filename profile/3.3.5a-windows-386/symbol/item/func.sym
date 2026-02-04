@@ -41,3 +41,4 @@ CGItem_C__IsBoundForTrade 00709550 f end=00709572
 CGItem_C__GetItemByFullName 00709DE0 f end=00709E1F
 CGItem_C__GetInventoryArt 0070A910 f end=0070A9FA
 CGItem__TotalFieldsSaved 004F51C0 f end=004F51C9
+CGItem_C__IsLocked 007086B0 f end=007089A2

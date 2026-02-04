@@ -108,3 +108,4 @@ CMap__NewFootprint 0079FA70 f end=0079FCBE
 CMap__ProcessDetailDoodadUpdateList 007B54A0 f end=007B5500
 CMap__LinkDoodadDefToMapObjDefs 007B6ED0 f end=007B6F51
 CMap__VectorIntersect 007A3B70 f end=007A3CE4
+CMap__RenderWaterRipples 0079D5E0 f end=0079DFE3

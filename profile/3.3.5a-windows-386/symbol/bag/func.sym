@@ -14,3 +14,5 @@ CGBag_C__FindItem 007546F0 f end=007548E9
 CGBag_C__FindTotemCategory 007548F0 f end=0075493A
 CGBag_C__ItemCountValid 00754DD0 f end=00754ECA
 UnlockItemTypeCallback 00753FA0 f end=00754015
+CGBag_C__FindItemByName 00754B90 f end=00754C24
+CGBag_C__GetItemTypeCount 00754D00 f end=00754D46

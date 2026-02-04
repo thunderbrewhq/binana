@@ -12,3 +12,7 @@ CSimpleMessageScrollFrame__OnLayerUpdate 00969E60 f end=00969F96
 CSimpleMessageScrollFrame__UpdateRect 0096A760 f end=0096A87F
 CSimpleMessageScrollFrame__OnFrameSizeChanged 0096AB30 f end=0096AB4C
 CSimpleMessageScrollFrame__LoadXML 0096AC50 f end=0096AF09
+CSimpleMessageScrollFrame_AddMessage 00972F20 f end=00973144
+CSimpleMessageScrollFrame_GetMessageInfo 00973150 f end=00973269
+CSimpleMessageScrollFrame_RemoveMessagesByAccessID 00973270 f end=009732EA
+CSimpleMessageScrollFrame_SetMaxLines 009737F0 f end=00973873

@@ -72,3 +72,4 @@ CMapObj__TestGroupBounds 007AE920 f end=007AE965
 CMapObj__RenderGroupCollidable 007AB1E0 f end=007AB4BA
 GetMinimapQuads 007AF8D0 f end=007AFC70
 GetMinimapQuads 007AFE70 f end=007AFED2
+CMapObj__RenderGroupCollidableFaces 007A76C0 f end=007A7920

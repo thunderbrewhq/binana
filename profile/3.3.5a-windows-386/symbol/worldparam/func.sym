@@ -30,3 +30,4 @@ CWorldParam__EnvironmentDetail 0078DC60 f end=0078DCB0
 CWorldParam__ExtShadowQuality 0078DCB0 f end=0078DCF0
 CWorldParam__Specular 0078DE60 f end=0078DECF
 CWorldParam__MapObjLightLOD 0078DED0 f end=0078DEFD
+CWorldParam__TextureFilteringCallback 004023C0 f end=00402410

@@ -12,3 +12,5 @@ CGLootInfo__GiveMasterLoot 005893A0 f end=0058945D
 CGLootInfo__ClearRollPending 006DC770 f end=006DC7D4
 CGLootInfo__GetNumItems 00588190 f end=00588203
 GetMasterLootCandidate 006FA770 f end=006FA791
+CGLootInfo__GetLootSlotLink 005884A0 f end=0058852D
+CGLootInfo__CoinsCleared 00589100 f end=0058913D

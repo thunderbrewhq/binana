@@ -16,3 +16,6 @@ CKBSystem__CacheServerMessage 00551620 f end=00551651
 CKBSystem__OnEvent 00551660 f end=00551719
 CKBSystem__Initialize 00552380 f end=00552395
 CKBPage__Shutdown 00552740 f end=00552842
+CKBPage__GetBodyBool 00550DA0 f end=00550E03
+CKBSetup__ComputeCachedData 00551100 f end=005511DE
+CKBPage__GetInt 00551300 f end=00551347

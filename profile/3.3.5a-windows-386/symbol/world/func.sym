@@ -62,3 +62,5 @@ World__ProjectTextureCallback 0077F500 f end=0077F53E
 World__ProjectPositionCallback 0077F540 f end=0077F5A7
 World__ObjectCreate 00783500 f end=00783629
 ProjectTex2dDrawShaderEffect 007E3AA0 f end=007E3E74
+World__IsValidPosition 00406E90 f end=00406EBD
+World__QueryObjectVisible 0077F0B0 f end=0077F0C8

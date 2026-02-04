@@ -34,3 +34,5 @@ CParticleEmitter2__BuildParticleVertices 0097E580 f end=0097E721
 CParticleEmitter2__RenderParticles 0097E730 f end=0097E8CA
 CParticleEmitter2__PlaceParticleModels 0097E8D0 f end=0097EA5A
 CParticleEmitter2__Update 0097EB10 f end=0097EDF0
+CParticleEmitter2__SetZsource 00978DA0 f end=00978DC7
+CParticleEmitter2__Render 0097EA60 f end=0097EB02

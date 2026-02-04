@@ -80,3 +80,5 @@ CGChat__UpdateRosterMember 00500FB0 f end=0050102F
 CGChat__JoiningParty 00505F50 f end=00505FF5
 CGChat__LeaveWorld 004FB190 f end=004FB19B
 CGChat__ChatTokenToGUID 004FB580 f end=004FB5BE
+CGChat__VoiceSessionUpdate 004FFF00 f end=004FFFB9
+FilterChatLinks 00530D00 f end=00530DBA

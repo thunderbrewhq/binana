@@ -6,3 +6,4 @@ SE2__IsChatSoundInitialized 00878CC0 f end=00878CC6
 SE2__StartCapture 00879500 f end=00879577
 SE2__VoiceChat_StartCapture 009868C0 f end=009868CF
 UnitSoundShutdown 00747810 f end=00747848
+SE2__IsPlaying 004C5BE0 f end=004C5BEF

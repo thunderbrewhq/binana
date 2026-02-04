@@ -16,3 +16,4 @@ CGBattlefieldInfo__JoinBattlefield 0054CC70 f end=0054CE25
 CGBattlefieldInfo__GetFlagToken 0054D010 f end=0054D0FE
 CGBattlefieldInfo__OnBattlefieldList 0054E390 f end=0054E5A4
 CGBattlefieldInfo__RemoveVehicle 00549740 f end=005497BA
+CGBattlefieldInfo__AddVehicle 0054ABA0 f end=0054ABE3

@@ -14,3 +14,5 @@ CGTradeSkillInfo__SetItemNameFilter 005DCF60 f end=005DD02F
 CGTradeSkillInfo__GetSelectionIndex 005DA670 f end=005DA6A8
 CGTradeSkillInfo__SetSubClassFilter 005DCF00 f end=005DCF2C
 CGTradeSkillInfo__SetInvTypeFilter 005DCF30 f end=005DCF53
+Profession_FilterSpell 005DC110 f end=005DCA88
+CaseAccentInsensitiveParse 007E11D0 f end=007E161C

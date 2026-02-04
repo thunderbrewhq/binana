@@ -39,3 +39,5 @@ CGQuestLog__SetQuestExpired 005E57E0 f end=005E583C
 CGQuestLog__UpdateAllQuestPOI 005E5A50 f end=005E5C04
 QuestSelectQueryCallback 005DE960 f end=005DE980
 QSortQuestSortTypes 005E08F0 f end=005E0B75
+CGQuestLog__IsOnQuest 005E11D0 f end=005E1246
+CGQuestLog__UpdateQuestPOIFromUserServer 005E70D0 f end=005E716C

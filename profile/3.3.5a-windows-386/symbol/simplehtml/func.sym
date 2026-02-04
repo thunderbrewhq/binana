@@ -12,3 +12,4 @@ CSimpleHTML_SetText 009750D0 f end=0097511B
 CSimpleHTML__SetHyperlinkFormat 0096C770 f end=0096C7B0
 CSimpleHTML__RefreshHyperlinks 0096D500 f end=0096D6C7
 CSimpleHTML__OnLayerUpdate 0096D700 f end=0096D731
+CSimpleHTML_SetHyperlinkFormat 00975120 f end=0097519C

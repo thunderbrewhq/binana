@@ -1,2 +1,4 @@
 CSimpleCheckbox__SetChecked 00962340 f end=009623C0
 CSimpleCheckbox__Enable 00962490 f end=009624B4
+CSimpleCheckbox_SetCheckedTexture 00976C70 f end=00976DC8
+CSimpleCheckbox_SetDisabledCheckedTexture 00976E50 f end=00976FA8
