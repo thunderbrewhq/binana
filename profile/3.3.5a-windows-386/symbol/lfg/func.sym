@@ -22,3 +22,5 @@ CGLookingForGroup__OnLFGMessage 0055BDC0 f end=0055D145
 CGLookingForGroup__OnOpenFromGossip 005528D0 f end=005528FF
 CGLookingForGroup__OnLFGList 0055B770 f end=0055BDB8
 PushDungeonEncounterInfo 005538B0 f end=0055399C
+CGLookingForGroup__ParseBlackList 00559B10 f end=00559B6D
+CGLookingForGroup__ParsePartyInfo 0055B080 f end=0055B120

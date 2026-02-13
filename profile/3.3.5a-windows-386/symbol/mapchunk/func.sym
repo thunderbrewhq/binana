@@ -25,3 +25,4 @@ CMapChunk__destructor 007C5E50 f end=007C6059
 CMapChunk__constructor 007C5C50 f end=007C5E4B
 CMapChunk__GetLiquidHeight 007C55D0 f end=007C568E
 CMapChunk__SelectLights 007B3F30 f end=007B408C
+CMapChunk__SelectLights 007C3DB0 f end=007C3E61

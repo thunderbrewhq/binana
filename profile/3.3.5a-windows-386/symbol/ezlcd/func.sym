@@ -1,0 +1,7 @@
+CEzLcd__SetText 008480B0 f end=008480F4
+CEzLcd__ModifyDisplay 00958E70 f end=00958EAF
+CEzLcd__SetVisible 00958FE0 f end=00959004
+CEzLcd__ButtonReleased 00959040 f end=009590D8
+CEzLcd__Initialize 009592F0 f end=00959492
+CEzLcd__GetGlobalPage 009597B0 f end=00959883
+CEzLcd__ModifyControlsOnPage 009598B0 f end=0095993F

@@ -1,2 +1,4 @@
 CGAutoCompleteName__RemoveNode 0057AE00 f end=0057AE71
 CGAutoCompleteName__RemoveFlagsFromAllNodes 0057B0D0 f end=0057B129
+CGAutoCompleteName__SetName 0057AF80 f end=0057AFBB
+CGAutoCompleteName__RefreshName 0057B5E0 f end=0057B629

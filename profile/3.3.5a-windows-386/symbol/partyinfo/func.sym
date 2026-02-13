@@ -22,3 +22,4 @@ CGPartyInfo__ChangeRaidDifficulty 0052D8D0 f end=0052D98D
 CGPartyInfo__RemoveAll 0052D6E0 f end=0052D89B
 CGPartyInfo__Uninvite 006D43C0 f end=006D4441
 CGPartyInfo__LeaveGroup 006D4540 f end=006D45A3
+CGPartyInfo__GetPartyAssignments 0052CA00 f end=0052CB3D

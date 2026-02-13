@@ -6,3 +6,4 @@ CGGuildInfo__GetNumGuildBankTabItemWithdrawalsByRankID 005A41F0 f end=005A421A
 CGGuildInfo__SetMOTD 005CA060 f end=005CA082
 CGGuildInfo__SaveToFile 005CBAE0 f end=005CBC94
 CGGuildInfo__ClientGuildRosterHandler 005CC5D0 f end=005CC981
+CGGuildInfo__SetShowOffline 005CA870 f end=005CA8B0

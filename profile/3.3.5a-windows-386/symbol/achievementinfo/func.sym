@@ -12,3 +12,7 @@ CGAchievementInfo__UpdateAchievement 005B28D0 f end=005B2AAB
 CGAchievementInfo__UpdateInspectCriteria 005B2CB0 f end=005B2FA1
 CGAchievementInfo__IsRealAchievement 005B0D50 f end=005B0DDA
 CGAchievementInfo__ReleaseInspect 005B2FB0 f end=005B301E
+CGAchievementInfo__SaveTrackedAchievements 005B1FA0 f end=005B203F
+CGAchievementInfo__UpdateInspectAchievement 005B2AB0 f end=005B2CAA
+CGAchievementInfo__OnAchievementResponse 005B34A0 f end=005B3603
+CGAchievementInfo__LoadTrackedAchievements 005B3840 f end=005B38D8

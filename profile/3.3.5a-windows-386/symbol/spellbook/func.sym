@@ -27,3 +27,5 @@ CGSpellBook__FindSlotByName 00540650 f end=00540670
 CGSpellBook__IsUnlearnedSpell 0053BE30 f end=0053BE66
 CGSpellBook__FindSpellByName 0053F5E0 f end=0053F666
 SpellIsCallCompanion 008009B0 f end=008009FC
+CGSpellBook__IsAuraCaster 0053BD70 f end=0053BDED
+CGSpellBook__GetSpell 00540670 f end=005407EC
