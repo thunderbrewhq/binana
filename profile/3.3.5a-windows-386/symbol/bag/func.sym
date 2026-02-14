@@ -16,3 +16,4 @@ CGBag_C__ItemCountValid 00754DD0 f end=00754ECA
 UnlockItemTypeCallback 00753FA0 f end=00754015
 CGBag_C__FindItemByName 00754B90 f end=00754C24
 CGBag_C__GetItemTypeCount 00754D00 f end=00754D46
+CGBag_C__GetAvgEquippedDurability 00754940 f end=00754A18

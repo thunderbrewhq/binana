@@ -57,3 +57,7 @@ CGObject_C__Shutdown 00744E50 f end=00744EAA
 CGObject_C__UpdateInteractIcon 00745DA0 f end=00745E5B
 CGObject_C__SetModel 00743730 f end=0074375B
 CGObject_C__ClearSpellEffect 00743B40 f end=00743B9A
+CGObject_C__EffectDecayHandler 00743580 f end=00743598
+CGObject_C__EffectOnceHandler 00744870 f end=00744913
+CGObject_C__AuraEffectHoldHandler 00744920 f end=007449BC
+CGObject_C__AuraEffectHandler 007449C0 f end=00744A50

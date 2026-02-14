@@ -15,3 +15,4 @@ Create_SimpleHTML 00812780 f end=008127AB
 Create_SimpleStatusBar 008127B0 f end=008127DB
 Create_SimpleButton 00812870 f end=0081289B
 Create_SimpleFrame 008128A0 f end=008128CB
+FrameXML_AcquireHashNode 00812CE0 f end=00812D12

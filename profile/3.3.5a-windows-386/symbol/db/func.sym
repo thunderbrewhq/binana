@@ -488,3 +488,5 @@ LightParamsRec__GetFilename 008BDFD0 f end=008BDFD6
 LightRec__GetFilename 008BDFE0 f end=008BDFE6
 LightIntBandRec__GetFilename 008BE100 f end=008BE106
 LightFloatBandRec__GetFilename 008BE1A0 f end=008BE1A6
+ClientDBStringLookup 00634910 f end=00634940
+GetMapDifficultyRec 00634950 f end=006349E1

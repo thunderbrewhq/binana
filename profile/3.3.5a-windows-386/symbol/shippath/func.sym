@@ -1,0 +1,7 @@
+ShipPath__FindLegAndSegment 007F7D30 f end=007F7DCE
+ShipPath__SetTotalPathTime 007F7FC0 f end=007F7FFC
+ShipPath__WaitAtNextPausePoint 007F8000 f end=007F809F
+ShipPath__WaitAtCurrentLocation 007F80A0 f end=007F8111
+ShipPath__SetTimeOffset 007F8120 f end=007F8171
+ShipPath__BuildLegs 007F90F0 f end=007F92EB
+ShipPath__Init 007F92F0 f end=007F931E

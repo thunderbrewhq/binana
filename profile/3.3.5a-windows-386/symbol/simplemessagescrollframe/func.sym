@@ -16,3 +16,5 @@ CSimpleMessageScrollFrame_AddMessage 00972F20 f end=00973144
 CSimpleMessageScrollFrame_GetMessageInfo 00973150 f end=00973269
 CSimpleMessageScrollFrame_RemoveMessagesByAccessID 00973270 f end=009732EA
 CSimpleMessageScrollFrame_SetMaxLines 009737F0 f end=00973873
+CSimpleMessageScrollFrame__RefreshHyperlinks 009699C0 f end=00969B7D
+CSimpleMessageScrollFrame__FontUpdated 0096A4B0 f end=0096A507

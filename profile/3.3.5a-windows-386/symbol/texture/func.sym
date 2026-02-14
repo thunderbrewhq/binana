@@ -50,6 +50,7 @@ CBLPFile__Open 006AFF10 f end=006AFFCF type="int32_t __thiscall func(CBLPFile* t
 CBLPFile__LockChain2 006AFFD0 f end=006B012E type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, MipBits** images, uint32_t mipLevel, int32_t a6)"
 CBLPFile__Unlock 006AF6E0 f end=006AF728
 CBLPFile__Lock 006AF990 f end=006AFB55
+CalcRowStride 006AC130 f end=006AC190
 TextureIsReadyNow 004B62A0 f end=004B62C1
 TextureGetGxTex 004B6CB0 f end=004B6D82
 TextureRelease 0047BF30 f end=0047BF46
@@ -70,3 +71,6 @@ TextureDiscoverFileType 004B5600 f end=004B5661
 TexturePickAlternateFilename 004B5670 f end=004B56E7
 TextureNotifyGxRestart 004B65E0 f end=004B660D
 TextureCreate 004B9760 f end=004B9903
+TextureCacheGetMaxSize 004B6180 f end=004B61B5
+TextureCacheGetTexture 004B6F30 f end=004B6F93
+ProjectTex2dGetAddFadeTex 007E2C60 f end=007E2C73

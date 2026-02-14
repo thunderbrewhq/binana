@@ -60,3 +60,4 @@ NTempest__Intersect 00983490 f end=009836A9
 NTempest__DistanceSquared 00984CE0 f end=00984DA9
 C33Matrix__Scale 004C5230 f end=004C5280
 C33Matrix__ToEulerAnglesZYX 004C5630 f end=004C56D0
+C33Matrix__constructor 004C5100 f end=004C51AB

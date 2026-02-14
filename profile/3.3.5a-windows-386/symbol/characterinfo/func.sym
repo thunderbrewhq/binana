@@ -11,3 +11,4 @@ CGCharacterInfo__CalculateInventoryAlertStatus 005E8FE0 f end=005E90C8
 CGCharacterInfo__UpdateInventoryAlerts 005E90D0 f end=005E9140
 CGCharacterInfo__EnterWorld 005EAF30 f end=005EAF63
 CGCharacterInfo__RequestInspectHonorData 005E9140 f end=005E924F
+CGCharacterInfo__CanEquipItemInSlot 005E9250 f end=005E956C

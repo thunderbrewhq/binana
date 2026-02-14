@@ -16,3 +16,5 @@ CGAuctionHouse__IsItemForSell 0059AA50 f end=0059AA9B
 CGAuctionHouse__GetOwnerList 0059CC50 f end=0059CD89
 CGAuctionHouse__GetBidderList 0059CE50 f end=0059CF83
 CGAuctionHouse__IsSellItemValid 0059D0B0 f end=0059D270
+CGAuctionHouse__OnAuctionRemovedNotification 005A0AC0 f end=005A0B91
+CalculateAuctionDeposit 0076DDE0 f end=0076DE6B

@@ -8,3 +8,4 @@ CSimpleAnim_SetEndDelay 004A5260 f end=004A52DF
 CSimpleAnim_SetDuration 004A5320 f end=004A539F
 CSimpleAnim_SetSmoothProgress 004A5430 f end=004A54AD
 CSimpleAnim_SetSmoothing 004A5740 f end=004A580E
+CSimpleAnim__CSimpleAnim 00499BB0 f end=00499C49

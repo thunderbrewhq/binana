@@ -27,3 +27,4 @@ CGUIBindings__ClearOverrideBindings 005604F0 f end=00560557
 CGUIBindings__constructor 00561B80 f end=00561C52
 CGUIBindings__SetOverrideBinding 00563480 f end=00563515
 CGUIBindings__GetNumCommandKeys 0055E7E0 f end=0055E864
+CGUIBindings__AdjustCommandKeyIndices 0055F430 f end=0055F4C6

@@ -3,3 +3,4 @@ CGTalentGroup_C__GetTabFromID 005C5B30 f end=005C5B6E
 CGTalentGroup_C__Reset 005C9910 f end=005C995A
 CGTalentGroup_C__UpdateTabs 005C9960 f end=005C9A2A
 CGTalentGroup_C__GetTalentItem 005C73B0 f end=005C73C7
+CGTalentGroup_C__AddTalentItem 005C9310 f end=005C944C

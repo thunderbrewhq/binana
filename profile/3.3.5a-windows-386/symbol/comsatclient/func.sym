@@ -11,3 +11,7 @@ ComSatClient_LeaveAllSessions 007DED60 f end=007DEEB2
 ComSatClient_SetCurrentSession 007DF290 f end=007DF2B8
 ComSatClient_DisableCurrentSession 007DF2C0 f end=007DF2C8
 ComSatClient_OnSetTalkerMuted 007DF6F0 f end=007DF769
+ComSatClient_IsTalkerSquelchedInCurrent 007DB690 f end=007DB6AA
+ComSatClient_IsTalkerSquelchedInChannel 007DB6B0 f end=007DB6DE
+ComSatClient_DetermineSessionTypeFromName 007DB860 f end=007DB8CF
+FillComsatData 007DC830 f end=007DC909

@@ -16,3 +16,5 @@ CVehicle_C__UpdateSeatVacancy 00757EF0 f end=00757F96
 CVehicle_C__GetVirtualSeatCount 00757470 f end=00757541
 CVehicle_C__Create 00757FA0 f end=007580E8
 CVehicle_C__UpdateWorldMatrix 00758130 f end=00758196
+CVehicle_C__UninstallBoneAnimListener 00756D70 f end=00756DAB
+CVehicle_C__StartMirroringAnimsToPassengers 00757E70 f end=00757EE2

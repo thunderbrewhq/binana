@@ -31,3 +31,7 @@ WowConnectionNet__Service 00468FF0 f end=0046905B
 WowConnectionNet__Delete 004692C0 f end=004692FD
 WowConnectionNet__constructor 004695F0 f end=004696D2
 WoWConnection__FreeSendList 00466E30 f end=00466EFF
+WowConnectionNet__RunWorker 00469160 f end=0046921C
+WowConnectionNet__Add 00469420 f end=0046946D
+WowConnectionNet__PlatformWorkerReady 00469770 f end=0046977E
+WowConnectionNet__PlatformChangeState 004697E0 f end=00469859

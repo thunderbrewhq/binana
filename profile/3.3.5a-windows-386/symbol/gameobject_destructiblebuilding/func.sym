@@ -1,0 +1,3 @@
+CGGameObject_C_Type_DestructibleBuilding__UpdateDestructibleState 0070DFA0 f end=0070E66F
+CGGameObject_C_Type_DestructibleBuilding__AmbientSequenceFinishedHandler 0070B870 f end=0070B8A1
+CGGameObject_C_Type_DestructibleBuilding__OnUpdateFlags 0070E6A0 f end=0070E749

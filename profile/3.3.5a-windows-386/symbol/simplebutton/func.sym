@@ -18,3 +18,4 @@ CSimpleButton_SetFontString 009777C0 f end=009778D1
 CSimpleButton_SetHighlightTexture 00977D30 f end=00977ED1
 CSimpleButton_SetPushedTextOffset 00977F60 f end=00978040
 CSimpleButton__OnLayerMouseDown 0096FA80 f end=0096FB5D
+CSimpleButton__GetScriptByName 0096F200 f end=0096F2C2

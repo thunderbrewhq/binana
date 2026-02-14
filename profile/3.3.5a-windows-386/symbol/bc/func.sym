@@ -121,5 +121,15 @@ OsCreateFile 00461FA0 f end=00461FFA type="HOSFILE __stdcall func(char* fileName
 OsFileList 00462000 f end=0046209C
 OsNetAddrToStr 00466670 f end=004666C3
 OsBuildFontFilePath 0086BD80 f end=0086BDA3
+OsSecureRandom 0086D640 f end=0086D6A1
+OsNetAddrToStr 0086DC50 f end=0086DC8B
 Blizzard__Lock__MutexEnter 004283B0 f end=004283BF
 Blizzard__Lock__MutexLeave 004283C0 f end=004283CF
+Blizzard__String__Length 004287E0 f end=004287FD
+System_SFile2__FindFile 00424780 f end=00424B0B
+System_Mopaq__Cache__CleanCacheEntry 0042B4D0 f end=0042B5B5
+System_Mopaq__Cache__GetCachedBlock 004308C0 f end=00430A43
+System_Log__DefaultPreamble 004383E0 f end=004384AD
+System_Log__DefaultDayHeader 004384B0 f end=00438555
+System_Log__Init 0043A070 f end=0043A26F
+System_SComp__Compress 00458080 f end=0045856F

@@ -1,2 +1,6 @@
 WORLDTEXTSTRING__CalculateNewColor 007E6850 f end=007E6A2D
 WORLDTEXTSTRING__CalculateTextHeight 007E6CC0 f end=007E6DB4
+SmartScreenRectGridPos 00615CD0 f end=00615E04
+WorldTextShutdown 007E6A30 f end=007E6A8D
+WorldTextUpdate 007E7450 f end=007E7469
+WorldTextInitialize 007E7BB0 f end=007E7C6F

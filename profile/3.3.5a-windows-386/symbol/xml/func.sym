@@ -21,3 +21,4 @@ LoadXML_Texture 00815F40 f end=00815F9E
 XMLTree_GetRoot 008BE770 f end=008BE77A
 XMLNode__Init 00814AD0 f end=00814B45
 XMLNode__SetAttribute 00814C40 f end=00814CD5
+XMLNode__destructor 00814960 f end=008149D7

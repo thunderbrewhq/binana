@@ -88,3 +88,6 @@ CComand_DetailDoodadAlpha 0077F700 f end=0077F749
 CComand_CharacterAmbient 0077F750 f end=0077F7D1
 CComand_SetShadow 00780E20 f end=00780F41
 ConsoleCommandInvalidPtrCheck 0086B5A0 f end=0086B5F5
+ConsoleCommand_Help 00768660 f end=007688FD
+ParseCommand 00768900 f end=007689D6
+AddLineToExecFile 0076B2A0 f end=0076B3A9

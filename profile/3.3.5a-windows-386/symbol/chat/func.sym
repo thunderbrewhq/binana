@@ -82,3 +82,7 @@ CGChat__LeaveWorld 004FB190 f end=004FB19B
 CGChat__ChatTokenToGUID 004FB580 f end=004FB5BE
 CGChat__VoiceSessionUpdate 004FFF00 f end=004FFFB9
 FilterChatLinks 00530D00 f end=00530DBA
+SendToCombatText 0074D460 f end=0074D48A
+SendToCombatText 0074D4F0 f end=0074D516
+SendToCombatText 0074D520 f end=0074D546
+GetCombatLogObjectName 0074D750 f end=0074D912

@@ -7,3 +7,7 @@ MinimapGetZoomLevels 007F3B60 f end=007F3B66
 MinimapGetViewRadius 007F3B90 f end=007F3BDB
 UpdatePointsOfInterest 007F44A0 f end=007F4806
 MinimapSetQuestPOI 007F4930 f end=007F498D
+SetMemberData 007F3F40 f end=007F4311
+MinimapGetPartyMembers 007F4320 f end=007F4390
+MinimapBuildSource 007F5240 f end=007F5305
+MinimapUpdatePosition 007F5930 f end=007F5AF8

@@ -233,3 +233,7 @@ CGPlayer_C__GetAutoRangedCombatSpell 006D71E0 f end=006D71F3
 CGPlayer_C__CanTrack 006DCA00 f end=006DCA86
 CGPlayer_C__CanSaveTabardNow 006DE1C0 f end=006DE22D
 CGPlayer_C__RemoveEquipBypassSkill 006E22C0 f end=006E2394
+CGPlayer_C__TabardDrawCallback 006D2840 f end=006D28F5
+CGPlayer_C__UpdateAttackPosition 006D4AD0 f end=006D4B88
+Player_C_GetDisplayId 006D5C30 f end=006D5C8C
+PlayerNameUpdateWorldText 007E6480 f end=007E64C6

@@ -56,3 +56,5 @@ CameraSetFloat 004C1360 f end=004C13AE
 OrganicSmooth 008CA080 f end=008CA0A8
 CGCamera__UpdateTrackingState 00602DC0 f end=00602EAB
 CGCamera__FinishLoadingModel 006018C0 f end=006019B0
+CGCamera__IncIgnoreFacing 006019B0 f end=00601A69
+CGCamera__destructor 00604D40 f end=00604DF3

@@ -1,0 +1,4 @@
+CGGameObject_C_Type_Transport__GetRotation 0070DC10 f end=0070DD46
+CGGameObject_C_Type_Transport__GetMovement 0070DAA0 f end=0070DC05
+CGGameObject_C_Type_Transport__Interpolate 007106D0 f end=00710776
+CGGameObject_C_Type_Transport__UpdateMovement 007139E0 f end=00713D0B

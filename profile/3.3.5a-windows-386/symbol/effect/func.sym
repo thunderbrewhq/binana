@@ -21,3 +21,5 @@ CEffect__DrawFishingString 006F8F50 f end=006F925F
 CEffect__PostInitialize 006F9840 f end=006F9D68
 CEffect__EffectUpdate 006FA050 f end=006FA38E
 CEffect__CleanUpStaticLists 006FA450 f end=006FA5B0
+CEffect__DetachFromParent 006F7850 f end=006F7862
+CEffect__AddSoundEffect 006F7E40 f end=006F7FCE

@@ -26,3 +26,5 @@ SFile__OpenArchive 00421950 f end=00421A05
 SFile__RebuildHash 00423D70 f end=00423DBD
 SFile__CloseArchive 00421720 f end=0042173A
 SFile__GetDataPath 004218B0 f end=004218B6
+SFile__SetDataPathAlternate 00421B50 f end=00421BAA
+SFile__FileExists 00424E50 f end=00424E7F

@@ -15,3 +15,6 @@ CSimpleTop__SetMouseFocus 00493FB0 f end=00494052
 CSimpleTop__CompressStrata 00495060 f end=00495194
 CSimpleTop__NotifyFrameMovedOrResized 00495840 f end=00495880
 CSimpleTop__UnregisterForEvent 00495900 f end=004959EB
+CSimpleTop__StopMoveOrResizeFrame 00493A10 f end=00493A38
+CSimpleTop__StartMoveOrResizeFrame 00494060 f end=00494112
+CSimpleTop__StartMoveOrResizeFrame 00494120 f end=00494271

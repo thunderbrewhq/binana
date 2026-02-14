@@ -79,3 +79,5 @@ CGTooltip_SetQuestLogSpecialItem 00630990 f end=00630A7C
 CGTooltip_SetAction 00631000 f end=00631561
 CGTooltip_SetHyperlinkCompareItem 00631B60 f end=00631D0E
 CGTooltip__GetItemHyperlinkString 0061E3A0 f end=0061E4AE
+CGTooltip__Create 005143A0 f end=005143E9
+CGTooltip__AddLine 006201C0 f end=006201E2

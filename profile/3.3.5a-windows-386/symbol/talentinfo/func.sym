@@ -6,3 +6,5 @@ CGTalentInfo__ResetTabInfo 005C6880 f end=005C6971
 CGTalentInfo__ShutdownGame 005C9DC0 f end=005C9DE2
 CGTalentInfo__UpdatePetTabInfo 005C9DF0 f end=005C9E49
 TalentInfoGetTalentGroup 005C6080 f end=005C60BA
+CGTalentInfo__UpdateTalentData 005C9E50 f end=005C9F0D
+CGTalentInfo__UpdatePetTalentData 005C9F10 f end=005C9F5B

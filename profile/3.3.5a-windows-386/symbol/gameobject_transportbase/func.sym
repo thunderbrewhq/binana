@@ -1,0 +1,4 @@
+CGGameObject_C_Type_TransportBase__AddPassenger 00711AB0 f end=00711B49
+CGGameObject_C_Type_TransportBase__Disable 0070FFD0 f end=007100C5
+CGGameObject_C_Type_TransportBase__MovePassengers 007132E0 f end=0071349C
+CGGameObject_C_Type_TransportBase__UpdateCurrentVelocity 0070C550 f end=0070C643
