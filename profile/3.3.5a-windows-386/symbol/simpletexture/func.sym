@@ -14,3 +14,4 @@ CSimpleTexture__PreLoadXML 004814F0 f end=00481519
 CSimpleTexture__PostLoadXML 004830E0 f end=0048311E
 CSimpleTexture__GetWidth 004817D0 f end=00481847
 CSimpleTexture_SetBlendMode 0048C040 f end=0048C0DE
+CSimpleTexture_SetRotation 0048C860 f end=0048C99D

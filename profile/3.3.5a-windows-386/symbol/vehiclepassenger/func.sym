@@ -26,3 +26,4 @@ CVehiclePassenger_C__ComputeModelTransform 007490F0 f end=007493AA
 CVehiclePassenger_C__UpdateModel 0074A7F0 f end=0074AD6F
 CVehiclePassenger_C__StoreRootVehicle 0074B160 f end=0074B1F3
 CVehiclePassenger_C__OnUpdateTransport 0074B200 f end=0074B314
+CVehiclePassenger_C__DeleteAllDeferredVehicleTransitionAnimSplines 00747910 f end=0074792C

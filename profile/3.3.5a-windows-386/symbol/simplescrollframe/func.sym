@@ -15,3 +15,4 @@ CSimpleScrollFrame_SetVerticalScroll 00972560 f end=00972625 ; CSimpleScrollFram
 CSimpleScrollFrame__GetScriptByName 0096B0B0 f end=0096B147
 CSimpleScrollFrame__SetHorizontalScroll 0096B440 f end=0096B47E
 CSimpleScrollFrame_SetHorizontalScroll 00972490 f end=00972555
+CSimpleScrollFrame_SetScrollChild 00972210 f end=00972406

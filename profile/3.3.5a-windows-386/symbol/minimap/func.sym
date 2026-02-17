@@ -11,3 +11,5 @@ SetMemberData 007F3F40 f end=007F4311
 MinimapGetPartyMembers 007F4320 f end=007F4390
 MinimapBuildSource 007F5240 f end=007F5305
 MinimapUpdatePosition 007F5930 f end=007F5AF8
+SetupMapObjMatrices 007F3E00 f end=007F3F3D
+SetupTextureHandles 007F5760 f end=007F5930

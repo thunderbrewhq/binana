@@ -18,3 +18,5 @@ CGCorpse_C__OnFlagChanged 00706120 f end=007061D6
 CGCorpse_C__Initialize 007062C0 f end=007062F0
 CGCorpse_C__GetGroundNormal 007066B0 f end=00706891
 GuildGetGuildTabard 007EADA0 f end=007EAE55
+CorpseFlagUpdateHandler 00706240 f end=00706277
+GuildGetTabardCost 007EAE60 f end=007EAE66

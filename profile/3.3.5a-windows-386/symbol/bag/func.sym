@@ -17,3 +17,7 @@ UnlockItemTypeCallback 00753FA0 f end=00754015
 CGBag_C__FindItemByName 00754B90 f end=00754C24
 CGBag_C__GetItemTypeCount 00754D00 f end=00754D46
 CGBag_C__GetAvgEquippedDurability 00754940 f end=00754A18
+FindItemNameCallback 00753B20 f end=00753B65
+FindItemFullNameCallback 00753B70 f end=00753BAD
+FindItemIDCallback 00754020 f end=00754038
+GetItemTypeCountCallback 00754560 f end=0075458A

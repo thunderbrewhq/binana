@@ -35,3 +35,5 @@ InternalGetTextExtent 006C1430 f end=006C16E5
 InternalGetMaxCharsWithinWidth 006C1710 f end=006C1AC3
 FontFaceCloseHandle 006C80A0 f end=006C80DA
 FontFaceGetHandle 006C8AE0 f end=006C8C03
+GetCharacterWidth 006C09A0 f end=006C0A5B
+ParseEmbeddedTexture 006C0E80 f end=006C1425

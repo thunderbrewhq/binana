@@ -24,3 +24,4 @@ CGLookingForGroup__OnLFGList 0055B770 f end=0055BDB8
 PushDungeonEncounterInfo 005538B0 f end=0055399C
 CGLookingForGroup__ParseBlackList 00559B10 f end=00559B6D
 CGLookingForGroup__ParsePartyInfo 0055B080 f end=0055B120
+QSortLFGParty 00555A70 f end=00555CB8

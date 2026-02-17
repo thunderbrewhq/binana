@@ -6,3 +6,7 @@ CombatLogEntry__ResolveName 0074F720 f end=0074F8FA
 CombatLogEntry__GetObjectName 0074FD40 f end=0074FE8C
 CombatLogEntry__PendingCombatLogResolved 0074FE90 f end=0074FF1D
 CombatLogEntry__CancelPendingCallbacks 00750270 f end=0075037C
+GetPendingCombatLogData 0074F350 f end=0074F3F3
+UnitCombatLogHeal 00750860 f end=00750A81
+UnitCombatLogSpellMissed 00751B80 f end=00751C3E
+UnitCombatLogSplitDamage 00752DE0 f end=00752ECB

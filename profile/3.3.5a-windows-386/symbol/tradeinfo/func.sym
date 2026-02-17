@@ -14,3 +14,4 @@ CGTradeInfo__CancelTrade 00704040 f end=007040A6
 CGTradeInfo__UnlockTradeItems 005864A0 f end=005864C8
 CGTradeInfo__LeaveWorld 005880C0 f end=00588142
 CGTradeInfo__SetMoney 007043C0 f end=0070449E
+TradeNameCallback 00703C60 f end=00703CAE

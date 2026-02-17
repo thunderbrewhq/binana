@@ -118,3 +118,4 @@ CGxDevice__TexIsReadyNow 006831C0 f end=006831E7
 CGxDevice__TexSetWrap 00685D40 f end=00685DBF
 GxTexSetWrap 00681450 f end=0068146C
 CGxDevice__BuffSizeSet 006831A0 f end=006831C0
+CGxDevice__RsInit 006865B0 f end=0068765C

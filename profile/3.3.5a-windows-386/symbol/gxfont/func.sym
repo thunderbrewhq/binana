@@ -1,0 +1,5 @@
+CGxFont__UpdateDimensions 006C22F0 f end=006C2478
+CGxFont__CheckStringGlyphs 006C29A0 f end=006C29F7
+CGxFont__ClearGlyphs 006C3710 f end=006C381F
+CGxFont__HandleScreenSizeChange 006C3960 f end=006C399D
+CGxFont__Initialize 006C3CB0 f end=006C3D3B

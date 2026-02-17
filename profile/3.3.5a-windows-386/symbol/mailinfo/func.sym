@@ -22,3 +22,5 @@ CGMailInfo__RemoveMail 0056DC70 f end=0056DCF9
 CGMailInfo__RemoveMoney 0056F770 f end=0056F8CE
 CGMailInfo__RemoveItem 0056F8D0 f end=0056FA6F
 CGMailInfo__OnReceivedMail 00571A10 f end=00571A38
+GetSenderName 0056D960 f end=0056DA43
+QSortStationery 0056DD00 f end=0056DDFD

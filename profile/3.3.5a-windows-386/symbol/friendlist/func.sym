@@ -34,3 +34,6 @@ ReverseWhoisResponseHandler 006B32C0 f end=006B33CA
 PrintWho 006B5030 f end=006B51A2
 FriendListStatusHandler 006B86B0 f end=006B86F7
 OnWhoList 006B8720 f end=006B898A
+QSortFriends 006B3960 f end=006B3A23
+QSortIgnore 006B3A60 f end=006B3B51
+ContactListHandler 006B8700 f end=006B8719

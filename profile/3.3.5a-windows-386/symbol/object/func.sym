@@ -61,3 +61,6 @@ CGObject_C__EffectDecayHandler 00743580 f end=00743598
 CGObject_C__EffectOnceHandler 00744870 f end=00744913
 CGObject_C__AuraEffectHoldHandler 00744920 f end=007449BC
 CGObject_C__AuraEffectHandler 007449C0 f end=00744A50
+CGObject_C__IsObjectLocked 007433D0 f end=007433E0
+UpdateAllWorldObjectsCallback 007440B0 f end=007440E5
+UpdateAllObjectEffectManagersCallback 00744100 f end=0074413B

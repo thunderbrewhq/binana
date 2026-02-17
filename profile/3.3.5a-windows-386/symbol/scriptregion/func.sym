@@ -8,3 +8,4 @@ CScriptRegion_SetHeight 0049D620 f end=0049D6ED
 CScriptRegion_SetSize 0049D7A0 f end=0049D8A7
 CScriptRegion_SetPoint 0049DB10 f end=0049DE34
 CScriptRegion_SetAllPoints 0049DE40 f end=0049E003
+CScriptRegion_SetParent 0049CBD0 f end=0049CE41

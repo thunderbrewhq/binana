@@ -86,3 +86,5 @@ CM2Model__GetEventPosition 008317E0 f end=00831892
 CM2Model__SetBoneFlags 008265E0 f end=008266AE
 CM2Model__SetBoneProceduralTransform 008272F0 f end=008273D0
 CM2Model__GetEventPivot 008276F0 f end=00827774
+CM2Model__HasSequence 00825EE0 f end=00825F39
+CM2Model__HasCamera 008278E0 f end=00827951

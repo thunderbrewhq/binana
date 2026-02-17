@@ -24,3 +24,4 @@ CGCalendarEvent__SetRepeatOption 005F1200 f end=005F1224
 CGCalendarEvent__SetSize 005F1230 f end=005F1260
 CGCalendarEvent__SetFlag 005F13B0 f end=005F13D3
 CGCalendarEvent__ClearFlag 005F13E0 f end=005F1405
+QSortInvites 005F1720 f end=005F1963

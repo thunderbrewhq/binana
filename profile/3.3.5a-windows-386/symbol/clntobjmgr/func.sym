@@ -33,3 +33,5 @@ ClntObjMgrLinkInNewObject 004D6BC0 f end=004D6BFC
 ClntObjMgrInitializeStd 004D7750 f end=004D77DC
 FindActiveObj 004D4BB0 f end=004D4C1F
 AssignMirrorHandler 004D5850 f end=004D58F8
+ClntObjMgrUnlockObject 004D77E0 f end=004D7878
+ClntObjMgrSetMovementGlobals 004D3840 f end=004D3867

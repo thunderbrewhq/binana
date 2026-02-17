@@ -69,3 +69,5 @@ CSimpleFrame__OnLayerCursorEnter 004908E0 f end=0049097A
 CSimpleFrame__GetAttribute 00492BE0 f end=00492C0F
 CSimpleFrame__LoadXML_Attributes 00492F70 f end=00493223
 CSimpleFrame__SetAttribute 00493230 f end=004932B6
+CScriptRegion_GetAnimationGroups 0049E260 f end=0049E34D
+CScriptRegion_CreateAnimationGroup 0049E350 f end=0049E4FF

@@ -1,3 +1,4 @@
 MACRONODE__Parse 00565C40 f end=005660D3
 MACRONODE__IncrementActionBarCount 005660E0 f end=00566109
 MACRONODE__DecrementActionBarCount 00566110 f end=00566132
+EvaluateCursor 005EF490 f end=005EF584
