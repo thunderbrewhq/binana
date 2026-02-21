@@ -102,3 +102,6 @@ CGTooltip_SetTrainerService 0062E900 f end=0062EAE0
 CGTooltip_SetTradeSkillItem 0062EAE0 f end=0062ED66
 CGTooltip_SetTradePlayerItem 0062EFF0 f end=0062F1E0
 CGTooltip_SetTradeTargetItem 0062F1E0 f end=0062F41B
+CGTooltip__GetItemQualityColor 0061A510 f end=0061A529
+CGTooltip__GetItemQualityColorString 0061A530 f end=0061A549
+CGTooltip__CreateScriptMetaTable 0061DBA0 f end=0061DBB9

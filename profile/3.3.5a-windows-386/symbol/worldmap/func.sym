@@ -13,3 +13,4 @@ CGWorldMap__GetZoneName 005438A0 f end=0054391C
 CGWorldMap__GetPOIPosition 005445F0 f end=005446E1
 CGWorldMap__GetMapAreaFromPos 00543E50 f end=00544082
 CGWorldMap__GetMapHighlight 00544420 f end=005444ED
+QSortZones 005437B0 f end=00543859

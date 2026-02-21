@@ -4,3 +4,5 @@ CGStableInfo__LeaveWorld 005A1160 f end=005A119D
 CGStableInfo__OnStableList 005A11A0 f end=005A132D
 CGStableInfo__OnStableCommandResult 005A17F0 f end=005A192A
 CGStableInfo__EnterWorld 005A0EC0 f end=005A0EEC
+CreatureStatsCallback 005A0E80 f end=005A0E9A
+CreatureStatsSelectCallback 005A0EA0 f end=005A0EBA

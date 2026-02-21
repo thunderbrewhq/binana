@@ -1,7 +1,0 @@
-CGReputationInfo__InitializeGame 005D2EB0 f end=005D2F86
-CGReputationInfo__GetFactionStandingReaction 005D0600 f end=005D069F
-CGReputationInfo__OnSetFactionAtWar 005D0850 f end=005D08CE
-CGReputationInfo__SetWatchedFaction 005D0BA0 f end=005D0C6A
-CGReputationInfo__OnSetForcedReactions 005D15D0 f end=005D16A2
-CGReputationInfo__IsAtWar 00718B30 f end=00718B67
-GetFactionInfoHelper 005D0DA0 f end=005D114B

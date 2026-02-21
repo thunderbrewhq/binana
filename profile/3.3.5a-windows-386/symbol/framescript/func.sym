@@ -36,3 +36,5 @@ FrameScript_PackVariable 00819300 f end=00819679
 FrameScript_GetText 00819D40 f end=00819E4F
 FrameScript_GetEventListeners 0081B510 f end=0081B52E
 FrameScript_GetContext 00817DB0 f end=00817DB6
+FrameScript_GetScriptCPUUsage 008192E0 f end=008192ED
+FrameScript_GetEventCPUUsage 0081A450 f end=0081A4C5

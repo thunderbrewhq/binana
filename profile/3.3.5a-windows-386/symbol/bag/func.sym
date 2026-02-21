@@ -21,3 +21,5 @@ FindItemNameCallback 00753B20 f end=00753B65
 FindItemFullNameCallback 00753B70 f end=00753BAD
 FindItemIDCallback 00754020 f end=00754038
 GetItemTypeCountCallback 00754560 f end=0075458A
+GetItemTypeChargesCallback 00753F60 f end=00753F9D
+GetItemLimitCategoryCallback 00754590 f end=007545CB

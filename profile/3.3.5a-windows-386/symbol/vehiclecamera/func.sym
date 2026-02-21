@@ -17,3 +17,4 @@ CVehicleCamera_C__ConvertFromRawToWorld 00759130 f end=00759153
 CVehicleCamera_C__ConvertFromWorldToRawOrOffset 00759BD0 f end=00759C57
 CVehicleCamera_C__UpdateWorldCameraState 0075A630 f end=0075A71A
 CVehicleCamera_C__Update 0075AF40 f end=0075B13C
+CVehicleCamera_C__OnPassengerTransitionMotionBegin 0075AF00 f end=0075AF3D

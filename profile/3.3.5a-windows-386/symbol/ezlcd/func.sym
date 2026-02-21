@@ -13,3 +13,6 @@ CEzLcd__SetOrigin 00958FB0 f end=00958FD8
 CEzLcd__ShowSubscreen 00959200 f end=00959233
 CEzLcd__ShowPage 00959540 f end=00959603
 CEzLcd__HideGlobals 00959890 f end=0095B42C
+CEzLcd__SetBitmap 00958F80 f end=00958FA6
+CEzLcd__SetAlpha 00959010 f end=00959032
+CEzLcd__AddBitmap 00959750 f end=009597AF

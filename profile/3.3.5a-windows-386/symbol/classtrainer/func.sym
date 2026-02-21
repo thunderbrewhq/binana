@@ -8,3 +8,5 @@ CGClassTrainer__GetSelectionIndex 00594170 f end=005941A8
 CGClassTrainer__SetServiceTypeFilter 00594FE0 f end=00595010
 CGClassTrainer__SetSkillLineFilter 00595010 f end=00595031
 CGClassTrainer__AddServices 00596450 f end=00596AF1
+TrainerItemCallback 00593CA0 f end=00593CBA
+CGClassTrainer__GetService 00594240 f end=0059425D

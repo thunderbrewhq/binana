@@ -21,3 +21,5 @@ ApplyTranslationAnim 0048B800 f end=0048B81A
 CSimpleFontString_SetFontObject 0048D380 f end=0048D50E
 CSimpleFontString_SetTextHeight 0048DDB0 f end=0048DE8A
 TextBlockGetTextExtent 004BDCD0 f end=004BDD78
+CSimpleFontString_SetText 0048D780 f end=0048D7F5
+CSimpleFontString_SetDrawLayer 0048BF30 f end=0048BFE7

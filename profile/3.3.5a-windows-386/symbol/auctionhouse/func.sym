@@ -18,3 +18,4 @@ CGAuctionHouse__GetBidderList 0059CE50 f end=0059CF83
 CGAuctionHouse__IsSellItemValid 0059D0B0 f end=0059D270
 CGAuctionHouse__OnAuctionRemovedNotification 005A0AC0 f end=005A0B91
 CalculateAuctionDeposit 0076DDE0 f end=0076DE6B
+CGAuctionHouse__ClearOutbidID 0059BA10 f end=0059BA78

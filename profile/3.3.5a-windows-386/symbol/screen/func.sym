@@ -7,3 +7,5 @@ ScrnGetStockFont 004A8DC0 f end=004A8DDF
 ScrnGetStockFontHeight 004A8DE0 f end=004A8DFF
 ScrnScreenshot 004A8550 f end=004A856F
 ScrnSetStockFont 004A8D40 f end=004A8D85
+ILayerDestroy 004A8B60 f end=004A8B7C
+ILayerInitialize 004A8B80 f end=004A8B9C

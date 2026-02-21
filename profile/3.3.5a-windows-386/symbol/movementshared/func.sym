@@ -74,3 +74,4 @@ CMovementShared__GetBaseSpeed 00987570 f end=0098767B
 CMovementShared__StopAllLogging 00987680 f end=009876AB
 CMovementShared__StartFalling 00988370 f end=009883E3
 CMovementShared__RelDistanceFallen 009870D0 f end=009870E7
+CMovementShared__UpdateBaseStatus 00988920 f end=0098898C

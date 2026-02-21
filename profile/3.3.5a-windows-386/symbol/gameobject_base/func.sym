@@ -1,3 +1,4 @@
 CGGameObject_C_TypeBase__Use 007116C0 f end=007119CF
 CGGameObject_C_TypeBase__CanUse 007112A0 f end=00711463
 CGGameObject_C_TypeBase__CanUseNow 00711470 f end=007116B9
+CGGameObject_C_TypeBase__CheckRange 0070FA70 f end=0070FCC4

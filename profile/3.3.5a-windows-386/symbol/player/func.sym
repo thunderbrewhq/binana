@@ -303,3 +303,7 @@ OnSupercededSpells 006E7E00 f end=006E7F4D
 ObjectNameShowCallback 007E60E0 f end=007E6141
 Player_C_GetModelName 006DC810 f end=006DC8C1
 QuestAcceptedCallback 006DF2B0 f end=006DF36B
+OnUpdatePVPTitle 006CDD80 f end=006CDD96
+CGPlayer_C__CheckSpiritHealerDistance 006D1FC0 f end=006D2063
+CGPlayer_C__CheckTalentMasterDistance 006D2070 f end=006D2113
+CGPlayer_C__CheckBinderDistance 006D2290 f end=006D2333

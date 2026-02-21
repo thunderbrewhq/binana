@@ -26,3 +26,4 @@ CM2Shared__Release 0083DC90 f end=0083DCE8 ; CM2Shared::Release()
 CM2Shared__DestroyBuffers 008368B0 f end=00836978
 CM2Shared__AllocInstances 00836DF0 f end=00836E35
 CM2Shared__FinishLoading 0083CF00 f end=0083D2C2
+M2HeapSort 0083DCF0 f end=0083DE43

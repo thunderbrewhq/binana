@@ -42,3 +42,7 @@ InboundChatVolumeHandler 007DCEC0 f end=007DCF13
 VoiceChatModeHandler 007DCF20 f end=007DCFD9
 VoiceActivationSensitivityHandler 007DCFE0 f end=007DD03B
 SelfMuteHandler 007DD060 f end=007DD095
+SI2__DSP_CreateDsp 004CDF70 f end=004CE233
+SI2__VoiceChat_ShutDownCapture 00887780 f end=00986395
+SI2__VoiceChat_IsPlayingLoopbackSound 00986410 f end=0098641E
+SI2__VoiceChat_StopRecordingLoopbackSound 009869D0 f end=009869E8

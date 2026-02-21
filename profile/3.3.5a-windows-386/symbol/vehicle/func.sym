@@ -18,3 +18,5 @@ CVehicle_C__Create 00757FA0 f end=007580E8
 CVehicle_C__UpdateWorldMatrix 00758130 f end=00758196
 CVehicle_C__UninstallBoneAnimListener 00756D70 f end=00756DAB
 CVehicle_C__StartMirroringAnimsToPassengers 00757E70 f end=00757EE2
+CVehicle_C__FindVehicleToPlayBoneAnim 00757000 f end=0075705F
+CVehicle_C__BoneAnimEndHandler 00757280 f end=00757411

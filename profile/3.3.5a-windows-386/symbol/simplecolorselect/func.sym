@@ -14,3 +14,4 @@ CSimpleColorSelect_SetColorWheelTexture 009708B0 f end=009709DD
 CSimpleColorSelect_SetColorWheelThumbTexture 00970A60 f end=00970BB8
 CSimpleColorSelect_SetColorValueTexture 00970C40 f end=00970D6D
 CSimpleColorSelect_SetColorValueThumbTexture 00970DF0 f end=00970F48
+ValueTextureUpdate 0096DEC0 f end=0096DF29

@@ -447,3 +447,6 @@ ChannelSpellOrObjectChangeHandler 0073F4F0 f end=0073F53D
 StandStateMessageHandler 0073F540 f end=0073F588
 OnMonsterMoveEvent 0073F590 f end=0073F65F
 OnUnitThreatUpdate 00741C90 f end=00741CF1
+CGUnit_C__SetCastingAnim 00715AF0 f end=00715B15
+CGUnit_C__GetMountSoundDataRec 007195D0 f end=0071965E
+CGUnit_C__IsCancelShapeshiftAtFlightMaster 00721E70 f end=00721EC5

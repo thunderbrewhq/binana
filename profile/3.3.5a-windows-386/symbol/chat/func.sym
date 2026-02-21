@@ -92,3 +92,4 @@ SendChatEvent 004FDBC0 f end=004FDD72
 ChannelPlayerCommand 004FE330 f end=004FE451
 SetCurrentActiveDisplayChannel 00504490 f end=005045B4
 ShowBareXPGained 0050B1D0 f end=0050B300
+CGChat__NameDisplayQueryCallback 004FFE30 f end=004FFEF4

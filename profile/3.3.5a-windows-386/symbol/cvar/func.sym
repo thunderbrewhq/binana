@@ -2,6 +2,23 @@ CVar__Set 00766940 f end=00766982
 CVar__SaveAll 007670E0 f end=007670FE
 CVar__Reset 00767840 f end=007678F0
 CVar__Default 007678F0 f end=007679A0
+CVar__ArchiveCodeRegisteredOnly 007663F0 f end=007663F8 ; CVar::ArchiveCodeRegisteredOnly()
+CVar__Load 00766400 f end=0076652C type="int32_t __stdcall func(HOSFILE file)"
+CVar__Load 00766530 f end=007665C2 type="int32_t __stdcall func(char* filename)"
+CVar__SaveCvar 00766640 f end=007666A1 type="bool __stdcall func(char* name, char* value, void* param)"
+CVar__LogCvar 007666B0 f end=007666F9 ; CVar::LogCvar(char const*, char const*, void*)
+CVar__InternalSet 007667B0 f end=00766855 ; CVar::InternalSet(char const*, bool, bool, bool, bool)
+CVar__Set 007668C0 f end=00766936 type="bool __thiscall func(CVar* this, char* value, bool setValue, bool setReset, bool setDefault, bool a6)"
+CVar__Reset 00766990 f end=00766A14 ; public: void __thiscall CVar::Reset(void)
+CVar__Default 00766A20 f end=00766AA4 type="bool __thiscall func(CVar* this)" ; public: bool __thiscall CVar::Default(void)
+CVar__Update 00766AB0 f end=00766B1F type="bool __thiscall func(CVar* this)" ; CVar::Update()
+CVar__IterateForArchive 00767030 f end=007670DA type="int32_t __stdcall func(uint32_t a1, uint32_t a2, void* callback, void* param)" ; CVar::IterateForArchive(unsigned int, unsigned int, int (*)(char const*, char const*, void*), void*)
+CVar__LogAll 007671A0 f end=007671CF ; CVar::LogAll(char*, unsigned long, unsigned int, unsigned int)
+CVar__DeleteAccountCVars 007673A0 f end=007673E4 ; 00005400
+CVar__Destroy 007673F0 f end=00767434 type="void __stdcall func()"
+CVar__Lookup 00767440 f end=0076745B ; CVar::Lookup(char const*)
+CVar__Register 00767FC0 f end=007681E9 type="CVar* __stdcall func(char* name, char* help, uint32_t flags, const char* value, void* fcn, uint32_t category, bool a7, void* arg, bool a9)"
+CVar__Initialize 00768340 f end=00768402 type="void __stdcall func(char* filename)"
 CVGxColorBitsCallback 00769240 f end=007692CF type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxDepthBitsCallback 007692D0 f end=0076935F type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxTripleBufferCallback 00769360 f end=007693AB type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
@@ -25,3 +42,4 @@ CVGxResolutionCallback 0076A220 f end=0076A57F type="bool __stdcall func(CVar* h
 CVGxRefreshCallback 0076A580 f end=0076A62D type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CvarCommandHandler 00767680 f end=0076783A
 ConsoleDeviceDefaults 0076A130 f end=0076A1BD
+CVar__LookupRegistered 00767460 f end=00767488

@@ -10,3 +10,4 @@ OsTimeManagerCreate 0086AF20 f end=0086AF58
 OsTimeManagerDestroy 0086AF60 f end=0086AF83
 OsTimeStartup 0086D430 f end=0086D439 type="void __stdcall func(TimingMethod timingMethod)"
 OsTimeShutdown 0086D440 f end=0086D445
+OsTimeGetTimingMethod 0086AD60 f end=0086AD69

@@ -164,3 +164,4 @@ AutoMouseOverProc 00519E80 f end=0051A1CF
 AreaSpiritHealerCheck 00523F80 f end=0052400D
 CGGameUI__CanChangePlayerDifficulty 0052CBC0 f end=0052CC2C
 FadingScreenPaint 005ED120 f end=005ED473
+CGGameUI__UpdateComboPoints 00519780 f end=005197C7

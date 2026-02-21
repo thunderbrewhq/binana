@@ -13,3 +13,4 @@ MinimapBuildSource 007F5240 f end=007F5305
 MinimapUpdatePosition 007F5930 f end=007F5AF8
 SetupMapObjMatrices 007F3E00 f end=007F3F3D
 SetupTextureHandles 007F5760 f end=007F5930
+MinimapGetGossipPoi 007F3BE0 f end=007F3BE6

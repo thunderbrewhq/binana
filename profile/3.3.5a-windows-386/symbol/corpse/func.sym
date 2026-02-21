@@ -20,3 +20,5 @@ CGCorpse_C__GetGroundNormal 007066B0 f end=00706891
 GuildGetGuildTabard 007EADA0 f end=007EAE55
 CorpseFlagUpdateHandler 00706240 f end=00706277
 GuildGetTabardCost 007EAE60 f end=007EAE66
+CGCorpse_C__ShowLootEffect 00705900 f end=0070594A
+CGCorpse_C__GetPortraitTexture 007057A0 f end=007057D5

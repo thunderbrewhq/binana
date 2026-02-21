@@ -53,3 +53,5 @@ IOsClipboardGetString 008726F0 f end=008727BB
 OsClipboardFreeString 008727C0 f end=008727DE
 IOsClipboardPutString 008727E0 f end=008728B8
 OsGetTimeStamp 0086D490 f end=0086D4C0
+OsGetBackgroundSleepMs 0086B2B0 f end=0086B2B6
+OsSleepInBackground 0086B290 f end=0086B296

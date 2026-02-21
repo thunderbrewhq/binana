@@ -5,3 +5,4 @@ CGItemSocketInfo__SetItem 005C4680 f end=005C477C
 CGItemSocketInfo__LeaveWorld 005C4EE0 f end=005C4EED
 CGItemSocketInfo__UpdateItem 005C4EF0 f end=005C4F40
 CGItemSocketInfo__SetGem 005C4780 f end=005C48C4
+EnchantItemCacheCallback 005C44D0 f end=005C44EA

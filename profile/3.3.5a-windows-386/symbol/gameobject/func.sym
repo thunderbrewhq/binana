@@ -43,3 +43,4 @@ CGGameObject_C__IsLocked 0070F160 f end=0070F54D
 CGGameObject_C__SetDisplayState 0070F7D0 f end=0070F80B
 ObjectNameCreate 007E5FD0 f end=007E6030
 GameObjectStatsCallback 00712AE0 f end=00712B3E
+CGGameObject_C__ModelLoaded 00713F50 f end=00714093

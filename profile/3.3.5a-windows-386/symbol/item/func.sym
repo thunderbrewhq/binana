@@ -53,3 +53,4 @@ OnUpdateItemID 00707960 f end=00707A28
 OnUpdateDynamicFlags 00707A30 f end=00707AD7
 OnUpdateDurability 00707AE0 f end=00707C17
 OnUpdateEnchantments 00708BD0 f end=00708C01
+CGItem_C__IsTemporarilyBoundForTrade 00586010 f end=00586075

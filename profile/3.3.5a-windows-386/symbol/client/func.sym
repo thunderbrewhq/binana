@@ -142,3 +142,7 @@ ViolenceLevelChanged 007F39B0 f end=007F3A10
 DeclinedWordsInitialize 007E08E0 f end=007E0A47
 GetDeclinedWord 007E0A50 f end=007E0E85
 ValidateName 007E18C0 f end=007E1E8A
+IsAddonVersionCheckEnabled 005F4CA0 f end=005F4CAF
+SetAddonVersionCheck 005F4CB0 f end=005F4CDF
+IsAlphaLatin1 007E0F30 f end=007E0F86
+IsAlphaRussian 007E1050 f end=007E107A

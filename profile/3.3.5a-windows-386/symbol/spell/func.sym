@@ -118,3 +118,5 @@ OnCancelCombat 00800BA0 f end=00800BE3
 Spell_C_StopCasting 00809A80 f end=00809ABD
 ItemCheckCooldownCallback 0080ABE0 f end=0080AC0C
 NotifyDestLocSpellCastHandler 00810050 f end=008100D8
+Spell_C_SpellUsesReagent 007FD5F0 f end=007FD61D
+Spell_C_IsModal 00805EF0 f end=00805F29

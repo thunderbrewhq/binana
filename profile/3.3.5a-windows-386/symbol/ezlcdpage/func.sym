@@ -1,2 +1,3 @@
 CEzLcdPage__constructor 0095AFF0 f end=0095B00C
 CEzLcdPage__AddColorText 0095B1F0 f end=0095B363
+CEzLcdPage__AddBitmap 0095B370 f end=0095B3F2

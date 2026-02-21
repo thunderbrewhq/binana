@@ -17,3 +17,4 @@ CGTradeSkillInfo__SetInvTypeFilter 005DCF30 f end=005DCF53
 Profession_FilterSpell 005DC110 f end=005DCA88
 CaseAccentInsensitiveParse 007E11D0 f end=007E161C
 CGTradeSkillInfo__GetSkillLineRec 005DA5F0 f end=005DA66E
+TradeSkillItemCallback 005DE100 f end=005DE115

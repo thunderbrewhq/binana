@@ -15,3 +15,4 @@ CGDynamicObject_C__GetVisualEffectNameRec 00704B30 f end=00704C2A
 CGDynamicObject_C__HandleAnimEvent 00704C30 f end=00704CBC
 CGDynamicObject_C__GetModelFileName 00705100 f end=007051AE
 CGDynamicObject_C__PostInit 00705230 f end=0070539C
+DynamicObjectDecayHandler 00704A40 f end=00704A65

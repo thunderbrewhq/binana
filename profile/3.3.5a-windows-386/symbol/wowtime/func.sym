@@ -23,3 +23,4 @@ ReceiveNewTimeSpeed 007E28E0 f end=007E29B7
 ReceiveGameTimeUpdate 007E29C0 f end=007E2A46
 ReceiveServerTime 007E2A50 f end=007E2B37
 ReceiveNewGameTime 007E2B40 f end=007E2BC4
+WowTime__WowEncodeTime 0076C910 f end=0076C965

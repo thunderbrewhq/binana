@@ -48,3 +48,4 @@ ClientServices__GetRealmInfoByIndex 006B2EB0 f end=006B2F12
 ClientServices__JoinRealmResult 006B3070 f end=006B318F
 ClientServices__Destroy 006B1BB0 f end=006B1C6B
 ClientServices__Logon 006B2A90 f end=006B2CC9
+ValidateCharacterNameDeclension 0076DD90 f end=0076DDD7

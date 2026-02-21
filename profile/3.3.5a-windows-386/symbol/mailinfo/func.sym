@@ -24,3 +24,5 @@ CGMailInfo__RemoveItem 0056F8D0 f end=0056FA6F
 CGMailInfo__OnReceivedMail 00571A10 f end=00571A38
 GetSenderName 0056D960 f end=0056DA43
 QSortStationery 0056DD00 f end=0056DDFD
+SendItemQueryCallback 0056D490 f end=0056D4A8
+CGMailInfo__UpdateRecentSenders 0056DE00 f end=0056DEC8

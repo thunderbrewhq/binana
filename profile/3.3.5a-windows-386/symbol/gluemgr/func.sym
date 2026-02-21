@@ -81,3 +81,4 @@ LoadingScreenMiniEnable 0040A690 f end=0040A765
 LoadingScreenMiniUpdate 0040A770 f end=0040A783
 LoadingScreenEnableShipLeg 0040AE30 f end=0040AEE6
 LoadingScreenXMLCallback 0040AF90 f end=0040AFD9
+BattlenetFileDownload__constructor 006BAE80 f end=006BAEDF

@@ -71,3 +71,4 @@ CSimpleFrame__LoadXML_Attributes 00492F70 f end=00493223
 CSimpleFrame__SetAttribute 00493230 f end=004932B6
 CScriptRegion_GetAnimationGroups 0049E260 f end=0049E34D
 CScriptRegion_CreateAnimationGroup 0049E350 f end=0049E4FF
+CSimpleFrame__OnLayerMouseWheel 0048FDB0 f end=0048FDE9

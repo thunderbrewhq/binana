@@ -1,0 +1,7 @@
+MacroSubstring__SetText 005EEA40 f end=005EEAB8
+MacroSubstring__GetText 005EEAC0 f end=005EEAF2
+MacroSubstring__ToNumber 005EEB00 f end=005EEB2F
+MacroConditions__Evaluate 005EF5C0 f end=005EF697
+MacroCondition__Parse 005F0040 f end=005F01D2
+MacroConditions__Parse 005F0BB0 f end=005F0D47
+MacroSubstring__operator_eq 005EEB30 f end=005EEB6E
