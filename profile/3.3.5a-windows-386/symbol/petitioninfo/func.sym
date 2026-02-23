@@ -5,3 +5,5 @@ CGPetitionInfo__SetPetition 005CEEF0 f end=005CF01D
 CGPetitionInfo__LeaveWorld 005CF610 f end=005CF647
 CGPetitionInfo__SetSignatures 005CF650 f end=005CF706
 CGPetitionInfo__AddSignature 005CF710 f end=005CF826
+CGPetitionInfo__SetPetitionStats 005CEA60 f end=005CEAB9
+PetitionQueryCallback 005CEC20 f end=005CEC37
