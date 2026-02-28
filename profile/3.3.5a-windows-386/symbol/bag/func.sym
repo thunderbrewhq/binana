@@ -23,3 +23,5 @@ CGBag_C__GetItemTypeCount 00754D00 f end=00754D46
 CGBag_C__GetItemTypeCharges 00754D50 f end=00754D86
 CGBag_C__UnlockItemsOfType 00754D90 f end=00754DC3
 CGBag_C__ItemCountValid 00754DD0 f end=00754ECA
+FindBagFamilyCallback 00753B00 f end=00753B16
+CGBag_C__FindItemOfBagFamily 00754AC0 f end=00754AEC

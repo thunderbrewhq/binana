@@ -6,3 +6,4 @@ CGItemSocketInfo__LeaveWorld 005C4EE0 f end=005C4EED
 CGItemSocketInfo__UpdateItem 005C4EF0 f end=005C4F40
 CGItemSocketInfo__RemoveItem 005C4F40 f end=005C4FED
 CGItemSocketInfo__Accept 005C4FF0 f end=005C50DC
+ItemSocketInfoRegisterScriptFunctions 005C4630 f end=005C4653

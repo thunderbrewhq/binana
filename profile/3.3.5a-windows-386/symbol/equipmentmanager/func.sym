@@ -17,3 +17,4 @@ CGEquipmentManager__OnEquipmentSet 005AF490 f end=005AF6BA
 CGEquipmentManager__OnEquipmentSetResult 005AF710 f end=005AF7D7
 CGEquipmentManager__CreateEquipmentSet 005AF7E0 f end=005AF8D2
 CGEquipmentManager__InitializeGame 005AFBB0 f end=005AFC35
+EquipmentManagerRegisterScriptFunctions 005AD8F0 f end=005AD916

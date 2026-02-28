@@ -127,3 +127,4 @@ SBigPowMod 0077C980 f end=0077C9A4 type="void __stdcall func(BigData* a, BigData
 TSList__LinkToHead 007B5020 f end=007B50AB ; 00005410
 TSList__LinkToTail 0086E200 f end=0086E25F ; 00005410
 SSyncObject__constructor 00921A00 f end=00921A09
+TSFixedArray__ReallocData 00466910 f end=004669A0

@@ -35,3 +35,4 @@ OnObjectDestroy 004D7610 f end=004D76D1
 ClntObjMgrInitialize 004D76E0 f end=004D7749
 ClntObjMgrInitializeStd 004D7750 f end=004D77DC
 ClntObjMgrUnlockObject 004D77E0 f end=004D7878
+ClntObjMgrGetMovementGlobals 004D3810 f end=004D3831

@@ -5,3 +5,5 @@ CBackdropGenerator__LoadXML 004A2780 f end=004A29CB ; _CBackdropGenerator::LoadX
 CBackdropGenerator__Generate 004A29D0 f end=004A2D34 type="void __thiscall func(CBackdropGenerator* this, CRect*)"
 CBackdropGenerator__constructor 004A2D40 f end=004A2DF9 type="void __thiscall func(CBackdropGenerator* this)"
 CBackdropGenerator__SetOutput 004A2E00 f end=004A36EE type="void __thiscall func(CBackdropGenerator* this, CSimpleFrame* a1)"
+CSimpleFrame_CreateFontString 004A2240 f end=004A248E
+CSimpleFrame_GetChildren 004A2510 f end=004A25EC

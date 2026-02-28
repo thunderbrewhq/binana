@@ -27,3 +27,6 @@ CVehiclePassenger_C__Update 0074B0B0 f end=0074B126
 CVehiclePassenger_C__UpdateAll 0074B130 f end=0074B155
 CVehiclePassenger_C__StoreRootVehicle 0074B160 f end=0074B1F3
 CVehiclePassenger_C__OnUpdateTransport 0074B200 f end=0074B314
+CVehiclePassenger_C__SendTransitionUIEvents 00749650 f end=00749724
+CVehiclePassenger_C__OnReloadUI 00749ED0 f end=00749FA7
+CVehiclePassenger_C__SendTransitionUIEvents 00749FB0 f end=0074A04C

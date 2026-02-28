@@ -5,3 +5,5 @@ CGWorldStateInfo__RequestUITime 00548760 f end=005487C6
 CGWorldStateInfo__TimerUpdate 005488F0 f end=00548962
 CGWorldStateInfo__GetWorldState 00548D10 f end=00548D37
 CGWorldStateInfo__SetWorldState 00549440 f end=005494F6
+WorldStateInfoRegisterScriptFunctions 005485B0 f end=005485D3
+WorldStateInfoUnregisterScriptFunctions 005485E0 f end=005485FC

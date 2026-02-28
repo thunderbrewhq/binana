@@ -7,3 +7,5 @@ CGAutoCompleteName__RemoveFlagsByName 0057B080 f end=0057B0CD
 CGAutoCompleteName__RemoveFlagsFromAllNodes 0057B0D0 f end=0057B129
 CGAutoCompleteName__RefreshName 0057B5E0 f end=0057B629
 CGAutoCompleteName__AddFlags 0057B7C0 f end=0057B831
+AutoCompleteRegisterScriptFunctions 0057ADB0 f end=0057ADD3
+AutoCompleteUnregisterScriptFunctions 0057ADE0 f end=0057ADFC

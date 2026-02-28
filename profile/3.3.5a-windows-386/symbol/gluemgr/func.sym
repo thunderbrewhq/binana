@@ -82,3 +82,4 @@ CGlueMgr__ScanDLLFinished 004E5940 f end=004E59B1
 SystemRegisterFunctions 0060A120 f end=0060A143
 SystemUnregisterFunctions 0060A150 f end=0060A16C
 BattlenetFileDownload__constructor 006BAE80 f end=006BAEDF
+LoadingScreenEnableShip 0040AD50 f end=0040AE21

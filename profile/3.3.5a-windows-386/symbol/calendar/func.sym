@@ -48,3 +48,4 @@ CGCalendar__ProcessInviteAlert 005C3AB0 f end=005C3D2B
 CGCalendar__ProcessEventUpdatedAlert 005C3D30 f end=005C3FD9
 CGCalendar__OnCalendarMessage 005C3FE0 f end=005C415E
 CGCalendar__InitializeGame 005C4240 f end=005C43B0
+QSortEvents 005BFD20 f end=005BFF26

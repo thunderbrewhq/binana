@@ -23,3 +23,4 @@ CEffect__EffectUpdate 006FA050 f end=006FA38E
 CEffect__Release 006FA390 f end=006FA3B2
 CEffect__Destroy 006FA3C0 f end=006FA444
 CEffect__CleanUpStaticLists 006FA450 f end=006FA5B0
+CEffect__ApplyItemVisual 006F82D0 f end=006F83C7

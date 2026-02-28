@@ -9,3 +9,5 @@ CGDuelInfo__AcceptDuel 005CFBD0 f end=005CFC4B
 CGDuelInfo__CancelDuel 005CFC50 f end=005CFCCB
 CGDuelInfo__OnDuelRequested 005CFCD0 f end=005CFDAD
 CGDuelInfo__InitializeGame 005CFDD0 f end=005CFE3A
+DuelInfoRegisterScriptFunctions 005CF9C0 f end=005CF9E3
+DuelInfoUnregisterScriptFunctions 005CF9F0 f end=005CFA0C

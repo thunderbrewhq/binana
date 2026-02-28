@@ -26,3 +26,4 @@ CGMailInfo__OnReceivedMail 00571A10 f end=00571A38
 CGMailInfo__LeaveWorld 00571BE0 f end=00571C47
 CGMailInfo__OnMailListResult 00571C50 f end=00572207
 CGMailInfo__InitializeGame 00572210 f end=005723D7
+InboxItemQueryCallback 0056D4B0 f end=0056D4C8
