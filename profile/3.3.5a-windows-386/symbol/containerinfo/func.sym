@@ -7,3 +7,4 @@ CGContainerInfo__GetLuaBagAndSlot 005D7380 f end=005D748C
 CGContainerInfo__UpdateContainers 005D9960 f end=005D9B3B
 CGContainerInfo__EnterWorld 005D9C20 f end=005D9D8F
 CGContainerInfo__LeaveWorld 005D9D90 f end=005D9EFB
+ContainerUnregisterScriptFunctions 005D7050 f end=005D706F

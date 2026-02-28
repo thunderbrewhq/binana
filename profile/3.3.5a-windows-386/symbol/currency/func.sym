@@ -10,3 +10,4 @@ CurrencyBreakdown 007E7C70 f end=007E7CBE
 GetCurrencyIcon 007E7CC0 f end=007E7D71
 GetCurrencyText 007E7D80 f end=007E7E08
 GetCurrencyShortText 007E7F1A f end=007E7F98
+CurrencyTypesUnregisterScriptFunctions 005AFD70 f end=005AFD8C

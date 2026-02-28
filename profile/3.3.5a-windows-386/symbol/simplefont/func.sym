@@ -9,3 +9,4 @@ CSimpleFont_SetSpacing 004A3F90 f end=004A4037
 CSimpleFont_SetJustifyH 004A4930 f end=004A49B7
 CSimpleFont_SetJustifyV 004A49C0 f end=004A4A47
 StringToJustify 00815080 f end=008150CA
+CSimpleFont_IsObjectType 004A4170 f end=004A421A

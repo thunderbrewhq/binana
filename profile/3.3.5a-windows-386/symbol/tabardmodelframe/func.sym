@@ -2,3 +2,4 @@ CGTabardModelFrame__CreateScriptMetaTable 00599390 f end=005993A9
 CGTabardModelFrame__OnModelLoaded 005995D0 f end=0059966A
 CGTabardModelFrame__InitializeTabardColors 00599670 f end=005997B5
 CGTabardModelFrame_GetLowerEmblemTexture 00599B20 f end=00599DCD
+CGTabardModelFrame_GetUpperEmblemTexture 00599890 f end=00599B16

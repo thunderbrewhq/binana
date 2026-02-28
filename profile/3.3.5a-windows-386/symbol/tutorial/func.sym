@@ -4,3 +4,4 @@ CGTutorial__FlagTutorial 00530450 f end=00530503
 CGTutorial__ClearTutorials 00530510 f end=00530622
 CGTutorial__ResetTutorials 00530630 f end=005306F3
 CGTutorial__TriggerTutorial 00530840 f end=005308CD
+TutorialUnregisterScriptFunctions 005302E0 f end=005302FC

@@ -16,3 +16,4 @@ CGAchievementInfo__OnCriteriaDeleted 005B36F0 f end=005B37C0
 CGAchievementInfo__GetAchievement 005B37C0 f end=005B383A
 CGAchievementInfo__LoadTrackedAchievements 005B3840 f end=005B38D8
 CGAchievementInfo__InitializeGame 005B6DF0 f end=005B71DD
+AchievementInfoUnregisterScriptFunctions 005B0D30 f end=005B0D4F
