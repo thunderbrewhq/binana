@@ -2227,3 +2227,4 @@ TutorialRegisterScriptFunctions 005302B0 f end=005302D3
 LootInfoUnregisterScriptFunctions 00588E90 f end=00588EAF
 GMTicketInfoUnregisterScriptFunctions 005AC500 f end=005AC51C
 VoiceUnregisterScriptFunctions 007DB9E0 f end=007DB9FC
+CGTabardModelFrame_Save 005994C0 f end=005994F7

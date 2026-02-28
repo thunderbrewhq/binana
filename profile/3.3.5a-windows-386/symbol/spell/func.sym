@@ -123,3 +123,4 @@ SpellTableLookupAbility 00812410 f end=0081252A
 Spell_C_IsCastingInterruptedByCombat 008038F0 f end=00803A45
 Spell_C_ModifySpellValue 007FDB50 f end=007FDB97
 SpellUnregisterScriptFunctions 007FDDE0 f end=007FDDFC
+SpellMissingItemCallback 007FEA80 f end=007FEB4D

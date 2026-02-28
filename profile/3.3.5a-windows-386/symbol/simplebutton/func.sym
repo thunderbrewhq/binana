@@ -20,3 +20,4 @@ CSimpleButton_SetNormalTexture 00977C70 f end=00977C87 ; CSimpleButton_SetNormal
 CSimpleButton_SetHighlightTexture 00977D30 f end=00977ED1
 CSimpleButton_SetPushedTextOffset 00977F60 f end=00978040
 CSimpleButton_SetButtonState 00977280 f end=00977333
+StringToButtonState 00976FD0 f end=00977036

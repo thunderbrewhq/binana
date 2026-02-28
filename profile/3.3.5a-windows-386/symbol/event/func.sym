@@ -27,6 +27,7 @@ SynthesizePoll 0047DC20 f end=0047DC50
 SynthesizePaint 0047DC50 f end=0047DC8D
 EventForceIdleProcessing 0047DCA0 f end=0047DE09
 IEvtSchedulerDestroy 0047DEA0 f end=0047E117
+WaitMultiplePtr 007746B0 f end=00774714
 SynthesizeDestroy 0047E2F0 f end=0047E3C5 type="void __usercall func(EvtContext* context@<esi>)"
 GetNextContext 0047E5A0 f end=0047E5FA type="EvtContext* __usercall func@<eax>(uint32_t hThread@<edi>)"
 InitializeSchedulerThread 0047E910 f end=0047EA69

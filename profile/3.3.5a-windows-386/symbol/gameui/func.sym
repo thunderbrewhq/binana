@@ -165,3 +165,4 @@ CursorGrabVirtualItem 00616720 f end=006167DA
 UpdateModelForUI 00618110 f end=00618176
 GetPhysicalDamageClassMask 006337B0 f end=006337BE
 SaveAccountData 006B9050 f end=006B90D7
+MirrorTimerToName 00513E00 f end=00513E31

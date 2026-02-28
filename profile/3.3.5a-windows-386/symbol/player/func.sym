@@ -324,3 +324,4 @@ CGPlayer_C__SpellClick 006D2740 f end=006D27BA
 CGPlayer_C__EnableTaxi 006D62A0 f end=006D631A
 CGPlayer_C__GetCreatureTracking 006D7B70 f end=006D7BA0
 CGPlayer_C__TalkToSpiritGuide 006DB180 f end=006DB1B3
+ResurrectNameQueryCallback 006DBC60 f end=006DBCF4

@@ -76,3 +76,8 @@ CBLPFile__LockChain2 006AFFD0 f end=006B012E type="int32_t __thiscall func(CBLPF
 ProjectTex2dGetAddFadeTex 007E2C60 f end=007E2C73
 FillInSolidTexture 004B6920 f end=004B69D7
 TextureCreateBlob 004B8D70 f end=004B8E6E
+RequestImageDimensions 004B5BB0 f end=004B5C21
+GetTextureFormats 004B5FE0 f end=004B6159
+UpdateTgaTexture 004B7AA0 f end=004B7BA0
+PumpBlpTextureAsync 004B7BD0 f end=004B7E7C
+CreateTgaTexture 004B95B0 f end=004B975B

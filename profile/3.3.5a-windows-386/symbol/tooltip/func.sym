@@ -105,3 +105,5 @@ CGTooltip_SetLFGDungeonReward 00630A80 f end=00630B8F
 CGTooltip__SetMacro 00630D20 f end=00630FFC
 CGTooltip_SetAction 00631000 f end=00631561
 CGTooltip_SetHyperlinkCompareItem 00631B60 f end=00631D0E
+CGTooltip_SetSpell 006259E0 f end=00625B86
+CGTooltip_SetMerchantItem 0062ED70 f end=0062EE6E

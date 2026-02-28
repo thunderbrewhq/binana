@@ -41,3 +41,4 @@ CGQuestLog__ShutdownGame 005E6F30 f end=005E6F93
 CGQuestLog__EnterWorld 005E6FA0 f end=005E7013
 CGQuestLog__UpdateQuestPOIFromUserServer 005E70D0 f end=005E716C
 CGQuestLog__InitializeGame 005E71A0 f end=005E72A4
+QuestQueryCounterCallback 005DE8F0 f end=005DE92B

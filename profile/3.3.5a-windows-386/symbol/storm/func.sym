@@ -50,6 +50,8 @@ SErrSetLogTitleCallback 00771900 f end=00771957
 SErrRegisterHandler 00771B80 f end=00771C15
 SErrDestroy 00771C90 f end=00771D04
 SErrDisplayError 00771D10 f end=00772656
+GetErrorString 00770F70 f end=00770F9E
+CanBreakToDebugger 00771070 f end=007710A5
 SErrCatchUnhandledExceptions 00772B20 f end=00772B2C
 SCmdRegisterArgList 00773590 f end=007737C2 type="int32_t __stdcall func(ARGLIST* listptr, uint32_t numargs)"
 SCmdProcess 00773890 f end=00773986 type="int32_t __stdcall func(char* cmdline, int32_t skipprogname, CMDEXTRACALLBACK extracallback, CMDERRORCALLBACK errorcallback)"
@@ -78,6 +80,7 @@ SLogFlush 00775500 f end=00775544
 SLogInitialize 007755F0 f end=00775630
 CreateFileDirectory 00775630 f end=00775736 type="int32_t __usercall func@<eax>(char* path@<eax>)"
 OpenLogFile 00775740 f end=007757D7
+PrependDefaultDir 007753E0 f end=00775495
 SLogCreate 007757E0 f end=007758D6 type="int32_t __stdcall func(char* filename, uint32_t flags, HSLOG* log)"
 SLogDestroy 007758E0 f end=00775A89
 SLogVWrite 00775A90 f end=00775BA3

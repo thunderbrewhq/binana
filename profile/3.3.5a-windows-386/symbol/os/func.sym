@@ -55,3 +55,7 @@ OsClipboardPutString 008722A0 f end=008722BF
 IOsClipboardGetString 008726F0 f end=008727BB
 OsClipboardFreeString 008727C0 f end=008727DE
 IOsClipboardPutString 008727E0 f end=008728B8
+OsGetVersion 0086B2D0 f end=0086B429
+OsIMEGetClauseInfo 0086CDB0 f end=0086CF84
+OsIMEEnable 0086CF90 f end=0086CFE2
+OsIMEGetCandidates 0086D1D0 f end=0086D3F8

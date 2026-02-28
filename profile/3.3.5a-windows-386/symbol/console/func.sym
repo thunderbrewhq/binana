@@ -84,3 +84,14 @@ CComand_CharacterAmbient 0077F750 f end=0077F7D1
 CComand_SetShadow 00780E20 f end=00780F41
 ConsoleCommandInvalidPtrCheck 0086B5A0 f end=0086B5F5
 ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
+AddToHistory 0076B3B0 f end=0076B3E5
+ConvertBool 00772B30 f end=00772B91
+ConvertNumber 00772BA0 f end=00772C15
+ConvertString 00772C20 f end=00772C85
+GenerateError 00772C90 f end=00772D9E
+ProcessFile 00772DA0 f end=00772E63
+PerformConversion 00772F60 f end=007730D6
+ProcessCurrentFlag 007730E0 f end=0077315A
+ProcessFlags 00773160 f end=007732EF
+ProcessToken 007732F0 f end=007733D0
+ProcessString 007737D0 f end=00773862

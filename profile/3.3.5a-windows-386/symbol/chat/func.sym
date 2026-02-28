@@ -94,3 +94,4 @@ SendToCombatText 0074D4F0 f end=0074D516
 SendToCombatText 0074D520 f end=0074D546
 GetCombatLogObjectName 0074D750 f end=0074D912
 RebuildDisplayChannelList 00504840 f end=00504E0B
+StringToChatType 004FBB20 f end=004FBC5C
