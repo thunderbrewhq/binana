@@ -10,6 +10,7 @@ on:
       - "profile/**"
     branches:
       - artifacts
+      - master
 
 jobs:
   build:
