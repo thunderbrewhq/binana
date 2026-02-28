@@ -1,5 +1,5 @@
+CMissileCollision__ComputeUnitRank 006FC4A0 f end=006FC76A
 CMissileCollision__Free 006FC950 f end=006FC9AE
+CMissileCollision__MaybeAddUnitToSystem 006FCA40 f end=006FCA98
 CMissileCollision__MaybeAddUnitToWorkingList 006FCAA0 f end=006FCB52
 CMissileCollision__Init 006FCB60 f end=006FCD5E
-CMissileCollision__ComputeUnitRank 006FC4A0 f end=006FC76A
-CMissileCollision__MaybeAddUnitToSystem 006FCA40 f end=006FCA98

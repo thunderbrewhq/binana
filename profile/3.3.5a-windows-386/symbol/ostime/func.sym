@@ -1,5 +1,6 @@
 OsTimeManager__Calibrate 0086AB30 f end=0086AD4A type="TimingMethod __thiscall func(OsTimeManager* this)"
 OsTimeGetTestError 0086AD50 f end=0086AD59
+OsTimeGetTimingMethod 0086AD60 f end=0086AD69
 OsTimeGetTimingMethodName 0086AD70 f end=0086ADB8 type="char* __stdcall func(TimingMethod method)"
 OsTimeManager__Snapshot 0086ADC0 f end=0086AE20 type="uint64_t __thiscall func(OsTimeManager* this)"
 OsGetAsyncTimeMs 0086AE20 f end=0086AE2B
@@ -10,4 +11,3 @@ OsTimeManagerCreate 0086AF20 f end=0086AF58
 OsTimeManagerDestroy 0086AF60 f end=0086AF83
 OsTimeStartup 0086D430 f end=0086D439 type="void __stdcall func(TimingMethod timingMethod)"
 OsTimeShutdown 0086D440 f end=0086D445
-OsTimeGetTimingMethod 0086AD60 f end=0086AD69

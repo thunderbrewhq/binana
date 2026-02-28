@@ -1,5 +1,7 @@
 C44Matrix__constructor 00407F40 f end=00407F76 type="C44Matrix* __thiscall func(C44Matrix* this)"
 C44Matrix__operator_assign_C44Matrix 00407F80 f end=00407FEA type="float __thiscall func(C44Matrix* this, C44Matrix* rhs)"
+C3Vector__Subtract 004829A0 f end=004829C6
+CImVector__Set 0048BD20 f end=0048BDDA
 CRndSeed__SetSeed 004C1510 f end=004C1584
 C44Matrix__Determinant 004C1930 f type="float __thiscall func(C44Matrix* this)"
 C44Matrix__Translate 004C1B30 f type="void __thiscall func(C44Matrix* this, C3Vector* move)"
@@ -9,6 +11,7 @@ C44Matrix__constructor 004C1DE0 f type="C44Matrix* __thiscall func(C44Matrix* th
 operator_multiply_C44Matrix_C44Matrix 004C1F00 f type="C44Matrix* __stdcall func(C44Matrix* __return_ptr result, C44Matrix* l, C44Matrix* r)"
 operator_multiply_C44Matrix_float 004C2120 f type="C44Matrix* __stdcall func(C44Matrix* __return_ptr result, C44Matrix* l, float a)"
 operator_multiply_C3Vector_C44Matrix 004C21B0 f type="C3Vector* __stdcall func(C3Vector* __return_ptr result, C3Vector* l, C44Matrix* a)"
+NTempest__TransformPoint 004C2300 f end=004C236F
 C44Matrix__operator_assignment_multiply_C44Matrix 004C2370 f type="void __thiscall func(C44Matrix* this, C44Matrix* a)"
 C44Matrix__Transpose 004C23D0 f
 C44Matrix__Adjoint 004C2440 f type="C44Matrix* __thiscall func(C44Matrix* this, C44Matrix* __return_ptr result)" ; C44Matrix C44Matrix::Adjoint()
@@ -21,44 +24,41 @@ C44Matrix__RotateAroundY 004C3340 f
 C44Matrix__RotateAroundZ 004C3380 f
 C44Matrix__Rotate 004C33C0 f
 C3Vector__Normalize 004C3420 f type="void __thiscall func(C3Vector* this)"
+C44Matrix__Rotation 004C3460 f end=004C3593
 C3Vector__Normalize 004C3600 f type="void __thiscall func(C3Vector* this)"
 TSGrowableArray_C3Vector__SetCount 004C4B80 f end=004C4C75 type="void __thiscall func(TSGrowableArray_C3Vector* this, uint32_t count)"
+C2Vector__C2Vector 004C4DF0 f end=004C4E06
+C33Matrix__constructor 004C5100 f end=004C51AB
 C33Matrix__operator_assign_C33Matrix 004C51B0 f
+C33Matrix__Scale 004C5230 f end=004C5280
 C33Matrix__Rotation 004C5550 f end=004C55A2
+C33Matrix__ToEulerAnglesZYX 004C5630 f end=004C56D0
 C33Matrix__FromEulerAnglesZYX 004C56D0 f end=004C581A
+C33Matrix__Rotation 004C5820 f end=004C5932
+C33Matrix__Rotate 004C5940 f end=004C5984
 TSGrowableArray_C2Vector__SetCount 0057FDD0 f end=0057FE93 type="void __thiscall func(TSGrowableArray_C2Vector* this, uint32_t count)"
 TSGrowableArray_CImVector__SetCount 00616CA0 f end=00616D07 type="void __thiscall func(TSGrowableArray_CImVector* this, uint32_t count)"
 C44Matrix__Inverse 006A43A0 f type="C44Matrix* __thiscall func(C44Matrix *this, C44Matrix* __return_ptr result)"
+CFacet__Set 007912C0 f end=00791378
 C4Quaternion__Slerp 00982460 f end=0098256C ; C4Quaternion::Slerp(float, C4Quaternion const&, C4Quaternion const&)
 C4Quaternion__Nlerp 00982630 f end=0098269F ; C4Quaternion::Nlerp(float, C4Quaternion const&, C4Quaternion const&)
-C3Vector__constructor 00982970 f end=009829AD ; C3Vector::C3Vector(CImVector const&)
-C4Vector__constructor 00984C90 f end=00984CDC ; C4Vector::C4Vector(CImVector const&)
-C2Vector__C2Vector 004C4DF0 f end=004C4E06
 C3Vector__C3Vector 00982950 f end=0098296C
+C3Vector__constructor 00982970 f end=009829AD ; C3Vector::C3Vector(CImVector const&)
 C3Vector__MajorAxis 009829B0 f end=009829ED
-C3Vector__Subtract 004829A0 f end=004829C6
-NTempest__Intersect 009830D0 f end=0098348D
-NTempest__Intersect 00982FB0 f end=009830CB
-NTempest__Intersect 009836B0 f end=009838C7
-NTempest__DistanceFromPolygonEdge 00984DB0 f end=00984E41
-NTempest__TransformPoint 004C2300 f end=004C236F
-NTempest__Intersect2d 00982F80 f end=00982FA4
-NTempest__DistanceFromPolygon 00984E50 f end=00984F56
-NTempest__Intersect 00982F30 f end=00982F73
-C3Ray__FromStartEnd 00985200 f end=00985298
-CFacet__Set 007912C0 f end=00791378
-CFacet__constructor 00983940 f end=0098398F
-CAaBox__Bounding 00984930 f end=00984C6D
-CAaBox__Transform 00984860 f end=00984926
-CFacet__Set 009838D0 f end=0098393E
-CImVector__Set 0048BD20 f end=0048BDDA
-CImVector__operator_assign 009851A0 f end=009851FB
-C44Matrix__Rotation 004C3460 f end=004C3593
-C33Matrix__Rotation 004C5820 f end=004C5932
-C33Matrix__Rotate 004C5940 f end=004C5984
-NTempest__Intersect 00983490 f end=009836A9
-NTempest__DistanceSquared 00984CE0 f end=00984DA9
-C33Matrix__Scale 004C5230 f end=004C5280
-C33Matrix__ToEulerAnglesZYX 004C5630 f end=004C56D0
-C33Matrix__constructor 004C5100 f end=004C51AB
 C3Vector__MinorAxis 009829F0 f end=00982A33
+NTempest__Intersect 00982F30 f end=00982F73
+NTempest__Intersect2d 00982F80 f end=00982FA4
+NTempest__Intersect 00982FB0 f end=009830CB
+NTempest__Intersect 009830D0 f end=0098348D
+NTempest__Intersect 00983490 f end=009836A9
+NTempest__Intersect 009836B0 f end=009838C7
+CFacet__Set 009838D0 f end=0098393E
+CFacet__constructor 00983940 f end=0098398F
+CAaBox__Transform 00984860 f end=00984926
+CAaBox__Bounding 00984930 f end=00984C6D
+C4Vector__constructor 00984C90 f end=00984CDC ; C4Vector::C4Vector(CImVector const&)
+NTempest__DistanceSquared 00984CE0 f end=00984DA9
+NTempest__DistanceFromPolygonEdge 00984DB0 f end=00984E41
+NTempest__DistanceFromPolygon 00984E50 f end=00984F56
+CImVector__operator_assign 009851A0 f end=009851FB
+C3Ray__FromStartEnd 00985200 f end=00985298

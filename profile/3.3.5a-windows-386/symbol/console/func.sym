@@ -1,4 +1,5 @@
 AddResolution 0054EFE0 f end=0054F046 type="void __fastcall func(TSGrowableArray_C2iVector* this, C2iVector* resolution)"
+SetupFormats 0054F050 f end=0054F1AA
 GenerateNodeString 00763680 f end=0076372C type="void __stdcall func(CONSOLELINE* node)"
 SetInputString 00763730 f end=007637CD type="void __stdcall func(char* text)" ; UC
 ReserveInputSpace 007637D0 f end=0076382B type="void __fastcall func(CONSOLELINE* lineptr, uint32_t chars)"
@@ -14,6 +15,7 @@ CONSOLELINE__Down 00763B90 f end=00763BD6 type="void __thiscall func(CONSOLELINE
 OnKeyUp 00763BE0 f end=00763C0A type="int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)"
 GetConsoleMessage 00763C20 f end=00763C26
 SetConsoleMessage 00763C30 f end=00763C3D
+ConsoleSetHotKey 00763C40 f end=00763C4D
 ConsolePostClose 00763C50 f end=00763C5D type="void __stdcall func()"
 EventCloseCallback 00763D60 f end=00763D71 type="int32_t __stdcall func(void* param)"
 DrawBackground 00763DF0 f end=00764039 type="void __stdcall func()"
@@ -28,42 +30,52 @@ PasteInInputLine 00764800 f end=00764985 type="void __stdcall func(char* charact
 OnChar 00764990 f end=00764A03 type="int32_t __stdcall func(EVENT_DATA_CHAR* data, void* param)"
 OnMouseDown 00764A10 f end=00764B88 type="int32_t __stdcall func(EVENT_DATA_MOUSE* data, void* param)"
 OnKeyDownRepeat 00764B90 f end=00764E4F type="int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)"
+ConsoleCommand_DefaultSettings 00764F30 f end=0076509E
+ConsoleCommand_FontSize 007650A0 f end=0076516E
+ConsoleCommand_Font 00765170 f end=00765270
 ConsoleWrite 00765270 f end=00765359 type="void __stdcall func(char* str, COLOR_T color)"
 ConsoleWriteA 00765360 f end=007653AD type="void __stdcall func(char* format, COLOR_T color, ...)"
 ConsolePrintf 007653B0 f end=00765400 type="void __stdcall func(char* str,...)"
+ConsoleCommand_CurrentSettings 00765400 f end=0076549E
+ConsoleCommand_FontColor 007654A0 f end=0076566E
+ConsoleCommand_BufferSize 00765670 f end=007656F7
+ConsoleCommand_AppendLogToFile 00765880 f end=00765892
 ConsoleCommandExecute 007658A0 f end=007659BF type="void __stdcall func(char* commandLine, int32_t addToHistory)"
 OnIdle 007659C0 f end=00765AE5 type="int32_t __stdcall func(EVENT_DATA_IDLE* data,void* param)"
 OnKeyDown 00765AF0 f end=00765FB2 type="int32_t __stdcall func(EVENT_DATA_KEY* data, void* param)"
 RegisterHandlers 00765FF0 f end=007660C2 type="void __stdcall func()"
 ConsoleScreenInitialize 00766140 f end=00766295 type="void __stdcall func()"
+ConsoleScreenDestroy 007662A0 f end=0076631B
 CVarSaveFile 00767100 f end=0076719C type="void __stdcall func()"
 CvarListCommandHandler 00767220 f end=0076734A ; 00005410
 ConsoleCommand_Quit 00768410 f end=0076841B type="int32_t __stdcall func(char* command, char* arguments)"
 ConsoleCommandHistory 00768440 f end=0076845B type="char* __stdcall func(uint32_t index)"
+ConsoleCommand_Help 00768660 f end=007688FD
+ParseCommand 00768900 f end=007689D6
 ConsoleCommandUnregister 007689E0 f end=00768A19 type="void __stdcall func(char* command)"
 ConsoleCommandComplete 00768A20 f end=00768AD6 type="int32_t __stdcall func(char* partial, char** previous, int32_t direction)"
+ConsoleCommandWriteHelp 00768AE0 f end=00768AF6
 ConsoleCommandRegister 00769100 f end=007691B3 type="int32_t __stdcall func(char* command, COMMANDHANDLER handler, CATEGORY category, char* helpText)"
+ConsoleCommandInitialize 007691C0 f end=00769213
 ConsoleAccessGetEnabled 00769230 f end=00769236 type="int32_t __stdcall func()"
 ConsoleGxOverride 007696D0 f end=00769804 type="void __stdcall func(char* list)"
 UpdateGxCVars 007698B0 f end=0076994A ; 00005400
 SetGxCVars 00769950 f end=00769BF5 type="void __stdcall func(CGxFormat* format)" ; SetGxCVars(CGxFormat const&)
 ConsoleDeviceStereoInitialize 00769C90 f end=00769CF9
 ConsoleGetHardware 00769D00 f end=00769D0F type="Hardware* __stdcall func()"
+ConsoleDeviceHardwareChanged 00769D10 f end=00769D2B
 ConsoleDeviceDestroy 00769D40 f end=00769D7D ; 00005400
 ValidateFormatMonitor 00769E10 f end=00769FF0
 CCGxRestart 00769FF0 f end=0076A12E
 RegisterGxCVars 0076A630 f end=0076AAA8
 ConsoleDeviceInitialize 0076AB80 f end=0076B287 type="int32_t __stdcall func(char* title, int32_t multithreaded)"
+AddLineToExecFile 0076B2A0 f end=0076B3A9
 ConsoleDetectSetDefaults 0076B3F0 f type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; void SetDefaults(DefaultSettings&, const Hardware&)
 ConsoleDetectSetDefaultsFormat 0076B520 f end=0076B53D type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; ConsoleDetectSetDefaultsFormat(DefaultSettings&, const Hardware&)
 SetVideoIdx 0076B540 f end=0076B594 type="void __stdcall func(Hardware* hardware@<edi>)"
 PrintStartupError 0076B5A0 f end=0076B616 type="void __usercall __noreturn func(int32_t messageID, const char* fallbackMessage)"
 ConsoleDetectSaveHardware 0076B620 f end=0076B7DB
 ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9 type="void __stdcall func(Hardware* hardware, bool* hwChanged)" ; ConsoleDetectDetectHardware(Hardware&, bool&)
-ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
-ConsoleScreenDestroy 007662A0 f end=0076631B
-ConsoleCommandWriteHelp 00768AE0 f end=00768AF6
-ConsoleCommandInitialize 007691C0 f end=00769213
 CConsole__PrintError 00772A80 f end=00772A99
 CComand_MaxLOD 0077F600 f end=0077F64C
 CComand_WaterRipples 0077F690 f end=0077F6B0
@@ -71,16 +83,4 @@ CComand_DetailDoodadAlpha 0077F700 f end=0077F749
 CComand_CharacterAmbient 0077F750 f end=0077F7D1
 CComand_SetShadow 00780E20 f end=00780F41
 ConsoleCommandInvalidPtrCheck 0086B5A0 f end=0086B5F5
-ConsoleCommand_Help 00768660 f end=007688FD
-ParseCommand 00768900 f end=007689D6
-AddLineToExecFile 0076B2A0 f end=0076B3A9
-SetupFormats 0054F050 f end=0054F1AA
-ConsoleCommand_DefaultSettings 00764F30 f end=0076509E
-ConsoleCommand_FontSize 007650A0 f end=0076516E
-ConsoleCommand_Font 00765170 f end=00765270
-ConsoleCommand_CurrentSettings 00765400 f end=0076549E
-ConsoleCommand_FontColor 007654A0 f end=0076566E
-ConsoleCommand_BufferSize 00765670 f end=007656F7
-ConsoleCommand_AppendLogToFile 00765880 f end=00765892
-ConsoleDeviceHardwareChanged 00769D10 f end=00769D2B
-ConsoleSetHotKey 00763C40 f end=00763C4D
+ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"

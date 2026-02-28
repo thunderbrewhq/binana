@@ -7572,7 +7572,6 @@ static import_symbols() {
 	set_name(0x00788C10, "PacketList__Packet__RainDrop__destructor");
 	set_name(0x00788D50, "PacketList__Packet__RainPatter__destructor");
 	set_name(0x00788E90, "PacketList__Packet__SnowFlake__destructor");
-	set_name(0x00788FD0, "PacketList__Packet__SandGrain__destructor");
 	set_name(0x00789110, "Rain__destructor");
 	set_name(0x007891B0, "Rain__RenderPatterPacketsSW");
 	set_name(0x007898A0, "Rain__RenderDropPacketsSW");
@@ -10470,7 +10469,7 @@ static import_symbols() {
 	set_name(0x00B6B860, "CCharacterComponent__s_characterFacialHairStylesList");
 	set_name(0x00B6B864, "CCharacterComponent__s_chrVarArray");
 	set_name(0x00B6B874, "CCharacterComponent__s_chrVarArrayLength");
-	set_name(0x00B6B878, "CCharacterComponent__m_activePlayerComponet");
+	set_name(0x00B6B878, "CCharacterComponent__m_activePlayerComponent");
 	set_name(0x00B6B9C8, "CCharacterComponent__s_thread");
 	set_name(0x00B6B9CC, "CCharacterComponent__s_threadBeginEvent");
 	set_name(0x00B6BA50, "s_loadCount");

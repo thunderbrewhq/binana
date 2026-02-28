@@ -18,6 +18,8 @@ GxAdapterID 006811F0 f end=006811F9 ; GxAdapterID(unsigned short&, unsigned shor
 GxAdapterInfer 00681200 f end=00681209
 GxAdapterMonitorModes 00681210 f end=00681219 type="int32_t __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
 GxAdapterDesktopMode 00681220 f type="int32_t __stdcall func(CGxMonitorMode* mode)"
+GxVertexSize 00681230 f end=0068123F
+GxVertexAttribOffset 00681240 f end=0068125E
 GxDevCreate 00681290 f end=00681301
 GxSceneClear 006813B0 f end=006813CD
 GxTexCopy 006814D0 f end=00681524
@@ -33,5 +35,3 @@ GxXformSetViewport 00681F60 f end=00682124 type="void __stdcall func(float minX,
 GxScenePresent 00682A00 f end=00682A33
 GxDevDestroy 00682B80 f end=00682C35
 CGxMonitorModeSort 00689E80 f type="int32_t __stdcall func(void* a, void* b)"
-GxVertexSize 00681230 f end=0068123F
-GxVertexAttribOffset 00681240 f end=0068125E

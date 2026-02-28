@@ -6,6 +6,6 @@ CGDuelInfo__OnDuelCountdown 005CFA50 f end=005CFA86
 CGDuelInfo__OnDuelComplete 005CFA90 f end=005CFB18
 CGDuelInfo__OnDuelWinner 005CFB20 f end=005CFBC2
 CGDuelInfo__AcceptDuel 005CFBD0 f end=005CFC4B
+CGDuelInfo__CancelDuel 005CFC50 f end=005CFCCB
 CGDuelInfo__OnDuelRequested 005CFCD0 f end=005CFDAD
 CGDuelInfo__InitializeGame 005CFDD0 f end=005CFE3A
-CGDuelInfo__CancelDuel 005CFC50 f end=005CFCCB

@@ -1,6 +1,7 @@
-CMapObjDef__constructor 007B4350 f end=007B44FE
+CMapObjDef__GetFacets 007A4EE0 f end=007A50BB
 CMapObjDef__TestAABox 007B3990 f end=007B39AB
 CMapObjDef__GetGroundType 007B39B0 f end=007B3A08
+CMapObjDef__constructor 007B4350 f end=007B44FE
 CMapObjDef__destructor 007B4500 f end=007B45E6
 CMapObjDef__SetSequence 007B45F0 f end=007B463E
 CMapObjDef__SetSequenceFinishedCallback 007B4640 f end=007B4692
@@ -14,4 +15,3 @@ CMapObjDef__LinkDoodadDef 007B6800 f end=007B6892
 CMapObjDef__MoveDoodadDefs 007B68A0 f end=007B69B4
 CMapObjDef__SetDoodadEmittersIgnoresDistance 007B69C0 f end=007B6AF9
 CMapObjDef__SetDoodadsEnabled 007B6F60 f end=007B70A8
-CMapObjDef__GetFacets 007A4EE0 f end=007A50BB

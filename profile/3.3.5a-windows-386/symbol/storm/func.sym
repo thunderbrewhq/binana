@@ -10,14 +10,19 @@ SStrChrR 0076E720 f end=0076E756
 SStrCmp 0076E760 f end=0076E77B
 SStrCmpI 0076E780 f end=0076E79B
 SStrCmpUTF8I 0076EA40 f end=0076EAA3
+SStrSortUTF8I 0076EC80 f end=0076ED1B
 SStrCopy 0076ED20 f end=0076ED98
 SStrLen 0076EE30 f end=0076EE5E type="int32_t __stdcall func(char* str)"
+SStrLenUTF8 0076EEA0 f end=0076EED9
+SStrLenUTF8 0076EEE0 f end=0076EF28
+SStrAdvanceCharsUTF8 0076EF30 f end=0076EF6D
 SStrPack 0076EF70 f end=0076F001
 ISStrVPrintf 0076F010 f end=0076F063
 SStrPrintf 0076F070 f end=0076F09E type="int32_t __stdcall func(char* dest, size_t maxchars, char* format, ...)"
 SStrVPrintf 0076F0A0 f end=0076F0CE
 SStrToInt 0076F0D0 f end=0076F136
 SStrToUnsigned 0076F140 f end=0076F189
+SStrToUnsigned 0076F190 f end=0076F1D5
 SStrTokenize 0076F1E0 f end=0076F331
 SStrHash 0076F340 f end=0076F418
 SStrHashHT 0076F640 f end=0076F6B9
@@ -28,14 +33,10 @@ SStrCmp 0076F770 f end=0076F7D2
 SStrStrUTF8I 0076F7E0 f end=0076F852
 SStrDupA 0076F9E0 f end=0076FA35
 SStrToFloat 0076FB80 f end=0076FDA9
-SStrLenUTF8 0076EEA0 f end=0076EED9
-SStrSortUTF8I 0076EC80 f end=0076ED1B
-SStrLenUTF8 0076EEE0 f end=0076EF28
-SStrAdvanceCharsUTF8 0076EF30 f end=0076EF6D
-SStrToUnsigned 0076F190 f end=0076F1D5
 SGetCurrentThreadPriority 0076FDD0 f end=0076FDDE
 SSetCurrentThreadPriority 0076FDE0 f end=0076FDF8
 SSetCurrentProcessAffinityMask 0076FE00 f end=0076FE18
+SCreateProcess 00770290 f end=00770397
 ILoadValue 007703A0 f end=00770483 type="int32_t __usercall func@<eax>(void* parentKey, char* subKeyName@<eax>, char* valuename, uint32_t* datatype, uint8_t* buffer@<ebx>, uint32_t bytes@<edi>, uint32_t* bytesread@<ecx>)"
 InternalLoadEntry 00770490 f end=00770575 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags, uint32_t* datatype, void* buffer, uint32_t bytes, uint32_t* bytesread@<esi>)"
 InternalSaveEntry 00770580 f end=00770719 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags@<ebx>, uint32_t datatype, const void* buffer, uint32_t bytes@<edi>)"
@@ -60,10 +61,12 @@ SCritSect__constructor 00774620 f end=0077462E type="SCritSect* __thiscall func(
 SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect *this)"
 SCritSect__Enter 00774640 f end=00774648 type="void __thiscall func(SCritSect *this)"
 SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *this)"
+SSyncObject__Valid 00774680 f end=00774688
 SSyncObject__Wait 00774690 f end=007746A4
 SEvent__Set 00774720 f end=0077472A
 SEvent__Reset 00774730 f end=0077473A
 SThread__Create 00774740 f end=0077476F
+SSyncObject__destructor 007748E0 f end=007748F8
 PathGetRootChars 007750D0 f end=00775138
 FlushLog 00775140 f end=0077518E
 LockLog 00775190 f end=00775250
@@ -123,7 +126,4 @@ PowMod 0077C720 f end=0077C97B type="void __stdcall func(BigBuffer* a, BigBuffer
 SBigPowMod 0077C980 f end=0077C9A4 type="void __stdcall func(BigData* a, BigData* b, BigData* c, BigData* d)"
 TSList__LinkToHead 007B5020 f end=007B50AB ; 00005410
 TSList__LinkToTail 0086E200 f end=0086E25F ; 00005410
-SCreateProcess 00770290 f end=00770397
-SSyncObject__Valid 00774680 f end=00774688
-SSyncObject__destructor 007748E0 f end=007748F8
 SSyncObject__constructor 00921A00 f end=00921A09

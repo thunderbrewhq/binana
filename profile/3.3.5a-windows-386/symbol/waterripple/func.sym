@@ -1,4 +1,4 @@
-CWaterRipple__Initizalize 0079E1A0 f end=0079E2C3
 CWaterRipple__Init 0079CF40 f end=0079D17B
 CWaterRipple__Create 0079D180 f end=0079D21F
+CWaterRipple__Initizalize 0079E1A0 f end=0079E2C3
 CWaterRipple__Destroy 0079E460 f end=0079E46A

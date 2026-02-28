@@ -1,7 +1,7 @@
 CGxDeviceD3d__IUnloadD3dLib 0068E140 f end=0068E174 type="void __stdcall func(HINSTANCE* hInstance, LPDIRECT3D9* d3dLib)" ; void CGxDeviceD3d::IUnloadD3dLib(HINSTANCE& d3dLib, LPDIRECT3D9& d3d)
 CGxDeviceD3d__ICreateD3dIB 0068E180 f end=0068E1E8 type="LPDIRECT3DINDEXBUFFER9 __thiscall func(CGxDeviceD3d* this, EGxPoolUsage usage, uint32_t size)" ; LPDIRECT3DINDEXBUFFER9 CGxDeviceD3d::ICreateD3dIB(EGxPoolUsage usage, uint32_t size)
 CGxDeviceD3d__IReleaseD3dPool 0068E1F0 f end=0068E247 type="void __thiscall func(CGxDeviceD3d* this, CGxPool* pool)"
-CGxDeviceD3d__ISetPresentParms 0068E250 f end=0068E448 type="void __thiscall func(CGxDeviceD3d* this, D3DPRESENT_PARAMETERS* d3dpp, CGxFormat* format)" ; void CGxDeviceD3d::ISetPresentParms(D3DPRESENT_PARAMETERS& d3dpp, const CGxFormat& format) 
+CGxDeviceD3d__ISetPresentParms 0068E250 f end=0068E448 type="void __thiscall func(CGxDeviceD3d* this, D3DPRESENT_PARAMETERS* d3dpp, CGxFormat* format)" ; void CGxDeviceD3d::ISetPresentParms(D3DPRESENT_PARAMETERS& d3dpp, const CGxFormat& format)
 CGxDeviceD3d__DeviceEvictResources 0068E450 f end=0068E49E type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__DeviceSetBaseMipLevel 0068E4A0 f end=0068E4BD type="void __thiscall func(CGxDeviceD3d* this, uint32_t level)"
 CGxDeviceD3d__DeviceSetGamma 0068E4C0 f end=0068E507 type="void __thiscall func(CGxDeviceD3d* this, float gamma)"
@@ -92,7 +92,7 @@ CGxDeviceD3d__IRsSendToHw 006A4C30 f end=006A5499 type="void __thiscall func(CGx
 CGxDeviceD3d__ICreateD3dVertexDecl 006A5540 f end=006A5677 type="LPDIRECT3DVERTEXDECLARATION9 __thiscall func(CGxDeviceD3d* this, D3DVERTEXELEMENT9* elements, uint32_t count)"
 CGxDeviceD3d__IReleaseD3dVertexDecl 006A5680 f end=006A56F2 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IStateSyncVertexPtrs 006A5700 f end=006A5934 type="void __thiscall func(CGxDeviceD3d* this)"
-CGxDeviceD3d__IStateSync 006A5940 f end=006A59f5 type="void __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d__IStateSync 006A5940 f end=006A59F5 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__CapsWindowSize 006A5A00 f end=006A5A25 type="void __thiscall func(CGxDeviceD3d* this, CRect* dst)"
 CGxDeviceD3d__IXformSetWorld 006A5A30 f end=006A5A92 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IXformSetTex 006A5AA0 f end=006A5C65 type="void __thiscall func(CGxDeviceD3d* this, uint32_t tmu)"

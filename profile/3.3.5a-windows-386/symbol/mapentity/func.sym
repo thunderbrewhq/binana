@@ -1,6 +1,6 @@
-CMapEntity__SelectLights 007C1730 f end=007C1ACA ; CMapEntity::SelectLights(CM2Lighting*)
-CMapEntity__constructor 007A0FE0 f end=007A1098
 CMapEntity__QueryInteriorLighting 007A0D60 f end=007A0EC8
+CMapEntity__constructor 007A0FE0 f end=007A1098
+CMapEntity__destructor 007A10A0 f end=007A1117
 CMapEntity__QueryInterior 007A1480 f end=007A14F7
 CMapEntity__QueryMapObjZoneName 007A1500 f end=007A15A1
 CMapEntity__QueryMapObjSubzoneName 007A15B0 f end=007A1640
@@ -12,4 +12,4 @@ CMapEntity__QueryMapObjMatrix 007A1980 f end=007A1A26
 CMapEntity__UpdateMapObjLiquid 007A1A30 f end=007A1B0A
 CMapEntity__QueryLiquidSounds 007A1B10 f end=007A1BB3
 CMapEntity__Tick 007A1E90 f end=007A2064
-CMapEntity__destructor 007A10A0 f end=007A1117
+CMapEntity__SelectLights 007C1730 f end=007C1ACA ; CMapEntity::SelectLights(CM2Lighting*)

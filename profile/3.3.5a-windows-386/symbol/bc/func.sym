@@ -1,5 +1,6 @@
 operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
 operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
+System_SFile2__FindFile 00424780 f end=00424B0B
 Blizzard__Mopaq__SFileGetLastError 00426A30 f end=00426A36
 Blizzard__Debug__ErrorStackAsText 004270D0 f end=004270E6
 Blizzard__File__Close 004270F0 f end=0042712F
@@ -32,16 +33,20 @@ Blizzard__Streaming__IsStreamingMode 00428010 f end=0042802B
 Blizzard__File__IsDirectory 004281D0 f end=004281EB
 Blizzard__File__IsFile 004281F0 f end=0042820B
 Blizzard__File__SimpleGlob 00428210 f end=004282F2 type="bool __stdcall func(char* name, char* pattern)"
+Blizzard__Lock__MutexEnter 004283B0 f end=004283BF
+Blizzard__Lock__MutexLeave 004283C0 f end=004283CF
 Blizzard__String__FindFilename 00428500 f end=00428538 type="char* __stdcall func(char* str)"
 Blizzard__String__FirstPathSeparator 00428640 f end=00428668
 Blizzard__String__Copy 00428670 f end=004286BB type="int32_t __stdcall func(char* dst, const char* src, int32_t count)"
 Blizzard__String__Append 004286C0 f end=00428721 type="int32_t __stdcall func(char* dst, char* src, int32_t count)"
+Blizzard__String__Length 004287E0 f end=004287FD
 Blizzard__Unicode__ConvertUTF16to8 00428940 f end=00428AFC type="int32_t __stdcall func(uint8_t* dst, uint32_t dstmaxchars, const uint16_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
 Blizzard__Unicode__ConvertUTF8to16 00428B00 f end=00428C94 type="int32_t __stdcall func(uint16_t* dst, uint32_t dstmaxchars, const uint8_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
 Blizzard__Time__FromFileTime 00428F00 f end=00428F56 type="Blizzard__Time__Timestamp __stdcall func(uint64_t fileTime)"
 Blizzard__String__QuickFormat__QuickFormat 00429790 f end=004297C5
 Blizzard__String__MakeUnivPath 0042A9B0 f end=0042A9FB type="void __stdcall func(char* src, char* dst, int32_t count)"
 Blizzard__String__MakeBackslashPath 0042AA00 f end=0042AA4B type="void __stdcall func(char* src, char* dst, int32_t count)"
+System_Mopaq__Cache__CleanCacheEntry 0042B4D0 f end=0042B5B5
 Blizzard__Mopaq__SFileUnloadFile 0042BF00 f end=0042BF1C
 Blizzard__File__CreateDirectory 0042CEA0 f end=0042CEE9
 HoistAll 0042CFB0 f end=0042D43E
@@ -51,6 +56,7 @@ Blizzard__String__MakeConsistentPath 0042E420 f end=0042E4AA
 Blizzard__String__ForceTrailingSeparator 0042E4B0 f end=0042E522 type="void __stdcall func(char* dst, int32_t count, char separator)"
 Blizzard__String__FindPathSeparatorReverse 0042E630 f end=0042E663
 Blizzard__String__Format 0042E670 f end=0042E6A1
+System_Mopaq__Cache__GetCachedBlock 004308C0 f end=00430A43
 System_File__GetRootChars 004325C0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 Blizzard__String__JoinPath 00433510 f end=0043356B type="void __stdcall func(char* a1, int32_t a2, char* a3, char* a4)" ; Blizzard::String::JoinPath(char*, int, char const*, char const*)
 System_File__FromNativeName 00433590 f end=00433650 type="void __stdcall func(uint8_t *buffer, uint32_t buffersize, const char *str)"
@@ -61,6 +67,9 @@ System_File__MakeAbsolutePath 00435790 f end=00435889 type="int32_t __stdcall fu
 System_File__Move 00435890 f end=004359B6 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Delete 004359C0 f end=00435A57 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_Time__Init 00435C80 f end=00435D74
+System_Log__DefaultPreamble 004383E0 f end=004384AD
+System_Log__DefaultDayHeader 004384B0 f end=00438555
+System_Log__Init 0043A070 f end=0043A26F
 Blizzard__File__RemoveDirectoryAndContents__Internal__Callback 0044FA10 f end=0044FB29 type="bool __stdcall func(Blizzard__File__ProcessDirParms* dirwalkparms)" ; Blizzard::File::RemoveDirectoryAndContents(char const*, bool)::Internal::Callback(Blizzard::File::ProcessDirParms const&)
 Blizzard__File__RemoveDirectoryAndContents 004518C0 f end=004519A7
 Blizzard__Streaming__FileManifest__GetIsStreamingTrial 00453480 f end=00453507 type="bool __stdcall func()"
@@ -92,7 +101,8 @@ System_File__SetAttributes 00455BA0 f end=00455C9A type="int32_t __stdcall func(
 System_File__SetPos 00455CA0 f end=00455D13 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Write 00455D20 f end=00455D3E type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__read_locked 00457820 f end=00457904
-System_File__write_locked 00457910 f end=004579f4
+System_File__write_locked 00457910 f end=004579F4
+System_SComp__Compress 00458080 f end=0045856F
 System_File__detect_io_mode 00459910 f end=00459998
 Blizzard__Mopaq__SFileReadFile 0045A4B0 f end=0045A607
 Blizzard__Mopaq__SFileLoadFile 0045B5A0 f end=0045B69E
@@ -123,13 +133,3 @@ OsNetAddrToStr 00466670 f end=004666C3
 OsBuildFontFilePath 0086BD80 f end=0086BDA3
 OsSecureRandom 0086D640 f end=0086D6A1
 OsNetAddrToStr 0086DC50 f end=0086DC8B
-Blizzard__Lock__MutexEnter 004283B0 f end=004283BF
-Blizzard__Lock__MutexLeave 004283C0 f end=004283CF
-Blizzard__String__Length 004287E0 f end=004287FD
-System_SFile2__FindFile 00424780 f end=00424B0B
-System_Mopaq__Cache__CleanCacheEntry 0042B4D0 f end=0042B5B5
-System_Mopaq__Cache__GetCachedBlock 004308C0 f end=00430A43
-System_Log__DefaultPreamble 004383E0 f end=004384AD
-System_Log__DefaultDayHeader 004384B0 f end=00438555
-System_Log__Init 0043A070 f end=0043A26F
-System_SComp__Compress 00458080 f end=0045856F

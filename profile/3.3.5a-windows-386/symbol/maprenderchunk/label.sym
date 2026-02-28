@@ -1,7 +1,7 @@
-CMapRenderChunk__s_renderLayersFunc 00D25098 l
-CMapRenderChunk__s_pnEstimateVertex 00D1D060 l
-CMapRenderChunk__s_pnEstimateIndex 00D1D05C l
-CMapRenderChunk__s_gxVertexPool 00D1D068 l
-CMapRenderChunk__s_gxIndexPool 00D1D064 l
 CMapRenderChunk__s_bPoolsDirty 00D1D058 l
+CMapRenderChunk__s_pnEstimateIndex 00D1D05C l
+CMapRenderChunk__s_pnEstimateVertex 00D1D060 l
+CMapRenderChunk__s_gxIndexPool 00D1D064 l
+CMapRenderChunk__s_gxVertexPool 00D1D068 l
 CMapRenderChunk__s_gxBufVertexFormat 00D1D06C l
+CMapRenderChunk__s_renderLayersFunc 00D25098 l

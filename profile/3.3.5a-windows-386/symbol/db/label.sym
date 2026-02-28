@@ -23,6 +23,7 @@ g_charSectionsDB 00AD332C l type="WowClientDB_CharSectionsRec" ; 0xFF
 g_charStartOutfitDB 00AD3350 l type="WowClientDB_CharStartOutfitRec" ; 0x100
 g_charTitlesDB 00AD3374 l type="WowClientDB_CharTitlesRec" ; 0x101
 g_characterFacialHairStylesDB 00AD3398 l type="WowClientDB_CharacterFacialHairStylesRec" ; 0x102
+g_characterFacialHairStylesDB 00AD33A0 l
 g_chatChannelsDB 00AD33BC l type="WowClientDB_ChatChannelsRec" ; 0x103
 g_chatProfanityDB 00AD33E0 l type="WowClientDB_ChatProfanityRec" ; 0x104
 g_chrClassesDB 00AD3404 l type="WowClientDB_ChrClassesRec" ; 0x105
@@ -236,4 +237,3 @@ g_lightIntBandDB 00AF49BC l type="WowClientDB_LightIntBandRec" ; 0x15D
 g_lightFloatBandDB 00AF49E0 l type="WowClientDB_LightFloatBandRec" ; 0x15C
 g_lightParamsDB 00AF4A04 l type="WowClientDB_LightParamsRec" ; 0x15E
 g_lightDB 00AF4A28 l type="WowClientDB_LightRec" ; 0x15B
-g_characterFacialHairStylesDB 00AD33A0 l

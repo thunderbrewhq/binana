@@ -1,11 +1,11 @@
 CSimpleRegion__Hide 00482C20 f type="void __thiscall func(CSimpleRegion* this)"
 CSimpleRegion__SetVertexColor 00487A10 f type="void __thiscall func(CSimpleRegion* this, CImVector* color)"
 CSimpleRegion__GetVertexColor 00487AB0 f type="void __thiscall func(CSimpleRegion* this, CImVector* color)"
+CSimpleRegion__SetVertexGradient 00487B00 f end=00487BE2
 CSimpleRegion__HideThis 00487BF0 f type="void __thiscall func(CSimpleRegion* this)"
 CSimpleRegion__ShowThis 00487C40 f type="void __thiscall func(CSimpleRegion* this)"
 CSimpleRegion__OnRegionChanged 00487CA0 f type="void __thiscall func(CSimpleRegion* this)"
 CSimpleRegion__OnColorChanged 00487D70 f type="void __thiscall func(CSimpleRegion* this, bool a2)"
+CSimpleRegion__SetFrame 00487ED0 f end=00487FF9
 CSimpleRegion__constructor 004880E0 f type="void __thiscall func(CSimpleRegion* this, CSimpleFrame* frame, uint32_t drawLayer, int32_t show)"
 CSimpleRegion__destructor 004881D0 f type="void __thiscall func(CSimpleRegion* this)"
-CSimpleRegion__SetFrame 00487ED0 f end=00487FF9
-CSimpleRegion__SetVertexGradient 00487B00 f end=00487BE2

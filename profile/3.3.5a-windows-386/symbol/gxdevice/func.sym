@@ -1,6 +1,7 @@
 CGxDevice__RsPush 00409670 f end=004096CC type="void __thiscall func(CGxDevice* this)"
 CGxDevice__CapsAspectRatio 0050F7C0 f end=0050F824
 CGxDevice__Caps 00532AF0 f end=00532AF7 type="CGxCaps* __thiscall func(CGxDevice* this)" ; public: class CGxCaps const & __thiscall CGxDevice::Caps(void)const
+GxTexSetWrap 00681450 f end=0068146C
 CGxDevice__InitLights 00682C50 f end=00682CA8 type="void __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceCreate 00682CB0 f end=00682CCB type="void __thiscall func(CGxDevice* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
 CGxDevice__DeviceCreate 00682CD0 f end=00682CF0 type="void __thiscall func(CGxDevice* this, uintptr_t hwnd, CGxFormat* format)"
@@ -24,6 +25,8 @@ CGxDevice__MasterEnable 00683100 f end=00683121 type="int32_t __thiscall func(CG
 CGxDevice__BufData 00683130 f end=00683142 type="int32_t __thiscall func(CGxDevice* this, CGxBuf* buf, void *data, uint32_t size, uint32_t offset)"
 CGxDevice__BufLock 00683150 f end=00683171 type="uint8_t* __thiscall func(CGxDevice* this, CGxBuf* buf)"
 CGxDevice__BufUnlock 00683180 f end=006831A0 type="int32_t __thiscall func(CGxDevice* this, CGxBuf* buf, uint32_t size)"
+CGxDevice__BuffSizeSet 006831A0 f end=006831C0
+CGxDevice__TexIsReadyNow 006831C0 f end=006831E7
 CGxDevice__ShaderConstantsClear 006833A0 f end=006833DD type="void __thiscall func(CGxDevice* this)"
 CGxDevice__ShaderConstantsSet 006833E0 f end=00683554 type="void __thiscall func(CGxDevice* this, EGxShTarget target, uint32_t index, float* constants, uint32_t count)"
 CGxDevice__ShaderConstantsLock 00683560 f end=00683577 type="uint8_t* __thiscall func(CGxDevice* this, EGxShTarget target)"
@@ -84,10 +87,12 @@ CGxDevice__IRsForceUpdate_EGxRenderState 006859E0 f end=00685A65 type="void __th
 CGxDevice__IRsForceUpdate 00685A70 f end=00685B4E type="void __thiscall func(CGxDevice* this)" ; CGxDevice::IRsForceUpdate()
 CGxDevice__IRsSync 00685B50 f end=00685BFE type="void __thiscall func(CGxDevice* this, int32_t force)"
 CGxDevice__TexCreate 00685C60 f end=00685CCB type="void __thiscall func(CGxDevice* this, EGxTexTarget target, uint32_t width, uint32_t height, uint32_t depth, EGxTexFormat format, EGxTexFormat dataFormat, CGxTexFlags flags, void* userArg, void (*userFunc)(EGxTexCommand, uint32_t, uint32_t, uint32_t, uint32_t, void*, uint32_t*, void**), char* name, CGxTex** texId)"
+CGxDevice__TexSetWrap 00685D40 f end=00685DBF
 CGxDevice__MasterEnableSet 00685EB0 f end=00685F33 type="void __thiscall func(CGxDevice* this, EGxMasterEnables state, int32_t enable)"
 CGxDevice__RsSet_pointer_to_void 00685F50 f end=00685FB0 type="void __thiscall func(CGxDevice* this, EGxRenderState which, void* value)"
 CGxDevice__RsPop 00685FB0 f end=00686116 type="void __thiscall func(CGxDevice* this)"
 CGxDevice__IRsInit 00686120 f end=006865AD type="void __thiscall func(CGxDevice* this)"
+CGxDevice__RsInit 006865B0 f end=0068765C
 CGxDevice__BufCreate 00687660 f end=006876C9 type="CGxBuf* __thiscall func(CGxDevice* this, CGxPool* pool, uint32_t itemSize, uint32_t itemCount, uint32_t index)"
 CGxDevice__PoolCreate 006876D0 f end=0068773F type="CGxPool* __thiscall func(CGxDevice* this, EGxPoolTarget target, EGxPoolUsage usage, uint32_t size, EGxPoolHintBits hint, char* name)"
 CGxDevice__QueryCreate 006877C0 f end=00687811 type="void __thiscall func(CGxDevice* this, CGxQuery** query, EGxQueryType queryType)"
@@ -114,8 +119,3 @@ CGxDevice__AdapterMonitorModes 0068A4C0 f end=0068A589 type="void __stdcall func
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
 CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF type="void __thiscall func(CGxDevice* this, CGxTex* texId, uint32_t* width, uint32_t* height, uint32_t* baseMip, uint32_t* mipCount)"
-CGxDevice__TexIsReadyNow 006831C0 f end=006831E7
-CGxDevice__TexSetWrap 00685D40 f end=00685DBF
-GxTexSetWrap 00681450 f end=0068146C
-CGxDevice__BuffSizeSet 006831A0 f end=006831C0
-CGxDevice__RsInit 006865B0 f end=0068765C

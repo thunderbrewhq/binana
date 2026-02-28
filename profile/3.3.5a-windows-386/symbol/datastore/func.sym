@@ -4,6 +4,7 @@ CDataStore__IsRead 004010D0 f ; CDataStore::IsRead() const
 CDataStore__Reset 004010E0 f ; CDataStore::Reset()
 CDataStore__Finalize 00401130 f ; CDataStore::Finalize()
 CDataStore__destructor 004038A0 f ; CDataStore::~CDataStore()
+TransferAbortedHandler 00403910 f end=00403B2A
 CDataStore__GetBufferParams 0047ADE0 f ; CDataStore::GetBufferParams(void const**, unsigned int*, unsigned int*)
 CDataStore__DetachBuffer 0047AE10 f ; CDataStore::DetachBuffer(void**, unsigned int*, unsigned int*)
 CDataStore__InternalDestroy 0047AE50 f ; virtual void __thiscall CDataStore::InternalDestroy(unsigned char * &,unsigned int &,unsigned int &)
@@ -25,4 +26,3 @@ CDataStore__Get_float 0047B440 f end=0047B471 ; CDataStore::Get(float&)
 CDataStore__GetString 0047B480 f end=0047B560 ; CDataStore::GetString(char*, unsigned int)
 CDataStore__GetArray 0047B560 f end=0047B5ED ; CDataStore::GetArray(unsigned char*, unsigned int)
 CDataStore__GetDataInSitu 0047B6B0 f end=0047B6E9 ; CDataStore::GetDataInSitu(void*&, unsigned int)
-TransferAbortedHandler 00403910 f end=00403B2A

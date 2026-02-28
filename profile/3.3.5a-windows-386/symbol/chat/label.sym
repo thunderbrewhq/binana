@@ -1,6 +1,6 @@
 CGChat__s_activeDisplayChannelName 00B743E0 l
 CGChat__s_displayChannels 00B74468 l
+CGChat__m_chatHistory 00B75A60 l
 CGChat__m_whisperDstHistory 00BCEB60 l
 CGChat__m_whisperSrcHistory 00BCEF60 l
-CGChat__m_chatHistory 00B75A60 l
 CGChat__m_currentChatIndex 00BCEFF4 l

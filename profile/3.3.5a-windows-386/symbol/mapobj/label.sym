@@ -1,7 +1,7 @@
 CMapObjRenderGroupExterior_ptr 00CFBEC4 l
 CMapObjRenderGroupInterior_ptr 00CFBECC l
-CMapObj__sMinimapTag 00D1C418 l
-CMapObj__occluderHeap 00D1C40C l
-CMapObj__bPoolsDirty 00D1C410 l
 CMapObj__gRenderCallback 00D1BED8 l
 CMapObj__gRenderUserParam 00D1BEDC l
+CMapObj__occluderHeap 00D1C40C l
+CMapObj__bPoolsDirty 00D1C410 l
+CMapObj__sMinimapTag 00D1C418 l

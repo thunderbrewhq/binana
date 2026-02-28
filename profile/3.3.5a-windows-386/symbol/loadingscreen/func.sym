@@ -2,5 +2,5 @@ LoadingScreenSetTip 00407E30 f end=00407E3D
 LoadingScreenSetScreenTipForRaceData 00407E40 f end=00407E88
 LoadingScreenSetTransparent 00407EA0 f end=00407EE3
 LoadingScreenDisable 00409550 f end=0040961F
-LoadingScreenEnable 0040AB70 f end=0040AD50
 LoadingScreenShutdown 00409620 f end=00409670
+LoadingScreenEnable 0040AB70 f end=0040AD50

@@ -1,3 +1,4 @@
+CM2Lighting__Initialize 007B0F10 f end=007B0FF8
 CM2Lighting__Initialize 00834900 f end=0083493E ; CM2Lighting::Initialize(CM2Scene*, CAaSphere const&)
 CM2Lighting__SetFog 00834940 f end=0083498C ; CM2Lighting::SetFog(C3Vector const&, float, float)
 CM2Lighting__SetFog 00834990 f end=008349DB ; CM2Lighting::SetFog(C3Vector const&, float, float, float)
@@ -9,4 +10,3 @@ CM2Lighting__CameraSpace 008350A0 f end=00835275 ; CM2Lighting::CameraSpace()
 CM2Lighting__SetupSunlight 00835280 f end=008353C3 ; CM2Lighting::SetupSunlight()
 CM2Lighting__SetupGxLights 008353D0 f end=008355CC ; CM2Lighting::SetupGxLights(C3Vector const*)
 CM2Lighting__GetSunLight 008355D0 f end=00835638 ; CM2Lighting::GetSunLight(C3Vector&, C3Vector&, C3Vector&, C3Vector&)
-CM2Lighting__Initialize 007B0F10 f end=007B0FF8

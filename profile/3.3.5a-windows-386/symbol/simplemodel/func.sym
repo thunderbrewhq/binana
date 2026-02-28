@@ -4,19 +4,22 @@ CSimpleModel__ModelLoaded 0095F4D0 f end=0095F4E6 type="void __stdcall func(CM2M
 CSimpleModel__SetCamera 0095F4F0 f end=0095F537 type="void __thiscall func(CSimpleModel* this, HCAMERA camera)"
 CSimpleModel__SetCameraByID 0095F540 f end=0095F5BD type="void __thiscall func(CSimpleModel* this, uint32_t id)"
 CSimpleModel__SetLight 0095F5C0 f end=0095F5DB type="void __thiscall func(CSimpleModel* this, CM2Light* light)"
-CSimpleModel__SetSequence 0095F5E0 f end=0095f60A type="void __thiscall func(CSimpleModel* this, uint32_t sequence)"
+CSimpleModel__SetSequence 0095F5E0 f end=0095F60A type="void __thiscall func(CSimpleModel* this, uint32_t sequence)"
 CSimpleModel__SetSequenceTime 0095F610 f end=0095F641 type="int32_t __thiscall func(CSimpleModel* this, uint32_t sequence, int32_t time)"
 CSimpleModel__constructor 0095F680 f end=0095F7C5 type="void __thiscall func(CSimpleModel* this)"
 CSimpleModel__scalar_deleting_destructor 0095F7D0 f end=0095F7FB type="void __thiscall func(CSimpleModel* this, uint32_t __flags)"
 CSimpleModel__LoadXML 0095F800 f end=0095F989 type="void __thiscall func(CSimpleModel* this, XMLNode* node, CStatus* status)"
 CSimpleModel__SetModel 0095F990 f end=0095F9E8 type="void __thiscall func(CSimpleModel* this, char* sourcefile)"
 CSimpleModel__SetCameraByIndex 0095F9F0 f end=0095FA94 type="void __thiscall func(CSimpleModel* this, uint32_t index)"
+CSimpleModel__GetWidth 0095FAA0 f end=0095FAEC
+CSimpleModel__GetHeight 0095FAF0 f end=0095FB3C
 CSimpleModel__UpdateModel 0095FBA0 f end=0095FC21 type="void __thiscall func(CSimpleModel* this)"
 CSimpleModel__RenderModel 0095FC30 f end=00960070 type="void __stdcall func(void* arg)"
 CSimpleModel__LightingCallback 00960070 f end=009600D3 type="void __stdcall func(CM2Model* model, CM2Lighting* lighting, void* userArg)"
 CSimpleModel__SetModel 009600E0 f end=0096018C type="void __thiscall func(CSimpleModel* this, CM2Model* model)"
 CSimpleModel__OnModelLoaded 00960190 f end=00960237 type="void __thiscall func(CSimpleModel* this, CM2Model* model)"
 CSimpleModel__OnLayerUpdate 00960280 f end=0096031D type="void __thiscall func(CSimpleModel* this, float elapsedSec)"
+CSimpleModel__ReplaceTexture 00960320 f end=009603C1
 CSimpleModel__RegisterScriptMethods 009603D0 f end=009603F0 type="void __stdcall func(lua_State* L)"
 CSimpleModel_SetModel 00960530 f end=009605CD type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_GetModel 009605D0 f end=0096061D type="int32_t __stdcall func(lua_State* L)"
@@ -43,7 +46,4 @@ CSimpleModel_SetFogFar 009613A0 f end=00961418 type="int32_t __stdcall func(lua_
 CSimpleModel_GetFogFar 00961420 f end=00961463 type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_ClearFog 00961470 f end=009614A7 type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_SetGlow 009614B0 f end=00961534 type="int32_t __stdcall func(lua_State* L)"
-CSimpleModel__GetWidth 0095FAA0 f end=0095FAEC
-CSimpleModel__GetHeight 0095FAF0 f end=0095FB3C
-CSimpleModel__ReplaceTexture 00960320 f end=009603C1
 CSimpleModel__CreateScriptMetaTable 00961540 f end=00961559

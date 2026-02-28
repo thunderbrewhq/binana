@@ -1,5 +1,5 @@
-CScriptObject__GetScriptObjectByName 0048B5F0 f end=0048B671
-CScriptObject__RegisterScriptMethods 004A8190 f end=004A81A8
 CScriptObject__CreateName 0048B540 f end=0048B5EB
+CScriptObject__GetScriptObjectByName 0048B5F0 f end=0048B671
 CScriptObject__constructor 0048B680 f end=0048B6A9
 CScriptObject__SetName 0048B6C0 f end=0048B727
+CScriptObject__RegisterScriptMethods 004A8190 f end=004A81A8

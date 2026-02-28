@@ -1,2 +1,2 @@
-CSimpleHyperlinkedFrame__constructor 00978900 f end=0097894F ; CSimpleHyperlinkedFrame::CSimpleHyperlinkedFrame(CSimpleFrame*)
 CSimpleHyperlinkedFrame__GetScriptByName 00978610 f end=009786A7
+CSimpleHyperlinkedFrame__constructor 00978900 f end=0097894F ; CSimpleHyperlinkedFrame::CSimpleHyperlinkedFrame(CSimpleFrame*)

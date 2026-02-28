@@ -1,25 +1,25 @@
-CSimpleFontString__GetFontHeight 00482290 f end=004822F4
-CSimpleFontString__SetText 00483910 f end=00483A3D type="void __thiscall func(CSimpleFontString* this, char* a1, int32_t a2)"
-CSimpleFontString__constructor 00485240 f end=0048536F
-CSimpleFontString__UpdateString 00486B20 f end=00486E2A
-CSimpleFontString_SetFormattedText 0048D800 f end=0048D88B type="int32_t __stdcall func(lua_State* L)"
-CSimpleFontString__SetJustificationOffset 00483C40 f end=00483CC8
-CSimpleFontString__OnColorChanged 004856F0 f end=00485850
+CSimpleFontString__SetTextLength 004818F0 f end=0048195B
 CSimpleFontString__SetAlphaGradient 00482230 f end=00482270
+CSimpleFontString__GetFontHeight 00482290 f end=004822F4
+CSimpleFontString__GetTextWidth 00482380 f end=0048244B
 CSimpleFontString__GetNumCharsWithinWidth 00482510 f end=004825D8
 CSimpleFontString__GetNumCharsWithinWidthFromEnd 004825E0 f end=004826A8
 CSimpleFontString__AddAnimTranslation 00482720 f end=00482764
-CSimpleFontString__GetDisplayText 00483A40 f end=00483C3C
-CSimpleFontString__GetTextWidth 00482380 f end=0048244B
 CSimpleFontString__SetFont 00483750 f end=0048388A
+CSimpleFontString__SetText 00483910 f end=00483A3D type="void __thiscall func(CSimpleFontString* this, char* a1, int32_t a2)"
+CSimpleFontString__GetDisplayText 00483A40 f end=00483C3C
+CSimpleFontString__SetJustificationOffset 00483C40 f end=00483CC8
 CSimpleFontString__AddShadow 00483CD0 f end=00483DCF
 CSimpleFontString__GetStringWidth 00483E80 f end=00483F2C
-CSimpleFontString__LoadXML 004873E0 f end=0048798A
-CSimpleFontString__SetTextLength 004818F0 f end=0048195B
 CSimpleFontString__GetStringHeight 00483FA0 f end=0048407A
+CSimpleFontString__constructor 00485240 f end=0048536F
+CSimpleFontString__OnColorChanged 004856F0 f end=00485850
+CSimpleFontString__UpdateString 00486B20 f end=00486E2A
+CSimpleFontString__LoadXML 004873E0 f end=0048798A
 ApplyTranslationAnim 0048B800 f end=0048B81A
+CSimpleFontString_SetDrawLayer 0048BF30 f end=0048BFE7
 CSimpleFontString_SetFontObject 0048D380 f end=0048D50E
+CSimpleFontString_SetText 0048D780 f end=0048D7F5
+CSimpleFontString_SetFormattedText 0048D800 f end=0048D88B type="int32_t __stdcall func(lua_State* L)"
 CSimpleFontString_SetTextHeight 0048DDB0 f end=0048DE8A
 TextBlockGetTextExtent 004BDCD0 f end=004BDD78
-CSimpleFontString_SetText 0048D780 f end=0048D7F5
-CSimpleFontString_SetDrawLayer 0048BF30 f end=0048BFE7
