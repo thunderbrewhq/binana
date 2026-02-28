@@ -1,4 +1,4 @@
-package symfile
+package symbols
 
 import (
 	"fmt"
@@ -69,7 +69,7 @@ func parse_attributes(attribute_columns []string) (attributes map[string]string,
 	return
 }
 
-func (entry *Entry) Parse(line string) (err error) {
+func (symbol *Symbol) Parse(line string) (err error) {
 	// trim extraneous whitespace
 	line = strings.Trim(line, " \t")
 
@@ -89,7 +89,7 @@ func (entry *Entry) Parse(line string) (err error) {
 	// get name of symbol
 	name_column := columns[0]
 	if name_column == "" {
-		return fmt.Errorf("symfile: (*entry).Parse: entry has invalid name '%s", name_column)
+		return fmt.Errorf("symbols: (*Symbol).Parse: entry has invalid name '%s", name_column)
 	}
 
 	start_address, err = strconv.ParseUint(columns[1], 16, 64)
@@ -99,10 +99,10 @@ func (entry *Entry) Parse(line string) (err error) {
 
 	kind_column := columns[2]
 	if len(kind_column) != 1 {
-		return fmt.Errorf("symfile: (*entry).Parse: entry has invalid kind")
+		return fmt.Errorf("symbols: (*Symbol).Parse: entry has invalid kind")
 	}
 
-	kind := EntryKind(kind_column[0])
+	kind := SymbolKind(kind_column[0])
 
 	if !slices.Contains(valid_kinds, kind) {
 		return fmt.Errorf("symfile: (*entry).Parse: entry has invalid kind")
@@ -122,10 +122,10 @@ func (entry *Entry) Parse(line string) (err error) {
 	}
 
 	// Start to build entry
-	entry.Name = name_column
-	entry.StartAddress = start_address
-	entry.Kind = kind
-	entry.Comment = comment_text
+	symbol.Name = name_column
+	symbol.StartAddress = start_address
+	symbol.Kind = kind
+	symbol.Comment = comment_text
 
 	// build attributes
 	if num_semantic_columns > 3 {
@@ -138,11 +138,11 @@ func (entry *Entry) Parse(line string) (err error) {
 		}
 
 		if data_type, found := attributes["type"]; found {
-			entry.DataType = data_type
+			symbol.DataType = data_type
 		}
 
 		if end_address, found := attributes["end"]; found {
-			entry.EndAddress, err = strconv.ParseUint(end_address, 16, 64)
+			symbol.EndAddress, err = strconv.ParseUint(end_address, 16, 64)
 			if err != nil {
 				return
 			}

@@ -1,3 +1,5 @@
 jest
 .vscode
 bin
+artifacts
+profile/*/symbol/main.sym

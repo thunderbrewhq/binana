@@ -6,16 +6,18 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/thunderbrewhq/binana/go/symfile"
+	"github.com/thunderbrewhq/binana/go/symbols"
 )
 
 type Profile struct {
-	Info        Info
-	Directory   string
-	SymbolTable *symfile.InMemoryTable
+	loaded             bool
+	Info               Info
+	Directory          string
+	ArtifactsDirectory string
+	Symbols            symbols.Table
 }
 
-func Open(profile_directory string) (profile *Profile, err error) {
+func (profile *Profile) Open(profile_directory, artifacts_directory string) (err error) {
 	var dir fs.FileInfo
 	dir, err = os.Stat(profile_directory)
 	if err != nil {
@@ -27,31 +29,23 @@ func Open(profile_directory string) (profile *Profile, err error) {
 		return
 	}
 
-	fmt.Println("Opening profile", profile_directory)
+	fmt.Println("opening profile", profile_directory)
 
-	profile = new(Profile)
+	profile.Symbols.Init()
+	profile.Directory = profile_directory
+	profile.ArtifactsDirectory = artifacts_directory
 
+	// read profile meta info
 	if err = read_info(filepath.Join(profile_directory, "info.json"), &profile.Info); err != nil {
 		return
 	}
 
-	profile.Directory = profile_directory
-
-	path_to_symbols_file := filepath.Join(profile_directory, "symbol", "main.sym")
-	var symbols_file *os.File
-	symbols_file, err = os.Open(path_to_symbols_file)
-	if err != nil {
+	// read symbols directory
+	if err = profile.Symbols.Load(filepath.Join(profile_directory, "symbol")); err != nil {
 		return
 	}
 
-	profile.SymbolTable = new(symfile.InMemoryTable)
+	profile.loaded = true
 
-	if err = symfile.Load(profile.SymbolTable, symbols_file); err != nil {
-		return
-	}
-
-	symbols_file.Close()
-
-	//
 	return
 }

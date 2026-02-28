@@ -2,6 +2,7 @@ package profile
 
 import (
 	"fmt"
+	"os"
 	"path/filepath"
 	"slices"
 	"sort"
@@ -98,7 +99,7 @@ loop:
 }
 
 // parses the C headers and generates a matching x64dbg types.json file
-func (profile *Profile) generate_x64dbg_types() (err error) {
+func compile_x64dbg_types(profile *Profile) (err error) {
 	// parse C headers
 	var cc_config cc.Config
 	cc_config.ABI, err = cc.NewABI("windows", profile.Info.Arch)
@@ -231,7 +232,11 @@ func (profile *Profile) generate_x64dbg_types() (err error) {
 		x64_types.Structs = append(x64_types.Structs, x64_struct)
 	}
 
-	types_file_path := filepath.Join(profile.Directory, "x64dbg", "types.json")
+	dd_path := filepath.Join(profile.ArtifactsDirectory, "x64dbg")
+	if err = os.MkdirAll(dd_path, 0755); err != nil {
+		return
+	}
+	types_file_path := filepath.Join(dd_path, "types.json")
 
 	err = x64dbg.SortTypes(&x64_types)
 	if err != nil {

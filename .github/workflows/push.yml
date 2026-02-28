@@ -1,0 +1,42 @@
+name: Push
+
+on:
+  push:
+    paths:
+      - "Makefile"
+      - "go.mod"
+      - "go.sum"
+      - "go/**"
+      - "profile/**"
+    branches:
+      - artifacts
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version:
+            "stable" # Uses the latest stable Go version
+
+      # checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v6
+      
+      # build binana tool
+      - name: Make tool
+        run: make dependencies
+      
+      # run binana tool
+      - name: Make artifacts
+        run: make artifacts
+
+      # upload artifacts
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifacts
+          path: artifacts/
