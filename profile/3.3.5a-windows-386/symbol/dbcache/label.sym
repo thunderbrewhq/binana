@@ -1,7 +1,6 @@
+g_creatureDBCache 00C5D690 l
 g_gameObjectDBCache 00C5D718 l
-g_arenaTeamCache 00C5DD78 l
-g_danceCache 00C5DE00 l
-g_wardenCache 00C5DCF0 l
+g_itemDBCache 00C5D828 l
 g_npcTextDBCache 00C5D8B0 l
 g_nameDBCache 00C5D938 l
 g_guildInfoCache 00C5D9C0 l
@@ -10,5 +9,6 @@ g_pageTextCache 00C5DAD0 l
 g_petNameCache 00C5DB58 l
 g_petitionCache 00C5DBE0 l
 g_itemTextDBCache 00C5DC68 l
-g_creatureDBCache 00C5D690 l
-g_itemDBCache 00C5D828 l
+g_wardenCache 00C5DCF0 l
+g_arenaTeamCache 00C5DD78 l
+g_danceCache 00C5DE00 l

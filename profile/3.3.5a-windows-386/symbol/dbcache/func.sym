@@ -1,7 +1,6 @@
-DBCache__NPCText__GetRecord 0067D0D0 f end=0067D26C
-ReceiveCreature 00635190 f end=006351AA
 LoadDBCaches 00635060 f end=006350F6
 DBCache_Idle 00635100 f end=0063518C
+ReceiveCreature 00635190 f end=006351AA
 ReceiveGameObject 006351B0 f end=006351CA
 ReceiveMultipleItems 006351F0 f end=0063520A
 ReceiveNPCText 00635210 f end=0063522A
@@ -131,6 +130,7 @@ DBCache__GameObjectStats_C__Load 0067C0E0 f end=0067C3D1
 DBCache__ItemStats_C__GetRecord 0067CA30 f end=0067CBCC
 DBCache__ItemStats_C__AddItems 0067CBD0 f end=0067CDC4
 DBCache__ItemStats_C__Load 0067CDD0 f end=0067D0C1
+DBCache__NPCText__GetRecord 0067D0D0 f end=0067D26C
 DBCache__NPCText__AddItems 0067D270 f end=0067D464
 DBCache__NPCText__Load 0067D470 f end=0067D761
 DBCache__NameCache__GetRecord 0067D770 f end=0067D930
