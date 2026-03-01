@@ -3,6 +3,7 @@ package cmd
 import (
 	"github.com/spf13/cobra"
 	"github.com/thunderbrewhq/binana/go/app"
+	"github.com/thunderbrewhq/binana/go/app/cmd/root"
 	"github.com/thunderbrewhq/binana/go/app/profile"
 )
 
@@ -16,6 +17,7 @@ func init() {
 	f := lint_cmd.Flags()
 	f.Bool("bounds", false, "check for bad function boundaries")
 	f.Bool("constructors", false, "check for outdated class constructor names")
+	root.RootCmd.AddCommand(&lint_cmd)
 }
 
 func lint_func(cmd *cobra.Command, args []string) {

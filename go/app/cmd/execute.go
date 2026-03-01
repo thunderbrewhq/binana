@@ -1,12 +1,13 @@
 package cmd
 
 import (
+	_ "github.com/thunderbrewhq/binana/go/app/cmd/add_symbol"
 	_ "github.com/thunderbrewhq/binana/go/app/cmd/lint"
 	_ "github.com/thunderbrewhq/binana/go/app/cmd/make"
+	"github.com/thunderbrewhq/binana/go/app/cmd/root"
 	_ "github.com/thunderbrewhq/binana/go/app/cmd/tidy"
 
 	"github.com/thunderbrewhq/binana/go/app"
-	"github.com/thunderbrewhq/binana/go/app/cmd/root"
 )
 
 func Execute() {

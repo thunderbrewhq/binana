@@ -32,7 +32,6 @@ func parse_attributes(attribute_columns []string) (attributes map[string]string,
 				continue
 			}
 		}
-
 		key, value_start, found := strings.Cut(attribute_column, "=")
 		if !found {
 			err = fmt.Errorf("extraneous column: '%s'", attribute_column)
@@ -134,7 +133,84 @@ func (symbol *Symbol) Parse(line string) (err error) {
 		var attributes map[string]string
 		attributes, err = parse_attributes(extra_columns)
 		if err != nil {
-			return fmt.Errorf("symfile: (*entry).Parse: error parsing attribute: %w", err)
+			return fmt.Errorf("symbols: (*Symbol).Parse: error parsing attribute: %w", err)
+		}
+
+		if data_type, found := attributes["type"]; found {
+			symbol.DataType = data_type
+		}
+
+		if end_address, found := attributes["end"]; found {
+			symbol.EndAddress, err = strconv.ParseUint(end_address, 16, 64)
+			if err != nil {
+				return
+			}
+		}
+	}
+
+	return
+}
+
+func (symbol *Symbol) ParseCommandLine(columns []string) (err error) {
+	// validate
+	if len(columns) < min_columns {
+		// this line is discarded but not in error
+		return
+	}
+	var (
+		start_address uint64
+		comment_text  string
+	)
+
+	// get name of symbol
+	name_column := columns[0]
+	if name_column == "" {
+		return fmt.Errorf("symbols: (*Symbol).Parse: entry has invalid name '%s", name_column)
+	}
+
+	start_address, err = strconv.ParseUint(columns[1], 16, 64)
+	if err != nil {
+		return
+	}
+
+	kind_column := columns[2]
+	if len(kind_column) != 1 {
+		return fmt.Errorf("symbols: (*Symbol).Parse: entry has invalid kind")
+	}
+
+	kind := SymbolKind(kind_column[0])
+
+	if !slices.Contains(valid_kinds, kind) {
+		return fmt.Errorf("symfile: (*entry).Parse: entry has invalid kind")
+	}
+
+	// find index of comment column
+	index_of_comment := slices.Index(columns, ";")
+
+	var num_semantic_columns int
+
+	if index_of_comment != -1 {
+		num_semantic_columns = index_of_comment
+		comment_text_columns := columns[index_of_comment+1:]
+		comment_text = strings.Join(comment_text_columns, " ")
+	} else {
+		num_semantic_columns = len(columns)
+	}
+
+	// Start to build entry
+	symbol.Name = name_column
+	symbol.StartAddress = start_address
+	symbol.Kind = kind
+	symbol.Comment = comment_text
+
+	// build attributes
+	if num_semantic_columns > 3 {
+		extra_columns := columns[3:num_semantic_columns]
+
+		var attributes map[string]string
+		attributes, err = parse_attributes(extra_columns)
+		if err != nil {
+			return fmt.Errorf("symbols: (*Symbol).Parse: error parsing attribute: %w", err)
 		}
 
 		if data_type, found := attributes["type"]; found {

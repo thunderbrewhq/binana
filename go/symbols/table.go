@@ -100,6 +100,16 @@ func (table *Table) LoadFile(name string, file io.Reader) (err error) {
 	return
 }
 
+func (table *Table) Lookup(address uint64) (entry *TableEntry, err error) {
+	var ok bool
+	entry, ok = table.entries[address]
+	if !ok {
+		err = fmt.Errorf("%w: %08X", ErrSymbolNotFound, address)
+		return
+	}
+	return
+}
+
 func (table *Table) Insert(entry *TableEntry) (err error) {
 	conflicting_symbol, ok := table.entries[entry.Symbol.StartAddress]
 	if ok {
