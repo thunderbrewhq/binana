@@ -84,3 +84,5 @@ CSimpleFrame_CreateTexture 004A2010 f end=004A2236
 CSimpleFrame_StartSizing 004A0B10 f end=004A0C12
 CSimpleFrame_StopMovingOrSizing 004A0C20 f end=004A0C63
 CSimpleFrame_SetUserPlaced 004A0C70 f end=004A0CF1
+CSimpleFrame__OnLayerMouseUp 0048FCE0 f end=0048FDA1
+CSimpleFrame__UpdateDepth 00491740 f end=0049182F

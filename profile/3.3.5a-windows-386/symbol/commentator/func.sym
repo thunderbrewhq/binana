@@ -12,3 +12,4 @@ CGCommentator__SetPlayersInQueue 0056B9A0 f end=0056BACC
 CGCommentator__OnSkirmishPlayersInQueue 0056BB70 f end=0056BB97
 CGCommentator__OnReceiveMapInfo 0056BF30 f end=0056C14B
 CGCommentator__InitializeGame 0056C150 f end=0056C1B3
+CGCommentator__Init 0056BC80 f end=0056BD3D

@@ -325,3 +325,6 @@ CGPlayer_C__EnableTaxi 006D62A0 f end=006D631A
 CGPlayer_C__GetCreatureTracking 006D7B70 f end=006D7BA0
 CGPlayer_C__TalkToSpiritGuide 006DB180 f end=006DB1B3
 ResurrectNameQueryCallback 006DBC60 f end=006DBCF4
+CGPlayer_C__GetPVPToggleTimer 006DE7A0 f end=006DE7D4
+CGPlayer_C__QueueItemEnchantTime 006E61B0 f end=006E6250
+WorldTextGetAscendDistance 007E65E0 f end=007E65F8

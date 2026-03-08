@@ -25,3 +25,4 @@ CGLookingForGroup__ResortLFGLists 0055B700 f end=0055B768
 CGLookingForGroup__OnLFGList 0055B770 f end=0055BDB8
 CGLookingForGroup__OnLFGMessage 0055BDC0 f end=0055D145
 CGLookingForGroup__InitializeGame 0055D440 f end=0055D6A8
+CGLookingForGroup__ReadLFGParty 00553620 f end=005536A0

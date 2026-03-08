@@ -13,3 +13,4 @@ CGBarberShop__Reset 0052F7D0 f end=0052F8FF
 CGBarberShop__OnEnableBarberShop 0052F9B0 f end=0052FC7F
 CGBarberShop__SetNextBarberShopStyle 0052FC80 f end=0052FDB5
 CGBarberShop__InitializeGame 0052FE60 f end=0052FE8D
+CGBarberShop__EnterWorld 0052FE90 f end=005300CB

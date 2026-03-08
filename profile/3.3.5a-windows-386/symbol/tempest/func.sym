@@ -62,3 +62,6 @@ NTempest__DistanceFromPolygonEdge 00984DB0 f end=00984E41
 NTempest__DistanceFromPolygon 00984E50 f end=00984F56
 CImVector__operator_assign 009851A0 f end=009851FB
 C3Ray__FromStartEnd 00985200 f end=00985298
+C4Quaternion__constructor 00982340 f end=009823FB
+C4Quaternion__FromRotationMatrix 00982910 f end=00982943
+C34Matrix__RotateAroundZ 00984450 f end=009844D8

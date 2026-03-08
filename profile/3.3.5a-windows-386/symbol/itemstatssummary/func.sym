@@ -4,3 +4,4 @@ CGItemStatsSummary__operator_sub 0061DBC0 f end=0061DC2B
 CGItemStatsSummary__Create 006207A0 f end=0062094F
 CGItemStatsSummary__CreateFromTooltip 00630C70 f end=00630D19
 CGItemStatsSummary__GetItemComparison 00631590 f end=0063184D
+CGItemStatsSummary__Finalize 0061BA90 f end=0061BB20

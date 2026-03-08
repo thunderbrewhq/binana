@@ -4,3 +4,4 @@ CGGameObject_C_Type_MapObjTransport__UpdateState 007101C0 f end=00710233
 CGGameObject_C_Type_MapObjTransport__PostInitWithStats 00711B50 f end=00711CCE
 CGGameObject_C_Type_MapObjTransport__AddPassenger 00711CD0 f end=00711CD9
 CGGameObject_C_Type_MapObjTransport__UpdateMovement 007134A0 f end=00713787
+CGGameObject_C_Type_MapObjTransport__PostReenable 00710190 f end=007101B7

@@ -18,3 +18,4 @@ CSimpleTop__UnregisterForEvent 00495900 f end=004959EB
 CSimpleTop__EnableEvents 004959F0 f end=00495AF2 ; CSimpleTop::EnableEvents()
 CSimpleTop__constructor 00495EB0 f end=004960C6 ; CSimpleTop::CSimpleTop()
 CSimpleTop__ShowFrame 004960D0 f end=004960FA ; CSimpleTop::ShowFrame(CSimpleFrame*, int)
+CSimpleTop__DisableEvents 00495B00 f end=00495BC2

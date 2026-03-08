@@ -19,3 +19,4 @@ CSimpleSlider_GetValue 00971EB0 f end=00971EF3
 CSimpleSlider_SetValue 00971F00 f end=00971F74
 CSimpleSlider_SetValueStep 00971FD0 f end=0097204D
 CSimpleSlider__CreateScriptMetaTable 009720C0 f end=009720D9
+CSimpleSlider__OnLayerUpdate 0096C210 f end=0096C31E

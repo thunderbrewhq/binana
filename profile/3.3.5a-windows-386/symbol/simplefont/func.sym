@@ -10,3 +10,4 @@ CSimpleFont_SetJustifyH 004A4930 f end=004A49B7
 CSimpleFont_SetJustifyV 004A49C0 f end=004A4A47
 StringToJustify 00815080 f end=008150CA
 CSimpleFont_IsObjectType 004A4170 f end=004A421A
+CSimpleFont__RegisterScriptMethods 004A36F0 f end=004A3708

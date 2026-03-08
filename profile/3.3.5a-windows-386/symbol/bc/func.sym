@@ -133,3 +133,4 @@ OsNetAddrToStr 00466670 f end=004666C3
 OsBuildFontFilePath 0086BD80 f end=0086BDA3
 OsSecureRandom 0086D640 f end=0086D6A1
 OsNetAddrToStr 0086DC50 f end=0086DC8B
+OsNetAddrGetAddress 0086DC20 f end=0086DC4D

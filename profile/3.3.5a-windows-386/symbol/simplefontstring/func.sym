@@ -29,3 +29,6 @@ CSimpleFontString_SetFont 0048D5B0 f end=0048D723
 CSimpleFontString_GetStringWidth 0048DE90 f end=0048DEF4
 CSimpleFontString_GetStringHeight 0048DF00 f end=0048DF64
 CSimpleFontString_SetAlphaGradient 0048D0F0 f end=0048D1BA
+CSimpleFontString__GetWidth 00483F30 f end=00483FA0
+CSimpleFontString__GetHeight 00484080 f end=004840F0
+CSimpleFontString__SetLayoutDepth 00484230 f end=00484298

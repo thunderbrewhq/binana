@@ -49,3 +49,4 @@ ClientServices__SelectRealm 006B2DF0 f end=006B2E2C
 ClientServices__GetRealmInfoByIndex 006B2EB0 f end=006B2F12
 ClientServices__JoinRealmResult 006B3070 f end=006B318F
 ValidateCharacterNameDeclension 0076DD90 f end=0076DDD7
+ClientServices__ConnectToSelectedServer 006B2E30 f end=006B2EAC

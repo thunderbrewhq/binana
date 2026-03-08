@@ -95,3 +95,4 @@ ProcessCurrentFlag 007730E0 f end=0077315A
 ProcessFlags 00773160 f end=007732EF
 ProcessToken 007732F0 f end=007733D0
 ProcessString 007737D0 f end=00773862
+CLCDBase__SetBackgroundMode 0095BE30 f end=0095BE3D

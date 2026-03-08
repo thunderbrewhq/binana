@@ -8,3 +8,6 @@ CGTalentInfo__UpdatePetTabInfo 005C9DF0 f end=005C9E49
 CGTalentInfo__UpdateTalentData 005C9E50 f end=005C9F0D
 CGTalentInfo__UpdatePetTalentData 005C9F10 f end=005C9F5B
 CGTalentInfo_Inspect__SetInspectTarget 005C9F70 f end=005C9FE3
+CGTalentInfo__GetActiveTalentGroup 005C57A0 f end=005C57B4
+CGTalentInfo__GetUnspentTalentPoints 005C5F70 f end=005C5FBF
+CGTalentInfo__GetTalentGroup 005C5FC0 f end=005C6009

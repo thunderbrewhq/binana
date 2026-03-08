@@ -1,3 +1,5 @@
 CLightning__SetTexture 009A8CB0 f end=009A8CE0
 CLightning__SetSrcPos 009A96A0 f end=009A96BA
 CLightning__SetDstPos 009A96C0 f end=009A96DB
+CLightning__constructor 009A97B0 f end=009A9855
+CLightning__Render 009AA210 f end=009AAE7C

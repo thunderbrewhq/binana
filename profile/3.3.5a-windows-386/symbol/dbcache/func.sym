@@ -160,3 +160,7 @@ DBCache__DanceCache__GetRecord 006806D0 f end=0068086C
 DBCache__DanceCache__AddItem 00680870 f end=0068091F
 DBCache__DanceCache__Load 00680920 f end=00680C11
 DBCache__NameCache__Load 00680D70 f end=00681090
+DBCache__NameCache__GetRecordByName 006701F0 f end=00670210
+DBCache__PetNameCache__DenyItem 0067A840 f end=0067A8B9
+DBCache__PetNameCache__Invalidate 0067A940 f end=0067A9A7
+DBCache__NameCache__InvalidateIntKey 0067B530 f end=0067B542

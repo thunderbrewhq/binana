@@ -102,3 +102,4 @@ ComponentValidateBase 004F3B50 f end=004F3B9F
 ComponentGetSectionsRecord 004F3BA0 f end=004F3C0C
 BuildComponentArray 004F3DD0 f end=004F3DE2
 CountFacialFeatures 004F41B0 f end=004F422A
+CCharacterComponent__IsHelmModelCorrect 004EF020 f end=004EF0CE

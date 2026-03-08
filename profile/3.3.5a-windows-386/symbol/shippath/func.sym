@@ -5,3 +5,5 @@ ShipPath__WaitAtCurrentLocation 007F80A0 f end=007F8111
 ShipPath__SetTimeOffset 007F8120 f end=007F8171
 ShipPath__BuildLegs 007F90F0 f end=007F92EB
 ShipPath__Init 007F92F0 f end=007F931E
+ShipPath__ComputeRollAndPitch 007F7DD0 f end=007F7FB9
+ShipPath__GetPosition 007F82B0 f end=007F865B

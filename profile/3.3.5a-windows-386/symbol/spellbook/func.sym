@@ -30,3 +30,5 @@ CGSpellBook__AddKnownSpell 00542030 f end=00542E08
 CGSpellBook__ReplaceSpell 00542EB0 f end=00542ED1
 CGSpellBook__AddPetSpell 00542EE0 f end=00542F52
 SpellIsCallCompanion 008009B0 f end=008009FC
+CGSpellBook__ClearSpells 0053EC40 f end=0053EEAA
+CGSpellBook__InitializeGame 0053F1F0 f end=0053F28F

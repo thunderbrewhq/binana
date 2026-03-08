@@ -17,3 +17,11 @@ DayNight__SetBlendSky 007F31C0 f end=007F322A
 DayNight__SetColors 007F3230 f end=007F3913 ; DayNight::SetColors()
 DayNight__UpdateLighting 007F3920 f end=007F39AA ; DayNight::UpdateLighting()
 DayNight__DNGlare__Initialize 009AD000 f end=009AD0A3 type="void __thiscall func(DayNight__DNGlare* this, char* a1)"
+DayNight__DNClouds__Collide 007EDA90 f end=007EDB47
+DayNight__DNStars__Update 007EEA80 f end=007EEA8A
+DayNight__DNClouds__WorldToTexture 007EF920 f end=007EFA22
+DayNight__DNClouds__SetupBumpMap 007EFAE0 f end=007EFCF4
+DayNight__DNClouds__Update 007F1010 f end=007F101A
+DayNight__DNGlare__Destroy 009ABAC0 f end=009ABAE5
+DayNight__DNPlanet__Destroy 009ABAF0 f end=009ABAFF
+DayNight__DNStars__Destroy 009ABB30 f end=009ABB59

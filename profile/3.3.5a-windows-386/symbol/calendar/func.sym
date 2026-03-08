@@ -49,3 +49,6 @@ CGCalendar__ProcessEventUpdatedAlert 005C3D30 f end=005C3FD9
 CGCalendar__OnCalendarMessage 005C3FE0 f end=005C415E
 CGCalendar__InitializeGame 005C4240 f end=005C43B0
 QSortEvents 005BFD20 f end=005BFF26
+CGCalendar__ProcessLockoutRemoved 005C07E0 f end=005C0AD9
+CGCalendar__ProcessLockoutAdded 005C37D0 f end=005C387D
+CGCalendar__ProcessLockoutUpdated 005C3880 f end=005C3AA8

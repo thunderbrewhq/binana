@@ -71,3 +71,4 @@ World__GetFacets 00783A40 f end=00783A5E
 World__ObjectSetRenderEnabled 00783A60 f end=00783B05
 World__NDCXform 00791640 f end=007917A7
 ProjectTex2dDrawShaderEffect 007E3AA0 f end=007E3E74
+World__SetNearClip 0077F490 f end=0077F49D

@@ -109,3 +109,4 @@ CMap__DestroyLight 007D9D70 f end=007D9DDE ; public: static void __cdecl CMap::D
 CMap__LinkLightToChunks 007D9DE0 f end=007D9F8F ; CMap::LinkLightToChunks(class CMapLight *)
 CMap__LinkLightToMapObjDefs 007D9F90 f end=007DA0F5 ; CMap::LinkLightToMapObjDefs(class CMapLight *)
 CMap__UpdateLight 007DA100 f end=007DA187 ; CMap::UpdateLight(class CMapLight *)
+CMap__AddHitDebugModel 007A25F0 f end=007A275D

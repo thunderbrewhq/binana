@@ -11,3 +11,6 @@ CRibbonEmitter__Update 00980090 f end=0098050D ; CRibbonEmitter::Update(float, i
 CRibbonEmitter__constructor 00980630 f end=0098080C ; CRibbonEmitter::CRibbonEmitter()
 CRibbonEmitter__Initialize 009808A0 f end=00980B4A ; CRibbonEmitter::Initialize(float, float, CImVector const&, TSGrowableArray<CTexture*> const&, TSGrowableArray<CRibbonMat> const&, TSGrowableArray<unsigned int> const&, CAaRect const&, unsigned int, unsigned int)
 CRibbonEmitter__Render 00980B70 f end=00980EC3
+CRibbonEmitter__ReplaceTexture 00978C40 f end=00978C70
+CRibbonEmitter__SetUserEnabled 0097F5B0 f end=0097F5E3
+CRibbonEmitter__InitInterpDeltas 0097F700 f end=0097F8F3
