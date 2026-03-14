@@ -17,3 +17,6 @@ CSimpleTexture_SetRotation 0048C860 f end=0048C99D
 CSimpleTexture_SetTexCoord 0048E170 f end=0048E353 ; CSimpleTexture_SetTexCoord(lua_State*)
 CSimpleTexture_SetGradient 0048C240 f end=0048C30E
 CSimpleTexture_SetGradientAlpha 0048C310 f end=0048C3DE
+CSimpleTexture__GetHeight 00481850 f end=004818C7
+CSimpleTexture__OnFrameSizeChanged 004832C0 f end=00483454
+CSimpleTexture__Draw 00485140 f end=00485159

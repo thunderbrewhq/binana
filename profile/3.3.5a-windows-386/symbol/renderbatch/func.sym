@@ -4,3 +4,5 @@ CRenderBatch__constructor 00485530 f end=00485564
 CRenderBatch__QueueCallback 004858E0 f end=0048596F
 CRenderBatch__Clear 00485970 f end=004859D2
 CRenderBatch__Clear 00485F00 f end=00485F35
+CRenderBatch__QueueFontString 004843A0 f end=0048444C
+CRenderBatch__QueueTexture 004847A0 f end=00484AA4

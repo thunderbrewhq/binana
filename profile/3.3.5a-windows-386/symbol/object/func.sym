@@ -70,3 +70,4 @@ CGObject_C__Fadeout 00743D50 f end=00743E01
 CGObject_C__GetModelPosition 007446C0 f end=00744720
 CGObject_C__GetModelMatrix 00744720 f end=00744783
 CGObject_C__PrepareToFadeInt 00783630 f end=00783776
+CGObject_C__SetModelStart 00743660 f end=0074367D

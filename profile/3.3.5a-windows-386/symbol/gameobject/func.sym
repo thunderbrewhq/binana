@@ -44,3 +44,5 @@ CGGameObject_C__Initialize 007140A0 f end=0071414B
 CGGameObject_C__Shutdown 00714150 f end=007141C5
 CGGameObject_C__constructor 00714250 f end=00714996
 ObjectNameCreate 007E5FD0 f end=007E6030
+CGGameObject_C__GetPropertyValue 0070B9B0 f end=0070B9D3
+CGGameObject_C__GetRotation 00712E20 f end=00712E3A

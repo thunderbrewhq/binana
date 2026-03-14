@@ -328,3 +328,6 @@ ResurrectNameQueryCallback 006DBC60 f end=006DBCF4
 CGPlayer_C__GetPVPToggleTimer 006DE7A0 f end=006DE7D4
 CGPlayer_C__QueueItemEnchantTime 006E61B0 f end=006E6250
 WorldTextGetAscendDistance 007E65E0 f end=007E65F8
+CGPlayer_C__AutoStoreLootItem 006D2C20 f end=006D2C94
+CGPlayer_C__LootMoney 006D4B90 f end=006D4C04
+CGPlayer_C__StartTaxiExpress 006D6430 f end=006D64D4

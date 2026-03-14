@@ -23,3 +23,4 @@ CGGuildBankInfo__OnGuildBankList 005A7250 f end=005A7760
 CGGuildBankInfo__InitializeGame 005A77D0 f end=005A7830
 ScrubString 007E1830 f end=007E18BC
 ValidateGuildBankTabName 007E1FB0 f end=007E2039
+CGGuildBankInfo__ShutdownGame 005A7830 f end=005A7860

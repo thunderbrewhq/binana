@@ -1,1 +1,2 @@
 CGxPool__Invalidate 00688230 f end=00688251 type="void __thiscall func(CGxPool* this)"
+CGxPool__Discard 00688260 f end=00688284

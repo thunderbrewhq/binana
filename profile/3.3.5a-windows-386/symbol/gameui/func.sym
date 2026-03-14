@@ -168,3 +168,5 @@ SaveAccountData 006B9050 f end=006B90D7
 MirrorTimerToName 00513E00 f end=00513E31
 CGGameUI__OpenPlayerSkinned 00512520 f end=00512540
 CGGameUI__CheckInstanceDifficultyMessages 00524720 f end=00524779
+CGGameUI__ShowHealingFeedback 00513480 f end=005134B3
+CGGameUI__GetComboPoints 00513920 f end=00513955

@@ -26,3 +26,4 @@ CLayoutFrame__SetDeferredResize 0048A520 f end=0048A5F0 ; CLayoutFrame::SetDefer
 CLayoutFrame__UnflattenFrame 0048A840 f end=0048ABCE
 CLayoutFrame__DestroyLayout 0048B130 f end=0048B23B ; CLayoutFrame::DestroyLayout()
 CLayoutFrame__SetLayoutDepth 00489F20 f end=00489F74
+CLayoutFrame__SetHeight 00489F80 f end=00489F9B

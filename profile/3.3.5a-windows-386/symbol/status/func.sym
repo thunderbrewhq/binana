@@ -5,3 +5,4 @@ CStatus__GetErrorStrAlloc 0047C240 f end=0047C28E
 CStatus__Prepend 0047C290 f end=0047C35A
 CStatus__Add 0047C360 f end=0047C468
 CStatus__destructor 0047C500 f end=0047C55E
+CStatus__Clear 0047C470 f end=0047C4F5

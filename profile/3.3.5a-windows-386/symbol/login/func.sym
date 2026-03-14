@@ -1,1 +1,3 @@
 Login__GetFileStatus 00465550 f end=00465600
+Login__SetLogonCreds 00465620 f end=00465690
+Login__SetRawAccountName 00465690 f end=004656AC

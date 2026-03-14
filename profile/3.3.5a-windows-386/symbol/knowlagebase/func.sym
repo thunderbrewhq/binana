@@ -20,3 +20,4 @@ CKBSystem__OnEvent 00551660 f end=00551719
 CKBQuery__BeginLoading 00552140 f end=005522F3
 CKBSystem__Initialize 00552380 f end=00552395
 CKBPage__Shutdown 00552740 f end=00552842
+CKBPage__UpdateLoadingQueue 00550A80 f end=00550ADA

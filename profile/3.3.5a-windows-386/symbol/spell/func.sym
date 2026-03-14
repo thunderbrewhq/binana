@@ -127,3 +127,5 @@ SpellMissingItemCallback 007FEA80 f end=007FEB4D
 SpellVisualsRender 007F9EC0 f end=007F9ED5
 Spell_C_ModifyCooldown 00802BA0 f end=00802BE1
 Spell_C_PetSpellFailedUpdateCooldowns 00804780 f end=00804797
+SpellVisualsGetMountTransitionHeight 007F9F00 f end=007F9F0B
+SpellVisualsGetModelAttachRecCount 007FA9F0 f end=007FAA18

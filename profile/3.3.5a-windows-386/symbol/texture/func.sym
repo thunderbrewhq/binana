@@ -81,3 +81,4 @@ GetTextureFormats 004B5FE0 f end=004B6159
 UpdateTgaTexture 004B7AA0 f end=004B7BA0
 PumpBlpTextureAsync 004B7BD0 f end=004B7E7C
 CreateTgaTexture 004B95B0 f end=004B975B
+CTexture__constructor 004B8770 f end=004B881F

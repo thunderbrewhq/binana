@@ -193,3 +193,4 @@ MovementGetTransportQuat 0074B510 f end=0074B588
 MovementAddTransport 0074B730 f end=0074B743
 AckMessageNeedsIndex 00990370 f end=00990420
 IsAckMessage 00990420 f end=009904DB
+IsMessageAllowedWhileOnSpline 007151F0 f end=00715262

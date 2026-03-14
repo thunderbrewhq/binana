@@ -43,3 +43,5 @@ CVGxStereoSeparationCallback 00769C60 f end=00769C84 type="bool __stdcall func(C
 ConsoleDeviceDefaults 0076A130 f end=0076A1BD
 CVGxResolutionCallback 0076A220 f end=0076A57F type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxRefreshCallback 0076A580 f end=0076A62D type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
+CVar__Delete 007665D0 f end=00766634
+CVar__constructor 00766E80 f end=00766EF4

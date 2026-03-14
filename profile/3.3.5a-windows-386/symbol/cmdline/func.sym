@@ -1,3 +1,4 @@
 CmdLineGetBool 0047B6F0 f end=0047B6FE type="int32_t __stdcall func(CMDOPT)"
 CmdLineGetString 0047B700 f end=0047B71D type="char* __stdcall func(CMDOPT)"
 CmdLineProcess 0047B720 f end=0047B736 type="int32_t __stdcall func()"
+BaseInitializeGlobal 0047B740 f end=0047B74A

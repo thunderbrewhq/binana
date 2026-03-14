@@ -8,11 +8,11 @@ C44Matrix__Translate 004C1B30 f type="void __thiscall func(C44Matrix* this, C3Ve
 C44Matrix__Scale 004C1B90 f type="void __thiscall func(C44Matrix* this, C3Vector* scale)" ; void C44Matrix::Scale(const C3Vector& scale)
 C44Matrix__Scale 004C1BF0 f type="void __thiscall func(C44Matrix* this, float scale)" ; void C44Matrix::Scale(float scale)
 C44Matrix__constructor 004C1DE0 f type="C44Matrix* __thiscall func(C44Matrix* this, C4Quaternion* a)"
-operator_multiply_C44Matrix_C44Matrix 004C1F00 f type="C44Matrix* __stdcall func(C44Matrix* __return_ptr result, C44Matrix* l, C44Matrix* r)"
-operator_multiply_C44Matrix_float 004C2120 f type="C44Matrix* __stdcall func(C44Matrix* __return_ptr result, C44Matrix* l, float a)"
-operator_multiply_C3Vector_C44Matrix 004C21B0 f type="C3Vector* __stdcall func(C3Vector* __return_ptr result, C3Vector* l, C44Matrix* a)"
+operator_mul_C44Matrix_C44Matrix 004C1F00 f type="C44Matrix* __stdcall func(C44Matrix* __return_ptr result, C44Matrix* l, C44Matrix* r)"
+operator_mul_C44Matrix_float 004C2120 f type="C44Matrix* __stdcall func(C44Matrix* __return_ptr result, C44Matrix* l, float a)"
+operator_mul_C3Vector_C44Matrix 004C21B0 f type="C3Vector* __stdcall func(C3Vector* __return_ptr result, C3Vector* l, C44Matrix* a)"
 NTempest__TransformPoint 004C2300 f end=004C236F
-C44Matrix__operator_assignment_multiply_C44Matrix 004C2370 f type="void __thiscall func(C44Matrix* this, C44Matrix* a)"
+C44Matrix__operator_mul_assign_C44Matrix 004C2370 f type="void __thiscall func(C44Matrix* this, C44Matrix* a)"
 C44Matrix__Transpose 004C23D0 f
 C44Matrix__Adjoint 004C2440 f type="C44Matrix* __thiscall func(C44Matrix* this, C44Matrix* __return_ptr result)" ; C44Matrix C44Matrix::Adjoint()
 C44Matrix__Inverse 004C2F90 f

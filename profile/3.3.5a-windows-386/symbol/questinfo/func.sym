@@ -19,3 +19,4 @@ CGQuestInfo__GetQuestItemInfo 0058D190 f end=0058D34F
 CGQuestInfo__LeaveWorld 0058DD30 f end=0058DD43
 CGQuestInfo__AddReward 0058DD50 f end=0058DFD8
 QuestInfoUnregisterScriptFunctions 0058C580 f end=0058C59F
+CGQuestInfo__SetLogDescription 0058C720 f end=0058C785

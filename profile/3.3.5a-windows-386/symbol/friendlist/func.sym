@@ -37,3 +37,6 @@ FriendListStatusHandler 006B86B0 f end=006B86F7
 ContactListHandler 006B8700 f end=006B8719
 OnWhoList 006B8720 f end=006B898A
 FriendList__Initialize 006B8990 f end=006B8AA2
+FriendList__MatchesFilter 006B5CA0 f end=006B5DD9
+FriendList__IgnoreAdded 006B7200 f end=006B72D1
+FriendList__MuteAdded 006B72E0 f end=006B7394

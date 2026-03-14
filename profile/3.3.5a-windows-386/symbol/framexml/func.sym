@@ -16,3 +16,7 @@ FrameXML_RegisterDefault 00813DF0 f end=00813EDC
 FrameXML_ProcessFile 00813EE0 f end=00814333
 FrameXML_CreateFrames 00814340 f end=008145A3
 FrameXML_CheckSignature 008165E0 f end=00816767
+Create_SimpleScrollFrame 008126F0 f end=0081271B
+Create_SimpleSlider 00812750 f end=0081277B
+Create_SimpleColorSelect 008127E0 f end=0081280B
+Create_SimpleMovieFrame 00812810 f end=0081283B
