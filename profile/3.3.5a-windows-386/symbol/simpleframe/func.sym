@@ -86,3 +86,4 @@ CSimpleFrame_StopMovingOrSizing 004A0C20 f end=004A0C63
 CSimpleFrame_SetUserPlaced 004A0C70 f end=004A0CF1
 CSimpleFrame__OnLayerMouseUp 0048FCE0 f end=0048FDA1
 CSimpleFrame__UpdateDepth 00491740 f end=0049182F
+CSimpleFrame__PreLoadXML 00490360 f end=0049040D

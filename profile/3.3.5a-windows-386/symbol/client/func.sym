@@ -154,3 +154,4 @@ GetNumNameDeclensionSets 0076DD40 f end=0076DD5F
 GetNameDeclensions 0076DD60 f end=0076DD87
 GetNumRussianNameDeclensionSets 0076E2B0 f end=0076E327
 GetRussianNameDeclensions 0076E330 f end=0076E38D
+CurveTypeToString 008153C0 f end=008153F1

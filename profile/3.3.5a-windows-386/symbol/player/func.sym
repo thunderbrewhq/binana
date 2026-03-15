@@ -331,3 +331,5 @@ WorldTextGetAscendDistance 007E65E0 f end=007E65F8
 CGPlayer_C__AutoStoreLootItem 006D2C20 f end=006D2C94
 CGPlayer_C__LootMoney 006D4B90 f end=006D4C04
 CGPlayer_C__StartTaxiExpress 006D6430 f end=006D64D4
+CGPlayer_C__ReportBagItemSubtypeMismatch 006D6720 f end=006D67D2
+CGPlayer_C__TalkToTalentMaster 006DB1C0 f end=006DB31F

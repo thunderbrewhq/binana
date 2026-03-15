@@ -16,3 +16,4 @@ CGDynamicObject_C__PostInit 00705230 f end=0070539C
 CGDynamicObject_C__constructor 007053A0 f end=007054CC
 CGDynamicObject_C__GetPosition 007064E0 f end=007064FE
 CGDynamicObject_C__GetRawPosition 00706500 f end=00706524
+CGDynamicObject_C__destructor 007054E0 f end=007055D4

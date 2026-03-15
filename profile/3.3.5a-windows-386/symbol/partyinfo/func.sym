@@ -23,3 +23,5 @@ CGPartyInfo__ResetLootMethod 0052D8A0 f end=0052D8C8
 CGPartyInfo__ChangeRaidDifficulty 0052D8D0 f end=0052D98D
 CGPartyInfo__Uninvite 006D43C0 f end=006D4441
 CGPartyInfo__LeaveGroup 006D4540 f end=006D45A3
+CGPartyInfo__GetRemoteStatsFromPet 0052BF30 f end=0052BF7F
+CGPartyInfo__GetRemotePetStats 0052BF80 f end=0052BFE9

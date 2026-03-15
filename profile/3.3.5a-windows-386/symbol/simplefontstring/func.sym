@@ -36,3 +36,4 @@ CSimpleFontString__SetHeight 00482320 f end=00482345
 CSimpleFontString__PostLoadXML 004836D0 f end=00483750
 CSimpleFontString__DrawEmbeddedTextures 00485850 f end=004858A4
 CSimpleFontString__Draw 00485D60 f end=00485D98
+CSimpleFontString__OnFrameSizeChanged 00486E30 f end=00486FB8

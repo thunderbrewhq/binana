@@ -7,3 +7,4 @@ ShipPath__BuildLegs 007F90F0 f end=007F92EB
 ShipPath__Init 007F92F0 f end=007F931E
 ShipPath__ComputeRollAndPitch 007F7DD0 f end=007F7FB9
 ShipPath__GetPosition 007F82B0 f end=007F865B
+ShipPath__GetRollAndPitch 007F7B30 f end=007F7D30

@@ -9,3 +9,4 @@ SaveTimerHandler 006B9340 f end=006B9434
 ServerAccountDataTimes 006B94C0 f end=006B9663
 UpdateAccountData 006B9730 f end=006B98F6
 AccountDataInitializeBasicSystem 006B9900 f end=006B996D
+CAccountMsgHeaders__SendSuccessEvent 00550810 f end=00550905

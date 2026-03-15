@@ -480,3 +480,6 @@ PeriodicAuraLogInternal 007531F0 f end=00753697
 CGUnit_C__GetWeaponSwingType 00746360 f end=007463D7
 CGUnit_C__HandleCombatAnimEvent 00756240 f end=00756767
 SDBItemSubclassGetSubClassRec 00681090 f end=006810BC
+CGUnit_C__PreStartUpdatingMissileTrajectory 006FBE30 f end=006FBE49
+CGUnit_C__SetMissileTrajectoryTargetingSpell 006FBF90 f end=006FBF9D
+CGUnit_C__GetRecordForTitle 00719900 f end=00719949

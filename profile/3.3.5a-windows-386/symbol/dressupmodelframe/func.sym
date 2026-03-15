@@ -5,3 +5,6 @@ CGDressUpModelFrame__TryOn 005980D0 f end=005987A5
 CGDressUpModelFrame__SetModel 005989E0 f end=00598DBD
 DressUpItemCallback 005980B0 f end=005980CB
 CGDressUpModelFrame__RegisterScriptMethods 00597CC0 f end=00597CE0
+CGDressUpModelFrame__Create 00514300 f end=00514349
+CGDressUpModelFrame__constructor 00597B50 f end=00597B7D
+CGDressUpModelFrame__DestroyScriptMetaTable 00597CE0 f end=00597D05

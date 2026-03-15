@@ -13,3 +13,4 @@ CScriptRegion_GetPoint 0049D950 f end=0049DB09
 CScriptRegion_ClearAllPoints 0049E010 f end=0049E06F
 CFramePoint__MarkUnused 0049C7F0 f end=0049C827
 CScriptRegion_GetSize 0049D6F0 f end=0049D79D
+CScriptRegion_GetRect 0049CE50 f end=0049CF84

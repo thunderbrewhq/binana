@@ -31,3 +31,4 @@ CVehiclePassenger_C__SendTransitionUIEvents 00749650 f end=00749724
 CVehiclePassenger_C__OnReloadUI 00749ED0 f end=00749FA7
 CVehiclePassenger_C__SendTransitionUIEvents 00749FB0 f end=0074A04C
 CVehiclePassenger_C__OnVehicleRideLoopAnimEnd 00747980 f end=0074798E
+CVehiclePassenger_C__Init 007498E0 f end=00749A2D
