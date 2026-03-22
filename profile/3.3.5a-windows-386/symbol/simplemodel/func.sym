@@ -26,7 +26,6 @@ CSimpleModel_GetModel 009605D0 f end=0096061D type="int32_t __stdcall func(lua_S
 CSimpleModel_ClearModel 00960620 f end=0096065E type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_SetPosition 00960660 f end=009606DB type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_SetFacing 009606E0 f end=00960758 type="int32_t __stdcall func(lua_State* L)"
-CSimpleModel_SetScale 00960760 f end=009607D8 type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_SetSequence 009607E0 f end=009608AF type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_SetSequenceTime 009608B0 f end=0096096C type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_SetCamera 00960970 f end=00960A0C type="int32_t __stdcall func(lua_State* L)"
@@ -35,7 +34,6 @@ CSimpleModel_SetLight 00960D20 f end=00960DC6 type="int32_t __stdcall func(lua_S
 CSimpleModel_GetLight 00960DD0 f end=00960FB5 type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_GetPosition 00960FC0 f end=0096103E type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_GetFacing 00961040 f end=00961083 type="int32_t __stdcall func(lua_State* L)"
-CSimpleModel_GetScale 00961090 f end=009610D3 type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_AdvanceTime 009610E0 f end=00961117 type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_ReplaceIconTexture 00961120 f end=0096119E type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel_SetFogColor 009611A0 f end=00961200 type="int32_t __stdcall func(lua_State* L)"
@@ -49,3 +47,5 @@ CSimpleModel_SetGlow 009614B0 f end=00961534 type="int32_t __stdcall func(lua_St
 CSimpleModel__CreateScriptMetaTable 00961540 f end=00961559
 CSimpleModel__OnFrameRender 00960240 f end=00960277
 CSimpleModel__DestroyScriptMetaTable 009603F0 f end=00960415
+CSimpleModel_SetModelScale 00960760 f end=009607D8
+CSimpleModel_GetModelScale 00961090 f end=009610D3

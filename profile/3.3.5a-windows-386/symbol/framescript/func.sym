@@ -1,5 +1,3 @@
-FrameScript_Object__SetScript 0049EC80 f end=0049EDA7
-FrameScript_Object__HookScript 0049EDB0 f end=0049EFD8
 FrameScript_GetObjectThis 004A81B0 f end=004A8235 ; FrameScript_GetObjectThis(lua_State*, int)
 FrameScript_Object__CreateScriptMetaTable 00816790 f end=008167D3 ; FrameScript_Object::CreateScriptMetaTable(lua_State*, void (*)(lua_State*))
 FrameScript_Object__FillScriptMethodTable 008167E0 f end=00816822 ; FrameScript_Object::FillScriptMethodTable(lua_State*, FrameScript_Method*, int)

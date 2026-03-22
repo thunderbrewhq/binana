@@ -13,3 +13,5 @@ BattlenetUI__FriendAddedCB 0053A940 f end=0053AA62
 BattlenetUI__OnlinePresenceChangedCB 0053ABC0 f end=0053ADC0
 BattlenetUI__Init 0053B170 f end=0053B36B
 BattlenetUI__EnterRealm 0053B370 f end=0053B3D7
+BattlenetUI__ChatChannelMemberJoinedCB 005393C0 f end=005394C8
+BattlenetUI__SystemMessageCB 00539970 f end=00539A16

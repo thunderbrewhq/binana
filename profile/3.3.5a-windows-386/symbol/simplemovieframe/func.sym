@@ -2,3 +2,7 @@ CSimpleMovieFrame__constructor 0095E6E0 f end=0095E7C2
 CSimpleMovieFrame__Render 0095EED0 f end=0095F2D4
 CSimpleMovieFrame__RenderMovie 0095F2E0 f end=0095F303
 CSimpleMovieFrame__OnFrameRender 0095F340 f end=0095F36E
+CSimpleMovieFrame__RegisterScriptMethods 00970610 f end=00970630
+CSimpleMovieFrame_StartMovie 00970660 f end=00970721
+CSimpleMovieFrame_StopMovie 00970730 f end=00970767
+CSimpleMovieFrame_EnableSubtitles 00970770 f end=009707B4

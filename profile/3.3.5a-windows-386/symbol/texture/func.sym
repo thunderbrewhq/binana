@@ -90,3 +90,4 @@ TextureCacheComputeLoadProgress 004F2DC0 f end=004F2E15
 CBLPFile__ValidateHeader 006AE8E0 f end=006AE8FF
 TexturePixelFormatToGxTexFormat 004B50C0 f end=004B50CF
 UpdateBlobTexture 004C03C0 f end=004C047C
+CTextureAtlas__Reload 004B63B0 f end=004B64DC

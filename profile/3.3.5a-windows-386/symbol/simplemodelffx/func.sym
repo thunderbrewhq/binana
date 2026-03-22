@@ -10,3 +10,5 @@ CSimpleModelFFX_ResetLights 004E6BE0 f end=004E6C5C
 CSimpleModelFFX_AddLight 004E6C60 f end=004E6D4B
 CSimpleModelFFX__CreateScriptMetaTable 004E6F60 f end=004E6F79 ; CSimpleModelFFX::CreateScriptMetaTable()
 CSimpleModelFFX__destructor 004E6230 f end=004E62C4
+CSimpleModelFFX_AddCharacterLight 004E6D60 f end=004E6E57
+CSimpleModelFFX_AddPetLight 004E6E60 f end=004E6F57
