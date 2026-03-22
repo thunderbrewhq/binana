@@ -72,3 +72,4 @@ CameraRegisterScriptFunctions 005FE2C0 f end=005FE2E6
 CameraUnregisterScriptFunctions 005FE2F0 f end=005FE30F
 CGCamera__ZoomToDistance 005FFB70 f end=005FFC1B
 CGCamera__RunShakes 00606970 f end=00606B27
+CGCamera__AddShakeOffset 005FE6C0 f end=005FE7B0

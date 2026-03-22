@@ -25,3 +25,4 @@ DayNight__DNClouds__Update 007F1010 f end=007F101A
 DayNight__DNGlare__Destroy 009ABAC0 f end=009ABAE5
 DayNight__DNPlanet__Destroy 009ABAF0 f end=009ABAFF
 DayNight__DNStars__Destroy 009ABB30 f end=009ABB59
+DayNight__DNSky__SetColors 007F0530 f end=007F086A

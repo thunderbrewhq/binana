@@ -129,3 +129,5 @@ Spell_C_ModifyCooldown 00802BA0 f end=00802BE1
 Spell_C_PetSpellFailedUpdateCooldowns 00804780 f end=00804797
 SpellVisualsGetMountTransitionHeight 007F9F00 f end=007F9F0B
 SpellVisualsGetModelAttachRecCount 007FA9F0 f end=007FAA18
+Spell_C_GetCursorWorldObjectModel 007FD7A0 f end=007FD7A6
+Spell_C_WasItemRecentlyUsed 00809130 f end=008091A5

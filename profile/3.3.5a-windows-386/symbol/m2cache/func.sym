@@ -8,3 +8,4 @@ CM2Cache__CreateShared 0081C390 f end=0081C6D5 ; CM2Cache::CreateShared(char con
 CM2Cache__UpdateShared 0081C790 f end=0081C832 ; CM2Cache::UpdateShared()
 CM2Cache__LinkToSharedUpdateList 0081C840 f end=0081C862 ; CM2Cache::LinkToSharedUpdateList(CM2Shared*)
 CM2Cache__constructor 0081C900 f end=0081C988 ; CM2Cache::CM2Cache()
+ModelBlobQuery 004BB3E0 f end=004BB404

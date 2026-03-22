@@ -164,3 +164,5 @@ DBCache__NameCache__GetRecordByName 006701F0 f end=00670210
 DBCache__PetNameCache__DenyItem 0067A840 f end=0067A8B9
 DBCache__PetNameCache__Invalidate 0067A940 f end=0067A9A7
 DBCache__NameCache__InvalidateIntKey 0067B530 f end=0067B542
+DBCache__ArenaTeamCache__Invalidate 0067ADF0 f end=0067AE5A
+DBCache__ArenaTeamCache__InvalidateIntKey 0067B5E0 f end=0067B5E9

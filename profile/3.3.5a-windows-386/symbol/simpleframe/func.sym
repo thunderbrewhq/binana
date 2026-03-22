@@ -87,3 +87,5 @@ CSimpleFrame_SetUserPlaced 004A0C70 f end=004A0CF1
 CSimpleFrame__OnLayerMouseUp 0048FCE0 f end=0048FDA1
 CSimpleFrame__UpdateDepth 00491740 f end=0049182F
 CSimpleFrame__PreLoadXML 00490360 f end=0049040D
+CSimpleFrame__LoadXML_Scripts 0048FEF0 f end=00490270
+CSimpleFrame__DestroyScriptMetaTable 0049E560 f end=0049E585

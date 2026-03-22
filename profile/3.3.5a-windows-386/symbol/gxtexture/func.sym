@@ -3,3 +3,4 @@ GxTexDestroy 00681470 f
 CGxTexFlags__constructor 00681BE0 f end=00681CAB ; UC
 GxTexCreate 00681CB0 f end=00681D87
 GxTexUpdate 00681F20 f end=00681F59
+GxTexSetCannotUpdate 006813F0 f end=00681404

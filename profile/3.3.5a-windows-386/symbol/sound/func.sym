@@ -23,3 +23,5 @@ SE2__StopCapture 00879580 f end=008795E5
 SE2__HeartBeat 0087C4B0 f end=0087C53B
 SE2__ShutDownCapture 0087C540 f end=0087C580
 SE2__VoiceChat_StartCapture 009868C0 f end=009868CF
+SE2__AlternateCaptureCallbackIsActive 00878A60 f end=00878A72
+SE2__IsCapturing 00878AA0 f end=00878AC4

@@ -23,3 +23,4 @@ CSimpleButton_SetButtonState 00977280 f end=00977333
 StringToButtonState 00976FD0 f end=00977036
 CSimpleButton__RegisterScriptMethods 00977040 f end=00977060
 CSimpleButton__CreateScriptMetaTable 00978400 f end=00978419
+CSimpleButton__DestroyScriptMetaTable 00977060 f end=00977085

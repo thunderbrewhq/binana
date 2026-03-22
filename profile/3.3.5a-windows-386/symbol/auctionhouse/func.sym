@@ -22,3 +22,4 @@ CalculateAuctionDeposit 0076DDE0 f end=0076DE6B
 CGAuctionHouse__OnBidderNotification 005A0480 f end=005A078E
 CGAuctionHouse__AddOutbidID 0059F240 f end=0059F2EA
 ParseAuctionMailSubject 0059A4A0 f end=0059A55F
+CGAuctionHouse__OnOwnerNotification 005A0790 f end=005A0ABD

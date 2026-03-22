@@ -48,3 +48,4 @@ CSimpleModel_ClearFog 00961470 f end=009614A7 type="int32_t __stdcall func(lua_S
 CSimpleModel_SetGlow 009614B0 f end=00961534 type="int32_t __stdcall func(lua_State* L)"
 CSimpleModel__CreateScriptMetaTable 00961540 f end=00961559
 CSimpleModel__OnFrameRender 00960240 f end=00960277
+CSimpleModel__DestroyScriptMetaTable 009603F0 f end=00960415

@@ -26,3 +26,4 @@ CEffect__CleanUpStaticLists 006FA450 f end=006FA5B0
 CEffect__ApplyItemVisual 006F82D0 f end=006F83C7
 CEffect__MountTransitionSequenceCB 006F7480 f end=006F74A1
 CEffect__AddAnimKitEffect 006F7FD0 f end=006F803F
+CEffect__AddLightning 006F8040 f end=006F80A9

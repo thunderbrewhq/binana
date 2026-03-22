@@ -6,3 +6,5 @@ CSimpleCheckbox_SetCheckedTexture 00976C70 f end=00976DC8
 CSimpleCheckbox_SetDisabledCheckedTexture 00976E50 f end=00976FA8
 CSimpleCheckbox__RegisterScriptMethods 00976AF0 f end=00976B10
 CSimpleCheckbox__CreateScriptMetaTable 00976FB0 f end=00976FC9
+CSimpleCheckbox__DestroyScriptMetaTable 00976B10 f end=00976B35
+CSimpleCheckbox__constructor 009620E0 f end=00962117

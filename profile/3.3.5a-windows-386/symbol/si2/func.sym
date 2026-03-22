@@ -46,3 +46,5 @@ SI2__VoiceChat_ActivatePrimaryCaptureCallback 009869C0 f end=009869CF
 SI2__VoiceChat_StopRecordingLoopbackSound 009869D0 f end=009869E8
 SI2__VoiceChat_RecordLoopbackSound 00986AA0 f end=00986BB6
 SI2__PlayVocalErrorSound 00986D00 f end=00986DD6
+SI2__VoiceChat_GetCurrentMicrophoneSignalLevel 00986670 f end=00986680
+SI2__VoiceChat_IsRecordingLoopbackSound 00986990 f end=009869B7

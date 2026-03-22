@@ -20,3 +20,5 @@ Create_SimpleScrollFrame 008126F0 f end=0081271B
 Create_SimpleSlider 00812750 f end=0081277B
 Create_SimpleColorSelect 008127E0 f end=0081280B
 Create_SimpleMovieFrame 00812810 f end=0081283B
+Create_SimpleCheckButton 00812630 f end=0081265B
+FrameXML_ReleaseHashNode 00812D20 f end=00812D37

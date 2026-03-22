@@ -333,3 +333,7 @@ CGPlayer_C__LootMoney 006D4B90 f end=006D4C04
 CGPlayer_C__StartTaxiExpress 006D6430 f end=006D64D4
 CGPlayer_C__ReportBagItemSubtypeMismatch 006D6720 f end=006D67D2
 CGPlayer_C__TalkToTalentMaster 006DB1C0 f end=006DB31F
+CGPlayer_C__SilencePlayer 006D45B0 f end=006D4634
+CGPlayer_C__UnSilencePlayer 006D4640 f end=006D46C4
+CGPlayer_C__AcceptArenaTeam 006D4840 f end=006D48A6
+CGPlayer_C__DeclineArenaTeam 006D48B0 f end=006D4916

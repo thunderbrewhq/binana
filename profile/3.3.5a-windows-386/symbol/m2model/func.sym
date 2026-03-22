@@ -89,3 +89,6 @@ CM2Model__AttachToScene 00834540 f end=00834628 ; CM2Model::AttachToScene(CM2Sce
 CM2Model__AttachToSceneRecursive 00834630 f end=0083465C ; CM2Model::AttachToSceneRecursive(CM2Scene*)
 CM2Model__Initialize 00834810 f end=008348CA ; CM2Model::Initialize(CM2Scene*, CM2Shared*, CM2Model*, unsigned int)
 CM2Model__FreeInternalResources 0082C1C0 f end=0082C2C0
+CM2Model__GetNumGeometryBatches 00827A90 f end=00827E2F
+CM2Model__GetNumPrimitives 00827F70 f end=008284C2
+CM2Model__GetNumBatches 0082D1A0 f end=0082D2E8
