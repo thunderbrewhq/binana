@@ -91,3 +91,5 @@ CBLPFile__ValidateHeader 006AE8E0 f end=006AE8FF
 TexturePixelFormatToGxTexFormat 004B50C0 f end=004B50CF
 UpdateBlobTexture 004C03C0 f end=004C047C
 CTextureAtlas__Reload 004B63B0 f end=004B64DC
+TextureGetFilename 004B56F0 f end=004B570A
+TextureGetGxTexFlags 004B5750 f end=004B576D

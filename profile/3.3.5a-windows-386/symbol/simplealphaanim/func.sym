@@ -1,1 +1,4 @@
+CSimpleAlphaAnim__CreateScriptMetaTable 004A6E80 f end=004A6E99
+CSimpleAlphaAnim__RegisterScriptMethods 004A4E50 f end=004A4E7D
 CSimpleAlphaAnim_SetChange 004A6DA0 f end=004A6E1D
+CSimpleAlphaAnim_GetChange 004A6E20 f end=004A6E73

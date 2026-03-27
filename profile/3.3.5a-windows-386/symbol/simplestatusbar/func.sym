@@ -17,3 +17,5 @@ CSimpleStatusBar_SetStatusBarColor 00971910 f end=00971970
 CSimpleStatusBar_GetRotatesTexture 00971970 f end=009719CE
 CSimpleStatusBar_SetRotatesTexture 009719D0 f end=00971A16
 CSimpleStatusBar__CreateScriptMetaTable 00971A20 f end=00971A39
+CSimpleStatusBar__SetOrientation 009617E0 f end=009617F7
+CSimpleStatusBar__SetRotatesTexture 00961D70 f end=00961E26

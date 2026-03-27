@@ -3,3 +3,4 @@ CGGameObject_C_TypeAnimated__SetSequence 0070D1E0 f end=0070D4F6
 CGGameObject_C_TypeAnimated__UpdateAnimState 0070D510 f end=0070D5F5
 CGGameObject_C_TypeAnimated__HandleAnimFinished 0070D7E0 f end=0070D88E
 CGGameObject_C_TypeAnimated__OnUpdateAnimProgress 0070FD10 f end=0070FD42
+CGGameObject_C_TypeAnimated__UpdateDisplay 0070B230 f end=0070B25D

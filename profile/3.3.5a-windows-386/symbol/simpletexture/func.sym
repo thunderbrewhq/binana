@@ -44,3 +44,4 @@ CSimpleTexture_GetHorizTile 0048CBC0 f end=0048CC22
 CSimpleTexture_SetVertTile 0048CC30 f end=0048CC8B
 CSimpleTexture_GetVertTile 0048CC90 f end=0048CCF2
 CSimpleTexture__CreateScriptMetaTable 0048CD00 f end=0048CD19
+CSimpleTexture__GetTexture 004815E0 f end=0048161C

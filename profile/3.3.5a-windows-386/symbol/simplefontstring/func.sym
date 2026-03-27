@@ -68,3 +68,6 @@ CSimpleFontString_SetJustifyV 0048E430 f end=0048E4F2
 CSimpleFontString_SetNonSpaceWrap 0048E500 f end=0048E57C
 CSimpleFontString_SetWordWrap 0048E580 f end=0048E5FA
 CSimpleFontString_GetIndentedWordWrap 0048E600 f end=0048E67C
+CSimpleFontString__GetFontName 00482270 f end=00482287
+CSimpleFontString__SetSpacing 004870D0 f end=00487122
+CSimpleFontString__SetShadowColor 00487130 f end=00487158

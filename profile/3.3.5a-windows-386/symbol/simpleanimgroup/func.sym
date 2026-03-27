@@ -12,3 +12,5 @@ CSimpleAnimGroup__RemoveAnimListNode 0049B7B0 f end=0049B80C
 CSimpleAnimGroup__PostLoadXML 0049C2A0 f end=0049C30A
 CSimpleAnimGroup_SetLooping 004A7130 f end=004A71EC
 CSimpleAnimGroup_SetInitialOffset 004A72F0 f end=004A73D1
+CSimpleAnimGroup__CreateScriptMetaTable 004A79B0 f end=004A79C9
+CSimpleAnimGroup__RegisterScriptMethods 004A4EB0 f end=004A4ED0

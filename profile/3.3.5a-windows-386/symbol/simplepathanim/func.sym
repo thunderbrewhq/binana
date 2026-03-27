@@ -1,1 +1,7 @@
+CSimplePathAnim__CreateScriptMetaTable 004A6D80 f end=004A6D99
+CSimplePathAnim__RegisterScriptMethods 004A4DF0 f end=004A4E1D
 CSimplePathAnim_SetCurve 004A6C10 f end=004A6CCC
+CSimplePathAnim_GetCurve 004A6CD0 f end=004A6D17
+CSimplePathAnim_GetMaxOrder 004A6D20 f end=004A6D75
+CSimplePathAnim_GetControlPoints 004A79D0 f end=004A7A91
+CSimplePathAnim_CreateControlPoint 004A7BF0 f end=004A7DFE

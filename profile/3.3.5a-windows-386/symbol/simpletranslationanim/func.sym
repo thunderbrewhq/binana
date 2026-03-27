@@ -1,0 +1,4 @@
+CSimpleTranslationAnim__CreateScriptMetaTable 004A61D0 f end=004A61E9
+CSimpleTranslationAnim__RegisterScriptMethods 004A4C80 f end=004A4CAD
+CSimpleTranslationAnim_SetOffset 004A6040 f end=004A6121
+CSimpleTranslationAnim_GetOffset 004A6130 f end=004A61C8

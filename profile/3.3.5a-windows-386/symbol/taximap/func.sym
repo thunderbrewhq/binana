@@ -10,3 +10,4 @@ CGTaxiMap__CalculateAccurateDistance 00592580 f end=005926B8
 CGTaxiMap__RecursePath 005926C0 f end=00592BA1
 CGTaxiMap__GeneratePaths 00592BB0 f end=00592D01
 CGTaxiMap__SetupMap 005932E0 f end=00593830
+CGTaxiMap__InitializeGame 005938D0 f end=00593C93

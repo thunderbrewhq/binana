@@ -27,3 +27,7 @@ CEffect__ApplyItemVisual 006F82D0 f end=006F83C7
 CEffect__MountTransitionSequenceCB 006F7480 f end=006F74A1
 CEffect__AddAnimKitEffect 006F7FD0 f end=006F803F
 CEffect__AddLightning 006F8040 f end=006F80A9
+CEffect__UnLinkSelf 006F74B0 f end=006F74E9
+CEffect__SetEmissionRateIgnoresDistance 006F75F0 f end=006F7677
+CEffect__CreateModelFromEffect 006F7680 f end=006F76B2
+CEffect__InitLightningEndpoint 006F78B0 f end=006F78F7

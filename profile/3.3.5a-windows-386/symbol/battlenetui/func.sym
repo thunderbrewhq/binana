@@ -15,3 +15,5 @@ BattlenetUI__Init 0053B170 f end=0053B36B
 BattlenetUI__EnterRealm 0053B370 f end=0053B3D7
 BattlenetUI__ChatChannelMemberJoinedCB 005393C0 f end=005394C8
 BattlenetUI__SystemMessageCB 00539970 f end=00539A16
+BattlenetUI__BNGetFriendInfoHelper 005346F0 f end=005349E7
+BattlenetUI__BNGetToonInfoHelper 00534B60 f end=00534EC9

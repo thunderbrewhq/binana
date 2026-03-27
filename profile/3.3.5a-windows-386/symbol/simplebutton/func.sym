@@ -49,3 +49,5 @@ CSimpleButton_LockHighlight 009782E0 f end=0097831E
 CSimpleButton_UnlockHighlight 00978320 f end=0097835E
 CSimpleButton_GetMotionScriptsWhileDisabled 00978360 f end=009783A9
 CSimpleButton_SetMotionScriptsWhileDisabled 009783B0 f end=009783FB
+CSimpleButton__SetClickAction 0096F480 f end=0096F499
+CSimpleButton__OnClick 0096FD70 f end=0096FDC6

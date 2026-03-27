@@ -18,3 +18,4 @@ CEzLcd__HideGlobals 00959890 f end=0095B42C
 CEzLcd__ModifyControlsOnPage 009598B0 f end=0095993F
 CEzLcd__SetBackground 00959610 f end=0095967E
 CEzLcd__constructor 00959940 f end=00959ADD
+CEzLcd__AddNewPage 009594A0 f end=0095953A
