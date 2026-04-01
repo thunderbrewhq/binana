@@ -24,7 +24,7 @@ type Sample struct {
 	// Possible sample types include:
 	//  * (Windows .exe)  application/vnd.microsoft.portable-executable
 	//  * (Mach-O binary) application/x-mach-binary
-	//  * (Linux binary)  application/x-elf
+	//  * (Linux binary)  application/x-executable
 	MimeType string `json:"mimetype" parquet:"mimetype,dict"`
 
 	// This is the code that signifies which program the sample is a build of.

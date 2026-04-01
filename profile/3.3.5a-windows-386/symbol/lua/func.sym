@@ -1,72 +1,84 @@
-_lua_gettop 0084DBD0 f
-_lua_settop 0084DBF0 f
-_lua_insert 0084DCC0 f
-_lua_type 0084DEB0 f
-_lua_isnumber 0084DF20 f
-_lua_isstring 0084DF60 f
-_lua_tonumber 0084E030 f
-_lua_tolstring 0084E0E0 f
-_lua_touserdata 0084E1C0 f
-_lua_pushnil 0084E280 f
-_lua_pushnumber 0084E2A0 f
-_lua_pushstring 0084E350 f
-_lua_rawget 0084E600 f
-_lua_rawgeti 0084E670 f
-_lua_rawset 0084E970 f
-_luaL_error 0084F280 f
-_luaL_unref 0084F7A0 f
-_luaG_runerror 00850920 f
-_luaD_throw 008562E0 f
-_luaD_precall 00856370 f
+luaO_fb2int 0084D3D0 f end=0084D3ED
+luaO_rawequalObj 0084D420 f end=0084D467
+luaO_pushvfstring 0084D580 f end=0084D7C6
+luaO_chunkid 0084D860 f end=0084D9B2 type="void __stdcall func(char* out, char* src, size_t bufflen)"
+index2adr 0084D9C0 f end=0084DA48 type="TValue* __usercall func@<eax>(lua_State* L@<ecx>, int32_t idx@<eax>)"
+lua_gettop 0084DBD0 f end=0084DBE1 type="int32_t __stdcall func(lua_State* L)"
+lua_settop 0084DBF0 f end=0084DC49 type="void __stdcall func(lua_State* L, int32_t idx)"
+lua_remove 0084DC50 f end=0084DCC0
+lua_insert 0084DCC0 f
+lua_pushvalue 0084DE50 f end=0084DEAE
+lua_type 0084DEB0 f
+lua_isnumber 0084DF20 f
+lua_isstring 0084DF60 f
+lua_tonumber 0084E030 f
+lua_tolstring 0084E0E0 f
+lua_touserdata 0084E1C0 f
+lua_pushnil 0084E280 f end=0084E29F type="void __stdcall func(lua_State* L)"
+lua_pushnumber 0084E2A0 f
+lua_pushlstring 0084E300 f end=0084E34A type="void __stdcall func(lua_State* L, char* s, size_t len)"
+lua_pushstring 0084E350 f
+lua_pushvfstring 0084E3A0 f end=0084E3CF
+lua_pushfstring 0084E3D0 f end=0084E3FF
+lua_pushcclosure 0084E400 f end=0084E4C9 type="void __stdcall func(lua_State* L, lua_CFunction fn, int n)"
+lua_pushlightuserdata 0084E500 f end=0084E524
+lua_rawget 0084E600 f
+lua_rawgeti 0084E670 f
+lua_createtable 0084E6E0 f end=0084E72A type="void __stdcall func(lua_State* L, int32_t narray, int32_t nrec)"
+lua_getmetatable 0084E730 f end=0084E792
+lua_rawset 0084E970 f
+lua_setmetatable 0084EA90 f end=0084EB35
+lua_call 0084EBF0 f end=0084EC2B
+lua_pcall 0084EC50 f end=0084ECBB
+lua_gc 0084ED50 f end=0084EE28 type="int32_t __stdcall func(lua_State* L, int32_t what, int32_t data)"
+lua_gcupdatesizes 0084EE50 f end=0084EE59
+lua_gcgetsize 0084EE60 f end=0084EE69
+lua_gcupdatetimes 0084EE70 f end=0084EE79
+lua_gcgettime 0084EE80 f end=0084EE89
+lua_gcgetfunctiontime 0084EE90 f end=0084EF1C
+lua_error 0084EF30 f end=0084EF43
+lua_concat 0084EF90 f end=0084F010
+lua_setdecimalconversion 0084F010 f end=0084F022
+lua_convertdecimal 0084F030 f end=0084F0C6
+luaL_error 0084F280 f
+luaL_ref 0084F6C0 f end=0084F793 type="int32_t __stdcall func(lua_State* L, int32_t t)"
+luaL_unref 0084F7A0 f
+luaL_optlstring 0084FA50 f end=0084FAAB
+luaL_register 0084FDD0 f end=0084FDEB type="void __stdcall func(lua_State* L, char* libname, luaL_Reg* l)"
+lua_getstack 0084FE40 f end=0084FEBB
+luaG_runerror 00850920 f
+lua_getinfo 00850A90 f end=00850B59
+luaopen_bit 00851010 f end=00851032
+luaopen_bit 00851010 f end=00851032 type="int32_t __stdcall func(lua_State* L)"
+luaopen_math 00851760 f end=008517C0
+luaopen_math 00851760 f end=008517C0 type="int32_t __stdcall func(lua_State* L)"
+luaopen_table 008521F0 f end=00852210 type="int32_t __stdcall func(lua_State* L)"
+luaopen_string 008540D0 f end=008540F7 type="int32_t __stdcall func(lua_State* L)"
+luaopen_base 00855060 f end=00855087 type="int32_t __stdcall func(lua_State* L)"
+lua_newstate 00855370 f end=008554E3
+lua_newstate 00855370 f end=008554E3 type="lua_State* __stdcall func(lua_Alloc f, void* ud, int32_t a3)"
+lua_close 00855510 f end=00855570
+luaM_initPool 00855740 f end=008557CA type="int32_t __stdcall func()"
+luaM_freePool 008557D0 f end=0085581C
+luaM_reallocPool 008558E0 f end=00855A11 type="void* __stdcall func(void* ud, void* ptr, size_t osize, size_t nsize)"
+luaD_throw 008562E0 f
+luaD_precall 00856370 f
+luaD_precall_profile 00856550 f end=00856756
 luaD_call 00856760 f
-_luaV_execute 00857CA0 f
-_luaO_fb2int 0084D3D0 f end=0084D3ED
-_luaO_rawequalObj 0084D420 f end=0084D467
-_luaO_pushvfstring 0084D580 f end=0084D7C6
-_luaO_chunkid 0084D860 f end=0084D9B2
-_lua_remove 0084DC50 f end=0084DCC0
-_lua_pushvalue 0084DE50 f end=0084DEAE
-_lua_pushvfstring 0084E3A0 f end=0084E3CF
-_lua_pushfstring 0084E3D0 f end=0084E3FF
-_lua_pushcclosure 0084E400 f end=0084E4C9
-_lua_pushlightuserdata 0084E500 f end=0084E524
-_lua_getmetatable 0084E730 f end=0084E792
-_lua_setmetatable 0084EA90 f end=0084EB35
-_lua_call 0084EBF0 f end=0084EC2B
-_lua_pcall 0084EC50 f end=0084ECBB
-_lua_gc 0084ED50 f end=0084EE28
-_lua_gcupdatesizes 0084EE50 f end=0084EE59
-_lua_gcgetsize 0084EE60 f end=0084EE69
-_lua_gcupdatetimes 0084EE70 f end=0084EE79
-_lua_gcgettime 0084EE80 f end=0084EE89
-_lua_gcgetfunctiontime 0084EE90 f end=0084EF1C
-_lua_error 0084EF30 f end=0084EF43
-_lua_concat 0084EF90 f end=0084F010
-_lua_setdecimalconversion 0084F010 f end=0084F022
-_lua_convertdecimal 0084F030 f end=0084F0C6
-_luaL_optlstring 0084FA50 f end=0084FAAB
-_lua_getstack 0084FE40 f end=0084FEBB
-_lua_getinfo 00850A90 f end=00850B59
-_luaopen_bit 00851010 f end=00851032
-_luaopen_math 00851760 f end=008517C0
-_lua_newstate 00855370 f end=008554E3
-_lua_close 00855510 f end=00855570
-_luaM_initPool 00855740 f end=008557CA
-_luaM_freePool 008557D0 f end=0085581C
-_luaD_precall_profile 00856550 f end=00856756
-_luaC_separateudata 0085A8B0 f end=0085A952
-_luaC_sizeall 0085B4E0 f end=0085B52D
-_luaC_getsize 0085B530 f end=0085B557
-_luaC_timeall 0085B560 f end=0085B598
-_luaC_gettime 0085B5A0 f end=0085B602
-_luaC_step 0085B950 f end=0085B9D2
-_luaC_fullgc 0085B9E0 f end=0085BA4B
-_luaC_barrierback 0085BA90 f end=0085BAAB
-_luaC_link 0085BAB0 f end=0085BAF1
-_luaT_gettmbyobj 0085BC10 f end=0085BC67
-_luaH_getstr 0085C430 f end=0085C46F
-_luaF_newCclosure 0085CC10 f end=0085CC86
-_luaF_close 0085CE70 f end=0085CF3F
-_luaF_getlocalname 0085D0A0 f end=0085D0ED
-_luaZ_openspace 0085D170 f end=0085D1CC
-_luaX_syntaxerror 0085D9E0 f end=0085D9F9
+luaV_execute 00857CA0 f
+luaC_separateudata 0085A8B0 f end=0085A952
+luaC_sizeall 0085B4E0 f end=0085B52D
+luaC_getsize 0085B530 f end=0085B557
+luaC_timeall 0085B560 f end=0085B598
+luaC_gettime 0085B5A0 f end=0085B602
+luaC_step 0085B950 f end=0085B9D2
+luaC_fullgc 0085B9E0 f end=0085BA4B
+luaC_barrierback 0085BA90 f end=0085BAAB
+luaC_link 0085BAB0 f end=0085BAF1
+luaT_gettmbyobj 0085BC10 f end=0085BC67
+luaH_getstr 0085C430 f end=0085C46F
+luaF_newCclosure 0085CC10 f end=0085CC86
+luaF_close 0085CE70 f end=0085CF3F
+luaF_getlocalname 0085D0A0 f end=0085D0ED
+luaZ_openspace 0085D170 f end=0085D1CC
+luaX_syntaxerror 0085D9E0 f end=0085D9F9

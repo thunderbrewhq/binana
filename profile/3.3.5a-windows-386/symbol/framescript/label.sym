@@ -1,2 +1,11 @@
 FrameScript_Object__s_objectType 00D3F778 l
 s_scriptProfileEnabled 00D3F798 l type="int32_t"
+s_mempool 00D3F788 l type="void*"
+s_context 00D3F78C l type="lua_State*"
+s_scriptTimeDivisor 00D3F780 l type="int64_t"
+s_scriptTimeUsed 00D3F790 l type="int64_t"
+s_errorHandlerFunc 00AF5770 l type="int32_t"
+s_errorHandlerRef 00AF576C l type="int32_t"
+s_recursiveTableHash 00AF5774 l type="int32_t"
+extra_funcs 00A443A8 l type="luaL_Reg[31]"
+s_compat_lua 00AF57F0 l type="char*" ; this is statically defined inside FrameScript_Initialize()

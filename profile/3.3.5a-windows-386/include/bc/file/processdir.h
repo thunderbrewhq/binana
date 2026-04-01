@@ -4,10 +4,10 @@
 DECLARE_STRUCT(Blizzard__File__ProcessDirParms);
 
 struct Blizzard__File__ProcessDirParms {
-  const char* dir;
-  const char* item;
-  void*       param;
-  bool        isdir;
+    const char* pathRoot;
+    const char* filename;
+    void*       cookie;
+    bool        isDir;
 };
 
 typedef bool (*Blizzard__File__ProcessDirCallback)(const Blizzard__File__ProcessDirParms* parms);

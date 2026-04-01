@@ -34,8 +34,12 @@ func parse_attributes(attribute_columns []string) (attributes map[string]string,
 		}
 		key, value_start, found := strings.Cut(attribute_column, "=")
 		if !found {
-			err = fmt.Errorf("extraneous column: '%s'", attribute_column)
-			return
+			// err = fmt.Errorf("extraneous column: '%s'", attribute_column)
+			// return
+			attributes[attribute_column] = ""
+			current_key = ""
+			current_value = ""
+			continue
 		}
 
 		current_key = key
@@ -145,6 +149,9 @@ func (symbol *Symbol) Parse(line string) (err error) {
 			if err != nil {
 				return
 			}
+		}
+		if _, found := attributes["auto"]; found {
+			symbol.Auto = true
 		}
 	}
 

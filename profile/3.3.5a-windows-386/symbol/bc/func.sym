@@ -17,7 +17,7 @@ Blizzard__File__MakeAbsolutePath 00427500 f end=00427551 ; Blizzard::File::MakeA
 Blizzard__File__Move 00427560 f end=004275A8 type="bool __stdcall func(char* src, char* dst)" ; Blizzard::File::Move(char const*, char const*)
 Blizzard__File__Copy 004275B0 f end=004275FE type="bool __stdcall func(char* src, char* dst, bool overwrite)"
 Blizzard__File__Open 00427600 f end=0042765E
-Blizzard__File__ProcessDirFast 00427660 f end=004276BA type="bool __stdcall func(char* name, void* param, Blizzard__File__ProcessDirCallback callback, bool flag)"
+Blizzard__File__ProcessDirFast 00427660 f end=004276BA type="bool __stdcall func(char* path, void* cookie, Blizzard__File__ProcessDirCallback callback, bool treatSymlinksAsFiles)"
 Blizzard__File__Read 004276C0 f end=0042771F
 Blizzard__File__Read 00427720 f end=0042778B type="bool __stdcall func(Blizzard__File__StreamRecord* file, void* data, int64_t offset, uint32_t* count)" ; Blizzard::File::Read(Blizzard::File::StreamRecord*, void*, long long, int*, int)
 Blizzard__File__RemoveDirectory 00427800 f end=00427843
@@ -60,7 +60,7 @@ System_Mopaq__Cache__GetCachedBlock 004308C0 f end=00430A43
 System_File__GetRootChars 004325C0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 Blizzard__String__JoinPath 00433510 f end=0043356B type="void __stdcall func(char* a1, int32_t a2, char* a3, char* a4)" ; Blizzard::String::JoinPath(char*, int, char const*, char const*)
 System_File__FromNativeName 00433590 f end=00433650 type="void __stdcall func(uint8_t *buffer, uint32_t buffersize, const char *str)"
-Blizzard__String__QuickNativePath_300__QuickNativePath 00433650 f end=0043375A
+Blizzard__StringConversion_CodepageToUTF8__ToNative__constructor 00433650 f end=0043375A type="void __thiscall func(Blizzard__StringConversion_CodepageToUTF8__ToNative* this, char* str)" ; Blizzard::StringConversion_CodepageToUTF8::ToNative::ToNative(const char*)
 System_File__GetFileInfoByFile 00435580 f end=004356A2 type="void __stdcall func(Blizzard__File__StreamRecord* file)"
 System_File__Exists 004356B0 f end=00435781 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__MakeAbsolutePath 00435790 f end=00435889 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
@@ -155,3 +155,5 @@ Blizzard__Streaming__SourceManifest__ReadIndirectFile 00459400 f end=004595EE
 Blizzard__Mopaq__SFileAuthenticateArchiveEx 0045A260 f end=0045A4A9
 Blizzard__Streaming__FileManifest__ReadDirectFileFromBuffer 0045D1E0 f end=0045D85E
 System_Mopaq__cache_read 00457A00 f end=00457CF9
+Blizzard__File__SetEOF 004278B0 f end=00427901 type="bool __stdcall func(Blizzard__File__Stream file, int64_t pos, int32_t posMode)" ; Blizzard::File::SetEOF(Blizzard::File::StreamRecord*, long long, int)
+Blizzard__File__Write 00427A20 f end=00427A85 type="bool __stdcall func(Blizzard__File__Stream file, void* buffer, int64_t start, int32_t* amount)"

@@ -15,6 +15,7 @@ func compile_ghidra_artifacts(profile *Profile, params *CompileArtifactsParams) 
 	if err != nil {
 		return
 	}
+
 	_, err = profile.Symbols.WriteTo(symbol_file)
 	symbol_file.Close()
 	return

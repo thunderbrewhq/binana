@@ -1,6 +1,14 @@
 #ifndef SYSTEM_TYPES_H
 #define SYSTEM_TYPES_H
 
+#if defined(CLANGD)
+
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+
+#endif
+
 // stdint
 #if defined(IDA) || defined(BINANA_GENERATOR)
 
@@ -13,9 +21,9 @@ typedef unsigned short     uint16_t;
 typedef unsigned int       uint32_t;
 typedef unsigned long long uint64_t;
 
-typedef int32_t ptrdiff_t;
+typedef int32_t  ptrdiff_t;
 typedef uint32_t uintptr_t;
-typedef int32_t intptr_t;
+typedef int32_t  intptr_t;
 
 #else
 
@@ -38,7 +46,7 @@ typedef char bool;
 #endif
 
 // stddef
-#if defined(GHIDRA)
+#if defined(GHIDRA) || defined(CLANGD)
 
 #include <stddef.h>
 
@@ -64,14 +72,14 @@ typedef char* va_list;
 
 typedef struct fixed16 fixed16;
 struct fixed16 {
-  int16_t n;
+    int16_t n;
 };
 
 struct ubyte4 {
-  union {
-    uint8_t b[4];
-    uint32_t u;
-  };
+    union {
+        uint8_t  b[4];
+        uint32_t u;
+    };
 };
 
 #endif

@@ -6,6 +6,7 @@ import (
 	"os"
 	"regexp"
 	"slices"
+	"strconv"
 
 	"github.com/parquet-go/parquet-go"
 	"github.com/thunderbrewhq/binana/go/app"
@@ -17,11 +18,14 @@ type QueryPresentationMode uint8
 const (
 	PresentQueryNormal QueryPresentationMode = iota
 	PresentQueryNameOnly
+	PresentQuerySampleName
 )
 
 type QueryParams struct {
 	//
 	Present QueryPresentationMode
+	// If true, presents the quoted version of the token name
+	Quote bool
 	// Match pattern for profile
 	Profile string
 	// Possible values for Program
@@ -35,6 +39,8 @@ type QueryParams struct {
 	MaxBuild uint32
 	// Regular expression for tokens (symbols/type information)
 	Token string
+	// If true, Token is a POSIX regular expression
+	RegEx bool
 }
 
 type token_query struct {
@@ -43,11 +49,47 @@ type token_query struct {
 	token_regexp    *regexp.Regexp
 }
 
+func format_sample_name(sample db.Sample) (name string) {
+	var ext string
+	switch sample.MimeType {
+	case "application/x-ms-pdb":
+		ext = "pdb"
+	case "application/vnd.microsoft.portable-executable":
+		ext = "exe"
+	case "application/x-executable":
+		ext = "elf"
+	case "application/x-mach-binary":
+		ext = "macho"
+	default:
+		ext = "bin"
+	}
+	name = fmt.Sprintf("%s-%s-%d-%s-%s.%s", sample.Program, sample.Version, sample.Build, sample.OS, sample.Arch, ext)
+	return
+}
+
 func (token_query *token_query) present_token(token *db.Token) {
+	sample, ok := token_query.sample_database[token.Source]
+	if !ok {
+		panic(token.Source)
+	}
+	name_wrap := func(s string) string {
+		return s
+	}
+	if token_query.params.Quote {
+		name_wrap = strconv.Quote
+	}
 	if token_query.params.Present == PresentQueryNameOnly {
 		for _, name := range token.Names {
 			if token_query.token_regexp.MatchString(name.Name) {
-				fmt.Println(name.Name)
+				fmt.Println(name_wrap(name.Name))
+			}
+		}
+		return
+	} else if token_query.params.Present == PresentQuerySampleName {
+		sample_name := format_sample_name(sample)
+		for _, name := range token.Names {
+			if token_query.token_regexp.MatchString(name.Name) {
+				fmt.Println(sample_name, name_wrap(name.Name))
 			}
 		}
 		return
@@ -65,7 +107,7 @@ func (token_query *token_query) present_token(token *db.Token) {
 	default:
 		return
 	}
-	fmt.Printf("%s in sample: '%s' section: '%s'", kind_name, token.Source[:8], token.Section)
+	fmt.Printf("%s in sample: ('%s', %s) section: '%s'", kind_name, token.Source[:8], format_sample_name(sample), token.Section)
 	if token.Offset != "" {
 		fmt.Printf(" at %s", token.Offset)
 	}
@@ -88,7 +130,7 @@ func (token_query *token_query) present_token(token *db.Token) {
 			panic(name.Kind)
 		}
 
-		fmt.Printf("%s '%s'\n", name_kind_name, name.Name)
+		fmt.Printf("%s: %s\n", name_kind_name, name_wrap(name.Name))
 	}
 
 	fmt.Printf("--\n\n")
@@ -159,7 +201,11 @@ func (token_query *token_query) load_sample_database() (err error) {
 func Query(params *QueryParams) {
 	var token_query token_query
 	token_query.params = params
-	token_query.token_regexp = regexp.MustCompilePOSIX(token_query.params.Token)
+	if params.RegEx {
+		token_query.token_regexp = regexp.MustCompilePOSIX(token_query.params.Token)
+	} else {
+		token_query.token_regexp = regexp.MustCompilePOSIX(regexp.QuoteMeta(params.Token))
+	}
 
 	if err := token_query.load_sample_database(); err != nil {
 		app.Fatal(err)

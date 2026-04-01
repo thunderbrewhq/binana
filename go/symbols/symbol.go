@@ -36,6 +36,9 @@ type Symbol struct {
 	//  type=void*
 	// The C syntax type of the data
 	DataType string
+	// auto
+	// If present, this is an autoanalysis symbol and doesn't need to be imported
+	Auto bool
 }
 
 func (entry *Symbol) String() string {
@@ -65,6 +68,12 @@ func (entry *Symbol) WriteTo(w io.Writer) (n int64, err error) {
 			return
 		}
 		n += int64(b)
+	}
+	if entry.Auto {
+		b, err = fmt.Fprint(w, " auto")
+		if err != nil {
+			return
+		}
 	}
 	if entry.Comment != "" {
 		b, err = fmt.Fprintf(w, " ; %s", entry.Comment)

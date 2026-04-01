@@ -1,6 +1,6 @@
 * text eol=lf
 *.dd32 binary
-*.parquet binary
+*.parquet filter=lfs diff=lfs merge=lfs -text
 profile/*/x64dbg/game.* -diff
 profile/*/x64dbg/types.json -diff
 profile/*/ida/* -diff

@@ -1,82 +1,55 @@
 #ifndef BC_FILE_FILESYSTEM_H
 #define BC_FILE_FILESYSTEM_H
 
-#include "bc/systemfile/stacked.h"
-
-DECLARE_ENUM(Blizzard__File__Operation);
+#include "system/detect.h"
 
 DECLARE_STRUCT(Blizzard__File__Filesystem);
+DECLARE_STRUCT(Blizzard__File__Functions);
 
-// invented enum
-enum Blizzard__File__Operation {
-  cd,
-  close,
-  create,
-  cwd,
-  dirwalk,
-  exists,
-  flush,
-  getfileinfo,
-  getfreespace,
-  getpos,
-  getrootchars,
-  isabspath,
-  isreadonly,
-  makeabspath,
-  mkdir,
-  move,
-  copy,
-  open,
-  read,
-  readp,
-  rmdir,
-  setcachemode,
-  seteof,
-  setfileinfo,
-  setpos,
-  unlink,
-  write,
-  writep,
-  shutdown,
-  num_operations
+typedef uintptr_t offset_in_Blizzard__File__Functions_to_System_File__Stacked__FileFunc;
+
+#include "bc/systemfile/stacked/filefunc.h"
+#include "bc/util/offset.h"
+
+struct Blizzard__File__Functions {
+    System_File__Stacked__FileFunc cd;
+    System_File__Stacked__FileFunc close;
+    System_File__Stacked__FileFunc create;
+    System_File__Stacked__FileFunc cwd;
+    System_File__Stacked__FileFunc dirwalk;
+    System_File__Stacked__FileFunc exists;
+    System_File__Stacked__FileFunc flush;
+    System_File__Stacked__FileFunc getfileinfo;
+    System_File__Stacked__FileFunc getfreespace;
+    System_File__Stacked__FileFunc getpos;
+    System_File__Stacked__FileFunc getrootchars;
+    System_File__Stacked__FileFunc isabspath;
+    System_File__Stacked__FileFunc isreadonly;
+    System_File__Stacked__FileFunc makeabspath;
+    System_File__Stacked__FileFunc mkdir;
+    System_File__Stacked__FileFunc move;
+    System_File__Stacked__FileFunc copy;
+    System_File__Stacked__FileFunc open;
+    System_File__Stacked__FileFunc read;
+    System_File__Stacked__FileFunc readp;
+    System_File__Stacked__FileFunc rmdir;
+    System_File__Stacked__FileFunc setcachemode;
+    System_File__Stacked__FileFunc seteof;
+    System_File__Stacked__FileFunc setfileinfo;
+    System_File__Stacked__FileFunc setpos;
+    System_File__Stacked__FileFunc unlink;
+    System_File__Stacked__FileFunc write;
+    System_File__Stacked__FileFunc writep;
+    System_File__Stacked__FileFunc shutdown;
 };
-
-#define FS_OP(N) bool (*N)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)
+BC_OFFSET_INTO(Blizzard__File__Functions, System_File__Stacked__FileFunc);
 
 // 0x7C bytes = 4 + 4 + (29 * 4)
+//
 struct Blizzard__File__Filesystem {
-  Blizzard__File__Filesystem* base;
-  Blizzard__File__Filesystem* next;
-
-  FS_OP(cd);
-  FS_OP(close);
-  FS_OP(create);
-  FS_OP(cwd);
-  FS_OP(dirwalk);
-  FS_OP(exists);
-  FS_OP(flush);
-  FS_OP(getfileinfo);
-  FS_OP(getfreespace);
-  FS_OP(getpos);
-  FS_OP(getrootchars);
-  FS_OP(isabspath);
-  FS_OP(isreadonly);
-  FS_OP(makeabspath);
-  FS_OP(mkdir);
-  FS_OP(move);
-  FS_OP(copy);
-  FS_OP(open);
-  FS_OP(read);
-  FS_OP(readp);
-  FS_OP(rmdir);
-  FS_OP(setcachemode);
-  FS_OP(seteof);
-  FS_OP(setfileinfo);
-  FS_OP(setpos);
-  FS_OP(unlink);
-  FS_OP(write);
-  FS_OP(writep);
-  FS_OP(shutdown);
+    Blizzard__File__Filesystem* original;
+    Blizzard__File__Filesystem* next;
+    Blizzard__File__Functions   verbs;
 };
 
 #endif

@@ -3,10 +3,13 @@ all: generate
 ce-lua:
 	./script/build-cheatengine-scripts cheatengine profile/3.3.5a-windows-386/cheatengine
 
+clangd:
+	./script/setup-clangd-profile 3.3.5a-windows-386
+
 artifacts: FORCE
 	./bin/bna mk 3.3.5a-windows-386
 
-generate: artifacts
+generate: artifacts clangd
 
 tidy:
 	./bin/bna tidy 3.3.5a-windows-386

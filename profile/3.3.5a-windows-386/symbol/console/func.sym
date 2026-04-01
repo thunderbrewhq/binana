@@ -82,7 +82,6 @@ CComand_WaterRipples 0077F690 f end=0077F6B0
 CComand_DetailDoodadAlpha 0077F700 f end=0077F749
 CComand_CharacterAmbient 0077F750 f end=0077F7D1
 CComand_SetShadow 00780E20 f end=00780F41
-ConsoleCommandInvalidPtrCheck 0086B5A0 f end=0086B5F5
 ConsoleCommandHistoryDepth 0095BFB0 f end=0095BFB6 type="int32_t __stdcall func()"
 AddToHistory 0076B3B0 f end=0076B3E5
 ConvertBool 00772B30 f end=00772B91

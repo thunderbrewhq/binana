@@ -50,4 +50,3 @@ CGGameUI__m_iCurrentMapID 00BD088C l
 CGGameUI__m_bOwnsInstance 00BD0890 l
 CGGameUI__m_lastRegenTime 00BD08A0 l
 CGGameUI__m_MirrorTimerInfo 00BD0B80 l
-CGGameUI__m_luaTainted 00D4139C l

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+PROFILE=$1
+cp cmake/CMakeLists.txt profile/$PROFILE/CMakeLists.txt
+cp cmake/entry.c profile/$PROFILE/entry.c
+mkdir -p build/$PROFILE && cd build/$PROFILE
+cmake ../../profile/$PROFILE
+mv compile_commands.json ../../profile/$PROFILE/compile_commands.json
+cd ../..
+# rm profile/$PROFILE/CMakeLists.txt
+rm profile/$PROFILE/entry.c
