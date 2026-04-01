@@ -36,3 +36,4 @@ CGPetInfo__OnPetSpells 005D6B90 f end=005D6D8F
 CGPetInfo__InitializeGame 005D6D90 f end=005D6E5B
 CGPetInfo__EnterWorld 005D6E60 f end=005D6F0A
 CGPetInfo__GetComboPoints 005D3520 f end=005D3555
+CGPetInfo__ShutdownGame 005D2F90 f end=005D2FEE

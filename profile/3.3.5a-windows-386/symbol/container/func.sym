@@ -4,3 +4,7 @@ CGContainer_C__GetFreeSlots 007069E0 f end=00706A14
 CGContainer_C__constructor 00706A20 f end=00706AC2
 CGContainer_C__destructor 0070B120 f end=0070B1E5
 CGContainer_C__destructor 0070B1F0 f end=0070B21B
+TriggerMultiCastBarUpdate 005D9540 f end=005D95BC
+MultiCastBarItemStatsCallback 005D95C0 f end=005D95FF
+UpdateInvContents 005D9790 f end=005D995F
+InvUpdateHandler 005D9B40 f end=005D9C15

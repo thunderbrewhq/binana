@@ -14,3 +14,4 @@ CGCharacterInfo__EnterWorld 005EAF30 f end=005EAF63
 CGCharacterInfo__LeaveWorld 005EAF70 f end=005EB031
 CGCharacterInfo__OnInspectHonorStats 005E7A50 f end=005E7B00
 CGCharacterInfo__OnInspectArenaTeams 005E7B00 f end=005E7BFD
+CGCharacterInfo__ShutdownGame 005E7690 f end=005E76A8

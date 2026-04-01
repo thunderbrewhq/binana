@@ -38,3 +38,4 @@ FrameScript_SignalEvent 0081B530 f end=0081B549 ; FrameScript_SignalEvent(unsign
 FrameScript_CreateEvents 0081B5F0 f end=0081B714 ; FrameScript_CreateEvents(char const**, unsigned int)
 FrameScript_HookWrapper 00817050 f end=00817162
 FrameScript_Object__LoadFunction 00498370 f end=0049857B
+FrameScript_Object__GetScriptTime 00816870 f end=008168C5

@@ -2,3 +2,5 @@ SpellHistory__AddHistory 00805230 f end=0080532B
 SpellHistory__GetCooldown 00807980 f end=00807D3E
 SpellHistory__RecentlyCast 00807D40 f end=00807D98
 SpellHistory__IsOnHold 00807DA0 f end=00807F07
+SpellHistory__GarbageCollect 00802B00 f end=00802B95
+SpellHistory__RemoveStartCooldown 00804720 f end=00804779

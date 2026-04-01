@@ -10,3 +10,7 @@ CGGuildInfo__ClientGuildRosterHandler 005CC5D0 f end=005CC981
 CGGuildInfo__InitializeGame 005CD0B0 f end=005CD1B0
 CGGuildInfo__Script_GuildInfo 006CC440 f end=006CC554
 OnGuildEmblemActivate 006CC560 f end=006CC587
+CGGuildInfo__QueryRosterAndRanks 005CA9B0 f end=005CAA3A
+CGGuildInfo__EnterWorld 005CB900 f end=005CB9E4
+CGGuildInfo__OnGuildPermissions 005CB9F0 f end=005CBADC
+CGGuildInfo__ShutdownGame 005CC560 f end=005CC5CC
