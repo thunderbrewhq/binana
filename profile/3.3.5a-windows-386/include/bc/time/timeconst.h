@@ -1,0 +1,12 @@
+// TimeConst::FILETIMETimestampBias
+// TimeConst::FILETIMETimestampMax
+// TimeConst::FILETIMETimestampMin
+// TimeConst::TimestampsPerFILETIME
+// TimeConst::TimestampsPerSecond
+// TimeConst::TimestampsPerUnixtime
+// TimeConst::TimestampUnixBias
+// TimeConst::TimestampUnixMax
+// TimeConst::TimestampUnixMin
+// TimeConst::UnixTime64TimestampMax
+// TimeConst::UnixTime64TimestampMin
+// TimeConst::UnixTimestampBias
