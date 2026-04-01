@@ -1,0 +1,14 @@
+AlignAfterOpenBracket: AlwaysBreak
+AlignConsecutiveDeclarations: true
+AlignConsecutiveMacros: true
+AllowAllParametersOfDeclarationOnNextLine: false
+BinPackArguments: false
+BinPackParameters: false
+ContinuationIndentWidth: 4 
+IndentCaseLabels: true
+IndentWidth: 4
+ObjCBlockIndentWidth: 4
+PointerAlignment: Left
+UseTab: Never
+ColumnLimit: 100
+AlignConsecutiveAssignments: true
