@@ -48,14 +48,11 @@ luaL_register 0084FDD0 f end=0084FDEB type="void __stdcall func(lua_State* L, ch
 lua_getstack 0084FE40 f end=0084FEBB
 luaG_runerror 00850920 f
 lua_getinfo 00850A90 f end=00850B59
-luaopen_bit 00851010 f end=00851032
 luaopen_bit 00851010 f end=00851032 type="int32_t __stdcall func(lua_State* L)"
-luaopen_math 00851760 f end=008517C0
 luaopen_math 00851760 f end=008517C0 type="int32_t __stdcall func(lua_State* L)"
 luaopen_table 008521F0 f end=00852210 type="int32_t __stdcall func(lua_State* L)"
 luaopen_string 008540D0 f end=008540F7 type="int32_t __stdcall func(lua_State* L)"
 luaopen_base 00855060 f end=00855087 type="int32_t __stdcall func(lua_State* L)"
-lua_newstate 00855370 f end=008554E3
 lua_newstate 00855370 f end=008554E3 type="lua_State* __stdcall func(lua_Alloc f, void* ud, int32_t a3)"
 lua_close 00855510 f end=00855570
 luaM_initPool 00855740 f end=008557CA type="int32_t __stdcall func()"
