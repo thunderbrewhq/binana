@@ -8,7 +8,7 @@ DECLARE_STRUCT(Blizzard__File__Functions);
 
 typedef uintptr_t offset_in_Blizzard__File__Functions_to_System_File__Stacked__FileFunc;
 
-#include "bc/systemfile/stacked/filefunc.h"
+#include "bc/system_file/stacked/filefunc.h"
 #include "bc/util/offset.h"
 
 struct Blizzard__File__Functions {
