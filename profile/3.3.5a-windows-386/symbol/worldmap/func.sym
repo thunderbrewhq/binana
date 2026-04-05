@@ -17,3 +17,4 @@ CGWorldMap__InitializeGame 00547EB0 f end=00548568
 CGWorldMap__ClearArrowFrames 00542FB0 f end=00543015
 CGWorldMap__ShutdownGame 00547D20 f end=00547E1B
 CGWorldMap__GetNumDungeonLevels 00546190 f end=00546289
+CGWorldMap__LeaveWorld 00547150 f end=0054716E

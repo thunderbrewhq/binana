@@ -37,3 +37,4 @@ CSimpleRotationAnim_GetOrigin 004A62C0 f end=004A633B
 CSimpleRotationAnim_SetDegrees 004A6340 f end=004A63BE
 CSimpleRotationAnim_GetDegrees 004A63C0 f end=004A6409
 CSimpleRotationAnim_GetRadians 004A6490 f end=004A64D3
+CSimpleRotationAnim__DestroyScriptMetaTable 004A4D10 f end=004A4D35

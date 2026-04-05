@@ -24,3 +24,4 @@ CSimpleScrollFrame_GetHorizontalScrollRange 009726F0 f end=0097274F
 CSimpleScrollFrame_GetVerticalScrollRange 00972750 f end=009727AF
 CSimpleScrollFrame_UpdateScrollChildRect 009727B0 f end=009727EA
 CSimpleScrollFrame__CreateScriptMetaTable 009727F0 f end=00972809
+CSimpleScrollFrame__DestroyScriptMetaTable 009721E0 f end=00972205

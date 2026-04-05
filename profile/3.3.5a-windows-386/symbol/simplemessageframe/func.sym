@@ -39,3 +39,4 @@ CSimpleMessageFrame_AddMessage 009747C0 f end=00974884
 CSimpleMessageFrame_Clear 00974890 f end=009748C7
 CSimpleMessageFrame__CreateScriptMetaTable 009748D0 f end=009748E9
 CSimpleMessageFrameLineNode__constructor 009680F0 f end=00968174
+CSimpleMessageFrame__DestroyScriptMetaTable 00973D40 f end=00973D65

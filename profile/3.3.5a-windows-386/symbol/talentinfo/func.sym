@@ -11,3 +11,4 @@ CGTalentInfo_Inspect__SetInspectTarget 005C9F70 f end=005C9FE3
 CGTalentInfo__GetActiveTalentGroup 005C57A0 f end=005C57B4
 CGTalentInfo__GetUnspentTalentPoints 005C5F70 f end=005C5FBF
 CGTalentInfo__GetTalentGroup 005C5FC0 f end=005C6009
+CGTalentInfo__LeaveWorld 005C5790 f end=005C579D

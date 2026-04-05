@@ -21,3 +21,4 @@ CGReputationInfo__IsAtWar 00718B30 f end=00718B67
 CGReputationInfo__GetForcedReaction 005D06A0 f end=005D06DF
 CGReputationInfo__GetFactionChildren 005D2680 f end=005D26A7
 CGReputationInfo__ShutdownGame 005D14F0 f end=005D15C5
+CGReputationInfo__LeaveWorld 005D24C0 f end=005D24D7

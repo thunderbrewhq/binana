@@ -6,3 +6,4 @@ CSimpleAnim__SetEndDelay 0049AE60 f end=0049AE93
 CSimpleAnim__SetDuration 0049AEA0 f end=0049AEBF
 CSimpleAnim__CreateScriptMetaTable 004A6020 f end=004A6039
 CSimpleAnim__RegisterScriptMethods 004A4C30 f end=004A4C50
+CSimpleAnim__DestroyScriptMetaTable 004A4C50 f end=004A4C75

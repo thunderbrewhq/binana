@@ -6,3 +6,4 @@ profile/*/symbol/main.sym
 build
 profile/*/CMakeLists.txt
 profile/*/compile_commands.json
+bna

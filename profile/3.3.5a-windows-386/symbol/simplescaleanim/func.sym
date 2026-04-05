@@ -4,3 +4,4 @@ CSimpleScaleAnim_SetOrigin 004A6500 f end=004A65C7
 CSimpleScaleAnim_GetOrigin 004A65D0 f end=004A664B
 CSimpleScaleAnim_SetScale 004A6650 f end=004A66F9
 CSimpleScaleAnim_GetScale 004A6700 f end=004A6764
+CSimpleScaleAnim__DestroyScriptMetaTable 004A4D70 f end=004A4D95

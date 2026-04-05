@@ -98,3 +98,4 @@ StringToChatType 004FBB20 f end=004FBC5C
 CGChat__OnChannelMemberCount 004FB540 f end=004FB580
 CGChat__OnUserListUpdate 00500380 f end=00500553
 CGChat__LogOpenLock 0050DEB0 f end=0050DF76
+CGChat__EnterWorld 0050DF80 f end=0050DFC8

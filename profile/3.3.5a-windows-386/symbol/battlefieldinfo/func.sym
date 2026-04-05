@@ -20,3 +20,4 @@ CGBattlefieldInfo__RequestBattlegroundInstanceInfo 0054E5B0 f end=0054E6C9
 CGBattlefieldInfo__InitializeGame 0054E720 f end=0054EA2F
 CGBattlefieldInfo__GetRemoteStatsFromPet 00549810 f end=0054985F
 CGBattlefieldInfo__GetRemotePetStats 00549860 f end=005498C0
+BattlefieldInfoRegisterScriptFunctions 0054A3E0 f end=0054A406

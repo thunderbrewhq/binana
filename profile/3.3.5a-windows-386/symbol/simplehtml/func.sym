@@ -36,3 +36,4 @@ CSimpleHTML_GetHyperlinkFormat 009751A0 f end=009751E0
 CSimpleHTML_SetHyperlinksEnabled 009751E0 f end=00975238
 CSimpleHTML_GetHyperlinksEnabled 00975240 f end=0097529E
 CSimpleHTML__CreateScriptMetaTable 009752A0 f end=009752B9
+CSimpleHTML__DestroyScriptMetaTable 009749E0 f end=00974A05

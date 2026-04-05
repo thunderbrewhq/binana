@@ -129,3 +129,4 @@ CGTooltip_SetBackpackToken 006307E0 f end=0063098B
 CGTooltip_SetQuestLogSpecialItem 00630990 f end=00630A7C
 CGTooltip_SetAction 00631000 f end=00631561
 CGTooltip_SetHyperlinkCompareItem 00631B60 f end=00631D0E
+CGTooltip__DestroyScriptMetaTable 0061B4C0 f end=0061B4E5

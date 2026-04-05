@@ -11,3 +11,4 @@ CGCooldown_GetReverse 005EC9F0 f end=005ECA30
 CGCooldown_SetDrawEdge 005ECA30 f end=005ECA74
 CGCooldown_GetDrawEdge 005ECA80 f end=005ECAC0
 CGCooldown_SetCooldown 005ECE80 f end=005ECF5D
+CGCooldown__DestroyScriptMetaTable 005EBE30 f end=005EBE55

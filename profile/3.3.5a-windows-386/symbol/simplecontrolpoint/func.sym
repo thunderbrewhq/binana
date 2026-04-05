@@ -5,3 +5,4 @@ CSimpleControlPoint_SetOffset 004A6980 f end=004A6A61
 CSimpleControlPoint_GetOffset 004A6A70 f end=004A6B02
 CSimpleControlPoint_SetOrder 004A6B10 f end=004A6B91
 CSimpleControlPoint_GetOrder 004A6BA0 f end=004A6BE1
+CSimpleControlPoint__DestroyScriptMetaTable 004A4DC0 f end=004A4DE5

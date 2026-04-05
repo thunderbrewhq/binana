@@ -71,3 +71,4 @@ CSimpleFontString_GetIndentedWordWrap 0048E600 f end=0048E67C
 CSimpleFontString__GetFontName 00482270 f end=00482287
 CSimpleFontString__SetSpacing 004870D0 f end=00487122
 CSimpleFontString__SetShadowColor 00487130 f end=00487158
+CSimpleFontString__DestroyScriptMetaTable 0048BCC0 f end=0048BCE5
