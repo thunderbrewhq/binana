@@ -12,3 +12,5 @@ TextBlockGetMaxCharsWithinWidthAndHeight 004BDEF0 f end=004BDF88
 TextBlockGetMaxCharsWithinWidthFromEnd 004BDF90 f end=004BE03C
 TextBlockGenerateFont 004BE9C0 f end=004BEB8C type="HTEXTFONT __stdcall func(char* fontName, uint32_t fontFlags, float fontHeight)"
 TextBlockGetFontName 004BD960 f end=004BD983
+TextBlockGetFontFlags 004BD990 f end=004BD9CE
+TextBlockRemoveShadow 004BDA70 f end=004BDA91

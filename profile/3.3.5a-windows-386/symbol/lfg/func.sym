@@ -28,3 +28,7 @@ CGLookingForGroup__InitializeGame 0055D440 f end=0055D6A8
 CGLookingForGroup__ReadLFGParty 00553620 f end=005536A0
 CGLookingForGroup__SetLFGBootVote 00554960 f end=00554A46
 CGLookingForGroup__RequestLFGPartyInfo 00555A00 f end=00555A66
+CGLookingForGroup__GetClassRoles 00552940 f end=0055294E
+CGLookingForGroup__LeaveLFG 00553AB0 f end=00553B4D
+LFGLIST__Clear 00558AF0 f end=00558C2F
+LFGLIST__Copy 0055B1A0 f end=0055B6FC

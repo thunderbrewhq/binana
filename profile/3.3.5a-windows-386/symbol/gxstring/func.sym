@@ -17,3 +17,4 @@ CGxString__SetGradient 006C78F0 f end=006C7A9C ; CGxString::SetGradient(int, int
 CGxString__GetNewString 006C7AA0 f end=006C7B0E ; CGxString::GetNewString(int)
 CGxString__CreateGeometry 006C7B10 f end=006C7FFA ; CGxString::CreateGeometry()
 CGxString__CalculateVertsNeeded 006C63E0 f end=006C640D
+CGxString__RemoveShadow 006BD0E0 f end=006C5E65

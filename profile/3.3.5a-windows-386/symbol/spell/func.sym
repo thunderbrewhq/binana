@@ -131,3 +131,4 @@ SpellVisualsGetMountTransitionHeight 007F9F00 f end=007F9F0B
 SpellVisualsGetModelAttachRecCount 007FA9F0 f end=007FAA18
 Spell_C_GetCursorWorldObjectModel 007FD7A0 f end=007FD7A6
 Spell_C_WasItemRecentlyUsed 00809130 f end=008091A5
+SpellIsAuraEffect 0076BD50 f end=0076BD76

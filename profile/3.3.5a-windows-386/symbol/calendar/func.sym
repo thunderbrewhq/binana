@@ -54,3 +54,4 @@ CGCalendar__ProcessLockoutAdded 005C37D0 f end=005C387D
 CGCalendar__ProcessLockoutUpdated 005C3880 f end=005C3AA8
 CGCalendar__InviteRSVP 005BC3E0 f end=005BC45C
 CGCalendar__CreateGuildSignUpEvent 005BBF20 f end=005BC02D
+CGCalendar__CreatePlayerEvent 005BBE50 f end=005BBF1B

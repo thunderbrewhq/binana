@@ -40,3 +40,5 @@ CParticleEmitter2__Update 0097EB10 f end=0097EDF0
 CParticleEmitter2__ChangeFrameOfReference 008243E0 f end=00824454
 CParticleEmitter2__Sync 0097EDF0 f end=0097EEB7
 CParticleEmitter2__GetNumBatches 0097BAE0 f end=0097BB2F
+CParticleEmitter2__GetNumPrimitives 0097BB30 f end=0097BB7F
+CParticleEmitter2__SyncAllocation 0097E480 f end=0097E571

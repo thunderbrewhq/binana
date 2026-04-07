@@ -26,3 +26,4 @@ CSimpleColorSelect_GetColorHSV 00970FD0 f end=0097104E
 CSimpleColorSelect_SetColorRGB 00971050 f end=009710C5
 CSimpleColorSelect_GetColorRGB 009710D0 f end=0097118C
 CSimpleColorSelect__DestroyScriptMetaTable 00970800 f end=00970825
+CSimpleColorSelect__UpdateColor 0096E3D0 f end=0096E3EE

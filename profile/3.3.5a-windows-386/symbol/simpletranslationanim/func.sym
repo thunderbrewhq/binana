@@ -3,3 +3,5 @@ CSimpleTranslationAnim__RegisterScriptMethods 004A4C80 f end=004A4CAD
 CSimpleTranslationAnim_SetOffset 004A6040 f end=004A6121
 CSimpleTranslationAnim_GetOffset 004A6130 f end=004A61C8
 CSimpleTranslationAnim__DestroyScriptMetaTable 004A4CB0 f end=004A4CD5
+CSimpleTranslationAnim__SetOffset 00497FF0 f end=00498037
+CSimpleTranslationAnim__constructor 00499C50 f end=00499C7A

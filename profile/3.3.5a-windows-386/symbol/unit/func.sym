@@ -492,3 +492,6 @@ CGUnit_C__StopUpdatingMissileTrajectory 006FBE80 f end=006FBEAC
 CGUnit_C__SetCastSchoolImmunities 00715AA0 f end=00715AB0
 CGUnit_C__SetCastImmunities 00715AB0 f end=00715AC0
 CGUnit_C__ApplyUICastingDelay 00726240 f end=00726275
+CGUnit_C__InsertSortedAura 00727C00 f end=00727E65
+CGUnit_C__SortAuras 0072C510 f end=0072C9A6
+CGUnit_C__GetSortedAuraSlot 0072C9B0 f end=0072CBA3

@@ -99,3 +99,5 @@ CGChat__OnChannelMemberCount 004FB540 f end=004FB580
 CGChat__OnUserListUpdate 00500380 f end=00500553
 CGChat__LogOpenLock 0050DEB0 f end=0050DF76
 CGChat__EnterWorld 0050DF80 f end=0050DFC8
+BuildPartyDisplayList 005045C0 f end=0050471B
+BuildRaidDisplayList 00504720 f end=0050483A

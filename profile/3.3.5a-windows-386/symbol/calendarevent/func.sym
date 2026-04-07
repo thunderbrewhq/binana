@@ -25,3 +25,5 @@ CGCalendarEvent__RemoveInvite 005F2220 f end=005F23AF
 CGCalendarEvent__UpdateInviteModeratorStatus 005F2640 f end=005F26EB
 CGCalendarEvent__constructor 005F2A20 f end=005F2B6E
 CGCalendarEvent__destructor 005F2B70 f end=005F2BF7
+CGCalendarEvent__SetTime 005F12A0 f end=005F12D1
+CGCalendarEvent__SignUp 005F2530 f end=005F2633

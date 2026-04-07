@@ -148,3 +148,4 @@ CSimpleFrame__GetHitRectInsets 0048EAC0 f end=0048EAF3
 CSimpleFrame__AllowAttributeChanges 0048ECF0 f end=0048ED21
 CSimpleFrame__AttributeChangesAllowed 0048ED30 f end=0048ED5B
 CSimpleFrame__SetHitRectInsets 0048F820 f end=0048F881
+CSimpleFrame__Lower 0048E9B0 f end=0048E9BD

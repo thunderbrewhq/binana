@@ -14,3 +14,4 @@ CGCharacterModelBase_SetUnit 005978E0 f end=00597956
 CGCharacterModelBase_SetCreature 00597960 f end=00597A09
 CGCharacterModelBase_SetRotation 00597A10 f end=00597A7A
 CGCharacterModelBase_RefreshUnit 00597B00 f end=00597B45
+CGCharacterModelBase__RefreshUnit 005977E0 f end=00597832

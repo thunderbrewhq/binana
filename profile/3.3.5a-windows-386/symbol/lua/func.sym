@@ -125,3 +125,5 @@ _luaF_freeproto 0085CFB0 f end=0085D04A
 _luaF_freeclosure 0085D050 f end=0085D09C
 _luaU_dump 0085D660 f end=0085D6C7
 _luaU_header 00861B90 f end=00861BD0
+_lua_settable 0084E8D0 f end=0084E8FD
+_lua_settaint 0084F0D0 f end=0084F0E6

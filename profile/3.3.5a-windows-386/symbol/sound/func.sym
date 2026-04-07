@@ -25,3 +25,4 @@ SE2__ShutDownCapture 0087C540 f end=0087C580
 SE2__VoiceChat_StartCapture 009868C0 f end=009868CF
 SE2__AlternateCaptureCallbackIsActive 00878A60 f end=00878A72
 SE2__IsCapturing 00878AA0 f end=00878AC4
+SE2__StopAllSounds 004C5CC0 f end=004C5CD9

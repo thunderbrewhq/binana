@@ -37,3 +37,4 @@ CSimpleFont_SetJustifyH 004A4AB0 f end=004A4AFF
 CSimpleFont_SetJustifyV 004A4B00 f end=004A4B4F
 CSimpleFont_SetIndentedWordWrap 004A4B50 f end=004A4B9F
 JustifyToString 008150D0 f end=00815101
+ReadOrigin 004A4BA0 f end=004A4C24

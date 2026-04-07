@@ -46,3 +46,5 @@ CSimpleTexture_GetVertTile 0048CC90 f end=0048CCF2
 CSimpleTexture__CreateScriptMetaTable 0048CD00 f end=0048CD19
 CSimpleTexture__GetTexture 004815E0 f end=0048161C
 CSimpleTexture__DestroyScriptMetaTable 0048BC40 f end=0048BC65
+CSimpleTexture__SetDesaturated 00481700 f end=0048171D
+CSimpleTexture__GetImageModePixelShader 00483290 f end=004832BA

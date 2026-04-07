@@ -77,3 +77,5 @@ CSimpleMessageScrollFrame__SetScrollOffset 0096A970 f end=0096A9C6
 CSimpleMessageScrollFrame__PageUp 0096AB50 f end=0096ABCD
 CSimpleMessageScrollFrame__PageDown 0096ABD0 f end=0096AC4D
 CSimpleMessageScrollFrame__DestroyScriptMetaTable 00972830 f end=00972855
+CSimpleMessageScrollFrame__SetTimeVisible 00969280 f end=009692BF
+CSimpleMessageScrollFrame__SetFadeDuration 009692C0 f end=009692FF

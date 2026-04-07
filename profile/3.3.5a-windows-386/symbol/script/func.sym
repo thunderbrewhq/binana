@@ -2245,3 +2245,5 @@ Script_Undress 00597E90 f end=00597EC7
 Script_Dress 00597ED0 f end=00597F15
 Script_TryOn 00598830 f end=005989DF
 Script_DescendStart 005FC0F0 f end=005FC131
+SetOrClearAssignment 0052DF40 f end=0052E1AF
+GetLuaCompanionType 0053B600 f end=0053B650

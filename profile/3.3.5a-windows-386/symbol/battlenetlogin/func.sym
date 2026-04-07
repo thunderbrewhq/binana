@@ -1,3 +1,6 @@
 BattlenetLogin__GetNumGameAccounts 008C6AF0 f end=008C6AF7
 BattlenetLogin__LogConnectionStatus 008C6350 f end=008C638E
 BattlenetLogin__CreateTumorManager 008C7590 f end=008C7AAC
+BattlenetLogin__GetGameAccountName 008C6B00 f end=008C6B28
+BattlenetLogin__GetGameAccountRegion 008C6B60 f end=008C6B87
+BattlenetLogin__SetGameAccount 008C80E0 f end=008C8272

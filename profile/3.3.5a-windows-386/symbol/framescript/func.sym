@@ -40,3 +40,9 @@ FrameScript_HookWrapper 00817050 f end=00817162
 FrameScript_Object__LoadFunction 00498370 f end=0049857B
 FrameScript_Object__GetScriptTime 00816870 f end=008168C5
 FrameScript_HandleError 00819730 f end=0081980C type="int32_t __stdcall func(lua_State* L)"
+FrameScript_ResetCPUUsage 0081A4D0 f end=0081A522
+FrameScript_Object__IsScriptEventRegistered 0081B330 f end=0081B378
+FrameScript_Object__RegisterScriptEvent 0081B380 f end=0081B407
+FrameScript_Object__UnregisterScriptEvent 0081B410 f end=0081B46D
+FrameScript_Object__RegisterAllScriptEvents 0081B470 f end=0081B4B1
+FrameScript_Object__UnregisterAllScriptEvents 0081B4C0 f end=0081B501

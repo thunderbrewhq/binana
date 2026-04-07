@@ -7,3 +7,6 @@ CSimpleAnim__SetDuration 0049AEA0 f end=0049AEBF
 CSimpleAnim__CreateScriptMetaTable 004A6020 f end=004A6039
 CSimpleAnim__RegisterScriptMethods 004A4C30 f end=004A4C50
 CSimpleAnim__DestroyScriptMetaTable 004A4C50 f end=004A4C75
+CSimpleAnim__Play 0049A8F0 f end=0049AAAB
+CSimpleAnim__Stop 0049ADC0 f end=0049AE20
+CSimpleAnim__SetOrder 0049AEC0 f end=0049AF1A

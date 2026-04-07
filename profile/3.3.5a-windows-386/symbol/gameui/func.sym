@@ -170,3 +170,6 @@ CGGameUI__OpenPlayerSkinned 00512520 f end=00512540
 CGGameUI__CheckInstanceDifficultyMessages 00524720 f end=00524779
 CGGameUI__ShowHealingFeedback 00513480 f end=005134B3
 CGGameUI__GetComboPoints 00513920 f end=00513955
+CGGameUI__GetInstanceDifficulty 005138C0 f end=005138C6
+CGGameUI__GetCurrentRaidDifficulty 00513900 f end=00513914
+CGGameUI__SendRaidDifficultyMessage 00524780 f end=005248D1

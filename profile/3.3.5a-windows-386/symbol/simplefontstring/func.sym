@@ -72,3 +72,6 @@ CSimpleFontString__GetFontName 00482270 f end=00482287
 CSimpleFontString__SetSpacing 004870D0 f end=00487122
 CSimpleFontString__SetShadowColor 00487130 f end=00487158
 CSimpleFontString__DestroyScriptMetaTable 0048BCC0 f end=0048BCE5
+CSimpleFontString__GetFontFlags 00482300 f end=00482317
+CSimpleFontString__SetTextHeight 00483890 f end=00483908
+CSimpleFontString__SetShadowOffset 00483DD0 f end=00483E78

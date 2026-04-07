@@ -26,3 +26,6 @@ CScriptRegion_GetHeight 0049D550 f end=0049D61B
 CScriptRegion_GetNumPoints 0049D8B0 f end=0049D949
 CScriptRegion_StopAnimating 0049E070 f end=0049E0A9
 CScriptRegion_IsDragging 0049E0B0 f end=0049E0F9
+CScriptRegion__GetLayoutFrameByName 004884D0 f end=00488531
+CScriptRegion__IsMouseOver 00488570 f end=0048866D
+CScriptRegion__RegisterAnimGroup 00488AE0 f end=00488B4C
