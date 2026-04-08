@@ -86,7 +86,6 @@ stack_init 00855090 f end=00855118 type="void __usercall func(lua_State* L1@<esi
 f_luaopen 00855120 f end=008551AB type="void __stdcall func(lua_State* L, void* ud)"
 luaE_newthread 00855240 f end=00855304
 luaE_freethread 00855310 f end=00855366
-luaE_freethread 00855310 f end=00855366
 lua_newstate 00855370 f end=008554E3 type="lua_State* __stdcall func(lua_Alloc f, void* ud, int32_t profile)"
 lua_close 00855510 f end=00855570
 luaM_initPool 00855740 f end=008557CA type="int32_t __stdcall func()"
