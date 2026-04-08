@@ -184,6 +184,7 @@ struct Node {
 
 struct Table {
     GCObject* next;
+    uint32_t  unk04;
     lu_byte   tt;
     lu_byte   marked;
     lu_byte   flags;

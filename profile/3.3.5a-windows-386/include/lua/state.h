@@ -9,6 +9,8 @@ DECLARE_STRUCT(global_State);
 
 DECLARE_STRUCT(lua_State);
 
+DECLARE_STRUCT(LG);
+
 #include "lua/object.h"
 #include "lua/types.h"
 
@@ -31,6 +33,7 @@ struct global_State {
     stringtable   strt;
     lua_Alloc     frealloc;
     void*         ud;
+    lu_byte       profile;
     lu_byte       currentwhite;
     lu_byte       gcstate;
     int32_t       sweepstrgc;
@@ -52,11 +55,18 @@ struct global_State {
     lua_State*    mainthread;
     UpVal         uvhead;
     Table*        mt[9];
-    TString*      tmname[0];
+    uint32_t      unkBC;
+    uint32_t      unkC0;
+    TString*      tmname[17];
 };
 
 struct lua_State {
-    GCObject*     next;
+    GCObject* next;
+    // Added by Blizzard
+    // Set to:
+    // - lua_tainted
+    // - lua_gctag
+    int32_t       unk04;
     lu_byte       tt;
     lu_byte       marked;
     lu_byte       status;
@@ -83,6 +93,8 @@ struct lua_State {
     GCObject*     gclist;
     lua_longjmp*  errorJmp;
     ptrdiff_t     errfunc;
+    uint32_t      unk78;
+    uint32_t      unk7C;
 };
 
 union GCObject {
@@ -94,6 +106,11 @@ union GCObject {
     Proto     p;
     UpVal     uv;
     lua_State th;
+};
+
+struct LG {
+    lua_State    l;
+    global_State g;
 };
 
 #endif
