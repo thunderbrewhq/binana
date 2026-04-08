@@ -107,6 +107,11 @@ func compile_idapro_artifacts(profile *Profile, params *CompileArtifactsParams) 
 	name_instances := make(map[string]int)
 
 	for symbol := range profile.Symbols.Entries() {
+		if symbol.Symbol.Auto {
+			// Ignore auto-analysis symbols
+			continue
+		}
+
 		name := symbol.Symbol.Name
 		instances := name_instances[name]
 		name_instances[name] = instances + 1

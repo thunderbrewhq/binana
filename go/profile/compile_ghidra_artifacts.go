@@ -3,6 +3,8 @@ package profile
 import (
 	"os"
 	"path/filepath"
+
+	"github.com/thunderbrewhq/binana/go/symbols"
 )
 
 func compile_ghidra_artifacts(profile *Profile, params *CompileArtifactsParams) (err error) {
@@ -15,8 +17,18 @@ func compile_ghidra_artifacts(profile *Profile, params *CompileArtifactsParams) 
 	if err != nil {
 		return
 	}
+	// strip out autoanalysis symbols
+	var symbol_table symbols.Table
+	symbol_table.Init()
+	for entry := range profile.Symbols.Entries() {
+		if !entry.Symbol.Auto {
+			if err = symbol_table.Insert(entry); err != nil {
+				return
+			}
+		}
+	}
 
-	_, err = profile.Symbols.WriteTo(symbol_file)
+	_, err = symbol_table.WriteTo(symbol_file)
 	symbol_file.Close()
 	return
 }
