@@ -19,4 +19,4 @@ CGUIMacros__LoadMacros 00567FD0 f end=00568011
 CGUIMacros__CreateMacro 00568020 f end=00568158
 EvaluateMacroOptions 005F0DF0 f end=005F0FF5
 QSortIcons 00564A20 f end=00564A77
-CGUIMacros__Shutdown 00566530 f end=005F03AD
+CGUIMacros__Shutdown 00566530 f end=00566612

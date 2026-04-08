@@ -1,4 +1,4 @@
-LoadScriptFunctions 005120E0 f end=00530F86
+LoadScriptFunctions 005120E0 f end=00512272
 CGGameUI__CameraMusicIsPlaying 005124B0 f end=005124C1
 CGGameUI__SequenceMusicIsPlaying 005124D0 f end=005124D6
 CGGameUI__ClearLootSlot 005124E0 f end=005124E9
