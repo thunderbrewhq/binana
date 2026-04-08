@@ -1,35 +1,56 @@
 luaO_fb2int 0084D3D0 f end=0084D3ED
+luaO_log2 0084D3F0 f end=0084D418 type="int32_t __stdcall func(uint32_t x)"
 luaO_rawequalObj 0084D420 f end=0084D467
 luaO_pushvfstring 0084D580 f end=0084D7C6
 luaO_chunkid 0084D860 f end=0084D9B2 type="void __stdcall func(char* out, char* src, size_t bufflen)"
 index2adr 0084D9C0 f end=0084DA48 type="TValue* __usercall func@<eax>(lua_State* L@<ecx>, int32_t idx@<eax>)"
+luaA_pushobject 0084DA50 f end=0084DAA8
+lua_checkstack 0084DAB0 f end=0084DB06
+lua_xmove 0084DB10 f end=0084DB90
+lua_newthread 0084DB90 f end=0084DBD0
 lua_gettop 0084DBD0 f end=0084DBE1 type="int32_t __stdcall func(lua_State* L)"
 lua_settop 0084DBF0 f end=0084DC49 type="void __stdcall func(lua_State* L, int32_t idx)"
 lua_remove 0084DC50 f end=0084DCC0
 lua_insert 0084DCC0 f
 lua_pushvalue 0084DE50 f end=0084DEAE
 lua_type 0084DEB0 f
+lua_iscfunction 0084DEF0 f end=0084DF17
 lua_isnumber 0084DF20 f
 lua_isstring 0084DF60 f
+lua_rawequal 0084DF90 f end=0084DFD1
 lua_tonumber 0084E030 f
+lua_tointeger 0084E070 f end=0084E0AE
+lua_toboolean 0084E0B0 f end=0084E0DA
 lua_tolstring 0084E0E0 f
+lua_objlen 0084E150 f end=0084E1AB
 lua_touserdata 0084E1C0 f
+lua_tothread 0084E1F0 f end=0084E20C
+lua_topointer 0084E210 f end=0084E261
 lua_pushnil 0084E280 f end=0084E29F type="void __stdcall func(lua_State* L)"
 lua_pushnumber 0084E2A0 f
+lua_pushinteger 0084E2D0 f end=0084E2F4
 lua_pushlstring 0084E300 f end=0084E34A type="void __stdcall func(lua_State* L, char* s, size_t len)"
 lua_pushstring 0084E350 f
 lua_pushvfstring 0084E3A0 f end=0084E3CF
 lua_pushfstring 0084E3D0 f end=0084E3FF
 lua_pushcclosure 0084E400 f end=0084E4C9 type="void __stdcall func(lua_State* L, lua_CFunction fn, int n)"
+lua_pushboolean 0084E4D0 f end=0084E4F9
 lua_pushlightuserdata 0084E500 f end=0084E524
+lua_pushthread 0084E530 f end=0084E55E
+lua_gettable 0084E560 f end=0084E586
+lua_getfield 0084E590 f end=0084E5F2
 lua_rawget 0084E600 f
 lua_rawgeti 0084E670 f
 lua_createtable 0084E6E0 f end=0084E72A type="void __stdcall func(lua_State* L, int32_t narray, int32_t nrec)"
 lua_getmetatable 0084E730 f end=0084E792
+lua_settable 0084E8D0 f end=0084E8FD
+lua_setfield 0084E900 f end=0084E965
 lua_rawset 0084E970 f
 lua_setmetatable 0084EA90 f end=0084EB35
+lua_setfenv 0084EB40 f end=0084EBE8
 lua_call 0084EBF0 f end=0084EC2B
 lua_pcall 0084EC50 f end=0084ECBB
+lua_dump 0084ED00 f end=0084ED3A
 lua_gc 0084ED50 f end=0084EE28 type="int32_t __stdcall func(lua_State* L, int32_t what, int32_t data)"
 lua_gcupdatesizes 0084EE50 f end=0084EE59
 lua_gcgetsize 0084EE60 f end=0084EE69
@@ -37,13 +58,21 @@ lua_gcupdatetimes 0084EE70 f end=0084EE79
 lua_gcgettime 0084EE80 f end=0084EE89
 lua_gcgetfunctiontime 0084EE90 f end=0084EF1C
 lua_error 0084EF30 f end=0084EF43
+lua_next 0084EF50 f end=0084EF86
 lua_concat 0084EF90 f end=0084F010
 lua_setdecimalconversion 0084F010 f end=0084F022
 lua_convertdecimal 0084F030 f end=0084F0C6
+lua_settaint 0084F0D0 f end=0084F0E6
+lua_newuserdata 0084F0F0 f end=0084F14D
 luaL_error 0084F280 f
+luaL_pushresult 0084F5C0 f end=0084F603
+luaL_buffinit 0084F6A0 f end=0084F6BA
 luaL_ref 0084F6C0 f end=0084F793 type="int32_t __stdcall func(lua_State* L, int32_t t)"
 luaL_unref 0084F7A0 f
 luaL_optlstring 0084FA50 f end=0084FAAB
+luaL_optnumber 0084FB30 f end=0084FB5E
+luaL_optinteger 0084FBD0 f end=0084FBFE
+luaL_checkoption 0084FD20 f end=0084FDCF
 luaL_register 0084FDD0 f end=0084FDEB type="void __stdcall func(lua_State* L, char* libname, luaL_Reg* l)"
 lua_getstack 0084FE40 f end=0084FEBB
 luaG_runerror 00850920 f
@@ -53,15 +82,25 @@ luaopen_math 00851760 f end=008517C0 type="int32_t __stdcall func(lua_State* L)"
 luaopen_table 008521F0 f end=00852210 type="int32_t __stdcall func(lua_State* L)"
 luaopen_string 008540D0 f end=008540F7 type="int32_t __stdcall func(lua_State* L)"
 luaopen_base 00855060 f end=00855087 type="int32_t __stdcall func(lua_State* L)"
-lua_newstate 00855370 f end=008554E3 type="lua_State* __stdcall func(lua_Alloc f, void* ud, int32_t a3)"
+stack_init 00855090 f end=00855118 type="void __usercall func(lua_State* L1@<esi>, lua_State* L@<edi>)"
+f_luaopen 00855120 f end=008551AB type="void __stdcall func(lua_State* L, void* ud)"
+luaE_newthread 00855240 f end=00855304
+luaE_freethread 00855310 f end=00855366
+luaE_freethread 00855310 f end=00855366
+lua_newstate 00855370 f end=008554E3 type="lua_State* __stdcall func(lua_Alloc f, void* ud, int32_t profile)"
 lua_close 00855510 f end=00855570
 luaM_initPool 00855740 f end=008557CA type="int32_t __stdcall func()"
 luaM_freePool 008557D0 f end=0085581C
 luaM_reallocPool 008558E0 f end=00855A11 type="void* __stdcall func(void* ud, void* ptr, size_t osize, size_t nsize)"
+luaD_rawrunprotected 00855AF0 f end=00855B55
+luaD_growstack 00855CD0 f end=00855CFC
 luaD_throw 008562E0 f
 luaD_precall 00856370 f
 luaD_precall_profile 00856550 f end=00856756
 luaD_call 00856760 f
+luaS_newlstr 00856C80 f end=00856DC6
+luaS_newudata 00856DD0 f end=00856E4C
+luaV_tonumber 00856E50 f end=00856E9E
 luaV_execute 00857CA0 f
 luaC_separateudata 0085A8B0 f end=0085A952
 luaC_sizeall 0085B4E0 f end=0085B52D
@@ -70,60 +109,29 @@ luaC_timeall 0085B560 f end=0085B598
 luaC_gettime 0085B5A0 f end=0085B602
 luaC_step 0085B950 f end=0085B9D2
 luaC_fullgc 0085B9E0 f end=0085BA4B
+luaC_barrierf 0085BA50 f end=0085BA83
 luaC_barrierback 0085BA90 f end=0085BAAB
 luaC_link 0085BAB0 f end=0085BAF1
+luaT_gettm 0085BBE0 f end=0085BC09
 luaT_gettmbyobj 0085BC10 f end=0085BC67
+setarrayvector 0085C190 f end=0085C1F6 type="void __stdcall func(lua_State* L@<eax>, Table* t@<esi>, int32_t size@<edi>)"
+setnodevector 0085C200 f end=0085C2DC type="void __usercall func(lua_State* L, Table* t@<edi>, int32_t size@<eax>)"
+luaH_new 0085C2E0 f end=0085C337 type="Table* __stdcall func(lua_State* L, int32_t narray, int32_t nhash)"
+luaH_free 0085C340 f end=0085C39B
 luaH_getstr 0085C430 f end=0085C46F
+luaH_get 0085C470 f end=0085C515
+luaH_resizearray 0085C960 f end=0085C9A3
 luaF_newCclosure 0085CC10 f end=0085CC86
+luaF_newLclosure 0085CC90 f end=0085CD33
+luaF_findupval 0085CD80 f end=0085CE2D
+luaF_freeupval 0085CE30 f end=0085CE63
 luaF_close 0085CE70 f end=0085CF3F
+luaF_freeproto 0085CFB0 f end=0085D04A
+luaF_freeclosure 0085D050 f end=0085D09C
 luaF_getlocalname 0085D0A0 f end=0085D0ED
 luaZ_openspace 0085D170 f end=0085D1CC
+luaU_dump 0085D660 f end=0085D6C7
+luaM_toobig 0085D6D0 f end=0085D6E8 type="void* __stdcall func(lua_State* L)"
+luaM_realloc_ 0085D6F0 f end=0085D739 type="void* __stdcall func(lua_State* L, void* block, size_t osize, size_t nsize)"
 luaX_syntaxerror 0085D9E0 f end=0085D9F9
-_luaA_pushobject 0084DA50 f end=0084DAA8
-_lua_checkstack 0084DAB0 f end=0084DB06
-_lua_xmove 0084DB10 f end=0084DB90
-_lua_newthread 0084DB90 f end=0084DBD0
-_lua_iscfunction 0084DEF0 f end=0084DF17
-_lua_rawequal 0084DF90 f end=0084DFD1
-_lua_tointeger 0084E070 f end=0084E0AE
-_lua_toboolean 0084E0B0 f end=0084E0DA
-_lua_objlen 0084E150 f end=0084E1AB
-_lua_tothread 0084E1F0 f end=0084E20C
-_lua_topointer 0084E210 f end=0084E261
-_lua_pushinteger 0084E2D0 f end=0084E2F4
-_lua_pushboolean 0084E4D0 f end=0084E4F9
-_lua_pushthread 0084E530 f end=0084E55E
-_lua_gettable 0084E560 f end=0084E586
-_lua_getfield 0084E590 f end=0084E5F2
-_lua_setfield 0084E900 f end=0084E965
-_lua_setfenv 0084EB40 f end=0084EBE8
-_lua_dump 0084ED00 f end=0084ED3A
-_lua_next 0084EF50 f end=0084EF86
-_lua_newuserdata 0084F0F0 f end=0084F14D
-_luaL_pushresult 0084F5C0 f end=0084F603
-_luaL_buffinit 0084F6A0 f end=0084F6BA
-_luaL_optnumber 0084FB30 f end=0084FB5E
-_luaL_optinteger 0084FBD0 f end=0084FBFE
-_luaL_checkoption 0084FD20 f end=0084FDCF
-_luaE_newthread 00855240 f end=00855304
-_luaE_freethread 00855310 f end=00855366
-_luaD_rawrunprotected 00855AF0 f end=00855B55
-_luaD_growstack 00855CD0 f end=00855CFC
-_luaS_newlstr 00856C80 f end=00856DC6
-_luaS_newudata 00856DD0 f end=00856E4C
-_luaV_tonumber 00856E50 f end=00856E9E
-_luaC_barrierf 0085BA50 f end=0085BA83
-_luaT_gettm 0085BBE0 f end=0085BC09
-_luaH_new 0085C2E0 f end=0085C337
-_luaH_free 0085C340 f end=0085C39B
-_luaH_get 0085C470 f end=0085C515
-_luaH_resizearray 0085C960 f end=0085C9A3
-_luaF_newLclosure 0085CC90 f end=0085CD33
-_luaF_findupval 0085CD80 f end=0085CE2D
-_luaF_freeupval 0085CE30 f end=0085CE63
-_luaF_freeproto 0085CFB0 f end=0085D04A
-_luaF_freeclosure 0085D050 f end=0085D09C
-_luaU_dump 0085D660 f end=0085D6C7
-_luaU_header 00861B90 f end=00861BD0
-_lua_settable 0084E8D0 f end=0084E8FD
-_lua_settaint 0084F0D0 f end=0084F0E6
+luaU_header 00861B90 f end=00861BD0

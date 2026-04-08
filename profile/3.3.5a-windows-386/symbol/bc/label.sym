@@ -19,3 +19,4 @@ System_Thread__s_stackTraceEntryPointTLS 00B3831C l type="Blizzard__Thread__TLSS
 System_Thread__s_slotList 00B33730 l type="Blizzard__Thread__TLSSlot[128]"
 System_Thread__s_slotListUsed 00B33948 l type="int32_t"
 System_Thread__s_mainThread 00B33710 l type="Blizzard__Thread__Thread"
+System_Thread__s_ThreadRegistry 00B3394C l

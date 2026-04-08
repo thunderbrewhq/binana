@@ -1,4 +1,4 @@
-operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
+operator_new 00401010 f end=00401027 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
 operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
 System_SFile2__FindFile 00424780 f end=00424B0B
 Blizzard__Mopaq__SFileGetLastError 00426A30 f end=00426A36

@@ -1,2 +1,5 @@
 lua_tainted 00D4139C l
 luaO_nilobject_ 00A46F78 l type="TValue"
+lua_gctag 00D413AC l type="int32_t"
+dummynode_ 00A48280 l type="Node"
+log_2 00A46F88 l type="lu_byte[256]"

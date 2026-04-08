@@ -24,7 +24,7 @@ FrameScript_Object__constructor 00819830 f end=0081984B type="void __thiscall fu
 FrameScript_Object__destructor 00819850 f end=00819872 ; FrameScript_Object::~FrameScript_Object()
 FrameScript_Object__RegisterScriptObject 00819880 f end=008199B8
 FrameScript_Object__UnregisterScriptObject 008199C0 f end=00819A58 ; FrameScript_Object::UnregisterScriptObject(char const*)
-FrameScript_Initialize 00819BB0 f end=00819D38
+FrameScript_Initialize 00819BB0 f end=00819D38 type="void __stdcall func(int32_t profileEnabled)"
 FrameScript_GetText 00819D40 f end=00819E4F
 FrameScript_Execute 00819EA0 f end=0081A2B5 type="void __stdcall func(int32_t function, FrameScript_Object* object, int32_t args, char* args_fmt, FrameScript_EventObject* eventObject)"
 FrameScript_Object__RunScript 0081A2C0 f end=0081A2E7 ; FrameScript_Object__RunScript(FrameScript_Object::ScriptIx const&, int, char const*)
