@@ -1,10 +1,17 @@
-luaO_fb2int 0084D3D0 f end=0084D3ED
+luaO_fb2int 0084D3D0 f end=0084D3ED type="int32_t __stdcall func(uint32_t x)"
 luaO_log2 0084D3F0 f end=0084D418 type="int32_t __stdcall func(uint32_t x)"
-luaO_rawequalObj 0084D420 f end=0084D467
-luaO_pushvfstring 0084D580 f end=0084D7C6
+luaO_rawequalObj 0084D420 f end=0084D467 type="bool __stdcall func(TValue* t1, TValue* t2)"
+luaO_pushvfstring 0084D580 f end=0084D7C6 type="char* __stdcall func(lua_State* L, char* fmt, va_list argp)"
+pushstr 0084D520 f end=0084D57F type="void __usercall func(lua_State* L@<esi>, char* str@<ecx>)"
 luaO_chunkid 0084D860 f end=0084D9B2 type="void __stdcall func(char* out, char* src, size_t bufflen)"
 index2adr 0084D9C0 f end=0084DA48 type="TValue* __usercall func@<eax>(lua_State* L@<ecx>, int32_t idx@<eax>)"
-luaA_pushobject 0084DA50 f end=0084DAA8
+luaV_tostring 00856EA0 f end=00856F0F type="int32_t __stdcall func(lua_State* L, StkId obj)"
+luaA_pushobject 0084DA50 f end=0084DAA8 type="void __stdcall func(lua_State* L, TValue* o)"
+luaG_concaterror 00850BF0 f end=00850C13 type="void __stdcall func(lua_State* L, StkId p1, StkId p2)"
+luaG_typeerror 00850B60 f end=00850BEC type="void __stdcall func(lua_State* L, TValue* o, char* op)"
+getobjname 008505A0 f end=008506F9 type="char* __usercall func@<eax>(lua_State* L, CallInfo* ci, int32_t stackpos@<eax>, char** name)"
+symbexec 00850130 f end=0085050D type="Instruction __stdcall func(Proto* pt, int32_t lastpc, int32_t reg)"
+checkArgMode 008500E0 f end=0085012C 
 lua_checkstack 0084DAB0 f end=0084DB06
 lua_xmove 0084DB10 f end=0084DB90
 lua_newthread 0084DB90 f end=0084DBD0

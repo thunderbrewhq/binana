@@ -19,7 +19,7 @@ CVar__LookupRegistered 00767460 f end=00767488
 CvarCommandHandler 00767680 f end=0076783A
 CVar__Reset 00767840 f end=007678F0
 CVar__Default 007678F0 f end=007679A0
-CVar__Register 00767FC0 f end=007681E9 type="CVar* __stdcall func(char* name, char* help, uint32_t flags, const char* value, void* fcn, uint32_t category, bool a7, void* arg, bool a9)"
+CVar__Register 00767FC0 f end=007681E9 type="CVar* __stdcall func(char* name, char* help, uint32_t flags, char* value, void* fcn, uint32_t category, bool a7, void* arg, bool a9)"
 CVar__Initialize 00768340 f end=00768402 type="void __stdcall func(char* filename)"
 CVGxColorBitsCallback 00769240 f end=007692CF type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CVGxDepthBitsCallback 007692D0 f end=0076935F type="bool __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"

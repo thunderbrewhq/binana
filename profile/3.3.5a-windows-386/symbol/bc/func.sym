@@ -41,13 +41,13 @@ Blizzard__Memory__Free 00428480 f end=004284A4
 Blizzard__String__FindFilename 00428500 f end=00428538 type="char* __stdcall func(char* str)"
 Blizzard__String__FindExtension 00428600 f end=00428613
 Blizzard__String__FirstPathSeparator 00428640 f end=00428668
-Blizzard__String__Copy 00428670 f end=004286BB type="int32_t __stdcall func(char* dst, const char* src, int32_t count)"
+Blizzard__String__Copy 00428670 f end=004286BB type="int32_t __stdcall func(char* dst, char* src, int32_t count)"
 Blizzard__String__Append 004286C0 f end=00428721 type="int32_t __stdcall func(char* dst, char* src, int32_t count)"
 Blizzard__String__EqualI 00428780 f end=004287A8
 Blizzard__String__Length 004287E0 f end=004287FD
 Blizzard__String__MemFill 00428920 f end=0042893A
-Blizzard__Unicode__ConvertUTF16to8 00428940 f end=00428AFC type="int32_t __stdcall func(uint8_t* dst, uint32_t dstmaxchars, const uint16_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
-Blizzard__Unicode__ConvertUTF8to16 00428B00 f end=00428C94 type="int32_t __stdcall func(uint16_t* dst, uint32_t dstmaxchars, const uint8_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
+Blizzard__Unicode__ConvertUTF16to8 00428940 f end=00428AFC type="int32_t __stdcall func(uint8_t* dst, uint32_t dstmaxchars, uint16_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
+Blizzard__Unicode__ConvertUTF8to16 00428B00 f end=00428C94 type="int32_t __stdcall func(uint16_t* dst, uint32_t dstmaxchars, uint8_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
 Blizzard__Time__FromFileTime 00428F00 f end=00428F56 type="Blizzard__Time__Timestamp __stdcall func(uint64_t fileTime)"
 Blizzard__String__QuickFormat_1024__constructor 00429790 f end=004297C5 type="Blizzard__String__QuickFormat_1024* __stdcall func(Blizzard__String__QuickFormat_1024* this, char* format, ...)" ; Compiler magic converted this OOP constructor into a variadic __stdcall\nBlizzard::String::QuickFormat<1024>::QuickFormat()
 Blizzard__String__MakeUnivPath 0042A9B0 f end=0042A9FB type="void __stdcall func(char* src, char* dst, int32_t count)"
@@ -70,7 +70,7 @@ Blizzard__Debug__AddErrorToStack 00432210 f end=004324D3 type="Blizzard__Debug__
 System_File__GetRootChars 004325C0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 Blizzard__Streaming__Manifests__TimeslotItem__HandleTag 00432720 f end=004327CA
 Blizzard__String__JoinPath 00433510 f end=0043356B type="void __stdcall func(char* a1, int32_t a2, char* a3, char* a4)" ; Blizzard::String::JoinPath(char*, int, char const*, char const*)
-System_File__FromNativeName 00433590 f end=00433650 type="void __stdcall func(uint8_t *buffer, uint32_t buffersize, const char *str)"
+System_File__FromNativeName 00433590 f end=00433650 type="void __stdcall func(uint8_t* buffer, uint32_t buffersize, char* str)"
 Blizzard__StringConversion_CodepageToUTF8__ToNative__constructor 00433650 f end=0043375A type="void __thiscall func(Blizzard__StringConversion_CodepageToUTF8__ToNative* this, char* str)" ; Blizzard::StringConversion_CodepageToUTF8::ToNative::ToNative(const char*)
 System_Thread__AllocateLocalStorage 00433760 f end=004337B7 type="bool __stdcall func(Blizzard__Thread__TLSSlot* slot, Blizzard__Thread__TLSDestructor destructorFn)"
 Blizzard__Using__DependsOn 00433870 f end=004338E6 type="void __stdcall func(char* me, char* dependsOn)"

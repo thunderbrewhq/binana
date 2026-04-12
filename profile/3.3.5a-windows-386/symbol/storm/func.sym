@@ -39,7 +39,7 @@ SSetCurrentProcessAffinityMask 0076FE00 f end=0076FE18
 SCreateProcess 00770290 f end=00770397
 ILoadValue 007703A0 f end=00770483 type="int32_t __usercall func@<eax>(void* parentKey, char* subKeyName@<eax>, char* valuename, uint32_t* datatype, uint8_t* buffer@<ebx>, uint32_t bytes@<edi>, uint32_t* bytesread@<ecx>)"
 InternalLoadEntry 00770490 f end=00770575 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags, uint32_t* datatype, void* buffer, uint32_t bytes, uint32_t* bytesread@<esi>)"
-InternalSaveEntry 00770580 f end=00770719 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags@<ebx>, uint32_t datatype, const void* buffer, uint32_t bytes@<edi>)"
+InternalSaveEntry 00770580 f end=00770719 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags@<ebx>, uint32_t datatype, void* buffer, uint32_t bytes@<edi>)"
 SRegLoadString 00770720 f end=0077083B
 SRegLoadValue 00770840 f end=007708E9 type="int32_t __stdcall func(char* keyname, char* valuename, uint32_t flags, uint32_t* value)"
 SRegSaveString 007708F0 f end=0077099C
@@ -60,9 +60,9 @@ StormInitialize 007739E0 f end=007739F4
 StormDestroy 00773A00 f end=00773A2F
 StormSetOption 00773A80 f end=00773C81 type="int32_t __stdcall func(int optname, void* optval, uint32_t optlen)"
 SCritSect__constructor 00774620 f end=0077462E type="SCritSect* __thiscall func(SCritSect* this)"
-SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect *this)"
-SCritSect__Enter 00774640 f end=00774648 type="void __thiscall func(SCritSect *this)"
-SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *this)"
+SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect* this)"
+SCritSect__Enter 00774640 f end=00774648 type="void __thiscall func(SCritSect* this)"
+SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect* this)"
 SSyncObject__Valid 00774680 f end=00774688
 SSyncObject__Wait 00774690 f end=007746A4
 SEvent__Set 00774720 f end=0077472A

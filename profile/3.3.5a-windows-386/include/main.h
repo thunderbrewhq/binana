@@ -66,6 +66,8 @@
 
 #include "cursor/types.h"
 
+#include "daynight/dnglare.h"
+
 #include "event/context.h"
 #include "event/handler.h"
 #include "event/id_table.h"
@@ -176,9 +178,12 @@
 #include "ui/scriptregion.h"
 #include "ui/simplebatchedmesh.h"
 #include "ui/simpleframe.h"
+#include "ui/simplemodel.h"
 #include "ui/simpleregion.h"
 #include "ui/simpletexture.h"
 #include "ui/simpletop.h"
+
+#include "xml/xml.h"
 
 // include files that define the use of template classes for standard library types
 // template classes for whoa types should be entered immediately after where the type is

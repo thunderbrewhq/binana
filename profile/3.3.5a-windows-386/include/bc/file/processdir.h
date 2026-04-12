@@ -10,6 +10,8 @@ struct Blizzard__File__ProcessDirParms {
     bool        isDir;
 };
 
-typedef bool (*Blizzard__File__ProcessDirCallback)(const Blizzard__File__ProcessDirParms* parms);
+typedef bool (*Blizzard__File__ProcessDirCallback_interface)(
+    const Blizzard__File__ProcessDirParms* parms);
+typedef Blizzard__File__ProcessDirCallback_interface Blizzard__File__ProcessDirCallback;
 
 #endif

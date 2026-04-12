@@ -6,12 +6,12 @@
 #include "common/instance.h"
 #include "storm/queue/timer_priority_uint32_t.h"
 
-#include "event/message.h"
 #include "event/handler.h"
-#include "event/keydown.h"
-#include "event/types.h"
-#include "event/timer.h"
 #include "event/id_table.h"
+#include "event/keydown.h"
+#include "event/message.h"
+#include "event/timer.h"
+#include "event/types.h"
 
 DECLARE_ENUM(SCHEDSTATE);
 DECLARE_STRUCT(EvtContext);
@@ -22,50 +22,51 @@ DECLARE_HANDLE(HEVENTCONTEXT);
 
 // EvtContext::SCHEDSTATE
 enum SCHEDSTATE {
-  SCHEDSTATE_ACTIVE = 0x0,
-  SCHEDSTATE_CLOSED = 0x1,
-  SCHEDSTATE_DESTROYED = 0x2,
-  _UNIQUE_SYMBOL_SCHEDSTATE_96 = 0xFFFFFFFF
+    SCHEDSTATE_ACTIVE            = 0x0,
+    SCHEDSTATE_CLOSED            = 0x1,
+    SCHEDSTATE_DESTROYED         = 0x2,
+    _UNIQUE_SYMBOL_SCHEDSTATE_96 = 0xFFFFFFFF
 };
 
 COMMON_INSTANCE_ID(EvtContext);
 
-// class EvtContext : public TSingletonInstanceId<EvtContext, offsetof(TInstanceId<EvtContext>, m_id)> 
+// class EvtContext : public TSingletonInstanceId<EvtContext, offsetof(TInstanceId<EvtContext>,
+// m_id)>
 struct EvtContext {
-  TSingletonInstanceId_EvtContext b_base;
-  // Member variables
-  SCritSect m_critsect;
-  uint32_t m_currTime;
-  SCHEDSTATE m_schedState;
-  TSTimerPriority_uint32_t m_schedNextWakeTime;
-  uint32_t m_schedLastIdle;
-  uint32_t m_schedFlags;
-  uint32_t m_schedIdleTime;
-  uint32_t m_schedInitialIdleTime;
-  uint32_t m_schedWeight;
-  uint32_t m_schedSmoothWeight;
-  int32_t m_schedRebalance;
-  // TSExplicitList<EvtHandler, offsetof(EvtHandler, link)> m_queueHandlerList[EVENTIDS];
-  TSExplicitList_EvtHandler m_queueHandlerList[36];
-  // TSExplicitList<EvtMessage, offsetof(EvtMessage, link)> m_queueMessageList;
-  TSExplicitList_EvtMessage m_queueMessageList;
-  uint32_t m_queueSyncButtonState;
-  // TSExplicitList<EvtKeyDown, offsetof(EvtKeyDown, link)> m_queueSyncKeyDownList;
-  TSExplicitList_EvtKeyDown m_queueSyncKeyDownList;
-  EvtIdTable_pointer_to_EvtTimer m_timerIdTable;
-  EvtTimerQueue m_timerQueue;
-  HPROPCONTEXT m_propContext;
-  int32_t unk264;
-  int32_t unk268;
-  int32_t unk26C;
-  void* m_callContext;
-  uint32_t m_startWatchdog;
+    TSingletonInstanceId_EvtContext b_base;
+    // Member variables
+    SCritSect                m_critsect;
+    uint32_t                 m_currTime;
+    SCHEDSTATE               m_schedState;
+    TSTimerPriority_uint32_t m_schedNextWakeTime;
+    uint32_t                 m_schedLastIdle;
+    uint32_t                 m_schedFlags;
+    uint32_t                 m_schedIdleTime;
+    uint32_t                 m_schedInitialIdleTime;
+    uint32_t                 m_schedWeight;
+    uint32_t                 m_schedSmoothWeight;
+    int32_t                  m_schedRebalance;
+    // TSExplicitList<EvtHandler, offsetof(EvtHandler, link)> m_queueHandlerList[EVENTIDS];
+    TSExplicitList_EvtHandler m_queueHandlerList[36];
+    // TSExplicitList<EvtMessage, offsetof(EvtMessage, link)> m_queueMessageList;
+    TSExplicitList_EvtMessage m_queueMessageList;
+    uint32_t                  m_queueSyncButtonState;
+    // TSExplicitList<EvtKeyDown, offsetof(EvtKeyDown, link)> m_queueSyncKeyDownList;
+    TSExplicitList_EvtKeyDown      m_queueSyncKeyDownList;
+    EvtIdTable_pointer_to_EvtTimer m_timerIdTable;
+    EvtTimerQueue                  m_timerQueue;
+    HPROPCONTEXT                   m_propContext;
+    int32_t                        unk264;
+    int32_t                        unk268;
+    int32_t                        unk26C;
+    void*                          m_callContext;
+    uint32_t                       m_startWatchdog;
 };
 STORM_TS_PRIORITY_QUEUE(EvtContext);
-
+COMMON_INSTANCE_ID_TABLE(EvtContext);
 // class EvtContextQueue : public TSPriorityQueue<EvtContext>
 struct EvtContextQueue {
-  TSPriorityQueue_EvtContext b_base;
+    TSPriorityQueue_EvtContext b_base;
 };
 
 #endif

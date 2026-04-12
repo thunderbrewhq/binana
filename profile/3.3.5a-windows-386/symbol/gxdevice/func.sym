@@ -3,7 +3,7 @@ CGxDevice__CapsAspectRatio 0050F7C0 f end=0050F824
 CGxDevice__Caps 00532AF0 f end=00532AF7 type="CGxCaps* __thiscall func(CGxDevice* this)" ; public: class CGxCaps const & __thiscall CGxDevice::Caps(void)const
 GxTexSetWrap 00681450 f end=0068146C
 CGxDevice__InitLights 00682C50 f end=00682CA8 type="void __thiscall func(CGxDevice* this)"
-CGxDevice__DeviceCreate 00682CB0 f end=00682CCB type="void __thiscall func(CGxDevice* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
+CGxDevice__DeviceCreate 00682CB0 f end=00682CCB type="void __thiscall func(CGxDevice* this, GxWindowProc windowProc, CGxFormat* format)"
 CGxDevice__DeviceCreate 00682CD0 f end=00682CF0 type="void __thiscall func(CGxDevice* this, uintptr_t hwnd, CGxFormat* format)"
 CGxDevice__DeviceDestroy 00682CF0 f end=00682CFB type="void __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceSetBaseMipLevel 00682D00 f end=00682D10 type="void __thiscall func(CGxDevice* this, uint32_t baseMipLevel)"
@@ -86,7 +86,7 @@ CGxDevice__IRsDirty 00685970 f end=006859DB type="void __thiscall func(CGxDevice
 CGxDevice__IRsForceUpdate_EGxRenderState 006859E0 f end=00685A65 type="void __thiscall func(CGxDevice* this, EGxRenderState which)" ; CGxDevice::IRsForceUpdate(EGxRenderState)
 CGxDevice__IRsForceUpdate 00685A70 f end=00685B4E type="void __thiscall func(CGxDevice* this)" ; CGxDevice::IRsForceUpdate()
 CGxDevice__IRsSync 00685B50 f end=00685BFE type="void __thiscall func(CGxDevice* this, int32_t force)"
-CGxDevice__TexCreate 00685C60 f end=00685CCB type="void __thiscall func(CGxDevice* this, EGxTexTarget target, uint32_t width, uint32_t height, uint32_t depth, EGxTexFormat format, EGxTexFormat dataFormat, CGxTexFlags flags, void* userArg, void (*userFunc)(EGxTexCommand, uint32_t, uint32_t, uint32_t, uint32_t, void*, uint32_t*, void**), char* name, CGxTex** texId)"
+CGxDevice__TexCreate 00685C60 f end=00685CCB type="void __thiscall func(CGxDevice* this, EGxTexTarget target, uint32_t width, uint32_t height, uint32_t depth, EGxTexFormat format, EGxTexFormat dataFormat, CGxTexFlags flags, void* userArg, GxTexCallback userFunc, char* name, CGxTex** texId)"
 CGxDevice__TexSetWrap 00685D40 f end=00685DBF
 CGxDevice__MasterEnableSet 00685EB0 f end=00685F33 type="void __thiscall func(CGxDevice* this, EGxMasterEnables state, int32_t enable)"
 CGxDevice__RsSet_pointer_to_void 00685F50 f end=00685FB0 type="void __thiscall func(CGxDevice* this, EGxRenderState which, void* value)"
@@ -109,7 +109,7 @@ CGxDevice__XformSetView 00689050 f end=006890C0 type="void __thiscall func(CGxDe
 CGxDevice__destructor 006890C0 f end=00689460 type="void __thiscall func(CGxDevice* this)"
 CGxDevice__scalar_deleting_destructor 00689690 f end=006896BB type="void __thiscall func(CGxDevice* this, uint8_t __flags)"
 CGxDevice__ShaderCreate 006897C0 f end=00689A49 type="void __thiscall func(CGxDevice* this, CGxShader**, EGxShTarget, char*, char*, int32_t)"
-HToI 00689B90 f end=00689C02 type="__int16 __usercall func@<ax>(char* h@<eax>, int count)"
+HToI 00689B90 f end=00689C02 type="int16_t __usercall func@<ax>(char* h@<eax>, int count)"
 CGxDevice__AdapterID 00689C10 f end=00689DA2
 CGxDevice__AdapterInfer 00689DB0 f end=00689E7B
 CGxDevice__FindDisplayDevice 00689EA0 f end=00689EF0 type="int32_t __stdcall func(PDISPLAY_DEVICEA device, uint32_t flag)" ; UC

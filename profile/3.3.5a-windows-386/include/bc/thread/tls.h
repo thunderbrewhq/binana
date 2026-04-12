@@ -3,7 +3,8 @@
 
 DECLARE_STRUCT(Blizzard__Thread__TLSSlot);
 
-typedef void (*Blizzard__Thread__TLSDestructor)(void*);
+typedef void (*Blizzard__Thread__TLSDestructor_interface)(void*);
+typedef Blizzard__Thread__TLSDestructor_interface Blizzard__Thread__TLSDestructor;
 
 struct Blizzard__Thread__TLSSlot {
     uint32_t                        key;

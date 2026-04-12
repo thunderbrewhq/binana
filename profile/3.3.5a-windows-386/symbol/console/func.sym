@@ -73,7 +73,7 @@ AddLineToExecFile 0076B2A0 f end=0076B3A9
 ConsoleDetectSetDefaults 0076B3F0 f type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; void SetDefaults(DefaultSettings&, const Hardware&)
 ConsoleDetectSetDefaultsFormat 0076B520 f end=0076B53D type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; ConsoleDetectSetDefaultsFormat(DefaultSettings&, const Hardware&)
 SetVideoIdx 0076B540 f end=0076B594 type="void __stdcall func(Hardware* hardware@<edi>)"
-PrintStartupError 0076B5A0 f end=0076B616 type="void __usercall __noreturn func(int32_t messageID, const char* fallbackMessage)"
+PrintStartupError 0076B5A0 f end=0076B616 type="void __usercall __noreturn func(int32_t messageID, char* fallbackMessage)"
 ConsoleDetectSaveHardware 0076B620 f end=0076B7DB
 ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9 type="void __stdcall func(Hardware* hardware, bool* hwChanged)" ; ConsoleDetectDetectHardware(Hardware&, bool&)
 CConsole__PrintError 00772A80 f end=00772A99

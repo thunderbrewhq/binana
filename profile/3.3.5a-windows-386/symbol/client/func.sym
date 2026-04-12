@@ -16,7 +16,7 @@ CCommand_TimingInfo 004032A0 f end=004032FF
 ClientIdle 00403340 f end=00403362
 ClientSetTimer 00403370 f end=00403379
 ClientSetTimer 00403380 f end=004033A1
-ClientKillTimer 004033B0 f end=004033B9 type="void __stdcall ClientKillTimer(uint32_t timerId, void* handlerAddress, char* handlerName)"
+ClientKillTimer 004033B0 f end=004033B9 type="void __stdcall func(uint32_t timerId, void* handlerAddress, char* handlerName)"
 ClientPostClose 004033C0 f end=004033D1
 StartupStreaming 00403600 f end=004036A4 type="void __stdcall func(char* manifest@<eax>)"
 StartupReport 004036B0 f end=0040371B

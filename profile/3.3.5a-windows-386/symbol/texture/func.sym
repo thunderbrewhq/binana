@@ -22,7 +22,7 @@ TextureFreeMippedImg 004B7300 f end=004B73D9 type="void func(MipBits* image)"
 LoadTgaMips 004B78A0 f end=004B7AA0 type="int32_t __usercall func@<eax>(char* ext@<eax>, char* filename, int32_t a3, MipBits** mipBits, uint32_t* width, uint32_t* height, PIXEL_FORMAT* texFormat, int32_t* isOpaque@<ecx>, uint32_t* alphaBits, PIXEL_FORMAT* dataFormat)"
 TextureInitialize 004B7F80 f end=004B7FF7
 LoadBlpMips 004B8070 f end=004B81CE type="int32_t __usercall func@<eax>(char* ext@<eax>, char* filename@<ebx>, int32_t a3, MipBits** mipBits, uint32_t* width, uint32_t* height, uint32_t* isOpaque, uint32_t* alphaBits, PIXEL_FORMAT* dataFormat)"
-TextureLoadImage 004B81D0 f end=004B8385 type="MipBits* func(const char* filename, uint32_t* width, uint32_t* height, PIXEL_FORMAT* dataFormat, int32_t* isOpaque, CStatus* status, uint32_t* alphaBits, int32_t a8)"
+TextureLoadImage 004B81D0 f end=004B8385 type="MipBits* __stdcall func(char* filename, uint32_t* width, uint32_t* height, PIXEL_FORMAT* dataFormat, int32_t* isOpaque, CStatus* status, uint32_t* alphaBits, int32_t a8)"
 TextureCreate 004B8C80 f end=004B8D6A
 TextureCreate 004B9200 f end=004B9235
 TextureCreateSolid 004B9550 f end=004B95B0
@@ -67,7 +67,7 @@ CBLPFile__DecompPalARGB565DitherFloydSteinberg 006AF140 f end=006AF33F type="voi
 CBLPFile__DecompPalARGB2565DitherFloydSteinberg 006AF340 f end=006AF65D type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)"
 CBLPFile__Pixels 006AF6A0 f end=006AF6D1 type="uint32_t __thiscall func(CBLPFile* this, uint32_t mipLevel)"
 CBLPFile__Unlock 006AF6E0 f end=006AF728
-CBLPFile__GetFormatSize 006AF730 f end=006AF7E9 type="int32_t __thiscall func(CBLPFile *this, PIXEL_FORMAT format, uint32_t mipLevel, uint32_t* size, uint32_t* stride)"
+CBLPFile__GetFormatSize 006AF730 f end=006AF7E9 type="int32_t __thiscall func(CBLPFile* this, PIXEL_FORMAT format, uint32_t mipLevel, uint32_t* size, uint32_t* stride)"
 CBLPFile__DecompPal 006AF810 f end=006AF984 type="int32_t __thiscall func(CBLPFile* this, PIXEL_FORMAT format, uint32_t mipLevel, uint8_t* data, void* tempBuffer)"
 CBLPFile__Lock 006AF990 f end=006AFB55
 CBLPFile__Lock2 006AFCE0 f end=006AFF06 type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, uint32_t mipLevel, unsigned char* data, uint32_t* stride)"

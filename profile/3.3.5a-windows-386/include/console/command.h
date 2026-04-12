@@ -8,14 +8,15 @@ DECLARE_STRUCT(CONSOLECOMMAND);
 
 STORM_TS_HASH(CONSOLECOMMAND, HASHKEY_STRI);
 
-typedef int32_t (*COMMANDHANDLER)(const char*, const char*);
+typedef int32_t (*COMMANDHANDLER_interface)(const char*, const char*);
+typedef COMMANDHANDLER_interface COMMANDHANDLER;
 
 // class CONSOLECOMMAND : public TSHashObject<CONSOLECOMMAND, HASHKEY_STRI>
 struct CONSOLECOMMAND {
-  TSHashObject_CONSOLECOMMAND_HASHKEY_STRI b_base;
-  COMMANDHANDLER m_handler;
-  const char*    m_helpText;
-  CATEGORY       m_category;
+    TSHashObject_CONSOLECOMMAND_HASHKEY_STRI _;
+    COMMANDHANDLER                           m_handler;
+    const char*                              m_helpText;
+    CATEGORY                                 m_category;
 };
 
 #endif

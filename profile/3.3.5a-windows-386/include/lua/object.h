@@ -89,6 +89,7 @@ union Udata {
 
 struct Proto {
     GCObject*    next;
+    uint32_t     unk04;
     lu_byte      tt;
     lu_byte      marked;
     TValue*      k;

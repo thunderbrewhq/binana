@@ -27,7 +27,7 @@ DECLARE_STRUCT(AttackAnimKitsRec);
 DECLARE_STRUCT(AttackAnimTypesRec);
 DECLARE_STRUCT(AuctionHouseRec);
 DECLARE_STRUCT(BankBagSlotPricesRec);
-DECLARE_STRUCT(BannedAddonsRec);
+DECLARE_STRUCT(BannedAddOnsRec);
 DECLARE_STRUCT(BarberShopStyleRec);
 DECLARE_STRUCT(BattlemasterListRec);
 DECLARE_STRUCT(CameraModeRec);
@@ -129,9 +129,9 @@ DECLARE_STRUCT(ItemSubClassRec);
 DECLARE_STRUCT(ItemSubClassMaskRec);
 DECLARE_STRUCT(ItemVisualEffectsRec);
 DECLARE_STRUCT(ItemVisualsRec);
-DECLARE_STRUCT(LFGDungeonExpansionRec);
-DECLARE_STRUCT(LFGDungeonGroupRec);
-DECLARE_STRUCT(LFGDungeonsRec);
+DECLARE_STRUCT(LfgDungeonExpansionRec);
+DECLARE_STRUCT(LfgDungeonGroupRec);
+DECLARE_STRUCT(LfgDungeonsRec);
 DECLARE_STRUCT(LanguageWordsRec);
 DECLARE_STRUCT(LanguagesRec);
 DECLARE_STRUCT(LightRec);
@@ -164,7 +164,7 @@ DECLARE_STRUCT(ObjectEffectModifierRec);
 DECLARE_STRUCT(ObjectEffectPackageRec);
 DECLARE_STRUCT(ObjectEffectPackageElemRec);
 DECLARE_STRUCT(OverrideSpellDataRec);
-DECLARE_STRUCT(PVPDifficultyRec);
+DECLARE_STRUCT(PvpDifficultyRec);
 DECLARE_STRUCT(PackageRec);
 DECLARE_STRUCT(PageTextMaterialRec);
 DECLARE_STRUCT(PaperDollItemFrameRec);
@@ -521,7 +521,7 @@ struct BankBagSlotPricesRec {
   int32_t m_cost;
 };
 
-struct BannedAddonsRec {
+struct BannedAddOnsRec {
   int32_t m_ID;
   int32_t m_nameMd5[4];
   int32_t m_versionMd5[4];
@@ -1413,7 +1413,7 @@ struct ItemVisualsRec {
   int32_t m_slot[5];
 };
 
-struct LFGDungeonExpansionRec {
+struct LfgDungeonExpansionRec {
   int32_t m_ID;
   int32_t m_lfgID;
   int32_t m_expansionLevel;
@@ -1424,7 +1424,7 @@ struct LFGDungeonExpansionRec {
   int32_t m_targetLevelMax;
 };
 
-struct LFGDungeonGroupRec {
+struct LfgDungeonGroupRec {
   int32_t m_ID;
   const char* m_name;
   int32_t m_orderIndex;
@@ -1432,7 +1432,7 @@ struct LFGDungeonGroupRec {
   int32_t m_typeID;
 };
 
-struct LFGDungeonsRec {
+struct LfgDungeonsRec {
   int32_t m_ID;
   const char* m_name;
   int32_t m_minLevel;
@@ -1707,7 +1707,7 @@ struct OverrideSpellDataRec {
   int32_t m_flags;
 };
 
-struct PVPDifficultyRec {
+struct PvpDifficultyRec {
   int32_t m_ID;
   int32_t m_mapID;
   int32_t m_rangeIndex;
@@ -3189,7 +3189,7 @@ DB_CLIENT_DB(AttackAnimKitsRec);
 DB_CLIENT_DB(AttackAnimTypesRec);
 DB_CLIENT_DB(AuctionHouseRec);
 DB_CLIENT_DB(BankBagSlotPricesRec);
-DB_CLIENT_DB(BannedAddonsRec);
+DB_CLIENT_DB(BannedAddOnsRec);
 DB_CLIENT_DB(BarberShopStyleRec);
 DB_CLIENT_DB(BattlemasterListRec);
 DB_CLIENT_DB(CameraModeRec);
@@ -3291,9 +3291,9 @@ DB_CLIENT_DB(ItemSubClassRec);
 DB_CLIENT_DB(ItemSubClassMaskRec);
 DB_CLIENT_DB(ItemVisualEffectsRec);
 DB_CLIENT_DB(ItemVisualsRec);
-DB_CLIENT_DB(LFGDungeonExpansionRec);
-DB_CLIENT_DB(LFGDungeonGroupRec);
-DB_CLIENT_DB(LFGDungeonsRec);
+DB_CLIENT_DB(LfgDungeonExpansionRec);
+DB_CLIENT_DB(LfgDungeonGroupRec);
+DB_CLIENT_DB(LfgDungeonsRec);
 DB_CLIENT_DB(LanguageWordsRec);
 DB_CLIENT_DB(LanguagesRec);
 DB_CLIENT_DB(LightRec);
@@ -3326,7 +3326,7 @@ DB_CLIENT_DB(ObjectEffectModifierRec);
 DB_CLIENT_DB(ObjectEffectPackageRec);
 DB_CLIENT_DB(ObjectEffectPackageElemRec);
 DB_CLIENT_DB(OverrideSpellDataRec);
-DB_CLIENT_DB(PVPDifficultyRec);
+DB_CLIENT_DB(PvpDifficultyRec);
 DB_CLIENT_DB(PackageRec);
 DB_CLIENT_DB(PageTextMaterialRec);
 DB_CLIENT_DB(PaperDollItemFrameRec);

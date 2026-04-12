@@ -45,9 +45,11 @@ struct lua_longjmp {
 
 typedef lu_int32 Instruction;
 
-typedef int32_t (*lua_CFunction)(lua_State*);
+typedef int32_t (*lua_CFunction_interface)(lua_State*);
+typedef lua_CFunction_interface lua_CFunction;
 
-typedef void* (*lua_Alloc)(void*, void*, size_t, size_t);
+typedef void* (*lua_Alloc_interface)(void*, void*, size_t, size_t);
+typedef lua_Alloc_interface lua_Alloc;
 
 struct luaL_Reg {
     const char*   name;
