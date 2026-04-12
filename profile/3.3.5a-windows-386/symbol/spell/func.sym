@@ -132,3 +132,7 @@ SpellVisualsGetModelAttachRecCount 007FA9F0 f end=007FAA18
 Spell_C_GetCursorWorldObjectModel 007FD7A0 f end=007FD7A6
 Spell_C_WasItemRecentlyUsed 00809130 f end=008091A5
 SpellIsAuraEffect 0076BD50 f end=0076BD76
+SpellVisualsShutdown 007FCBC0 f end=007FCC26
+SpellParserVerifyConditional 00577030 f end=005770C7
+SpellParserConditional 00579BA0 f end=00579D5A
+SpellParserVariables 00579D60 f end=00579E4C

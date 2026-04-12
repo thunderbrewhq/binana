@@ -92,3 +92,5 @@ CM2Model__FreeInternalResources 0082C1C0 f end=0082C2C0
 CM2Model__GetNumGeometryBatches 00827A90 f end=00827E2F
 CM2Model__GetNumPrimitives 00827F70 f end=008284C2
 CM2Model__GetNumBatches 0082D1A0 f end=0082D2E8
+CM2Model__CanUpdateNonReadyTextures 00823E40 f end=00823ECF
+CM2Model__FreeExternalResources 00824D30 f end=00824EC1

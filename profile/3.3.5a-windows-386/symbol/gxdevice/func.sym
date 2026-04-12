@@ -120,3 +120,9 @@ CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
 CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF type="void __thiscall func(CGxDevice* this, CGxTex* texId, uint32_t* width, uint32_t* height, uint32_t* baseMip, uint32_t* mipCount)"
 CGxDevice__TexSetCannotUpdate 00683320 f end=00683332
+CGxDevice__DeviceBaseMipLevel 00682D10 f end=00682D17
+CGxDevice__CapsWindowHasFocus 00682DF0 f end=00682E17
+CGxDevice__SetScissor 00682E70 f end=00682EA7
+CGxDevice__TexCanUpdate 006831F0 f end=00683202
+CGxDevice__TexParameters 00683350 f end=00683392
+CGxDevice__DeviceGamma 006841B0 f end=006841CF

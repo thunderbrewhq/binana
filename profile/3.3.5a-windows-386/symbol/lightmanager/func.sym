@@ -3,3 +3,4 @@ CLightningManager__constructor 009AAE80 f end=009AAE9C
 CLightningManager__Remove 009AB2B0 f end=009AB2D3
 CLightningManager__Add 009AAFB0 f end=009AB063
 CLightningManager__Render 009AB070 f end=009AB2AB
+CLightningManager__destructor 009AAEA0 f end=009AAF09

@@ -42,3 +42,4 @@ CParticleEmitter2__Sync 0097EDF0 f end=0097EEB7
 CParticleEmitter2__GetNumBatches 0097BAE0 f end=0097BB2F
 CParticleEmitter2__GetNumPrimitives 0097BB30 f end=0097BB7F
 CParticleEmitter2__SyncAllocation 0097E480 f end=0097E571
+CParticleEmitter2__SyncReserve 0097E3F0 f end=0097E47F

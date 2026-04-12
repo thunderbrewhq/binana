@@ -1,2 +1,5 @@
 ProfileCreate 004BD150 f end=004BD1A6
 ProfileReadFile 004BD840 f end=004BD870
+ProfileInternal__PrfStrToInt 004BBD00 f end=004BBD36
+ProfileInternal__STRINGBLOCK__AllocBlock 004BBEA0 f end=004BBEF8
+ProfileInternal__TokenizeStringValues 004BD580 f end=004BD5F7

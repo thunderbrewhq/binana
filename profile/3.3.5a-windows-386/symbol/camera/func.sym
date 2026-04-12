@@ -73,3 +73,6 @@ CameraUnregisterScriptFunctions 005FE2F0 f end=005FE30F
 CGCamera__ZoomToDistance 005FFB70 f end=005FFC1B
 CGCamera__RunShakes 00606970 f end=00606B27
 CGCamera__AddShakeOffset 005FE6C0 f end=005FE7B0
+CGCamera__GetDefaultZoomMaxDistance 005FE570 f end=005FE577
+CGCamera__SetVehicleExitZoomDistance 005FE920 f end=005FE937
+CGCamera__SetPositionAndTargetWithRoll 005FF440 f end=005FF4FB

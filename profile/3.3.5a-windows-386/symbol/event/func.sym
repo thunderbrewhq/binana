@@ -64,3 +64,4 @@ IEvtTimerKill 00481290 f end=0048138F
 IEvtTimerSet 00481390 f end=004814E4
 TInstanceIdTable_EvtContext__Unlock 00774660 f end=00774675
 PropInitialize 0047CBC0 f end=0047CBD6
+CMouseEvent__operator_assign 00480DE0 f end=00480E39

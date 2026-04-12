@@ -93,3 +93,7 @@ UpdateBlobTexture 004C03C0 f end=004C047C
 CTextureAtlas__Reload 004B63B0 f end=004B64DC
 TextureGetFilename 004B56F0 f end=004B570A
 TextureGetGxTexFlags 004B5750 f end=004B576D
+TextureCanUpdate 004B62D0 f end=004B62F1
+TextureCacheGetMip 004F2D00 f end=004F2D3C
+TextureCacheGetPal 004F2D40 f end=004F2D71
+CTgaFile__Compress 006AACE0 f end=006AADD2

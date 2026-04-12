@@ -110,3 +110,4 @@ CSimpleEditBox__ClearHistory 00964720 f end=00964788
 CSimpleEditBox__GetEditTextInsets 00965580 f end=009655B8
 CSimpleEditBox__DestroyScriptMetaTable 009752E0 f end=00975305
 CSimpleEditBox__ClearKeyboardFocus 009651F0 f end=00965257
+CSimpleEditBox__DeleteForward 009639B0 f end=00963A04

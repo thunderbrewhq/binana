@@ -20,3 +20,5 @@ CGTradeSkillInfo__SetLink 005DE300 f end=005DE3F2
 CaseAccentInsensitiveParse 007E11D0 f end=007E161C
 CGTradeSkillInfo__ShutdownGame 005DCAF0 f end=005DCC33
 SkillInfoRegisterScriptFunctions 005CD1F0 f end=005CD213
+QSortSubClasses 005DA6B0 f end=005DA7C7
+QSortSkills 005DAE60 f end=005DB05F

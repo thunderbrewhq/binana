@@ -40,3 +40,4 @@ FriendList__Initialize 006B8990 f end=006B8AA2
 FriendList__MatchesFilter 006B5CA0 f end=006B5DD9
 FriendList__IgnoreAdded 006B7200 f end=006B72D1
 FriendList__MuteAdded 006B72E0 f end=006B7394
+FriendList__Removed 006B3B90 f end=006B3C05

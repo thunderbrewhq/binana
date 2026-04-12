@@ -104,3 +104,6 @@ BuildComponentArray 004F3DD0 f end=004F3DE2
 CountFacialFeatures 004F41B0 f end=004F422A
 CCharacterComponent__IsHelmModelCorrect 004EF020 f end=004EF0CE
 CCharacterComponent__PrepSections 004EE0D0 f end=004EE1F8
+CCharacterComponent__PasteOpaque 004E89F0 f end=004E8D28
+CCharacterComponent__PasteScale 004EC550 f end=004EC68E
+CCharacterComponent__Paste 004EF9D0 f end=004EFAA8

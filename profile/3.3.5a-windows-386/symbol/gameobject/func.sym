@@ -50,3 +50,4 @@ CGGameObject_C__AddToolTipInfo 0070BA40 f end=0070BA61
 CGGameObject_C__GetOpenText 0070BA70 f end=0070BA81
 CGGameObject_C__GetCloseText 0070BA90 f end=0070BAA1
 CGGameObject_C__ResetDisplayState 0070F810 f end=0070F846
+CGGameObject_C__GetMatrix 00712EE0 f end=00712EFD

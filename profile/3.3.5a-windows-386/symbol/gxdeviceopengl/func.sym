@@ -1,3 +1,5 @@
 CGxDeviceOpenGl__ISetGlCaps 0068A9A0 f end=0068AF34 type="void __thiscall func(CGxDeviceOpenGl* this, CGxFormat* format)"
 CGxDeviceOpenGl__constructor 0068BBC0 f end=0068BD15 type="void __thiscall func(CGxDeviceOpenGl* this)"
 CGxDeviceOpenGl__DeviceSetFormat 0068D6D0 f end=0068D7AF
+CGxDeviceOpenGl__SetFormatMode 0068C9B0 f end=0068CA76
+CGxDeviceOpenGl__DeviceCreate 0068D610 f end=0068D6C6

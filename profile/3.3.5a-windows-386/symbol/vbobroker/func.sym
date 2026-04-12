@@ -1,1 +1,5 @@
-CGxVboBroker1__CGxVboBroker1 0068A590 f end=0068A6FB
+CGxVboBroker1__constructor 0068A590 f end=0068A6FB
+CGxVboBroker1__destructor 0068A700 f end=0068A758
+CGxVboBroker1__SelectVbo 0068A760 f end=0068A7CF
+CGxVboBroker1__GetLastSelectedVbo 0068A7D0 f end=0068A7EB
+CGxVboBroker1__destructor 0068B2D0 f end=0068B2FB
