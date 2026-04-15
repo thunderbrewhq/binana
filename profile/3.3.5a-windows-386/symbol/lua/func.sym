@@ -1,59 +1,15 @@
+strjoin 00816B60 f end=00816C31
+luaO_int2fb 0084D390 f end=0084D3C4
 luaO_fb2int 0084D3D0 f end=0084D3ED type="int32_t __stdcall func(uint32_t x)"
 luaO_log2 0084D3F0 f end=0084D418 type="int32_t __stdcall func(uint32_t x)"
 luaO_rawequalObj 0084D420 f end=0084D467 type="bool __stdcall func(TValue* t1, TValue* t2)"
-luaO_pushvfstring 0084D580 f end=0084D7C6 type="char* __stdcall func(lua_State* L, char* fmt, va_list argp)"
+luaO_str2d 0084D480 f end=0084D51D type="bool __stdcall func(char* s, lua_Number* result)"
 pushstr 0084D520 f end=0084D57F type="void __usercall func(lua_State* L@<esi>, char* str@<ecx>)"
+luaO_pushvfstring 0084D580 f end=0084D7C6 type="char* __stdcall func(lua_State* L, char* fmt, va_list argp)"
+luaO_pushfstring 0084D840 f end=0084D859 type="char* __stdcall func(lua_State* L, char* fmt, ...)"
 luaO_chunkid 0084D860 f end=0084D9B2 type="void __stdcall func(char* out, char* src, size_t bufflen)"
 index2adr 0084D9C0 f end=0084DA48 type="TValue* __usercall func@<eax>(lua_State* L@<ecx>, int32_t idx@<eax>)"
-luaV_tostring 00856EA0 f end=00856F0F type="int32_t __stdcall func(lua_State* L, StkId obj)"
 luaA_pushobject 0084DA50 f end=0084DAA8 type="void __stdcall func(lua_State* L, TValue* o)"
-luaG_concaterror 00850BF0 f end=00850C13 type="void __stdcall func(lua_State* L, StkId p1, StkId p2)"
-luaG_typeerror 00850B60 f end=00850BEC type="void __stdcall func(lua_State* L, TValue* o, char* op)"
-getobjname 008505A0 f end=008506F9 type="char* __usercall func@<eax>(lua_State* L, CallInfo* ci, int32_t stackpos@<eax>, char** name)"
-symbexec 00850130 f end=0085050D type="Instruction __stdcall func(Proto* pt, int32_t lastpc, int32_t reg)"
-luaG_checkopenop 008500B0 f end=008500DC type="bool __stdcall func(Instruction i)"
-checkArgMode 008500E0 f end=0085012C type="int32_t __usercall func@<eax>(Proto* pt@<edx>, int32_t r@<ecx>, OpArgMask mode@<eax>)"
-kname 00850570 f end=00850596 type="char* __usercall func@<eax>(Proto* p@<ecx>, int32_t c@<eax>)"
-auxgetinfo 00850950 f end=00850A4C type="int32_t __usercall func@<eax>(lua_State* L, char* what, lua_Debug* ar@<esi>, Closure* f, CallInfo* ci@<ebx>)"
-funcinfo 0084FF80 f end=0084FFF4 type="void __usercall func(lua_Debug* ar@<eax>, Closure* cl@<ecx>)"
-currentline 0084FDF0 f end=0084FE33 type="int32_t __usercall func@<eax>(lua_State* L@<edx>, CallInfo* ci@<eax>)"
-getfuncname 00850720 f end=008507C0 type="char* __usercall func@<eax>(lua_State* L@<edi>, CallInfo* ci@<ecx>, char** name)"
-collectvalidlines 00850000 f end=008500AD type="void __usercall func(lua_State* L@<edi>, Closure* f@<ebx>)"
-luaH_setnum 0085C590 f end=0085C5DA type="TValue* __stdcall func(lua_State* L, Table* t, int32_t key)"
-luaH_getnum 0085C3A0 f end=0085C427 type="TValue* __stdcall func(Table* t, int32_t key)"
-mainposition 0085BCB0 f end=0085BD56 type="Node* __usercall func@<eax>(Table* t@<eax>, TValue* key@<edx>)"
-hashnum 0085BC70 f end=0085BCA6 type="Node* __usercall func@<eax>(Table* t@<esi>, lua_Number n)"
-newkey 0085CAB0 f end=0085CBB4 type="TValue* __stdcall func(lua_State* L, Table* t, TValue* key)"
-luaH_set 0085C520 f end=0085C582 type="void __stdcall func(lua_State* L, Table* t, TValue* key)"
-numusearray 0085C050 f end=0085C0CD type="int32_t __stdcall func(Table* t, int32_t* nums)"
-numusehash 0085C0D0 f end=0085C189 type="int32_t __usercall func@<eax>(Table* t@<ebx>, int32_t* nums, int32_t* pnasize)"
-computesizes 0085BFD0 f end=0085C04D type="int32_t __stdcall func(int32_t* nums, int32_t* narray)"
-resize 0085C6F0 f end=0085C95A type="void __usercall func(lua_State* L, Table* t@<ecx>, int32_t nasize@<eax>, int32_t nhsize)"
-rehash 0085C9B0 f end=0085CAA3 type="void __usercall func(lua_State* L, Table* t@<eax>, TValue* ek@<edi>)"
-luaH_setstr 0085CBC0 f end=0085CC08 type="void __stdcall func(lua_State* L, Table* t, TString* key)"
-luaX_newstring 0085DA00 f end=0085DA50 type="TString* __stdcall func(LexState* ls, char* str, size_t l)"
-save 0085D810 f end=0085D884 type="void __usercall func(LexState* ls@<ebx>, char c)"
-luaX_lexerror 0085D940 f end=0085D9D3 type="void __stdcall func(LexState* ls, char* msg, int32_t token)"
-luaO_pushfstring 0084D840 f end=0084D859 type="char* __stdcall func(lua_State* L, char* fmt, ...)"
-luaX_token2str 0085D8E0 f end=0085D935 type="char* __stdcall func(LexState* ls, int32_t token)"
-llex 0085E600 f end=0085EBF6 type="int32_t __usercall func@<eax>(LexState* ls@<eax>, SemInfo* seminfo)"
-luaZ_fill 0085D0F0 f end=0085D132 type="int32_t __stdcall func(ZIO* z)"
-inclinenumber 0085DA50 f end=0085DADC type="void __usercall func(LexState* ls@<esi>)"
-read_string 0085E160 f end=0085E4E8 type="void __stdcall func(LexState* ls, int32_t del, SemInfo* seminfo)"
-skip_sep 0085DDD0 f end=0085DE67 type="int32_t __stdcall func@<eax>(LexState* ls@<eax>)"
-read_long_string 0085DE70 f end=0085E0E9 type="void __usercall func(LexState* ls@<eax>, SemInfo* seminfo@<edi>, int32_t sep)"
-check_next 0085DB70 f end=0085DBCB type="int32_t __usercall func@<eax>(LexState* ls@<eax>, char* set@<ecx>)"
-luaO_str2d 0084D480 f end=0084D51D type="bool __stdcall func(char* s, lua_Number* result)"
-trydecpoint 0085DBD0 f end=0085DCAF type="void __usercall func(LexState* ls@<eax>, SemInfo* seminfo)"
-read_numeral 0085DCB0 f end=0085DDC1 type="void __usercall func(LexState* ls@<eax>, SemInfo* seminfo@<edi>)"
-luaX_lookahead 0085ED00 f end=0085ED1B type="void __stdcall func(LexState* ls)"
-luaX_next 0085ECB0 f end=0085ECF9 type="void __stdcall func(LexState* ls)" ; TODO: understand changes to structures
-testnext 0085ED70 f end=0085ED8F type="int32_t __usercall func@<eax>(LexState* ls@<eax>, int32_t c)"
-check_match 0085ED90 f end=0085EDFE type="void __usercall func(LexState* ls@<esi>, int32_t what@<edi>, int32_t who, int32_t where@<eax>)"
-singlevar 0085F1F0 f end=0085F24F type="void __usercall func(LexState* ls@<eax>, expdesc* var@<ebx>)"
-singlevaraux 0085F100 f end=0085F1E2 type="int32_t __stdcall func(FuncState* fs, TString* n, expdesc* var, int base)"
-indexupvalue 0085EFB0 f end=0085F0FB type="int32_t __stdcall func(FuncState* fs, TString* name, expdesc* v)"
-luaM_growaux_ 0085D740 f end=0085D805 type="int32_t __stdcall func(lua_State* L, void* block, int32_t* size, size_t size_elems, int32_t limit, char* errormsg)"
 lua_checkstack 0084DAB0 f end=0084DB06
 lua_xmove 0084DB10 f end=0084DB90
 lua_newthread 0084DB90 f end=0084DBD0
@@ -63,6 +19,7 @@ lua_remove 0084DC50 f end=0084DCC0
 lua_insert 0084DCC0 f
 lua_pushvalue 0084DE50 f end=0084DEAE
 lua_type 0084DEB0 f
+lua_typename 0084DED0 f end=0084DEEB
 lua_iscfunction 0084DEF0 f end=0084DF17
 lua_isnumber 0084DF20 f
 lua_isstring 0084DF60 f
@@ -92,20 +49,24 @@ lua_rawget 0084E600 f
 lua_rawgeti 0084E670 f
 lua_createtable 0084E6E0 f end=0084E72A type="void __stdcall func(lua_State* L, int32_t narray, int32_t nrec)"
 lua_getmetatable 0084E730 f end=0084E792
+lua_getfenv 0084E7A0 f end=0084E8CB
 lua_settable 0084E8D0 f end=0084E8FD
 lua_setfield 0084E900 f end=0084E965
 lua_rawset 0084E970 f
+lua_rawseti 0084EA00 f end=0084EA90
 lua_setmetatable 0084EA90 f end=0084EB35
 lua_setfenv 0084EB40 f end=0084EBE8
 lua_call 0084EBF0 f end=0084EC2B
 lua_pcall 0084EC50 f end=0084ECBB
 lua_dump 0084ED00 f end=0084ED3A
+lua_status 0084ED40 f end=0084ED4C
 lua_gc 0084ED50 f end=0084EE28 type="int32_t __stdcall func(lua_State* L, int32_t what, int32_t data)"
 lua_gcupdatesizes 0084EE50 f end=0084EE59
 lua_gcgetsize 0084EE60 f end=0084EE69
 lua_gcupdatetimes 0084EE70 f end=0084EE79
 lua_gcgettime 0084EE80 f end=0084EE89
 lua_gcgetfunctiontime 0084EE90 f end=0084EF1C
+lua_gcresettimes 0084EF20 f end=0084EF29
 lua_error 0084EF30 f end=0084EF43
 lua_next 0084EF50 f end=0084EF86
 lua_concat 0084EF90 f end=0084F010
@@ -113,23 +74,52 @@ lua_setdecimalconversion 0084F010 f end=0084F022
 lua_convertdecimal 0084F030 f end=0084F0C6
 lua_settaint 0084F0D0 f end=0084F0E6
 lua_newuserdata 0084F0F0 f end=0084F14D
+luaL_where 0084F210 f end=0084F275
 luaL_error 0084F280 f
+luaL_checkstack 0084F2C0 f end=0084F2ED
+luaL_getmetafield 0084F2F0 f end=0084F34C
+luaL_callmeta 0084F350 f end=0084F3A8
+luaL_findtable 0084F3B0 f end=0084F49B
 luaL_pushresult 0084F5C0 f end=0084F603
 luaL_buffinit 0084F6A0 f end=0084F6BA
 luaL_ref 0084F6C0 f end=0084F793 type="int32_t __stdcall func(lua_State* L, int32_t t)"
 luaL_unref 0084F7A0 f
+luaL_argerror 0084F8B0 f end=0084F95D
+luaL_checktype 0084F960 f end=0084F9B1
+luaL_checkany 0084F9C0 f end=0084F9ED
+luaL_checklstring 0084F9F0 f end=0084FA4E
 luaL_optlstring 0084FA50 f end=0084FAAB
+luaL_checknumber 0084FAB0 f end=0084FB21
 luaL_optnumber 0084FB30 f end=0084FB5E
+luaL_checkinteger 0084FB60 f end=0084FBC8
 luaL_optinteger 0084FBD0 f end=0084FBFE
+luaL_openlib 0084FC00 f end=0084FD1E
 luaL_checkoption 0084FD20 f end=0084FDCF
 luaL_register 0084FDD0 f end=0084FDEB type="void __stdcall func(lua_State* L, char* libname, luaL_Reg* l)"
+currentline 0084FDF0 f end=0084FE33 type="int32_t __usercall func@<eax>(lua_State* L@<edx>, CallInfo* ci@<eax>)"
 lua_getstack 0084FE40 f end=0084FEBB
+lua_getlocal 0084FEC0 f end=0084FF26
+funcinfo 0084FF80 f end=0084FFF4 type="void __usercall func(lua_Debug* ar@<eax>, Closure* cl@<ecx>)"
+collectvalidlines 00850000 f end=008500AD type="void __usercall func(lua_State* L@<edi>, Closure* f@<ebx>)"
+luaG_checkopenop 008500B0 f end=008500DC type="bool __stdcall func(Instruction i)"
+checkArgMode 008500E0 f end=0085012C type="int32_t __usercall func@<eax>(Proto* pt@<edx>, int32_t r@<ecx>, OpArgMask mode@<eax>)"
+symbexec 00850130 f end=0085050D type="Instruction __stdcall func(Proto* pt, int32_t lastpc, int32_t reg)"
+kname 00850570 f end=00850596 type="char* __usercall func@<eax>(Proto* p@<ecx>, int32_t c@<eax>)"
+getobjname 008505A0 f end=008506F9 type="char* __usercall func@<eax>(lua_State* L, CallInfo* ci, int32_t stackpos@<eax>, char** name)"
+getfuncname 00850720 f end=008507C0 type="char* __usercall func@<eax>(lua_State* L@<edi>, CallInfo* ci@<ecx>, char** name)"
+luaG_errormsg 00850830 f end=0085091E
 luaG_runerror 00850920 f
+auxgetinfo 00850950 f end=00850A4C type="int32_t __usercall func@<eax>(lua_State* L, char* what, lua_Debug* ar@<esi>, Closure* f, CallInfo* ci@<ebx>)"
 lua_getinfo 00850A90 f end=00850B59
+luaG_typeerror 00850B60 f end=00850BEC type="void __stdcall func(lua_State* L, TValue* o, char* op)"
+luaG_concaterror 00850BF0 f end=00850C13 type="void __stdcall func(lua_State* L, StkId p1, StkId p2)"
+luaG_ordererror 00850C60 f end=00850CB2
 luaopen_bit 00851010 f end=00851032 type="int32_t __stdcall func(lua_State* L)"
 luaopen_math 00851760 f end=008517C0 type="int32_t __stdcall func(lua_State* L)"
 luaopen_table 008521F0 f end=00852210 type="int32_t __stdcall func(lua_State* L)"
+createmetatable 00854070 f end=008540C3 type="void __usercall func(lua_State* L@<esi>)"
 luaopen_string 008540D0 f end=008540F7 type="int32_t __stdcall func(lua_State* L)"
+base_open 00854F40 f end=0085505E type="void __usercall func(lua_State* L@<esi>)"
 luaopen_base 00855060 f end=00855087 type="int32_t __stdcall func(lua_State* L)"
 stack_init 00855090 f end=00855118 type="void __usercall func(lua_State* L1@<esi>, lua_State* L@<edi>)"
 f_luaopen 00855120 f end=008551AB type="void __stdcall func(lua_State* L, void* ud)"
@@ -140,8 +130,10 @@ lua_close 00855510 f end=00855570
 luaM_initPool 00855740 f end=008557CA type="int32_t __stdcall func()"
 luaM_freePool 008557D0 f end=0085581C
 luaM_reallocPool 008558E0 f end=00855A11 type="void* __stdcall func(void* ud, void* ptr, size_t osize, size_t nsize)"
+luaD_pcall 00855A20 f end=00855AD6
 luaD_rawrunprotected 00855AF0 f end=00855B55
 luaD_growstack 00855CD0 f end=00855CFC
+lua_yield 00856150 f end=00856184
 luaD_throw 008562E0 f
 luaD_precall 00856370 f
 luaD_precall_profile 00856550 f end=00856756
@@ -149,83 +141,83 @@ luaD_call 00856760 f
 luaS_newlstr 00856C80 f end=00856DC6
 luaS_newudata 00856DD0 f end=00856E4C
 luaV_tonumber 00856E50 f end=00856E9E
+luaV_tostring 00856EA0 f end=00856F0F type="int32_t __stdcall func(lua_State* L, StkId obj)"
+luaV_gettable 00857250 f end=008573B5
+luaV_settable 008573C0 f end=00857552
+luaV_lessthan 008576F0 f end=00857775
+luaV_concat 00857900 f end=00857AC7
 luaV_execute 00857CA0 f
 luaC_separateudata 0085A8B0 f end=0085A952
 luaC_sizeall 0085B4E0 f end=0085B52D
 luaC_getsize 0085B530 f end=0085B557
 luaC_timeall 0085B560 f end=0085B598
 luaC_gettime 0085B5A0 f end=0085B602
+luaC_timereset 0085B610 f end=0085B65F
 luaC_step 0085B950 f end=0085B9D2
 luaC_fullgc 0085B9E0 f end=0085BA4B
 luaC_barrierf 0085BA50 f end=0085BA83
 luaC_barrierback 0085BA90 f end=0085BAAB type="void __stdcall func(lua_State* L, Table* t)"
 luaC_link 0085BAB0 f end=0085BAF1
+luaT_init 0085BB70 f end=0085BBD8
 luaT_gettm 0085BBE0 f end=0085BC09
 luaT_gettmbyobj 0085BC10 f end=0085BC67
+hashnum 0085BC70 f end=0085BCA6 type="Node* __usercall func@<eax>(Table* t@<esi>, lua_Number n)"
+mainposition 0085BCB0 f end=0085BD56 type="Node* __usercall func@<eax>(Table* t@<eax>, TValue* key@<edx>)"
+luaH_next 0085BD70 f end=0085BE28
+computesizes 0085BFD0 f end=0085C04D type="int32_t __stdcall func(int32_t* nums, int32_t* narray)"
+numusearray 0085C050 f end=0085C0CD type="int32_t __stdcall func(Table* t, int32_t* nums)"
+numusehash 0085C0D0 f end=0085C189 type="int32_t __usercall func@<eax>(Table* t@<ebx>, int32_t* nums, int32_t* pnasize)"
 setarrayvector 0085C190 f end=0085C1F6 type="void __stdcall func(lua_State* L@<eax>, Table* t@<esi>, int32_t size@<edi>)"
 setnodevector 0085C200 f end=0085C2DC type="void __usercall func(lua_State* L, Table* t@<edi>, int32_t size@<eax>)"
 luaH_new 0085C2E0 f end=0085C337 type="Table* __stdcall func(lua_State* L, int32_t narray, int32_t nhash)"
 luaH_free 0085C340 f end=0085C39B
+luaH_getnum 0085C3A0 f end=0085C427 type="TValue* __stdcall func(Table* t, int32_t key)"
 luaH_getstr 0085C430 f end=0085C46F
 luaH_get 0085C470 f end=0085C515
+luaH_set 0085C520 f end=0085C582 type="void __stdcall func(lua_State* L, Table* t, TValue* key)"
+luaH_setnum 0085C590 f end=0085C5DA type="TValue* __stdcall func(lua_State* L, Table* t, int32_t key)"
+luaH_getn 0085C690 f end=0085C6F0
+resize 0085C6F0 f end=0085C95A type="void __usercall func(lua_State* L, Table* t@<ecx>, int32_t nasize@<eax>, int32_t nhsize)"
 luaH_resizearray 0085C960 f end=0085C9A3
+rehash 0085C9B0 f end=0085CAA3 type="void __usercall func(lua_State* L, Table* t@<eax>, TValue* ek@<edi>)"
+newkey 0085CAB0 f end=0085CBB4 type="TValue* __stdcall func(lua_State* L, Table* t, TValue* key)"
+luaH_setstr 0085CBC0 f end=0085CC08 type="void __stdcall func(lua_State* L, Table* t, TString* key)"
 luaF_newCclosure 0085CC10 f end=0085CC86
 luaF_newLclosure 0085CC90 f end=0085CD33
 luaF_findupval 0085CD80 f end=0085CE2D
 luaF_freeupval 0085CE30 f end=0085CE63
 luaF_close 0085CE70 f end=0085CF3F
+luaF_newproto 0085CF40 f end=0085CFA3
 luaF_freeproto 0085CFB0 f end=0085D04A
 luaF_freeclosure 0085D050 f end=0085D09C
 luaF_getlocalname 0085D0A0 f end=0085D0ED
+luaZ_fill 0085D0F0 f end=0085D132 type="int32_t __stdcall func(ZIO* z)"
 luaZ_openspace 0085D170 f end=0085D1CC
 luaU_dump 0085D660 f end=0085D6C7
 luaM_toobig 0085D6D0 f end=0085D6E8 type="void* __stdcall func(lua_State* L)"
 luaM_realloc_ 0085D6F0 f end=0085D739 type="void* __stdcall func(lua_State* L, void* block, size_t osize, size_t nsize)"
-luaX_syntaxerror 0085D9E0 f end=0085D9F9
-luaU_header 00861B90 f end=00861BD0
-luaO_int2fb 0084D390 f end=0084D3C4
-luaO_str2d 0084D480 f end=0084D51D
-lua_typename 0084DED0 f end=0084DEEB
-lua_getfenv 0084E7A0 f end=0084E8CB
-lua_rawseti 0084EA00 f end=0084EA90
-lua_status 0084ED40 f end=0084ED4C
-lua_gcresettimes 0084EF20 f end=0084EF29
-luaL_where 0084F210 f end=0084F275
-luaL_checkstack 0084F2C0 f end=0084F2ED
-luaL_getmetafield 0084F2F0 f end=0084F34C
-luaL_callmeta 0084F350 f end=0084F3A8
-luaL_findtable 0084F3B0 f end=0084F49B
-luaL_argerror 0084F8B0 f end=0084F95D
-luaL_checktype 0084F960 f end=0084F9B1
-luaL_checkany 0084F9C0 f end=0084F9ED
-luaL_checklstring 0084F9F0 f end=0084FA4E
-luaL_checknumber 0084FAB0 f end=0084FB21
-luaL_checkinteger 0084FB60 f end=0084FBC8
-luaL_openlib 0084FC00 f end=0084FD1E
-lua_getlocal 0084FEC0 f end=0084FF26
-luaG_errormsg 00850830 f end=0085091E
-luaG_ordererror 00850C60 f end=00850CB2
-createmetatable 00854070 f end=008540C3 type="void __usercall func(lua_State* L@<esi>)"
-base_open 00854F40 f end=0085505E type="void __usercall func(lua_State* L@<esi>)"
-luaD_pcall 00855A20 f end=00855AD6
-lua_yield 00856150 f end=00856184
-luaV_gettable 00857250 f end=008573B5
-luaV_settable 008573C0 f end=00857552
-luaV_lessthan 008576F0 f end=00857775
-luaV_concat 00857900 f end=00857AC7
-luaC_timereset 0085B610 f end=0085B65F
-luaT_init 0085BB70 f end=0085BBD8
-luaH_next 0085BD70 f end=0085BE28
-luaH_getnum 0085C3A0 f end=0085C427
-luaH_set 0085C520 f end=0085C582
-luaH_setnum 0085C590 f end=0085C5DA
-luaH_getn 0085C690 f end=0085C6F0
-luaF_newproto 0085CF40 f end=0085CFA3
-luaM_growaux_ 0085D740 f end=0085D805
+luaM_growaux_ 0085D740 f end=0085D805 type="int32_t __stdcall func(lua_State* L, void* block, int32_t* size, size_t size_elems, int32_t limit, char* errormsg)"
+save 0085D810 f end=0085D884 type="void __usercall func(LexState* ls@<ebx>, char c)"
 luaX_init 0085D890 f end=0085D8DF
-luaX_token2str 0085D8E0 f end=0085D935
-luaX_lexerror 0085D940 f end=0085D9D3
-luaX_newstring 0085DA00 f end=0085DA50
+luaX_token2str 0085D8E0 f end=0085D935 type="char* __stdcall func(LexState* ls, int32_t token)"
+luaX_lexerror 0085D940 f end=0085D9D3 type="void __stdcall func(LexState* ls, char* msg, int32_t token)"
+luaX_syntaxerror 0085D9E0 f end=0085D9F9
+luaX_newstring 0085DA00 f end=0085DA50 type="TString* __stdcall func(LexState* ls, char* str, size_t l)"
+inclinenumber 0085DA50 f end=0085DADC type="void __usercall func(LexState* ls@<esi>)"
+check_next 0085DB70 f end=0085DBCB type="int32_t __usercall func@<eax>(LexState* ls@<eax>, char* set@<ecx>)"
+trydecpoint 0085DBD0 f end=0085DCAF type="void __usercall func(LexState* ls@<eax>, SemInfo* seminfo)"
+read_numeral 0085DCB0 f end=0085DDC1 type="void __usercall func(LexState* ls@<eax>, SemInfo* seminfo@<edi>)"
+skip_sep 0085DDD0 f end=0085DE67 type="int32_t __stdcall func@<eax>(LexState* ls@<eax>)"
+read_long_string 0085DE70 f end=0085E0E9 type="void __usercall func(LexState* ls@<eax>, SemInfo* seminfo@<edi>, int32_t sep)"
+read_string 0085E160 f end=0085E4E8 type="void __stdcall func(LexState* ls, int32_t del, SemInfo* seminfo)"
+llex 0085E600 f end=0085EBF6 type="int32_t __usercall func@<eax>(LexState* ls@<eax>, SemInfo* seminfo)"
+luaX_next 0085ECB0 f end=0085ECF9 type="void __stdcall func(LexState* ls)" ; TODO: understand changes to structures
+luaX_lookahead 0085ED00 f end=0085ED1B type="void __stdcall func(LexState* ls)"
+testnext 0085ED70 f end=0085ED8F type="int32_t __usercall func@<eax>(LexState* ls@<eax>, int32_t c)"
+check_match 0085ED90 f end=0085EDFE type="void __usercall func(LexState* ls@<esi>, int32_t what@<edi>, int32_t who, int32_t where@<eax>)"
+indexupvalue 0085EFB0 f end=0085F0FB type="int32_t __stdcall func(FuncState* fs, TString* name, expdesc* v)"
+singlevaraux 0085F100 f end=0085F1E2 type="int32_t __stdcall func(FuncState* fs, TString* n, expdesc* var, int base)"
+singlevar 0085F1F0 f end=0085F24F type="void __usercall func(LexState* ls@<eax>, expdesc* var@<ebx>)"
 luaY_parser 00861A20 f end=00861A9E
+luaU_header 00861B90 f end=00861BD0
 luaK_reserveregs 00861F10 f end=00861F51
-strjoin 00816B60 f end=00816C31
