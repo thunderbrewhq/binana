@@ -1,4 +1,5 @@
 CLCDOutput__SetGlobalPage 00959D50 f end=00959D5D
 CLCDOutput__IsOpened 00959D60 f end=00959D6A
 CLCDOutput__ShowPage 00959F20 f end=00959F7D
-CLCDOutput__constructor 00959C80 f end=00959CC4CLCDOutput__Close 00959D20 f end=00959D48
+CLCDOutput__constructor 00959C80 f end=00959CC4
+CLCDOutput__Close 00959D20 f end=00959D48
