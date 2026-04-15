@@ -2,6 +2,7 @@
 #define LUA_LEX_H
 
 DECLARE_UNION(SemInfo);
+DECLARE_STRUCT(Token);
 DECLARE_STRUCT(LexState);
 
 #include "lua/parser.h"
@@ -12,10 +13,10 @@ union SemInfo {
     TString*   ts;
 }; /* semantics information */
 
-typedef struct Token {
-    int     token;
+struct Token {
+    int32_t token;
     SemInfo seminfo;
-} Token;
+};
 
 struct LexState {
     int32_t    current;    /* current character (charint) */
