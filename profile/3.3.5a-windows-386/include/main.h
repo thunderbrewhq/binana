@@ -10,7 +10,9 @@
 #include "external/d3d9/d3d9.h"
 
 #include "lua/debug.h"
+#include "lua/lex.h"
 #include "lua/object.h"
+#include "lua/parser.h"
 #include "lua/state.h"
 #include "lua/types.h"
 

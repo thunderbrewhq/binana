@@ -11,7 +11,49 @@ luaG_concaterror 00850BF0 f end=00850C13 type="void __stdcall func(lua_State* L,
 luaG_typeerror 00850B60 f end=00850BEC type="void __stdcall func(lua_State* L, TValue* o, char* op)"
 getobjname 008505A0 f end=008506F9 type="char* __usercall func@<eax>(lua_State* L, CallInfo* ci, int32_t stackpos@<eax>, char** name)"
 symbexec 00850130 f end=0085050D type="Instruction __stdcall func(Proto* pt, int32_t lastpc, int32_t reg)"
-checkArgMode 008500E0 f end=0085012C 
+luaG_checkopenop 008500B0 f end=008500DC type="bool __stdcall func(Instruction i)"
+checkArgMode 008500E0 f end=0085012C type="int32_t __usercall func@<eax>(Proto* pt@<edx>, int32_t r@<ecx>, OpArgMask mode@<eax>)"
+kname 00850570 f end=00850596 type="char* __usercall func@<eax>(Proto* p@<ecx>, int32_t c@<eax>)"
+auxgetinfo 00850950 f end=00850A4C type="int32_t __usercall func@<eax>(lua_State* L, char* what, lua_Debug* ar@<esi>, Closure* f, CallInfo* ci@<ebx>)"
+funcinfo 0084FF80 f end=0084FFF4 type="void __usercall func(lua_Debug* ar@<eax>, Closure* cl@<ecx>)"
+currentline 0084FDF0 f end=0084FE33 type="int32_t __usercall func@<eax>(lua_State* L@<edx>, CallInfo* ci@<eax>)"
+getfuncname 00850720 f end=008507C0 type="char* __usercall func@<eax>(lua_State* L@<edi>, CallInfo* ci@<ecx>, char** name)"
+collectvalidlines 00850000 f end=008500AD type="void __usercall func(lua_State* L@<edi>, Closure* f@<ebx>)"
+luaH_setnum 0085C590 f end=0085C5DA type="TValue* __stdcall func(lua_State* L, Table* t, int32_t key)"
+luaH_getnum 0085C3A0 f end=0085C427 type="TValue* __stdcall func(Table* t, int32_t key)"
+mainposition 0085BCB0 f end=0085BD56 type="Node* __usercall func@<eax>(Table* t@<eax>, TValue* key@<edx>)"
+hashnum 0085BC70 f end=0085BCA6 type="Node* __usercall func@<eax>(Table* t@<esi>, lua_Number n)"
+newkey 0085CAB0 f end=0085CBB4 type="TValue* __stdcall func(lua_State* L, Table* t, TValue* key)"
+luaH_set 0085C520 f end=0085C582 type="void __stdcall func(lua_State* L, Table* t, TValue* key)"
+numusearray 0085C050 f end=0085C0CD type="int32_t __stdcall func(Table* t, int32_t* nums)"
+numusehash 0085C0D0 f end=0085C189 type="int32_t __usercall func@<eax>(Table* t@<ebx>, int32_t* nums, int32_t* pnasize)"
+computesizes 0085BFD0 f end=0085C04D type="int32_t __stdcall func(int32_t* nums, int32_t* narray)"
+resize 0085C6F0 f end=0085C95A type="void __usercall func(lua_State* L, Table* t@<ecx>, int32_t nasize@<eax>, int32_t nhsize)"
+rehash 0085C9B0 f end=0085CAA3 type="void __usercall func(lua_State* L, Table* t@<eax>, TValue* ek@<edi>)"
+luaH_setstr 0085CBC0 f end=0085CC08 type="void __stdcall func(lua_State* L, Table* t, TString* key)"
+luaX_newstring 0085DA00 f end=0085DA50 type="TString* __stdcall func(LexState* ls, char* str, size_t l)"
+save 0085D810 f end=0085D884 type="void __usercall func(LexState* ls@<ebx>, char c)"
+luaX_lexerror 0085D940 f end=0085D9D3 type="void __stdcall func(LexState* ls, char* msg, int32_t token)"
+luaO_pushfstring 0084D840 f end=0084D859 type="char* __stdcall func(lua_State* L, char* fmt, ...)"
+luaX_token2str 0085D8E0 f end=0085D935 type="char* __stdcall func(LexState* ls, int32_t token)"
+llex 0085E600 f end=0085EBF6 type="int32_t __usercall func@<eax>(LexState* ls@<eax>, SemInfo* seminfo)"
+luaZ_fill 0085D0F0 f end=0085D132 type="int32_t __stdcall func(ZIO* z)"
+inclinenumber 0085DA50 f end=0085DADC type="void __usercall func(LexState* ls@<esi>)"
+read_string 0085E160 f end=0085E4E8 type="void __stdcall func(LexState* ls, int32_t del, SemInfo* seminfo)"
+skip_sep 0085DDD0 f end=0085DE67 type="int32_t __stdcall func@<eax>(LexState* ls@<eax>)"
+read_long_string 0085DE70 f end=0085E0E9 type="void __usercall func(LexState* ls@<eax>, SemInfo* seminfo@<edi>, int32_t sep)"
+check_next 0085DB70 f end=0085DBCB type="int32_t __usercall func@<eax>(LexState* ls@<eax>, char* set@<ecx>)"
+luaO_str2d 0084D480 f end=0084D51D type="bool __stdcall func(char* s, lua_Number* result)"
+trydecpoint 0085DBD0 f end=0085DCAF type="void __usercall func(LexState* ls@<eax>, SemInfo* seminfo)"
+read_numeral 0085DCB0 f end=0085DDC1 type="void __usercall func(LexState* ls@<eax>, SemInfo* seminfo@<edi>)"
+luaX_lookahead 0085ED00 f end=0085ED1B type="void __stdcall func(LexState* ls)"
+luaX_next 0085ECB0 f end=0085ECF9 type="void __stdcall func(LexState* ls)" ; TODO: understand changes to structures
+testnext 0085ED70 f end=0085ED8F type="int32_t __usercall func@<eax>(LexState* ls@<eax>, int32_t c)"
+check_match 0085ED90 f end=0085EDFE type="void __usercall func(LexState* ls@<esi>, int32_t what@<edi>, int32_t who, int32_t where@<eax>)"
+singlevar 0085F1F0 f end=0085F24F type="void __usercall func(LexState* ls@<eax>, expdesc* var@<ebx>)"
+singlevaraux 0085F100 f end=0085F1E2 type="int32_t __stdcall func(FuncState* fs, TString* n, expdesc* var, int base)"
+indexupvalue 0085EFB0 f end=0085F0FB type="int32_t __stdcall func(FuncState* fs, TString* name, expdesc* v)"
+luaM_growaux_ 0085D740 f end=0085D805 type="int32_t __stdcall func(lua_State* L, void* block, int32_t* size, size_t size_elems, int32_t limit, char* errormsg)"
 lua_checkstack 0084DAB0 f end=0084DB06
 lua_xmove 0084DB10 f end=0084DB90
 lua_newthread 0084DB90 f end=0084DBD0
@@ -116,7 +158,7 @@ luaC_gettime 0085B5A0 f end=0085B602
 luaC_step 0085B950 f end=0085B9D2
 luaC_fullgc 0085B9E0 f end=0085BA4B
 luaC_barrierf 0085BA50 f end=0085BA83
-luaC_barrierback 0085BA90 f end=0085BAAB
+luaC_barrierback 0085BA90 f end=0085BAAB type="void __stdcall func(lua_State* L, Table* t)"
 luaC_link 0085BAB0 f end=0085BAF1
 luaT_gettm 0085BBE0 f end=0085BC09
 luaT_gettmbyobj 0085BC10 f end=0085BC67
@@ -163,8 +205,8 @@ luaL_openlib 0084FC00 f end=0084FD1E
 lua_getlocal 0084FEC0 f end=0084FF26
 luaG_errormsg 00850830 f end=0085091E
 luaG_ordererror 00850C60 f end=00850CB2
-_luaopen_string 00854070 f end=008540C3
-_luaopen_base 00854F40 f end=0085505E
+createmetatable 00854070 f end=008540C3 type="void __usercall func(lua_State* L@<esi>)"
+base_open 00854F40 f end=0085505E type="void __usercall func(lua_State* L@<esi>)"
 luaD_pcall 00855A20 f end=00855AD6
 lua_yield 00856150 f end=00856184
 luaV_gettable 00857250 f end=008573B5

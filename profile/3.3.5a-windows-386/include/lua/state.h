@@ -13,6 +13,7 @@ DECLARE_STRUCT(LG);
 
 #include "lua/object.h"
 #include "lua/types.h"
+#include "lua/zio.h"
 
 struct stringtable {
     GCObject** hash;

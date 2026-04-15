@@ -140,6 +140,7 @@ struct UpVal {
 
 struct CClosure {
     GCObject*     next;
+    uint32_t      unk04;
     lu_byte       tt;
     lu_byte       marked;
     lu_byte       isC;
@@ -155,7 +156,7 @@ struct LClosure {
     lu_byte   tt;
     lu_byte   marked;
     lu_byte   isC;
-    lu_byte   nupvalues;
+    lu_byte   nupvalues; // accessed at
     GCObject* gclist;
     Table*    env;
     Proto*    p;

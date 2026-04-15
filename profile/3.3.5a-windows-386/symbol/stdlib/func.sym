@@ -1,0 +1,1 @@
+strtod 0088E9C1 f end=0088E9D4 type="double __stdcall func(char* str, char** endptr)"
