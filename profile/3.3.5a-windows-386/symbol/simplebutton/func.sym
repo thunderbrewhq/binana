@@ -51,3 +51,4 @@ CSimpleButton_GetMotionScriptsWhileDisabled 00978360 f end=009783A9
 CSimpleButton_SetMotionScriptsWhileDisabled 009783B0 f end=009783FB
 CSimpleButton__SetClickAction 0096F480 f end=0096F499
 CSimpleButton__OnClick 0096FD70 f end=0096FDC6
+CSimpleButton__OnLayerMouseUp 0096FB60 f end=0096FC99

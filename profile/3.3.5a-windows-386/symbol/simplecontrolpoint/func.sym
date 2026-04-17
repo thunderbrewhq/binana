@@ -8,3 +8,5 @@ CSimpleControlPoint_GetOrder 004A6BA0 f end=004A6BE1
 CSimpleControlPoint__DestroyScriptMetaTable 004A4DC0 f end=004A4DE5
 CSimpleControlPoint__SetOrder 00499840 f end=0049989E
 CSimpleControlPoint__constructor 00499D00 f end=00499D45
+CSimpleControlPoint__SetOffset 004981F0 f end=0049822B
+CSimpleControlPoint__ChangeParent 0049C710 f end=0049C757

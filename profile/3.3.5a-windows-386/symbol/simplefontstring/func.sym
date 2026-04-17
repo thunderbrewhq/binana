@@ -75,3 +75,4 @@ CSimpleFontString__DestroyScriptMetaTable 0048BCC0 f end=0048BCE5
 CSimpleFontString__GetFontFlags 00482300 f end=00482317
 CSimpleFontString__SetTextHeight 00483890 f end=00483908
 CSimpleFontString__SetShadowOffset 00483DD0 f end=00483E78
+CSimpleFontStringAttributes__operator_assign 00483600 f end=004836C3

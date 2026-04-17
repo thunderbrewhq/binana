@@ -38,3 +38,4 @@ CSimpleFont_SetJustifyV 004A4B00 f end=004A4B4F
 CSimpleFont_SetIndentedWordWrap 004A4B50 f end=004A4B9F
 JustifyToString 008150D0 f end=00815101
 ReadOrigin 004A4BA0 f end=004A4C24
+CSimpleFont__operator_assign 00496440 f end=004964BB

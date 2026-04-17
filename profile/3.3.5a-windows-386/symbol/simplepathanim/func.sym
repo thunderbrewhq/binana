@@ -11,3 +11,5 @@ CSimplePathAnim__GetMaxControlPointOrder 00498260 f end=0049827D
 CSimplePathAnim__NotifyOrderChanged 00499090 f end=00499135
 CSimplePathAnim__constructor 00499D50 f end=00499DAD
 CSimplePathAnim__BuildSpline 0049AF20 f end=0049B0B7
+CSimplePathAnim__NotifyControlPointAdded 0049C070 f end=0049C132
+CSimplePathAnim__NotifyControlPointRemoved 0049C140 f end=0049C16E

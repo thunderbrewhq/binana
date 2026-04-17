@@ -43,3 +43,4 @@ CSimpleMessageFrame__DestroyScriptMetaTable 00973D40 f end=00973D65
 CSimpleMessageFrame__SetTimeVisible 00967DB0 f end=00967DFD
 CSimpleMessageFrame__SetFadeDuration 00967E00 f end=00967E4D
 CSimpleMessageFrame__Clear 00968CD0 f end=00968D44
+CSimpleMessageFrame__ClearPending 00968710 f end=0096878B
