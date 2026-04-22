@@ -7,3 +7,4 @@ CGArenaTeamInfo__OnArenaTeamRoster 005A3E10 f end=005A40DF
 CGArenaTeamInfo__InitializeGame 005A40E0 f end=005A41B3
 CGArenaTeamInfo__OnArenaTeamStats 005A2D50 f end=005A2E0D
 CGArenaTeamInfo__ShutdownGame 005A3DD0 f end=005A3E05
+QSortRoster 005A2BD0 f end=005A2D25

@@ -12,3 +12,5 @@ CGTabardModelFrame_CycleVariation 00599500 f end=005995CA
 CGTabardModelFrame_InitializeTabardColors 005997C0 f end=00599816
 CGTabardModelFrame_GetLowerEmblemTexture 00599B20 f end=00599DCD
 CGTabardModelFrame__DestroyScriptMetaTable 00599000 f end=00599025
+CGTabardModelFrame__Create 00514350 f end=00514399
+CGTabardModelFrame__constructor 00598F50 f end=00598F73

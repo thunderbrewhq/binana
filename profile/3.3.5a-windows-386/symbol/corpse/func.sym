@@ -22,3 +22,6 @@ CGCorpse_C__GetGroundNormal 007066B0 f end=00706891
 CGCorpse_C__Animate 007068D0 f end=00706954
 GuildGetGuildTabard 007EADA0 f end=007EAE55
 GuildGetTabardCost 007EAE60 f end=007EAE66
+CorpseDynamicFlagUpdateHandler 00706280 f end=007062B7
+CGCorpse_C__destructor 007065B0 f end=007066A4
+CGCorpse_C__destructor 007068A0 f end=007068CB

@@ -59,3 +59,7 @@ CGItem_C__destructor 00706AE0 f end=00706B55
 CGItem_C__IsMetal 00706FA0 f end=00706FD8
 CGItem_C__UpdateExpirationTime 00707070 f end=007070A6
 CGItem_C__UpdateEnchantmentTime 007070E0 f end=00707116
+OnUpdateStackCount 00707720 f end=00707875
+CGItem_C__GetItemEnchantmentVisualID 00708040 f end=0070813C
+CGItem_C__PostInitWithStats 0070AA40 f end=0070AE82
+LoadItemCacheCallback 0070AE90 f end=0070AEF4

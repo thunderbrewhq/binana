@@ -26,3 +26,5 @@ CGBattlefieldInfo__BattlefieldMgrQueueRequest 0054D590 f end=0054D621
 CGBattlefieldInfo__BattlefieldMgrQueueInviteResponse 0054D630 f end=0054D6CD
 CGBattlefieldInfo__BattlefieldMgrExitRequest 0054D6D0 f end=0054D761
 QSortScoreData 0054A740 f end=0054A9DD
+BattlefieldInfoUnregisterScriptFunctions 0054A410 f end=0054A42F
+CGBattlefieldInfo__ShutdownGame 0054E220 f end=0054E322

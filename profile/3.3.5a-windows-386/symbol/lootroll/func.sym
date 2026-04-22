@@ -8,3 +8,5 @@ PassedCallback 006FB560 f end=006FB5F2
 LootRoll__AllPassed 006FB600 f end=006FB6F4
 WonStatsAndName 006FB700 f end=006FB9AF
 LootRoll__Won 006FBB10 f end=006FBC61
+WonNameCallback 006FB9B0 f end=006FBA5F
+WonCallback 006FBA60 f end=006FBB0A

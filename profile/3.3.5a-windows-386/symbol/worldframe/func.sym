@@ -47,3 +47,4 @@ QSortDisplayListMembers 004FB0F0 f end=004FB18D
 CGWorldFrame__Create 0050F3F0 f end=0050F41B
 CGWorldFrame__TranslateToMapCoords 00544140 f end=00544415
 CGWorldFrame__IsUnitLegalSelection 004F7350 f end=004F752F
+CGWorldFrame__GetLineSegment 004F6450 f end=004F6559

@@ -1,3 +1,4 @@
 CGMinigameInfo__InitializeGame 005C5720 f end=005C5746
 CGMinigameInfo__OnMinigameState 005C54D0 f end=005C54FD
 CGMinigameInfo__OnMinigameSetup 005C5690 f end=005C5719
+CGMinigameInfo__ShutdownGame 005C54B0 f end=005C54C8CGMinigameInfo__LeaveWorld 005C5660 f end=005C5683

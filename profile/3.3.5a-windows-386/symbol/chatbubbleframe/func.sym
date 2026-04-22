@@ -7,3 +7,4 @@ CGChatBubbleFrame__Remove 0056CE80 f end=0056CE9C
 CGChatBubbleFrame__GetNewChatBubble 0056CEA0 f end=0056CEF7
 CGChatBubbleFrame__ClearAll 0056CF80 f end=0056D048
 CGChatBubbleFrame__OnWorldLayerUpdate 0056D050 f end=0056D235
+CGChatBubbleFrame__ShutdownGame 0056CDC0 f end=0056CDD2

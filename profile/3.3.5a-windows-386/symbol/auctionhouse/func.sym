@@ -28,3 +28,4 @@ QSortOwned 0059B8E0 f end=0059B92F
 QSortBid 0059B930 f end=0059B97F
 CGAuctionHouse__ShutdownGame 0059E090 f end=0059E157
 ActionMessageItemStatsCallback 0059A400 f end=0059A495
+CheckSortCriteria 0059B460 f end=0059B859

@@ -97,3 +97,7 @@ TextureCanUpdate 004B62D0 f end=004B62F1
 TextureCacheGetMip 004F2D00 f end=004F2D3C
 TextureCacheGetPal 004F2D40 f end=004F2D71
 CTgaFile__Compress 006AACE0 f end=006AADD2
+CTgaFile__SetImage 006AA950 f end=006AAA67
+CTgaFile__CountRun 006AAA70 f end=006AAB6F
+CTgaFile__RleCompressLine 006AAB70 f end=006AACD4
+CGxTex__constructor 006852C0 f end=00685363

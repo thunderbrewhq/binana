@@ -1,1 +1,3 @@
 CGGameObject_C_Type_Text__constructor 007126D0 f end=007126F5
+CGGameObject_C_Type_Text__Use 0070C850 f end=0070C87B
+CGGameObject_C_Type_Text__PostInitWithStats 0070C880 f end=0070C8C0

@@ -28,3 +28,5 @@ CGMailInfo__OnMailListResult 00571C50 f end=00572207
 CGMailInfo__InitializeGame 00572210 f end=005723D7
 InboxItemQueryCallback 0056D4B0 f end=0056D4C8
 CGMailInfo__OnQueryNextMailTimeResult 0056DAF0 f end=0056DBC0
+InboxAuctionItemQueryCallback 0056F4E0 f end=0056F518
+CGMailInfo__ShutdownGame 00571630 f end=00571724

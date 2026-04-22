@@ -10,3 +10,5 @@ CombatLogEntry__CancelPendingCallbacks 00750270 f end=0075037C
 UnitCombatLogHeal 00750860 f end=00750A81
 UnitCombatLogSpellMissed 00751B80 f end=00751C3E
 UnitCombatLogSplitDamage 00752DE0 f end=00752ECB
+AddCombatLogEntry 0074FF20 f end=0074FF6C
+UnitCombatLogInstakill 00752210 f end=00752296

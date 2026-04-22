@@ -32,3 +32,7 @@ CGLookingForGroup__GetClassRoles 00552940 f end=0055294E
 CGLookingForGroup__LeaveLFG 00553AB0 f end=00553B4D
 LFGLIST__Clear 00558AF0 f end=00558C2F
 LFGLIST__Copy 0055B1A0 f end=0055B6FC
+QSortLFGDungeons 005536A0 f end=0055382C
+CGLookingForGroup__UpdateLFDEntries 00558350 f end=00558516
+CGLookingForGroup__UpdateLFREntries 00558520 f end=005586C2
+GetLfgDungeonExpansionRec 006349F0 f end=00634A71
