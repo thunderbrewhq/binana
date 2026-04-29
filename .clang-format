@@ -2,6 +2,7 @@ AlignAfterOpenBracket: AlwaysBreak
 AlignConsecutiveDeclarations: true
 AlignConsecutiveMacros: true
 AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortEnumsOnASingleLine: false
 BinPackArguments: false
 BinPackParameters: false
 ContinuationIndentWidth: 4 
