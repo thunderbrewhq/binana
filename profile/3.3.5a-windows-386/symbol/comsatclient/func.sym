@@ -15,3 +15,5 @@ ComSatClient_SetCurrentSession 007DF290 f end=007DF2B8
 ComSatClient_DisableCurrentSession 007DF2C0 f end=007DF2C8
 ComSatClient_OnSetTalkerMuted 007DF6F0 f end=007DF769
 ComSatClient_Init 007DFAF0 f end=007DFE9C
+ComSatClient_FindSessionByTypeAndName 007DB400 f end=007DB49E
+ComSatClient_SetCurrentSessionI 007DF150 f end=007DF28A

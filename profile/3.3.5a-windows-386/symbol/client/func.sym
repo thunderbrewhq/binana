@@ -164,3 +164,4 @@ SetAddOnEnableState 005F90B0 f end=005F91DC
 SetPortraitTexture 00619330 f end=0061936E
 DownloadAccountData 006B9CA0 f end=006B9CDB
 DesktopGammaCallback 00401A80 f end=00401B00
+IsAlphaKorean 007E0FC0 f end=007E0FEF

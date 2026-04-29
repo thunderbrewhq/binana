@@ -737,3 +737,4 @@ LightParamsRec__GetFilename 008BDFD0 f end=008BDFD6
 LightRec__GetFilename 008BDFE0 f end=008BDFE6
 LightIntBandRec__GetFilename 008BE100 f end=008BE106
 LightFloatBandRec__GetFilename 008BE1A0 f end=008BE1A6
+ItemDisplayInfoRec__Read 008A7FD0 f end=008A834F

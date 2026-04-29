@@ -101,3 +101,4 @@ CTgaFile__SetImage 006AA950 f end=006AAA67
 CTgaFile__CountRun 006AAA70 f end=006AAB6F
 CTgaFile__RleCompressLine 006AAB70 f end=006AACD4
 CGxTex__constructor 006852C0 f end=00685363
+CTgaFile__Image 006AA820 f end=006AA834

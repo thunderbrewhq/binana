@@ -26,3 +26,7 @@ LoadXML_Insets 00815910 f end=00815C30
 LoadXML_String 00815FA0 f end=00815FFE
 LoadXML_Value 00815600 f end=0081573A
 LoadXML_Dimensions 00815740 f end=00815902
+begin_element 00814B50 f end=00814C35
+end_element 008145B0 f end=008145C1
+handle_body 008145D0 f end=0081464E
+ProcessFileForMakeSign 008162B0 f end=008164C5

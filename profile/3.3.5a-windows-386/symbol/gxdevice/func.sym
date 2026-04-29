@@ -131,3 +131,5 @@ CGxDevice__TexSetUserData 00684930 f end=00684963
 CGxDevice__GetSurveyModeInfo 00685040 f end=006850D8
 GxDevClearScreenShot 00685370 f end=006853AF
 CGxDevice__TexSetFlags 00685CD0 f end=00685D3E
+CGxDevice__OpenGlAdapterFormats 0068C250 f end=0068C541
+CGxDevice__AdapterFormats 00682B00 f end=00682B79
