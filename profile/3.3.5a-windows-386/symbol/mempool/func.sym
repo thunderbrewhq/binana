@@ -1,0 +1,4 @@
+MemPool__MemFree 00855670 f end=008556D6 type="int32_t __thiscall func(MemPool* this, void* ptr)"
+MemPool__MemAlloc 00855820 f end=008558DB type="void* __thiscall func(MemPool* this)"
+MemChunk__constructor 00855570 f end=008555D1 type="MemChunk* __thiscall func(MemChunk* this, uint32_t blockSize, uint32_t a2)"
+MemPool__destructor 008556E0 f end=0085573C type="void __thiscall func(MemPool* this)"
