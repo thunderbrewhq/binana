@@ -69,7 +69,7 @@ DeleteInterfaceAddOns 005F4CE0 f end=005F4D8A
 DeleteInterfaceFiles 005F4D90 f end=005F4E30
 GetAddOnInfoRequest 005F5440 f end=005F5612
 UnloadAddOns 005F5620 f end=005F5AC2
-GetAddOnName 005F7410 f end=005F742E
+GetAddOnName 005F7410 f end=005F742E type="char* __stdcall func(char* name)"
 GetAddOnURL 005F74B0 f end=005F74DD
 GetAddOnMetadata 005F74E0 f end=005F7511
 GetAddonDeps 005F7520 f end=005F753E
@@ -143,7 +143,6 @@ FontFlagsToString 008151E0 f end=00815237
 StringToSmoothWeights 00815240 f end=008152A0
 StringToLoopType 008152A0 f end=008152EA
 StringToCurveType 00815370 f end=008153BA
-StringToBOOL 008154E0 f end=008154F4
 RGBtoHSV 00984F60 f end=00985021
 HSVtoRGB 00985030 f end=0098517E
 WowLogHeader 00404B80 f end=00404ED6

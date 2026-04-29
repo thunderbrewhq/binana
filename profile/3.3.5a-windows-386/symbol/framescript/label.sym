@@ -9,3 +9,5 @@ s_errorHandlerRef 00AF576C l type="int32_t"
 s_recursiveTableHash 00AF5774 l type="int32_t"
 extra_funcs 00A443A8 l type="luaL_Reg[31]"
 s_compat_lua 00AF57F0 l type="char*" ; this is statically defined inside FrameScript_Initialize()
+s_taintLog 00BD0794 l type="HSLOG"
+s_blocksizes 00A47FBC l type="int32_t[9]"

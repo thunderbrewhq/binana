@@ -46,3 +46,7 @@ FrameScript_Object__RegisterScriptEvent 0081B380 f end=0081B407
 FrameScript_Object__UnregisterScriptEvent 0081B410 f end=0081B46D
 FrameScript_Object__RegisterAllScriptEvents 0081B470 f end=0081B4B1
 FrameScript_Object__UnregisterAllScriptEvents 0081B4C0 f end=0081B501
+strjoin 00816B60 f end=00816C31
+StringToBOOL 00815400 f end=00815480 type="int32_t __usercall func@<eax>(char* str, int32_t def@<esi>)"
+StringToBOOL 008154E0 f end=008154F4 type="int32_t __stdcall func(char* str)"
+StringToBOOL 00815500 f end=00815573 type="int32_t __stdcall func(lua_State* L, int32_t idx, int32_t def)"
