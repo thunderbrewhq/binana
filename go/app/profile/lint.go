@@ -11,6 +11,7 @@ import (
 type linter struct {
 	warnings              uint64
 	named_functions_count uint64
+	typed_function_count  uint64
 }
 
 func (linter *linter) warn(s *symbols.TableEntry, f string, args ...any) {
@@ -54,6 +55,10 @@ func Lint(params *LintParams) {
 					linter.warn(entry, "does not have an end address\n")
 				}
 			}
+
+			if entry.Symbol.DataType != "" {
+				linter.typed_function_count++
+			}
 		}
 	}
 
@@ -61,5 +66,10 @@ func Lint(params *LintParams) {
 		ratio := float64(linter.named_functions_count) / float64(Profile.Info.FunctionCount)
 		fmt.Printf("%d out of %d functions named (%f%%)\n", linter.named_functions_count, Profile.Info.FunctionCount, ratio*100.0)
 		fmt.Printf("%d warnings generated\n", linter.warnings)
+	}
+
+	if linter.named_functions_count != 0 {
+		typed_ratio := float64(linter.typed_function_count) / float64(linter.named_functions_count)
+		fmt.Printf("%d out of %d (%f%%) named functions have type information", linter.typed_function_count, linter.named_functions_count, typed_ratio*100.0)
 	}
 }

@@ -24,7 +24,7 @@ func init() {
 	f.StringSlice("program", nil, "a list of programs to return tokens for")
 	f.StringSlice("os", nil, "a list of kernel names to return tokens for (windows, darwin, linux)")
 	f.StringSlice("arch", nil, "a list of CPU architectures to return tokens for (ppc, 386, amd64)")
-	f.String("present", "normal", "control the way tokens are presented to console (normal, name-only)")
+	f.String("present", "normal", "control the way tokens are presented to console (name, sample-name)")
 	f.Bool("quote", false, "quote strings before presenting")
 	root.RootCmd.AddCommand(&query_cmd)
 }

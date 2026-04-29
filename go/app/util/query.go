@@ -39,7 +39,7 @@ type QueryParams struct {
 	MaxBuild uint32
 	// Regular expression for tokens (symbols/type information)
 	Token string
-	// If true, Token is a POSIX regular expression
+	// If true, Token is a RE2 regular expression
 	RegEx bool
 }
 
@@ -202,9 +202,9 @@ func Query(params *QueryParams) {
 	var token_query token_query
 	token_query.params = params
 	if params.RegEx {
-		token_query.token_regexp = regexp.MustCompilePOSIX(token_query.params.Token)
+		token_query.token_regexp = regexp.MustCompile(token_query.params.Token)
 	} else {
-		token_query.token_regexp = regexp.MustCompilePOSIX(regexp.QuoteMeta(params.Token))
+		token_query.token_regexp = regexp.MustCompile(regexp.QuoteMeta(params.Token))
 	}
 
 	if err := token_query.load_sample_database(); err != nil {
