@@ -9,12 +9,7 @@
 #include "async/queue.h"
 #include "external/d3d9/d3d9.h"
 
-#include "lua/debug.h"
-#include "lua/lex.h"
-#include "lua/object.h"
-#include "lua/parser.h"
-#include "lua/state.h"
-#include "lua/types.h"
+#include "lua/lua.h"
 
 #include "bc/debug/errorstack.h"
 #include "bc/file/fileinfo.h"
@@ -55,6 +50,7 @@
 #include "common/datastore.h"
 #include "common/handle.h"
 #include "common/instance.h"
+#include "common/mempool.h"
 #include "common/rcstring.h"
 #include "common/refcount.h"
 #include "common/status.h"
@@ -184,6 +180,7 @@
 #include "ui/simpleregion.h"
 #include "ui/simpletexture.h"
 #include "ui/simpletop.h"
+#include "ui/uiaddon.h"
 
 #include "xml/xml.h"
 
