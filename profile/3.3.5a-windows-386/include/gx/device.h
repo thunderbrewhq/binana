@@ -7,6 +7,7 @@
 #include "storm/array/c2vector.h"
 #include "storm/array/c3vector.h"
 #include "storm/array/cimvector.h"
+#include "storm/array/float.h"
 #include "storm/array/uint16_t.h"
 #include "storm/array/uint32_t.h"
 
@@ -17,6 +18,7 @@
 #include "tempest/vector.h"
 
 #include "gx/apilight.h"
+#include "gx/batch.h"
 #include "gx/buffer.h"
 #include "gx/caps.h"
 #include "gx/emergencymem.h"
@@ -79,71 +81,72 @@ struct CGxDevice__TextureTarget {
 };
 
 // 84 functions
+#define INTERFACE CGxDevice
 struct CGxDevice__v_table {
     // void ITexMarkAsUpdated(CGxTex* texId);
-    void* v_fn_0_ITexMarkAsUpdated;
+    P_METHOD(void, _00_ITexMarkAsUpdated, CGxTex* texId);
     // void IRsSendToHw(EGxRenderState rs);
     // no base implementation
-    void* v_fn_1_IRsSendToHw;
+    P_METHOD(void, _01_IRsSendToHw, EGxRenderState rs);
     // void ICursorCreate(const CGxFormat& format);
-    void* v_fn_2_ICursorCreate;
+    P_METHOD(void, _02_ICursorCreate, CGxFormat* format);
     // void ICursorDestroy();
-    void* v_fn_3_ICursorDestroy;
+    E_METHOD(void, _03_ICursorDestroy);
     // void ICursorDraw();
-    void* v_fn_4_ICursorDraw;
+    E_METHOD(void, _04_ICursorDraw);
     // This gets called when window is resized. It runs a list of callbacks in an array.
     // two functions that are in this array (ONLY once in-game, not in login screen):
     // * 007E7FE0
     // * 00512920
     // void NotifyOnDeviceRestored();
-    void* v_fn_5_NotifyOnDeviceRestored;
+    E_METHOD(void, _05_NotifyOnDeviceRestored);
     // void NotifyOnTextureRecreation();
-    void* v_fn_6_NotifyOnTextureRecreation;
+    E_METHOD(void, _06_NotifyOnTextureRecreation);
     // void NotifyOnStereoChanged();
-    void* v_fn_7_NotifyOnStereoChanged;
+    E_METHOD(void, _07_NotifyOnStereoChanged);
     // void `scalar deleting destructor'(uint32_t __flags)
-    void* v_fn_8_scalar_deleting_destructor;
+    P_METHOD(void, _08_scalar_deleting_destructor, uint32_t __flags);
     // int32_t DeviceCreate(uintptr_t hwnd, const CGxFormat& format);
-    void* v_fn_9_DeviceCreate;
+    P_METHOD(int32_t, _09_DeviceCreate, uintptr_t hwnd, CGxFormat* format);
     // int32_t DeviceCreate(long (*windowProc)(void*, uint32_t, uint32_t, int32_t), CGxFormat const&
     // format);
-    void* v_fn_10_DeviceCreate;
+    P_METHOD(int32_t, _10_DeviceCreate, GxWindowProc windowProc, CGxFormat* format);
     // void DeviceDestroy();
-    void* v_fn_11_DeviceDestroy;
+    E_METHOD(void, _11_DeviceDestroy);
     // void DeviceEvictResources();
-    void* v_fn_12_DeviceEvictResources;
+    E_METHOD(void, _12_DeviceEvictResources);
     // int32_t DeviceSetFormat(const CGxFormat& format);
-    void* v_fn_13_DeviceSetFormat;
+    P_METHOD(int32_t, _13_DeviceSetFormat, CGxFormat* format);
     // void DeviceSetBaseMipLevel(uint32_t mipLevel);
-    void* v_fn_14_DeviceSetBaseMipLevel;
+    P_METHOD(void, _14_DeviceSetBaseMipLevel, uint32_t mipLevel);
     // void DeviceSetGamma(const CGxGammaRamp& ramp);
-    void* v_fn_15_DeviceSetGamma;
+    P_METHOD(void, _15_DeviceSetGamma, CGxGammaRamp* ramp);
     // void DeviceSetGamma(float gamma);
-    void* v_fn_16_DeviceSetGamma;
+    P_METHOD(void, _16_DeviceSetGamma, float gamma);
     // no base implementation
     // void* DeviceWindow();
-    void* v_fn_17_DeviceWindow;
+    E_METHOD(void*, _17_DeviceWindow);
     // void DeviceTakeScreenShot();
-    void* v_fn_18_DeviceTakeScreenShot;
+    E_METHOD(void, _18_DeviceTakeScreenShot);
     // void DeviceReadScreenShot(uint32_t& w, uint32_t& h, const CImVector*& pixels) */
-    void* v_fn_19_DeviceReadScreenShot;
+    P_METHOD(void, _19_DeviceReadScreenShot, uint32_t* w, uint32_t* h, CImVector** pixels);
     // void DeviceReadPixels(CiRect& rect, TSGrowableArray<CImVector>& pixels);
-    void* v_fn_20_DeviceReadPixels;
+    P_METHOD(void, _20_DeviceReadPixels, CiRect* rect, TSGrowableArray_CImVector* pixels);
     // void DeviceReadDepths(CiRect& rect, TSGrowableArray<float>& depths);
-    void* v_fn_21_DeviceReadDepths;
+    P_METHOD(void, _21_DeviceReadDepths, CiRect* rect, TSGrowableArray_float* depths);
     // void DeviceWM(EGxWM wm, int32_t param1, int32_t param2);
-    void* v_fn_22_DeviceWM;
+    P_METHOD(void, _22_DeviceWM, EGxWM wm, int32_t param1, int32_t param2);
     // void DeviceSetRenderTarget(EGxBuffer buffer, CGxTex* texture, uint32_t plane);
-    void* v_fn_23_DeviceSetRenderTarget;
+    P_METHOD(void, _23_DeviceSetRenderTarget, EGxBuffer buffer, CGxTex* texture, uint32_t plane);
     // void v_fn_24(); DeviceReleaseDepthBuffer?
     // d3d:
     //   this->m_d3dDevice->GetDepthStencilSurface(&PTR_00C6033C);
     //   PTR_00C6033C->Release();
-    void* v_fn_24;
+    E_METHOD(void, _24);
     // void v_fn_25(); DeviceResetDepthBuffer?
     // d3d:
     //   this->m_d3dDevice->SetDepthStencilSurface(PTR_00C6033C);
-    void* v_fn_25;
+    E_METHOD(void, _25);
     // void v_fn_26(CGxTex* texId); DeviceResolveDepthBuffer(CGxTex*) seems to be the most logical
     // candidate for this d3d:
     //   if (this->m_context) {
@@ -156,130 +159,179 @@ struct CGxDevice__v_table {
     //      this->m_d3dDevice->SetDepthStencilSurface(texId->m_apiSpecificData);
     //   }
     // void DeviceResolveDepthBuffer(CGxTex* texId);
-    void* v_fn_26_DeviceResolveDepthBuffer;
+    P_METHOD(void, _26_DeviceResolveDepthBuffer, CGxTex* texId);
     // void DeviceCopyTex(CGxTex* sourceTex, uint32_t sourcePlane, CGxTex* destTex, uint32_t
     // destPlane);
-    void* v_fn_27_DeviceCopyTex;
+    P_METHOD(
+        void,
+        _27_DeviceCopyTex,
+        CGxTex*  sourceTex,
+        uint32_t sourcePlane,
+        CGxTex*  destTex,
+        uint32_t destPlane);
     // void DeviceOverride(EGxOverride override, uint32_t value);
-    void* v_fn_28_DeviceOverride;
+    P_METHOD(void, _28_DeviceOverride, EGxOverride override, uint32_t value);
     // void AddDeviceRestoredCallback(DEVICERESTOREDCALLBACK callback);
-    void* v_fn_29_AddDeviceRestoredCallback;
+    P_METHOD(void, _29_AddDeviceRestoredCallback, DEVICERESTOREDCALLBACK callback);
     // int32_t RemoveDeviceRestoredCallback(DEVICERESTOREDCALLBACK callback);
-    void* v_fn_30_RemoveDeviceRestoredCallback;
+    P_METHOD(int32_t, _30_RemoveDeviceRestoredCallback, DEVICERESTOREDCALLBACK callback);
     // void AddTextureRecreationCallback(TEXTURERECREATIONCALLBACK callback);
-    void* v_fn_31_AddTextureRecreationCallback;
+    P_METHOD(void, _31_AddTextureRecreationCallback, TEXTURERECREATIONCALLBACK callback);
     // int32_t RemoveTextureRecreationCallback(TEXTURERECREATIONCALLBACK callback);
-    void* v_fn_32_RemoveTextureRecreationCallback;
+    P_METHOD(int32_t, _32_RemoveTextureRecreationCallback, TEXTURERECREATIONCALLBACK callback);
     // void AddStereoChangedCallback(STEREOCHANGEDCALLBACK callback);
-    void* v_fn_33_AddStereoChangedCallback;
+    P_METHOD(void, _33_AddStereoChangedCallback, STEREOCHANGEDCALLBACK callback);
     // int32_t RemoveStereoChangeCallback(STEREOCHANGEDCALLBACK callback);
-    void* v_fn_34_RemoveStereoChangedCallback;
+    P_METHOD(int32_t, _34_RemoveStereoChangedCallback, STEREOCHANGEDCALLBACK callback);
     // void CapsWindowSize(CRect& dst);
-    void* v_fn_35_CapsWindowSize;
+    P_METHOD(void, _35_CapsWindowSize, CRect* dst);
     // void CapsWindowSizeInScreenCoords(CRect& dst);
-    void* v_fn_36_CapsWindowSizeInScreenCoords;
+    P_METHOD(void, _36_CapsWindowSizeInScreenCoords, CRect* dst);
     // void LogCrashInfo(char* buffer, uint32_t buffersize);
-    void* v_fn_37_LogCrashInfo;
+    P_METHOD(void, _37_LogCrashInfo, char* buffer, uint32_t buffersize);
     // void ScenePresent();
-    void* v_fn_38_ScenePresent;
+    E_METHOD(void, _38_ScenePresent);
     // void SceneClear(uint32_t mask, CImVector color);
-    void* v_fn_39_SceneClear;
+    P_METHOD(void, _39_SceneClear, uint32_t mask, CImVector color);
     // void XformSetProjection(const C44Matrix& matrix);
-    void* v_fn_40_XformSetProjection;
+    P_METHOD(void, _40_XformSetProjection, C44Matrix* matrix);
     // void XformSetView(const C44Matrix& matrix);
-    void* v_fn_41_XformSetView;
+    P_METHOD(void, _41_XformSetView, C44Matrix* matrix);
     // void Draw(CGxBatch* batch, int32_t indexed);
-    void* v_fn_42_Draw;
+    P_METHOD(void, _42_Draw, CGxBatch* batch, int32_t indexed);
     // void PrimBegin(EGxPrim primType);
-    void* v_fn_43_PrimBegin;
+    P_METHOD(void, _43_PrimBegin, EGxPrim primType);
     // void PrimDrawElements();
-    void* v_fn_44_PrimDrawElements;
+    E_METHOD(void, _44_PrimDrawElements);
     // void PrimVertex(const C3Vector& v);
-    void* v_fn_45_PrimVertex;
+    P_METHOD(void, _45_PrimVertex, C3Vector* v);
     // void PrimTexCoord(uint32_t tmu, const C2Vector& t);
-    void* v_fn_46_PrimTexCoord;
+    P_METHOD(void, _46_PrimTexCoord, uint32_t tmu, C2Vector* t);
     // void PrimNormal(const C3Vector& n);
-    void* v_fn_47_PrimNormal;
+    P_METHOD(void, _47_PrimNormal, C3Vector* n);
     // void PrimColor(const CImVector& c);
-    void* v_fn_48_PrimColor;
+    P_METHOD(void, _48_PrimColor, CImVector* c);
     // void PrimPointSize(float s);
-    void* v_fn_49_PrimPointSize;
-    // void PrimeLineWidth(float w);
-    void* v_fn_50_PrimLineWidth;
+    P_METHOD(void, _49_PrimPointSize, float s);
+    // void PrimLineWidth(float w);
+    P_METHOD(void, _50_PrimLineWidth, float w);
     // void MasterEnableSet(EGxMasterEnables state, int32_t enable);
-    void* v_fn_51_MasterEnableSet;
+    P_METHOD(void, _51_MasterEnableSet, EGxMasterEnables state, int32_t enable);
     // void PoolSizeSet(CGxPool* pool, uint32_t size);
-    void* v_fn_52_PoolSizeSet;
+    P_METHOD(void, _52_PoolSizeSet, CGxPool* pool, uint32_t size);
     // void PoolDestroy(CGxPool* pool);
-    void* v_fn_53_PoolDestroy;
+    P_METHOD(void, _53_PoolDestroy, CGxPool* pool);
     // char* BufLock(CGxBuf* buf);
-    void* v_fn_54_BufLock;
+    P_METHOD(char*, _54_BufLock, CGxBuf* buf);
     // int32_t BufUnlock(CGxBuf* buf, uint32_t size);
-    void* v_fn_55_BufUnlock;
+    P_METHOD(int32_t, _55_BufUnlock, CGxBuf* buf, uint32_t size);
     // void BufData(CGxBuf* buf, const void* data, uint32_t size, uint32_t offset);
-    void* v_fn_56_BufData;
+    P_METHOD(void, _56_BufData, CGxBuf* buf, const void* data, uint32_t size, uint32_t offset);
     // int32_t TexCreate(EGxTexTarget target, uint32_t width, uint32_t height, uint32_t depth,
     // EGxTexFormat format, EGxTexFormat dataFormat, CGxTexFlags flags, void* userArg, void
     // (*userFunc)(EGxTexCommand, uint32_t, uint32_t, uint32_t, uint32_t, void*, uint32_t&, void
     // const*&), const char* name, CGxTex*& texId);
-    void* v_fn_57_TexCreate;
+    P_METHOD(
+        int32_t,
+        _57_TexCreate,
+        EGxTexTarget  target,
+        uint32_t      width,
+        uint32_t      height,
+        uint32_t      depth,
+        EGxTexFormat  format,
+        EGxTexFormat  dataFormat,
+        CGxTexFlags   flags,
+        void*         userArg,
+        GxTexCallback userFunc,
+        const char*   name,
+        CGxTex**      texId);
     // void TexDestroy(CGxTex* texId);
-    void* v_fn_58_TexDestroy;
+    P_METHOD(void, _58_TexDestroy, CGxTex* texId);
     // int32_t TexCopy(CGxTex* destTex, CGxTex* sourceTex, const C2iVector& pos, const C2iVector&
     // size, uint32_t level, uint32_t plane);
-    void* v_fn_59_TexCopy;
+    P_METHOD(
+        int32_t,
+        _59_TexCopy,
+        CGxTex*    destTex,
+        CGxTex*    sourceTex,
+        C2iVector* pos,
+        C2iVector* size,
+        uint32_t   level,
+        uint32_t   plane);
     // bool TexStretch(CGxTex* sourceTex, CGxTex* destTex, const CiRect* destRect, const CiRect*
     // sourceRect, uint32_t level, uint32_t plane);
-    void* v_fn_60_TexStretch;
+    P_METHOD(
+        bool,
+        _60_TexStretch,
+        CGxTex*       sourceTex,
+        CGxTex*       destTex,
+        const CiRect* destRect,
+        const CiRect* sourceRect,
+        uint32_t      level,
+        uint32_t      plane);
     // void TexSetCacheSize(int32_t cacheSize);
-    void* v_fn_61_TexSetCacheSize;
+    P_METHOD(void, _61_TexSetCacheSize, int32_t cacheSize);
     // void QueryCreate(CGxQuery*& query, EGxQueryType type);
-    void* v_fn_62_QueryCreate;
+    P_METHOD(void, _62_QueryCreate, CGxQuery** query, EGxQueryType type);
     // void QueryDestroy(CGxQuery*& query);
-    void* v_fn_63_QueryDestroy;
+    P_METHOD(void, _63_QueryDestroy, CGxQuery** query);
     // bool QueryBegin(CGxQuery* query);
-    void* v_fn_64_QueryBegin;
+    P_METHOD(bool, _64_QueryBegin, CGxQuery* query);
     // bool QueryEnd(CGxQuery* query);
-    void* v_fn_65_QueryEnd;
+    P_METHOD(bool, _65_QueryEnd, CGxQuery* query);
     // bool QueryGetParam(CGxQuery* query, EGxQueryParam param, uint32_t* data);
-    void* v_fn_66_QueryGetParam;
+    P_METHOD(bool, _66_QueryGetParam, CGxQuery* query, EGxQueryParam param, uint32_t* data);
     // bool QueryGetData(CGxQuery* query, uint32_t* data);
-    void* v_fn_67_QueryGetData;
+    P_METHOD(bool, _67_QueryGetData, CGxQuery* query, uint32_t* data);
     // void ShaderCreate(CGxShader* shaders[], EGxShTarget target, const char* a3, const char* a4,
     // int32_t permutations);
-    void* v_fn_68_ShaderCreate;
+    P_METHOD(
+        void,
+        _68_ShaderCreate,
+        CGxShader** shaders,
+        EGxShTarget target,
+        const char* a3,
+        const char* a4,
+        int32_t     permutations);
     // void ShaderDestroy(CGxShader*& shader);
-    void* v_fn_69_ShaderDestroy;
+    P_METHOD(void, _69_ShaderDestroy, CGxShader** shader);
     // void ShaderConstantsSet(EGxShTarget target, uint32_t index, const float* constraints,
     // uint32_t count);
-    void* v_fn_70_ShaderConstantsSet;
+    P_METHOD(
+        void,
+        _70_ShaderConstantsSet,
+        EGxShTarget  target,
+        uint32_t     index,
+        const float* constraints,
+        uint32_t     count);
     // void IShaderReload(CGxShader* shader, const char* a2, const char* a3);
-    void* v_fn_71_IShaderReload;
+    P_METHOD(void, _71_IShaderReload, CGxShader* shader, const char* a2, const char* a3);
     // void IShaderCreate(CGxShader* shader);
-    void* v_fn_72_IShaderCreate;
+    P_METHOD(void, _72_IShaderCreate, CGxShader* shader);
     // void CursorSetVisible(int32_t visible);
-    void* v_fn_73_CursorSetVisible;
+    P_METHOD(void, _73_CursorSetVisible, int32_t visible);
     // uint32_t* CursorLock();
-    void* v_fn_74_CursorLock;
+    E_METHOD(uint32_t*, _74_CursorLock);
     // void CursorUnlock(uint32_t x, uint32_t y);
-    void* v_fn_75_CursorUnlock;
+    P_METHOD(void, _75_CursorUnlock, uint32_t x, uint32_t y);
     // void StereoSetConvergence(float c);
-    void* v_fn_76_StereoSetConvergence;
+    P_METHOD(void, _76_StereoSetConvergence, float c);
     // float StereoGetConvergence();
-    void* v_fn_77_StereoGetConvergence;
+    E_METHOD(float, _77_StereoGetConvergence);
     // void StereoSetSeparation(float s);
-    void* v_fn_78_StereoSetSeparation;
+    P_METHOD(void, _78_StereoSetSeparation, float s);
     // double StereoGetSeparation();
-    void* v_fn_79_StereoGetSeparation;
+    E_METHOD(double, _79_StereoGetSeparation);
     // bool StereoEnabled();
-    void* v_fn_80_StereoEnabled;
+    E_METHOD(bool, _80_StereoEnabled);
     // void DebugGroupBegin(const char* a1, char* a2);
-    void* v_fn_81_DebugGroupBegin;
+    P_METHOD(void, _81_DebugGroupBegin, const char* a1, char* a2);
     // void DebugGroupEnd();
-    void* v_fn_82_DebugGroupEnd;
+    E_METHOD(void, _82_DebugGroupEnd);
     // void DebugEvent(const char* a1, char* a2);
-    void* v_fn_83_DebugEvent;
+    P_METHOD(void, _83_DebugEvent, const char* a1, char* a2);
 };
+#undef INTERFACE
 
 // this class is 14692 bytes in size
 struct CGxDevice {
