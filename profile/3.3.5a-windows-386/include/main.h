@@ -43,6 +43,8 @@
 
 #include "camera/camera.h"
 
+#include "client/gameclientcommands.h"
+
 #include "cmd/option.h"
 
 #include "common/array.h"
