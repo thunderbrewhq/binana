@@ -28,4 +28,23 @@
 
 #define DECLARE_UNION(T) typedef union T T
 
+#if defined(IDA) || defined(CLANGD)
+// void Method(int32_t a1);
+#define P_METHOD(__result__, name, ...) __result__(__thiscall* name)(INTERFACE * this, __VA_ARGS__)
+
+// void Method();
+#define E_METHOD(__result__, name) __result__(__thiscall* name)(INTERFACE * this)
+
+#else
+
+// ghidra doesn't support calling conventions in function pointer types :(
+// this hides autoanalysis for the 'this' pointer but at least has correct
+// parameter types
+
+#define P_METHOD(__result__, name, ...) __result__ (*name)(__VA_ARGS__)
+
+#define E_METHOD(__result__, name) __result__ (*name)()
+
+#endif
+
 #endif
