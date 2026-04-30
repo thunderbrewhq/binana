@@ -1,4 +1,5 @@
 PatchFiles__qsortpatchfiles 00401200 f ; int __cdecl PatchFiles::qsortpatchfiles(char **, char **)
+PrintNotifyMessage 00401280 f end=00401385 type="int32_t __stdcall func(void* param, NETMESSAGE msgId, uint32_t time, CDataStore* msg)"
 PlayedTimeHandler 00401390 f end=00401474
 TransferPendingHandler 00401480 f end=0040151D
 ErrorDisplayCallback 00401600 f end=00401643
@@ -7,6 +8,8 @@ DisplayErrorLevelStatus 004016A0 f end=004017A1
 ErrorDisplayMinLevelCallback 004017C0 f end=004017F9
 ErrorDisplayMaxLevelCallback 00401800 f end=00401839
 ErrorDisplayFilterCallback 004018D0 f end=00401A01
+GammaCallback 00401A30 f end=00401A79
+DesktopGammaCallback 00401A80 f end=00401B00
 CCommand_ReloadUI 00401B00 f end=00401B15
 WowClientDestroy 00402910 f end=004029AE
 SetPaths 00402B20 f end=00402B8B
@@ -25,6 +28,7 @@ NewWorldHandler 00403D10 f end=00403DDB
 WowClientInit 00404130 f end=004042BC
 InitializeEngineCallback 004047E0 f end=00404923
 ListInterfaceArchive 00404A80 f end=00404AC3
+WowLogHeader 00404B80 f end=00404ED6
 ClientBeginTaxiBenchmarkMode 00404EE0 f end=00404F52
 ClientEndTaxiBenchmarkMode 00404F60 f end=00405130
 ClientUpdateTaxiBenchmarkMode 00405130 f end=00405274
@@ -36,7 +40,18 @@ DestroyEngineCallback 004066D0 f end=0040673F
 InitializeGlobal 004067F0 f end=00406B67
 DestroyGlobal 00406B70 f end=00406C65
 CommonMain 00406C70 f end=00406D64
+CCommand_TogglePlayer 00406EC0 f end=00406EED type="int32_t __stdcall func(char* command, char* arguments)"
+GameClientCommands__Uninstall 00406EF0 f end=00406F3A type="void __thiscall func(GameClientCommands* this)"
+TeleportCheat 00406F90 f end=004071CD type="int32_t __usercall func@<eax>(char* position, int32_t charm@<eax>)"
+CCommand_Teleport 004071D0 f end=004071E3 type="int32_t __stdcall func(char* command, char* arguments)"
+CCommand_CharmTeleport 004071F0 f end=00407206 type="int32_t __stdcall func(char* command, char* arguments)"
+CCommand_WorldTeleport 00407210 f end=00407511 type="int32_t __stdcall func(char* command, char* arguments)"
+CCommand_SetRawPos 00407520 f end=00407704 type="int32_t __stdcall func(char* command, char* arguments)"
+CCommand_ToggleCloak 004077C0 f end=00407869 type="int32_t __stdcall func(char* command, char* arguments)"
+GameClientCommands__Install 00407870 f end=004078FC type="void __thiscall func(GameClientCommands* this)"
 LoadingScreenMiniDisable 00407EF0 f end=00407F37
+LoadingScreenAsyncCallback 0040AEF0 f end=0040AF39
+LoadingScreenWorldCallback 0040AF40 f end=0040AF89
 qsort 0040BE50 f end=0040C0F7
 memcpy 0040CB10 f end=0040CE75
 quicksort 0047B800 f ; void __cdecl quicksort(unsigned int, unsigned int, int, int (__cdecl *)(unsigned int, unsigned int, int), int)
@@ -45,6 +60,7 @@ PropGetSelectedContext 0047CC10 f end=0047CC1F
 EventSetTimer 0047D5A0 f end=0047D612
 ConvertPosition 0047FC90 f end=0047FDD4
 LanguageProcess 00482110 f end=004821E2
+ModelBlobLoad 004BBC20 f end=004BBCA8
 ObjectFree 004D3100 f end=004D3130
 ProfanityFilter 00509A50 f end=00509BCB
 SpamFilter 00509BD0 f end=00509DC5
@@ -67,12 +83,14 @@ IsAddonVersionCheckEnabled 005F4CA0 f end=005F4CAF
 SetAddonVersionCheck 005F4CB0 f end=005F4CDF
 DeleteInterfaceAddOns 005F4CE0 f end=005F4D8A
 DeleteInterfaceFiles 005F4D90 f end=005F4E30
+GetAddOnByIndex 005F5000 f end=005F501D
 GetAddOnInfoRequest 005F5440 f end=005F5612
 UnloadAddOns 005F5620 f end=005F5AC2
 GetAddOnName 005F7410 f end=005F742E type="char* __stdcall func(char* name)"
 GetAddOnURL 005F74B0 f end=005F74DD
 GetAddOnMetadata 005F74E0 f end=005F7511
 GetAddonDeps 005F7520 f end=005F753E
+IsAddOnUpdateAvailable 005F7540 f end=005F7561
 IsAddOnLoadOnDemand 005F7610 f end=005F762E
 IsAddOnLoading 005F7630 f end=005F764E
 IsAddOnLoaded 005F7650 f end=005F766E
@@ -88,6 +106,7 @@ LoadAddOnInfo 005F86A0 f end=005F8E79
 EnumAddOnsArchive 005F8E80 f end=005F8F21
 EnumAddOnsDisk 005F8F30 f end=005F8F4D
 InitializeAddOns 005F8F50 f end=005F9074
+SetAddOnEnableState 005F90B0 f end=005F91DC
 LoadAddOnEnableState 005F91E0 f end=005F953F
 LoadJoystickConfig 005F9890 f end=005F99E1
 SmartScreenRectClearGrid 00615890 f end=006158B1
@@ -96,13 +115,19 @@ UpdatePendingPortraits 00616E80 f end=00616F8F
 UpdateAllPortraits 00617070 f end=006170F1
 GetAlphaMask 006176A0 f end=00617858
 PortraitInitialize 00618010 f end=0061810E
+SetPortraitTexture 00619330 f end=0061936E
 RenderPortraitTexture 00619580 f end=0061A0C7
 GetPhysicalDamageClassID 006337A0 f end=006337A6
 OpenAccountFile 006B8B90 f end=006B8C99
 SaveAccountData 006B9BE0 f end=006B9C5D
+DownloadAccountData 006B9CA0 f end=006B9CDB
 PlayerClientShutdown 006E0300 f end=006E0331
 NameNeedsDeclensions 0076DD20 f end=0076DD3B
+GetNumNameDeclensionSets 0076DD40 f end=0076DD5F
+GetNameDeclensions 0076DD60 f end=0076DD87
 RussianNameNeedsDeclensions 0076E270 f end=0076E2A6
+GetNumRussianNameDeclensionSets 0076E2B0 f end=0076E327
+GetRussianNameDeclensions 0076E330 f end=0076E38D
 IsRussianDeclensionValid 0076E390 f end=0076E467
 AreaListShutdown 0078E960 f end=0078E991
 AreaListGetName 0078ED80 f end=0078EE22
@@ -113,9 +138,12 @@ ValidateStringIsUTF8 007E0EC0 f end=007E0F0A
 IsNumeric 007E0F10 f end=007E0F27
 IsAlphaLatin1 007E0F30 f end=007E0F86
 IsAlphaEnglish 007E0F90 f end=007E0FB6
+IsAlphaKorean 007E0FC0 f end=007E0FEF
 IsRussian 007E1030 f end=007E1049
 IsAlphaRussian 007E1050 f end=007E107A
 IsAlphaInCharSet 007E1080 f end=007E10DC
+IsUpper 007E10F0 f end=007E1124
+ToUpper 007E1130 f end=007E1174
 ToLower 007E1180 f end=007E11C4
 TruncateNewLines 007E1640 f end=007E167B
 StripHyperlinks 007E1680 f end=007E17A3
@@ -143,25 +171,6 @@ FontFlagsToString 008151E0 f end=00815237
 StringToSmoothWeights 00815240 f end=008152A0
 StringToLoopType 008152A0 f end=008152EA
 StringToCurveType 00815370 f end=008153BA
+CurveTypeToString 008153C0 f end=008153F1
 RGBtoHSV 00984F60 f end=00985021
 HSVtoRGB 00985030 f end=0098517E
-WowLogHeader 00404B80 f end=00404ED6
-GammaCallback 00401A30 f end=00401A79
-LoadingScreenAsyncCallback 0040AEF0 f end=0040AF39
-LoadingScreenWorldCallback 0040AF40 f end=0040AF89
-GetNumNameDeclensionSets 0076DD40 f end=0076DD5F
-GetNameDeclensions 0076DD60 f end=0076DD87
-GetNumRussianNameDeclensionSets 0076E2B0 f end=0076E327
-GetRussianNameDeclensions 0076E330 f end=0076E38D
-CurveTypeToString 008153C0 f end=008153F1
-ModelBlobLoad 004BBC20 f end=004BBCA8
-GetAddOnByIndex 005F5000 f end=005F501D
-IsAddOnUpdateAvailable 005F7540 f end=005F7561
-IsUpper 007E10F0 f end=007E1124
-ToUpper 007E1130 f end=007E1174
-PrintNotifyMessage 00401280 f end=00401385 type="int32_t __stdcall func(void* param, NETMESSAGE msgId, uint32_t time, CDataStore* msg)"
-SetAddOnEnableState 005F90B0 f end=005F91DC
-SetPortraitTexture 00619330 f end=0061936E
-DownloadAccountData 006B9CA0 f end=006B9CDB
-DesktopGammaCallback 00401A80 f end=00401B00
-IsAlphaKorean 007E0FC0 f end=007E0FEF
