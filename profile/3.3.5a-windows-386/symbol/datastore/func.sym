@@ -13,6 +13,7 @@ CDataStore__Put 0047AFE0 f end=0047B033 type="CDataStore* __thiscall func(CDataS
 CDataStore__Put 0047B040 f end=0047B095 type="CDataStore* __thiscall func(CDataStore* this, uint16_t val)" ; CDataStore::Put(unsigned short)
 CDataStore__Put 0047B0A0 f end=0047B0F3 type="CDataStore* __thiscall func(CDataStore* this, uint32_t val)" ; CDataStore::Put(unsigned int)
 CDataStore__Put 0047B100 f end=0047B15A type="CDataStore* __thiscall func(CDataStore* this, uint64_t val)" ; CDataStore::Put(unsigned long long)
+CDataStore__Put 0047B160 f end=0047B1B3 type="CDataStore* __thiscall func(CDataStore* this, float val)"
 CDataStore__PutArray 0047B1C0 f end=0047B271 type="CDataStore* __thiscall func(CDataStore* this, uint8_t* val, uint32_t count)" ; CDataStore::PutArray(unsigned char const*, unsigned int)
 CDataStore__PutData 0047B280 f end=0047B289 type="CDataStore* __thiscall func(CDataStore* this, uint8_t* val, uint32_t bytes)" ; CDataStore::PutData(void const*, unsigned long)
 CDataStore__FetchRead 0047B290 f end=0047B300 type="int32_t __thiscall func(CDataStore* this, uint32_t pos, uint32_t bytes)" ; CDataStore::FetchRead(unsigned int, unsigned int)
