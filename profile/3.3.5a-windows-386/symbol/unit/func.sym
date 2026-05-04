@@ -524,3 +524,7 @@ DynamicFlagsChangeHandler 00741A00 f end=00741A37
 UnitFlagUpdateHandler 0073F270 f end=0073F2A7
 CGUnit_C__OnAuraRemoved 00722090 f end=0072217A
 CGUnit_C__OnAuraAdded 00727760 f end=00727851
+CGUnit_C__HasAuraActive 00728300 f end=00728397
+CGUnit_C__GetAuraIndex 007289C0 f end=00728A1C
+CGUnit_C__IsFacingUnit 0071BCE0 f end=0071BD1C
+CGUnit_C__IsFacingUnit 0071BC50 f end=0071BCD7

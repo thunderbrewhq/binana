@@ -6,3 +6,4 @@ CGItemStatsSummary__CreateFromTooltip 00630C70 f end=00630D19
 CGItemStatsSummary__GetItemComparison 00631590 f end=0063184D
 CGItemStatsSummary__Finalize 0061BA90 f end=0061BB20
 CGItemStatsSummary__FillOutScalingItem 0061F550 f end=0061F7EE
+CGItemStatsSummary__FillOutRandomProperties 0061FA20 f end=0061FB30

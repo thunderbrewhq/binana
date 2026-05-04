@@ -11,3 +11,4 @@ UpdateAccountData 006B9730 f end=006B98F6
 AccountDataInitializeBasicSystem 006B9900 f end=006B996D
 CAccountMsgHeaders__SendSuccessEvent 00550810 f end=00550905
 CAccountMsgHeaders__GetIndexHighestPriorityUnreadMsg 00550140 f end=005501B7
+CAccountMsgHeaders__destructor 00550650 f end=00550693

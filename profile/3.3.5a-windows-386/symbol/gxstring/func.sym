@@ -19,3 +19,6 @@ CGxString__CreateGeometry 006C7B10 f end=006C7FFA ; CGxString::CreateGeometry()
 CGxString__CalculateVertsNeeded 006C63E0 f end=006C640D
 CGxString__RemoveShadow 006BD0E0 f end=006C5E65
 CGxString__TexturePageEvicted 006C5E70 f end=006C5E8F
+CGxString__GetHyperLinkInfo 006C8000 f end=006C803E
+GxuFontStringHyperLinkInfo 006BD100 f end=006BD119
+CGxString__GetEmbeddedTextureInfo 006C8040 f end=006C807E

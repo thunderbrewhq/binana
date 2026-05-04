@@ -80,3 +80,4 @@ CSimpleMessageScrollFrame__DestroyScriptMetaTable 00972830 f end=00972855
 CSimpleMessageScrollFrame__SetTimeVisible 00969280 f end=009692BF
 CSimpleMessageScrollFrame__SetFadeDuration 009692C0 f end=009692FF
 CSimpleMessageScrollFrame__OnLayerShow 0096A880 f end=0096A898
+CSimpleMessageScrollFrame__GetScriptTime 00969080 f end=009690BA

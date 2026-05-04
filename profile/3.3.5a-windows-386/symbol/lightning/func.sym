@@ -8,3 +8,6 @@ CLightning__BuildPoint 009A9350 f end=009A9490
 CLightning__PrecomputeBeamValues 009A9980 f end=009A9B2D
 CLightning__BuildPoints 009A9CA0 f end=009A9DB3
 CLightning__BuildPointsUsingHierarchy 009A9DC0 f end=009AA20D
+CLightning__Init 009A9900 f end=009A9972
+CLightning__Reset 009A8EC0 f end=009A90B1
+CLightning__Update 009AB3B0 f end=009AB727

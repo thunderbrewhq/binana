@@ -22,3 +22,4 @@ CVehicle_C__Create 00757FA0 f end=007580E8
 CVehicle_C__UpdateWorldMatrix 00758130 f end=00758196
 CVehicle_C__InstallBoneAnimListener 00756D10 f end=00756D6D
 CVehicle_C__constructor 00757AE0 f end=00757B33
+CVehicle_C__PlayBoneAnim 00756F80 f end=00757000

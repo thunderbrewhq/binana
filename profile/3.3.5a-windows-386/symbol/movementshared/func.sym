@@ -76,3 +76,4 @@ CMovementShared__StopMove 0098C8A0 f end=0098C8C8
 CMovementShared__StopMove 0098C8D0 f end=0098C93D
 CMovementShared__PlotUnitSplineMovement 0098CA00 f end=0098CF68
 CMovementShared__ConvertCurrentSplineToLoopingSpline 0098C940 f end=0098C9F5
+CMovementShared__GetDirection 009880F0 f end=009881CC

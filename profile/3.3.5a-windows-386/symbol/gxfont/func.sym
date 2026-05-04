@@ -7,3 +7,4 @@ CGxFont__GetGlyphData 006C2480 f end=006C24EA
 CGxFont__ComputeStep 006C3D40 f end=006C3E76
 CGxFont__GetName 006C80E0 f end=006C80FA
 CGxFont__RegisterEvictNotice 006C2600 f end=006C2642
+CGxFont__GetGlyphBearing 006C24F0 f end=006C2567

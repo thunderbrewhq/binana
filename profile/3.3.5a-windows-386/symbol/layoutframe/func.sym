@@ -28,3 +28,5 @@ CLayoutFrame__DestroyLayout 0048B130 f end=0048B23B ; CLayoutFrame::DestroyLayou
 CLayoutFrame__SetLayoutDepth 00489F20 f end=00489F74
 CLayoutFrame__SetHeight 00489F80 f end=00489F9B
 CLayoutFrame__LoadXML 0048B2D0 f end=0048B505
+CLayoutFrame__Bottom 00489100 f end=00489187
+CLayoutFrame__CenterY 00488FE0 f end=00489065

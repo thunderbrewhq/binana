@@ -27,3 +27,6 @@ CSimpleSlider_SetValueStep 00971FD0 f end=0097204D
 CSimpleSlider_IsEnabled 00972050 f end=009720B1
 CSimpleSlider_Enable 009720E0 f end=00972144
 CSimpleSlider_Disable 00972150 f end=009721B4
+CSimpleSlider__OnFrameSizeChanged 0096BE10 f end=0096BE2B
+CSimpleSlider__GetScriptTime 0096BD10 f end=0096BD5E
+CSimpleSlider__GetScriptByName 0096BCA0 f end=0096BD10

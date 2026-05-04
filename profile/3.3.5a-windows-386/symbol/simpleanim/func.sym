@@ -15,3 +15,4 @@ CSimpleAnim__GetSmoothing 004976C0 f end=004976F5
 CSimpleAnim__destructor 00498C10 f end=00498CA5
 CSimpleAnim__IsA 00498CB0 f end=00498CD5
 CSimpleAnim__destructor 00499780 f end=004997AB
+CSimpleAnim__GetScriptTime 004975F0 f end=0049766B

@@ -41,3 +41,4 @@ FriendList__MatchesFilter 006B5CA0 f end=006B5DD9
 FriendList__IgnoreAdded 006B7200 f end=006B72D1
 FriendList__MuteAdded 006B72E0 f end=006B7394
 FriendList__Removed 006B3B90 f end=006B3C05
+FriendList__Added 006B3C10 f end=006B3C85

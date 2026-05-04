@@ -1,6 +1,5 @@
 CGObject_C__GetPosition 004D5EA0 f end=004D5EB4
 CGObject_C__GetRawPosition 004D5EC0 f end=004D5ED6
-CGObject_C__GetFacing 004D5EE0 f end=004D5EE3
 CGObject_C__GetSelectionHighlightColor 004D5F70 f end=004D5F85
 CGObject_C__GetMatrix 004D5FA0 f end=004D5FDD
 CGObject__TotalFieldsSaved 004F4A10 f end=004F4A16

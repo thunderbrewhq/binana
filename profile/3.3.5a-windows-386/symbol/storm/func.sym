@@ -1724,3 +1724,5 @@ TSList__LinkToTail 006DED60 f end=006DEDC3
 TSHashTable__KEYCOMMAND__InternalNewNode 005626A0 f end=005626FB
 GetNextTextUpper 0076E7A0 f end=0076E8B2
 SStrCmpGetNextTextUpper 0076E8D0 f end=0076EA1A
+TSGrowableArray_CSimpleMessageFrameLine__ReallocData 00967EF0 f end=00967FD3
+SStrToInt64 0076FA50 f end=0076FB7B
