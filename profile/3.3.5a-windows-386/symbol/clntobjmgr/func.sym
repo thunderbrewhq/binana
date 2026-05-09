@@ -8,7 +8,7 @@ ClntObjMgrPush 004D36C0 f end=004D36F6
 ClntObjMgrPop 004D3700 f end=004D372A
 ClntObjMgrGetCurrent 004D3730 f end=004D3746
 ClntObjMgrIsValid 004D3750 f end=004D378A
-ClntObjMgrGetActivePlayer 004D3790 f end=004D37BB
+ClntObjMgrGetActivePlayer 004D3790 f end=004D37BB type="WOWGUID __stdcall func()"
 ClntObjMgrGetPlayerType 004D37C0 f end=004D37DC
 ClntObjMgrGetMapID 004D37E0 f end=004D3803
 ClntObjMgrSetMovementGlobals 004D3840 f end=004D3867

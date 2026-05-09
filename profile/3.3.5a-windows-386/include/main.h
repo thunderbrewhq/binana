@@ -43,6 +43,7 @@
 
 #include "camera/camera.h"
 
+#include "client/commandmanager.h"
 #include "client/gameclientcommands.h"
 
 #include "cmd/option.h"
@@ -63,6 +64,9 @@
 #include "console/line.h"
 #include "console/types.h"
 #include "console/var.h"
+
+#include "crypto/hmac.h"
+#include "crypto/sha1.h"
 
 #include "cursor/types.h"
 
@@ -131,13 +135,28 @@
 #include "map/wmo_chunks.h"
 
 #include "character/component.h"
-
+#include "net/addr.h"
+#include "net/characterinfo.h"
+#include "net/clientconnection.h"
+#include "net/logindata.h"
 #include "net/message.h"
+#include "net/message_handler.h"
+#include "net/netclient.h"
+#include "net/neteventqueue.h"
+#include "net/netstate.h"
+#include "net/realmresponse.h"
+#include "net/wowconnection.h"
+#include "net/wowconnectionnet.h"
+#include "net/wowconnectionresponse.h"
+#include "net/wowcsops.h"
 
 #include "nvapi/nvapi.h"
 
 #include "object/CMovementData.h"
+#include "object/guid.h"
 #include "object/object.h"
+#include "object/objectmanager.h"
+#include "object/player.h"
 
 #include "os/processorfeatures.h"
 #include "os/timemanager.h"
@@ -145,8 +164,10 @@
 #include "screen/layer.h"
 
 #include "storm/array.h"
+#include "storm/atomic.h"
 #include "storm/big.h"
 #include "storm/cmd.h"
+#include "storm/crypto/arc4.h"
 #include "storm/hash.h"
 #include "storm/list.h"
 #include "storm/log.h"

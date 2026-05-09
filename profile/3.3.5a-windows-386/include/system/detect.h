@@ -28,6 +28,20 @@
 
 #define DECLARE_UNION(T) typedef union T T
 
+// callback type helper
+
+#if defined(GHIDRA)
+
+#define DECLARE_CALLBACK(__result__, name, ...)                                                    \
+    typedef __result__ (*name##_interface)(__VA_ARGS__);                                           \
+    typedef name##_interface name;
+
+#else
+
+#define DECLARE_CALLBACK(__result__, name, ...) typedef __result__ (*name)(__VA_ARGS__);
+
+#endif
+
 #if defined(IDA) || defined(CLANGD)
 // void Method(int32_t a1);
 #define P_METHOD(__result__, name, ...) __result__(__thiscall* name)(INTERFACE * this, __VA_ARGS__)

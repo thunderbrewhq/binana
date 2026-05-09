@@ -1,26 +1,31 @@
-NetClient__Initialize 00631D30 f end=00631E01 ; 00005400
-NetClient__ConnectInternal 00631E10 f end=00631E92 ; NetClient::ConnectInternal(char const*, unsigned short)
-NetClient__Disconnect 00631EA0 f end=00631F69 ; 00005400
-NetClient__SetLoginData 00631F70 f end=00631F88 ; NetClient::SetLoginData(LoginData*)
-NetClient__SetMessageHandler 00631FA0 f end=00631FBE ; void __thiscall NetClient::SetMessageHandler(enum NETMESSAGE, int (__fastcall *)(void *, enum NETMESSAGE, unsigned long, class CDataStore *), void *)
-NetClient__ProcessMessage 00631FE0 f end=00632048 ; NetClient::ProcessMessage(unsigned long, CDataStore*, int)
-NetClient__WCConnected 00632060 f end=006320D0 ; NetClient::WCConnected(WowConnection*, WowConnection*, unsigned long, NETCONNADDR const*)
-NetClient__GetNetStats 006320D0 f end=0063219E ; void __thiscall NetClient::GetNetStats(float &, float &, unsigned long &)
-NetClient__PollEventQueue 006321A0 f end=006321AB ; 00005400
-NetClient__Destroy 006322A0 f end=00632381 ; 00005400
-NetClient__DelayedDelete 00632390 f end=006323BD ; 00005400
-NetClient__Connect 006323C0 f end=0063245C ; NetClient::Connect(char const*)
-NetClient__HandleData 00632460 f end=00632501 ; NetClient::HandleData(unsigned long, void*, int)
-NetClient__HandleConnect 00632510 f end=0063253C ; 00005400
-NetClient__HandleDisconnect 00632540 f end=00632581 ; 00005400
-NetClient__HandleCantConnect 00632590 f end=006325BC
-NetClient__PongHandler 006325C0 f end=0063268A ; void __thiscall NetClient::PongHandler(class CDataStore *)
-NetClient__WCDisconnected 006326D0 f end=00632728 ; NetClient::WCDisconnected(WowConnection*, unsigned long, NETCONNADDR const*)
-NetClient__AuthChallengeHandler 00632730 f end=00632965 ; 00005410
-NetClient__constructor 00632A40 f end=00632B43 ; 00005410
-NetClient__Send 00632B50 f end=00632C02 ; NetClient::Send(CDataStore*)
-NetClient__WCCantConnect 00632C10 f end=00632CCD ; NetClient::WCCantConnect(WowConnection*, unsigned long, NETCONNADDR const*)
-NetClient__Ping 00632CD0 f end=00632DA8 ; NetClient::Ping(CONNECTION_ID)
-NetClient__HandleIdle 00632DB0 f end=00632DFD ; 00005400
-NetClient__RedirectHandler 00632E00 f end=00633015 ; 00005410
-NetClient__WCMessageReady 00633330 f end=0063343D ; NetClient::WCMessageReady(WowConnection*, unsigned long, CDataStore*)
+NetClient__EnableEncryption 00632690 f end=006326CD type="void __thiscall func(NetClient* this, WowConnection* conn, uint8_t* seed, uint8_t seedLen)"
+NetClient__Initialize 00631D30 f end=00631E01 type="int32_t __thiscall func(NetClient* this)" ; 00005400
+NetClient__ConnectInternal 00631E10 f end=00631E92 type="int32_t __thiscall func(NetClient* this, char* host, uint16_t port)" ; NetClient::ConnectInternal(char const*, unsigned short)
+NetClient__Disconnect 00631EA0 f end=00631F69 type="void __thiscall func(NetClient* this)" ; 00005400
+NetClient__SetLoginData 00631F70 f end=00631F88 type="void __thiscall func(NetClient* this, LoginData* loginData)" ; NetClient::SetLoginData(LoginData*)
+NetClient__SetMessageHandler 00631FA0 f end=00631FBE type="void __thiscall func(NetClient* this, NETMESSAGE msgId, MESSAGE_HANDLER handler, void* param)" ; void __thiscall NetClient::SetMessageHandler(enum NETMESSAGE, int (__fastcall *)(void *, enum NETMESSAGE, unsigned long, class CDataStore *), void *)
+NetClient__ProcessMessage 00631FE0 f end=00632048 type="void __thiscall func(NetClient* this, uint32_t timeReceived, CDataStore* msg, int32_t a4)" ; NetClient::ProcessMessage(unsigned long, CDataStore*, int)
+NetClient__WCConnected 00632060 f end=006320D0 type="void __thiscall func(NetClient* this, WowConnection* conn, WowConnection* inbound, uint32_t timeStamp, NETCONNADDR* addr)" ; NetClient::WCConnected(WowConnection*, WowConnection*, unsigned long, NETCONNADDR const*)
+NetClient__GetNetStats 006320D0 f end=0063219E type="void __thiscall func(NetClient* this, float* bandwidthIn, float* bandwidthOut, uint32_t* latency)" ; void __thiscall NetClient::GetNetStats(float &, float &, unsigned long &)
+NetClient__PollEventQueue 006321A0 f end=006321AB type="void __thiscall func(NetClient* this)" ; 00005400
+NetClient__Destroy 006322A0 f end=00632381 type="void __thiscall func(NetClient* this)" ; 00005400
+NetClient__DelayedDelete 00632390 f end=006323BD type="int32_t __thiscall func(NetClient* this)" ; 00005400
+NetClient__Connect 006323C0 f end=0063245C type="void __thiscall func(NetClient* this, char* addrStr)" ; NetClient::Connect(char const*)
+NetClient__HandleData 00632460 f end=00632501 type="int32_t __thiscall func(NetClient* this, uint32_t timeReceived, void* data, int32_t size)" ; NetClient::HandleData(unsigned long, void*, int)
+NetClient__HandleConnect 00632510 f end=0063253C type="int32_t __thiscall func(NetClient* this)" ; 00005400
+NetClient__HandleDisconnect 00632540 f end=00632581 type="int32_t __thiscall func(NetClient* this)"
+NetClient__HandleCantConnect 00632590 f end=006325BC type="int32_t __thiscall func(NetClient* this)"
+NetClient__PongHandler 006325C0 f end=0063268A type="void __thiscall func(NetClient* this, WowConnection* conn, CDataStore* msg)"
+NetClient__WCDisconnected 006326D0 f end=00632728 type="void __thiscall func(NetClient* this, WowConnection* conn, uint32_t timeStamp, NETCONNADDR* addr)" ; NetClient::WCDisconnected(WowConnection*, unsigned long, NETCONNADDR const*)
+NetClient__AuthChallengeHandler 00632730 f end=00632965 type="void __thiscall func(NetClient* this, WowConnection* conn, CDataStore* msg)" ; 00005410
+NetClient__HELDMESSAGE__destructor 00632970 f end=006329CB type="void __thiscall func(NetClient__HELDMESSAGE* this)" ; NetClient::HELDMESSAGE::~HELDMESSAGE
+NetClient__constructor 00632A40 f end=00632B43 type="NetClient* __thiscall func(NetClient* this)" ; 00005410
+NetClient__Send 00632B50 f end=00632C02 type="void __thiscall func(NetClient* this, CDataStore* msg)" ; NetClient::Send(CDataStore*)
+NetClient__WCCantConnect 00632C10 f end=00632CCD type="void __thiscall func(NetClient* this, WowConnection* conn, uint32_t timeStamp, NETCONNADDR* addr)" ; NetClient::WCCantConnect(WowConnection*, unsigned long, NETCONNADDR const*)
+NetClient__Ping 00632CD0 f end=00632DA8 type="void __thiscall func(NetClient* this)" ; NetClient::Ping(CONNECTION_ID)
+NetClient__HandleIdle 00632DB0 f end=00632DFD type="void __thiscall func(NetClient* this)"
+NetClient__RedirectHandler 00632E00 f end=00633015 type="void __thiscall func(NetClient* this, WowConnection* conn, CDataStore* msg)" ; 00005410
+NetClient__SuspendCommsHandler 00633020 f end=006330E3 type="void __thiscall func(NetClient* this, WowConnection* conn, CDataStore* msg)" ; invented name
+NetClient__destructor 006331B0 f end=00633248 type="void __thiscall func(NetClient* this)"
+NetClient__ResumeCommsHandler 00633250 f end=00633300 type="void __thiscall func(NetClient* this, WowConnection* conn)" ; invented name
+NetClient__WCMessageReady 00633330 f end=0063343D type="void __thiscall func(NetClient* this, WowConnection* conn, uint32_t timeStamp, CDataStore* msg)" ; NetClient::WCMessageReady(WowConnection*, unsigned long, CDataStore*)

@@ -1,4 +1,5 @@
-NETEVENTQUEUE__constructor 00633440 f end=0063346D ; NETEVENTQUEUE::NETEVENTQUEUE(NetClient*)
-NETEVENTQUEUE__Poll 006334F0 f end=0063360E ; NETEVENTQUEUE::Poll()
-NETEVENTQUEUE__AddEvent 00633650 f end=0063372A ; NETEVENTQUEUE::AddEvent(EVENTID, void*, NetClient*, void const*, unsigned long)
-NETEVENTQUEUE__destructor 00633730 f end=00633797 ; NETEVENTQUEUE::~NETEVENTQUEUE()
+NETEVENTQUEUE__constructor 00633440 f end=0063346D type="NETEVENTQUEUE* __thiscall func(NETEVENTQUEUE* this, NetClient* client)" ; NETEVENTQUEUE::NETEVENTQUEUE(NetClient*)
+NETEVENTQUEUE__Poll 006334F0 f end=0063360E type="void __thiscall func(NETEVENTQUEUE* this)" ; NETEVENTQUEUE::Poll()
+NETEVENTQUEUE__AddEvent 00633650 f end=0063372A type="void __thiscall func(NETEVENTQUEUE* this, EVENTID eventId, void* conn, NetClient* client, void* data, uint32_t bytes)" ; NETEVENTQUEUE::AddEvent(EVENTID, void*, NetClient*, void const*, unsigned long)
+NETEVENTQUEUE__destructor 00633730 f end=00633797 type="void __thiscall func(NETEVENTQUEUE* this)" ; NETEVENTQUEUE::~NETEVENTQUEUE()
+NETEVENTQUEUE__Clear 00633630 f end=0063364F type="void __thiscall func(NETEVENTQUEUE* this)"

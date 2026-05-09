@@ -359,7 +359,6 @@ Catch_All@0044aba9 0044ABA9 f end=0044ABBF type="void __stdcall func()" auto
 Catch_All@0044ac65 0044AC65 f end=0044AC94 type="void __stdcall func()" auto
 Catch_All@0044b027 0044B027 f end=0044B030 type="void __stdcall func()" auto
 Catch_All@0044b0c7 0044B0C7 f end=0044B0D0 type="void __stdcall func()" auto
-caseD_2a 00853182 f end=00853193 type="void __fastcall func(undefined4 param_1, undefined4 param_2)" auto
 _memcpy_s 0088AE44 f end=0088AEBF type="errno_t __cdecl func(void* _Dst, rsize_t _DstSize, void* _Src, rsize_t _MaxCount)" auto
 _memmove_s 0088AEBF f end=0088AF1A type="errno_t __cdecl func(void* _Dst, rsize_t _DstSize, void* _Src, rsize_t _MaxCount)" auto
 exception 0088AF2B f end=0088AF79 type="exception* __thiscall func(exception* this, char** param_1)" auto

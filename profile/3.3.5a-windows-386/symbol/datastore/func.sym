@@ -1,3 +1,4 @@
+CDataStore__GetData 0047B6A0 f end=0047B6A9 type="CDataStore* __thiscall func(CDataStore* this, uint8_t* data, uint32_t count)"
 CDataStore__constructor 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
 CDataStore__FetchWrite 00401070 f end=004010C3 type="int32_t __thiscall func(CDataStore* this, uint32_t pos, uint32_t bytes, char* fileName, int32_t lineNumber)" ; protected: int __thiscall CDataStore::FetchWrite(unsigned int,unsigned int,char const *,int)
 CDataStore__IsRead 004010D0 f end=004010DE type="int32_t __thiscall func(CDataStore* this)" ; CDataStore::IsRead() const
@@ -26,3 +27,4 @@ CDataStore__Get 0047B440 f end=0047B471 type="CDataStore* __thiscall func(CDataS
 CDataStore__GetString 0047B480 f end=0047B560 type="CDataStore* __thiscall func(CDataStore* this, char* val, uint32_t maxChars)" ; CDataStore::GetString(char*, unsigned int)
 CDataStore__GetArray 0047B560 f end=0047B5ED type="CDataStore* __thiscall func(CDataStore* this, uint8_t* val, uint32_t count)" ; CDataStore::GetArray(unsigned char*, unsigned int)
 CDataStore__GetDataInSitu 0047B6B0 f end=0047B6E9 type="CDataStore* __thiscall func(CDataStore* this, void** val, uint32_t bytes)" ; CDataStore::GetDataInSitu(void*&, unsigned int)
+CDataStore__Destroy 00403880 f end=0040389F type="void __thiscall func(CDataStore* this)"

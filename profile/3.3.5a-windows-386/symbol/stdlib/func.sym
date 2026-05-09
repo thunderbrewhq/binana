@@ -1,5 +1,5 @@
 strtod 0088E9C1 f end=0088E9D4 type="double __stdcall func(char* str, char** endptr)"
 _ftol2_sse 0088B9C0 f end=0088B9DC type="int32_t __usercall func@<eax>(double n@<st0>)" ; static cast of floating-point to int32
 _CIpow 0088D0C0 f end=0088D114 type="double __usercall func@<st0>(double x@<st0>, uint64_t y@<st1>)" ; Calculates x raised to the y power based on the top values in the stack. 
-floor 0088CE30 f end=00891985 type="double __stdcall func(double X)"
+floor 0088CE30 f end=0088CF51 type="double __stdcall func(double X)"
 _ftol2 0088B9F6 f end=0088BA6B type="int32_t __usercall _ftol2@<eax>(double n@<st0>)"

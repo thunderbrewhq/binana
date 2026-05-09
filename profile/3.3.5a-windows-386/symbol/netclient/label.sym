@@ -1,0 +1,5 @@
+NetClient__v_table 00A26D78 l type="NetClient__v_table"
+NetClient__s_clientCount 00C5D654 l type="int32_t"
+s_stats 00C5D628 l type="CLIENT_NETSTATS"
+s_propContext 00C5D624 l type="HPROPCONTEXT"
+s_clientList 00AD2ECC l type="TSList_NETCLIENTNODE"

@@ -26,7 +26,7 @@ OsGetVersionString 0086B430 f end=0086B458
 OsGetComputerName 0086B480 f end=0086B493
 OsGetUserName 0086B4A0 f end=0086B4B3
 OsGetPhysicalMemory 0086B4C0 f end=0086B4E1
-OsSystemInitialize 0086B4F0 f end=0086D6DF
+OsSystemInitialize 0086B4F0 f end=0086B507
 OsValidateFunctionPointer 0086B5A0 f end=0086B5F5 type="void __stdcall func(void* func)" ; Prevents code outside the .text section from running
 IOsParseProcessorFrequency 0086B600 f end=0086B703
 IOsGetPowerProfFrequency 0086B710 f end=0086B774

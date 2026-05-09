@@ -1,4 +1,4 @@
-GxuFontShutdown 004A8D10 f end=004A8DBF
+GxuFontShutdown 004A8D10 f end=004A8D1A
 GxuFontAddToBatch 006BCE10 f end=006BCE32
 GxuFontRenderBatch 006BCE40 f end=006BCE52
 GxuFontGetTextExtent 006BCE60 f end=006BCE98
@@ -40,6 +40,6 @@ IGxuFontGlyphRenderGlyph 006C8CC0 f end=006C8E6B
 GxuFontDestroyFont 006BDF90 f end=006BDFBE
 GxuFontInitialize 006BE230 f end=006BE2A2
 FontFaceGetFace 006C8080 f end=006C809A
-GxuFontGetFontName 006BCDD0 f end=006C226D
+GxuFontGetFontName 006BCDD0 f end=006BCDE4
 GxuFontGetFontFlags 006BCDF0 f end=006BCE06
 GxuFontStringEmbeddedTextureInfo 006BD120 f end=006BD139

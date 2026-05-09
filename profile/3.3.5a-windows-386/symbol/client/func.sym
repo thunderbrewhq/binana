@@ -110,7 +110,6 @@ InitializeAddOns 005F8F50 f end=005F9074
 SetAddOnEnableState 005F90B0 f end=005F91DC
 LoadAddOnEnableState 005F91E0 f end=005F953F
 LoadJoystickConfig 005F9890 f end=005F99E1
-SmartScreenRectClearGrid 00615890 f end=006158B1
 RTAlphaSupported 00616DC0 f end=00616E75
 UpdatePendingPortraits 00616E80 f end=00616F8F
 UpdateAllPortraits 00617070 f end=006170F1

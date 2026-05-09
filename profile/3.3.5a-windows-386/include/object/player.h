@@ -1,0 +1,11 @@
+#ifndef OBJECT_PLAYER_H
+#define OBJECT_PLAYER_H
+
+DECLARE_ENUM(PLAYER_TYPE);
+
+enum PLAYER_TYPE {
+    PLAYER_NORMAL = 0,
+    PLAYER_BOT    = 1
+};
+
+#endif
