@@ -9,9 +9,11 @@ import (
 )
 
 type linter struct {
-	warnings              uint64
-	named_functions_count uint64
-	typed_function_count  uint64
+	warnings                    uint64
+	named_functions_count       uint64
+	typed_function_count        uint64
+	last_function_boundary      function_boundary
+	have_last_function_boundary bool
 }
 
 func (linter *linter) warn(s *symbols.TableEntry, f string, args ...any) {
@@ -19,7 +21,7 @@ func (linter *linter) warn(s *symbols.TableEntry, f string, args ...any) {
 	color.Set(color.FgRed)
 	fmt.Printf("  warning: ")
 	color.Unset()
-	fmt.Printf(" in %s:%d: %s", s.Filename, s.Linenumber, s.Symbol.Name)
+	fmt.Printf(" in %s:%d: ( %s @ %08X ) ", s.Filename, s.Linenumber, s.Symbol.Name, s.Symbol.StartAddress)
 	fmt.Printf(f, args...)
 }
 
@@ -29,11 +31,31 @@ type LintParams struct {
 	Bounds       bool
 }
 
+type function_boundary struct {
+	start, end uint64
+}
+
+func (b1 function_boundary) OverlapsWith(b2 function_boundary) bool {
+	// b1 = { 0, 4 }
+	// b2 = { 1, 9 }
+	// ----------
+	// 0123456789
+	// ....
+	//  ........
+	//
+
+	t := b1.start < b2.end && b2.start < b1.end
+	return t
+}
+
 func Lint(params *LintParams) {
 	Open(params.Profile)
 	defer Close()
 
-	var linter linter
+	var (
+		linter linter
+	)
+
 	for entry := range Profile.Symbols.Entries() {
 		sn := entry.Symbol.Name
 
@@ -51,8 +73,29 @@ func Lint(params *LintParams) {
 			}
 
 			if params.Bounds {
+				var current_function_boundary function_boundary
+				current_function_boundary.start = entry.Symbol.StartAddress
 				if entry.Symbol.EndAddress == 0 {
-					linter.warn(entry, "does not have an end address\n")
+					current_function_boundary.end = entry.Symbol.StartAddress
+				} else {
+					current_function_boundary.end = entry.Symbol.EndAddress
+				}
+
+				if linter.have_last_function_boundary {
+					if linter.last_function_boundary.OverlapsWith(current_function_boundary) {
+						last_symbol, err := Profile.Symbols.Lookup(linter.last_function_boundary.start)
+						if err != nil {
+							panic(err)
+						}
+						linter.warn(entry, "overlaps a previous function (%s @ %08X)\n", last_symbol.Symbol.Name, last_symbol.Symbol.StartAddress)
+					}
+				} else {
+					linter.have_last_function_boundary = true
+				}
+				linter.last_function_boundary = current_function_boundary
+
+				if entry.Symbol.EndAddress == 0 {
+					linter.warn(entry, "is missing an end address\n")
 				}
 			}
 
