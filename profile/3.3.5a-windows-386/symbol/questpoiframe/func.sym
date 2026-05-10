@@ -1,1 +1,6 @@
 CGQuestPOIFrame__Create 00514260 f end=005142A9
+CGQuestPOIFrame__constructor 0058FF50 f end=00590052
+CGQuestPOIFrame__destructor 00590060 f end=0059008B
+CGQuestPOIFrame__destructor 0058F9D0 f end=0058FA84
+CGQuestPOIFrame__IsA 0058FAC0 f end=0058FAF5
+CGQuestPOIFrame__IsA 0058FB00 f end=0058FB3E

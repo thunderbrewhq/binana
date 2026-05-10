@@ -37,3 +37,6 @@ CGxDeviceOpenGl__DeviceSetGamma 0068CC20 f end=0068CC54
 CGxDeviceOpenGl__DeviceDestroyPoolAPI 0068C1F0 f end=0068C21E
 CGxDeviceOpenGl__IStateSyncScissorRect 006922C0 f end=00692398
 CGxDeviceOpenGl__BindTexture 0069D5D0 f end=0069D61D
+CGxDeviceOpenGl__IStateSyncEnables 006921D0 f end=00692233
+CGxDeviceOpenGl__ScenePresent 0069E220 f end=0069E27A
+CGxDeviceOpenGl__XformSetView 0069E540 f end=0069E55E

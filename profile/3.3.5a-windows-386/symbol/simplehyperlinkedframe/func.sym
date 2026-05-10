@@ -1,2 +1,7 @@
 CSimpleHyperlinkedFrame__GetScriptByName 00978610 f end=009786A7
 CSimpleHyperlinkedFrame__constructor 00978900 f end=0097894F ; CSimpleHyperlinkedFrame::CSimpleHyperlinkedFrame(CSimpleFrame*)
+CSimpleHyperlinkedFrame__destructor 00978950 f end=009789A7
+CSimpleHyperlinkedFrame__GetScriptTime 009786B0 f end=00978712
+CSimpleHyperlinkedFrame__OnHyperlinkEnter 00978720 f end=00978729
+CSimpleHyperlinkedFrame__OnHyperlinkLeave 00978730 f end=00978739
+CSimpleHyperlinkedFrame__OnHyperlinkClick 00978740 f end=00978749

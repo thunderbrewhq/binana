@@ -38,3 +38,7 @@ CGMinimapFrame_SetIconTexture 00583CE0 f end=00583DFF
 CGMinimapFrame_SetBlipTexture 00583E00 f end=00583F52
 CGMinimapFrame_SetClassBlipTexture 00583F60 f end=0058407F
 CGMinimapFrame__DestroyScriptMetaTable 0057C060 f end=0057C085
+CGMinimapFrame__destructor 0057DFD0 f end=0057E016
+CGMinimapFrame__IsA 0057C540 f end=0057C575
+CGMinimapFrame__IsA 0057C580 f end=0057C5BE
+CGMinimapFrame__OnLayerUpdate 0057C6A0 f end=0057C711

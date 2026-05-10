@@ -38,3 +38,5 @@ CSimpleHTML_GetHyperlinksEnabled 00975240 f end=0097529E
 CSimpleHTML__CreateScriptMetaTable 009752A0 f end=009752B9
 CSimpleHTML__DestroyScriptMetaTable 009749E0 f end=00974A05
 CSimpleHTML__OnFrameSizeChanged 0096C7B0 f end=0096C81B
+CSimpleHTML__destructor 0096D6D0 f end=0096D6FB
+CSimpleHTML__destructor 0096CF00 f end=0096D081

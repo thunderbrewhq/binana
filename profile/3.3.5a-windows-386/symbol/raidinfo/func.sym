@@ -25,3 +25,6 @@ CGRaidInfo__UpdateRoster 00574F10 f end=005756B6
 CGRaidInfo__InitializeGame 005756C0 f end=005757BD
 CGRaidInfo__GetRemoteStatsFromPet 00572800 f end=0057284D
 CGRaidInfo__GetRemotePetStats 00572850 f end=005728B6
+CGRaidInfo__OnReadyCheckFinished 00572560 f end=00572598
+CGRaidInfo__OnReadyCheckError 005725A0 f end=005725B3
+CGRaidInfo__ProcessReadyCheckTimer 00573670 f end=00573685

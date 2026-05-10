@@ -49,3 +49,7 @@ CSimpleModel__OnFrameRender 00960240 f end=00960277
 CSimpleModel__DestroyScriptMetaTable 009603F0 f end=00960415
 CSimpleModel_SetModelScale 00960760 f end=009607D8
 CSimpleModel_GetModelScale 00961090 f end=009610D3
+CSimpleModel__UpdateAlpha 0095FB40 f end=0095FB96
+CSimpleModel__GetScriptTime 0095F480 f end=0095F4CE
+CSimpleModel__IsA 004E60D0 f end=004E6105
+CSimpleModel__IsA 004E6110 f end=004E614E

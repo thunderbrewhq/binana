@@ -15,3 +15,4 @@ CRibbonEmitter__ReplaceTexture 00978C40 f end=00978C70
 CRibbonEmitter__SetUserEnabled 0097F5B0 f end=0097F5E3
 CRibbonEmitter__InitInterpDeltas 0097F700 f end=0097F8F3
 CRibbonEmitter__GetNumBatches 0097FE40 f end=0097FE47
+CRibbonEmitter__ConvertTexSlotToTexCoords 0097F510 f end=0097F570

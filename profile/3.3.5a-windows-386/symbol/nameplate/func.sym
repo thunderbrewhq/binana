@@ -11,3 +11,4 @@ CGNamePlateFrame__SetCastBarValues 0098F040 f end=0098F382
 CGNamePlateFrame__Initialize 0098F390 f end=0098F786
 CGNamePlateFrame__constructor 0098F790 f end=0098FFC9
 ShowClassColorInNameplateCallback 00512770 f end=0051279F
+CGNamePlateFrame__destructor 00990030 f end=0099005B

@@ -44,3 +44,7 @@ CSimpleMessageFrame__SetTimeVisible 00967DB0 f end=00967DFD
 CSimpleMessageFrame__SetFadeDuration 00967E00 f end=00967E4D
 CSimpleMessageFrame__Clear 00968CD0 f end=00968D44
 CSimpleMessageFrame__ClearPending 00968710 f end=0096878B
+CSimpleMessageFrame__destructor 00968D70 f end=00968D9B
+CSimpleMessageFrame__destructor 00968C10 f end=00968C8E
+CSimpleMessageFrame__IsA 00968640 f end=00968675
+CSimpleMessageFrame__IsA 00968680 f end=009686BE

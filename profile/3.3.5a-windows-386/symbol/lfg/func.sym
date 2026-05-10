@@ -36,3 +36,5 @@ QSortLFGDungeons 005536A0 f end=0055382C
 CGLookingForGroup__UpdateLFDEntries 00558350 f end=00558516
 CGLookingForGroup__UpdateLFREntries 00558520 f end=005586C2
 GetLfgDungeonExpansionRec 006349F0 f end=00634A71
+LFGNameCacheCallback 005528A0 f end=005528C2
+QSortLFGPlayer 00555CD0 f end=00555F0F

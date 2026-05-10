@@ -15,3 +15,7 @@ CGCharacterModelBase_SetCreature 00597960 f end=00597A09
 CGCharacterModelBase_SetRotation 00597A10 f end=00597A7A
 CGCharacterModelBase_RefreshUnit 00597B00 f end=00597B45
 CGCharacterModelBase__RefreshUnit 005977E0 f end=00597832
+CGCharacterModelBase__HideThis 00597210 f end=00597227
+CGCharacterModelBase__destructor 00597460 f end=00597494
+CGCharacterModelBase__IsA 005972D0 f end=0059730D
+CGCharacterModelBase__IsA 00597310 f end=00597364

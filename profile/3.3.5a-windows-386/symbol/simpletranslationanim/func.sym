@@ -5,3 +5,7 @@ CSimpleTranslationAnim_GetOffset 004A6130 f end=004A61C8
 CSimpleTranslationAnim__DestroyScriptMetaTable 004A4CB0 f end=004A4CD5
 CSimpleTranslationAnim__SetOffset 00497FF0 f end=00498037
 CSimpleTranslationAnim__constructor 00499C50 f end=00499C7A
+CSimpleTranslationAnim__destructor 004997B0 f end=004997DD
+CSimpleTranslationAnim__IsA 00498E10 f end=00498E3D
+CSimpleTranslationAnim__IsA 00498E40 f end=00498E99
+CSimpleTranslationAnim__LoadXML 0049BB00 f end=0049BC10

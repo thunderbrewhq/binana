@@ -1,4 +1,3 @@
-CLCDConnection__ColorOutput 00499FB0 f end=00499FB4
 CLCDConnection__MonoOutput 0095A4A0 f end=0095A4A4
 CLCDConnection__constructor 0095A6E0 f end=0095A725
 CLCDConnection__Disconnect 0095A440 f end=0095A472

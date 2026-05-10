@@ -8,3 +8,7 @@ CSimpleScaleAnim__DestroyScriptMetaTable 004A4D70 f end=004A4D95
 CSimpleScaleAnim__SetScale 00497720 f end=00497766
 CSimpleScaleAnim__GetScale 004980D0 f end=004980EF
 CSimpleScaleAnim__constructor 00499CC0 f end=00499D00
+CSimpleScaleAnim__destructor 00499810 f end=0049983D
+CSimpleScaleAnim__IsA 00498F70 f end=00498F9D
+CSimpleScaleAnim__IsA 00498FA0 f end=00498FF9
+CSimpleScaleAnim__LoadXML 0049BD20 f end=0049BEF3

@@ -29,3 +29,5 @@ CScriptRegion_IsDragging 0049E0B0 f end=0049E0F9
 CScriptRegion__GetLayoutFrameByName 004884D0 f end=00488531
 CScriptRegion__IsMouseOver 00488570 f end=0048866D
 CScriptRegion__RegisterAnimGroup 00488AE0 f end=00488B4C
+CFramePoint__constructor 0049CA40 f end=0049CA81
+CFramePoint__SetRelative 0049C7B0 f end=0049C7EF

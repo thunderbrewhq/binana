@@ -73,3 +73,4 @@ World__NDCXform 00791640 f end=007917A7
 ProjectTex2dDrawShaderEffect 007E3AA0 f end=007E3E74
 World__SetNearClip 0077F490 f end=0077F49D
 World__NDCClip 00791380 f end=00791634
+World__TickObject 0077F2E0 f end=0077F2EC

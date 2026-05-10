@@ -3,3 +3,5 @@ ProfileReadFile 004BD840 f end=004BD870
 ProfileInternal__PrfStrToInt 004BBD00 f end=004BBD36
 ProfileInternal__STRINGBLOCK__AllocBlock 004BBEA0 f end=004BBEF8
 ProfileInternal__TokenizeStringValues 004BD580 f end=004BD5F7
+ProfileInternal__IReadFile 004BD7C0 f end=004BD837
+ProfileInternal__IReadBuffer 004BD600 f end=004BD7A1

@@ -4,3 +4,7 @@ CSimpleAlphaAnim_SetChange 004A6DA0 f end=004A6E1D
 CSimpleAlphaAnim_GetChange 004A6E20 f end=004A6E73
 CSimpleAlphaAnim__DestroyScriptMetaTable 004A4E80 f end=004A4EA5
 CSimpleAlphaAnim__constructor 00499E80 f end=00499EA5
+CSimpleAlphaAnim__destructor 004999F0 f end=00499A1D
+CSimpleAlphaAnim__IsA 00499670 f end=0049969D
+CSimpleAlphaAnim__IsA 004996A0 f end=004996F9
+CSimpleAlphaAnim__LoadXML 0049C170 f end=0049C291

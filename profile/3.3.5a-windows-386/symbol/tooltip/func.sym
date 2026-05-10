@@ -132,3 +132,5 @@ CGTooltip_SetHyperlinkCompareItem 00631B60 f end=00631D0E
 CGTooltip__DestroyScriptMetaTable 0061B4C0 f end=0061B4E5
 SetTooltipUnitAura 00625F00 f end=00626236
 CGTooltip__GetScriptTime 0061A400 f end=0061A4EE
+CGTooltip__IsA 0061E0E0 f end=0061E115
+CGTooltip__IsA 0061E120 f end=0061E15E

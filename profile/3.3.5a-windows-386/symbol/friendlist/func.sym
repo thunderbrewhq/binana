@@ -42,3 +42,5 @@ FriendList__IgnoreAdded 006B7200 f end=006B72D1
 FriendList__MuteAdded 006B72E0 f end=006B7394
 FriendList__Removed 006B3B90 f end=006B3C05
 FriendList__Added 006B3C10 f end=006B3C85
+FriendList__GetNumIgnores 006B3630 f end=006B367B
+FriendList__IgnoreRemoved 006B6490 f end=006B653A

@@ -2247,3 +2247,4 @@ GetLuaCompanionType 0053B600 f end=0053B650
 Script_GetCharacterSelectFacing 004E3000 f end=004E3028
 Script_GetNumCharacters 004E3140 f end=004E3162
 RandomDungeonRewardItemStatsCallback 00552950 f end=00552999
+pushDungeonInfo 005553F0 f end=00555590

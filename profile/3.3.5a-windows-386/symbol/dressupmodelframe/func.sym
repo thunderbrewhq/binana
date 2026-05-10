@@ -9,3 +9,6 @@ CGDressUpModelFrame__Create 00514300 f end=00514349
 CGDressUpModelFrame__constructor 00597B50 f end=00597B7D
 CGDressUpModelFrame__DestroyScriptMetaTable 00597CE0 f end=00597D05
 CGDressUpModelFrame__Undress 00597BA0 f end=00597C4D
+CGDressUpModelFrame__destructor 00597DB0 f end=00597E03
+CGDressUpModelFrame__IsA 00597D20 f end=00597D65
+CGDressUpModelFrame__IsA 00597D70 f end=00597DAE

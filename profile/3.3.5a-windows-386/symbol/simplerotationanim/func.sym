@@ -40,3 +40,7 @@ CSimpleRotationAnim_GetRadians 004A6490 f end=004A64D3
 CSimpleRotationAnim__DestroyScriptMetaTable 004A4D10 f end=004A4D35
 CSimpleRotationAnim__constructor 00499C80 f end=00499CBA
 SmoothWeightsToString 00815590 f end=008155F3
+CSimpleRotationAnim__destructor 004997E0 f end=0049980D
+CSimpleRotationAnim__IsA 00498EC0 f end=00498EED
+CSimpleRotationAnim__IsA 00498EF0 f end=00498F49
+CSimpleRotationAnim__LoadXML 0049BC10 f end=0049BD1E

@@ -13,3 +13,7 @@ CSimpleCheckbox_SetCheckedTexture 00976C70 f end=00976DC8
 CSimpleCheckbox_GetDisabledCheckedTexture 00976DD0 f end=00976E42
 CSimpleCheckbox_SetDisabledCheckedTexture 00976E50 f end=00976FA8
 CSimpleCheckbox__OnClick 009623C0 f end=009623ED
+CSimpleCheckbox__destructor 00962300 f end=00962334
+CSimpleCheckbox__IsA 00962260 f end=0096229D
+CSimpleCheckbox__IsA 009622A0 f end=009622F4
+CSimpleCheckbox__UnregisterRegion 009621A0 f end=009621CE
