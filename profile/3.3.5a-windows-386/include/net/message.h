@@ -4,7 +4,7 @@
 DECLARE_ENUM(NETMESSAGE);
 
 enum NETMESSAGE {
-    MRG_NULL_ACTION                                       = 0x0000,
+    MSG_NULL_ACTION                                       = 0x0000,
     CMSG_BOOTME                                           = 0x0001,
     CMSG_DBLOOKUP                                         = 0x0002,
     SMSG_DBLOOKUP                                         = 0x0003,
