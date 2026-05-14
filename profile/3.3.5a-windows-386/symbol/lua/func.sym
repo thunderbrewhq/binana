@@ -493,7 +493,7 @@ luaK_storevar 00862C90 f end=00862D6F type="void __stdcall func(FuncState* fs, e
 luaK_self 00862D80 f end=00862E3E type="void __stdcall func(FuncState* fs, expdesc* e, expdesc* key)"
 jumponcond 00862E40 f end=00862EB5 type="int32_t __usercall func(FuncState* fs@<esi>, expdesc* e@<edi>, int32_t cond@<ebx>)"
 luaK_goiftrue 00862EC0 f end=00862F41 type="void __stdcall func(FuncState* fs, expdesc* e)"
-luaK_exp2nextreg 00862F60 f end=00862FD5 type="void __usercall func(FuncState* fs@<ecx>, expdesc* e@<eax>)"
+luaK_goiffalse 00862F60 f end=00862FD5 type="void __usercall func(FuncState* fs@<ecx>, expdesc* e@<eax>)"
 codenot 00863000 f end=0086309C type="void __usercall func(FuncState* fs@<edi>, expdesc* e@<esi>)"
 luaK_indexed 008630C0 f end=008630E1 type="void __stdcall func(FuncState* fs, expdesc* t, expdesc* k)"
 codearith 008630F0 f end=008631A9 type="void __usercall func(FuncState* fs@<edi>, OpCode op, expdesc* e1@<ebx>, expdesc* e2)"
