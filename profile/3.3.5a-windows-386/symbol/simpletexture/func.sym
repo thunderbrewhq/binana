@@ -51,3 +51,4 @@ CSimpleTexture__GetImageModePixelShader 00483290 f end=004832BA
 CSimpleTexture__SetRotation 00483120 f end=004831C5
 CSimpleTexture__destructor 00483010 f end=00483060
 CSimpleTexture__IsA 00482C60 f end=00482C8D
+OrientationToString 00815110 f end=0081515A

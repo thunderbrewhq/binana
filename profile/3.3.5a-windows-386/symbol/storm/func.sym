@@ -1291,6 +1291,7 @@ SErrDestroy 00771C90 f end=00771D04
 SErrDisplayError 00771D10 f end=00772656
 SErrAppDisplayFatal 00772AA0 f end=00772ABA type="void __stdcall func(char* fmt, ...)"
 SErrCatchUnhandledExceptions 00772B20 f end=00772B2C
+ExceptionFilterWin32 00772760 f end=007729A5
 SCmdRegisterArgList 00773590 f end=007737C2 type="int32_t __stdcall func(ARGLIST* listptr, uint32_t numargs)"
 SCmdProcess 00773890 f end=00773986 type="int32_t __stdcall func(char* cmdline, int32_t skipprogname, CMDEXTRACALLBACK extracallback, CMDERRORCALLBACK errorcallback)"
 SCmdProcessCommandLine 00773990 f end=007739AD type="int32_t __stdcall func(CMDEXTRACALLBACK extracallback, CMDERRORCALLBACK errorcallback)"
@@ -1309,6 +1310,7 @@ SThread__Create 00774740 f end=0077476F
 SSyncObject__destructor 007748E0 f end=007748F8
 SARC4ProcessBuffer 00774EA0 f end=00775038 type="void __stdcall func(void* data, uint32_t len, SARC4Key* inKey, SARC4Key* outKey)"
 SARC4PrepareKey 00775040 f end=007750C3 type="void __stdcall func(void* data, uint32_t len, SARC4Key* key)"
+SARC4ProcessBuffer 00468F60 f end=00468FE8
 PathGetRootChars 007750D0 f end=00775138
 FlushLog 00775140 f end=0077518E
 LockLog 00775190 f end=00775250
@@ -1886,3 +1888,27 @@ TSHashTable__CGxShader__destructor 00688560 f end=006885F7
 TSHashTable__CGxShader__Destroy 00688600 f end=00688654
 TSExplicitList_CGxShader__Clear 006881A0 f end=00688225
 TSGrowableArray_C3iVector__ReallocData 0054ECF0 f end=0054ED7F
+TSGrowableArray_unint32__New 00405970 f end=004059B9
+TSList__LinkNode 006714A0 f end=00671557
+SEvent__constructor 00774900 f end=00774938
+GetExceptionNameWin32 007714E0 f end=00771686
+GetCurrentProcessId 0076FDC0 f end=0076FDC6
+GetCurrentThreadId 0076FDB0 f end=0076FDB6
+InitializeFloatDigits 0076F970 f end=0076F9D3
+ProcessCompletionCallbackThread 0076FEF0 f end=0076FF24
+SCmdGetBool 00773870 f end=00773886
+SCmdGetNum 00773460 f end=007734B7
+SCreateThread 007700A0 f end=007701BC
+SErrDisplayAppFatalCustomV 007729B0 f end=00772A7D
+SErrInitialize 00771040 f end=00771061
+SFileCreateArchive 0045F700 f end=0045F7C5
+SFileCreateFile 00460010 f end=004609A6
+SServerInitialize 0077E9A0 f end=0077E9CF
+SStrInitialize 0076FA40 f end=0076FA50
+StormGetInstance 00773A30 f end=00773A39
+StormRtlDestroy 0076E470 f end=0076E486
+bjhash 0076F420 f end=0076F605
+bscompare 00990530 f end=00990551
+_SCmdGetString 007734C0 f end=0077358A
+_SErrReportNamedResourceLeak 00772670 f end=00772758
+_SFileAuthenticateArchiveEx 00421F50 f end=00421F9E

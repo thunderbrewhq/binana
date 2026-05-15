@@ -25,3 +25,4 @@ CGPartyInfo__Uninvite 006D43C0 f end=006D4441
 CGPartyInfo__LeaveGroup 006D4540 f end=006D45A3
 CGPartyInfo__GetRemoteStatsFromPet 0052BF30 f end=0052BF7F
 CGPartyInfo__GetRemotePetStats 0052BF80 f end=0052BFE9
+CGPartyInfo__GetMemberPet 0052C6E0 f end=0052C75B

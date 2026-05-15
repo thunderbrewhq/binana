@@ -166,3 +166,4 @@ CSimpleFrame__OnLayerChar 0048FB10 f end=0048FB7F
 CSimpleFrame__DragBy 0048E9C0 f end=0048E9EA
 CSimpleFrame__ParentFrame 00490C70 f end=00490CFE
 CSimpleFrame__GetScriptMetaTable 00492760 f end=00492766
+StringToDrawLayer 00814F60 f end=00814FAA

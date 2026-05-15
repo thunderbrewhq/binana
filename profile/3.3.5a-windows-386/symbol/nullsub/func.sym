@@ -16,6 +16,7 @@ stub_return_int32_one 008C8DE0 f type="int32_t __stdcall func()" ; Known names: 
 stub_return_zero4 008E5250 f end=008E5253 ; known names Script_ToggleTris, CLayoutFrame::IsAttachmentOrigin()
 stub_return_zero_float 004D5EE0 f end=004D5EE3 ; known names: CGObject_C__GetFacing, CGCamera__GetDefaultZoomMinDistance
 stub_return_xor_eax 00936900 f end=00936905
+stub_return_zero 004899F0 f end=004899F5
 nullsub_7 009D34B0 f
 nullsub_8 009D34C0 f
 nullsub_9 009D4260 f

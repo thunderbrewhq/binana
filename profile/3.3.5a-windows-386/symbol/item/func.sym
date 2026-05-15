@@ -63,3 +63,6 @@ OnUpdateStackCount 00707720 f end=00707875
 CGItem_C__GetItemEnchantmentVisualID 00708040 f end=0070813C
 CGItem_C__PostInitWithStats 0070AA40 f end=0070AE82
 LoadItemCacheCallback 0070AE90 f end=0070AEF4
+CGItem_C__OnRightClick 00708200 f end=007082AB
+CGItem_C__PostInit 0070AF80 f end=0070AFA5
+CGItem_C__destructor 00706B60 f end=00706B8B

@@ -12,3 +12,4 @@ CSimpleModelFFX__CreateScriptMetaTable 004E6F60 f end=004E6F79 ; CSimpleModelFFX
 CSimpleModelFFX__destructor 004E6230 f end=004E62C4
 CSimpleModelFFX_AddCharacterLight 004E6D60 f end=004E6E57
 CSimpleModelFFX_AddPetLight 004E6E60 f end=004E6F57
+CSimpleModelFFX__destructor 004E62D0 f end=004E62FB

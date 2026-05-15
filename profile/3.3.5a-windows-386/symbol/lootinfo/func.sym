@@ -16,3 +16,5 @@ CGLootInfo__SetObject 005896B0 f end=00589918
 CGLootInfo__ClearRollPending 006DC770 f end=006DC7D4
 GetMasterLootCandidate 006FA770 f end=006FA791
 LootInfoRegisterScriptFunctions 00588E60 f end=00588E86
+LootDestroy 007E7FD0 f end=007E7FD8
+LootInitialize 007E7FA0 f end=007E7FC4

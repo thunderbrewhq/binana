@@ -3,3 +3,7 @@ Login__SetLogonCreds 00465620 f end=00465690
 Login__SetRawAccountName 00465690 f end=004656AC
 Login__FileData 00465600 f end=00465611
 Login__RealmListResul 00465F10 f end=00465F45
+Login__IsLoggedOn 00465740 f end=00465744
+Login__IsReconnect 00465730 f end=00465734
+Login__OnlineIdle 00465520 f end=00465526
+Login__constructor 004658D0 f end=00465AB8

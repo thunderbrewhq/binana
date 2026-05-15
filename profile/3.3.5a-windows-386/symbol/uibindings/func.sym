@@ -36,3 +36,4 @@ MODIFIEDCLICK__GetBinding 0055E230 f end=0055E2BA
 CGUIBindings__Shutdown 00562820 f end=00562861
 CGUIBindings__destructor 00561C60 f end=00561D9E
 StringToMouseButton 007DC010 f end=007DC34F
+CGUIBindings__GetCommand 0055E700 f end=0055E748

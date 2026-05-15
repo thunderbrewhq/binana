@@ -11,3 +11,5 @@ AutoCompleteRegisterScriptFunctions 0057ADB0 f end=0057ADD3
 AutoCompleteUnregisterScriptFunctions 0057ADE0 f end=0057ADFC
 CGAutoCompleteName__GetPresenceID 0057B2C0 f end=0057B324
 AutoCompleteNameQueryCallback 0057B580 f end=0057B5DC
+CGAutoCompleteName__RemoveFlags 0057B040 f end=0057B07C
+CGAutoCompleteName__SetName 0057AFC0 f end=0057AFFB

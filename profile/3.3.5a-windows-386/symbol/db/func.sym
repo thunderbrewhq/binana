@@ -738,3 +738,5 @@ LightRec__GetFilename 008BDFE0 f end=008BDFE6
 LightIntBandRec__GetFilename 008BE100 f end=008BE106
 LightFloatBandRec__GetFilename 008BE1A0 f end=008BE1A6
 ItemDisplayInfoRec__Read 008A7FD0 f end=008A834F
+SDBGetLiquidTypeRec 009905C0 f end=0099064B
+SDBWMOAreaTableLookup 00990560 f end=009905BC

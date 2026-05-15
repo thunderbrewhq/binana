@@ -46,3 +46,6 @@ CMapRenderChunk__RenderSolid 007D3010 f end=007D3226
 CMapRenderChunk__RenderSolidVertexPixelShader 007D3240 f end=007D3383
 CMapRenderChunk__SetShaders 007D3E10 f end=007D3F6D
 CMapRenderChunk__RenderPrep 007D3F70 f end=007D3FDC
+CMapRenderChunk__Destroy 007BA7C0 f end=007BA7C5
+CMapRenderChunk__Destroy 007C3A00 f end=007C3A05
+CMapRenderChunk__RenderSolid 007D3230 f end=007D3235

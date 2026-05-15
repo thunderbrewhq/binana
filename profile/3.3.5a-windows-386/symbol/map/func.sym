@@ -110,3 +110,4 @@ CMap__LinkLightToChunks 007D9DE0 f end=007D9F8F ; CMap::LinkLightToChunks(class 
 CMap__LinkLightToMapObjDefs 007D9F90 f end=007DA0F5 ; CMap::LinkLightToMapObjDefs(class CMapLight *)
 CMap__UpdateLight 007DA100 f end=007DA187 ; CMap::UpdateLight(class CMapLight *)
 CMap__AddHitDebugModel 007A25F0 f end=007A275D
+CMap__CreateMapObjDef 007BF120 f end=007BF458

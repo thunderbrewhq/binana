@@ -27,3 +27,5 @@ CKBIterator__GoToFirstChild 00550A60 f end=00550A73
 CKBPage__destructor 00550B10 f end=00550B56
 CKBPage__constructor 00550AE0 f end=00550B06
 CKBIterator__GoToChild 00552060 f end=005520A7
+CKBPage__destructor 005526D0 f end=00552734
+CKBPage__GetBodyString 00551550 f end=0055159E

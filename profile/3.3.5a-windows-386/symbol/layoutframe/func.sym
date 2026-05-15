@@ -40,5 +40,4 @@ CLayoutFrame__GetFirstPointY 00488F10 f end=00488F45
 CLayoutFrame__Right 00489070 f end=004890F5
 CLayoutFrame__Left 004892A0 f end=00489327
 CLayoutFrame__CenterX 00488F50 f end=00488FD5
-CLayoutFrame__GetLayoutParent 004899F0 f end=004899F5
 CLayoutFrame__GetClampRectInsets 00488D20 f end=00488D3D

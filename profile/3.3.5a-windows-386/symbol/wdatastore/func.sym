@@ -1,2 +1,5 @@
 WDataStore__StaticInitialize 00466050 f end=00466131
 WDataStore__FreeBuffer 00466230 f end=004662AF
+WDataStore__InternalDestroy 008CCF50 f end=008CCFB2
+WDataStore__destructor 008CD160 f end=008CD1C0
+WDataStore__destructor 008CD1C0 f end=008CD220

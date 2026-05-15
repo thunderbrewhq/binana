@@ -29,3 +29,6 @@ SFile__Load 00424E80 f end=00424F46
 SFile__LoadFile 00424F50 f end=00424F74
 SFile__Open 00424F80 f end=00424F98
 SFile__FileGetIsLocalAmount 004217E0 f end=004217FB
+SFile__IsStreamingMode 00422140 f end=00422149
+SFile__IsStreamingMode 004DD430 f end=004DD435
+SFile__IsStreamingMode 004DD440 f end=004DD445

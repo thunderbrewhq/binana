@@ -31,3 +31,6 @@ CGInputControl__OnFocusChange 005FC960 f end=005FC9B2
 CGInputControl__SetMouselookOverrideBindings 005FCB20 f end=005FCB75
 InputControlUnregisterScriptFunctions 005F95B0 f end=005F95CF
 CGInputControl__SetMouselookOverrideBinding 005FD440 f end=005FD544
+CGInputControl__GetUIVehiclePower 005F96E0 f end=005F96E7
+InputControlDestroy 005FD3D0 f end=005FD424
+InputControlDestroy 005FD430 f end=005FD435

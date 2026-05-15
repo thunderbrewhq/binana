@@ -82,3 +82,4 @@ CSimpleFontString__destructor 00485D30 f end=00485D5B
 CSimpleFontString__destructor 00485600 f end=004856EA
 CSimpleFontString__IsA 00485390 f end=004853BD
 CSimpleFontString__IsA 004853C0 f end=00485419
+CSimpleFontString_SetDrawLayer 0048CE70 f end=0048CF27

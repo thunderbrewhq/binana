@@ -18,3 +18,4 @@ BattlenetUI__SystemMessageCB 00539970 f end=00539A16
 BattlenetUI__BNGetFriendInfoHelper 005346F0 f end=005349E7
 BattlenetUI__BNGetToonInfoHelper 00534B60 f end=00534EC9
 BattlenetUI__AddToFriendList 00533D40 f end=00533F03
+BattlenetUI__EnterRealm 0053B3E0 f end=0053B3E5

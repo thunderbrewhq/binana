@@ -1,0 +1,4 @@
+SRWLock__IAllocEvent 00774360 f end=00774407
+SRWLock__IFreeEvent 00774410 f end=007744EF
+SRWLock__IInitialize 007741D0 f end=007742C1
+SRWLock__IOsRWLockIncRef 00774820 f end=00774864

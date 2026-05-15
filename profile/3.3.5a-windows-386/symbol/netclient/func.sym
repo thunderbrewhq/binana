@@ -29,3 +29,5 @@ NetClient__SuspendCommsHandler 00633020 f end=006330E3 type="void __thiscall fun
 NetClient__destructor 006331B0 f end=00633248 type="void __thiscall func(NetClient* this)"
 NetClient__ResumeCommsHandler 00633250 f end=00633300 type="void __thiscall func(NetClient* this, WowConnection* conn)" ; invented name
 NetClient__WCMessageReady 00633330 f end=0063343D type="void __thiscall func(NetClient* this, WowConnection* conn, uint32_t timeStamp, CDataStore* msg)" ; NetClient::WCMessageReady(WowConnection*, unsigned long, CDataStore*)
+NetClient__ClearMessageHandler 00631FC0 f end=00631FDA
+NetClient__GetSessionKey 00631F90 f end=00631F97

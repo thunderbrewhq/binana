@@ -27,3 +27,4 @@ CM2Shared__LowPrioritySequenceFailedCallback 0083D9F0 f end=0083DA10 ; CM2Shared
 CM2Shared__LoadLowPrioritySequence 0083DA10 f end=0083DC8D ; CM2Shared::LoadLowPrioritySequence(unsigned short)
 CM2Shared__Release 0083DC90 f end=0083DCE8 ; CM2Shared::Release()
 M2HeapSort 0083DCF0 f end=0083DE43
+M2GetPixelShaderName 00836600 f end=0083684F

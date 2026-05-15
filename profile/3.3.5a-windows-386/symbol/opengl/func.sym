@@ -1,3 +1,4 @@
 ScanString 006908B0 f end=0069090D
 FindGlExt 00690910 f end=00690954
 BindGlExtensions 006909A0 f end=0069186D
+FindWglExt 00690960 f end=00690997

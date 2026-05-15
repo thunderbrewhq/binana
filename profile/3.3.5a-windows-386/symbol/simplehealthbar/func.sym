@@ -2,3 +2,4 @@ CGSimpleHealthBar__constructor 00990060 f end=0099009B
 CGSimpleHealthBar__InstallMirrorHandlers 009901D0 f end=00990224
 SimpleHealthUpdateHandler 009900E0 f end=00990145
 CGSimpleHealthBar__SetStatusBarColor 009900A0 f end=009900C8
+CGSimpleHealthBar__RemoveMirrorHandlers 00990230 f end=00990278

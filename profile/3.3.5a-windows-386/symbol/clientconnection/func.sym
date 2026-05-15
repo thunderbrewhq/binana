@@ -16,3 +16,7 @@ ClientConnection__GetCharacterList 006B14C0 f end=006B1553 ; ClientConnection::G
 ClientConnection__CharacterLogin 006B1790 f end=006B183F
 ClientConnection__HandleLogoutResponse 006B08B0 f end=006B08FB
 ClientConnection__HandleLogoutComplete 006B2180 f end=006B21E6
+ClientConnection__CharacterAbortLogout 006B18C0 f end=006B192C
+ClientConnection__HandleAddonInfo 00464410 f end=0046445A
+ClientConnection__HandleClientCacheVersion 00464730 f end=00464779
+ClientConnection__destructor 00465320 f end=00465449

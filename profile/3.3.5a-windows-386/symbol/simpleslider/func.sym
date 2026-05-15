@@ -34,3 +34,4 @@ CSimpleSlider__destructor 0096C440 f end=0096C46B
 CSimpleSlider__destructor 0096BF80 f end=0096BFD1
 CSimpleSlider__UnregisterRegion 0096BD60 f end=0096BD82
 CSimpleSlider__OnLayerMouseUp 0096BE40 f end=0096BE50
+CSimpleSlider__IsA 0096BF40 f end=0096BF7E

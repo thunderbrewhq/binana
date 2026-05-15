@@ -11,3 +11,4 @@ WowConnectionNet__Remove 00469470 f end=004694BD
 WowConnectionNet__PlatformDestruct 00469740 f end=00469767
 WowConnectionNet__PlatformRemove 004697D0 f end=004697E0
 WowConnectionNet__PlatformAdd 00469780 f end=004697CD
+WSACleanup 00469730 f end=00469736

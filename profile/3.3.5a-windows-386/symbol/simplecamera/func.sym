@@ -8,3 +8,5 @@ CSimpleCamera__Forward 005FEE80 f end=005FEE9B
 CSimpleCamera__Right 005FEEA0 f end=005FEEBB
 CSimpleCamera__Up 005FEEC0 f end=005FEEDB
 CSimpleCamera__FOV 005FEE70 f end=005FEE74
+CSimpleCamera__SetFacing 006080F0 f end=00608106
+CSimpleCamera__SetFacing 00608110 f end=00608129

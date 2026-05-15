@@ -18,3 +18,5 @@ CGAchievementInfo__LoadTrackedAchievements 005B3840 f end=005B38D8
 CGAchievementInfo__InitializeGame 005B6DF0 f end=005B71DD
 AchievementInfoUnregisterScriptFunctions 005B0D30 f end=005B0D4F
 CGAchievementInfo__ShutdownGame 005B4F00 f end=005B5189
+GetCurrencyShortText 007E7EE0 f end=007E7F1A
+GetCurrencyTextureString 007E7E4E f end=007E7EDD

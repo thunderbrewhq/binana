@@ -63,3 +63,5 @@ IOsClipboardPutString 008727E0 f end=008728B8
 OsLaunchURL 0086B790 f end=0086B99C
 OsGetProcessorId 0086B460 f end=0086B466
 OsGetOsId 0086B470 f end=0086B476
+GetCompositionString 0086CCD0 f end=0086CD69
+IOsVersionChecksum 00871F90 f end=00872161

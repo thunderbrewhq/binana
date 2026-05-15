@@ -16,3 +16,4 @@ MinimapUpdate 007F5BA0 f end=007F6539
 MinimapInitialize 007F6730 f end=007F698D
 LoadMD5Names 007F6540 f end=007F6723
 MinimapGetRaidMembers 007F4390 f end=007F4445
+MinimapSetZoom 007F3AE0 f end=007F3B35

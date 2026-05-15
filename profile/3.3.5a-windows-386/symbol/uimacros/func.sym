@@ -23,3 +23,4 @@ CGUIMacros__Shutdown 00566530 f end=00566612
 IconListArchiveCallback 00565630 f end=005656AC
 IconListDirectoryCallback 005656B0 f end=0056580E
 IconListCustomCallback 00565810 f end=00565834
+CGUIMacros__FindMacro 00566330 f end=00566394

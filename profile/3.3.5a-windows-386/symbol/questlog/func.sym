@@ -43,3 +43,5 @@ CGQuestLog__UpdateQuestPOIFromUserServer 005E70D0 f end=005E716C
 CGQuestLog__InitializeGame 005E71A0 f end=005E72A4
 QuestQueryCounterCallback 005DE8F0 f end=005DE92B
 ItemQueryCallback 005DEA40 f end=005DEA58
+QuestQueryCallback 005DE930 f end=005DE959
+QSortQuestSortTypes 005DFDC0 f end=005DFEE6

@@ -34,3 +34,4 @@ SE2__GetNumOutputDrivers_Cached 004C5AB0 f end=004C5AB9
 SE2__GetSoundKitUsage 004C5C10 f end=004C5C39
 SE2__IsLoopingOrPeriodic 004C5C40 f end=004C5C53
 SE2__GetNumSoundsInSoundKit 004C5C60 f end=004C5C7A
+SE2__IsChatSoundInitialized 00986510 f end=00986515

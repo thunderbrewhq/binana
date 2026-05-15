@@ -44,3 +44,5 @@ GxTexSetDataFormat 006814B0 f end=006814C8
 GxCalcTexelStrideInBytes 006815F0 f end=00681624
 GxTexCreate 00681D90 f end=00681ED8
 GxTexCreate 00681EE0 f end=00681F1C
+GxDevExists 00769220 f end=0076922C
+GxLogCrashInfo 00682200 f end=006822AC

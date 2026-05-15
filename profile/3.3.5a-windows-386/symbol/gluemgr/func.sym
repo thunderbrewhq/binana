@@ -85,3 +85,6 @@ BattlenetFileDownload__constructor 006BAE80 f end=006BAEDF
 LoadingScreenEnableShip 0040AD50 f end=0040AE21
 CGlueMgr__IsScanDLLFinished 004E5880 f end=004E5886
 CGlueMgr__ScanDLLStart 004E5CB0 f end=004E5EA0
+CancelRealmListQuery 004D9590 f end=004D95B4
+ScriptEventsRegisterFunctions 0060A170 f end=0060A1B6
+CGlueMgr__LoginRevertMatrix 004D7FD0 f end=004D7FE8

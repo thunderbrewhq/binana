@@ -18,3 +18,6 @@ CGDynamicObject_C__GetPosition 007064E0 f end=007064FE
 CGDynamicObject_C__GetRawPosition 00706500 f end=00706524
 CGDynamicObject_C__destructor 007054E0 f end=007055D4
 AnimFinishedCallback 00704AF0 f end=00704B23
+CGDynamicObject_C__destructor 007055E0 f end=0070560B
+AnimEventCallback 00704F20 f end=00704F5C
+AnimEventCallback 00734A40 f end=00734B00

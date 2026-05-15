@@ -19,3 +19,4 @@ CSimpleAnim__GetScriptTime 004975F0 f end=0049766B
 CSimpleAnim__LoadXML 0049B810 f end=0049BAF3
 CSimpleAnim__IsDelaying 00497E90 f end=00497F2F
 CSimpleAnim__GetRegionParent 00497FE0 f end=00497FEE
+CSimpleAnim__IsA 00498CE0 f end=00498D23

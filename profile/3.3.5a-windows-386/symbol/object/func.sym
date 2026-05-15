@@ -69,3 +69,7 @@ CGObject_C__GetModelPosition 007446C0 f end=00744720
 CGObject_C__GetModelMatrix 00744720 f end=00744783
 CGObject_C__PrepareToFadeInt 00783630 f end=00783776
 CGObject_C__SetModelStart 00743660 f end=0074367D
+CGObject_C__TranslateRotation 004D5F20 f end=004D5F61
+CGObject__TotalFieldsSaved 004F5670 f end=004F5675
+CGObject_C__destructor 004D6010 f end=004D603B
+CGObject_C__SetObjectLocked 00743420 f end=00743445

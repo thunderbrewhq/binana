@@ -65,3 +65,4 @@ C3Ray__FromStartEnd 00985200 f end=00985298
 C4Quaternion__constructor 00982340 f end=009823FB
 C4Quaternion__FromRotationMatrix 00982910 f end=00982943
 C34Matrix__RotateAroundZ 00984450 f end=009844D8
+C3Vector__Add 00482970 f end=00482994

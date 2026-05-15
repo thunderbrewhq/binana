@@ -26,3 +26,4 @@ ValidateGuildBankTabName 007E1FB0 f end=007E2039
 CGGuildBankInfo__ShutdownGame 005A7830 f end=005A7860
 CGGuildBankInfo__SetGuildBankText 005A5C40 f end=005A5CD5
 CGGuildBankInfo__ClearGuildTabList 005A4B60 f end=005A4C03
+CGGuildBankInfo__QueryGuildBankText 005A5940 f end=005A59F6

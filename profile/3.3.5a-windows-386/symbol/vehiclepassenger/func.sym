@@ -36,3 +36,4 @@ CVehiclePassenger_C__OnCancelControlEnd 00747900 f end=00747905
 CVehiclePassenger_C__AddPendingRescueTransition 00749C20 f end=00749CA7
 CVehiclePassenger_C__GetLockedWorldFacing 007484C0 f end=007484DA
 CVehiclePassenger_C__CheckForVehicleTransitionAnimTimeout 007490C0 f end=007490E1
+CVehiclePassenger_C__ComputeEndPos 00749E40 f end=00749EC5

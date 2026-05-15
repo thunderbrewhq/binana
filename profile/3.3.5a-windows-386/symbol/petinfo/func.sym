@@ -37,3 +37,6 @@ CGPetInfo__InitializeGame 005D6D90 f end=005D6E5B
 CGPetInfo__EnterWorld 005D6E60 f end=005D6F0A
 CGPetInfo__GetComboPoints 005D3520 f end=005D3555
 CGPetInfo__ShutdownGame 005D2F90 f end=005D2FEE
+CGPetInfo__PetAbandon 005D4900 f end=005D49F6
+CGPetInfo__SetAction 005D5AD0 f end=005D5D1A
+CGPetInfo__SetAutocast 005D6020 f end=005D629B

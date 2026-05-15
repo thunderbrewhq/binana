@@ -102,3 +102,5 @@ CTgaFile__CountRun 006AAA70 f end=006AAB6F
 CTgaFile__RleCompressLine 006AAB70 f end=006AACD4
 CGxTex__constructor 006852C0 f end=00685363
 CTgaFile__Image 006AA820 f end=006AA834
+GetTexture 004B7020 f end=004B70A0
+HashNewTexture 004B94E0 f end=004B954C

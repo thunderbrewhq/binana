@@ -33,3 +33,4 @@ CEffect__CreateModelFromEffect 006F7680 f end=006F76B2
 CEffect__InitLightningEndpoint 006F78B0 f end=006F78F7
 CEffect__AddSpecialByPosition 006F93A0 f end=006F94B2
 CEffect__LinkTo 006F76C0 f end=006F7718
+CEffect__AddEffect 006F94C0 f end=006F9604

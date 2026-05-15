@@ -198,3 +198,4 @@ DBCache__ArenaTeamCache__destructor 00676C90 f end=00676D13
 DBCache__DanceCache__destructor 00676DC0 f end=00676E43
 DBCache__DanceCache__Invalidate 0067AEE0 f end=0067AF4A
 InvalidateDance 006354F0 f end=00635517
+DBCache_Idle 00635530 f end=00635535

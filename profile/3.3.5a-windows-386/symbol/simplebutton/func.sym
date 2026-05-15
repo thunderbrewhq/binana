@@ -61,3 +61,4 @@ CSimpleButton__IsA 00962220 f end=0096225E
 CSimpleButton__UnregisterRegion 0096F350 f end=0096F3B6
 CSimpleButton__OnLayerHide 0096F410 f end=0096F437
 CSimpleButton__OnDoubleClick 0096FDD0 f end=0096FE22
+CSimpleButton__SetHighlight 0096F9B0 f end=0096FA75

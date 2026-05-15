@@ -889,3 +889,5 @@ Unwind@009c7740 009C7740 f end=009C7748 type="void __stdcall func()" auto
 Unwind@009c7748 009C7748 f end=009C7753 type="void __stdcall func()" auto
 Unwind@009c7753 009C7753 f end=009C775E type="void __stdcall func()" auto
 Unwind@009c7770 009C7770 f end=009C7778 type="void __stdcall func()" auto
+is_space 00994BB0 f end=00994BC9
+sputu8 0047BE50 f end=0047BF1D
