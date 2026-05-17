@@ -201,5 +201,4 @@ ValidateNameDestroy 007E21B0 f end=007E2249
 DownloadAccountData 006B92C0 f end=006B933D
 UploadAccountData 006B9C60 f end=006B9C9B
 ErrorDisplayFilterCallback 00401A10 f end=00401A30
-EventDoMessageLoop 0047D060 f end=0047D065
 SetFilterMask 004018D0 f end=00401A01

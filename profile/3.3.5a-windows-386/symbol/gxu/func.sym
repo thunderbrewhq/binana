@@ -1,4 +1,6 @@
 GxuFontShutdown 004A8D10 f end=004A8D1A
+GxuFontGetFontName 006BCDD0 f end=006BCDE4
+GxuFontGetFontFlags 006BCDF0 f end=006BCE06
 GxuFontAddToBatch 006BCE10 f end=006BCE32
 GxuFontRenderBatch 006BCE40 f end=006BCE52
 GxuFontGetTextExtent 006BCE60 f end=006BCE98
@@ -8,6 +10,7 @@ GxuFontGetOneToOneHeight 006BD020 f end=006BD069
 GxuFontSetStringColor 006BD070 f end=006BD095
 GxuFontSetStringPosition 006BD0A0 f end=006BD0BE
 GxuFontAddShadow 006BD0C0 f end=006BD0DF
+GxuFontStringEmbeddedTextureInfo 006BD120 f end=006BD139
 GxuFontStringSetGradient 006BD140 f end=006BD15E
 GxuFontGetMaxCharsWithinWidthAndHeight 006BD390 f end=006BD547
 GxuFontGetStringPosition 006BD550 f end=006BD596
@@ -15,8 +18,10 @@ GxuDetermineQuotedCode 006BD5A0 f end=006BD89D
 GxuFontGetWrappedTextHeight 006BD900 f end=006BDB09
 GxuFontStripEscapeCodes 006BDC50 f end=006BDDA9
 GxuFontCreateFont 006BDE80 f end=006BDF87
+GxuFontDestroyFont 006BDF90 f end=006BDFBE
 GxuFontDestroyString 006BDFC0 f end=006BE014
 GxuFontWindowSizeChanged 006BE020 f end=006BE221
+GxuFontInitialize 006BE230 f end=006BE2A2
 GxuFontCreateString 006BE2B0 f end=006BE390
 GxuFontClearBatch 006BE390 f end=006BE3AD
 GxuFontDestroyBatch 006BE3B0 f end=006BE3DD
@@ -34,8 +39,10 @@ GetCharacterWidth 006C09A0 f end=006C0A5B
 ParseEmbeddedTexture 006C0E80 f end=006C1425
 InternalGetTextExtent 006C1430 f end=006C16E5
 InternalGetMaxCharsWithinWidth 006C1710 f end=006C1AC3
+FontFaceGetFace 006C8080 f end=006C809A
 FontFaceCloseHandle 006C80A0 f end=006C80DA
 FontFaceGetHandle 006C8AE0 f end=006C8C03
+FREETYPE_RenderGlyph 006C8C10 f end=006C8C5B type="int32_t __usercall func@<eax>(uint32_t code@<eax>, bool monochrome@<bl>, FT_Face face@<esi>)"
 IGxuFontGlyphRenderGlyph 006C8CC0 f end=006C8E6B
 GxuFontDestroyFont 006BDF90 f end=006BDFBE
 GxuFontInitialize 006BE230 f end=006BE2A2
@@ -45,3 +52,6 @@ GxuFontGetFontFlags 006BCDF0 f end=006BCE06
 GxuFontStringEmbeddedTextureInfo 006BD120 f end=006BD139
 GxuFontGetWrappedTextHeight 006BDB10 f end=006BDC4E
 SetProjection 006C0BA0 f end=006C0E79
+FreeTypeAllocFunction 006C0A60 f end=006C0A7A type="void __stdcall func(FT_Memory memory, int32_t size)"
+FreeTypeFreeFunction 006C0A80 f end=006C0A9E type="void __stdcall func(FT_Memory memory, void* block)"
+FreeTypeReallocFunction 006C0AA0 f end=006C0ABE type="void __stdcall func(FT_Memory memory, int32_t currentSize, int32_t newSize, void* block)"
