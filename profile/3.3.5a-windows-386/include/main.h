@@ -84,6 +84,8 @@
 #include "framescript/event_object.h"
 #include "framescript/object.h"
 
+#include "freetype/freetype.h"
+
 #include "gx/batch.h"
 #include "gx/blit.h"
 #include "gx/buffer.h"

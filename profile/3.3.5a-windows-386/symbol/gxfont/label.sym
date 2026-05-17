@@ -1,2 +1,4 @@
 g_fontVertexShader 00C7D2D0 l type="CGxShader*"
 g_fontPixelShader 00C7D2CC l type="CGxShader*"
+s_GxuMemoryRecord 00AD9960 l type="FT_MemoryRec"
+g_FTLibrary 00C7D2B4 l type="FT_Library"
