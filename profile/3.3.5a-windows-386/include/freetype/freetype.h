@@ -23,6 +23,9 @@ DECLARE_STRUCT(CID_Loader);
 DECLARE_STRUCT(CID_Parser);
 DECLARE_STRUCT(CID_SizeRec);
 DECLARE_STRUCT(CID_Subrs);
+DECLARE_STRUCT(FNT_FaceRec);
+DECLARE_STRUCT(FNT_Font);
+DECLARE_STRUCT(FNT_SizeRec);
 DECLARE_STRUCT(FT_AutoHinterRec);
 DECLARE_STRUCT(FT_AutoHinter_Interface);
 DECLARE_STRUCT(FT_BBox);
@@ -43,10 +46,13 @@ DECLARE_STRUCT(FT_Glyph_Metrics);
 DECLARE_STRUCT(FT_LibraryRec);
 DECLARE_STRUCT(FT_ListNodeRec);
 DECLARE_STRUCT(FT_ListRec);
+DECLARE_STRUCT(FT_MM_Axis);
 DECLARE_STRUCT(FT_Matrix);
 DECLARE_STRUCT(FT_MemoryRec);
 DECLARE_STRUCT(FT_ModuleRec);
 DECLARE_STRUCT(FT_Module_Class);
+DECLARE_STRUCT(FT_Multi_Master);
+DECLARE_STRUCT(FT_Open_Args);
 DECLARE_STRUCT(FT_Outline);
 DECLARE_STRUCT(FT_Outline_Funcs);
 DECLARE_STRUCT(FT_Parameter);
@@ -63,6 +69,7 @@ DECLARE_STRUCT(FT_StreamRec);
 DECLARE_STRUCT(FT_SubGlyph);
 DECLARE_STRUCT(FT_UnitVector);
 DECLARE_STRUCT(FT_Vector);
+DECLARE_STRUCT(PFB_Tag);
 DECLARE_STRUCT(PSNames_Interface);
 DECLARE_STRUCT(PS_Table);
 DECLARE_STRUCT(PS_Table_Funcs);
@@ -70,6 +77,7 @@ DECLARE_STRUCT(PS_UniMap);
 DECLARE_STRUCT(PS_Unicodes);
 DECLARE_STRUCT(SFNT_Header);
 DECLARE_STRUCT(SFNT_Interface);
+DECLARE_STRUCT(T1_AFM);
 DECLARE_STRUCT(T1_Blend);
 DECLARE_STRUCT(T1_Builder);
 DECLARE_STRUCT(T1_Builder);
@@ -83,9 +91,14 @@ DECLARE_STRUCT(T1_FaceRec);
 DECLARE_STRUCT(T1_Field);
 DECLARE_STRUCT(T1_Font);
 DECLARE_STRUCT(T1_FontInfo);
+DECLARE_STRUCT(T1_GlyphSlotRec);
+DECLARE_STRUCT(T1_Kern_Pair);
+DECLARE_STRUCT(T1_Loader);
 DECLARE_STRUCT(T1_Parser);
+DECLARE_STRUCT(T1_ParserRec);
 DECLARE_STRUCT(T1_Parser_Funcs);
 DECLARE_STRUCT(T1_Private);
+DECLARE_STRUCT(T1_SizeRec);
 DECLARE_STRUCT(T1_Token);
 DECLARE_STRUCT(T2_Builder);
 DECLARE_STRUCT(T2_Decoder);
@@ -94,8 +107,10 @@ DECLARE_STRUCT(T2_DriverRec);
 DECLARE_STRUCT(T2_GlyphSlotRec);
 DECLARE_STRUCT(T2_Parser);
 DECLARE_STRUCT(TBand);
+DECLARE_STRUCT(TCell);
 DECLARE_STRUCT(TPoint);
 DECLARE_STRUCT(TProfile);
+DECLARE_STRUCT(TRaster);
 DECLARE_STRUCT(TRaster_Instance);
 DECLARE_STRUCT(TTC_Header);
 DECLARE_STRUCT(TT_CMap0);
@@ -106,6 +121,7 @@ DECLARE_STRUCT(TT_CMap4Segment);
 DECLARE_STRUCT(TT_CMap6);
 DECLARE_STRUCT(TT_CMapTable);
 DECLARE_STRUCT(TT_CharMapRec);
+DECLARE_STRUCT(TT_DriverRec);
 DECLARE_STRUCT(TT_FaceRec);
 DECLARE_STRUCT(TT_Gasp);
 DECLARE_STRUCT(TT_GaspRange);
@@ -134,6 +150,11 @@ DECLARE_STRUCT(TT_SizeRec);
 DECLARE_STRUCT(TT_Size_Metrics);
 DECLARE_STRUCT(TT_Table);
 DECLARE_STRUCT(TT_VertHeader);
+DECLARE_STRUCT(WinFNT_Header);
+DECLARE_STRUCT(WinMZ_Header);
+DECLARE_STRUCT(WinNE_Header);
+DECLARE_STRUCT(WinNameInfo);
+DECLARE_STRUCT(WinResourceInfo);
 
 // union declarations
 DECLARE_UNION(FT_StreamDesc);
@@ -143,10 +164,12 @@ DECLARE_ENUM(FT_Encoding);
 DECLARE_ENUM(FT_Frame_Op);
 DECLARE_ENUM(FT_Glyph_Format);
 DECLARE_ENUM(FT_Module_Flags);
+DECLARE_ENUM(FT_Open_Flags);
 DECLARE_ENUM(FT_Outline_Flags);
 DECLARE_ENUM(FT_Palette_Mode);
 DECLARE_ENUM(FT_Pixel_Mode);
 DECLARE_ENUM(FT_Raster_Flag);
+DECLARE_ENUM(FT_Sfnt_Tag);
 DECLARE_ENUM(T1_EncodingType);
 DECLARE_ENUM(T1_Field_Location);
 DECLARE_ENUM(T1_Field_Type);
@@ -216,8 +239,15 @@ typedef T2_GlyphSlotRec*     T2_GlyphSlot;
 typedef TT_CharMapRec*       TT_CharMap;
 typedef TT_FaceRec*          TT_Face;
 typedef TT_SizeRec*          TT_Size;
+typedef TT_DriverRec*        TT_Driver;
+typedef T1_GlyphSlotRec*     T1_GlyphSlot;
+typedef T1_SizeRec*          T1_Size;
+typedef FNT_SizeRec*         FNT_Size;
+typedef FNT_FaceRec*         FNT_Face;
 
 // typedef FT_RasterRec_*    FT_Raster;
+typedef void*                T1_Glyph_Hints;
+typedef void*                T1_Size_Hints;
 typedef void*                TT_ExecContextRec;
 typedef TT_ExecContextRec*   TT_ExecContext;
 typedef void*                FT_Raster;
@@ -784,6 +814,26 @@ enum TStates {
     Ascending,
     Descending,
     Flat
+};
+
+enum FT_Sfnt_Tag {
+    ft_sfnt_head = 0,
+    ft_sfnt_maxp = 1,
+    ft_sfnt_os2  = 2,
+    ft_sfnt_hhea = 3,
+    ft_sfnt_vhea = 4,
+    ft_sfnt_post = 5,
+    ft_sfnt_pclt = 6,
+
+    sfnt_max /* don't remove */
+};
+
+enum FT_Open_Flags {
+    ft_open_memory   = 1,
+    ft_open_stream   = 2,
+    ft_open_pathname = 4,
+    ft_open_driver   = 8,
+    ft_open_params   = 16
 };
 
 // base
@@ -1973,6 +2023,21 @@ struct T1_Parser {
     T1_Parser_Funcs funcs;
 };
 
+struct T1_ParserRec {
+    T1_Parser root;
+    FT_Stream stream;
+
+    FT_Byte* base_dict;
+    FT_Int   base_len;
+
+    FT_Byte* private_dict;
+    FT_Int   private_len;
+
+    FT_Byte in_pfb;
+    FT_Byte in_memory;
+    FT_Byte single_block;
+};
+
 struct T1_Builder_Funcs {
     void (*init)(T1_Builder* builder, FT_Face face, FT_Size size, FT_GlyphSlot slot);
 
@@ -2681,6 +2746,230 @@ struct TRaster_Instance {
                               /* set bits in a gray 2x2 cell         */
 
     void* memory;
+};
+
+struct TCell {
+    int32_t x;
+    int32_t y;
+    int32_t cover;
+    int32_t area;
+};
+
+struct TRaster {
+    TCell*  cells;
+    int32_t max_cells;
+    int32_t num_cells;
+
+    int32_t min_ex, max_ex;
+    int32_t min_ey, max_ey;
+
+    int32_t area;
+    int32_t cover;
+    int32_t invalid;
+
+    int32_t ex, ey;
+    int32_t cx, cy;
+    int32_t x, y;
+
+    int32_t last_ey;
+
+    FT_Vector bez_stack[96];
+    int32_t   lev_stack[32];
+
+    FT_Outline outline;
+    FT_Bitmap  target;
+
+    FT_Span gray_spans[32];
+    int32_t num_gray_spans;
+
+    FT_Raster_Span_Func render_span;
+    void*               render_span_data;
+    int32_t             span_y;
+
+    int32_t band_size;
+    int32_t band_shoot;
+    int32_t conic_level;
+    int32_t cubic_level;
+
+    void* memory;
+};
+
+struct TT_DriverRec {
+    FT_DriverRec   root;
+    TT_ExecContext context; /* execution context        */
+    TT_GlyphZone   zone;    /* glyph loader points zone */
+
+    void* extension_component;
+};
+
+struct FT_MM_Axis {
+    FT_String* name;
+    FT_Long    minimum;
+    FT_Long    maximum;
+};
+
+struct FT_Multi_Master {
+    FT_UInt    num_axis;
+    FT_UInt    num_designs;
+    FT_MM_Axis axis[4];
+};
+
+struct T1_Loader {
+    T1_ParserRec parser; /* parser used to read the stream */
+
+    FT_Int   num_chars;      /* number of characters in encoding */
+    PS_Table encoding_table; /* PS_Table used to store the       */
+                             /* encoding character names         */
+
+    FT_Int   num_glyphs;
+    PS_Table glyph_names;
+    PS_Table charstrings;
+
+    FT_Int   num_subrs;
+    PS_Table subrs;
+    FT_Bool  fontdata;
+};
+
+struct PFB_Tag {
+    FT_UShort tag;
+    FT_Long   size;
+};
+
+struct T1_GlyphSlotRec {
+    FT_GlyphSlotRec root;
+
+    FT_Bool hint;
+    FT_Bool scaled;
+
+    FT_Int max_points;
+    FT_Int max_contours;
+
+    FT_Fixed x_scale;
+    FT_Fixed y_scale;
+
+    T1_Glyph_Hints* hints; /* defined in the hinter */
+};
+
+struct T1_SizeRec {
+    FT_SizeRec     root;
+    FT_Bool        valid;
+    T1_Size_Hints* hints; /* defined in the hinter. This allows */
+                          /* us to experiment with different    */
+                          /* hinting schemes without having to  */
+                          /* change `t1objs' each time.         */
+};
+
+struct T1_Kern_Pair {
+    FT_UInt   glyph1;
+    FT_UInt   glyph2;
+    FT_Vector kerning;
+};
+
+struct T1_AFM {
+    FT_Int        num_pairs;
+    T1_Kern_Pair* kern_pairs;
+};
+
+struct WinFNT_Header {
+    FT_UShort version;
+    FT_ULong  file_size;
+    FT_Byte   copyright[60];
+    FT_UShort file_type;
+    FT_UShort nominal_point_size;
+    FT_UShort vertical_resolution;
+    FT_UShort horizontal_resolution;
+    FT_UShort ascent;
+    FT_UShort internal_leading;
+    FT_UShort external_leading;
+    FT_Byte   italic;
+    FT_Byte   underline;
+    FT_Byte   strike_out;
+    FT_UShort weight;
+    FT_Byte   charset;
+    FT_UShort pixel_width;
+    FT_UShort pixel_height;
+    FT_Byte   pitch_and_family;
+    FT_UShort avg_width;
+    FT_UShort max_width;
+    FT_Byte   first_char;
+    FT_Byte   last_char;
+    FT_Byte   default_char;
+    FT_Byte   break_char;
+    FT_UShort bytes_per_row;
+    FT_ULong  device_offset;
+    FT_ULong  face_name_offset;
+    FT_ULong  bits_pointer;
+    FT_ULong  bits_offset;
+    FT_Byte   reserved;
+    FT_ULong  flags;
+    FT_UShort A_space;
+    FT_UShort B_space;
+    FT_UShort C_space;
+    FT_UShort color_table_offset;
+    FT_Byte   reserved2[4];
+};
+
+struct FNT_Font {
+    FT_ULong offset;
+    FT_Int   size_shift;
+
+    WinFNT_Header header;
+
+    FT_Byte* fnt_frame;
+    FT_ULong fnt_size;
+};
+
+struct FNT_SizeRec {
+    FT_SizeRec root;
+    FNT_Font*  font;
+};
+
+struct FNT_FaceRec {
+    FT_FaceRec root;
+
+    FT_UInt   num_fonts;
+    FNT_Font* fonts;
+
+    FT_CharMap    charmap_handle;
+    FT_CharMapRec charmap; /* a single charmap per face */
+};
+
+struct WinMZ_Header {
+    FT_UShort magic;
+    /* skipped content */
+    FT_UShort lfanew;
+};
+
+struct WinNE_Header {
+    FT_UShort magic;
+    /* skipped content */
+    FT_UShort resource_tab_offset;
+    FT_UShort rname_tab_offset;
+};
+
+struct WinNameInfo {
+    FT_UShort offset;
+    FT_UShort length;
+    FT_UShort flags;
+    FT_UShort id;
+    FT_UShort handle;
+    FT_UShort usage;
+};
+
+struct WinResourceInfo {
+    FT_UShort type_id;
+    FT_UShort count;
+};
+
+struct FT_Open_Args {
+    FT_Open_Flags flags;
+    FT_Byte*      memory_base;
+    FT_Long       memory_size;
+    FT_String*    pathname;
+    FT_Stream     stream;
+    FT_Module     driver;
+    FT_Int        num_params;
+    FT_Parameter* params;
 };
 
 #endif
