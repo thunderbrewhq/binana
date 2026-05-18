@@ -196,7 +196,6 @@ PollNet 00401FD0 f end=00401FE7
 PortraitLightingCallback 00616BC0 f end=00616C14
 SendErrorLog 004034F0 f end=00403553
 SetAddOnInfoRequest 005F79A0 f end=005F7D6C
-parse_encoding 00994E20 f end=009950D3
 ValidateNameDestroy 007E21B0 f end=007E2249
 DownloadAccountData 006B92C0 f end=006B933D
 UploadAccountData 006B9C60 f end=006B9C9B
