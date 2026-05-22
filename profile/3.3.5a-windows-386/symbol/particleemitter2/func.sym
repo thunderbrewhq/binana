@@ -44,3 +44,7 @@ CParticleEmitter2__GetNumPrimitives 0097BB30 f end=0097BB7F
 CParticleEmitter2__SyncAllocation 0097E480 f end=0097E571
 CParticleEmitter2__SyncReserve 0097E3F0 f end=0097E47F
 CParticleEmitter2__constructor 0097EEC0 f end=0097F50F
+CParticleEmitter2__SetEmissionRate 0097BD80 f end=0097BDA9
+CParticleEmitter2__WorldBounds 00978BE0 f end=00978BE7
+CParticleEmitter2__destructor 0097BCC0 f end=0097BD7D
+CParticleEmitter2__destructor 0097D890 f end=0097D8BB

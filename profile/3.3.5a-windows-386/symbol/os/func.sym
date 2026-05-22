@@ -65,3 +65,4 @@ OsGetProcessorId 0086B460 f end=0086B466
 OsGetOsId 0086B470 f end=0086B476
 GetCompositionString 0086CCD0 f end=0086CD69
 IOsVersionChecksum 00871F90 f end=00872161
+OsURLDownload 00870040 f end=0087005E

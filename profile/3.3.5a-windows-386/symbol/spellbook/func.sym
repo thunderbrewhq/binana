@@ -36,3 +36,4 @@ CGSpellBook__FindRaidDispel 0053BDF0 f end=0053BE29
 CGSpellBook__CanApplyAura 0053D750 f end=0053D89A
 CGSpellBook__FindRaidBuff 0053D8A0 f end=0053D990
 CGSpellBook__GetSpell 0053B4A0 f end=0053B4D5
+CGSpellBook__CanShowAura 0053D580 f end=0053D67D

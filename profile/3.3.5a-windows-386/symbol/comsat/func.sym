@@ -77,3 +77,5 @@ ComSat__Manager__LocalTalkerEnable 0087FA10 f end=0087FA1C
 ComSat__Sound__Manager__LocalTalkerEnable 00881E20 f end=00881EB1
 ComSat__Manager__LocalTalkerThreshold 0087FA20 f end=0087FA5A
 ComSat__Sound__Manager__LocalTalkerThreshold 00881340 f end=0088136A
+ComSat__Manager__DeviceError 008805E0 f end=00880622
+ComSat__Manager__destructor 00880C90 f end=00880C98

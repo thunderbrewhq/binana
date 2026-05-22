@@ -1,1 +1,5 @@
 BattlenetApplication__RecvEvent 008C9EA0 f end=008C9F62
+BattlenetApplication__Connect 008C6D10 f end=008C6DDF
+BattlenetApplication__Disconnect 008C6980 f end=008C69C5
+BattlenetApplication__Resolve 008C67B0 f end=008C697B
+BattlenetApplication__Send 008C5180 f end=008C51B3

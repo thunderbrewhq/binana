@@ -1,2 +1,4 @@
 CGGameObject_C_Type_DungeonDifficulty__constructor 00712820 f end=00712861
 CGGameObject_C_Type_DungeonDifficulty__HandleAnimEvent 0070DD70 f end=0070DDCA
+CGGameObject_C_Type_DungeonDifficulty__GetBaseAlpha 0070DD50 f end=0070DD69
+CGGameObject_C_Type_DungeonDifficulty__UpdateDisabled 00710A50 f end=00710BD9

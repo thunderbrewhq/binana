@@ -75,3 +75,7 @@ World__SetNearClip 0077F490 f end=0077F49D
 World__NDCClip 00791380 f end=00791634
 World__TickObject 0077F2E0 f end=0077F2EC
 World__ObjectUpdate 0077FD60 f end=0077FDCB
+World__ObjectDestroy 00782680 f end=007826DD
+World__ObjectSetMoveable 0077FE00 f end=0077FE1E
+World__QueryObjectParentParam64 007819C0 f end=00781A02
+World__SetObjectCollisionCallback 0077F2B0 f end=0077F2BD

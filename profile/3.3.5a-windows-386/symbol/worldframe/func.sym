@@ -51,3 +51,6 @@ CGWorldFrame__GetLineSegment 004F6450 f end=004F6559
 CGWorldFrame__destructor 004FAF60 f end=004FAF8B
 TextureCacheResetLoadCount 004E6F80 f end=004E6F85
 WorldTextRenderBatch 007E5140 f end=007E5145
+CGWorldFrame__OnLayerKeyDown 004F6AE0 f end=004F6B69
+CGWorldFrame__OnLayerKeyUp 004F6B70 f end=004F6C10
+CGWorldFrame__destructor 004FA560 f end=004FA568

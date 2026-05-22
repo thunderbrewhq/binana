@@ -17,3 +17,5 @@ CSimpleCheckbox__destructor 00962300 f end=00962334
 CSimpleCheckbox__IsA 00962260 f end=0096229D
 CSimpleCheckbox__IsA 009622A0 f end=009622F4
 CSimpleCheckbox__UnregisterRegion 009621A0 f end=009621CE
+CSimpleCheckbox__LoadXML 009624C0 f end=0096265C
+CSimpleCheckbox__destructor 009621D0 f end=009621D8

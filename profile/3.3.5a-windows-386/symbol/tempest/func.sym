@@ -66,3 +66,5 @@ C4Quaternion__constructor 00982340 f end=009823FB
 C4Quaternion__FromRotationMatrix 00982910 f end=00982943
 C34Matrix__RotateAroundZ 00984450 f end=009844D8
 C3Vector__Add 00482970 f end=00482994
+CAaSphere__BoundingAccurate 00985750 f end=009858A3
+CAaSphere__FindExtrema 009855F0 f end=00985746

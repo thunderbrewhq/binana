@@ -6,3 +6,4 @@ Battlenet__Teardown 009C0D20 f end=009C0D2B
 Battlenet__TumorManager__Create 009C0A10 f end=009C0AE7
 Battlenet__TumorManager__TumorManager 009C0110 f end=009C0174
 Battlenet__Tumor__AllocAdapter 009C11C0 f end=009C1250
+Battlenet__SystemServer__Log 008C50C0 f end=008C50D4

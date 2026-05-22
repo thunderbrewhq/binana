@@ -167,3 +167,5 @@ CSimpleFrame__DragBy 0048E9C0 f end=0048E9EA
 CSimpleFrame__ParentFrame 00490C70 f end=00490CFE
 CSimpleFrame__GetScriptMetaTable 00492760 f end=00492766
 StringToDrawLayer 00814F60 f end=00814FAA
+CSimpleFrame__StopAnimating 004919F0 f end=00491A62
+CSimpleFrame__destructor 004926B0 f end=004926B8

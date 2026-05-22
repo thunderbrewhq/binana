@@ -26,3 +26,5 @@ CSimpleStatusBar__IsA 009619C0 f end=009619FE
 CSimpleStatusBar__GetScriptTime 009616A0 f end=009616EE
 CSimpleStatusBar__UnregisterRegion 009616F0 f end=00961712
 CSimpleStatusBar__SetStatusBarColor 009615F0 f end=00961607
+CSimpleStatusBar__LoadXML 00961E30 f end=009620D7
+CSimpleStatusBar__destructor 00961970 f end=00961978

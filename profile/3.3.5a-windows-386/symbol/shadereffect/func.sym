@@ -19,3 +19,6 @@ CShaderEffect__SetEmissive 00873A50 f end=00873B9B ; CShaderEffect::SetEmissive(
 CShaderEffect__SetAlphaRef 00873BA0 f end=00873C1A ; CShaderEffect::SetAlphaRef(float)
 CShaderEffect__SetLocalLighting 00873CA0 f end=00873ED2 ; CShaderEffect::SetLocalLighting(CM2Lighting*, int, C3Vector const*)
 CShaderEffect__SetAlphaRefDefault 00873EE0 f end=00873F23
+CShaderEffect__SetLightingEnabled 008731C0 f end=00873203
+CShaderEffect__constructor 00873F30 f end=00873F44
+CShaderEffect__destructor 00873C20 f end=00873C93
