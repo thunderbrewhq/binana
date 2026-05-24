@@ -2257,3 +2257,4 @@ QuestFailedCallback 005DE980 f end=005DE9DE
 QuestParserParseText 00579590 f end=005796BC
 Script_CancelRealmListQuery 004DE4B0 f end=004DE4B8
 Script_RealmListDialogCancelled 004DE4C0 f end=004DE4C8
+GetBankSlotCost 0057BA30 f end=0057BA58

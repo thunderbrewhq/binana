@@ -84,3 +84,4 @@ CSimpleFontString__IsA 00485390 f end=004853BD
 CSimpleFontString__IsA 004853C0 f end=00485419
 CSimpleFontString_SetDrawLayer 0048CE70 f end=0048CF27
 CSimpleFontString__WrapText 00482450 f end=00482503
+CSimpleFontString__GetScriptMetaTable 00485430 f end=00485436

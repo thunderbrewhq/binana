@@ -104,3 +104,7 @@ CGxTex__constructor 006852C0 f end=00685363
 CTgaFile__Image 006AA820 f end=006AA834
 GetTexture 004B7020 f end=004B70A0
 HashNewTexture 004B94E0 f end=004B954C
+CreateBlpTexture 004B8BE0 f end=004B8C73
+GetDefaultTexture 004B5280 f end=004B52F1
+HashNewTexture 004B9480 f end=004B94D7
+UpdateBlpTextureAsync 004B5E80 f end=004B5FAD

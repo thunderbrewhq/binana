@@ -13,3 +13,5 @@ CSimpleMovieFrame__IsA 0095E800 f end=0095E835
 CSimpleMovieFrame__IsA 0095E840 f end=0095E87E
 CSimpleMovieFrame__GetScriptTime 0095DC10 f end=0095DC72
 CSimpleMovieFrame__StopMovie 0095EBA0 f end=0095EBF0
+CSimpleMovieFrame__GetScriptMetaTable 0095E7E0 f end=0095E7E6
+CSimpleMovieFrame__destructor 0095E7F0 f end=0095E7F8

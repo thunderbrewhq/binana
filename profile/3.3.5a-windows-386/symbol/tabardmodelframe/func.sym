@@ -14,3 +14,5 @@ CGTabardModelFrame_GetLowerEmblemTexture 00599B20 f end=00599DCD
 CGTabardModelFrame__DestroyScriptMetaTable 00599000 f end=00599025
 CGTabardModelFrame__Create 00514350 f end=00514399
 CGTabardModelFrame__constructor 00598F50 f end=00598F73
+CGTabardModelFrame__GetScriptMetaTable 00598F90 f end=00598F96
+EmblemTextureUpdate 00599160 f end=00599185

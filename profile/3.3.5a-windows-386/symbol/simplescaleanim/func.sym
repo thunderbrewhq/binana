@@ -12,3 +12,4 @@ CSimpleScaleAnim__destructor 00499810 f end=0049983D
 CSimpleScaleAnim__IsA 00498F70 f end=00498F9D
 CSimpleScaleAnim__IsA 00498FA0 f end=00498FF9
 CSimpleScaleAnim__LoadXML 0049BD20 f end=0049BEF3
+CSimpleScaleAnim__GetScriptMetaTable 00499010 f end=00499016

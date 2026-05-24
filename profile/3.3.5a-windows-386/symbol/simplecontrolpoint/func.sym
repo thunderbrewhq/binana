@@ -14,3 +14,4 @@ CSimpleControlPoint__destructor 00499020 f end=00499089
 CSimpleControlPoint__IsA 00498740 f end=00498765
 CSimpleControlPoint__IsA 00498770 f end=004987B3
 CSimpleControlPoint__LoadXML 004987E0 f end=004989A3
+CSimpleControlPoint__GetScriptMetaTable 004987D0 f end=004987D6

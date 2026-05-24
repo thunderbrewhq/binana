@@ -18,3 +18,4 @@ CGCooldown__destructor 005EB040 f end=005EB092
 CGCooldown__IsA 005EBE70 f end=005EBEA5
 CGCooldown__IsA 005EBEB0 f end=005EBEEE
 CGCooldown__OnFrameSizeChanged 005EC8D0 f end=005EC8EC
+CGCooldown__GetScriptMetaTable 005EB0B0 f end=005EB0B6

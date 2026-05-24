@@ -9,3 +9,5 @@ CGRuneInfo__ResyncRunes 005EE440 f end=005EE51E
 CGRuneInfo__AddRunePower 005EE520 f end=005EE5AA
 CGRuneInfo__HasRunesForSpell 005EE5B0 f end=005EE7D2
 CGRuneInfo__ComputeRuneSpellCooldown 005EE7E0 f end=005EEA35
+CGRuneInfo__IsRuneIndexValid 005EDFC0 f end=005EDFF0
+CGRuneInfo__GetRuneRechargeTime 005EE1F0 f end=005EE231

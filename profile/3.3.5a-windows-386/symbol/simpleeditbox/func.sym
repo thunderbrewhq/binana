@@ -124,3 +124,4 @@ CSimpleEditBox__ExtendHighlight 009631A0 f end=0096325D
 CSimpleEditBox__DeleteToStart 00963C60 f end=00963C8B
 CSimpleEditBox__DeleteToEnd 00963C90 f end=00963CC2
 CSimpleEditBox__destructor 00966F40 f end=00966F48
+CSimpleEditBox__GetScriptMetaTable 00966F30 f end=00966F36

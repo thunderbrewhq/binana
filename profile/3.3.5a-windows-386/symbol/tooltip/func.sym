@@ -141,3 +141,4 @@ TooltipObjectCallback 0061DCE0 f end=0061DD1F
 TooltipUnitNameCallback 0061DDD0 f end=0061DE1F
 FindItemByGUID 0061B470 f end=0061B495
 CGTooltip__destructor 0061F910 f end=0061F93B
+CGTooltip__GetScriptMetaTable 0061E0C0 f end=0061E0C6

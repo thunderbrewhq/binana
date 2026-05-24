@@ -52,3 +52,4 @@ CSimpleAnimGroup__destructor 0049A700 f end=0049A8E1
 CSimpleAnimGroup__IsA 00499FC0 f end=00499FE5
 CSimpleAnimGroup__GetScriptObjectParent 00499FB0 f end=00499FB4
 CSimpleAnimGroup__IsA 00499FF0 f end=0049A033
+CSimpleAnimGroup__GetScriptMetaTable 0049A050 f end=0049A056

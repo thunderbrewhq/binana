@@ -28,3 +28,4 @@ CSimpleStatusBar__UnregisterRegion 009616F0 f end=00961712
 CSimpleStatusBar__SetStatusBarColor 009615F0 f end=00961607
 CSimpleStatusBar__LoadXML 00961E30 f end=009620D7
 CSimpleStatusBar__destructor 00961970 f end=00961978
+CSimpleStatusBar__GetScriptMetaTable 00961620 f end=00961626

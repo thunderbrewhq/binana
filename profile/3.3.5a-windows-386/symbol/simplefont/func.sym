@@ -54,3 +54,4 @@ CSimpleFont_SetShadowColor 004A3D40 f end=004A3DB6
 CSimpleFont_SetShadowOffset 004A3E60 f end=004A3F16
 CSimpleFont_SetTextColor 004A3C50 f end=004A3CA0
 BlendModeToString 00815040 f end=00815071
+CSimpleFont__GetScriptMetaTable 00496670 f end=00496676

@@ -203,3 +203,5 @@ MovementGetTransportMatrixInternal 0074B430 f end=0074B4B1
 MovementIdleMoveUnits 006F1490 f end=006F1516
 MovementMoveTransports 0074B6E0 f end=0074B72B
 MovementRemoveTransport 0074B750 f end=0074B7A2
+CMovement_C__AddPlayerSpeedEvent 006EC8B0 f end=006EC94A
+CMovement_C__OnSetCollisionHeight 006EE810 f end=006EE86B

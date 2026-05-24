@@ -111,3 +111,4 @@ CMap__LinkLightToMapObjDefs 007D9F90 f end=007DA0F5 ; CMap::LinkLightToMapObjDef
 CMap__UpdateLight 007DA100 f end=007DA187 ; CMap::UpdateLight(class CMapLight *)
 CMap__AddHitDebugModel 007A25F0 f end=007A275D
 CMap__CreateMapObjDef 007BF120 f end=007BF458
+CMap__FootprintInitialize 007A03C0 f end=007A048B

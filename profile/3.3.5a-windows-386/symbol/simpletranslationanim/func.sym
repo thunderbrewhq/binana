@@ -9,3 +9,4 @@ CSimpleTranslationAnim__destructor 004997B0 f end=004997DD
 CSimpleTranslationAnim__IsA 00498E10 f end=00498E3D
 CSimpleTranslationAnim__IsA 00498E40 f end=00498E99
 CSimpleTranslationAnim__LoadXML 0049BB00 f end=0049BC10
+CSimpleTranslationAnim__GetScriptMetaTable 00498EB0 f end=00498EB6

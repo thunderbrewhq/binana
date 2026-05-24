@@ -14,3 +14,4 @@ CSimpleModelFFX_AddCharacterLight 004E6D60 f end=004E6E57
 CSimpleModelFFX_AddPetLight 004E6E60 f end=004E6F57
 CSimpleModelFFX__destructor 004E62D0 f end=004E62FB
 CSimpleModelFFX__OnLayerShow 004E5F50 f end=004E5F69
+CSimpleModelFFX__GetScriptMetaTable 004E6170 f end=004E6176

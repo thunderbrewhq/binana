@@ -7,7 +7,7 @@ CSimpleModel__SetLight 0095F5C0 f end=0095F5DB type="void __thiscall func(CSimpl
 CSimpleModel__SetSequence 0095F5E0 f end=0095F60A type="void __thiscall func(CSimpleModel* this, uint32_t sequence)"
 CSimpleModel__SetSequenceTime 0095F610 f end=0095F641 type="int32_t __thiscall func(CSimpleModel* this, uint32_t sequence, int32_t time)"
 CSimpleModel__constructor 0095F680 f end=0095F7C5 type="void __thiscall func(CSimpleModel* this)"
-CSimpleModel__scalar_deleting_destructor 0095F7D0 f end=0095F7FB type="void __thiscall func(CSimpleModel* this, uint32_t __flags)"
+CSimpleModel__destructor 0095F7D0 f end=0095F7FB type="void __thiscall func(CSimpleModel* this, uint32_t __flags)"
 CSimpleModel__LoadXML 0095F800 f end=0095F989 type="void __thiscall func(CSimpleModel* this, XMLNode* node, CStatus* status)"
 CSimpleModel__SetModel 0095F990 f end=0095F9E8 type="void __thiscall func(CSimpleModel* this, char* sourcefile)"
 CSimpleModel__SetCameraByIndex 0095F9F0 f end=0095FA94 type="void __thiscall func(CSimpleModel* this, uint32_t index)"
@@ -53,3 +53,4 @@ CSimpleModel__UpdateAlpha 0095FB40 f end=0095FB96
 CSimpleModel__GetScriptTime 0095F480 f end=0095F4CE
 CSimpleModel__IsA 004E60D0 f end=004E6105
 CSimpleModel__IsA 004E6110 f end=004E614E
+CSimpleModel__GetScriptMetaTable 0095F410 f end=0095F416
