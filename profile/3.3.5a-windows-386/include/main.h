@@ -81,6 +81,8 @@
 #include "event/timer.h"
 #include "event/types.h"
 
+#include "expat/expat.h"
+
 #include "framescript/event_object.h"
 #include "framescript/object.h"
 
