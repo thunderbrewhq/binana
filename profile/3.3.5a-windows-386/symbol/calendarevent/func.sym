@@ -29,3 +29,7 @@ CGCalendarEvent__SetTime 005F12A0 f end=005F12D1
 CGCalendarEvent__SignUp 005F2530 f end=005F2633
 CGCalendarEvent__SetLockoutTime 005F1340 f end=005F1383
 CGCalendarEvent__ProcessGetEvent 005F2C00 f end=005F2F87
+CGCalendarEvent__AddInvite 005F32B0 f end=005F3402
+CGCalendarEvent__DecrementPendingNames 005F1A40 f end=005F1AF7
+CGCalendarEvent__RemoveInviteByGUID 005F23B0 f end=005F23E3
+InviteNameCacheCallback 005F1B10 f end=005F1B22

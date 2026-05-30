@@ -27,7 +27,7 @@ C3Vector__Normalize 004C3420 f type="void __thiscall func(C3Vector* this)"
 C44Matrix__Rotation 004C3460 f end=004C3593
 C3Vector__Normalize 004C3600 f type="void __thiscall func(C3Vector* this)"
 TSGrowableArray_C3Vector__SetCount 004C4B80 f end=004C4C75 type="void __thiscall func(TSGrowableArray_C3Vector* this, uint32_t count)"
-C2Vector__C2Vector 004C4DF0 f end=004C4E06
+C2Vector__constructor 004C4DF0 f end=004C4E06
 C33Matrix__constructor 004C5100 f end=004C51AB
 C33Matrix__operator_assign_C33Matrix 004C51B0 f
 C33Matrix__Scale 004C5230 f end=004C5280
@@ -68,3 +68,4 @@ C34Matrix__RotateAroundZ 00984450 f end=009844D8
 C3Vector__Add 00482970 f end=00482994
 CAaSphere__BoundingAccurate 00985750 f end=009858A3
 CAaSphere__FindExtrema 009855F0 f end=00985746
+CiRect__Intersection 00683A80 f end=00683AD2

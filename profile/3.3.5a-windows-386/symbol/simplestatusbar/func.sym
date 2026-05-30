@@ -29,3 +29,5 @@ CSimpleStatusBar__SetStatusBarColor 009615F0 f end=00961607
 CSimpleStatusBar__LoadXML 00961E30 f end=009620D7
 CSimpleStatusBar__destructor 00961970 f end=00961978
 CSimpleStatusBar__GetScriptMetaTable 00961620 f end=00961626
+CSimpleStatusBar__GetAnimValue 00961940 f end=0096196B
+CSimpleStatusBar__SetValue 00961890 f end=0096193E

@@ -1215,3 +1215,6 @@ WowClientDB__LightParamsRec__destructor 007EC8A0 f end=007EC8A8
 WowClientDB__LightRec__destructor 007ECAE0 f end=007ECB27
 WowClientDB__LightRec__destructor 007EC9B0 f end=007EC9B8
 WowClientDB__LightRec__LoadRecords 007EC8B0 f end=007EC9A3
+InitWeaponSubclasses 00634CC0 f end=00634DFB
+LocateWeaponSubclass 006348C0 f end=00634909
+SDBItemSubclassInitialize 006810C0 f end=006811C2

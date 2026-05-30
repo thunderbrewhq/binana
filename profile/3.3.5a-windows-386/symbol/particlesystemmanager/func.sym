@@ -1,2 +1,5 @@
 ParticleSystemManager__GetInstance 00981130 f end=009811F8
 ParticleSystemManager__SetScaler 00980F70 f end=00980FA2
+ParticleSystemManager__Destroy 00981270 f end=009812AB
+ParticleSystemManager__DuplicateEmitter 00981090 f end=009810D2
+ParticleSystemManager__GetScaler 00980ED0 f end=00980ED7

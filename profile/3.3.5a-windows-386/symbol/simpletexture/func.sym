@@ -54,3 +54,4 @@ CSimpleTexture__IsA 00482C60 f end=00482C8D
 OrientationToString 00815110 f end=0081515A
 CSimpleTexture__destructor 00482860 f end=00482868
 CSimpleTexture__GetScriptMetaTable 00482D00 f end=00482D06
+CSimpleTexture__GetGxTex 00481720 f end=0048173B

@@ -1,2 +1,7 @@
 CSimpleHyperlinkButton__SetHyperlink 00978760 f end=009788F8
 CSimpleHyperlinkButton__constructor 009789B0 f end=009789FD
+CSimpleHyperlinkButton__OnClick 009785A0 f end=009785CD
+CSimpleHyperlinkButton__OnLayerCursorEnter 00978540 f end=00978565
+CSimpleHyperlinkButton__OnLayerCursorExit 00978570 f end=00978595
+CSimpleHyperlinkButton__destructor 00978A10 f end=00978A9B
+CSimpleHyperlinkButton__destructor 00978AA0 f end=00978ACB

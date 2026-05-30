@@ -125,3 +125,7 @@ CSimpleEditBox__DeleteToStart 00963C60 f end=00963C8B
 CSimpleEditBox__DeleteToEnd 00963C90 f end=00963CC2
 CSimpleEditBox__destructor 00966F40 f end=00966F48
 CSimpleEditBox__GetScriptMetaTable 00966F30 f end=00966F36
+CSimpleEditBox__OnFocusChange 00965120 f end=009651E3
+CSimpleEditBox__OnLayerKeyDownRepeat 009658D0 f end=0096591C
+CSimpleEditBox__OnLayerKeyUp 00965920 f end=0096595D
+CSimpleEditBox__RunOnCursorChangedScript 009627E0 f end=009628A2

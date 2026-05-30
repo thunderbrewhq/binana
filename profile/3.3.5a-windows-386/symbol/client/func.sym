@@ -201,3 +201,5 @@ DownloadAccountData 006B92C0 f end=006B933D
 UploadAccountData 006B9C60 f end=006B9C9B
 ErrorDisplayFilterCallback 00401A10 f end=00401A30
 SetFilterMask 004018D0 f end=00401A01
+BannedAddOnCache__operator_assign 005F3510 f end=005F355C
+RegisterBannedAddOn 005F48E0 f end=005F4909

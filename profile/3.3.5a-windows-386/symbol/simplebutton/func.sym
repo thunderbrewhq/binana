@@ -67,3 +67,4 @@ CSimpleButton__GetScriptMetaTable 0096F1F0 f end=0096F1F6
 CSimpleButton__SetButtonState 0096FE30 f end=0096FECA
 CSimpleButton__destructor 0096F190 f end=0096F1D4
 CSimpleButton__destructor 0096F520 f end=0096F528
+CSimpleButton__RunOnDoubleClickScript 0096F150 f end=0096F18A

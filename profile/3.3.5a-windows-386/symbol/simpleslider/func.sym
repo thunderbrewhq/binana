@@ -36,3 +36,4 @@ CSimpleSlider__UnregisterRegion 0096BD60 f end=0096BD82
 CSimpleSlider__OnLayerMouseUp 0096BE40 f end=0096BE50
 CSimpleSlider__IsA 0096BF40 f end=0096BF7E
 CSimpleSlider__GetScriptMetaTable 0096BEE0 f end=0096BEE6
+CSimpleSlider__destructor 0096BEF0 f end=0096BEF8

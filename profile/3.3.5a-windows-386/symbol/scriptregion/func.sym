@@ -31,7 +31,6 @@ CScriptRegion__IsMouseOver 00488570 f end=0048866D
 CScriptRegion__RegisterAnimGroup 00488AE0 f end=00488B4C
 CFramePoint__constructor 0049CA40 f end=0049CA81
 CFramePoint__SetRelative 0049C7B0 f end=0049C7EF
-CScriptRegion__GetName 00431E80 f end=00431E84
 CScriptRegion__GetObjectTypeName 004881C0 f end=004881C6
 CScriptRegion__GetScriptObjectParen 00482B40 f end=00482B47
 CScriptRegion__IsA 00482B50 f end=00482B75

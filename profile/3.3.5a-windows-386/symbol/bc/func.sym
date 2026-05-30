@@ -188,3 +188,5 @@ OsQueuePut 00868D40 f end=00868DAF
 OsTlsSetValue 0086D6E0 f end=0086D6F3
 _AssertAndCrash 008C51D0 f end=008C520D
 Blizzard__Memory__Free 0042E3B0 f end=0042E3C7
+Blizzard__Debug__FreeErrorStack 004324E0 f end=0043252F
+OsQueueGet 00868DB0 f end=00868E25

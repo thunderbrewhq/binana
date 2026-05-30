@@ -1,0 +1,4 @@
+CMemBlock__Resize 009847D0 f end=0098485B
+CMemBlock__Set32b_ 009844E0 f end=00984533
+CMemBlock__Set32b_ 00984540 f end=009845D0
+CMemBlock__SetM_ 009845D0 f end=00984631

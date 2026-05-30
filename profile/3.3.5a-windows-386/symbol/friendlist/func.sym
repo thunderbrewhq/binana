@@ -47,3 +47,6 @@ FriendList__IgnoreRemoved 006B6490 f end=006B653A
 FriendList__SetFriendNotes 006B6F70 f end=006B6FE3
 FriendList__GetNumMutes 006B3680 f end=006B36CB
 FriendList__GetIgnore 006B36D0 f end=006B36F7
+FriendListNameCallbackWithSort 006B6760 f end=006B68A1
+FriendList__DecrementPendingFriendName 006B3D90 f end=006B3DC7
+FriendList__SetConnected 006B3D10 f end=006B3D84

@@ -35,3 +35,5 @@ CSimpleColorSelect__UnregisterRegion 0096DCE0 f end=0096DD2A
 CSimpleColorSelect__OnLayerMouseUp 0096DD50 f end=0096DD67
 CSimpleColorSelect__destructor 0096DD70 f end=0096DD78
 CSimpleColorSelect__GetScriptMetaTable 0096DC40 f end=0096DC46
+CSimpleColorSelect__OnLayerHide 0096DD30 f end=0096DD43
+CSimpleColorSelect__RunOnColorSelectScript 0096DD80 f end=0096DE40
