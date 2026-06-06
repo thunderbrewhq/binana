@@ -96,3 +96,7 @@ CM2Model__CanUpdateNonReadyTextures 00823E40 f end=00823ECF
 CM2Model__FreeExternalResources 00824D30 f end=00824EC1
 CM2Model__SequenceCallback 0082E720 f end=0082E78E
 CM2Model__GetCurrentBoundingSphere 0082C2C0 f end=0082C7B1
+CM2Model__ComputeLoadProgress 008245B0 f end=00824657
+CM2Model__ReplaceParticleColor 00825410 f end=008254E4
+M2SetGlobalOptFlags 0081C060 f end=0081C073
+M2Destroy 0081C750 f end=0081C787

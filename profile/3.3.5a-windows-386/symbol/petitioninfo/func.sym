@@ -10,3 +10,4 @@ CGPetitionInfo__AddSignature 005CF710 f end=005CF826
 CGPetitionInfo__ShutdownGame 005CE9F0 f end=005CE9FC
 CGPetitionInfo__EnterWorld 005CF580 f end=005CF608
 PetitionVendorRegisterScriptFunctions 005A20F0 f end=005A2113
+SignatureNameQueryCallback 005CEBF0 f end=005CEC1B

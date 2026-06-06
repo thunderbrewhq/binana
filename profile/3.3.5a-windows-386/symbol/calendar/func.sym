@@ -60,3 +60,4 @@ CGCalendar__EventSignUp 005BC460 f end=005BC4CE
 CGCalendar__ContextMenuEventCopy 005BC7C0 f end=005BC869
 CGCalendar__ProcessInvite 005BF030 f end=005BF243
 CGCalendar__GetDayEvent 005B91A0 f end=005B9216
+GameCalendarGetMaxCreateDate 005B7A80 f end=005B7AE7

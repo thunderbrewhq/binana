@@ -28,3 +28,4 @@ CGRaidInfo__GetRemotePetStats 00572850 f end=005728B6
 CGRaidInfo__OnReadyCheckFinished 00572560 f end=00572598
 CGRaidInfo__OnReadyCheckError 005725A0 f end=005725B3
 CGRaidInfo__ProcessReadyCheckTimer 00573670 f end=00573685
+CGRaidInfo__UpdateRealStats 00572530 f end=00572553

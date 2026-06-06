@@ -31,3 +31,4 @@ NetClient__ResumeCommsHandler 00633250 f end=00633300 type="void __thiscall func
 NetClient__WCMessageReady 00633330 f end=0063343D type="void __thiscall func(NetClient* this, WowConnection* conn, uint32_t timeStamp, CDataStore* msg)" ; NetClient::WCMessageReady(WowConnection*, unsigned long, CDataStore*)
 NetClient__ClearMessageHandler 00631FC0 f end=00631FDA
 NetClient__GetSessionKey 00631F90 f end=00631F97
+InitializePropContext 00631D10 f end=00631D27

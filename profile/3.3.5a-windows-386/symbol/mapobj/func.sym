@@ -74,3 +74,4 @@ CMapObj__AsyncPostloadCallback 007D8050 f end=007D80B6
 CMapObj__Read 007D80C0 f end=007D81BB ; CMapObj::Read(char const*)
 CMapObj__ReadGroup 007D85E0 f end=007D872B
 CMapObj__InitPtrs 007AE070 f end=007AE109
+SetRenderModeLight 007A8800 f end=007A8938

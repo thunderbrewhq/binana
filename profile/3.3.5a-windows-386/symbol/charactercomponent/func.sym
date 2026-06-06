@@ -107,3 +107,5 @@ CCharacterComponent__PrepSections 004EE0D0 f end=004EE1F8
 CCharacterComponent__PasteOpaque 004E89F0 f end=004E8D28
 CCharacterComponent__PasteScale 004EC550 f end=004EC68E
 CCharacterComponent__Paste 004EF9D0 f end=004EFAA8
+CCharacterComponent__ComputeLoadProgress 004EFAB0 f end=004EFB79
+ReplaceParticleColor 004EA9E0 f end=004EAA6D

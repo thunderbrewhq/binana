@@ -50,3 +50,24 @@ strjoin 00816B60 f end=00816C31
 StringToBOOL 00815400 f end=00815480 type="int32_t __usercall func@<eax>(char* str, int32_t def@<esi>)"
 StringToBOOL 008154E0 f end=008154F4 type="int32_t __stdcall func(char* str)"
 StringToBOOL 00815500 f end=00815573 type="int32_t __stdcall func(lua_State* L, int32_t idx, int32_t def)"
+FrameScript_GetPluralIndex 00817D10 f end=00817D9B
+FrameScript_ReleaseFunction 008191F0 f end=0081920D
+setglobal 008168D0 f end=00816901
+getglobal 00816910 f end=00816958
+strtrim 00816960 f end=00816A5F
+strsplit 00816A60 f end=00816B5D
+strreplace 00816C40 f end=00816D7F
+strconcat 00816D80 f end=00816D9F
+issecure 00816DA0 f end=00816DDA
+forceinsecure 00816F00 f end=00816F2A
+securecall 00816F30 f end=0081704F
+hooksecurefunc 00817170 f end=00817343
+debugprofilestart 00817350 f end=00817363
+debugprofilestop 00817370 f end=008173B1
+geterrorhandler 00817420 f end=00817441
+os_date 00817450 f end=00817649
+difftime 008178A0 f end=008178EC
+debugstack 008178F0 f end=00817BD9
+debuglocals 00819A60 f end=00819BA6
+scrub 00817BF0 f end=00817C63
+PrintVariable 008183A0 f end=00818AA1

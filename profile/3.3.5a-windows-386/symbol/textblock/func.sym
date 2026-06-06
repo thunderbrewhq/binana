@@ -15,3 +15,4 @@ TextBlockGetFontName 004BD960 f end=004BD983
 TextBlockGetFontFlags 004BD990 f end=004BD9CE
 TextBlockRemoveShadow 004BDA70 f end=004BDA91
 TextBlockWrapText 004BE040 f end=004BE0D4
+TEXTBLOCK__destructor 004BD920 f end=004BD95A

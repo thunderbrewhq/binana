@@ -1,3 +1,4 @@
 CGBankInfo__EnterWorld 0057BA60 f end=0057BA81
 CGBankInfo__LeaveWorld 0057BA90 f end=0057BAAB
 CGBankInfo__SetBanker 0057B8D0 f end=0057B931
+BankUpdateHandler 0057B8B0 f end=0057B8C5

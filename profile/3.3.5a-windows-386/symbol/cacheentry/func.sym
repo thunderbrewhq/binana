@@ -1,3 +1,4 @@
 CACHEENTRY__destructor 004F2EF0 f end=004F2F51
 CACHEENTRY__LoadTexture 004F2BE0 f end=004F2CDD
 CACHEENTRY__constructor 004F2F60 f end=004F2FA8
+LoadSuccessCallback 004F2B70 f end=004F2BD7

@@ -6,3 +6,4 @@ CMapObjDefGroup__SetSequence 007B4170 f end=007B41EB
 CMapObjDefGroup__SetSequenceFinishedCallback 007B41F0 f end=007B4263
 CMapObjDefGroup__SetEventCallback 007B4270 f end=007B42E3
 CMapObjDefGroup__IsAllLoaded 007B42F0 f end=007B434C
+CMapObjDefGroup__destructor 007B3F00 f end=007B3F2B

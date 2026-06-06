@@ -99,3 +99,4 @@ CGCamera__SetVehicleSeatZoomMinDistance 00600840 f end=0060088C
 CGCamera__SetVehicleSeatZoomMaxDistance 00600890 f end=006008DC
 CGCamera__UpdateLiquidSurfaceStatus 006049C0 f end=00604A6B
 CameraDuplicate 004BFCE0 f end=004BFE6A
+CGCamera__UpdateMotion 006000E0 f end=00600494

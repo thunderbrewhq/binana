@@ -14,3 +14,4 @@ CGGuildInfo__QueryRosterAndRanks 005CA9B0 f end=005CAA3A
 CGGuildInfo__EnterWorld 005CB900 f end=005CB9E4
 CGGuildInfo__OnGuildPermissions 005CB9F0 f end=005CBADC
 CGGuildInfo__ShutdownGame 005CC560 f end=005CC5CC
+CGGuildInfo__QueryPermissions 005CAA40 f end=005CAAF0

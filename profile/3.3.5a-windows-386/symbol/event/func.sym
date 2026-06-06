@@ -69,3 +69,6 @@ CMouseEvent__operator_assign 00480DE0 f end=00480E39
 IEvtSchedulerShutdown 0047D070 f end=0047D075
 MessageAlloc 00480600 f end=00480697
 MessageFree 00480820 f end=00480892
+PropCreateContext 0047CC70 f end=0047CC81
+PostMouseUp 0047FF10 f end=0047FFA3
+PostCaptureChanged 004800F0 f end=0048012B

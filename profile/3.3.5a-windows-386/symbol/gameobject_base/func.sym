@@ -9,5 +9,3 @@ CGGameObject_C_TypeBase__GetPosition 0070C2B0 f end=0070C2D1
 CGGameObject_C_TypeBase__GetRawFacing 0070C330 f end=0070C340
 CGGameObject_C_TypeBase__GetRawPosition 0070C2E0 f end=0070C307
 CGGameObject_C_TypeBase__GetSequenceTimeFromRealTime 0070BDC0 f end=0070BDCA
-CGGameObject_C_TypeBase__GetSpeed 006F1700 f end=006F1707
-CGGameObject_C_TypeBase__OnUpdateFlags 00959DE0 f end=00959DE8

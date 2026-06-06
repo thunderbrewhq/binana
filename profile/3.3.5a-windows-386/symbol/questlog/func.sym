@@ -45,3 +45,6 @@ QuestQueryCounterCallback 005DE8F0 f end=005DE92B
 ItemQueryCallback 005DEA40 f end=005DEA58
 QuestQueryCallback 005DE930 f end=005DE959
 QSortQuestSortTypes 005DFDC0 f end=005DFEE6
+CGQuestLog__GetQuestLevel 005DED30 f end=005DED8E
+QSortQuestWatches 005E3AF0 f end=005E3B8A
+UpdateQuestPOIHandler 005E7170 f end=005E719A

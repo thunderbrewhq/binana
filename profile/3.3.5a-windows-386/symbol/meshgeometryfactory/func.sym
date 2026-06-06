@@ -1,0 +1,6 @@
+CMeshGeomFactory__Create 007D49B0 f end=007D49CD
+CMeshGeomFactory__GetBuffers 007D43F0 f end=007D4751
+CMeshGeomFactory__Purge 007D4380 f end=007D438D
+CMeshGeomFactory__Release 007D43B0 f end=007D43D2
+CMeshGeomFactory__destructor 007D4800 f end=007D4848
+CMeshGeomFactory__destructor 007D4980 f end=007D49AB

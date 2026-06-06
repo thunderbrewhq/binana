@@ -39,3 +39,4 @@ CGSpellBook__GetSpell 0053B4A0 f end=0053B4D5
 CGSpellBook__CanShowAura 0053D580 f end=0053D67D
 CGSpellBook__DelSpellFromNameCache 0053F550 f end=0053F5D5
 CGSpellBook__IsSelectedSlot 0053D350 f end=0053D4AF
+QSortCompanions 0053C7C0 f end=0053C8A8

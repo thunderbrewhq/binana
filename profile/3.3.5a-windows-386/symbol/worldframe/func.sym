@@ -54,3 +54,6 @@ WorldTextRenderBatch 007E5140 f end=007E5145
 CGWorldFrame__OnLayerKeyDown 004F6AE0 f end=004F6B69
 CGWorldFrame__OnLayerKeyUp 004F6B70 f end=004F6C10
 CGWorldFrame__destructor 004FA560 f end=004FA568
+CGWorldFrame__Update 004F8730 f end=004F8766
+ObjectCollisionProc 004F6560 f end=004F6647
+ProjectTex2dGetModFadeTex 007E2C40 f end=007E2C53

@@ -57,3 +57,7 @@ SI2__SetPlayerInside 004C8600 f end=004C860E
 SI2__GetChunkLocation 004C6810 f end=004C68D5
 SI2__OverrideZoneSounds 004C68E0 f end=004C69EC
 SI2__GetTextEmoteSoundIndex 004CEB70 f end=004CEBDA
+GetFootstepTerrain 004CF100 f end=004CF161
+PushToTalkButtonHandler 007DD040 f end=007DD053
+_MonitorDSPCallback 00878960 f end=00878998
+_DetectRecordingFinished 00986A70 f end=00986AA0

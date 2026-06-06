@@ -16,3 +16,6 @@ CAccountMsgHeaders__SendFailureEvent 0054FB40 f end=0054FB49
 CAccountMsgBody__SendFailureEvent 0054FDD0 f end=0054FDD8
 CAccountMsgBody__SendSuccessEvent 0054FDB0 f end=0054FDC6
 SaveAccountData 006B9440 f end=006B94BC
+CopyAccountFile 006B8AB0 f end=006B8B85
+MD5AccountFile 006B8CA0 f end=006B8D3F
+AccountDataInitialize 006B9970 f end=006B9B90

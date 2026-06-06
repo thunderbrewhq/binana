@@ -1,7 +1,4 @@
-SpellParserVerifyConditional 00577030 f end=005770C7
-SpellParserConditional 00579BA0 f end=00579D5A
-SpellParserVariables 00579D60 f end=00579E4C
-SpellParserParseText 0057ABC0 f end=0057AC93
+
 SpellVisualClearLightning 006F74F0 f end=006F7520
 GetSpecialSpellVisualEffectNameRec 006F75B0 f end=006F75E0
 SpellIsAuraEffect 0076BD50 f end=0076BD76
@@ -176,3 +173,10 @@ GetStringReason 007FCCA0 f end=007FD11A
 SendCast 0080AC90 f end=0080B5C5
 Spell_C_Idle 0080DDD0 f end=0080DE5B
 Spell_C_SpellHasShapeshiftExclude 007FE890 f end=007FE8D0
+Spell_C_ClearCooldowns 00804AF0 f end=00804B1A
+Spell_C_ClearInTransitList 008047A0 f end=0080482E
+SpellMissingItemsCallback 007FEB50 f end=007FEBFD
+GameObjectStatsCallback 007FFE20 f end=007FFE99
+OnCancelExpectedRideVehicleAuraHandler 00800510 f end=00800546
+UnitOnRemoteMissileTrajectoryCollision 00800550 f end=00800593
+CooldownEvent 00804010 f end=00804101

@@ -36,3 +36,6 @@ CWorldParam__HWPCFCallback 0078E070 f end=0078E105
 CWorldParam__GxTextureCacheSizeCallback 0078E110 f end=0078E196
 CWorldParam__Initialize 0078E400 f end=0078E94A
 CWorldParam__CloudLODCallback 007F1CD0 f end=007F1D2D
+CWorldParam__Destroy 0078E950 f end=0078E95C
+CWorldParam__SetDefaults 0078E1A0 f end=0078E3FE
+RemoveConsoleDeviceDefaultCallback 0076AAF0 f end=0076AB76

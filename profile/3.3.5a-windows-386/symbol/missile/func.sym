@@ -38,3 +38,4 @@ CMissile__SetReadyToFire 006FF6C0 f end=006FF6C9
 CMissile__DetermineMissType 006FFBB0 f end=006FFCA6
 CMissile__HitTargetAreaEffect 00700E20 f end=00701228
 CMissile__HitTarget 00702DB0 f end=00702FB6
+CMissile__SetRemoteCollisionPos 006FEBE0 f end=006FEC0B

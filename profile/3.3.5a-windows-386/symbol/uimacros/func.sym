@@ -24,3 +24,4 @@ IconListArchiveCallback 00565630 f end=005656AC
 IconListDirectoryCallback 005656B0 f end=0056580E
 IconListCustomCallback 00565810 f end=00565834
 CGUIMacros__FindMacro 00566330 f end=00566394
+QSortMacrosByName 00564A80 f end=00564AA1

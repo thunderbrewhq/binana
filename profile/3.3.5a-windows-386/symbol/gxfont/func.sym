@@ -9,3 +9,5 @@ CGxFont__GetName 006C80E0 f end=006C80FA
 CGxFont__RegisterEvictNotice 006C2600 f end=006C2642
 CGxFont__GetGlyphBearing 006C24F0 f end=006C2567
 CGxFont__NewCodeDesc 006C3FC0 f end=006C418F
+ScreenToPixelHeight 006C0B20 f end=006C0B60
+ScreenToPixelWidth 006C0B60 f end=006C0BA0

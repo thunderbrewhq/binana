@@ -40,3 +40,5 @@ CGPetInfo__ShutdownGame 005D2F90 f end=005D2FEE
 CGPetInfo__PetAbandon 005D4900 f end=005D49F6
 CGPetInfo__SetAction 005D5AD0 f end=005D5D1A
 CGPetInfo__SetAutocast 005D6020 f end=005D629B
+CGPetInfo__OnPetBroken 005D3120 f end=005D3133
+PetTempActionBarCallback 005D3240 f end=005D3256
