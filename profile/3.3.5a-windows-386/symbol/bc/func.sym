@@ -194,3 +194,5 @@ OsQueueGet 00868DB0 f end=00868E25
 Blizzard__Streaming__Transport__ReadFile 00437C20 f end=00437D15
 Blizzard__String__MemCopy 004288E0 f end=00428917
 System_SFile2__OldFindFile 00421CC0 f end=00421F4C
+OsCallDestroy 0086F6E0 f end=0086F760
+OsTlsFree 0086D6C0 f end=0086D6CF

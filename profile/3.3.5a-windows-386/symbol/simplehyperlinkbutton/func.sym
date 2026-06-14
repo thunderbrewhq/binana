@@ -5,3 +5,4 @@ CSimpleHyperlinkButton__OnLayerCursorEnter 00978540 f end=00978565
 CSimpleHyperlinkButton__OnLayerCursorExit 00978570 f end=00978595
 CSimpleHyperlinkButton__destructor 00978A10 f end=00978A9B
 CSimpleHyperlinkButton__destructor 00978AA0 f end=00978ACB
+CSimpleHyperlinkButton__destructor 00978A00 f end=00978A08

@@ -100,3 +100,5 @@ CGCamera__SetVehicleSeatZoomMaxDistance 00600890 f end=006008DC
 CGCamera__UpdateLiquidSurfaceStatus 006049C0 f end=00604A6B
 CameraDuplicate 004BFCE0 f end=004BFE6A
 CGCamera__UpdateMotion 006000E0 f end=00600494
+CollideWithWorld 006057B0 f end=006059DD
+CreateFrustum 005FF670 f end=005FF8DC

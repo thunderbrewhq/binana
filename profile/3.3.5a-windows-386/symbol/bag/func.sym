@@ -28,3 +28,4 @@ CGBag_C__FindItemOfBagFamily 00754AC0 f end=00754AEC
 CGBag_C__FindItemOfClass 00754A80 f end=00754AB2
 FindItemClassCallback 00753AC0 f end=00753B00
 CGBag_C__FindItem 00754CD0 f end=00754CF5
+FindItemLinkCallback 007545D0 f end=007546EB

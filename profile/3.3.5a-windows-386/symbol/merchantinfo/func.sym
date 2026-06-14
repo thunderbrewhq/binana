@@ -9,3 +9,5 @@ CGMerchantInfo__IsBuybackItem 00584D90 f end=00584E06
 CGMerchantInfo__EnterWorld 00585F80 f end=00585FDA
 CGMerchantInfo__LeaveWorld 00585FE0 f end=00586003
 BuybackUpdateHandler 00585F60 f end=00585F7A
+MerchantItemStatsCallback 005844C0 f end=005844F2
+CGMerchantInfo__GetItemStats 00584680 f end=005846CA

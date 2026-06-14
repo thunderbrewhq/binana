@@ -78,3 +78,4 @@ CGObject_C__GetRenderFacing 004D5EF0 f end=004D5EF7
 CGObject_C__GetScale 004D5F00 f end=004D5F07
 CGObject_C__GetTrueScale 004D5F90 f end=004D5F9D
 CGObject_C__AuraDecayHandler 00743230 f end=00743244
+ScaleUpdateHandler 00744E10 f end=00744E4A

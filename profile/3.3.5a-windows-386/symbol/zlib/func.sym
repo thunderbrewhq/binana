@@ -27,3 +27,4 @@ LzmaDecompress 00453C70 f end=00453CA5
 _LzmaDecode 00463590 f end=00463FC6
 LzmaMemDecode 00463FD0 f end=00464085
 Bzip2Decompress 00778630 f end=00778655
+_BZ2_hbMakeCodeLengths 00478FB0 f end=00479333

@@ -43,3 +43,4 @@ CGMinimapFrame__IsA 0057C540 f end=0057C575
 CGMinimapFrame__IsA 0057C580 f end=0057C5BE
 CGMinimapFrame__OnLayerUpdate 0057C6A0 f end=0057C711
 CGMinimapFrame__GetScriptMetaTable 0057BE90 f end=0057BE96
+CGMinimapFrame__RenderInsideSortQuads 0057BD10 f end=0057BD89

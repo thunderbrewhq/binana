@@ -57,3 +57,4 @@ CGWorldFrame__destructor 004FA560 f end=004FA568
 CGWorldFrame__Update 004F8730 f end=004F8766
 ObjectCollisionProc 004F6560 f end=004F6647
 ProjectTex2dGetModFadeTex 007E2C40 f end=007E2C53
+CGWorldFrame__GetCameraPosition 004F6650 f end=004F6677

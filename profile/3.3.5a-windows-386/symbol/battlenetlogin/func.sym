@@ -33,3 +33,7 @@ BattlenetLogin__constructor 008C8C00 f end=008C8DD1
 GetWowAttribute 008C5BA0 f end=008C5C43
 GetWowLangVersion 008C5CC0 f end=008C5E13
 BattlenetLogin__destructor 008CA050 f end=008CA07B
+BattlenetLogin__Disconnected 008C5370 f end=008C53A7
+BattlenetLogin__NextSecurityState 008C52D0 f end=008C52D8
+BattlenetLogin__EnterMatrix 008C7C10 f end=008C7CF9
+BattlenetLogin__JoinRealm 008C7300 f end=008C73C3

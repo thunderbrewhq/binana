@@ -71,3 +71,4 @@ debugstack 008178F0 f end=00817BD9
 debuglocals 00819A60 f end=00819BA6
 scrub 00817BF0 f end=00817C63
 PrintVariable 008183A0 f end=00818AA1
+FrameScript_UnregisterScriptEvent 0081A8C0 f end=0081A996

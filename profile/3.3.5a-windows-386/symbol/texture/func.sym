@@ -73,6 +73,8 @@ CBLPFile__Lock 006AF990 f end=006AFB55
 CBLPFile__Lock2 006AFCE0 f end=006AFF06 type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, uint32_t mipLevel, unsigned char* data, uint32_t* stride)"
 CBLPFile__Open 006AFF10 f end=006AFFCF type="int32_t __thiscall func(CBLPFile* this, char* filename)"
 CBLPFile__LockChain2 006AFFD0 f end=006B012E type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, MipBits** images, uint32_t mipLevel, int32_t a6)"
+LoadBlpMips 004B5C30 f end=004B5E09
+CBLPFile__LockChain 006AFB70 f end=006AFCD5
 ProjectTex2dGetAddFadeTex 007E2C60 f end=007E2C73
 FillInSolidTexture 004B6920 f end=004B69D7
 TextureCreateBlob 004B8D70 f end=004B8E6E
@@ -118,3 +120,6 @@ CTextureBlob__Unload 004C10C0 f end=004C1139
 CTextureBlob__UnloadAll 004C06C0 f end=004C0709
 CalcLevelOffset 006AB6C0 f end=006AB6F6
 MippedImgCalcSize 006AB7E0 f end=006AB80C
+TextureLoadBlob 004B5780 f end=004B5789
+CTextureBlob__Load 004C0F50 f end=004C1027
+TextureCreateOpenFile 004B5340 f end=004B538B

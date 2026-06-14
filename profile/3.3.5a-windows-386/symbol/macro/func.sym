@@ -22,3 +22,5 @@ EvaluateSpec 005EF2E0 f end=005EF35F
 GetVehicleSeatRec 005EF360 f end=005EF421
 EvaluateVehicleUI 005EF430 f end=005EF461
 EvaluateUnitHasVehicleUI 005EF470 f end=005EF48F
+EvaluatePet 005EFBD0 f end=005EFD64
+EvaluateGroup 005EEED0 f end=005EEFAC

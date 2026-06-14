@@ -42,3 +42,4 @@ CGPetInfo__SetAction 005D5AD0 f end=005D5D1A
 CGPetInfo__SetAutocast 005D6020 f end=005D629B
 CGPetInfo__OnPetBroken 005D3120 f end=005D3133
 PetTempActionBarCallback 005D3240 f end=005D3256
+CGPetInfo__SetPetOrders 005D3020 f end=005D304B

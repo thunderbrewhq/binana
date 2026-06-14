@@ -99,3 +99,4 @@ CGlueMgr__AcceptTOS 004D7E40 f end=004D7E80
 CGlueMgr__AcceptTerminationWithoutNotice 004D7EC0 f end=004D7F00
 CGlueMgr__HandleScreenshot 004D8540 f end=004D8563
 CGlueMgr__ScanDLLContinueAnyway 004E5860 f end=004E5880
+AccountDataShutdownBasicSystem 006B8FF0 f end=006B9019

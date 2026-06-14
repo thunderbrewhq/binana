@@ -16,3 +16,7 @@ QSortSkillLines 005941B0 f end=00594234
 QSortTradeSkillTypes 00593CE0 f end=00593D08
 QSortServices_General 005947D0 f end=00594994
 QSortServices_Tradeskill 005949A0 f end=00594ADD
+CGClassTrainer__GetServiceName 00594E80 f end=00594F52
+CGClassTrainer__GetServiceSubtext 00594F60 f end=00594FDE
+CGClassTrainer__GetServiceType 00594260 f end=005942AA
+CGClassTrainer__IsCollpasedHeader 00594300 f end=00594363

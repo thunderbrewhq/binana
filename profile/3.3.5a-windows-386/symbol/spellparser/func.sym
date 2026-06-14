@@ -7,3 +7,5 @@ SpellParserParseConditional 005797F0 f end=005798FF
 SpellParserExpression 00579980 f end=00579AC7
 SpellParserReplaceText 00579E50 f end=0057AA53
 SpellParserParseSubText 0057AAF0 f end=0057ABBA
+SpellParserVariable 00577C40 f end=00577CF9
+SpellParserVariableExpression 00579B30 f end=00579B94

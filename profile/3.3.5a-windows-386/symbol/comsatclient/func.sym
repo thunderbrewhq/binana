@@ -21,3 +21,4 @@ ComSatThread__Init 007DF9A0 f end=007DFAE8
 NameQueryCallback 007DB4A0 f end=007DB4C1
 AddComSatEvent 007DCB10 f end=007DCB8D
 MarkPlayerMuted 007DF4B0 f end=007DF57A
+ComSatClient_Shutdown 007DF900 f end=007DF99B

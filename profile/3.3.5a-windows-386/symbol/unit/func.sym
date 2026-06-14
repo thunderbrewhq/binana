@@ -582,3 +582,5 @@ CGUnit_C__SetUIChannelDirect 0072AE00 f end=0072AEB4
 TargetChangeHandler 00716900 f end=00716939
 HoverHeightChangeHandler 0071CA10 f end=0071CA4C
 CCombat__SetClientInitData 0098E560 f end=0098E57B
+CUnit_C__SetRemoteMissileTrajectoryCollision 006FC290 f end=006FC2D3
+PlayerNameDeleteText 007E5100 f end=007E5115
