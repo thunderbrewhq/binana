@@ -1,1 +1,14 @@
 CGAuctionHouse__m_desiredDelayTime 00ACF628 l
+CGAuctionHouse__m_auctioneer 00C0F3E8 l
+CGAuctionHouse__m_auctionsTabShowing 00C0F3F5 l
+CGAuctionHouse__m_canGetOwnerList 00C0F41C l
+CGAuctionHouse__m_havePendingSell 00C0F434 l
+CGAuctionHouse__m_inQuery 00C0E734 l
+CGAuctionHouse__m_numTotalBid 00C0F410 l
+CGAuctionHouse__m_pendingBidItems 00C0F430 l
+CGAuctionHouse__m_bidSortCriteria 00C0E578 l
+CGAuctionHouse__m_listSortCriteria 00C0E698 l
+CGAuctionHouse__m_numTotalItems 00C0F408 l
+CGAuctionHouse__m_ownedSortCriteria 00C0E608 l
+CGAuctionHouse__m_selectedOwnedItem 00ACF630 l
+CGAuctionHouse__m_sellItem 00C0F3F8 l

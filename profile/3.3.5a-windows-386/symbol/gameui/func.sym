@@ -196,3 +196,5 @@ RegisterHandlers 005ECF60 f end=005ED018
 PortraitShutdown 00617860 f end=00617A09
 CGGameUI__SetLastItemSpellTarget 00513A10 f end=00513A26
 CGGameUI__SetLastEnchantSpellID 00513A00 f end=00513A0D
+CGGameUI__NextCinematicInternal 00523530 f end=005235B0
+CGGameUI__BeginCinematicInternal 00527FE0 f end=00528005

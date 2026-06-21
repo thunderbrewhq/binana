@@ -1,3 +1,6 @@
 CGWorldMap__m_currentOrphanZone 00ACCF10 l
 CGWorldMap__m_numLandmarks 00BE8EE0 l
 CGWorldMap__m_numOverlays 00BE8EE4 l
+CGWorldMap__m_currentContinent 00ACCF04 l
+CGWorldMap__m_currentDungeonMap 00ACCF0C l
+CGWorldMap__m_currentZone 00ACCF08 l

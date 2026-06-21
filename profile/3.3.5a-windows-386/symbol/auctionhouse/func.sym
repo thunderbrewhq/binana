@@ -34,3 +34,4 @@ CGAuctionHouse__OnBidderAuctionList 0059ECD0 f end=0059EFF6
 AuctionListItemQueryCallback 0059CB70 f end=0059CBAE
 AuctionOwnedSoldItemQueryCallback 0059CBE0 f end=0059CC0C
 AuctionBidItemQueryCallback 0059CC10 f end=0059CC4E
+AuctionOwnedItemQueryCallback 0059CBB0 f end=0059CBDA

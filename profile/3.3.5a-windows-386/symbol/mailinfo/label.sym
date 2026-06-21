@@ -2,3 +2,12 @@ CGMailInfo__m_nextMailTime 00ACE60C l
 CGMailInfo__m_numInboxItems 00BEB1D8 l
 CGMailInfo__m_totalInboxItems 00BEB1DC l
 CGMailInfo__m_doPendingQuery 00BEB1E8 l
+CGMailInfo__m_autoLooting 00BEB1EC l
+CGMailInfo__m_commandPending 00BEB1E4 l
+CGMailInfo__m_nextUpdateTime 00BEB1E0 l
+CGMailInfo__m_lockSendItems 00BEB1B8 l
+CGMailInfo__m_selectedStationery 00BEB1CC l
+CGMailInfo__m_numStationeries 00BEB1C8 l
+CGMailInfo__m_pendingStationeryCallbacks 00BEB1D4 l
+CGMailInfo__m_selectedPackage 00BEB1D0 l
+CGMailInfo__m_sendMailShowing 00BEB1B9 l

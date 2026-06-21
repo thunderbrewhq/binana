@@ -4,3 +4,5 @@ CGQuestLog__m_numQuest 00C23AD0 l
 CGQuestLog__m_numSortTypes 00C23AD4 l
 CGQuestLog__m_selectedQuest 00C23AD8 l
 CGQuestLog__m_numShownQuests 00C23AE4 l
+CGQuestLog__m_questIconOverlapDist 00AD1014 l
+CGQuestLog__m_questResetTime 00C23AEC l

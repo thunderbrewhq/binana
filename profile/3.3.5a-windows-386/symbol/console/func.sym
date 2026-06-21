@@ -119,3 +119,4 @@ MouseSpeedCallback 004015E0 f end=004015FC
 ScreenshotQualityCallback 00401B40 f end=00401B59
 M2DebugFasterChanged 00402210 f end=00402242
 ConsoleCommand_Logout 006B2030 f end=006B2064
+CCommand_ObjUsage 004D49E0 f end=004D4AB8

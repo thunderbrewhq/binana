@@ -1,3 +1,6 @@
 CGPartyInfo__m_leaderIndex 00ACC6C4 l
 CGPartyInfo__m_lootMethod 00ACC6C8 l
 CGPartyInfo__m_lootThreshold 00ACC6CC l
+CGPartyInfo__m_lfgRestricted 00BD19A8 l
+CGPartyInfo__m_lfgSlot 00BD19A4 l
+CGPartyInfo__m_optOutOfLoot 00BD19A0 l

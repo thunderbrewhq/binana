@@ -1,2 +1,6 @@
 CGRaidInfo__m_members 00BEB568 l
 CGRaidInfo__m_numMembers 00BEB608 l
+CGRaidInfo__m_readyCheckInitiator 00BEB620 l
+CGRaidInfo__m_readyCheckTime 00BEB61C l
+CGRaidInfo__m_realNumMembers 00BEB60C l
+CGRaidInfo__m_selectedMember 00BEB610 l

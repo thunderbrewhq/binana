@@ -1,0 +1,7 @@
+HttpDownload__Progress 008A1410 f end=008A1418
+HttpDownload__Cancel 008A1390 f end=008A13AB
+HttpDownload__Size 008A13C0 f end=008A1406
+HttpDownload__Done 008A1370 f end=008A1388
+HttpDownload__destructor 008A1550 f end=008A15D7
+HttpDownload__constructor 008A15E0 f end=008A16B8
+HttpDownload__GetBytes 008A13B0 f end=008A13B7

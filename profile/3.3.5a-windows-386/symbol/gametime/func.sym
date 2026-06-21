@@ -7,3 +7,4 @@ CGameTime__GameTimeUpdate 0076D900 f end=0076D996
 CGameTime__GameTimeSync 0076D9A0 f end=0076DB24
 CGameTime__GameTimeRegisterCallback 0076DB30 f end=0076DC14
 CGameTime__PerformCallbacks 0076D650 f end=0076D697
+CGameTime__GameTimeUnregisterCallback 0076D1D0 f end=0076D255

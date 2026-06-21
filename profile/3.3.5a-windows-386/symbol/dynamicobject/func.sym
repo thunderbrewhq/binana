@@ -21,3 +21,4 @@ AnimFinishedCallback 00704AF0 f end=00704B23
 CGDynamicObject_C__destructor 007055E0 f end=0070560B
 AnimEventCallback 00704F20 f end=00704F5C
 AnimEventCallback 00734A40 f end=00734B00
+CGDynamicObject__TotalFieldsSaved 004F55B0 f end=004F55B9

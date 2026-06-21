@@ -50,3 +50,16 @@ CGGameUI__m_iCurrentMapID 00BD088C l
 CGGameUI__m_bOwnsInstance 00BD0890 l
 CGGameUI__m_lastRegenTime 00BD08A0 l
 CGGameUI__m_MirrorTimerInfo 00BD0B80 l
+CGGameUI__m_areaSpiritHealerTime 00BD0840 l
+CGGameUI__m_comboPoints 00BD084D l
+CGGameUI__m_corpsePos 00BD0A58 l
+CGGameUI__m_corpseReclaimDelay 00BD0850 l
+CGGameUI__m_deathReleaseLoc 00BD0A64 l
+CGGameUI__m_deathReleaseMapID 00BD0844 l
+CGGameUI__m_instanceDifficulty 00BD0894 l
+CGGameUI__m_pendingLevelGranter 00BD08B8 l
+CGGameUI__m_raidDifficulty 00BD089C l
+CGGameUI__m_summonConfirmGUID 00BD0870 l
+CGGameUI__m_summonConfirmTime 00BD0864 l
+CGGameUI__m_threatWarningEnabled 00BD08C0 l
+CGGameUI__m_instanceBootTime 00BD0854 l

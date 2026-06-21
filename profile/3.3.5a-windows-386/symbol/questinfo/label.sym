@@ -1,1 +1,16 @@
 CGQuestInfo__m_state 00C0D658 l
+CGQuestInfo__m_responseSent 00C0D6AC l
+CGQuestInfo__m_npc 00C0D648 l
+CGQuestInfo__m_currentQuest 00C0D65C l
+CGQuestInfo__m_greetingText 00C0CC48 l
+CGQuestInfo__m_startQuestCheat 00C0D668 l
+CGQuestInfo__m_npcInform 00C0D650 l
+CGQuestInfo__m_numInProgress 00C0D6A0 l
+CGQuestInfo__m_numQuests 00C0D69C l
+CGQuestInfo__m_pendingQuest 00C0D6A8 l
+CGQuestInfo__m_progressText 00C0A920 l
+CGQuestInfo__m_questLogText 00C0B4D8 l
+CGQuestInfo__m_questText 00C0C090 l
+CGQuestInfo__m_questTitle 00C0D448 l
+CGQuestInfo__m_rewardText 00C09D68 l
+CGQuestInfo__m_suggestedGroupNum 00C0D6B0 l

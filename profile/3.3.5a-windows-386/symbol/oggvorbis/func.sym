@@ -60,3 +60,5 @@ _ogg_stream_init 00472720 f end=004727BC
 _vorbis_info_blocksize 0046C180 f end=0046C19A
 _ogg_stream_packetout 00473200 f end=00473217
 __vp_global_free 0046E070 f end=0046E0A8
+_vorbis_book_clear 0046E700 f end=0046E799
+_vorbis_block_init 0046CE10 f end=0046CE3D

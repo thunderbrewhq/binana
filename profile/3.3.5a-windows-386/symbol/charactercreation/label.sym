@@ -2,3 +2,6 @@ CCharacterCreation__m_selectedClassID 00AC4220 l
 CCharacterCreation__m_existingCharacterIndex 00AC4224 l
 CCharacterCreation__m_charPreferences 00B6B0D0 l
 CCharacterCreation__m_raceIndex 00B6B180 l
+CCharacterCreation__m_charCustomizeFrame 00B6B184 l
+CCharacterCreation__m_character 00B6B1A0 l
+CCharacterCreation__m_nameGen 00B6B1D4 l

@@ -2291,3 +2291,4 @@ TalentInfoGetScriptGroupIndex 005C57D0 f end=005C5803
 CreatureQueryCallback 005DE9E0 f end=005DEA09
 ObjectQueryCallback 005DEA10 f end=005DEA39
 GetUnitAndSlotFromLua 005E7CF0 f end=005E7D55
+BuybackItemStatsCallback 005840B0 f end=005840C0
