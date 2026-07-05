@@ -37,3 +37,4 @@ CWorldScene__Render 0079A870 f end=0079ADBB
 CWorldScene__CullMapObjDefGroupFromExterior 007B3A10 f end=007B3B1A
 CWorldScene__ClearObjectFadeoutList 004F5D10 f end=004F5D15
 CWorldScene__RenderDetailDoodads 0077F010 f end=0077F015
+CWorldScene__GetFrustumCorners 0078FAE0 f end=0078FAF8

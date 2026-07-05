@@ -1,1 +1,7 @@
 CGCalendar__m_initialize 00C207F0 l
+CGCalendar__m_actionPending 00C207F3 l
+CGCalendar__m_contextSelectedEventInfo 00C207E8 l
+CGCalendar__m_lastEventTime 00C207FC l
+CGCalendar__m_lastInviteTime 00C207F8 l
+CGCalendar__m_numInitialPending 00C207F4 l
+CGCalendar__m_openedCalendar 00C207F1 l

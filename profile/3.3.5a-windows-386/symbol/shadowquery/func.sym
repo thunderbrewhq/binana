@@ -5,3 +5,4 @@ CShadowQuery__Clear 007BB830 f end=007BB9C2
 CShadowQuery__Render 007BBC50 f end=007BC482
 CShadowQuery__QueryCallback 007BD200 f end=007BD392
 CShadowQuery__Initialize 007BD3A0 f end=007BD44D
+CShadowQuery__GetSize 007BA8F0 f end=007BA958

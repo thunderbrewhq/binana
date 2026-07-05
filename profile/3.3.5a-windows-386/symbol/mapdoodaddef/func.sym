@@ -5,3 +5,4 @@ CMapDoodadDef__constructor 007C21E0 f end=007C234A
 CMapDoodadDef__destructor 007C2350 f end=007C23E1
 CMapDoodadDef__SelectUnderwater 007C23F0 f end=007C25C5
 CMapDoodadDef__Purge 007C3020 f end=007C30A6
+CMapDoodadDef__destructor 007C2E40 f end=007C2E6B

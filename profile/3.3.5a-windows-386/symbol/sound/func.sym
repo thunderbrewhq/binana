@@ -41,3 +41,5 @@ SE2__CreateWaveData 0087EE60 f end=0087F377
 SE2__SetDspParam 00878D20 f end=00878D39
 SE2__SetFMODChannelGroupVolume 00878E70 f end=00878E85
 SESeekCallback 00878200 f end=0087821A
+SE2__GetNumInputDrivers 004C5AA0 f end=004C5AA9
+SE2__GetInputDriverName 004C5AC0 f end=004C5AE3

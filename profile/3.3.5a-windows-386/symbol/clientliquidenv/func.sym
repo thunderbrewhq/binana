@@ -1,0 +1,5 @@
+CClientLiquidEnvironment__SelectLights 007D4F40 f end=007D50F7
+CClientLiquidEnvironment__SetInteriorFog 007D4F10 f end=007D4F1D
+CClientLiquidEnvironment__Release 007D4F20 f end=007D4F3C
+CClientLiquidEnvironment__destructor 008A32C0 f end=008A32E8
+CClientLiquidEnvironment__Create 007D5120 f end=007D514F

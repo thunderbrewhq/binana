@@ -25,3 +25,4 @@ CMap__entityHeap 00D25424 l
 CMap__mapObjDefGroupHeap 00D25428 l
 CMap__mapObjDefHeap 00D2542C l
 CMap__chunkLiquidHeap 00D25430 l
+CMap__s_subVertexIndexFlat 00A4061C l

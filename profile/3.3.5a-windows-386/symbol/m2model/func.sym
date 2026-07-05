@@ -100,3 +100,4 @@ CM2Model__ComputeLoadProgress 008245B0 f end=00824657
 CM2Model__ReplaceParticleColor 00825410 f end=008254E4
 M2SetGlobalOptFlags 0081C060 f end=0081C073
 M2Destroy 0081C750 f end=0081C787
+CM2Model__GatherModelBatchesShadowMap 00834660 f end=0083480E

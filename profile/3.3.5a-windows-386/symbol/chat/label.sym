@@ -4,3 +4,8 @@ CGChat__m_chatHistory 00B75A60 l
 CGChat__m_whisperDstHistory 00BCEB60 l
 CGChat__m_whisperSrcHistory 00BCEF60 l
 CGChat__m_currentChatIndex 00BCEFF4 l
+CGChat__m_afk 00BCEFEC l
+CGChat__m_complaintsSystemStatus 00BCEFFC l
+CGChat__m_guildRecruitmentMode 00AC7A3C l
+CGChat__m_registered 00BCEFE8 l
+CGChat__m_voiceChatSystemStatus 00BCF004 l
