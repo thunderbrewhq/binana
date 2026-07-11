@@ -18,3 +18,4 @@ CRibbonEmitter__ConvertTexSlotToTexCoords 0097F510 f end=0097F570
 CRibbonEmitter__GetNumPrimitives 0097FE50 f end=0097FE73
 CRibbonEmitter__ReplaceTexture 0097FAD0 f end=0097FB54
 CRibbonEmitter__ChangeFrameOfReference 0097FBE0 f end=0097FE39
+CRibbonEmitter__InterpEdge 0097FEF0 f end=00980085

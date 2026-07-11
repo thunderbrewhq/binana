@@ -20,3 +20,4 @@ CSimpleCheckbox__UnregisterRegion 009621A0 f end=009621CE
 CSimpleCheckbox__LoadXML 009624C0 f end=0096265C
 CSimpleCheckbox__destructor 009621D0 f end=009621D8
 CSimpleCheckbox__GetScriptMetaTable 00962190 f end=00962196
+CSimpleCheckBox__GetObjectTypeName 00962180 f end=00962186

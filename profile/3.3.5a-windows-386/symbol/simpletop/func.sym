@@ -32,3 +32,6 @@ CSimpleTop__OnMouseWheel 00494890 f end=0049496B
 CSimpleTop__OnFocusChanged 00494970 f end=004949BA
 CSimpleTop__RegisterFrame 00494F90 f end=00494F9F
 CSimpleTop__OnMouseDown 00495470 f end=004955D4
+CSimpleTop__NotifyFrameLayerChanged 00493C10 f end=00493C4B
+CSimpleTop__destructor 00496170 f end=00496353
+CSimpleTop__destructor 00496360 f end=0049638B

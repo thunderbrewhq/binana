@@ -50,3 +50,4 @@ CSimpleMessageFrame__IsA 00968640 f end=00968675
 CSimpleMessageFrame__IsA 00968680 f end=009686BE
 CSimpleMessageFrame__GetScriptMetaTable 00968620 f end=00968626
 CSimpleMessageFrame__destructor 00968630 f end=00968638
+CSimpleMessageFrame__GetObjectTypeName 00968610 f end=00968616

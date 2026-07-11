@@ -6,3 +6,4 @@ CScriptObject__RegisterScriptMethods 004A8190 f end=004A81A8
 CScriptObject__destructor 0048B760 f end=0048B7AD
 CScriptObject__IsA 00482AF0 f end=00482B05
 CScriptObject__IsA 00482B10 f end=00482B32
+CScriptObject__GetObjectTypeName 0048B6B0 f end=0048B6B6

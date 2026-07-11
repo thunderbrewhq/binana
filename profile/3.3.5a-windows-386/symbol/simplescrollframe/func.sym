@@ -31,3 +31,4 @@ CSimpleScrollFrame__IsA 0096B250 f end=0096B285
 CSimpleScrollFrame__IsA 0096B290 f end=0096B2CE
 CSimpleScrollFrame__GetScriptMetaTable 0096B0A0 f end=0096B0A6
 CSimpleScrollFrame__destructor 0096B240 f end=0096B248
+CSimpleScrollFrame__GetObjectTypeName 0096B090 f end=0096B096

@@ -1,1 +1,9 @@
 CPlaneParticleEmitter__constructor 00981310 f end=00981343 ; CPlaneParticleEmitter::CPlaneParticleEmitter()
+CPlaneParticleEmitter__SetWidth 009813B0 f end=009813C0
+CPlaneParticleEmitter__SetHeight 009813C0 f end=009813D0
+CPlaneParticleEmitter__SetLatitude 009813D0 f end=009813E0
+CPlaneParticleEmitter__SetLongitude 009813E0 f end=009813F0
+CPlaneParticleEmitter__Clone 00981510 f end=00981548
+CPlaneParticleEmitter__destructor 00981590 f end=009815BD
+CPlaneParticleEmitter__constructor 00981350 f end=009813A2
+CPlaneParticleEmitter__CreateParticle 009815C0 f end=0098191E

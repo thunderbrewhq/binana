@@ -59,3 +59,6 @@ CParticleEmitter2__SetSimpleScaleKeys 0097B5F0 f end=0097B6B1
 CParticleEmitter2__SetSimpleTailCellKeys 0097B840 f end=0097B996
 CParticleEmitter2__CreateParticle 009799C0 f end=00979BA3
 CParticleEmitter2__DecRef 00978E80 f end=00978E90
+CParticleEmitter2__CalcVelocity 009792D0 f end=00979323
+CParticleEmitter2__CreateParticle 00979870 f end=009799B8
+CParticleEmitter2__ProjectParticle 00979740 f end=009797E2

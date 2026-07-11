@@ -23,3 +23,4 @@ CSimpleAnim__IsA 00498CE0 f end=00498D23
 CSimpleAnim__ChangeParent 0049C6C0 f end=0049C704
 CSimpleAnim__Pause 00497E60 f end=00497E8C
 CSimpleAnim__GetScriptMetaTable 00498D40 f end=00498D46
+CSimpleAnim__GetScriptObjectParent 004383C0 f end=004383C4

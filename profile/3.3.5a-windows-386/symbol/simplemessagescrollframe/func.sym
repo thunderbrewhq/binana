@@ -85,3 +85,5 @@ CSimpleMessageScrollFrame__GetScriptMetaTable 00969DC0 f end=00969DC6
 CSimpleMessageScrollFrame__IsA 00969DE0 f end=00969E15
 CSimpleMessageScrollFrame__IsA 00969E20 f end=00969E5E
 CSimpleMessageScrollFrame__destructor 0096A480 f end=0096A4AB
+CSimpleMessageScrollFrame__GetObjectTypeName 00969DB0 f end=00969DB6
+CSimpleMessageScrollFrame__destructor 00969DD0 f end=00969DD8

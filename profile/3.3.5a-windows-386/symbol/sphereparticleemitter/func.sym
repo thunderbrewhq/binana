@@ -1,1 +1,7 @@
 CSphereParticleEmitter__constructor 009813F0 f end=00981423 ; CSphereParticleEmitter::CSphereParticleEmitter()
+CSphereParticleEmitter__Clone 00981550 f end=00981588
+CSphereParticleEmitter__constructor 00981430 f end=0098148E
+CSphereParticleEmitter__destructor 00981920 f end=0098194D
+CSphereParticleEmitter__SetWidth 00981490 f end=009814AC
+CSphereParticleEmitter__SetHeight 009814B0 f end=009814CC
+CSphereParticleEmitter__SetLongitude 009814D0 f end=009814E0

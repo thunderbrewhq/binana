@@ -1,6 +1,5 @@
 WowConnection__SetState 004667C0 f end=004667E3 type="void __thiscall func(WowConnection* this, WOW_CONN_STATE state)"
 WowConnection__ReleaseResponseRef 00466780 f end=004667B8 type="void __thiscall func(WowConnection* this)"
-WowConnection__AddRef 00428300 f end=0042830B ; WowConnection::AddRef()
 WowConnection__SetResponse 004666D0 f end=00466748 ; WowConnection::SetResponse(WowConnectionResponse*, bool)
 WowConnection__SetType 004667F0 f end=0046681A ; WowConnection::SetType(WOWC_TYPE)
 WowConnection__SetEncryption 00466820 f end=004668A0 type="void __thiscall func(WowConnection* this, bool enabled)" ; WowConnection::SetEncryption(WC_ENCRYPT_TYPE)

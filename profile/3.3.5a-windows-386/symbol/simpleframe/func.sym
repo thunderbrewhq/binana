@@ -171,3 +171,4 @@ CSimpleFrame__StopAnimating 004919F0 f end=00491A62
 CSimpleFrame__destructor 004926B0 f end=004926B8
 CSimpleFrame__AreChildrenProtected 00491350 f end=004913B7
 CSimpleFrame__PropagateProtectFlagToParent 0048E9F0 f end=0048EA07
+CSimpleFrame__GetObjectTypeName 00492750 f end=00492756

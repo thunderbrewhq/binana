@@ -43,3 +43,4 @@ CSimpleHTML__destructor 0096CF00 f end=0096D081
 CSimpleHTML__IsA 0096C9A0 f end=0096C9DE
 CSimpleHTML__destructor 0096C950 f end=0096C958
 CSimpleHTML__GetScriptMetaTable 0096C940 f end=0096C946
+CSimpleHTML__GetObjectTypeName 0096C930 f end=0096C936

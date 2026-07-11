@@ -129,3 +129,4 @@ CSimpleEditBox__OnFocusChange 00965120 f end=009651E3
 CSimpleEditBox__OnLayerKeyDownRepeat 009658D0 f end=0096591C
 CSimpleEditBox__OnLayerKeyUp 00965920 f end=0096595D
 CSimpleEditBox__RunOnCursorChangedScript 009627E0 f end=009628A2
+CSimpleEditBox__GetObjectTypeName 00966F20 f end=00966F26

@@ -37,3 +37,4 @@ CSimpleColorSelect__destructor 0096DD70 f end=0096DD78
 CSimpleColorSelect__GetScriptMetaTable 0096DC40 f end=0096DC46
 CSimpleColorSelect__OnLayerHide 0096DD30 f end=0096DD43
 CSimpleColorSelect__RunOnColorSelectScript 0096DD80 f end=0096DE40
+CSimpleColorSelect__GetObjectTypeName 0096DC30 f end=0096DC36

@@ -13,3 +13,5 @@ CSimpleRegion__destructor 004882E0 f end=0048830B
 _GetOriginOffset 0048B890 f end=0048BA55
 ApplyRotationAnim 0048BA80 f end=0048BB72
 ApplyScaleAnim 0048BB80 f end=0048BC19
+CSimpleRegion__SetParent 00482C30 f end=00482C54
+CSimpleRegion__destructor 004881B0 f end=004881B8

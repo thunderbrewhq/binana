@@ -31,3 +31,4 @@ CSimpleStatusBar__destructor 00961970 f end=00961978
 CSimpleStatusBar__GetScriptMetaTable 00961620 f end=00961626
 CSimpleStatusBar__GetAnimValue 00961940 f end=0096196B
 CSimpleStatusBar__SetValue 00961890 f end=0096193E
+CSimpleStatusBar__GetObjectTypeName 00961610 f end=00961616
