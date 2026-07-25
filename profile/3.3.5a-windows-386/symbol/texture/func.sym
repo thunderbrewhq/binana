@@ -50,6 +50,7 @@ CTgaFile__ReadRleImage 006AB220 f end=006AB381
 CTgaFile__AddAlphaChannel 006AB390 f end=006AB447 type="int32_t __thiscall func(CTgaFile* this, void* pImg)" ; public method
 CTgaFile__ReadColorMappedImage 006AB450 f end=006AB4A1
 CTgaFile__LoadImageData 006AB4B0 f end=006AB5B8 type="int32_t __thiscall func(CTgaFile* this, int32_t flags)"
+CTgaFile__Write 006AADE0 f end=006AAF34
 GetBitDepth 006AB5C0 f end=006AB614
 CalcLevelSize 006AB620 f end=006AB6B9 type="uint32_t __cdecl func(uint32_t level, uint32_t width, uint32_t height, uint32_t fourCC)"
 CalcLevelCount 006AB700 f end=006AB75C type="uint32_t __stdcall func(uint32_t width, uint32_t height)"

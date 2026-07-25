@@ -77,3 +77,5 @@ BZ2_hbAssignCodes 00479340 f end=00479387
 add_pair_to_block 00473630 f end=0047371B
 copy_input_until_stop 00473720 f end=004738FE
 handle_compress 00473960 f end=00473A8A
+ZlibDecompress 00778250 f end=00778287
+RLEZeroCompress 0042BBC0 f end=0042BE28

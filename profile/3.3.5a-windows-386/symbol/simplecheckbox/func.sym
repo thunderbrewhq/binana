@@ -21,3 +21,5 @@ CSimpleCheckbox__LoadXML 009624C0 f end=0096265C
 CSimpleCheckbox__destructor 009621D0 f end=009621D8
 CSimpleCheckbox__GetScriptMetaTable 00962190 f end=00962196
 CSimpleCheckBox__GetObjectTypeName 00962180 f end=00962186
+CSimpleCheckbox__SetCheckedTexture 00962660 f end=00962718
+CSimpleCheckbox__SetDisabledCheckedTexture 00962720 f end=009627D8

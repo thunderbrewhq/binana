@@ -9,3 +9,4 @@ SpellParserReplaceText 00579E50 f end=0057AA53
 SpellParserParseSubText 0057AAF0 f end=0057ABBA
 SpellParserVariable 00577C40 f end=00577CF9
 SpellParserVariableExpression 00579B30 f end=00579B94
+SpellParserPluralConditional 00576EF0 f end=00576FEE

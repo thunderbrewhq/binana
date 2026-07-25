@@ -60,6 +60,7 @@ PropGetSelectedContext 0047CC10 f end=0047CC1F
 EventSetTimer 0047D5A0 f end=0047D612
 ConvertPosition 0047FC90 f end=0047FDD4
 LanguageProcess 00482110 f end=004821E2
+LanguageRule1 00481A00 f end=00481BB4
 ModelBlobLoad 004BBC20 f end=004BBCA8
 ObjectFree 004D3100 f end=004D3130
 ProfanityFilter 00509A50 f end=00509BCB

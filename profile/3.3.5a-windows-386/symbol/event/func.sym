@@ -57,6 +57,11 @@ IEvtQueuePost 004806A0 f end=0048071F type="int32_t __cdecl func(EvtContext* con
 IEvtQueueCheckSyncKeyState 00480A50 f end=00480AC2
 IEvtQueueDispatch 00480AD0 f end=00480BCB
 IEvtQueueDispatchAll 00480BD0 f end=00480D28
+UpdateSyncState 004809A0 f end=00480A26
+UpdateSyncKeyState 004808A0 f end=00480993
+PostString 0047F970 f end=0047F9B5
+ConfirmClose 0047F950 f end=0047F96C
+PostFocus 0047FDE0 f end=0047FE2F
 IEvtQueueUnregister 00480D30 f end=00480DD1
 InputObserverDestroy 00480E70 f end=00480E98
 EventDestroy_cleanup 00480EA0 f end=00480ED9

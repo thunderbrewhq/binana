@@ -68,3 +68,5 @@ CSimpleButton__SetButtonState 0096FE30 f end=0096FECA
 CSimpleButton__destructor 0096F190 f end=0096F1D4
 CSimpleButton__destructor 0096F520 f end=0096F528
 CSimpleButton__RunOnDoubleClickScript 0096F150 f end=0096F18A
+CSimpleButton__SetStateTexture 00970370 f end=00970431
+CSimpleButton__SetStateTexture 0096F920 f end=0096F9A4

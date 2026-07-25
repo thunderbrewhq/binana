@@ -133,3 +133,4 @@ GxDevClearScreenShot 00685370 f end=006853AF
 CGxDevice__TexSetFlags 00685CD0 f end=00685D3E
 CGxDevice__OpenGlAdapterFormats 0068C250 f end=0068C541
 CGxDevice__AdapterFormats 00682B00 f end=00682B79
+CGxDevice__D3dEnumFormats 0068A170 f end=0068A461
