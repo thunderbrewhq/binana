@@ -211,3 +211,7 @@ WalkableFacetEnclosesPoint 0075D0A0 f end=0075D1B3
 CMovement_C__CalcFallObstaclePush 0075E9C0 f end=0075EAF6
 CMovement_C__GetSteepSurfacePushNormal 0075E760 f end=0075E9BC
 CMovement_C__PushOffObstacleEdge 0075DB00 f end=0075DE39
+CMovement_C__AttemptStepUp 00761B00 f end=007620E5
+CMovement_C__PlaneIntersectsVolume 0075D890 f end=0075DAF2
+CMovement_C__IsFacetOverhead 0075CFE0 f end=0075D09B
+GetBoxPushNormal 0075DE80 f end=0075E024

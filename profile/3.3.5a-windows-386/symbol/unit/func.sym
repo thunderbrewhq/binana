@@ -593,3 +593,5 @@ CGUnit_C__CreateItemModel 00732100 f end=0073238D
 CGUnit_C__CreateItemModel 00732400 f end=00732445
 CGUnit_C__ShouldUseVehicleSeatExitAnimation 0074BB60 f end=0074BB83
 OnForceMoveChange 00732450 f end=007324A3
+CGUnit_C__SetAttacking 00754FF0 f end=00755015
+CGUnit_C__AddPassenger 0074B810 f end=0074B830

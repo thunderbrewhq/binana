@@ -42,3 +42,7 @@ DayNight__DNClouds__GetDensity 007EFA30 f end=007EFAD1
 DayNight__DNMoonGlare__GetCloudDensityFade 007F1040 f end=007F1063
 DayNight__DNSunGlare__GetCloudDensityFade 007F1020 f end=007F1039
 DayNight__SetCloudLOD 007F1B10 f end=007F1CC6
+DayNight__DNStars__Render 009ABD50 f end=009ABDF5
+DayNight__DNGlare__Render 009AC400 f end=009AC65F
+Billboard 009ABB60 f end=009ABC5D
+DayNight__DNStars__Initialize 009ABB00 f end=009ABB25

@@ -100,3 +100,5 @@ _os_lacing_expand 00472830 f end=00472882
 ogg_page_checksum_set 00472890 f end=0047292C
 oggpack_adv 00473310 f end=00473336
 floor0_map_lazy_init 00472050 f end=004721BF
+_vorbis_lsp_to_curve 004723F0 f end=004725F4
+_vorbis_synthesis_init 0046F5A0 f end=0046F785

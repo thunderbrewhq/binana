@@ -2293,3 +2293,7 @@ ObjectQueryCallback 005DEA10 f end=005DEA39
 GetUnitAndSlotFromLua 005E7CF0 f end=005E7D55
 BuybackItemStatsCallback 005840B0 f end=005840C0
 SetPortraitTexture 00618180 f end=00618228
+StringToLanguage 004FE2D0 f end=004FE32F
+ResurrectNameQueryCallback 00515900 f end=00515948
+InternalJoinChannel 00507A80 f end=00507D29
+SetPortraitTexture 00618230 f end=0061831B

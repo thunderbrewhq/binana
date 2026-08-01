@@ -13,3 +13,4 @@ CGNamePlateFrame__constructor 0098F790 f end=0098FFC9
 ShowClassColorInNameplateCallback 00512770 f end=0051279F
 CGNamePlateFrame__destructor 00990030 f end=0099005B
 CGNamePlateFrame__destructor 0098FFD0 f end=0098FFD8
+GetDifficultyColor 0098E5F0 f end=0098E6D2
