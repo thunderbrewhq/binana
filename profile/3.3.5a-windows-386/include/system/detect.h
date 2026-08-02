@@ -13,17 +13,17 @@
 
 #endif
 
-#if defined(IDA)
-
-// why does this work?
-#define DECLARE_ENUM(E) typedef enum E##__ E
-
-#else
+// #if defined(IDA)
+//
+// // why does this work?
+// #define DECLARE_ENUM(E) typedef enum E##__ E
+//
+// #else
 
 #define DECLARE_ENUM(E) typedef enum E E
 
-#endif
-
+// #endif
+//
 #define DECLARE_STRUCT(T) typedef struct T T
 
 #define DECLARE_UNION(T) typedef union T T
@@ -43,6 +43,7 @@
 #endif
 
 #if defined(IDA) || defined(CLANGD)
+
 // void Method(int32_t a1);
 #define P_METHOD(__result__, name, ...) __result__(__thiscall* name)(INTERFACE * this, __VA_ARGS__)
 
@@ -60,5 +61,17 @@
 #define E_METHOD(__result__, name) __result__ (*name)()
 
 #endif
+
+// COM methods are different
+#define COM_P_METHOD(__result__, __ident__, ...)                                                   \
+    __result__ (*__ident__)(INTERFACE * this, __VA_ARGS__);
+#define COM_E_METHOD(__result__, __ident__) __result__ (*__ident__)(INTERFACE * this);
+
+#define DECLARE_HANDLE(I)                                                                          \
+    typedef struct I##__ I##__;                                                                    \
+    struct I##__ {                                                                                 \
+        int32_t unused;                                                                            \
+    };                                                                                             \
+    typedef I##__* I
 
 #endif
