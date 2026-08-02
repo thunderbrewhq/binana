@@ -4,7 +4,9 @@
 DECLARE_STRUCT(Blizzard__File__Filesystem);
 DECLARE_STRUCT(System_File__Stacked__FileParms);
 
-typedef bool (*System_File__Stacked__FileFunc)(
+DECLARE_CALLBACK(
+    bool,
+    System_File__Stacked__FileFunc,
     Blizzard__File__Filesystem*      fs,
     System_File__Stacked__FileParms* parms);
 
