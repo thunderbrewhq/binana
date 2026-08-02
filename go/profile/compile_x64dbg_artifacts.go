@@ -4,8 +4,8 @@ func compile_x64dbg_artifacts(profile *Profile, params *CompileArtifactsParams) 
 	if err = compile_x64dbg_database(profile, params.CompressX64dbgDatabase); err != nil {
 		return
 	}
-	if err = compile_x64dbg_types(profile); err != nil {
-		return
-	}
+	// if err = compile_x64dbg_types(profile); err != nil {
+	// 	return
+	// }
 	return
 }
