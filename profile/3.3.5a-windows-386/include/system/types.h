@@ -33,7 +33,7 @@ typedef int32_t  intptr_t;
 
 // stdbool
 
-#if defined(BINANA_GENERATOR)
+#if defined(BINANA_GENERATOR) || defined(IDA)
 
 typedef char bool;
 
