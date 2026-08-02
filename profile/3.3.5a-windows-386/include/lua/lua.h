@@ -530,8 +530,8 @@ struct Profile {
                     // seems to be the "stack" or "level" of the function call
     int64_t marker; // unsure what this is. It's not read out directly into the results:
                     // it could be the initial "moment" from which other measurements are based.
-    int64_t flat;   // time without subroutines
-                  // increases by the function execution time in each call of  luaD_precall_profile
+    // time without subroutines: increases by the function execution time in each call of  luaD_precall_profile
+    int64_t flat;
     int64_t total; // time with subroutines
                    // increases by the function execution time in each call of  luaD_precall_profile
 };
