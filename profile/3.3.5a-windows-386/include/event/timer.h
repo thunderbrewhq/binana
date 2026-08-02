@@ -8,17 +8,17 @@
 DECLARE_STRUCT(EvtTimer);
 DECLARE_STRUCT(EvtTimerQueue);
 
-// class EvtTimer 
+// class EvtTimer
 struct EvtTimer {
-  // Member variables
-  uint32_t id;
-  TSTimerPriority_uint32_t targetTime;
-  float timeout;
-  int32_t (*handler)(const void*, void*);
-  void* param;
-  int32_t (*guidHandler)(const void*, uint64_t, void*);
-  uint64_t guidParam;
-  void* guidParam2;
+    // Member variables
+    uint32_t                 id;
+    TSTimerPriority_uint32_t targetTime;
+    float                    timeout;
+    int32_t (*handler)(const void*, void*);
+    void* param;
+    int32_t (*guidHandler)(const void*, uint64_t, void*);
+    uint64_t guidParam;
+    void*    guidParam2;
 };
 typedef EvtTimer* pointer_to_EvtTimer;
 
@@ -27,7 +27,7 @@ STORM_TS_GROWABLE_ARRAY(pointer_to_EvtTimer);
 
 // class EvtTimerQueue : public TSPriorityQueue<EvtTimer>
 struct EvtTimerQueue {
-  TSPriorityQueue_EvtTimer b_base;
+    TSPriorityQueue_EvtTimer b_base;
 };
 
 #endif

@@ -16,7 +16,6 @@
 DECLARE_ENUM(SCHEDSTATE);
 DECLARE_STRUCT(EvtContext);
 DECLARE_STRUCT(EvtContextQueue);
-DECLARE_STRUCT(EvtTimer);
 DECLARE_HANDLE(HPROPCONTEXT);
 DECLARE_HANDLE(HEVENTCONTEXT);
 
@@ -28,6 +27,7 @@ enum SCHEDSTATE {
     _UNIQUE_SYMBOL_SCHEDSTATE_96 = 0xFFFFFFFF
 };
 
+STORM_TS_LIST(EvtContext);
 COMMON_INSTANCE_ID(EvtContext);
 
 // class EvtContext : public TSingletonInstanceId<EvtContext, offsetof(TInstanceId<EvtContext>,
