@@ -7,7 +7,15 @@
 // external types (c-ified)
 #include "async/object.h"
 #include "async/queue.h"
+#include "external/asio/asio.h"
 #include "external/d3d9/d3d9.h"
+#include "external/mmdeviceapi/audioclient.h"
+#include "external/mmdeviceapi/dataflow.h"
+#include "external/mmdeviceapi/device.h"
+#include "external/mmdeviceapi/devicecollection.h"
+#include "external/mmdeviceapi/deviceenumerator.h"
+#include "external/mmdeviceapi/notificationclient.h"
+#include "external/mmdeviceapi/role.h"
 
 #include "lua/lua.h"
 
@@ -82,6 +90,9 @@
 #include "event/types.h"
 
 #include "expat/expat.h"
+
+#include "fmod/fmod.h"
+#include "fmod/meteredsection.h"
 
 #include "framescript/event_object.h"
 #include "framescript/object.h"
