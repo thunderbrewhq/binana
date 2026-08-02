@@ -1,0 +1,6 @@
+SESound__Init 0087C710 f end=0087DECE type="void __stdcall func(int32_t maxChannels, int32_t* a2, int32_t enableReverb, int32_t enableSoftwareHRTF, int32_t* numChannels, int32_t* outputDriverIndex, char* outputDriverName, void* a8, int32_t a9)"
+FSoundAllocCallback 008780B0 f end=008780C9 type="void* __stdcall func(uint32_t size, char* sourcestr)"
+FSoundReallocCallback 008780D0 f end=008780ED type="void* __stdcall func(void* ptr, uint32_t size, char* sourcestr)"
+FSoundFreeCallback 008780F0 f end=00878109 type="void __stdcall func(void* ptr, char* sourcestr)"
+SESound__Log_Write 00877E10 f end=00878005 type="void __stdcall func(char* string, ...)"
+SESound__Log_Write 00878010 f end=0087807E type="void __stdcall func(int32_t line, char* file, FMOD_RESULT result, char* string, ...)"
