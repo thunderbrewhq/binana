@@ -88,7 +88,7 @@ FMOD__System__set3DSettings 008D1480 f end=008D14BA type="FMOD_RESULT __stdcall 
 FMOD__System__set3DListenerAttributes 008D14C0 f end=008D14F7 type="FMOD_RESULT __stdcall func(FMOD__System* this, int32_t listener, FMOD_VECTOR* pos, FMOD_VECTOR* vel, FMOD_VECTOR* forward, FMOD_VECTOR* up)"
 FMOD__System__get3DListenerAttributes 008D1500 f end=008D1537 type="FMOD_RESULT __stdcall func(FMOD__System* this, int32_t listener, FMOD_VECTOR* pos, FMOD_VECTOR* vel, FMOD_VECTOR* forward, FMOD_VECTOR* up)"
 FMOD__System__set3DRolloffCallback 008D1540 f end=008D1567 type="FMOD_RESULT __stdcall func(FMOD__System* this, FMOD_3D_ROLLOFFCALLBACK callback)"
-FMOD__SystemI__getVersion 008D1570 f end=008D1597 type="FMOD_RESULT __stdcall func(FMOD__System* this, uint32_t* version)"
+FMOD__System__getVersion 008D1570 f end=008D1597 type="FMOD_RESULT __stdcall func(FMOD__System* this, uint32_t* version)"
 FMOD__System__getHardwareChannels 008D15A0 f end=008D15CF type="FMOD_RESULT __stdcall func(FMOD__System* this, int32_t* num2d, int32_t* num3d, int32_t* total)"
 FMOD__System__createSound 008D15D0 f end=008D1603 type="FMOD_RESULT __stdcall func(FMOD__System* this, char* name_or_data, FMOD_MODE mode, FMOD_CREATESOUNDEXINFO* exinfo, FMOD__Sound** sound)"
 FMOD__System__createStream 008D1610 f end=008D1643 type="FMOD_RESULT __stdcall func(FMOD__System* this, char* name_or_data, FMOD_MODE mode, FMOD_CREATESOUNDEXINFO* exinfo, FMOD__Sound** sound)"
