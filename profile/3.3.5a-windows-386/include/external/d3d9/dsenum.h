@@ -1,0 +1,12 @@
+#ifndef D3D9_DS_ENUM_H
+#define D3D9_DS_ENUM_H
+
+#include "external/win/guid.h"
+
+// typedef BOOL (CALLBACK *LPDSENUMCALLBACKW)(LPGUID,LPCWSTR,LPCWSTR,LPVOID);
+// typedef BOOL (CALLBACK *LPDSENUMCALLBACKA)(LPGUID,LPCSTR,LPCSTR,LPVOID);
+
+DECLARE_CALLBACK(int32_t, LPDSENUMCALLBACKW, LPGUID, const uint16_t*, const uint16_t*, void*);
+DECLARE_CALLBACK(int32_t, LPDSENUMCALLBACKA, LPGUID, const char*, const char*, void*);
+
+#endif

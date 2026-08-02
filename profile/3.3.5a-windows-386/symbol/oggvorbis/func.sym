@@ -1,104 +1,137 @@
-_ogg_stream_clear 004727C0 f end=0047282D
-_ogg_sync_init 00472930 f end=00472952
-_ogg_sync_clear 00472960 f end=0047299F
-_ogg_sync_buffer 004729A0 f end=00472A29
-_ogg_sync_wrote 00472A30 f end=00472A4F
-_ogg_stream_pagein 00472D20 f end=00473009
-_ogg_stream_reset_serialno 00473080 f end=004730D8
-_oggpack_readinit 00473240 f end=0047325E
-_oggpack_look 00473260 f end=00473303
-_oggpack_read 00473340 f end=00473402
-_vorbis_book_init_decode 0046E7D0 f end=0046ED0F
-_vorbis_staticbook_unpack 0046ED10 f end=0046EFB4
-_vorbis_book_decodev_set 0046F460 f end=0046F4F6
-_vorbis_staticbook_clear 0046E670 f end=0046E6CD
-_vorbis_staticbook_destroy 0046E6D0 f end=0046E6F3
-_vorbis_comment_init 0046C0C0 f end=0046C0D5
-_vorbis_comment_clear 0046C0E0 f end=0046C17D
-_vorbis_info_init 0046C1A0 f end=0046C1EB
-_vorbis_info_clear 0046C1F0 f end=0046C393
-_vorbis_synthesis 0046CB40 f end=0046CCA9
-_vorbis_synthesis_trackonly 0046CCB0 f end=0046CD8A
-_vorbis_packet_blocksize 0046CD90 f end=0046CE0A
-__vorbis_block_alloc 0046CE40 f end=0046CEC2
-__vorbis_block_ripcord 0046CED0 f end=0046CF51
-_vorbis_block_clear 0046CF60 f end=0046CF9C
-_vorbis_synthesis_init 0046CFA0 f end=0046D306
-_vorbis_dsp_clear 0046D310 f end=0046D5E6
-_vorbis_synthesis_blockin 0046D680 f end=0046DFDF
-_vorbis_synthesis_pcmout 0046DFE0 f end=0046E035
-_vorbis_synthesis_read 0046E040 f end=0046E065
-__get_data 00469AB0 f end=00469B1D
-__fetch_and_process_packet 0046A840 f end=0046AB2F
-_ov_clear 0046AB30 f end=0046AC77
-_ov_pcm_seek 0046B6C0 f end=0046B9AD
-_ov_read 0046BA50 f end=0046BD6C
-__open_seekable2 0046BD70 f end=0046BEB9
-__ov_open1 0046BEC0 f end=0046BFED
-_ov_open_callbacks 0046C040 f end=0046C086
-__vi_psy_free 0046E0B0 f end=0046E0DB
-__ilog 0046E200 f end=0046E219
-__make_words 0046E220 f end=0046E3AF
-_sort32a 0046E7A0 f end=0046E7C1
-_mdct_clear 0046FD60 f end=0046FDB2
-_drft_clear 00470120 f end=0047016C
-__ve_envelope_clear 00470170 f end=004701F4
-__vorbis_window_get 004703D0 f end=004703DF
-_mapping0_unpack 00470410 f end=00470629
-_floor1_free_info 004713E0 f end=0047140B
-_floor1_free_look 00471410 f end=0047143B
-_floor1_unpack 00471440 f end=0047168C
-_floor1_look 00471690 f end=004718AE
-_floor1_inverse1 00471A30 f end=00471D1F
-_floor1_inverse2 00471D20 f end=00471E82
-_floor0_unpack 00471F50 f end=00472046
-_floor0_inverse1 00472220 f end=0047235B
-_icomp 005C5750 f end=005C5765
-_ogg_page_bos 00472620 f end=00472631
-_ogg_sync_pageseek 00472A50 f end=00472CCB
-_ogg_stream_init 00472720 f end=004727BC
-_vorbis_info_blocksize 0046C180 f end=0046C19A
-_ogg_stream_packetout 00473200 f end=00473217
-__vp_global_free 0046E070 f end=0046E0A8
-_vorbis_book_clear 0046E700 f end=0046E799
-_vorbis_block_init 0046CE10 f end=0046CE3D
-_vp_psy_clear 0046E0E0 f end=0046E1FC
-_decode_clear 0046A810 f end=0046A833
-vorbis_synthesis_restart 0046D5F0 f end=0046D650
-_vorbis_unpack_comment 0046C470 f end=0046C59B
-_v_readstring 0046C090 f end=0046C0BA
-vorbis_synthesis_headerin 0046C9B0 f end=0046CB31
-_vorbis_unpack_books 0046C5A0 f end=0046C888
-_vorbis_unpack_info 0046C3A0 f end=0046C46D
-bitreverse 0046EFC0 f end=0046F01D
-decode_packed_entry_number 0046F020 f end=0046F143
-vorbis_book_decode 0046F150 f end=0046F17D
-vorbis_book_decodevv_add 0046F500 f end=0046F5A0
-res2_inverse 00471240 f end=004713DE
-ogg_sync_pageout 00472CD0 f end=00472D1C
-_packetout 004730E0 f end=004731F4
-ogg_stream_packetpeek 00473220 f end=00473237
-_get_next_page 00469B80 f end=00469C29
-_get_serialnos 00469D90 f end=00469EC6
-_make_decode_ready 0046A7A0 f end=0046A807
-ov_raw_tell 0046B9B0 f end=0046B9CE
-vorbis_book_decodev_add 0046F2F0 f end=0046F435
-res0_unpack 00470BC0 f end=00470D1F
-res0_look 00470D20 f end=00470F6A
-res0_free_info 00470AC0 f end=00470AEB
-res0_free_look 00470AF0 f end=00470BB5
-_01inverse 00470F70 f end=00471174
-res1_inverse 004711E0 f end=0047123B
-res0_inverse 00471180 f end=004711DB
-vorbis_book_decodevs_add 0046F180 f end=0046F2E2
-render_line 004718C0 f end=00471A2B
-floor0_free_look 00471EC0 f end=00471F44
-floor0_look 004721C0 f end=00472211
-floor0_inverse2 00472360 f end=004723ED
-floor0_free_info 00471E90 f end=00471EB8
-_os_lacing_expand 00472830 f end=00472882
-ogg_page_checksum_set 00472890 f end=0047292C
-oggpack_adv 00473310 f end=00473336
-floor0_map_lazy_init 00472050 f end=004721BF
-_vorbis_lsp_to_curve 004723F0 f end=004725F4
-_vorbis_synthesis_init 0046F5A0 f end=0046F785
+_get_data 00469AB0 f end=00469B1D type="int32_t __usercall func@<eax>(OggVorbis_File* vf@<eax>)"
+_seek_helper 00469B20 f end=00469B78 type="int32_t __usercall func@<eax>(OggVorbis_File* vf@<eax>, ogg_int64_t offset)"
+_get_next_page 00469B80 f end=00469C29 type="ogg_int64_t __usercall func@<edx:eax>(OggVorbis_File* vf@<esi>, ogg_page* og, ogg_int64_t boundary)"
+_get_prev_page 00469C30 f end=00469D87 type="ogg_int64_t __usercall func@<edx:eax>(OggVorbis_File* vf@<eax>, ogg_page* og)"
+_get_serialnos 00469D90 f end=00469EC6 type="int32_t __usercall func@<eax>(OggVorbis_File* vf, int32_t** s, int32_t* n@<edi>)"
+_bisect_forward_serialno 00469ED0 f end=0046A16E type="int32_t __stdcall func(OggVorbis_File* vf, ogg_int64_t begin, ogg_int64_t searched, ogg_int64_t end, int32_t* currentno_list, int32_t currentnos, int32_t m)"
+_fetch_headers 0046A170 f end=0046A3AA type="int32_t __usercall func@<eax>(OggVorbis_File* vf, vorbis_info* vi, vorbis_comment* vc, int32_t* serialno, ogg_page* og_ptr@<eax>)"
+_prefetch_all_headers 0046A3B0 f end=0046A795 type="void __usercall func(OggVorbis_File* vf@<eax>, ogg_int64_t dataoffset)"
+_make_decode_ready 0046A7A0 f end=0046A807 type="int32_t __usercall func@<eax>(OggVorbis_File* vf@<esi>)"
+_decode_clear 0046A810 f end=0046A833 type="void __usercall func(OggVorbis_File* vf@<esi>)"
+_fetch_and_process_packet 0046A840 f end=0046AB2F type="int32_t __usercall func@<eax>(OggVorbis_File* vf@<eax>, ogg_packet* op_in, int32_t readp, int32_t spanp)"
+ov_clear 0046AB30 f end=0046AC77 type="int32_t __stdcall func(OggVorbis_File* vf)"
+ov_streams 0046AC80 f end=0046AC8B type="int32_t __cdecl func(OggVorbis_File* vf)"
+ov_pcm_total 0046AC90 f end=0046AD17 type="ogg_int64_t __cdecl func(OggVorbis_File* vf, int32_t i)"
+ov_raw_seek 0046AD20 f end=0046B04D type="int32_t __stdcall func(OggVorbis_File* vf, ogg_int64_t pos)"
+ov_pcm_seek_page 0046B050 f end=0046B6B6 type="int32_t __stdcall func(OggVorbis_File* vf, ogg_int64_t pos)"
+ov_pcm_seek 0046B6C0 f end=0046B9AD type="int32_t __stdcall func(OggVorbis_File* vf, ogg_int64_t pos)"
+ov_raw_tell 0046B9B0 f end=0046B9CE type="ogg_int64_t __cdecl func(OggVorbis_File* vf)"
+ov_info 0046B9D0 f end=0046BA02 type="vorbis_info* __cdecl func(OggVorbis_File* vf, int32_t link)"
+ov_comment 0046BA10 f end=0046BA42 type="vorbis_comment* __cdecl func(OggVorbis_File* vf, int32_t link)"
+ov_read 0046BA50 f end=0046BD6C type="int32_t __stdcall func(OggVorbis_File* vf, char* buffer, int32_t length, int32_t bigendianp, int32_t word, int32_t sgned, int32_t* bitstream)"
+_open_seekable2 0046BD70 f end=0046BEB9 type="int32_t __usercall func@<eax>(OggVorbis_File* vf@<esi>)"
+_ov_open1 0046BEC0 f end=0046BFED type="int32_t __usercall func@<eax>(void* f@<eax>, OggVorbis_File* vf@<esi>, char* initial, int32_t ibytes, ov_callbacks callbacks)"
+_ov_open2 0046BFF0 f end=0046C038 type="int32_t __usercall func@<eax>(OggVorbis_File* vf@<eax>)"
+ov_open_callbacks 0046C040 f end=0046C086 type="int32_t __stdcall func(void* f, OggVorbis_File* vf, char* initial, int32_t ibytes, ov_callbacks callbacks)"
+_v_readstring 0046C090 f end=0046C0BA type="void __usercall func(oggpack_buffer* o@<ebx>, char* buf@<ecx>, int32_t bytes@<eax>)"
+vorbis_comment_init 0046C0C0 f end=0046C0D5 type="void __cdecl func(vorbis_comment* vc)"
+vorbis_comment_clear 0046C0E0 f end=0046C17D type="void __stdcall func(vorbis_comment* vc)"
+vorbis_info_blocksize 0046C180 f end=0046C19A type="int32_t __cdecl func(vorbis_info* vi, int32_t zo)"
+vorbis_info_init 0046C1A0 f end=0046C1EB type="int32_t __stdcall func(vorbis_info* vi)"
+vorbis_info_clear 0046C1F0 f end=0046C393 type="void __stdcall func(vorbis_info* vi)"
+_vorbis_unpack_info 0046C3A0 f end=0046C46D type="int32_t __usercall func@<eax>(vorbis_info* vi@<edi>, oggpack_buffer* opb@<esi>)"
+_vorbis_unpack_comment 0046C470 f end=0046C59B type="int32_t __usercall func@<eax>(vorbis_comment* vc@<esi>, oggpack_buffer* opb)"
+_vorbis_unpack_books 0046C5A0 f end=0046C888 type="int32_t __usercall func@<eax>(vorbis_info* vi, oggpack_buffer* opb@<esi>)"
+vorbis_synthesis_idheader 0046C890 f end=0046C9AA type="int32_t __cdecl func(ogg_packet* op)"
+vorbis_synthesis_headerin 0046C9B0 f end=0046CB31 type="int32_t __stdcall func(vorbis_info* vi, vorbis_comment* vc, ogg_packet* op)"
+vorbis_synthesis 0046CB40 f end=0046CCA9 type="int32_t __stdcall func(vorbis_block* vb, ogg_packet* op)"
+vorbis_synthesis_trackonly 0046CCB0 f end=0046CD8A type="int32_t __stdcall func(vorbis_block* vb, ogg_packet* op)"
+vorbis_packet_blocksize 0046CD90 f end=0046CE0A type="int32_t __cdecl func(vorbis_info* vi, ogg_packet* op)"
+vorbis_block_init 0046CE10 f end=0046CE3D type="int32_t __cdecl func(vorbis_dsp_state* v, vorbis_block* vb)"
+_vorbis_block_alloc 0046CE40 f end=0046CEC2 type="void* __stdcall func(vorbis_block* vb, int32_t bytes)"
+_vorbis_block_ripcord 0046CED0 f end=0046CF51 type="void __stdcall func(vorbis_block* vb)"
+vorbis_block_clear 0046CF60 f end=0046CF9C type="int32_t __stdcall func(vorbis_block* vb)"
+_vds_shared_init 0046CFA0 f end=0046D306 type="int32_t __usercall func@<eax>(vorbis_dsp_state* v@<edi>, vorbis_info* vi)"
+vorbis_dsp_clear 0046D310 f end=0046D5E6 type="void __stdcall func(vorbis_dsp_state* v)"
+vorbis_synthesis_restart 0046D5F0 f end=0046D650 type="int32_t __cdecl func(vorbis_dsp_state* v)"
+vorbis_synthesis_init 0046D650 f end=0046D67D type="int32_t __stdcall func(vorbis_dsp_state* v, vorbis_info* vi)"
+vorbis_synthesis_blockin 0046D680 f end=0046DFDF type="int32_t __cdecl func(vorbis_dsp_state* v, vorbis_block* vb)"
+vorbis_synthesis_pcmout 0046DFE0 f end=0046E035 type="int32_t __cdecl func(vorbis_dsp_state* v, float*** pcm)"
+vorbis_synthesis_read 0046E040 f end=0046E065 type="int32_t __cdecl func(vorbis_dsp_state* v, int32_t n)"
+_vp_global_free 0046E070 f end=0046E0A8 type="void __stdcall func(vorbis_look_psy_global* look)"
+_vi_psy_free 0046E0B0 f end=0046E0DB type="void __stdcall func(vorbis_info_psy* i)"
+_vp_psy_clear 0046E0E0 f end=0046E1FC type="void __stdcall func(vorbis_look_psy* p)"
+_ilog 0046E200 f end=0046E219 type="int32_t __cdecl func(uint32_t v)"
+_make_words 0046E220 f end=0046E3AF type="ogg_uint32_t* __stdcall func(int32_t* l, int32_t n, int32_t sparsecount)"
+_book_maptype1_quantvals 0046E3B0 f end=0046E421 type="int32_t __stdcall func(static_codebook* b)"
+_book_unquantize 0046E430 f end=0046E66D type="float* __stdcall func(static_codebook* b, int32_t n, int32_t* sparsemap)"
+vorbis_staticbook_clear 0046E670 f end=0046E6CD type="void __stdcall func(static_codebook* b)"
+vorbis_staticbook_destroy 0046E6D0 f end=0046E6F3 type="void __stdcall func(static_codebook* b)"
+vorbis_book_clear 0046E700 f end=0046E799 type="void __stdcall func(codebook* b)"
+sort32a 0046E7A0 f end=0046E7C1 type="int32_t __cdecl func(void* a, void* b)"
+vorbis_book_init_decode 0046E7D0 f end=0046ED0F type="int32_t __stdcall func(codebook* c, static_codebook* s)"
+vorbis_staticbook_unpack 0046ED10 f end=0046EFB4 type="int32_t __stdcall func(oggpack_buffer* opb, static_codebook* s)"
+bitreverse 0046EFC0 f end=0046F01D type="ogg_uint32_t __usercall func@<eax>(ogg_uint32_t x@<ecx>)"
+decode_packed_entry_number 0046F020 f end=0046F143 type="int32_t __cdecl func(codebook* book, oggpack_buffer* b)"
+vorbis_book_decode 0046F150 f end=0046F17D type="int32_t __cdecl func(codebook* book, oggpack_buffer* b)"
+vorbis_book_decodevs_add 0046F180 f end=0046F2E2 type="int32_t __cdecl func(codebook* book, float* a, oggpack_buffer* b, int32_t n)"
+vorbis_book_decodev_add 0046F2F0 f end=0046F435 type="int32_t __cdecl func(codebook* book, float* a, oggpack_buffer* b, int32_t n)"
+vorbis_book_decodev_set 0046F460 f end=0046F4F6 type="int32_t __cdecl func(codebook* book, float* a, oggpack_buffer* b, int32_t n)"
+vorbis_book_decodevv_add 0046F500 f end=0046F5A0 type="int32_t __cdecl func(codebook* book, float** a, int32_t offset, int32_t ch, oggpack_buffer* b, int32_t n)"
+mdct_init 0046F5A0 f end=0046F785 type="int32_t __stdcall func(mdct_lookup* lookup, int32_t n)"
+mdct_butterfly_8 0046F790 f end=0046F7F6 type="void __usercall func(float* x@<eax>)"
+mdct_butterfly_16 0046F800 f end=0046F8BB type="void __usercall func(float* x@<eax>)"
+mdct_butterfly_32 0046F8C0 f end=0046FA61 type="void __usercall func(float* x@<eax>)"
+mdct_butterfly_first 0046FA70 f end=0046FB72 type="void __usercall func(float* T@<edx>, float* x@<edi>, int32_t points@<ecx>)"
+mdct_butterfly_generic 0046FB80 f end=0046FC94 type="void __usercall func(float* T@<edx>, float* x@<ebx>, int32_t points@<ecx>, int32_t trigint)"
+mdct_butterflies 0046FCA0 f end=0046FD59 type="void __usercall func(mdct_lookup* init@<eax>, float* x, int32_t points)"
+mdct_clear 0046FD60 f end=0046FDB2 type="void __stdcall func(mdct_lookup* l)"
+mdct_bitreverse 0046FDC0 f end=0046FECD type="void __usercall func(mdct_lookup* init@<eax>, float* x)"
+mdct_backward 0046FED0 f end=0047011B type="void __stdcall func(mdct_lookup* init, float* in, float* out)"
+drft_clear 00470120 f end=0047016C type="void __stdcall func(drft_lookup* l)"
+_ve_envelope_clear 00470170 f end=004701F4 type="void __stdcall func(envelope_lookup* e)"
+_vorbis_window_init 00470200 f end=004702D4 type="void __stdcall func()"
+_vorbis_window_get 004703D0 f end=004703DF type="float* __cdecl func(int32_t n)"
+mapping0_free_info 004703E0 f end=0047040B type="void __stdcall func(vorbis_info_mapping* i)"
+mapping0_unpack 00470410 f end=00470629 type="vorbis_info_mapping* __stdcall func(vorbis_info* vi, oggpack_buffer* opb)"
+mapping0_inverse 00470630 f end=00470AB3 type="int32_t __stdcall func(vorbis_block* vb, vorbis_info_mapping* l)"
+res0_free_info 00470AC0 f end=00470AEB type="void __stdcall func(vorbis_info_residue* i)"
+res0_free_look 00470AF0 f end=00470BB5 type="void __stdcall func(vorbis_look_residue* i)"
+res0_unpack 00470BC0 f end=00470D1F type="vorbis_info_residue* __stdcall func(vorbis_info* vi, oggpack_buffer* opb)"
+res0_look 00470D20 f end=00470F6A type="vorbis_look_residue* __stdcall func(vorbis_dsp_state* vd, vorbis_info_residue* vr)"
+_01inverse 00470F70 f end=00471174 type="int32_t __stdcall func(vorbis_block* vb, vorbis_look_residue* vl, float** in, int32_t ch, void* decodepart)"
+res0_inverse 00471180 f end=004711DB type="int32_t __stdcall func(vorbis_block* vb, vorbis_look_residue* vl, float** in, int32_t* nonzero, int32_t ch)"
+res1_inverse 004711E0 f end=0047123B type="int32_t __stdcall func(vorbis_block* vb, vorbis_look_residue* vl, float** in, int32_t* nonzero, int32_t ch)"
+res2_inverse 00471240 f end=004713DE type="int32_t __stdcall func(vorbis_block* vb, vorbis_look_residue* vl, float** in, int32_t* nonzero, int32_t ch)"
+floor1_free_info 004713E0 f end=0047140B type="void __stdcall func(vorbis_info_floor* i)"
+floor1_free_look 00471410 f end=0047143B type="void __stdcall func(vorbis_look_floor* i)"
+floor1_unpack 00471440 f end=0047168C type="vorbis_info_floor* __stdcall func(vorbis_info* vi, oggpack_buffer* opb)"
+floor1_look 00471690 f end=004718AE type="vorbis_look_floor* __stdcall func(vorbis_dsp_state* vd, vorbis_info_floor* in)"
+render_line 004718C0 f end=00471A2B type="void __usercall func(int32_t n, int32_t x0, int32_t x1, int32_t y0, int32_t y1@<ecx>, float* d)"
+floor1_inverse1 00471A30 f end=00471D1F type="void* __stdcall func(vorbis_block* vb, vorbis_look_floor* in)"
+floor1_inverse2 00471D20 f end=00471E82 type="int32_t __cdecl func(vorbis_block* vb, vorbis_look_floor* in, void* memo, float* out)"
+floor0_free_info 00471E90 f end=00471EB8 type="void __stdcall func(vorbis_info_floor* i)"
+floor0_free_look 00471EC0 f end=00471F44 type="void __stdcall func(vorbis_look_floor* i)"
+floor0_unpack 00471F50 f end=00472046 type="vorbis_info_floor* __stdcall func(vorbis_info* vi, oggpack_buffer* opb)"
+floor0_map_lazy_init 00472050 f end=004721BF type="int32_t __usercall func@<eax>(vorbis_block* vb@<eax>, vorbis_info_floor* infoX, vorbis_look_floor0* look@<esi>)"
+floor0_look 004721C0 f end=00472211 type="vorbis_look_floor* __stdcall func(vorbis_dsp_state* vd, vorbis_info_floor* i)"
+floor0_inverse1 00472220 f end=0047235B type="void* __stdcall func(vorbis_block* vb, vorbis_look_floor* i)"
+floor0_inverse2 00472360 f end=004723ED type="int32_t __stdcall func(vorbis_block* vb, vorbis_look_floor* i, void* memo, float* out)"
+vorbis_lsp_to_curve 004723F0 f end=004725F4 type="void __stdcall func(float* curve, int32_t* map, int32_t n, int32_t ln, float* lsp, int32_t m, float amp, float ampoffset)"
+ogg_page_continued 00472600 f end=00472611 type="int32_t __cdecl func(ogg_page* og)"
+ogg_page_bos 00472620 f end=00472631 type="int32_t __cdecl func(ogg_page* og)"
+ogg_page_eos 00472640 f end=00472651 type="int32_t __cdecl func(ogg_page* og)"
+ogg_page_granulepos 00472660 f end=004726EB type="ogg_int64_t __cdecl func(ogg_page* og)"
+ogg_page_serialno 004726F0 f end=00472714 type="int32_t __cdecl func(ogg_page* og)"
+ogg_stream_init 00472720 f end=004727BC type="int32_t __stdcall func(ogg_stream_state* os, int32_t serialno)"
+ogg_stream_clear 004727C0 f end=0047282D type="int32_t __stdcall func(ogg_stream_state* os)"
+_os_lacing_expand 00472830 f end=00472882 type="void __usercall func(ogg_stream_state* os@<esi>, int32_t needed@<ecx>)"
+ogg_page_checksum_set 00472890 f end=0047292C type="void __cdecl func(ogg_page* og)"
+ogg_sync_init 00472930 f end=00472952 type="int32_t __cdecl func(ogg_sync_state* oy)"
+ogg_sync_clear 00472960 f end=0047299F type="int32_t __stdcall func(ogg_sync_state* oy)"
+ogg_sync_buffer 004729A0 f end=00472A29 type="char* __stdcall func(ogg_sync_state* oy, int32_t size)"
+ogg_sync_wrote 00472A30 f end=00472A4F type="int32_t __cdecl func(ogg_sync_state* oy, int32_t bytes)"
+ogg_sync_pageseek 00472A50 f end=00472CCB type="int32_t __cdecl func(ogg_sync_state* oy, ogg_page* og)"
+ogg_sync_pageout 00472CD0 f end=00472D1C type="int32_t __cdecl func(ogg_sync_state* oy, ogg_page* og)"
+ogg_stream_pagein 00472D20 f end=00473009 type="int32_t __stdcall func(ogg_stream_state* os, ogg_page* og)"
+ogg_sync_reset 00473010 f end=0047302B type="int32_t __cdecl func(ogg_sync_state* oy)"
+ogg_stream_reset 00473030 f end=0047307F type="int32_t __cdecl func(ogg_stream_state* os)"
+ogg_stream_reset_serialno 00473080 f end=004730D8 type="int32_t __cdecl func(ogg_stream_state* os, int32_t serialno)"
+_packetout 004730E0 f end=004731F4 type="int32_t __usercall func@<eax>(ogg_stream_state* os@<eax>, ogg_packet* op@<esi>, int32_t adv)"
+ogg_stream_packetout 00473200 f end=00473217 type="int32_t __stdcall func(ogg_stream_state* os, ogg_packet* op)"
+ogg_stream_packetpeek 00473220 f end=00473237 type="int32_t __stdcall func(ogg_stream_state* os, ogg_packet* op)"
+oggpack_readinit 00473240 f end=0047325E type="void __cdecl func(oggpack_buffer* b, uint8_t* buf, int32_t bytes)"
+oggpack_look 00473260 f end=00473303 type="int32_t __cdecl func(oggpack_buffer* b, int32_t bits)"
+oggpack_adv 00473310 f end=00473336 type="void __cdecl func(oggpack_buffer* b, int32_t bits)"
+oggpack_read 00473340 f end=00473402 type="int32_t __cdecl func(oggpack_buffer* b, int32_t bits)"
+icomp 005C5750 f end=005C5765 type="int32_t __cdecl func(void* a, void* b)"

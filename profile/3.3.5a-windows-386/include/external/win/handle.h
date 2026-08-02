@@ -4,5 +4,6 @@
 typedef void* HANDLE;
 typedef void* HWND;
 typedef void* HINSTANCE;
+typedef void* HMODULE;
 
 #endif

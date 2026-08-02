@@ -1,7 +1,11 @@
+comdat_folded_accept_16_return_uint32_0 008F6DC0 f end=008F6DC5
 purecall 0040BAA5 f end=0040BACF
 nullsub_1 0040D3B5 f
+comdat_folded_return_uint8_0 00427A90 f end=00427A93 type="uint8_t __stdcall func()"
 nullsub_2 0047ADD0 f
 j_nullsub_3 0047B760 f
+comdat_folded_accept_4_return_uint32_0 004899F0 f end=004899F5
+comdat_folded_return_float_0 004D5EE0 f end=004D5EE3 ; known names: CGObject_C__GetFacing, CGCamera__GetDefaultZoomMinDistance
 nullsub_3 005EEB70 f end=005EEB71 ; SErrDisplayAppFatal resolves to this in release mode?
 nullsub_4 00632050 f
 nullsub_5 00653A10 f
@@ -11,12 +15,10 @@ nullsub_6 006B1B90 f
 nullsub_155 006B1BA0 f
 nullsub_152 00743550 f
 nullsub_153 00743560 f
-stub_return_one_byte 008A1420 f end=008A1423 ; known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback
-stub_return_int32_one 008C8DE0 f type="int32_t __stdcall func()" ; Known names: GxDefaultApi, CCommand_Perf
-stub_return_zero4 008E5250 f end=008E5253 ; known names Script_ToggleTris, CLayoutFrame::IsAttachmentOrigin()
-stub_return_zero_float 004D5EE0 f end=004D5EE3 ; known names: CGObject_C__GetFacing, CGCamera__GetDefaultZoomMinDistance
-stub_return_xor_eax 00936900 f end=00936905
-stub_return_zero 004899F0 f end=004899F5
+comdat_folded_return_uint8_1 008A1420 f end=008A1423 ; known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback
+comdat_folded_return_uint32_1 008C8DE0 f type="int32_t __stdcall func()" ; Known names: GxDefaultApi, CCommand_Perf
+comdat_folded_return_uint32_0 008E5250 f end=008E5253 ; known names Script_ToggleTris, CLayoutFrame::IsAttachmentOrigin()
+comdat_folded_accept_20_return_uint32_0 00936900 f end=00936905
 nullsub_7 009D34B0 f
 nullsub_8 009D34C0 f
 nullsub_9 009D4260 f
@@ -161,3 +163,6 @@ nullsub_147 009DE1A0 f
 nullsub_148 009DE1B0 f
 nullsub_149 009DE1C0 f
 nullsub_150 009DE1D0 f
+comdat_folded_accept_8_return_uint32_0 0091E590 f end=0091E595 type="uint32_t __stdcall func()"
+comdat_folded_store_ecx_uint32_0 00921A00 f end=00921A09 ; This can be any method that sets the first object member to 0/nullptr e.g. SSyncObject::SSyncObject
+comdat_folded_accept_4_return_uint32_14 008C52D0 f end=008C52D8 ; BattlenetLogin::NextSecurityState, FMOD::DSPResampler::addInput

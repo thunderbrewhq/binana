@@ -1,0 +1,12 @@
+#ifndef WM_SDK_WMT_STREAM_SELECTION_H
+#define WM_SDK_WMT_STREAM_SELECTION_H
+
+DECLARE_ENUM(WMT_STREAM_SELECTION);
+
+enum WMT_STREAM_SELECTION {
+    WMT_OFF             = 0,
+    WMT_CLEANPOINT_ONLY = 1,
+    WMT_ON              = 2
+};
+
+#endif

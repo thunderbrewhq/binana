@@ -1,0 +1,16 @@
+#ifndef D3D9_DSB_POSITION_NOTIFY_H
+#define D3D9_DSB_POSITION_NOTIFY_H
+
+DECLARE_STRUCT(DSBPOSITIONNOTIFY);
+
+typedef DSBPOSITIONNOTIFY*       LPDSBPOSITIONNOTIFY;
+typedef const DSBPOSITIONNOTIFY* LPCDSBPOSITIONNOTIFY;
+
+#include "external/win/handle.h"
+
+struct DSBPOSITIONNOTIFY {
+    uint32_t dwOffset;
+    HANDLE   hEventNotify;
+};
+
+#endif

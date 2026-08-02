@@ -2,9 +2,14 @@
 #define WIN_LARGEINTEGER_H
 
 DECLARE_STRUCT(LARGE_INTEGER);
+DECLARE_STRUCT(ULARGE_INTEGER);
 
 struct LARGE_INTEGER {
-  int64_t QuadPart;
+    int64_t QuadPart;
+};
+
+struct ULARGE_INTEGER {
+    uint64_t QuadPart;
 };
 
 #endif

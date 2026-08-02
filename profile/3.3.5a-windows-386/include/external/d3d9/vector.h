@@ -3,10 +3,14 @@
 
 DECLARE_STRUCT(D3DVECTOR);
 
+typedef D3DVECTOR* LPD3DVECTOR;
+
+#include "external/d3d9/value.h"
+
 struct D3DVECTOR {
-  float x;
-  float y;
-  float z;
+    D3DVALUE x;
+    D3DVALUE y;
+    D3DVALUE z;
 };
 
 #endif
