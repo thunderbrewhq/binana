@@ -788,7 +788,7 @@ enum FMOD__MIDI_FORMAT {
 };
 
 enum FMOD_SYSTEM_CALLBACKTYPE {
-    FMOD_SYSTEM_CALLBACKTYPE_0,
+    FMOD_SYSTEM_CALLBACKTYPE_DEVICELISTCHANGED
 };
 
 enum FMOD_SOUNDGROUP_BEHAVIOR {
@@ -5409,13 +5409,14 @@ struct FMOD__GeometryI {
     uint32_t                      unk108;             // 0x108
 };
 
-// size = [0x14]
+// size = [0x18]
 struct FMOD__GeometryMgr {
     FMOD__SystemI*   mSystem;          // 0x00
     bool             mMoved;           // 0x04
     FMOD__Octree*    mMainOctree;      // 0x08
     uint32_t         unk0C;            // 0x0C
     FMOD__GeometryI* mFirstUpdateItem; // 0x10
+    float            mWorldSize;       // 0x14
 };
 
 struct FMOD__Listener {
@@ -5551,7 +5552,7 @@ struct FMOD__SystemI {
     FMOD_OUTPUTTYPE            mOutputType;                   // 0x450
     FMOD_SOUND_FORMAT          mOutputFormat;                 // 0x454
     int32_t                    mOutputRate;                   // 0x458
-    uint32_t                   unk45C;                        // 0x45C
+    int32_t                    mOutputHandle;                 // 0x45C
     int32_t                    mMaxInputChannels;             // 0x460
     int32_t                    mMaxOutputChannels;            // 0x464
     int32_t                    mSelectedDriver;               // 0x468
@@ -5559,10 +5560,8 @@ struct FMOD__SystemI {
     int32_t                    mRecordID;                     // 0x470
     uint32_t                   mDSPBlockSize;                 // 0x474
     uint32_t                   mDSPBufferSize;                // 0x478
-    uint32_t                   unk47C;                        // 0x47C
-    uint32_t                   unk480;                        // 0x480
-    uint32_t                   unk484;                        // 0x484
-    uint32_t                   unk488;                        // 0x488
+    float*                     mDSPTempBuff[2];               // 0x47C
+    float*                     mDSPTempBuffMem[2];            // 0x484
     float*                     mDSPMixBuff[128];              // 0x48C
     FMOD__DSPConnectionPool    mDSPConnectionPool;            // 0x68C
     FMOD_OS_CRITICALSECTION*   mDSPCrit;                      // 0x934
@@ -5573,7 +5572,7 @@ struct FMOD__SystemI {
     FMOD__DSPI*                mDSPSoundCard;                 // 0x948
     FMOD__DSPI*                mDSPChannelGroupTarget;        // 0x94C
     FMOD__TimeStamp            mDSPTimeStamp;                 // 0x950
-    uint32_t                   unk988;                        // 0x988
+    int32_t                    mDSPTempBuffIndex;             // 0x988 invented name
     FMOD__DSPConnectionRequest mConnectionRequest[1024];      // 0x98C
     FMOD__DSPConnectionRequest mConnectionRequestUsedHead;    // 0x798C
     FMOD__DSPConnectionRequest mConnectionRequestFreeHead;    // 0x79A8
@@ -5590,7 +5589,7 @@ struct FMOD__SystemI {
     int32_t                    mWAVPluginHandle;              // 0x7CA4
     int32_t                    mMPEGPluginHandle;             // 0x7CA8
     FMOD_ADVANCEDSETTINGS      mAdvancedSettings;             // 0x7CAC
-    uint32_t                   unk7CE4;                       // 0x7CE4
+    void*                      mUserData;                     // 0x7CE4
     FMOD__TimeStamp            mUpdateTimeStamp;              // 0x7CE8
     uint32_t                   mLastTimeStamp;                // 0x7D20
     uint32_t                   mIndex;                        // 0x7D24
@@ -5607,46 +5606,15 @@ struct FMOD__SystemI {
     FMOD_DSP_RESAMPLER         mResampleMethod;               // 0x7DB8
     FMOD__MemSingleton         mMultiSubSampleLockBuffer;     // 0x7DBC
     FMOD_OS_CRITICALSECTION*   mMultiSubSampleLockBufferCrit; // 0x7DC4
-    FMOD_OS_CRITICALSECTION*   crit7DC8;                      // 0x7DC8
+    FMOD_OS_CRITICALSECTION*   mSoundLockBufferCrit;          // 0x7DC8 invented name
     FMOD_FILE_OPENCALLBACK     mOpenRiderCallback;            // 0x7DCC
-    uint32_t                   unk7DD0;                       // 0x7DD0
-    uint32_t                   unk7DD4;                       // 0x7DD4
+    FMOD_FILE_CLOSECALLBACK    mCloseRiderCallback;           // 0x7DD0
+    FMOD_FILE_READCALLBACK     mReadRiderCallback;            // 0x7DD4
     FMOD_FILE_SEEKCALLBACK     mSeekRiderCallback;            // 0x7DD8
-    FMOD_SYSTEM_CALLBACK       mCallback;                     // 0x7DDC
-    uint32_t                   unk7DE0;                       // 0x7DE0
-    uint32_t                   unk7DE4;                       // 0x7DE4
-    uint32_t                   unk7DE8;                       // 0x7DE8
-    uint32_t                   unk7DEC;                       // 0x7DEC
-    uint32_t                   unk7DF0;                       // 0x7DF0
-    uint32_t                   unk7DF4;                       // 0x7DF4
-    uint32_t                   unk7DF8;                       // 0x7DF8
-    uint32_t                   unk7DFC;                       // 0x7DFC
-    uint32_t                   unk7E00;                       // 0x7E00
-    uint32_t                   unk7E04;                       // 0x7E04
-    uint32_t                   unk7E08;                       // 0x7E08
-    uint32_t                   unk7E0C;                       // 0x7E0C
-    uint32_t                   unk7E10;                       // 0x7E10
-    uint32_t                   unk7E14;                       // 0x7E14
-    uint32_t                   unk7E18;                       // 0x7E18
-    uint32_t                   unk7E1C;                       // 0x7E1C
-    uint32_t                   unk7E20;                       // 0x7E20
-    uint32_t                   unk7E24;                       // 0x7E24
-    uint32_t                   unk7E28;                       // 0x7E28
-    uint32_t                   unk7E2C;                       // 0x7E2C
-    uint32_t                   unk7E30;                       // 0x7E30
-    uint32_t                   unk7E34;                       // 0x7E34
-    uint32_t                   unk7E38;                       // 0x7E38
-    uint32_t                   unk7E3C;                       // 0x7E3C
-    uint32_t                   unk7E40;                       // 0x7E40
-    uint32_t                   unk7E44;                       // 0x7E44
-    uint32_t                   unk7E48;                       // 0x7E48
-    uint32_t                   unk7E4C;                       // 0x7E4C
-    uint32_t                   unk7E50;                       // 0x7E50
-    uint32_t                   unk7E54;                       // 0x7E54
-    uint32_t                   unk7E58;                       // 0x7E58
+    FMOD_SYSTEM_CALLBACK       mCallback[32];                 // 0x7DDC
     FMOD__SpeakerLevelsPool    mSpeakerLevelsPool;            // 0x7E5C
-    uint32_t                   unk7E64;                       // 0x7E64
-    uint32_t                   unk7E68;                       // 0x7E68
+    uint32_t                   mStreamFileBufferSize;         // 0x7E64
+    FMOD_TIMEUNIT              mStreamFileBufferSizeType;     // 0x7E68
     FMOD_SPEAKERMODE           mSpeakerMode;                  // 0x7E6C
     FMOD_SPEAKERCONFIG         mSpeaker[8];                   // 0x7E70
     FMOD_SPEAKERCONFIG*        mSpeakerList[8];               // 0x7F50
@@ -5655,33 +5623,17 @@ struct FMOD__SystemI {
     FMOD__LinkedListNode*      mStreamListChannelNext;        // 0x7F80
     FMOD__LinkedListNode       mStreamListSoundHead;          // 0x7F84
     FMOD__Thread               mStreamThread;                 // 0x7F90
-    uint32_t                   unk80B4;                       // 0x80B4
+    bool                       mStreamThreadActive;           // 0x80B4
     FMOD_OS_CRITICALSECTION*   mStreamRealchanCrit;           // 0x80B8
     FMOD_OS_CRITICALSECTION*   mStreamUpdateCrit;             // 0x80BC
     FMOD_OS_CRITICALSECTION*   mStreamListCrit;               // 0x80C0
     FMOD__TimeStamp            mStreamTimeStamp;              // 0x80C4
     FMOD__OutputSoftware*      mSoftware;                     // 0x80FC
-    uint32_t                   unk8100;                       // 0x8100
-    uint32_t                   unk8104;                       // 0x8104
-    uint32_t                   unk8108;                       // 0x8108
-    uint32_t                   unk810C;                       // 0x810C
-    uint32_t                   unk8110;                       // 0x8110
-    uint32_t                   unk8114;                       // 0x8114
-    uint32_t                   unk8118;                       // 0x8118
-    uint32_t                   unk811C;                       // 0x811C
-    uint32_t                   unk8120;                       // 0x8120
-    uint32_t                   unk8124;                       // 0x8124
-    uint32_t                   unk8128;                       // 0x8128
-    uint32_t                   unk812C;                       // 0x812C
-    uint32_t                   unk8130;                       // 0x8130
-    uint32_t                   unk8134;                       // 0x8134
-    uint32_t                   unk8138;                       // 0x8138
-    uint32_t                   unk813C;                       // 0x813C
+    FMOD_SPEAKER               mASIOSpeakerList[16];          // 0x8100
     FMOD__DSPCodecPool         mDSPCodecPool_MPEG;            // 0x8140
     FMOD__DSPCodecPool         mDSPCodecPool_ADPCM;           // 0x8250
     FMOD__GeometryI*           mGeometryList;                 // 0x8360
     FMOD__GeometryMgr          mGeometryMgr;                  // 0x8364
-    uint32_t                   unk8378;                       // 0x8378
     FMOD__ReverbI              mReverbGlobal;                 // 0x837C
     FMOD__ReverbI              mReverb3D;                     // 0x843C
     FMOD__ReverbI              mReverb3DHead;                 // 0x84FC
