@@ -2277,11 +2277,9 @@ struct FMOD__Global {
     FMOD__SystemI* gSystemHead;        // 0x000
     FMOD__MemPool* gSystemPool;        // 0x004
     int32_t        gSystemInitCount;   // 0x008
-    uint32_t       unk0C;              // 0x00C
     FMOD_UINT64P   gDSPClock;          // 0x010
     uint32_t       gDSPClockTimeStamp; // 0x018
     int32_t        gFileBusy;          // 0x01C
-    uint32_t       m[100];
 };
 
 // FMOD::MemBlockHeader
@@ -2366,8 +2364,8 @@ struct FMOD__File {
     bool              mBusy;      // 0x17D invented name: equivalent to mFlags & FMOD_FILE_BUSY
     bool              mStarving;  // 0x17E invented name: equivalent to mFlags & FMOD_FILE_STARVING
     bool              mExit;      // 0x17F invented name: equivalent to mFlags & FMOD_FILE_EXIT
-    uint32_t          unk180;     // 0x180
-    FMOD_RESULT       mAsyncError; // 0x184
+    int32_t           mPercentBuffered; // 0x180
+    FMOD_RESULT       mAsyncError;      // 0x184
     bool              mFlipping;   // 0x188 invented name: equivalent to mFlags & FMOD_FILE_FLIPPING
     FMOD__FileThread* mFileThread; // 0x18C
     FMOD_OS_SEMAPHORE* mSema;      // 0x190
