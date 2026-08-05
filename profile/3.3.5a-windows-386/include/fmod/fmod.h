@@ -3234,7 +3234,7 @@ struct FMOD__SoundI {
 struct FMOD__SoundGroupI {
     FMOD__LinkedListNode     _;                   // 0x00
     FMOD__SystemI*           mSystem;             // 0x0C
-    uint32_t                 unk10;               // 0x10
+    void*                    mUserData;           // 0x10
     FMOD__LinkedListNode     mSoundHead;          // 0x14
     char*                    mName;               // 0x20
     int32_t                  mMaxAudible;         // 0x24
