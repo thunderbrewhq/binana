@@ -2319,7 +2319,7 @@ struct FMOD__FileThread {
     FMOD__LinkedListNode*    mFileListCurrent; // 0x140
     FMOD__LinkedListNode*    mFileListNext;    // 0x144
     FMOD_OS_CRITICALSECTION* mFileListCrit;    // 0x148
-    int                      mDeviceType;      // 0x14C
+    int32_t                  mDeviceType;      // 0x14C
     bool                     mOwned;           // 0x150
 };
 
@@ -2565,75 +2565,10 @@ struct FMOD_CODEC_STATE {
 
 // size = 0x188
 struct FMOD__AsyncData {
-    uint32_t               unk00;         // 0x00
-    uint32_t               unk04;         // 0x04
-    uint32_t               unk08;         // 0x08
-    uint32_t               unk0C;         // 0x0C
-    uint32_t               unk10;         // 0x10
-    uint32_t               unk14;         // 0x14
-    uint32_t               unk18;         // 0x18
-    uint32_t               unk1C;         // 0x1C
-    uint32_t               unk20;         // 0x20
-    uint32_t               unk24;         // 0x24
-    uint32_t               unk28;         // 0x28
-    uint32_t               unk2C;         // 0x2C
-    uint32_t               unk30;         // 0x30
-    uint32_t               unk34;         // 0x34
-    uint32_t               unk38;         // 0x38
-    uint32_t               unk3C;         // 0x3C
-    uint32_t               unk40;         // 0x40
-    uint32_t               unk44;         // 0x44
-    uint32_t               unk48;         // 0x48
-    uint32_t               unk4C;         // 0x4C
-    uint32_t               unk50;         // 0x50
-    uint32_t               unk54;         // 0x54
-    uint32_t               unk58;         // 0x58
-    uint32_t               unk5C;         // 0x5C
-    uint32_t               unk60;         // 0x60
-    uint32_t               unk64;         // 0x64
-    uint32_t               unk68;         // 0x68
-    uint32_t               unk6C;         // 0x6C
-    uint32_t               unk70;         // 0x70
-    uint32_t               unk74;         // 0x74
-    uint32_t               unk78;         // 0x78
-    uint32_t               unk7C;         // 0x7C
-    uint32_t               unk80;         // 0x80
-    uint32_t               unk84;         // 0x84
-    uint32_t               unk88;         // 0x88
-    uint32_t               unk8C;         // 0x8C
-    uint32_t               unk90;         // 0x90
-    uint32_t               unk94;         // 0x94
-    uint32_t               unk98;         // 0x98
-    uint32_t               unk9C;         // 0x9C
-    uint32_t               unkA0;         // 0xA0
-    uint32_t               unkA4;         // 0xA4
-    uint32_t               unkA8;         // 0xA8
-    uint32_t               unkAC;         // 0xAC
-    uint32_t               unkB0;         // 0xB0
-    uint32_t               unkB4;         // 0xB4
-    uint32_t               unkB8;         // 0xB8
-    uint32_t               unkBC;         // 0xBC
-    uint32_t               unkC0;         // 0xC0
-    uint32_t               unkC4;         // 0xC4
-    uint32_t               unkC8;         // 0xC8
-    uint32_t               unkCC;         // 0xCC
-    uint32_t               unkD0;         // 0xD0
-    uint32_t               unkD4;         // 0xD4
-    uint32_t               unkD8;         // 0xD8
-    uint32_t               unkDC;         // 0xDC
-    uint32_t               unkE0;         // 0xE0
-    uint32_t               unkE4;         // 0xE4
-    uint32_t               unkE8;         // 0xE8
-    uint32_t               unkEC;         // 0xEC
-    uint32_t               unkF0;         // 0xF0
-    uint32_t               unkF4;         // 0xF4
-    uint32_t               unkF8;         // 0xF8
-    uint32_t               unkFC;         // 0xFC
-    uint32_t               unk100;        // 0x100
-    uint32_t               unk104;        // 0x104
-    uint32_t               unk108;        // 0x108
-    uint32_t               unk10C;        // 0x10C
-    uint32_t               unk110;        // 0x110
+    char                   mName[256];    // 0x00
+    FMOD__AsyncThread*     mThread;       // 0x100
+    FMOD__LinkedListNode   mNode;         // 0x104
+    void*                  mNameData;     // 0x110
     FMOD_CREATESOUNDEXINFO mExInfo;       // 0x114
     bool                   mExInfoExists; // 0x180
     FMOD_RESULT            mResult;       // 0x184
