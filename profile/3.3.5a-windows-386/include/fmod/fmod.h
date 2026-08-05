@@ -329,6 +329,7 @@ DECLARE_ENUM(FMOD__DSPWAVETABLE_SPEEDDIR);
 DECLARE_ENUM(FMOD__MIDI_FORMAT);
 DECLARE_ENUM(FMOD__REVERB_VERSION);
 DECLARE_ENUM(FMOD__Thead__PRIORITY); // FMOD::Thread::PRIORITY
+DECLARE_ENUM(FMOD__CHANNELREAL_PLAYDIR);
 
 // integral types
 
@@ -802,6 +803,12 @@ enum FMOD_SOUNDGROUP_BEHAVIOR {
 enum FMOD_CHANNELINDEX {
     FMOD_CHANNEL_FREE  = -1,
     FMOD_CHANNEL_REUSE = -2
+};
+
+enum FMOD__CHANNELREAL_PLAYDIR {
+    CHANNELREAL_PLAYDIR_FORWARDS,
+    CHANNELREAL_PLAYDIR_BACKWARDS,
+    CHANNELREAL_PLAYDIR_MAX = 0xFFFFFFFF
 };
 
 // callbacks
@@ -3355,7 +3362,7 @@ struct FMOD__ChannelGroupI {
     FMOD__SystemI*       mSystem;                    // 0x0C
     FMOD__DSPI*          mDSPHead;                   // 0x10 confirmed!
     FMOD__DSPI*          mDSPMixTarget;              // 0x14 confirmed!
-    uint32_t             unk18;                      // 0x18
+    void*                mUserData;                  // 0x18
     FMOD__ChannelGroupI* mParent;                    // 0x1C confirmed!
     FMOD__ChannelGroupI* mGroupHead;                 // 0x20
     FMOD__LinkedListNode mChannelHead;               // 0x24
@@ -3533,7 +3540,7 @@ struct FMOD__ChannelReal__v_table {
     P_METHOD(FMOD_RESULT, _15_setVolume, float volume);
     P_METHOD(FMOD_RESULT, _16_setFrequency, float frequency);
     P_METHOD(FMOD_RESULT, _17_setPan, float pan, float fbpan);
-    P_METHOD(FMOD_RESULT, _18_setDelay, uint32_t a2, uint32_t a3); // TODO
+    P_METHOD(FMOD_RESULT, _18_setDelay, uint32_t delayhi, uint32_t delaylo);
     P_METHOD(
         FMOD_RESULT,
         _19_setSpeakerMix,
@@ -3607,7 +3614,7 @@ struct FMOD__ChannelOpenAL__v_table {
     P_METHOD(FMOD_RESULT, _15_setVolume, float volume);
     P_METHOD(FMOD_RESULT, _16_setFrequency, float frequency);
     P_METHOD(FMOD_RESULT, _17_setPan, float pan, float fbpan);
-    P_METHOD(FMOD_RESULT, _18_setDelay, uint32_t a2, uint32_t a3); // TODO
+    P_METHOD(FMOD_RESULT, _18_setDelay, uint32_t delayhi, uint32_t delaylo); // TODO
     P_METHOD(
         FMOD_RESULT,
         _19_setSpeakerMix,
@@ -3693,12 +3700,12 @@ struct FMOD__ChannelReal {
     FMOD__CHANNELREAL_FLAG mFlags;           // 0x68
     int32_t                mIndex;           // 0x6C
     uint32_t               mPosition;        // 0x70
-    uint32_t               unk74;            // 0x74
+    int32_t                mDirection;       // 0x74 FMOD__CHANNELREAL_PLAYDIR
     int32_t                mLoopCount;       // 0x78
     uint32_t               mLoopStart;       // 0x7C
     uint32_t               mLoopLength;      // 0x80
     uint32_t               mLength;          // 0x84
-    uint32_t               unk88;            // 0x88
+    uint32_t               mStartDelay;      // 0x88 invented: implied by mEndDelay
     uint32_t               mEndDelay;        // 0x8C invented: taken from ChannelI
     float                  mMaxFrequency;    // 0x90
     float                  mMinFrequency;    // 0x94
