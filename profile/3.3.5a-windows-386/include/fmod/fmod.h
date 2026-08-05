@@ -3830,7 +3830,7 @@ struct FMOD__ChannelI {
     FMOD__LinkedListNode       _;                      // 0x00
     FMOD__SortedLinkedListNode mSortedListNode;        // 0x0C
     int32_t                    mIndex;                 // 0x1C
-    uint32_t                   unk20;                  // 0x20
+    void*                      mUserData;              // 0x20
     uint32_t                   mHandleOriginal;        // 0x24
     FMOD__SystemI*             mSystem;                // 0x28
     uint32_t                   mNumRealChannels;       // 0x2C
@@ -3878,7 +3878,7 @@ struct FMOD__ChannelI {
     float                      mReverbOcclusionTarget; // 0x16C
     FMOD_VECTOR*               mRolloffPoint;          // 0x170
     int32_t                    mNumRolloffPoints;      // 0x174
-    uint32_t                   unk178;                 // 0x178
+    float                      mSpread;                // 0x178
     float                      m3DPanLevel;            // 0x17C
     float                      m3DDopplerLevel;        // 0x180
     FMOD_CHANNEL_CALLBACK      mCallback[3];           // 0x184
