@@ -1087,7 +1087,7 @@ FMOD__DSPFFT__constructor 00918D30 f end=00918D6A type="FMOD__DSPFFT* __thiscall
 FMOD__DSPFFT__process 00918D70 f end=00919076 type="FMOD_RESULT __thiscall func(FMOD__DSPFFT* this, int32_t bits)"
 FMOD__DSPFFT__getSpectrum 009190A0 f end=00919698 type="FMOD_RESULT __thiscall func(FMOD__DSPFFT* this, float* pcmbuffer, uint32_t pcmposition, uint32_t pcmlength, float* spectrum, int32_t length, int32_t channel, int32_t numchannels, FMOD_DSP_FFT_WINDOW windowtype)"
 FMOD__DSPFilter__execute 00919720 f end=00919BF4 type="FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, float* inbuffer, float** outbuffer, uint32_t* length, int32_t inchannels, int32_t* outchannels, FMOD_SPEAKERMODE speakermode)" ; TODO confirm this
-FMOD__DSPFilter__startBuffering 00919C00 f end=00919C94 type="FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, uint32_t bufferchannels)"
+FMOD__DSPFilter__startBuffering 00919C00 f end=00919C94 type="FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, uint32_t historylength)"
 FMOD__DSPFilter__getHistoryBuffer 00919CA0 f end=00919CD6 type="FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, float** buffer, uint32_t* position, uint32_t* length)"
 FMOD__DSPFilter__release 00919CE0 f end=00919D24 type="void __thiscall func(FMOD__DSPFilter* this, bool freethis)"
 FMOD__GeometryI__updateSpatialData 00919D30 f end=00919EBA type="void __thiscall func(FMOD__GeometryI* this)"

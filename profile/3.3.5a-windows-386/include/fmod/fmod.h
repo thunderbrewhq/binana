@@ -1500,7 +1500,7 @@ struct FMOD_SPEAKERCONFIG {
     FMOD_SPEAKER mSpeaker;  // 0x00
     FMOD_VECTOR  mPosition; // 0x04
     float        mXZAngle;  // 0x10
-    uint32_t     unk14;     // 0x14
+    float        mDistance; // 0x14
     bool         mActive;   // 0x18
 };
 
@@ -2098,10 +2098,10 @@ struct FMOD__DSPI {
     float                   mDefaultPan;       // 0xD8
     int32_t                 mDefaultPriority;  // 0xDC
     float*                  mBuffer;           // 0xE0
-    uint32_t                unkE4;             // 0xE4
-    uint32_t                mFlags;            // 0xE8
-    uint8_t*                mWantsToFinish;    // 0xEC
-    uint8_t                 mWantsToFinishMem; // 0xF0
+    int32_t  mBufferChannels; // 0xE4 unconfirmed: assumed to be present despite no evidence of use
+    uint32_t mFlags;          // 0xE8
+    uint8_t* mWantsToFinish;  // 0xEC
+    uint8_t  mWantsToFinishMem; // 0xF0
 };
 
 // size = 0x104
@@ -2109,8 +2109,8 @@ struct FMOD__DSPFilter {
     FMOD__DSPI _;                // 0x000
     float*     mHistoryBuffer;   // 0x0F4
     uint32_t   mHistoryPosition; // 0x0F8
-    int32_t    mBufferChannels;  // 0x0FC
-    int32_t    unk100;           // 0x100
+    int32_t    mHistoryLength;   // 0x0FC
+    int32_t    mBufferChannels;  // 0x100
 };
 
 // size >= 0x150
@@ -2119,27 +2119,27 @@ struct FMOD__DSPFilter {
 struct FMOD__DSPResampler {
     FMOD__DSPFilter _; // 0x000
     // (64-bit alignment) uint32_t        unk104;             // 0x104
-    FMOD_UINT64P mPosition;             // 0x108
-    FMOD_SINT64P mSpeed;                // 0x110 confirmed
-    float        mFrequency;            // 0x118 confirmed
-    int32_t      mTargetFrequency;      // 0x11C confirmed
-    FMOD_UINT64P mResamplePosition;     // 0x120
-    void*        mResampleBufferMemory; // 0x128
-    void*        mResampleBuffer;       // 0x12C
-    uint32_t     unk130;                // 0x130
-    uint32_t     mResampleBlockLength;  // 0x134
-    uint32_t     mResampleBufferLength; // 0x138
-    uint32_t     mResampleBufferPos;    // 0x13C
-    uint32_t     mResampleFinishPos;    // 0x140
-    uint32_t     mOverflowLength;       // 0x144
-    uint32_t     unk148;                // 0x148
-    int32_t      mFill;                 // 0x14C
-    uint32_t     mLength;               // 0x150
-    uint32_t     mLoopStart;            // 0x154
-    int32_t      mLoopLength;           // 0x158
-    uint32_t     mLoopCount;            // 0x15C
-    FMOD_MODE    mMode;                 // 0x160
-    uint32_t     unk164;                // 0x164
+    FMOD_UINT64P mPosition;               // 0x108
+    FMOD_SINT64P mSpeed;                  // 0x110 confirmed
+    float        mFrequency;              // 0x118 confirmed
+    int32_t      mTargetFrequency;        // 0x11C confirmed
+    FMOD_UINT64P mResamplePosition;       // 0x120
+    void*        mResampleBufferMemory;   // 0x128
+    void*        mResampleBuffer;         // 0x12C
+    int32_t      mResampleBufferChannels; // 0x130
+    uint32_t     mResampleBlockLength;    // 0x134
+    uint32_t     mResampleBufferLength;   // 0x138
+    uint32_t     mResampleBufferPos;      // 0x13C
+    uint32_t     mResampleFinishPos;      // 0x140
+    uint32_t     mOverflowLength;         // 0x144
+    uint32_t     mReadPosition;           // 0x148
+    int32_t      mFill;                   // 0x14C
+    uint32_t     mLength;                 // 0x150
+    uint32_t     mLoopStart;              // 0x154
+    int32_t      mLoopLength;             // 0x158
+    uint32_t     mLoopCount;              // 0x15C
+    FMOD_MODE    mMode;                   // 0x160
+    uint32_t     unk164;                  // 0x164
 };
 
 // size = 0x168
@@ -2204,7 +2204,7 @@ struct FMOD_OUTPUT_DESCRIPTION_EX {
     FMOD_OUTPUT_INITEXCALLBACK              initex;               // 0x58
     FMOD_OUTPUT_STARTCALLBACK               start;                // 0x5C
     FMOD_OUTPUT_STOPCALLBACK                stop;                 // 0x60
-    uint32_t                                unk64;                // 0x64
+    FMOD_OUTPUT_UPDATEFINISHEDCALLBACK      updatedfinished;      // 0x64
     FMOD_OUTPUT_CREATESAMPLECALLBACK        createsample;         // 0x68
     FMOD_OUTPUT_GETSOUNDRAMCALLBACK         getsoundram;          // 0x6C
     FMOD_OUTPUT_POSTMIXCALLBACK             postmixcallback;      // 0x70
@@ -4919,7 +4919,7 @@ struct FMOD__Output {
     FMOD__Plugin         _0;                     // 0x00
     FMOD_OUTPUT_STATE    _1;                     // 0x18
     FMOD__ChannelPool*   mChannelPool;           // 0x20
-    bool                 unk24;                  // 0x24
+    bool                 mPolling;               // 0x24
     FMOD__SystemI*       mSystem;                // 0x28
     FMOD__ChannelPool*   mChannelPool3D;         // 0x2C
     int32_t              mMixAheadBlocks;        // 0x30
