@@ -1499,7 +1499,7 @@ struct FMOD_SPEAKERCONFIG {
     // float        mPairVBAPSign; // 0x28
     FMOD_SPEAKER mSpeaker;  // 0x00
     FMOD_VECTOR  mPosition; // 0x04
-    float        mXZAngle;  // 0x10
+    uint32_t     mXZAngle;  // 0x10
     float        mDistance; // 0x14
     bool         mActive;   // 0x18
 };
@@ -1525,13 +1525,13 @@ struct FMOD_CHANNEL_INFO {
     uint32_t                      mLoopEnd;          // 0x0C
     FMOD__ChannelReal*            mRealChannel;      // 0x10
     FMOD__SoundI*                 mSound;            // 0x14
-    uint32_t                      unk18;             // 0x18
+    FMOD__DSPI*                   mDSP;              // 0x18 unconfirmed
     int32_t                       mLoopCount;        // 0x1C
     bool                          mMute;             // 0x20
     uint32_t                      mDSPClockHi;       // 0x24
     uint32_t                      mDSPClockLo;       // 0x28
     FMOD_REVERB_CHANNELPROPERTIES mReverbProperties; // 0x2C
-    FMOD__DSPI*                   mDSP;              // 0x74
+    FMOD__DSPI*                   mDSPChain;         // 0x74 invented name
     FMOD_MODE                     mMode;             // 0x78
 };
 
@@ -2139,7 +2139,6 @@ struct FMOD__DSPResampler {
     int32_t      mLoopLength;             // 0x158
     uint32_t     mLoopCount;              // 0x15C
     FMOD_MODE    mMode;                   // 0x160
-    uint32_t     unk164;                  // 0x164
 };
 
 // size = 0x168
@@ -5257,7 +5256,7 @@ struct FMOD__ReverbI {
     FMOD__DSPI*              mDSP;                    // 0x10
     FMOD_REVERB_CHANNELDATA* mChannelData;            // 0x14
     FMOD_REVERB_PROPERTIES   mProps;                  // 0x18
-    uint32_t                 unk94;                   // 0x94
+    uint32_t                 mUserData;               // 0x94
     float*                   mPresenceGain;           // 0x98 invented/inferred name
     float                    mGain;                   // 0x9C
     bool                     mDisableIfNoEnvironment; // 0xA0
