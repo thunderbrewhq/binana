@@ -39,6 +39,7 @@ ClientDestroyGame 00406510 f end=004066C5
 DestroyEngineCallback 004066D0 f end=0040673F
 InitializeGlobal 004067F0 f end=00406B67
 DestroyGlobal 00406B70 f end=00406C65
+ShutdownFileAccess 00404AD0 f end=00404AFD
 CommonMain 00406C70 f end=00406D64
 CCommand_TogglePlayer 00406EC0 f end=00406EED type="int32_t __stdcall func(char* command, char* arguments)"
 GameClientCommands__Uninstall 00406EF0 f end=00406F3A type="void __thiscall func(GameClientCommands* this)"

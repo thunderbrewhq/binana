@@ -250,3 +250,4 @@ FindFileInOneArchive 0045F7D0 f end=0045FA0D
 SCompDestroy 007787A0 f end=007787CB
 SCmdDestroy 007733D0 f end=00773456
 Blizzard__Util__hashlittle2 00425DE0 f end=00425EAC
+Blizzard__Thread__Create 00450AC0 f end=00450B76
