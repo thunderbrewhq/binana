@@ -709,7 +709,6 @@ enum FMOD_SPEAKER {
 
 enum FMOD_DSPCONNECTIONREQUEST_CMD {
     DSPCONNECTION_REQUEST_ADDINPUT,
-    DSPCONNECTION_REQUEST_ADDINPUT_ERRCHECK,
     DSPCONNECTION_REQUEST_DISCONNECTFROM,
     DSPCONNECTION_REQUEST_DISCONNECTALLINPUTS,
     DSPCONNECTION_REQUEST_DISCONNECTALLOUTPUTS,
@@ -3260,11 +3259,11 @@ struct FMOD__Sample {
     int32_t      mNumSubSamples; // 0xE4
     // the fact that subsamples are getting released by Sample and not SoundI
     // seem to point to them being members of Sample. double check this later.
-    FMOD__SoundI* mSubSample[16]; // 0xE8
+    FMOD__Sample* mSubSample[16]; // 0xE8
     void*         mLockBuffer;    // 0x128 real start of Sample members?
     uint32_t      mLockLength;    // 0x12C
     uint32_t      mLockOffset;    // 0x130
-    bool          unk134;         // 0x134 mLockCanRead?
+    bool          mLockCanRead;   // 0x134
 };
 
 // size = 0x150
