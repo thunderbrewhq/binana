@@ -890,3 +890,14 @@ Unwind@009c7748 009C7748 f end=009C7753 type="void __stdcall func()" auto
 Unwind@009c7753 009C7753 f end=009C775E type="void __stdcall func()" auto
 Unwind@009c7770 009C7770 f end=009C7778 type="void __stdcall func()" auto
 sputu8 0047BE50 f end=0047BF1D
+_String_base___Xlen 00895D23 f end=00895D62
+_String_base___Xran 00895D62 f end=00895DA1
+std__string__append 0043A270 f end=0043A375
+std__string__append 00438F20 f end=00439022
+std__basic_string__int8__assign 0041D680 f end=0041D766
+std__basic_string__int8__assign 0041D770 f end=0041D837
+std__string__constructor 0041D930 f end=0041D96D
+std__string__constructor 00422CE0 f end=00422D10
+std__basic_string__int8___Grow 0041D3B0 f end=0041D4B0
+std__basic_string__int8__assign 00439030 f end=004390DB
+std__vector___Xlen 0043C250 f end=0043C2B5

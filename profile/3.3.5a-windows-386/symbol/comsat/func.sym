@@ -135,3 +135,4 @@ ComSat__RunningAverageCalculator__GetCurrentAverage 00886730 f end=0088674B
 ComSat__Sound__LevelCalculator16Bit__CalculateLevelForFrame 00887DE0 f end=00887E73
 ComSat__Sound__Manager__RegisterRemoteTalkerForSession 00883DB0 f end=00883F8A
 ComSat__Sound__CODECIPMR6000__SetThreshold 00886F10 f end=00886F74
+ComSat__Network__Session__destructor 00886170 f end=00886229

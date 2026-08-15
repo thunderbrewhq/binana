@@ -130,3 +130,7 @@ CSimpleEditBox__OnLayerKeyDownRepeat 009658D0 f end=0096591C
 CSimpleEditBox__OnLayerKeyUp 00965920 f end=0096595D
 CSimpleEditBox__RunOnCursorChangedScript 009627E0 f end=009628A2
 CSimpleEditBox__GetObjectTypeName 00966F20 f end=00966F26
+CSimpleEditBox__DeleteForwardWord 00963A10 f end=00963B04
+CSimpleEditBox__DeleteHighlight 00963260 f end=009632CC
+CSimpleEditBox__DeleteBackward 00963B10 f end=00963B60
+CSimpleEditBox__DeleteBackwardWord 00963B60 f end=00963C58

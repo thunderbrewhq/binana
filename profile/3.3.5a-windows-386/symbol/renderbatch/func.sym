@@ -7,3 +7,5 @@ CRenderBatch__Clear 00485F00 f end=00485F35
 CRenderBatch__QueueFontString 004843A0 f end=0048444C
 CRenderBatch__QueueTexture 004847A0 f end=00484AA4
 CRenderBatch__Queue 004846F0 f end=0048479B
+CRenderBatch__destructor 00487160 f end=0048718B
+CRenderBatch__destructor 00486FC0 f end=00487084

@@ -75,3 +75,5 @@ CGGameObject_C__IsQuestGiver 0070F7B0 f end=0070F7C2
 CGGameObject_C__IsTransport 00712F20 f end=00712F30
 CGGameObject_C__IsValidOpenAction 0070EF90 f end=0070F00B
 CGGameObject_C__OnRightClick 00711140 f end=00711199
+CGGameObject_C__GetBaseAlpha 0070B9A0 f end=0070B9AD
+CGGameObject_C__ShouldFadeIn 0070B9E0 f end=0070B9F1

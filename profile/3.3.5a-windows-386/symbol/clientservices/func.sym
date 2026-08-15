@@ -50,3 +50,6 @@ ClientServices__GetRealmInfoByIndex 006B2EB0 f end=006B2F12
 ClientServices__JoinRealmResult 006B3070 f end=006B318F
 ValidateCharacterNameDeclension 0076DD90 f end=0076DDD7
 ClientServices__ConnectToSelectedServer 006B2E30 f end=006B2EAC
+ClientServices__GetLoginServer 006B0F00 f end=006B0F28
+ClientServices__GetLoginServerType 004D9FE0 f end=004D9FFD
+ClientServices__GetCdKeys 006B2F20 f end=006B2F5B

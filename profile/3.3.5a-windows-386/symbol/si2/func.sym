@@ -64,3 +64,4 @@ SI2__PlayWeaponSwooshSound 004D0720 f end=004D07AC
 SI2__GlueMusicUpdate 00986080 f end=009860DD
 SI2__StopCreditsMusic 00986190 f end=009861BB
 SI2__CreditsMusicUpdate 00986130 f end=0098618D
+GenerateWeaponSwingCombatSounds 004D04E0 f end=004D0540

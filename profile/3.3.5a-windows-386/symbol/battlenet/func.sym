@@ -22,3 +22,6 @@ Battlenet__Tumor__Resolved 009C1520 f end=009C155A
 Battlenet__Tumor__constructor 009BFF90 f end=009C0036
 Battlenet__Tumor__destructor 009C0040 f end=009C006B
 TumorManager_RegisterFunction 009BFDB0 f end=009BFDCA
+Battlenet__Tumor__RemoveTendril 009C12F0 f end=009C13F3
+Battlenet__Tumor__Subscribe 009C1190 f end=009C11B7
+BattlenetAPI_SetPresenceValue 00533600 f end=00533733
