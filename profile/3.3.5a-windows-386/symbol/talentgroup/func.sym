@@ -5,3 +5,4 @@ CGTalentGroup_C__AddTalentItem 005C9310 f end=005C944C
 CGTalentGroup_C__Reset 005C9910 f end=005C995A
 CGTalentGroup_C__UpdateTabs 005C9960 f end=005C9A2A
 CGTalentGroup_C__CanAddPreviewTalentPoints 005C76E0 f end=005C76FB
+CGTalentGroup_C__ResetAllPreviewTalentPoints 005C6FB0 f end=005C7008

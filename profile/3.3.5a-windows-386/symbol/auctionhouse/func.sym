@@ -35,3 +35,4 @@ AuctionListItemQueryCallback 0059CB70 f end=0059CBAE
 AuctionOwnedSoldItemQueryCallback 0059CBE0 f end=0059CC0C
 AuctionBidItemQueryCallback 0059CC10 f end=0059CC4E
 AuctionOwnedItemQueryCallback 0059CBB0 f end=0059CBDA
+CGAuctionHouse__OnAuctionList 0059E480 f end=0059E87B

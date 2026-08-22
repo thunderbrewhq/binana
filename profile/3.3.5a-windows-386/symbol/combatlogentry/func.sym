@@ -41,3 +41,4 @@ UnitCombatLogBuildingHeal 00753100 f end=007531F0
 BuildingDamageHandler 00753730 f end=00753807
 ClearCombatLogEntries 00753810 f end=0075389C
 UnitCombatLogEnergize 00752040 f end=007520FA
+SendDamageEvent 00750660 f end=0075085E

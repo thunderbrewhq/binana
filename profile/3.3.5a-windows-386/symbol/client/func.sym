@@ -211,3 +211,6 @@ BannedAddOnCache__operator_assign 005F3510 f end=005F355C
 RegisterBannedAddOn 005F48E0 f end=005F4909
 BannedAddOnCache__constructor 005F34B0 f end=005F3508
 _GetNameInfo 0076DE70 f end=0076E0A9
+ScreenshotFormatCallback 00401B20 f end=00401B33
+ScrnSetScreenshotFormat 004A8480 f end=004A8495
+GetComponentVersionData 004294C0 f end=00429531

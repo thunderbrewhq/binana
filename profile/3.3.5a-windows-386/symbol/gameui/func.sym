@@ -199,3 +199,4 @@ CGGameUI__SetLastEnchantSpellID 00513A00 f end=00513A0D
 CGGameUI__NextCinematicInternal 00523530 f end=005235B0
 CGGameUI__BeginCinematicInternal 00527FE0 f end=00528005
 ClosestObjectMatchProc 0051FFE0 f end=0052018E
+CGGameUI__UpdateThreatWarningEnabled 00519DF0 f end=00519E7E
