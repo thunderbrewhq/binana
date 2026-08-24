@@ -284,6 +284,7 @@ DECLARE_STRUCT(FMOD__gr_info_s);
 DECLARE_STRUCT(I3DL2_LISTENERPROPERTIES);
 DECLARE_STRUCT(WAVE_FORMATEX);
 DECLARE_STRUCT(WAVE_FORMATEXTENSIBLE);
+DECLARE_STRUCT(WAVE_FORMAT_IMAADPCM);
 DECLARE_STRUCT(WAVE_SMPLHEADER);
 DECLARE_STRUCT(WAVE_SMPLHEADER__Loop);
 DECLARE_STRUCT(coeff2ndorder);
@@ -1265,6 +1266,13 @@ struct WAVE_FORMATEX {
 };
 #pragma pack(pop)
 
+#pragma pack(push, 1)
+struct WAVE_FORMAT_IMAADPCM {
+    WAVE_FORMATEX wfx;
+    uint16_t      wSamplesPerBlock;
+};
+#pragma pack(pop)
+
 union WAVE_FORMATEXTENSIBLE_Samples {
     uint16_t wValidBitsPerSample;
     uint16_t wSamplesPerBlock;
@@ -1524,6 +1532,7 @@ struct FMOD_CHANNEL_INFO {
     FMOD__DSPI*                   mDSP;              // 0x18 unconfirmed
     int32_t                       mLoopCount;        // 0x1C
     bool                          mMute;             // 0x20
+    bool                          mPaused;           // 0x21
     uint32_t                      mDSPClockHi;       // 0x24
     uint32_t                      mDSPClockLo;       // 0x28
     FMOD_REVERB_CHANNELPROPERTIES mReverbProperties; // 0x2C
@@ -2777,14 +2786,14 @@ struct FMOD__CodecFSB {
 
 // size = 0x13C
 struct FMOD__CodecWav {
-    FMOD__Codec            _;                // 0x000
-    HACMSTREAM             mACMCodec;        // 0x0D8
-    WAVE_FORMATEXTENSIBLE  mDestFormat;      // 0x0DC
-    uint32_t               mNumSyncPoints;   // 0x104
-    FMOD__SyncPoint*       mSyncPoint;       // 0x108
-    uint32_t               unk10C;           // 0x10C
-    WAVE_FORMATEXTENSIBLE  mSrcFormatMemory; // 0x110
-    WAVE_FORMATEXTENSIBLE* mSrcFormat;       // 0x138
+    FMOD__Codec            _;                     // 0x000
+    HACMSTREAM             mACMCodec;             // 0x0D8
+    WAVE_FORMATEXTENSIBLE  mDestFormat;           // 0x0DC
+    uint32_t               mNumSyncPoints;        // 0x104
+    FMOD__SyncPoint*       mSyncPoint;            // 0x108
+    int32_t                mSamplesPerADPCMBlock; // 0x10C
+    WAVE_FORMATEXTENSIBLE  mSrcFormatMemory;      // 0x110
+    WAVE_FORMATEXTENSIBLE* mSrcFormat;            // 0x138
 };
 
 struct FMOD__CodecVAG_Context {
@@ -2843,7 +2852,6 @@ struct FMOD__DSPCodec {
     FMOD__DSPCodecPool*   mPool;        // 0x31C
     FMOD_CODEC_WAVEFORMAT mWaveFormat;  // 0x320
     FMOD__Codec*          mCodec;       // 0x448
-    uint32_t              unk44C;       // 0x44C
 };
 
 // size = 0x72C0
@@ -4615,11 +4623,11 @@ struct FMOD__DSPEcho {
     float           mWetMix;                // 0x110
     int32_t         mMaxChannels;           // 0x114
     float*          mEchoBuffer;            // 0x118 (could be mEchoBufferMemory?)
-    uint32_t        unk11C;                 // 0x11C
+    float*          mEchoBufferMemory;      // 0x11C unused
     uint32_t        mEchoBufferLengthBytes; // 0x120
     uint32_t        mEchoPosition;          // 0x124
     uint32_t        mEchoLength;            // 0x128
-    uint32_t        unk12C;                 // 0x12C
+    uint32_t        mMaxLength;             // 0x12C unused
     int32_t         mOutputRate;            // 0x130
     int32_t         mChannels;              // 0x134
 };
