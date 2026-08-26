@@ -180,3 +180,5 @@ GameObjectStatsCallback 007FFE20 f end=007FFE99
 OnCancelExpectedRideVehicleAuraHandler 00800510 f end=00800546
 UnitOnRemoteMissileTrajectoryCollision 00800550 f end=00800593
 CooldownEvent 00804010 f end=00804101
+Spell_C_Destroy 008073A0 f end=0080755B
+PlaySpellVisualKit 00800610 f end=008006BC

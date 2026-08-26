@@ -29,3 +29,6 @@ EffectNetherWorld__destructor 007EA950 f end=007EA97B
 EffectNetherWorld__End 007E8E20 f end=007E8E32
 EffectDeath__destructor 007EA420 f end=007EA46A
 EffectDeath__destructor 007EA920 f end=007EA94B
+PassPropagateFog__constructor 007E80B0 f end=007E813C
+PassFogCombine__constructor 007E81B0 f end=007E8294
+PassNetherBlur__constructor 007E8990 f end=007E8B2E

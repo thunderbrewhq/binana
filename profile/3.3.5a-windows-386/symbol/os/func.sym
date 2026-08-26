@@ -69,3 +69,4 @@ OsURLDownload 00870040 f end=0087005E
 OsNet__NETSELECTSETS__AddToSet 0086D710 f end=0086D76B
 OsNet__SLTCPCONN__AddToSelectSets 0086F550 f end=0086F597
 IOsGetProcessorFeatures 0042E120 f end=0042E200
+OsGetProcessorFeaturesEx 00432D90 f end=00432F00

@@ -601,3 +601,5 @@ CGUnit_C__GetSpellCastingTime 0071AD20 f end=0071AE0C
 CGUnit_C__GetPortraitTextureName 00715950 f end=00715961
 CGUnit_C__CanHighlight 0071A390 f end=0071A3E1
 UnitLevelUpdateHandler 00730050 f end=00730096
+CGUnit_C__RenderMissileTrajectoryTargetingTexture 006FDFB0 f end=006FE7D5
+CGUnit_C__PlayRangedItemPull 00756040 f end=00756178

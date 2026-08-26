@@ -19,3 +19,23 @@ Blit_Dxt5_Argb4444 006AE620 f end=006AE674 type="void __stdcall func(C2iVector* 
 Blit_Dxt5_Argb8888 006AE680 f end=006AE6D4 type="void __stdcall func(C2iVector* size, void* in, uint32_t inStride, void* out, uint32_t outStride)" ; s_blits[BlitFormat_Dxt5][BlitFormat_Argb8888][BlitAlpha_0]
 InitBlit 006AE6E0 f end=006AE7BE
 Blit 006AE7C0 f end=006AE817 type="int32_t __stdcall func(C2iVector* size, BlitAlpha alpha, void* src, uint32_t srcStride, BlitFormat srcFmt, void* dst, uint32_t dstStride, BlitFormat dstFmt)" ; Blit(const C2iVector&, BlitAlpha, const void*, uint32_t, BlitFormat, void*, uint32_t, BlitFormat)
+ConvertTexels3216 006ABC20 f end=006ABDF8
+Blit_Dxt__Dxt3Block_CArgb 006ADEB0 f end=006ADF85
+DxtMakeTable__CArgb 006AC270 f end=006AC3ED
+Blit_DxtUnaligned__Dxt3Block_CArgb 006ADD20 f end=006ADEAC
+Blit_Dxt__Dxt3Block_CArgb4444 006ADC60 f end=006ADD15
+DxtMakeTable__CArgb4444 006AC3F0 f end=006AC5C3
+Blit_DxtUnaligned__Dxt3Block_CArgb4444 006ADAE0 f end=006ADC56
+Blit_Dxt__Dxt5Block_CArgb 006AE360 f end=006AE435
+Blit_DxtUnaligned__Dxt5Block_CArgb 006AE1D0 f end=006AE35C
+Blit_Dxt__Dxt5Block_CArgb4444 006AE110 f end=006AE1C5
+Blit_DxtUnaligned__Dxt5Block_CArgb4444 006ADF90 f end=006AE106
+Blit_Dxt__Dxt1Block_CRgb565 006AD5B0 f end=006AD660
+Blit_DxtUnaligned__Dxt1Block_CRgb565 006AD440 f end=006AD5A5
+Blit_Dxt__Dxt1Block_CArgb1555 006AD7D0 f end=006AD880
+Blit_DxtUnaligned__Dxt1Block_CArgb1555 006AD660 f end=006AD7C5
+Blit_Dxt__Dxt1Block_CArgb 006ADA10 f end=006ADADF
+Blit_DxtUnaligned__Dxt1Block_CArgb 006AD880 f end=006ADA09
+DxtMakeTableAlpha__CArgb 006ACA10 f end=006ACC4C
+DxtMakeTableAlpha__CArgb1555 006AC780 f end=006ACA04
+DxtMakeTableAlpha__CRgb565 006AC5D0 f end=006AC779

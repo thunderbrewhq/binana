@@ -315,13 +315,13 @@ FID_conflict:_GodotFailIsWindowUnicode@4 0041CE05 f end=0041CE35 type="undefined
 _GodotFailMultiByteToWideChar@24 0041CE35 f end=0041CE65 type="undefined4 __stdcall func()" auto
 FID_conflict:_GodotFailWideCharToMultiByte@32 0041CE65 f end=0041CE95 type="undefined4 __stdcall func()" auto
 FID_conflict:_GodotFaillstrcatW@8 0041CEAF f end=0041CEDF type="undefined4 __stdcall func()" auto
-FID_conflict:_GodotFailIsWindowUnicode@4 0041CEDF f end=0041CF0F type="undefined4 __stdcall func()" auto
-FID_conflict:_GodotFaillstrcatW@8 0041CF0F f end=0041CF3F type="undefined4 __stdcall func()" auto
-FID_conflict:_GodotFaillstrcatW@8 0041CF3F f end=0041CF6F type="undefined4 __stdcall func()" auto
-FID_conflict:_GodotFailGetCharWidthW@16 0041CF6F f end=0041CF9F type="undefined4 __stdcall func()" auto
+_GodotFailGetClipboardData 0041CEDF f end=0041CF0F type="undefined4 __stdcall func()" auto
+_GodotFailGetPropA 0041CF0F f end=0041CF3F type="undefined4 __stdcall func()" auto
+_GodotFailGetWindowLongA 0041CF3F f end=0041CF6F type="undefined4 __stdcall func()" auto
+_GodotFailMessageBoxW 0041CF6F f end=0041CF9F type="undefined4 __stdcall func()" auto
 FID_conflict:_GodotFaillstrcatW@8 0041CF9F f end=0041CFCF type="undefined4 __stdcall func()" auto
 FID_conflict:_GodotFailFindResourceW@12 0041CFCF f end=0041CFFF type="undefined4 __stdcall func()" auto
-FID_conflict:_GodotFailFindResourceW@12 0041CFFF f end=0041D02F type="undefined4 __stdcall func()" auto
+_GodotFailSetWindowLongA 0041CFFF f end=0041D02F 
 Catch_All@0041d420 0041D420 f end=0041D442 type="undefined* __stdcall func()" auto
 Catch_All@0041d4b0 0041D4B0 f end=0041D4E0 type="void __stdcall func()" auto
 Catch_All@0041db78 0041DB78 f end=0041DB81 type="void __stdcall func()" auto
@@ -901,3 +901,22 @@ std__string__constructor 00422CE0 f end=00422D10
 std__basic_string__int8___Grow 0041D3B0 f end=0041D4B0
 std__basic_string__int8__assign 00439030 f end=004390DB
 std__vector___Xlen 0043C250 f end=0043C2B5
+kernel32_CreateProcessW_Thunk 00895DEB f end=00895E10
+_GodotFailCreateProcessW 0041CD57 f end=0041CD64
+user32_SetWindowLongA_Thunk 00895DA1 f end=00895DC6
+user32_GetWindowLongA_Thunk 00895DC6 f end=00895DEB
+kernel32_CreateFileW_Thunk 00895EA4 f end=00895EC9
+_GodotFailCreateFileW 0041CD49 f end=0041CD57
+user32_GetPropA_Thunk 00895F13 f end=00895F38
+user32_GetClipboardData_Thunk 00895FA7 f end=00895FCC
+user32_MessageBoxW_Thunk 00896016 f end=0089603B
+kernel32_GetDiskFreeSpaceExW_Thunk 0089603B f end=00896060
+_GodotFailGetDiskFreeSpaceExW 0041CDF8 f end=0041CE05
+kernel32_GetModuleHandleW_Thunk 00895EC9 f end=00895EEE
+_GodotFailGetModuleHandleW 0041CDAC f end=0041CDB9
+kernel32_GetModuleFileNameW_Thunk 00895EEE f end=00895F13
+_GodotFailGetModuleFileNameW 0041CD9F f end=0041CDAC
+user32_SetWindowTextW_Thunk 00895FF1 f end=00896016
+_GodotFailSetWindowTextW 0041D02F f end=0041D03C
+kernel32_LoadLibraryW_Thunk 00896060 f end=00896085
+kernel32_GetVersionExW_Thunk 00896085 f end=008960AA

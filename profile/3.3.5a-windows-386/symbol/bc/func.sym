@@ -267,3 +267,7 @@ Blizzard__Lock__EventSet 00428340 f end=00428351
 System_MPQGlobals__GetMopaqGlobals 00451DC0 f end=00451E14
 System_MPQGlobals__GetMopaqGlobalsLock 00451E20 f end=00451E74
 System_SFile__ConvertRelativePathName 00454070 f end=0045411E
+System_SFile__ARCHIVEREC__ReadAdditionalAttributes 00431B50 f end=00431DAC
+System_Log__Intern 00433220 f end=00433415
+Blizzard__Debug__DefaultCallback 00439880 f end=00439A93
+System_SFile__ARCHIVEREC__FillNewHashTable 0045B6A0 f end=0045B82B
