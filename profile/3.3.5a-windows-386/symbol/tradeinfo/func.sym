@@ -26,3 +26,5 @@ Trade_C_AddItem 007040B0 f end=0070419E
 Trade_C_RemoveItem 007041A0 f end=00704219
 CGTradeInfo__GetGameError 00586520 f end=00586586
 CGTradeInfo__RemovePlayerItem 00586AA0 f end=00586B44
+Trade_C__AcceptTrade 00703F50 f end=00703FC4
+CGTradeInfo__OnTradeUpdated 00704680 f end=007048C4

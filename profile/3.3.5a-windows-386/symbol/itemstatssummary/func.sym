@@ -9,3 +9,4 @@ CGItemStatsSummary__FillOutScalingItem 0061F550 f end=0061F7EE
 CGItemStatsSummary__FillOutRandomProperties 0061FA20 f end=0061FB30
 CGItemStatsSummary__Create 006206D0 f end=00620792
 CGItemStatsSummary__Create 006265C0 f end=00626645
+CGItemStats_C__DistributeItemStat 0061B9E0 f end=0061BA85

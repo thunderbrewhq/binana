@@ -102,3 +102,6 @@ CameraDuplicate 004BFCE0 f end=004BFE6A
 CGCamera__UpdateMotion 006000E0 f end=00600494
 CollideWithWorld 006057B0 f end=006059DD
 CreateFrustum 005FF670 f end=005FF8DC
+CGCamera__FOV 005FF500 f end=005FF52B
+CGCamera__UpdatePitch 005FFC20 f end=005FFD1E
+CGCamera__SetDesiredFoVOffset 006030E0 f end=0060322C

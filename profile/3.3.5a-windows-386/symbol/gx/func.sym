@@ -13,6 +13,7 @@ OnPaint 004A8720 f end=004A8B58
 GxXformProjection 004BEC70 f end=004BEC88
 GxXformPop 0057C420 f end=0057C44A
 GxXformPush_EGxXform_C44Matrix 00616AD0 f end=00616AE8
+GxXformViewProj 00682130 f end=006821F1
 GxApiSupported 006811D0 f end=006811F0 type="int32_t __stdcall func(EGxApi api)" ; 00005410
 GxAdapterID 006811F0 f end=006811F9 ; GxAdapterID(unsigned short&, unsigned short&, unsigned int&, unsigned int&)
 GxAdapterInfer 00681200 f end=00681209

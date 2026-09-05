@@ -66,3 +66,7 @@ LoadItemCacheCallback 0070AE90 f end=0070AEF4
 CGItem_C__OnRightClick 00708200 f end=007082AB
 CGItem_C__PostInit 0070AF80 f end=0070AFA5
 CGItem_C__destructor 00706B60 f end=00706B8B
+CGItem_C__GetSelectionHighlightColor 00707150 f end=00707175
+CGItem_C__GetRandomPropertyPoints 007075A0 f end=00707645
+CGItem_C__GetPendingEnchantTime 006E6250 f end=006E6324
+CGItem_C__IsBoundForTrade 005C4970 f end=005C49BD

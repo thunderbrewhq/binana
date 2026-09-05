@@ -42,3 +42,5 @@ CGLookingForGroup__LeaveLFGSearch 00559B00 f end=00559B05
 LFGListParty__AddPlayer 00556E60 f end=00556EEB
 LFGListParty__RemovePlayer 00556EF0 f end=00556F87
 LFGLIST__RemovePlayer 00556F90 f end=00557030
+CGLookingForGroup__GetLFGProposal 00554170 f end=00554362
+CGLookingForGroup__ReadLFGPlayer 00559050 f end=00559307

@@ -9,3 +9,4 @@ CGGameObject_C_Type_Transport__GetSequenceTimeFromRealTime 00710640 f end=007106
 CGGameObject_C_Type_Transport__GetSequenceTimeFromRealTime 00713990 f end=007139AE
 CGGameObject_C_Type_Transport__InitializeMovement 00711F20 f end=0071200F
 CGGameObject_C_Type_Transport__Reenable 00712010 f end=00712023
+CGGameObject_C_Type_Transport__UpdateState 00710820 f end=007108C9

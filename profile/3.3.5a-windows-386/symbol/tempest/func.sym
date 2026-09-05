@@ -73,3 +73,7 @@ CiRect__Intersection 00683A80 f end=00683AD2
 C2iVector__MajorAxis 00984C70 f end=00984C8D
 CFacet__constructor 005FED80 f end=005FEDDC
 C3Vector__Cross 005FEC70 f end=005FECAC
+C2Vector__Normalize 006FF6A0 f end=006FF6C0
+CAaBox__Contains 0075B5B0 f end=0075B610
+floor 00577350 f end=00577366
+operator_ne__C44Matrix_C44Matrix 004C1830 f end=004C192A

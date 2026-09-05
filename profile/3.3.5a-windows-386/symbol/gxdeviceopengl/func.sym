@@ -64,3 +64,4 @@ WindowClassCreate 006A0840 f end=006A08C8
 CGxDeviceOpenGl__ICreateWindow 0068CCB0 f end=0068CE40
 CGxDeviceOpenGl__DeviceWindow 0068CCA0 f end=0068CCA7
 WindowClassCreate 0068DA10 f end=0068DA98
+CGxDeviceOpenGl__IDevAttachGlContext 0068CF60 f end=0068D041

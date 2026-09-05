@@ -12,3 +12,5 @@ CGxFont__NewCodeDesc 006C3FC0 f end=006C418F
 ScreenToPixelHeight 006C0B20 f end=006C0B60
 ScreenToPixelWidth 006C0B60 f end=006C0BA0
 CGxFont__destructor 006C3B20 f end=006C3C4A
+CGxFont__GetPixelSize 006C2270 f end=006C2277
+CGxFont__ComputeStepFixedWidth 006C3E80 f end=006C3FBD

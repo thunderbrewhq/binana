@@ -39,3 +39,6 @@ CWorldParam__CloudLODCallback 007F1CD0 f end=007F1D2D
 CWorldParam__Destroy 0078E950 f end=0078E95C
 CWorldParam__SetDefaults 0078E1A0 f end=0078E3FE
 RemoveConsoleDeviceDefaultCallback 0076AAF0 f end=0076AB76
+AddConsoleDeviceDefaultCallback 0076AAB0 f end=0076AAE3
+SetDefaults 00402530 f end=00402663
+ConsoleDeviceGetDefaultSettings 00769D30 f end=00769D36

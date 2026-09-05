@@ -17,3 +17,7 @@ CGTabardModelFrame__constructor 00598F50 f end=00598F73
 CGTabardModelFrame__GetScriptMetaTable 00598F90 f end=00598F96
 EmblemTextureUpdate 00599160 f end=00599185
 CGTabardModelFrame__CycleVariation 00599470 f end=005994B9
+CGTabardModelFrame__GetObjectTypeName 00598F80 f end=00598F86
+CGTabardModelFrame__IsA 005990D0 f end=00599115
+CGTabardModelFrame__IsA 00599120 f end=0059915E
+CGTabardModelFrame__destructor 00599190 f end=005991C4

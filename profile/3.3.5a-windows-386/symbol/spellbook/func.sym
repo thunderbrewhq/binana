@@ -41,3 +41,5 @@ CGSpellBook__DelSpellFromNameCache 0053F550 f end=0053F5D5
 CGSpellBook__IsSelectedSlot 0053D350 f end=0053D4AF
 QSortCompanions 0053C7C0 f end=0053C8A8
 CGSpellBook__GetSpellProgressionRank 0053B540 f end=0053B592
+CGSpellBook__ClearPetSpells 0053B3F0 f end=0053B40F
+CGSpellBook__ShutdownGame 0053F290 f end=0053F3A6

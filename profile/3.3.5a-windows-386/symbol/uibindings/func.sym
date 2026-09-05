@@ -37,3 +37,5 @@ CGUIBindings__Shutdown 00562820 f end=00562861
 CGUIBindings__destructor 00561C60 f end=00561D9E
 StringToMouseButton 007DC010 f end=007DC34F
 CGUIBindings__GetCommand 0055E700 f end=0055E748
+OVERRIDEKEYBINDING__destructor 00560300 f end=005603CC
+OVERRIDEKEYBINDING__SetOverrideBinding 005603D0 f end=005604F0

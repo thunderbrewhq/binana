@@ -29,3 +29,4 @@ CGPartyInfo__GetMemberPet 0052C6E0 f end=0052C75B
 CGPartyInfo__UpdateRealStats 0052BD60 f end=0052BD83
 CGPartyInfo__SetLFG 0052C0A0 f end=0052C0C4
 CGPartyInfo__SetLFGRestricted 0052C0D0 f end=0052C102
+CGPartyInfo__OnInstanceSave 0052BB10 f end=0052BBBF

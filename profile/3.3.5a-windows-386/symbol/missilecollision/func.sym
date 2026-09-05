@@ -5,3 +5,5 @@ CMissileCollision__MaybeAddUnitToWorkingList 006FCAA0 f end=006FCB52
 CMissileCollision__Init 006FCB60 f end=006FCD5E
 CMissileCollision__RemoveUnitFromSystem 006FC0F0 f end=006FC14F
 CMissileCollision__Alloc 006FC920 f end=006FC94F
+CMissileCollision__ComputeSegmentImpactTimeFromSphereList 006FC360 f end=006FC492
+CMissileCollision__ComputeSegmentImpactTime 006FC9B0 f end=006FCA38
