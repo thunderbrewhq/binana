@@ -3736,6 +3736,7 @@ struct FMOD__ChannelSoftware {
 
 // class ChannelStream : public ChannelReal, public LinkedListNode
 // vtable contains 37 methods
+// size = 0xC4
 struct FMOD__ChannelStream {
     FMOD__ChannelReal    _0;
     FMOD__LinkedListNode _1;        // 0x98
@@ -3745,8 +3746,6 @@ struct FMOD__ChannelStream {
     uint32_t             mSamplesPlayed;
     uint32_t             mSamplesWritten;
     FMOD__LinkedListNode mStreamNode;
-    int32_t              mNumRealChannels;
-    FMOD__ChannelReal*   mRealChannel[16];
 };
 
 // IMPORTANT: review this
@@ -4982,7 +4981,7 @@ struct FMOD__OutputEmulated {
     FMOD__ChannelEmulated* mChannel;
 };
 
-// size = ???
+// size = 0x288
 // class OutputTimer : public Output
 struct FMOD__OutputTimer {
     FMOD__Output             _;                 // 0x000
@@ -4992,7 +4991,6 @@ struct FMOD__OutputTimer {
     bool                     mThreadElevated;   // 0x279
     FMOD_OS_CRITICALSECTION* mMixerCrit;        // 0x27C
     int32_t                  mFillBlock;        // 0x280
-    uint32_t                 unk284;            // 0x284
 };
 
 struct FMOD__SourceOpenAL {
@@ -5169,7 +5167,6 @@ struct FMOD__OutputWASAPI {
     bool                     mRecordStereoToMono;  // 0x4C0 from FMOD_WASAPIRecordMembers
     FMOD_OS_CRITICALSECTION* mRecordTimerCrit;     // 0x4C4 invented name
     uint32_t                 mRecordTimerID;       // 0x4C8
-    uint32_t                 unk4CC;               // 0x4CC
 };
 
 // size = 0x2B8
