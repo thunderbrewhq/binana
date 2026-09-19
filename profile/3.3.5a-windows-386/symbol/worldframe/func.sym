@@ -60,3 +60,5 @@ ProjectTex2dGetModFadeTex 007E2C40 f end=007E2C53
 CGWorldFrame__GetCameraPosition 004F6650 f end=004F6677
 PerlinNoise2D 009854D0 f end=00985571
 SmoothNoise2D 009852A0 f end=009854CE
+KeyCodeToString 004F5FB0 f end=004F6144
+DrawSpellCursorShadow 004F8A40 f end=004F8D04

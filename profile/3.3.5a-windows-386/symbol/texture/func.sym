@@ -124,3 +124,4 @@ MippedImgCalcSize 006AB7E0 f end=006AB80C
 TextureLoadBlob 004B5780 f end=004B5789
 CTextureBlob__Load 004C0F50 f end=004C1027
 TextureCreateOpenFile 004B5340 f end=004B538B
+TextureCacheDestroy 004F2E20 f end=004F2E43

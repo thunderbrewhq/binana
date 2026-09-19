@@ -139,3 +139,4 @@ CCharacterComponent__UpdateItemLU 004F03A0 f end=004F03FF
 CCharacterComponent__UpdateItemFO 004F0420 f end=004F0489
 CCharacterComponent__UpdateItemLL 004F0400 f end=004F041A
 CCharacterComponent__UpdateItem 004EFFA0 f end=004F019E
+ComponentData__constructor 004DFDA0 f end=004DFE84

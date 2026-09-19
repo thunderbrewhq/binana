@@ -37,6 +37,7 @@ OsGetProcessorTicksPerSecond 0086BBA0 f end=0086BBD0 type="uint64_t __stdcall fu
 OsGetExeName 0086BBD0 f end=0086BC2F
 OsPathGetRootChars 0086BC30 f end=0086BC9E
 OsPathStripFilename 0086BE50 f end=0086BE9B
+OsPathFindExtensionWithDot 004B51C0 f end=004B520F
 OsGetExePath 0086BEA0 f end=0086BEBE
 OsGuiSetWindowTitle 0086C650 f end=0086C696
 OsGuiGetWindow 0086C6A0 f end=0086C6CE
