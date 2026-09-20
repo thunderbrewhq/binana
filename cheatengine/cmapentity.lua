@@ -1,8 +1,5 @@
 -- #include "cmapstaticentity.lua"
 
-local WoWGUID = Struct("WOWGUID")
-    :hex("guid", "uint64")
-
 local CMapEntity = Struct("CMapEntity", CMapStaticEntity)
     :paddingTo(0x98)
     :WOWGUID("GUID")

@@ -1,10 +1,5 @@
 -- #include "cmapbaseobj.lua"
 
-local CMapAreaTexture = Struct("CMapAreaTexture")
-    :uint32("memoryCapacity")
-    :uint32("count")
-    :ptr("memoryPtr")
-
 local CMapArea = Struct("CMapArea", CMapBaseObj)
     :C3Vector("bottomRight")
     :C3Vector("topLeft")

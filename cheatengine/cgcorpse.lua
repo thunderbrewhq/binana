@@ -1,10 +1,5 @@
 -- #include "cgobject.lua"
 
-local Vector3 = Struct("Vector3")
-    :float("x")
-    :float("y")
-    :float("z")
-
 local CorpseFields = Struct("CorpseFields")
     :WOWGUID("Owner")
     :WOWGUID("Party")
@@ -19,11 +14,11 @@ local CorpseFields = Struct("CorpseFields")
 
 local CGCorpse = Struct("CGCorpse", CGObject)
     :paddingTo(0xE8)
-    :Vector3("m_position") -- 0x0E8
+    :C3Vector("m_position") -- 0x0E8
     :paddingTo(0xF8)
     :float("m_facingAngle") -- 0x0F8
     :paddingTo(0x274)
-    :Vector3("m_scale") -- 0x274
+    :C3Vector("m_scale") -- 0x274
     :paddingTo(0x290)
     :ObjectFields("m_objectFields") -- 0x290
     :CorpseFields("m_corpseFields") -- 0x2A8

@@ -1,18 +1,5 @@
 -- #include "StructDef.lua"
-
-local WoWGUID = Struct("WOWGUID")
-    :hex("guid", "uint64")
-
-local TSLink = Struct("TSLink")
-    :TSLink_ptr("m_prevlink")
-    :ptr("m_next")
-
-local TSList = Struct("TSList") -- also TSExplicitList
-    :int32("m_linkoffset")
-    :TSLink("m_terminator")
-
-local TSLinkedNode = Struct("TSLinkedNode")
-    :TSLink("m_link")
+-- #include "stdlib.lua"
 
 local ObjectFields = Struct("ObjectFields")
     :WOWGUID("ObjectGUID")

@@ -1,29 +1,5 @@
 -- #include "cgobject.lua"
 
-local TSFixedArray = Struct("TSFixedArray")
-    :uint32("m_alloc") -- 0x0
-    :uint32("m_count") -- 0x4
-    :ptr("m_data") -- 0x8
-
-local TSGrowableArray = Struct("TSGrowableArray", TSFixedArray)
-    :uint32("m_chunk") -- 0xC
-
-local TSHashTable = Struct("TSHashTable")
-    :ptr("void*", "v_table") -- 0x0000
-    :TSList("m_fulllist")
-    :uint32("m_fullnessIndicator") -- 0x0010
-    :TSGrowableArray("m_slotlistarray") -- 000x14
-    :uint32("m_slotmask", {hex = true}) -- 000x24
-
-local Vector2 = Struct("Vector2")
-    :float("x")
-    :float("y")
-
-local Vector3 = Struct("Vector3")
-    :float("x")
-    :float("y")
-    :float("z")
-
 local UnitFields = Struct("UnitFields")
     :WOWGUID("Charm") -- 0x1970
     :WOWGUID("Summon") -- 0x1978
@@ -166,7 +142,7 @@ local CMovementData = Struct("CMovementData")
     :int32("unk_0788") -- 0x0788
     :int32("unk_078C") -- 0x078C
     :WOWGUID("Transport") -- 0x0790
-    :Vector3("Position")
+    :C3Vector("Position")
     :uint32("unkFlag", {hex = true}) -- 0x07A4
     :float("Facing") -- 0x07A8
     :float("Pitch") -- 0x07AC
@@ -174,15 +150,15 @@ local CMovementData = Struct("CMovementData")
     :uint32("unkFlag2", {hex = true}) -- 0x07B4
     :int32("unk_07B8") -- 0x07B8
     :int32("unk_07BC") -- 0x07BC
-    :Vector3("GroundNormal")
+    :C3Vector("GroundNormal")
     :flag32("moveFlag1") -- 0x07CC
     :flag32("moveFlag2") -- 0x07D0
-    :Vector3("Anchor")
+    :C3Vector("Anchor")
     :float("AnchorFacing") -- 0x07E0
     :float("AnchorPitch") -- 0x07E4
     :int32("unk_07E8") -- 0x07E8
-    :Vector3("Direction")
-    :Vector2("Direction2d")
+    :C3Vector("Direction")
+    :C2Vector("Direction2d")
     :float("cosAnchorPitch") -- 0x0800
     :float("sinAnchorPitch") -- 0x0804
     :int32("FallTime") -- 0x0808
@@ -312,7 +288,7 @@ local CGUnit = Struct("CGUnit", CGObject)
     :field("unk_09CC", "int32") -- 0x09CC
     :field("unk_09D0", "int32") -- 0x09D0
     :field("unk_09D4", "int32") -- 0x09D4
-    :Vector3("GroundNormal")
+    :C3Vector("GroundNormal")
     :field("unk_09E4", "int32") -- 0x09E4
     :field("unk_09E8", "int32") -- 0x09E8
     :field("unk_09EC", "int32") -- 0x09EC
@@ -336,7 +312,7 @@ local CGUnit = Struct("CGUnit", CGObject)
     :flag32("unk_0A38") -- 0x0A38
     :int32("m_footprintTexId") -- 0x0A3C
     :int32("m_terrain") -- 0x0A40
-    :Vector2("m_footPrintSize")
+    :C2Vector("m_footPrintSize")
     :float("m_footPrintScale") -- 0x0A4C
     :float("m_facingAngle") -- 0x0A50
     :float("m_pitchAngle") -- 0x0A54
@@ -361,7 +337,7 @@ local CGUnit = Struct("CGUnit", CGObject)
     :float("m_HeadFacingAngle") -- 0x0AA0
     :field("unk_0AA4", "int32") -- 0x0AA4
     :field("unk_0AA8", "int32") -- 0x0AA8
-    :Vector3("SmoothFacing")
+    :C3Vector("SmoothFacing")
     :ptr("unk_0AB8") -- 0x0AB8
     :int32("objectUpdateMillisec") -- 0x0ABC
     :field("unk_0AC0", "int32") -- 0x0AC0
@@ -371,7 +347,7 @@ local CGUnit = Struct("CGUnit", CGObject)
     :field("unk_0AD0", "int32") -- 0x0AD0
     :field("unk_0AD4", "int32") -- 0x0AD4
     :int32("m_mountFootprintTexId") -- 0x0AD8
-    :Vector2("m_mountFootprintSize")
+    :C2Vector("m_mountFootprintSize")
     :ptr("unk_0AE4", "int32") -- 0x0AE4
     :ptr("unk_0AE8", "int32") -- 0x0AE8
     :ptr("unk_0AEC", "int32") -- 0x0AEC

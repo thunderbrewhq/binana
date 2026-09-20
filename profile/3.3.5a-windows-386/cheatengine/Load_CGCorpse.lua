@@ -848,7 +848,6 @@ setmetatable(StructDef, {
         return nil
     end
 })
-
 local WoWGUID = Struct("WOWGUID")
     :hex("guid", "uint64")
 
@@ -857,11 +856,56 @@ local TSLink = Struct("TSLink")
     :ptr("m_next")
 
 local TSList = Struct("TSList") -- also TSExplicitList
-    :int32("m_linkoffset")
+    :uint32("m_linkoffset", {hex = true})
     :TSLink("m_terminator")
 
 local TSLinkedNode = Struct("TSLinkedNode")
     :TSLink("m_link")
+
+local TSFixedArray = Struct("TSFixedArray")
+    :uint32("m_alloc") -- 0x0
+    :uint32("m_count") -- 0x4
+    :ptr("m_data") -- 0x8
+
+local TSGrowableArray = Struct("TSGrowableArray", TSFixedArray)
+    :uint32("m_chunk") -- 0xC
+
+local TSHashTable = Struct("TSHashTable")
+    :ptr("void*", "v_table") -- 0x0000
+    :TSList("m_fulllist")
+    :uint32("m_fullnessIndicator") -- 0x0010
+    :TSGrowableArray("m_slotlistarray") -- 000x14
+    :flag32("m_slotmask") -- 000x24
+
+local C2Vector = Struct("C2Vector")
+    :float("x")
+    :float("y")
+
+local C2iVector = Struct("C2iVector")
+    :int32("x")
+    :int32("y")
+
+local C3Vector = Struct("C3Vector")
+    :float("x")
+    :float("y")
+    :float("z")
+
+local CImVector = Struct("CImVector")
+    :uint8("r")
+    :uint8("g")
+    :uint8("b")
+    :uint8("a")
+
+local CAaBox = Struct("CAaBox")
+    :C3Vector("top")
+    :C3Vector("bottom")
+
+local CAaSphere = Struct("CAaSphere")
+    :C3Vector("center")
+    :float("d")
+
+local C44Matrix = Struct("C44Matrix")
+    :float_array("m", 16)
 
 local ObjectFields = Struct("ObjectFields")
     :WOWGUID("ObjectGUID")
@@ -901,11 +945,6 @@ local CGObject = Struct("CGObject")
     :uint8("m_maxAlpha") -- 0x00CB
     :ptr("effectManagerPtr") -- 0x00CC
 
-local Vector3 = Struct("Vector3")
-    :float("x")
-    :float("y")
-    :float("z")
-
 local CorpseFields = Struct("CorpseFields")
     :WOWGUID("Owner")
     :WOWGUID("Party")
@@ -920,11 +959,11 @@ local CorpseFields = Struct("CorpseFields")
 
 local CGCorpse = Struct("CGCorpse", CGObject)
     :paddingTo(0xE8)
-    :Vector3("m_position") -- 0x0E8
+    :C3Vector("m_position") -- 0x0E8
     :paddingTo(0xF8)
     :float("m_facingAngle") -- 0x0F8
     :paddingTo(0x274)
-    :Vector3("m_scale") -- 0x274
+    :C3Vector("m_scale") -- 0x274
     :paddingTo(0x290)
     :ObjectFields("m_objectFields") -- 0x290
     :CorpseFields("m_corpseFields") -- 0x2A8

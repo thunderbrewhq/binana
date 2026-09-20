@@ -247,7 +247,7 @@ local CGPlayer = Struct("CGPlayer", CGUnit)
     :field("unk_18D8", "int32") -- 0x18D8
     :field("unk_18DC", "int32") -- 0x18DC
     :WOWGUID("m_lootTarget") -- 0x18E0
-    :hex("unkAutoLootFlags", "int32") -- 0x18E8
+    :flag32("unkAutoLootFlags") -- 0x18E8
     :field("unk_18EC", "int32") -- 0x18EC
     :field("unk_18F0", "int32") -- 0x18F0
     :ptr("playerInventoryPtr") -- 0x18F4
@@ -264,7 +264,7 @@ local CGPlayer = Struct("CGPlayer", CGUnit)
     :int32("BlueSocketCount") -- 0x1930
 
     :field("combatModeLastUnitMS", "int32") -- 0x1934
-    :hex("combatModeLastUnitGUID", "uint64") -- 0x1938
+    :WOWGUID("combatModeLastUnitGUID") -- 0x1938
     :int32("turnOffPVPModeMS") -- 0x1940
     :ptr("unkDanceStudioField1") -- 0x1944
     :ptr("unkDanceStudioField2") -- 0x1948
