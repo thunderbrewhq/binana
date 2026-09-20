@@ -41,6 +41,8 @@ local Types = {
     qword   = { ce = CE.vtQword,  size = 8 },
 }
 
+local StructRegistry = {}
+
 function SetPointerSize(bits)
     if bits == 64 then
         Types.ptr = { ce = CE.vtQword, size = 8 }
@@ -65,6 +67,10 @@ function StructDef.new(name, parent)
         self._offset = parent:totalSize()
     else
         self._offset = 0
+    end
+
+    if name then
+        StructRegistry[name] = self
     end
 
     return self
@@ -101,6 +107,30 @@ function StructDef:hex(name, typeName, opts)
     opts = opts or {}
     opts.hex = true
     return self:field(name, typeName, opts)
+end
+
+function StructDef:flag8(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint8", opts)
+end
+
+function StructDef:flag16(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint16", opts)
+end
+
+function StructDef:flag32(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint32", opts)
+end
+
+function StructDef:flag64(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint64", opts)
 end
 
 --- Add string
@@ -759,278 +789,368 @@ function GetCGObjectAddr(guidValue)
     return nil
 end
 
-local CGObject = Struct("CGObject")
+setmetatable(StructDef, {
+    __index = function(t, key)
+        if Types[key] then
+            local typeName = key
+            local fn = function(self, name, opts)
+                return self:field(name, typeName, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
 
-CGObject:ptr("void*", "VtablePtr") -- 0x0000
-CGObject:unk(4) -- 0x0004
-CGObject:ptr("dataBeginPtr") -- 0x0008
-CGObject:ptr("dataEndPtr") -- 0x000C
-CGObject:hex("unkFlag", "int32") -- 0x0010
-CGObject:field("TypeID", "int32") -- 0x0014
-CGObject:hex("low_GUID", "uint32") -- 0x0018
-CGObject:paddingTo(0x30)
-CGObject:hex("ObjectGuid", "uint64") -- 0x0030
-CGObject:paddingTo(0x98)
-CGObject:field("m_objectSacle1", "float") -- 0x0098
-CGObject:field("m_objectSacle2", "float") -- 0x009C
-CGObject:field("m_objectScalingEndMS", "int32") -- 0x00A0
-CGObject:field("m_objectLastScale", "float") -- 0x00A4
-CGObject:ptr("specialEffectPtr") -- 0x00A8
-CGObject:field("objectHeight", "float") -- 0x00AC
-CGObject:ptr("unkPlayerNamePtr") -- 0x00B0
-CGObject:ptr("CM2Model", "m_model") -- 0x00B4
-CGObject:ptr("cmapEntityPtr") -- 0x00B8
-CGObject:hex("unkMovementFlags", "int32") -- 0x00BC
-CGObject:field("unk_00C0", "int32") -- 0x00C0
-CGObject:field("unk_00C4", "int32") -- 0x00C4
-CGObject:field("m_alpha", "uint8") -- 0x00C8
-CGObject:field("m_startAlpha", "uint8") -- 0x00C9
-CGObject:field("m_endAlpha", "uint8") -- 0x00CA
-CGObject:field("m_maxAlpha", "uint8") -- 0x00CB
-CGObject:ptr("effectManagerPtr") -- 0x00CC
+        local baseArray, suffixArray = key:match("^(.*)_(array)$")
+        if suffixArray == "array" then
+            if Types[baseArray] then
+                local fn = function(self, name, count, opts)
+                    return self:array(name, baseArray, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            elseif StructRegistry[baseArray] then
+                local struct = StructRegistry[baseArray]
+                local fn = function(self, name, count, opts)
+                    return self:structArray(name, struct, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            end
+        end
 
-local Vector2 = Struct("Vector2")
-    :field("x", "float")
-    :field("y", "float")
+        local baseArrayPtr, suffixArrayPtr = key:match("^(.*)_(arrayPtr)$")
+        if suffixArrayPtr == "arrayPtr" then
+            local fn = function(self, name, count, opts)
+                return self:ptrArray(baseArrayPtr, name, count, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
 
-local Vector3 = Struct("Vector3")
-    :field("x", "float")
-    :field("y", "float")
-    :field("z", "float")
+        local basePtr, suffixPtr = key:match("^(.*)_(ptr)$")
+        if suffixPtr == "ptr" then
+            local fn = function(self, name, opts)
+                return self:ptr(basePtr, name, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local userStruct = StructRegistry[key]
+        if userStruct then
+            local fn = function(self, name, opts)
+                return self:embed(name, userStruct, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        return nil
+    end
+})
+
+local WoWGUID = Struct("WOWGUID")
+    :hex("guid", "uint64")
+
+local TSLink = Struct("TSLink")
+    :TSLink_ptr("m_prevlink")
+    :ptr("m_next")
+
+local TSList = Struct("TSList") -- also TSExplicitList
+    :int32("m_linkoffset")
+    :TSLink("m_terminator")
+
+local TSLinkedNode = Struct("TSLinkedNode")
+    :TSLink("m_link")
 
 local ObjectFields = Struct("ObjectFields")
-    :hex("GUID", "uint64")
-    :field("type", "uint32")
-    :field("unk", "uint32")
-    :field("scale", "float")
-    :field("pad", "uint32")
+    :WOWGUID("ObjectGUID")
+    :uint32("type")
+    :uint32("unk")
+    :float("scale")
+    :uint32("pad")
+
+local CGObject = Struct("CGObject")
+    :ptr("void*", "VtablePtr") -- 0x0000
+    :unk(4) -- 0x0004
+    :ptr("dataBeginPtr") -- 0x0008
+    :ptr("dataEndPtr") -- 0x000C
+    :uint32("unkFlag", {hex = true}) -- 0x0010
+    :int32("TypeID") -- 0x0014
+    :uint32("low_GUID", {hex = true}) -- 0x0018
+    :paddingTo(0x30)
+    :WOWGUID("ObjectGuid") -- 0x0030
+    :paddingTo(0x44)
+    :TSList_array("m_list", 6)
+    :paddingTo(0x98)
+    :float("m_objectSacle1") -- 0x0098
+    :float("m_objectSacle2") -- 0x009C
+    :int32("m_objectScalingEndMS") -- 0x00A0
+    :float("m_objectLastScale") -- 0x00A4
+    :ptr("specialEffectPtr") -- 0x00A8
+    :float("objectHeight") -- 0x00AC
+    :ptr("unkPlayerNamePtr") -- 0x00B0
+    :ptr("CM2Model", "m_model") -- 0x00B4
+    :ptr("CMapEntityPtr") -- 0x00B8
+    :int32("unkMovementFlags", {hex = true}) -- 0x00BC
+    :int32("unk_00C0") -- 0x00C0
+    :int32("unk_00C4") -- 0x00C4
+    :uint8("m_alpha") -- 0x00C8
+    :uint8("m_startAlpha") -- 0x00C9
+    :uint8("m_endAlpha") -- 0x00CA
+    :uint8("m_maxAlpha") -- 0x00CB
+    :ptr("effectManagerPtr") -- 0x00CC
+
+local TSFixedArray = Struct("TSFixedArray")
+    :uint32("m_alloc") -- 0x0
+    :uint32("m_count") -- 0x4
+    :ptr("m_data") -- 0x8
+
+local TSGrowableArray = Struct("TSGrowableArray", TSFixedArray)
+    :uint32("m_chunk") -- 0xC
+
+local TSHashTable = Struct("TSHashTable")
+    :ptr("void*", "v_table") -- 0x0000
+    :TSList("m_fulllist")
+    :uint32("m_fullnessIndicator") -- 0x0010
+    :TSGrowableArray("m_slotlistarray") -- 000x14
+    :uint32("m_slotmask", {hex = true}) -- 000x24
+
+local Vector2 = Struct("Vector2")
+    :float("x")
+    :float("y")
+
+local Vector3 = Struct("Vector3")
+    :float("x")
+    :float("y")
+    :float("z")
 
 local UnitFields = Struct("UnitFields")
-    :hex("CharmGUID", "uint64") -- 0x1970
-    :hex("SummonGUID", "uint64") -- 0x1978
-    :hex("CritterGUID", "uint64") -- 0x1980
-    :hex("CharmedByGUID", "uint64") -- 0x1988
-    :hex("SummonedByGUID", "uint64") -- 0x1990
-    :hex("CreatedByGUID", "uint64") -- 0x1998
-    :hex("TargetGUID", "uint64") -- 0x19A0
-    :hex("ChannelSpellTargetGUID", "uint64") -- 0x19A8
-    :field("ChanellSpellId", "int32") -- 0x19B0
-    :field("Race", "uint8") -- 0x19B4
-    :field("Class", "uint8") -- 0x19B5
-    :field("Gender", "uint8") -- 0x19B6
-    :field("DisplayPower", "uint8") -- 0x19B7
-    :field("Health", "int32") -- 0x19B8
-    :field("Mana", "int32") -- 0x19BC
-    :field("Rage", "int32") -- 0x19C0
-    :field("Focus", "int32") -- 0x19C4
-    :field("Energy", "int32") -- 0x19C8
-    :field("UnkResource1", "int32") -- 0x19CC
-    :field("UnkResource2", "int32") -- 0x19D0
-    :field("RunePower", "int32") -- 0x19D4
-    :field("MaxHealth", "int32") -- 0x19D8
-    :field("MaxMana", "int32") -- 0x19DC
-    :field("MaxRage", "int32") -- 0x19E0
-    :field("MaxFocus", "int32") -- 0x19E4
-    :field("MaxEnergy", "int32") -- 0x19E8
-    :field("UnkMaxResource1", "int32") -- 0x19EC
-    :field("UnkMaxResource2", "int32") -- 0x19F0
-    :field("MaxRunePower", "int32") -- 0x19F4
-    :field("ManaRegenFlatMod", "float") -- 0x19F8
-    :field("RageRegenFlatMod", "float") -- 0x19FC
-    :field("FocusRegenFlatMod", "float") -- 0x1A00
-    :field("EnergyFlatMod", "float") -- 0x1A04
-    :field("UnkRegenFlatMod", "float") -- 0x1A08
-    :field("UnkRegenFlatMod", "float") -- 0x1A0C
-    :field("RunePowerRegenFlatMod", "float") -- 0x1A10
-    :field("ManaRegenInterruptedFlatMod", "float") -- 0x1A14
-    :field("RageRegenInterruptedFlatMod", "float") -- 0x1A18
-    :field("FocusRegenInterruptedFlatMod", "float") -- 0x1A1C
-    :field("EnergyRegenInterruptedFlatMod", "float") -- 0x1A20
-    :field("UnkRegenInterruptedFlatMod", "float") -- 0x1A24
-    :field("UnkRegenInterruptedFlatMod", "float") -- 0x1A28
-    :field("RunePowerRegenInterruptedFlatMod", "float") -- 0x1A2C
-    :field("Level", "int32") -- 0x1A30
-    :field("FieldFactiontemplate", "int32") -- 0x1A34
-    :field("VirtualItemSlotIdMainHand", "int32") -- 0x1A38
-    :field("VirtualItemSlotIdOffHand", "int32") -- 0x1A3C
-    :field("VirtualItemSlotIdRanged", "int32") -- 0x1A40
-    :field("Flag1", "int32") -- 0x1A44
-    :field("Flag2", "int32") -- 0x1A48
-    :field("AuraState", "int32") -- 0x1A4C
-    :field("BaseAttackTimeMainHand", "int32") -- 0x1A50
-    :field("BaseAttackTimeOffHand", "int32") -- 0x1A54
-    :field("RangedAttackTime", "int32") -- 0x1A58
-    :field("BoundingRadius", "float") -- 0x1A5C
-    :field("CombatReach", "float") -- 0x1A60
-    :field("DisplayId", "int32") -- 0x1A64
-    :field("NativedisplayId", "int32") -- 0x1A68
-    :field("MountdisplayId", "int32") -- 0x1A6C
-    :field("MinMainHandDamage", "float") -- 0x1A70
-    :field("MaxMainHandDamage", "float") -- 0x1A74
-    :field("MinOffHandDamage", "int32") -- 0x1A78
-    :field("MaxOffHandDamage", "int32") -- 0x1A7C
-    :field("SitState", "int32") -- 0x1A80
-    :field("PetNumber", "int32") -- 0x1A84
-    :field("PetNameTamestamp", "int32") -- 0x1A88
-    :field("PetXP", "int32") -- 0x1A8C
-    :field("PetNextLevelXP", "int32") -- 0x1A90
-    :field("DynFlags", "int32") -- 0x1A94
-    :field("ModCastSpeed", "float") -- 0x1A98
-    :field("CreatedBySpell", "int32") -- 0x1A9C
-    :field("NPCFlags", "int32") -- 0x1AA0
-    :field("NPCEmoteState", "int32") -- 0x1AA4
-    :field("StatStrengthBase", "int32") -- 0x1AA8
-    :field("StatAgilityBase", "int32") -- 0x1AAC
-    :field("StatStaminaBase", "int32") -- 0x1AB0
-    :field("StatIntellectBase", "int32") -- 0x1AB4
-    :field("StatSpiritBase", "int32") -- 0x1AB8
-    :field("StatStrengthPositive", "int32") -- 0x1ABC
-    :field("StatAgilityPositive", "int32") -- 0x1AC0
-    :field("StatStaminaPositive", "int32") -- 0x1AC4
-    :field("StatIntellectPositive", "int32") -- 0x1AC8
-    :field("StatSpiritPositive", "int32") -- 0x1ACC
-    :field("StatStrengthNegative", "int32") -- 0x1AD0
-    :field("StatAgilityNegative", "int32") -- 0x1AD4
-    :field("StatStaminaNegative", "int32") -- 0x1AD8
-    :field("StatIntellectNegative", "int32") -- 0x1ADC
-    :field("StatSpiritNegative", "int32") -- 0x1AE0
-    :field("StatArmor", "int32") -- 0x1AE4
-    :field("ResistHoly", "int32") -- 0x1AE8
-    :field("ResistFire", "int32") -- 0x1AEC
-    :field("ResistNature", "int32") -- 0x1AF0
-    :field("ResistFrost", "int32") -- 0x1AF4
-    :field("ResistShadow", "int32") -- 0x1AF8
-    :field("ResistArcane", "int32") -- 0x1AFC
-    :field("UnkResist", "int32") -- 0x1B00
-    :field("ResistPositiveHoly", "int32") -- 0x1B04
-    :field("ResistPositiveFire", "int32") -- 0x1B08
-    :field("ResistPovisitveNature", "int32") -- 0x1B0C
-    :field("ResistPositiveFrost", "int32") -- 0x1B10
-    :field("ResistPositiveShadow", "int32") -- 0x1B14
-    :field("ResistPositiveArcane", "int32") -- 0x1B18
-    :field("UnkResist", "int32") -- 0x1B1C
-    :field("ResistNegativeHoly", "int32") -- 0x1B20
-    :field("ResistNegativeFire", "int32") -- 0x1B24
-    :field("ResistNegativeNature", "int32") -- 0x1B28
-    :field("ResistNegativeFrost", "int32") -- 0x1B2C
-    :field("ResistNegativeShadow", "int32") -- 0x1B30
-    :field("ResistNegativeArcane", "int32") -- 0x1B34
-    :field("UnkBaseMana", "int32") -- 0x1B38
-    :field("BaseHealth", "int32") -- 0x1B3C
-    :field("WeaponStandType", "int32") -- 0x1B40
-    :field("AttackPowerMelee", "int32") -- 0x1B44
-    :field("AttackPowerMeleeMod", "int32") -- 0x1B48
-    :field("AttackPowerMeleeMulti", "float") -- 0x1B4C
-    :field("AttackPowerRange", "int32") -- 0x1B50
-    :field("AttackPowerRangedMod", "int32") -- 0x1B54
-    :field("AttackPowerRangedMulti", "float") -- 0x1B58
-    :field("MinRangedDamage", "float") -- 0x1B5C
-    :field("MaxRangedDamage", "float") -- 0x1B60
-    :array("PowerCostModifier", "int32", 7) -- 0x1B64
-    :array("PowerCostMultiplier", "float", 7) -- 0x1B80
-    :field("MaxHealthMod", "int32") -- 0x1B9C
-    :field("HoverHeight", "float") -- 0x1BA0
-    :field("Pad", "int32") -- 0x1BA4
+    :WOWGUID("Charm") -- 0x1970
+    :WOWGUID("Summon") -- 0x1978
+    :WOWGUID("Critter") -- 0x1980
+    :WOWGUID("CharmedBy") -- 0x1988
+    :WOWGUID("SummonedBy") -- 0x1990
+    :WOWGUID("CreatedBy") -- 0x1998
+    :WOWGUID("Target") -- 0x19A0
+    :WOWGUID("ChannelSpellTarget") -- 0x19A8
+    :int32("ChannelSpellId") -- 0x19B0
+    :uint8("Race") -- 0x19B4
+    :uint8("Class") -- 0x19B5
+    :uint8("Gender") -- 0x19B6
+    :uint8("DisplayPower") -- 0x19B7
+    :int32("Health") -- 0x19B8
+    :int32("Mana") -- 0x19BC
+    :int32("Rage") -- 0x19C0
+    :int32("Focus") -- 0x19C4
+    :int32("Energy") -- 0x19C8
+    :int32("UnkResource1") -- 0x19CC
+    :int32("UnkResource2") -- 0x19D0
+    :int32("RunePower") -- 0x19D4
+    :int32("MaxHealth") -- 0x19D8
+    :int32("MaxMana") -- 0x19DC
+    :int32("MaxRage") -- 0x19E0
+    :int32("MaxFocus") -- 0x19E4
+    :int32("MaxEnergy") -- 0x19E8
+    :int32("UnkMaxResource1") -- 0x19EC
+    :int32("UnkMaxResource2") -- 0x19F0
+    :int32("MaxRunePower") -- 0x19F4
+    :float("ManaRegenFlatMod") -- 0x19F8
+    :float("RageRegenFlatMod") -- 0x19FC
+    :float("FocusRegenFlatMod") -- 0x1A00
+    :float("EnergyFlatMod") -- 0x1A04
+    :float("UnkRegenFlatMod") -- 0x1A08
+    :float("UnkRegenFlatMod") -- 0x1A0C
+    :float("RunePowerRegenFlatMod") -- 0x1A10
+    :float("ManaRegenInterruptedFlatMod") -- 0x1A14
+    :float("RageRegenInterruptedFlatMod") -- 0x1A18
+    :float("FocusRegenInterruptedFlatMod") -- 0x1A1C
+    :float("EnergyRegenInterruptedFlatMod") -- 0x1A20
+    :float("UnkRegenInterruptedFlatMod") -- 0x1A24
+    :float("UnkRegenInterruptedFlatMod") -- 0x1A28
+    :float("RunePowerRegenInterruptedFlatMod") -- 0x1A2C
+    :int32("Level") -- 0x1A30
+    :int32("FieldFactiontemplate") -- 0x1A34
+    :int32("VirtualItemSlotIdMainHand") -- 0x1A38
+    :int32("VirtualItemSlotIdOffHand") -- 0x1A3C
+    :int32("VirtualItemSlotIdRanged") -- 0x1A40
+    :flag32("Flag1") -- 0x1A44
+    :flag32("Flag2") -- 0x1A48
+    :int32("AuraState") -- 0x1A4C
+    :int32("BaseAttackTimeMainHand") -- 0x1A50
+    :int32("BaseAttackTimeOffHand") -- 0x1A54
+    :int32("RangedAttackTime") -- 0x1A58
+    :float("BoundingRadius") -- 0x1A5C
+    :float("CombatReach") -- 0x1A60
+    :int32("DisplayId") -- 0x1A64
+    :int32("NativedisplayId") -- 0x1A68
+    :int32("MountdisplayId") -- 0x1A6C
+    :float("MinMainHandDamage") -- 0x1A70
+    :float("MaxMainHandDamage") -- 0x1A74
+    :int32("MinOffHandDamage") -- 0x1A78
+    :int32("MaxOffHandDamage") -- 0x1A7C
+    :int32("SitState") -- 0x1A80
+    :int32("PetNumber") -- 0x1A84
+    :int32("PetNameTamestamp") -- 0x1A88
+    :int32("PetXP") -- 0x1A8C
+    :int32("PetNextLevelXP") -- 0x1A90
+    :int32("DynFlags") -- 0x1A94
+    :float("ModCastSpeed") -- 0x1A98
+    :int32("CreatedBySpell") -- 0x1A9C
+    :int32("NPCFlags") -- 0x1AA0
+    :int32("NPCEmoteState") -- 0x1AA4
+    :int32("StatStrengthBase") -- 0x1AA8
+    :int32("StatAgilityBase") -- 0x1AAC
+    :int32("StatStaminaBase") -- 0x1AB0
+    :int32("StatIntellectBase") -- 0x1AB4
+    :int32("StatSpiritBase") -- 0x1AB8
+    :int32("StatStrengthPositive") -- 0x1ABC
+    :int32("StatAgilityPositive") -- 0x1AC0
+    :int32("StatStaminaPositive") -- 0x1AC4
+    :int32("StatIntellectPositive") -- 0x1AC8
+    :int32("StatSpiritPositive") -- 0x1ACC
+    :int32("StatStrengthNegative") -- 0x1AD0
+    :int32("StatAgilityNegative") -- 0x1AD4
+    :int32("StatStaminaNegative") -- 0x1AD8
+    :int32("StatIntellectNegative") -- 0x1ADC
+    :int32("StatSpiritNegative") -- 0x1AE0
+    :int32("StatArmor") -- 0x1AE4
+    :int32("ResistHoly") -- 0x1AE8
+    :int32("ResistFire") -- 0x1AEC
+    :int32("ResistNature") -- 0x1AF0
+    :int32("ResistFrost") -- 0x1AF4
+    :int32("ResistShadow") -- 0x1AF8
+    :int32("ResistArcane") -- 0x1AFC
+    :int32("UnkResist") -- 0x1B00
+    :int32("ResistPositiveHoly") -- 0x1B04
+    :int32("ResistPositiveFire") -- 0x1B08
+    :int32("ResistPovisitveNature") -- 0x1B0C
+    :int32("ResistPositiveFrost") -- 0x1B10
+    :int32("ResistPositiveShadow") -- 0x1B14
+    :int32("ResistPositiveArcane") -- 0x1B18
+    :int32("UnkResist") -- 0x1B1C
+    :int32("ResistNegativeHoly") -- 0x1B20
+    :int32("ResistNegativeFire") -- 0x1B24
+    :int32("ResistNegativeNature") -- 0x1B28
+    :int32("ResistNegativeFrost") -- 0x1B2C
+    :int32("ResistNegativeShadow") -- 0x1B30
+    :int32("ResistNegativeArcane") -- 0x1B34
+    :int32("UnkBaseMana") -- 0x1B38
+    :int32("BaseHealth") -- 0x1B3C
+    :int32("WeaponStandType") -- 0x1B40
+    :int32("AttackPowerMelee") -- 0x1B44
+    :int32("AttackPowerMeleeMod") -- 0x1B48
+    :float("AttackPowerMeleeMulti") -- 0x1B4C
+    :int32("AttackPowerRange") -- 0x1B50
+    :int32("AttackPowerRangedMod") -- 0x1B54
+    :float("AttackPowerRangedMulti") -- 0x1B58
+    :float("MinRangedDamage") -- 0x1B5C
+    :float("MaxRangedDamage") -- 0x1B60
+    :int32_array("PowerCostModifier", 7) -- 0x1B64
+    :float_array("PowerCostMultiplier", 7) -- 0x1B80
+    :int32("MaxHealthMod") -- 0x1B9C
+    :float("HoverHeight") -- 0x1BA0
+    :int32("Pad") -- 0x1BA4
 
 local UnitAura = Struct("Aura")
-    :hex("casterGUID", "uint64") -- 0x0C50
-    :field("buffId", "int32") -- 0x0C58
-    :field("unk", "int32") -- 0x0C5C
-    :field("maxDuration", "int32") -- 0x0C60
-    :hex("buffPtr", "int32") -- 0x0C64
+    :WOWGUID("caster") -- 0x0C50
+    :int32("buffId") -- 0x0C58
+    :int32("unk") -- 0x0C5C
+    :int32("maxDuration") -- 0x0C60
+    :ptr("buffPtr") -- 0x0C64
 
 local UnitBuff = Struct("Buff")
-    :field("index", "int32")
-    :field("buffId", "int32")
+    :int32("index")
+    :int32("buffId")
 
 local CMovementData = Struct("CMovementData")
-    :field("unk_0788", "int32") -- 0x0788
-    :field("unk_078C", "int32") -- 0x078C
-    :hex("TransportGUID", "uint64") -- 0x0790
-    :embed("Position", Vector3)
-    :hex("unkFlag", "int32") -- 0x07A4
-    :field("Facing", "float") -- 0x07A8
-    :field("Pitch", "float") -- 0x07AC
-    :hex("dataPtr", "int32") -- 0x07B0
-    :hex("unkFlag2", "int32") -- 0x07B4
-    :field("unk_07B8", "int32") -- 0x07B8
-    :field("unk_07BC", "int32") -- 0x07BC
-    :embed("GroundNormal", Vector3)
-    :hex("moveFlag1", "int32") -- 0x07CC
-    :hex("moveFlag2", "int32") -- 0x07D0
-    :embed("Anchor", Vector3)
-    :field("AnchorFacing", "float") -- 0x07E0
-    :field("AnchorPitch", "float") -- 0x07E4
-    :field("unk_07E8", "int32") -- 0x07E8
-    :embed("Direction", Vector3)
-    :embed("Direction2d", Vector2)
-    :field("cosAnchorPitch", "float") -- 0x0800
-    :field("sinAnchorPitch", "float") -- 0x0804
-    :field("FallTime", "int32") -- 0x0808
-    :field("StartFallHeight", "float") -- 0x080C
-    :field("unkFloat", "float") -- 0x0810
-    :field("MoveSpeed", "float") -- 0x0814
-    :field("WalkSpeed", "float") -- 0x0818
-    :field("RunSpeed", "float") -- 0x081C
-    :field("BackSpeed", "float") -- 0x0820
-    :field("SwimSpeed", "float") -- 0x0824
-    :field("BackSwimSpeed", "float") -- 0x0828
-    :field("FlyMountSpeed", "float") -- 0x082C
-    :field("FlyMountBackSpeed", "float") -- 0x0830
-    :field("TurnSpeed", "float") -- 0x0834
-    :field("FlyMountUnkUpDownRotation1", "float") -- 0x0838
-    :field("FlyMountUnkUpDownRotation2", "float") -- 0x083C
-    :field("FallSpeed", "float") -- 0x0840
-    :hex("CGMoveSplinePtr", "int32") -- 0x0844
-    :field("PerfCount", "int32") -- 0x0848
-    :hex("unkFlag3", "int32") -- 0x084C
-    :field("CollisonBoxHalfWidth", "float") -- 0x0850
-    :field("CollisionBoxHeight", "float") -- 0x0854
-    :field("ObjectScale", "float") -- 0x0858
-    :field("unk_085C", "int32") -- 0x085C
-    :field("unk_0860", "int32") -- 0x0860
-    :field("unk_0864", "int32") -- 0x0864
-    :field("unk_0868", "int32") -- 0x0868
-    :field("unk_086C", "int32") -- 0x086C
-    :hex("unkFlags_00", "int32") -- 0x0870
-    :hex("unkFlags_01", "int32") -- 0x0874
-    :hex("unkFlags_02", "int32") -- 0x0878
-    :hex("unkFlags_03", "int32") -- 0x087C
-    :hex("unkFlags_04", "int32") -- 0x0880
-    :hex("unkFlags_05", "int32") -- 0x0884
-    :hex("unkFlags_06", "int32") -- 0x0888
-    :hex("unkFlags_07", "int32") -- 0x088C
-    :hex("unkFlags_08", "int32") -- 0x0890
-    :hex("unkFlags_09", "int32") -- 0x0894
-    :hex("unkFlags_10", "int32") -- 0x0898
-    :hex("unkFlags_11", "int32") -- 0x089C
-    :hex("unkFlags_12", "int32") -- 0x08A0
-    :hex("unkFlags_13", "int32") -- 0x08A4
-    :hex("unkFlags_14", "int32") -- 0x08A8
-    :hex("unkFlags_15", "int32") -- 0x08AC
-    :field("unk_08B0", "int32") -- 0x08B0
-    :field("unk_08B4", "int32") -- 0x08B4
-    :field("unk_08B8", "int32") -- 0x08B8
-    :field("unk_08BC", "int32") -- 0x08BC
-    :field("unk_08C0", "int32") -- 0x08C0
-    :ptr("linkedList_ptr1") -- 0x08C4
-    :ptr("linkedList_ptr2") -- 0x08C8
+    :int32("unk_0788") -- 0x0788
+    :int32("unk_078C") -- 0x078C
+    :WOWGUID("Transport") -- 0x0790
+    :Vector3("Position")
+    :uint32("unkFlag", {hex = true}) -- 0x07A4
+    :float("Facing") -- 0x07A8
+    :float("Pitch") -- 0x07AC
+    :ptr("dataPtr") -- 0x07B0
+    :uint32("unkFlag2", {hex = true}) -- 0x07B4
+    :int32("unk_07B8") -- 0x07B8
+    :int32("unk_07BC") -- 0x07BC
+    :Vector3("GroundNormal")
+    :flag32("moveFlag1") -- 0x07CC
+    :flag32("moveFlag2") -- 0x07D0
+    :Vector3("Anchor")
+    :float("AnchorFacing") -- 0x07E0
+    :float("AnchorPitch") -- 0x07E4
+    :int32("unk_07E8") -- 0x07E8
+    :Vector3("Direction")
+    :Vector2("Direction2d")
+    :float("cosAnchorPitch") -- 0x0800
+    :float("sinAnchorPitch") -- 0x0804
+    :int32("FallTime") -- 0x0808
+    :float("StartFallHeight") -- 0x080C
+    :float("unkFloat") -- 0x0810
+    :float("MoveSpeed") -- 0x0814
+    :float("WalkSpeed") -- 0x0818
+    :float("RunSpeed") -- 0x081C
+    :float("BackSpeed") -- 0x0820
+    :float("SwimSpeed") -- 0x0824
+    :float("BackSwimSpeed") -- 0x0828
+    :float("FlyMountSpeed") -- 0x082C
+    :float("FlyMountBackSpeed") -- 0x0830
+    :float("TurnSpeed") -- 0x0834
+    :float("FlyMountUnkUpDownRotation1") -- 0x0838
+    :float("FlyMountUnkUpDownRotation2") -- 0x083C
+    :float("FallSpeed") -- 0x0840
+    :ptr("CGMoveSplinePtr") -- 0x0844
+    :int32("PerfCount") -- 0x0848
+    :flag32("unkFlag3") -- 0x084C
+    :float("CollisonBoxHalfWidth") -- 0x0850
+    :float("CollisionBoxHeight") -- 0x0854
+    :float("ObjectScale") -- 0x0858
+    :int32("unk_085C") -- 0x085C
+    :int32("unk_0860") -- 0x0860
+    :int32("unk_0864") -- 0x0864
+    :int32("unk_0868") -- 0x0868
+    :int32("unk_086C") -- 0x086C
+    :flag32("unkFlags_00") -- 0x0870
+    :flag32("unkFlags_01") -- 0x0874
+    :flag32("unkFlags_02") -- 0x0878
+    :flag32("unkFlags_03") -- 0x087C
+    :flag32("unkFlags_04") -- 0x0880
+    :flag32("unkFlags_05") -- 0x0884
+    :flag32("unkFlags_06") -- 0x0888
+    :flag32("unkFlags_07") -- 0x088C
+    :flag32("unkFlags_08") -- 0x0890
+    :flag32("unkFlags_09") -- 0x0894
+    :flag32("unkFlags_10") -- 0x0898
+    :flag32("unkFlags_11") -- 0x089C
+    :flag32("unkFlags_12") -- 0x08A0
+    :flag32("unkFlags_13") -- 0x08A4
+    :flag32("unkFlags_14") -- 0x08A8
+    :flag32("unkFlags_15") -- 0x08AC
+    :int32("unk_08B0") -- 0x08B0
+    :int32("unk_08B4") -- 0x08B4
+    :int32("unk_08B8") -- 0x08B8
+    :int32("unk_08BC") -- 0x08BC
+    :int32("unk_08C0") -- 0x08C0
+    :TSLink("m_link") -- 0x08C4
     :ptr("CGObject_C", "objectPtr") -- 0x08CC
 
 local CGUnit = Struct("CGUnit", CGObject)
     :ptr("unitDataPtr") -- 0x00D0
     :ptr("unk_00D4") -- 0x00D4
-    :ptr("CMovementData", "m_moveDataPtr") -- 0x00D8
+    :CMovementData_ptr("m_moveData") -- 0x00D8
 
     --mirror handlers
+    :TSList_array("m_lists", 142)
     :paddingTo(0x788)
 
-    :embed("CMovementData", CMovementData) -- 0x0788
+    :CMovementData("m_movementData") -- 0x0788
 
-    :field("unitFacingAngle", "float") -- 0x08D0
+    :float("m_facingAngle") -- 0x08D0
     :field("unk_08D4", "int32") -- 0x08D4
     :field("unk_08D8", "int32") -- 0x08D8
-    :field("unitFacingAngle", "float") -- 0x08DC
+    :float("m_facingAngle") -- 0x08DC
     :field("unk_08E0", "int32") -- 0x08E0
     :field("unk_08E4", "int32") -- 0x08E4
     :field("unk_08E8", "int32") -- 0x08E8
@@ -1075,7 +1195,7 @@ local CGUnit = Struct("CGUnit", CGObject)
     :field("unk_0984", "int32") -- 0x0984
     :field("unk_0988", "int32") -- 0x0988
     :ptr("m_mountM2modelPtr") -- 0x098C
-    :field("m_mountScale", "float") -- 0x0990
+    :float("m_mountScale") -- 0x0990
     :ptr("unk_0994") -- 0x0994
     :field("unk_0998", "int32") -- 0x0998
     :field("unk_099C", "int32") -- 0x099C
@@ -1086,14 +1206,14 @@ local CGUnit = Struct("CGUnit", CGObject)
     :field("unk_09B0", "int32") -- 0x09B0
     :field("unk_09B4", "int32") -- 0x09B4
     :field("unk_09B8", "int32") -- 0x09B8
-    :field("objectNextUpdateMillisec", "int32") -- 0x09BC
-    :field("mountModelId", "int32") -- 0x09C0
+    :int32("objectNextUpdateMillisec") -- 0x09BC
+    :int32("mountModelId") -- 0x09C0
     :field("unk_09C4", "int32") -- 0x09C4
     :field("unk_09C8", "int32") -- 0x09C8
     :field("unk_09CC", "int32") -- 0x09CC
     :field("unk_09D0", "int32") -- 0x09D0
     :field("unk_09D4", "int32") -- 0x09D4
-    :embed("GroundNormal", Vector3)
+    :Vector3("GroundNormal")
     :field("unk_09E4", "int32") -- 0x09E4
     :field("unk_09E8", "int32") -- 0x09E8
     :field("unk_09EC", "int32") -- 0x09EC
@@ -1109,50 +1229,50 @@ local CGUnit = Struct("CGUnit", CGObject)
     :field("unk_0A14", "int32") -- 0x0A14
     :field("unk_0A18", "int32") -- 0x0A18
     :field("unk_0A1C", "int32") -- 0x0A1C
-    :hex("unkGUID", "uint64") -- 0x0A20
+    :WOWGUID("unkGUID") -- 0x0A20
     :field("unk_0A28", "int32") -- 0x0A28
     :field("unk_0A2C", "int32") -- 0x0A2C
-    :hex("unkJumpFlags", "int32") -- 0x0A30
+    :flag32("unkJumpFlags") -- 0x0A30
     :field("unk_0A34", "int32") -- 0x0A34
-    :hex("unk_0A38", "int32") -- 0x0A38
-    :field("m_footprintTexId", "int32") -- 0x0A3C
-    :field("m_terrain", "int32") -- 0x0A40
-    :embed("m_footPrintSize", Vector2)
-    :field("m_footPrintScale", "float") -- 0x0A4C
-    :field("m_facingAngle", "float") -- 0x0A50
-    :field("m_pitchAngle", "float") -- 0x0A54
+    :flag32("unk_0A38") -- 0x0A38
+    :int32("m_footprintTexId") -- 0x0A3C
+    :int32("m_terrain") -- 0x0A40
+    :Vector2("m_footPrintSize")
+    :float("m_footPrintScale") -- 0x0A4C
+    :float("m_facingAngle") -- 0x0A50
+    :float("m_pitchAngle") -- 0x0A54
     :ptr("unk_0A58") -- 0x0A58
-    :field("UnkSpellCounter", "int32") -- 0x0A5C
-    :field("m_channelSpellId", "int32") -- 0x0A60
+    :int32("UnkSpellCounter") -- 0x0A5C
+    :int32("m_channelSpellId") -- 0x0A60
     :field("unk_0A64", "int32") -- 0x0A64
     :field("unk_0A68", "int32") -- 0x0A68
-    :field("m_channelSpellId", "int32") -- 0x0A6C
-    :field("unkCastSchoolImmunFlag", "int32") -- 0x0A70
-    :field("unkCastImmunFlag", "int32") -- 0x0A74
-    :field("m_spellCastStartMS", "int32") -- 0x0A78
-    :field("m_spellCastEndMS", "int32") -- 0x0A7C
+    :int32("m_channelSpellId") -- 0x0A6C
+    :flag32("unkCastSchoolImmunFlag") -- 0x0A70
+    :flag32("unkCastImmunFlag") -- 0x0A74
+    :int32("m_spellCastStartMS") -- 0x0A78
+    :int32("m_spellCastEndMS") -- 0x0A7C
     :field("unk_0A80", "int32") -- 0x0A80
     :field("unk_0A84", "int32") -- 0x0A84
     :field("unk_0A88", "int32") -- 0x0A88
     :field("unk_0A8C", "int32") -- 0x0A8C
     :field("unk_0A90", "int32") -- 0x0A90
-    :field("m_facingAngle", "float") -- 0x0A94
-    :field("unkAnimValue", "float") -- 0x0A98
-    :field("unkAnimValue", "float") -- 0x0A9C
-    :field("m_HeadFacingAngle", "float") -- 0x0AA0
+    :float("m_facingAngle") -- 0x0A94
+    :float("unkAnimValue") -- 0x0A98
+    :float("unkAnimValue") -- 0x0A9C
+    :float("m_HeadFacingAngle") -- 0x0AA0
     :field("unk_0AA4", "int32") -- 0x0AA4
     :field("unk_0AA8", "int32") -- 0x0AA8
-    :embed("SmoothFacing", Vector3)
+    :Vector3("SmoothFacing")
     :ptr("unk_0AB8") -- 0x0AB8
-    :field("objectUpdateMillisec", "int32") -- 0x0ABC
+    :int32("objectUpdateMillisec") -- 0x0ABC
     :field("unk_0AC0", "int32") -- 0x0AC0
     :field("unk_0AC4", "int32") -- 0x0AC4
     :field("unk_0AC8", "int32") -- 0x0AC8
     :ptr("unkSoundPtr") -- 0x0ACC
     :field("unk_0AD0", "int32") -- 0x0AD0
     :field("unk_0AD4", "int32") -- 0x0AD4
-    :field("m_mountFootprintTexId", "int32") -- 0x0AD8
-    :embed("m_mountFootprintSize", Vector2)
+    :int32("m_mountFootprintTexId") -- 0x0AD8
+    :Vector2("m_mountFootprintSize")
     :ptr("unk_0AE4", "int32") -- 0x0AE4
     :ptr("unk_0AE8", "int32") -- 0x0AE8
     :ptr("unk_0AEC", "int32") -- 0x0AEC
@@ -1163,7 +1283,7 @@ local CGUnit = Struct("CGUnit", CGObject)
     :field("unk_0B00", "int32") -- 0x0B00
     :field("unk_0B04", "int32") -- 0x0B04
     :field("unk_0B08", "int32") -- 0x0B08
-    :field("m_selectionRadius", "float") -- 0x0B0C
+    :float("m_selectionRadius") -- 0x0B0C
     :field("unk_0B10", "int32") -- 0x0B10
     :field("unk_0B14", "int32") -- 0x0B14
     :field("unkFloatValue", "float") -- 0x0B18
@@ -1175,15 +1295,15 @@ local CGUnit = Struct("CGUnit", CGObject)
     :field("unk_0B30", "int32") -- 0x0B30
     :field("unk_0B34", "int32") -- 0x0B34
     :field("unk_0B38", "int32") -- 0x0B38
-    :field("m_unitScale", "float") -- 0x0B3C
+    :float("m_unitScale") -- 0x0B3C
     :ptr("unkDisplayModeIdRangedPtr") -- 0x0B40
     :field("unk_0B44", "int32") -- 0x0B44
     :field("unk_0B48", "int32") -- 0x0B48
     :ptr("CCharacterComponentPtr") -- 0x0B4C
     :ptr("unkEquipedMainHandModelPtr") -- 0x0B50
     :field("unk_0B54", "int32") -- 0x0B54
-    :hex("unkObjectWeaponLastStandValue", "int32") -- 0x0B58
-    :hex("unkObjectWeaponCurrentStandFlag", "int32") -- 0x0B5C
+    :flag32("unkObjectWeaponLastStandValue") -- 0x0B58
+    :flag32("unkObjectWeaponCurrentStandFlag") -- 0x0B5C
     :field("unk_0B60", "int32") -- 0x0B60
     :field("unk_0B64", "int32") -- 0x0B64
     :field("unk_0B68", "int32") -- 0x0B68
@@ -1219,7 +1339,7 @@ local CGUnit = Struct("CGUnit", CGObject)
     :field("unk_0BE0", "int32") -- 0x0BE0
     :field("unk_0BE4", "int32") -- 0x0BE4
     :field("unk_0BE8", "int32") -- 0x0BE8
-    :hex("UnkCombatFlag", "int32") -- 0x0BEC
+    :flag32("UnkCombatFlag") -- 0x0BEC
     :field("unk_0BF0", "int32") -- 0x0BF0
     :field("unk_0BF4", "int32") -- 0x0BF4
     :field("unk_0BF8", "int32") -- 0x0BF8
@@ -1245,40 +1365,31 @@ local CGUnit = Struct("CGUnit", CGObject)
     :field("unk_0C48", "int32") -- 0x0C48
     :field("unk_0C4C", "int32") -- 0x0C4C
 
-    :structArray("UnitAura", UnitAura, 16)
+    :Aura_array("m_aura", 16)
 
-    :field("m_auraCount", "int32") -- 0x0DD0
-    :structArray("UnitBuff", UnitBuff, 16)
+    :int32("m_auraCount") -- 0x0DD0
+    :Buff_array("m_unitBuff", 16)
 
-    :field("auraCount", "int32") -- 0x0E54
-    :structArray("UnitBuffSorted", UnitBuff, 16)
+    :int32("m_auraCountSorted") -- 0x0E54
+    :Buff_array("m_unitBuffSorted", 16)
 
     :paddingTo(0xFB0)
 
-    :field("UnitHealthPredicted", "int32") -- 0x0FB0
-    :field("UnitManaPredicted", "int32") -- 0x0FB4
-    :field("UnitRagePredicted", "int32") -- 0x0FB8
-    :field("UnitFocusPredicted", "int32") -- 0x0FBC
-    :field("UnitEnergyPredicted", "int32") -- 0x0FC0
-    :field("UnkPowerPredicted", "int32") -- 0x0FC4
-    :field("UnkPowerPredicted", "int32") -- 0x0FC8
-    :field("UnitRunePowerPredicted", "int32") -- 0x0FCC
-    :field("UnkPowerPredictionTimer", "int32") -- 0x0FD0
+    :int32("UnitHealthPredicted") -- 0x0FB0
+    :int32("UnitManaPredicted") -- 0x0FB4
+    :int32("UnitRagePredicted") -- 0x0FB8
+    :int32("UnitFocusPredicted") -- 0x0FBC
+    :int32("UnitEnergyPredicted") -- 0x0FC0
+    :int32("UnkPowerPredicted") -- 0x0FC4
+    :int32("UnkPowerPredicted") -- 0x0FC8
+    :int32("UnitRunePowerPredicted") -- 0x0FCC
+    :int32("UnkPowerPredictionTimer") -- 0x0FD0
     :field("unk_0FD4", "int32") -- 0x0FD4
     :field("unk_0FD8", "int32") -- 0x0FD8
     :field("unk_0FDC", "int32") -- 0x0FDC
-    :ptr("ThreatVtblPtr") -- 0x0FE0
-    :field("unk_0FE4", "int32") -- 0x0FE4
-    :field("unk_0FE8", "int32") -- 0x0FE8
-    :field("unk_0FEC", "int32") -- 0x0FEC
-    :field("unk_0FF0", "int32") -- 0x0FF0
-    :field("unk_0FF4", "int32") -- 0x0FF4
-    :field("unk_0FF8", "int32") -- 0x0FF8
-    :field("unk_0FFC", "int32") -- 0x0FFC
-    :field("unk_1000", "int32") -- 0x1000
-    :field("unk_1004", "int32") -- 0x1004
-    :hex("playerBeginPtr", "int32") -- 0x1008 --if not a player then 8 byte GUID
-    :hex("playerEndPtr", "int32") -- 0x100C
+    :TSHashTable("TSHashTable__UnitThreat") -- 0x0FE0    
+    :ptr("playerBeginPtr") -- 0x1008 --if not a player then 8 byte GUID
+    :ptr("playerEndPtr") -- 0x100C
     :field("unk_1010", "int32") -- 0x1010
     :paddingTo(0x1068)
     :field("Health", "uint32") -- 0x1068
@@ -1298,254 +1409,238 @@ if addr then
 end
 
 local QuestLog = Struct("QuestLog")
-    :field("QuestId", "int32")
-    :field("ObjectiveDone", "int32")
-    :field("ObjectiveCounterFlag", "int32")
-    :field("UnkField4", "int32")
-    :field("UnkField5", "int32")
+    :int32("QuestId")
+    :int32("ObjectiveDone")
+    :int32("ObjectiveCounterFlag")
+    :int32("UnkField4")
+    :int32("UnkField5")
 
 local PlayerSkill = Struct("PlayerSkill")
-    :field("ID", "uint16")
-    :field("Unk", "uint16")
-    :field("Skill", "uint16")
-    :field("SkillMax", "uint16")
-    :field("UnkPad", "int32")
-
-local WoWGUID = Struct("WOWGUID")
-    :hex("guid", "uint64")
+    :uint16("ID")
+    :uint16("Unk")
+    :uint16("Skill")
+    :uint16("SkillMax")
+    :int32("UnkPad")
 
 local ExploredZones = Struct("ExploredZonesBitflied")
-    :hex("flag", "uint64")
+    :flag64("flag")
 
 local ArenaTeam = Struct("ArenaTeam")
-    :field("ID", "int32")
-    :field("TypeID", "int32")
-    :field("MemberID", "int32")
-    :field("GamesWeekID", "int32")
-    :field("GamesSeasonID", "int32")
-    :field("WinsSeasonID", "int32")
-    :field("PersonalRateID", "int32")
-
-local DailyQuest = Struct("DailyQuest")
-    :field("id", "uint32")
+    :int32("ID")
+    :int32("TypeID")
+    :int32("MemberID")
+    :int32("GamesWeekID")
+    :int32("GamesSeasonID")
+    :int32("WinsSeasonID")
+    :int32("PersonalRateID")
 
 local PlayerFields = Struct("PlayerFields")
-    :field("DuelArbiter", "int32") -- 0x1BB0
-    :field("GuildID", "int32") -- 0x1BB4
-    :field("GuildRank", "int32") -- 0x1BB8
-    :field("bytes1", "int32") -- 0x1BBC
-    :field("bytes2", "int32") -- 0x1BC0
-    :field("bytes3", "int32") -- 0x1BC4
-    :field("DueldTeam", "int32") -- 0x1BC8
-    :field("GuildTimestamp", "int32") -- 0x1BCC
+    :int32("DuelArbiter") -- 0x1BB0
+    :int32("GuildID") -- 0x1BB4
+    :int32("GuildRank") -- 0x1BB8
+    :flag32("bytes1") -- 0x1BBC
+    :flag32("bytes2") -- 0x1BC0
+    :flag32("bytes3") -- 0x1BC4
+    :int32("DueldTeam") -- 0x1BC8
+    :int32("GuildTimestamp") -- 0x1BCC
 
-    :structArray("QuestLog", QuestLog, 25)
+    :QuestLog_array("m_questLog", 25)
 
-    :field("HeadItemId", "int32") -- 0x1DC4
-    :field("HeadEnchantment", "int32") -- 0x1DC8
-    :field("NeckItemId", "int32") -- 0x1DCC
-    :field("NeckEnchantment", "int32") -- 0x1DD0
-    :field("ShoulderItemId", "int32") -- 0x1DD4
-    :field("ShoulderEnchantment", "int32") -- 0x1DD8
-    :field("ShirtItemId", "int32") -- 0x1DDC
-    :field("ShirtEnchantment", "int32") -- 0x1DE0
-    :field("ChestItemId", "int32") -- 0x1DE4
-    :field("ChestEnchantment", "int32") -- 0x1DE8
-    :field("BeltItemId", "int32") -- 0x1DEC
-    :field("BeltEnchantment", "int32") -- 0x1DF0
-    :field("LegsItemId", "int32") -- 0x1DF4
-    :field("LegsEnchantment", "int32") -- 0x1DF8
-    :field("FootItemId", "int32") -- 0x1DFC
-    :field("FootEnchantment", "int32") -- 0x1E00
-    :field("WristItemId", "int32") -- 0x1E04
-    :field("WristEnchantment", "int32") -- 0x1E08
-    :field("HandsItemId", "int32") -- 0x1E0C
-    :field("HandsEnchantment", "int32") -- 0x1E10
-    :field("Finger1ItemId", "int32") -- 0x1E14
-    :field("Finger1Enchantment", "int32") -- 0x1E18
-    :field("Finger2ItemId", "int32") -- 0x1E1C
-    :field("Finger2Enchantment", "int32") -- 0x1E20
-    :field("Trinket1ItemId", "int32") -- 0x1E24
-    :field("Trinket1Enchantment", "int32") -- 0x1E28
-    :field("Trinket2ItemId", "int32") -- 0x1E2C
-    :field("Trinket2Enchantment", "int32") -- 0x1E30
-    :field("CloackItemId", "int32") -- 0x1E34
-    :field("CloackEnchantment", "int32") -- 0x1E38
-    :field("MainHandItemId", "int32") -- 0x1E3C
-    :field("MainHandEnchantment", "int32") -- 0x1E40
-    :field("OffHandItemId", "int32") -- 0x1E44
-    :field("OffHandEnchantment", "int32") -- 0x1E48
-    :field("RangedItemId", "int32") -- 0x1E4C
-    :field("RangedEnchantment", "int32") -- 0x1E50
-    :field("TabardItemId", "int32") -- 0x1E54
-    :field("TabardEnchantment", "int32") -- 0x1E58
-    :field("ChosenTitle", "int32") -- 0x1E5C
-    :field("FakeInebriation", "int32") -- 0x1E60
-    :field("UnkPad", "int32") -- 0x1E64
+    :int32("HeadItemId") -- 0x1DC4
+    :int32("HeadEnchantment") -- 0x1DC8
+    :int32("NeckItemId") -- 0x1DCC
+    :int32("NeckEnchantment") -- 0x1DD0
+    :int32("ShoulderItemId") -- 0x1DD4
+    :int32("ShoulderEnchantment") -- 0x1DD8
+    :int32("ShirtItemId") -- 0x1DDC
+    :int32("ShirtEnchantment") -- 0x1DE0
+    :int32("ChestItemId") -- 0x1DE4
+    :int32("ChestEnchantment") -- 0x1DE8
+    :int32("BeltItemId") -- 0x1DEC
+    :int32("BeltEnchantment") -- 0x1DF0
+    :int32("LegsItemId") -- 0x1DF4
+    :int32("LegsEnchantment") -- 0x1DF8
+    :int32("FootItemId") -- 0x1DFC
+    :int32("FootEnchantment") -- 0x1E00
+    :int32("WristItemId") -- 0x1E04
+    :int32("WristEnchantment") -- 0x1E08
+    :int32("HandsItemId") -- 0x1E0C
+    :int32("HandsEnchantment") -- 0x1E10
+    :int32("Finger1ItemId") -- 0x1E14
+    :int32("Finger1Enchantment") -- 0x1E18
+    :int32("Finger2ItemId") -- 0x1E1C
+    :int32("Finger2Enchantment") -- 0x1E20
+    :int32("Trinket1ItemId") -- 0x1E24
+    :int32("Trinket1Enchantment") -- 0x1E28
+    :int32("Trinket2ItemId") -- 0x1E2C
+    :int32("Trinket2Enchantment") -- 0x1E30
+    :int32("CloackItemId") -- 0x1E34
+    :int32("CloackEnchantment") -- 0x1E38
+    :int32("MainHandItemId") -- 0x1E3C
+    :int32("MainHandEnchantment") -- 0x1E40
+    :int32("OffHandItemId") -- 0x1E44
+    :int32("OffHandEnchantment") -- 0x1E48
+    :int32("RangedItemId") -- 0x1E4C
+    :int32("RangedEnchantment") -- 0x1E50
+    :int32("TabardItemId") -- 0x1E54
+    :int32("TabardEnchantment") -- 0x1E58
 
-    :hex("HeadItemSlot", "uint64") -- 0x1E68
-    :hex("NeckItemSlot", "uint64") -- 0x1E70
-    :hex("ShoulderItemSlot", "uint64") -- 0x1E78
-    :hex("ShirtItemSlot", "uint64") -- 0x1E80
-    :hex("ChestItemSlot", "uint64") -- 0x1E88
-    :hex("BeltItemSlot", "uint64") -- 0x1E90
-    :hex("LegsItemSlot", "uint64") -- 0x1E98
-    :hex("FootItemSlot", "uint64") -- 0x1EA0
-    :hex("WristItemSlot", "uint64") -- 0x1EA8
-    :hex("HandsItemSlot", "uint64") -- 0x1EB0
-    :hex("Firnger1ItemSlot", "uint64") -- 0x1EB8
-    :hex("Finger2ItemSlot", "uint64") -- 0x1EC0
-    :hex("Trinket1ItemSlot", "uint64") -- 0x1EC8
-    :hex("Trinket2ItemSlot", "uint64") -- 0x1ED0
-    :hex("BackItemSlot", "uint64") -- 0x1ED8
-    :hex("MainHandItemSlot", "uint64") -- 0x1EE0
-    :hex("OffHandItemSlot", "uint64") -- 0x1EE8
-    :hex("RangedItemSlot", "uint64") -- 0x1EF0
-    :hex("TabardItemSlot", "uint64") -- 0x1EF8
+    :int32("ChosenTitle") -- 0x1E5C
+    :int32("FakeInebriation") -- 0x1E60
+    :int32("UnkPad") -- 0x1E64
 
-    :structArray("ContainerSlot", WoWGUID, 4)
-    :structArray("BagSlot", WoWGUID, 16)
-    :structArray("BankSlot", WoWGUID, 28)
-    :structArray("ContainerBankSlot", WoWGUID, 7)
-    :structArray("VendorBuyBackItem", WoWGUID, 12)
-    :structArray("KeyRing", WoWGUID, 32)
-    :structArray("Currency", WoWGUID, 32)
+    :WOWGUID("HeadItemSlot") -- 0x1E68
+    :WOWGUID("NeckItemSlot") -- 0x1E70
+    :WOWGUID("ShoulderItemSlot") -- 0x1E78
+    :WOWGUID("ShirtItemSlot") -- 0x1E80
+    :WOWGUID("ChestItemSlot") -- 0x1E88
+    :WOWGUID("BeltItemSlot") -- 0x1E90
+    :WOWGUID("LegsItemSlot") -- 0x1E98
+    :WOWGUID("FootItemSlot") -- 0x1EA0
+    :WOWGUID("WristItemSlot") -- 0x1EA8
+    :WOWGUID("HandsItemSlot") -- 0x1EB0
+    :WOWGUID("Firnger1ItemSlot") -- 0x1EB8
+    :WOWGUID("Finger2ItemSlot") -- 0x1EC0
+    :WOWGUID("Trinket1ItemSlot") -- 0x1EC8
+    :WOWGUID("Trinket2ItemSlot") -- 0x1ED0
+    :WOWGUID("BackItemSlot") -- 0x1ED8
+    :WOWGUID("MainHandItemSlot") -- 0x1EE0
+    :WOWGUID("OffHandItemSlot") -- 0x1EE8
+    :WOWGUID("RangedItemSlot") -- 0x1EF0
+    :WOWGUID("TabardItemSlot") -- 0x1EF8
 
-    :hex("FarsightGUID", "uint64") -- 0x2318
-    :hex("KnownTitles1", "uint64") -- 0x2320
-    :hex("KnownTitles2", "uint64") -- 0x2328
-    :hex("KnownTitles3", "uint64") -- 0x2330
-    :hex("KnownCurrencies", "uint64") -- 0x2338
-    :field("XP", "int32") -- 0x2340
-    :field("NextLevelXP", "int32") -- 0x2344
+    :WOWGUID_array("ContainerSlot", 4)
+    :WOWGUID_array("BagSlot", 16)
+    :WOWGUID_array("BankSlot", 28)
+    :WOWGUID_array("ContainerBankSlot", 7)
+    :WOWGUID_array("VendorBuyBackItem", 12)
+    :WOWGUID_array("KeyRing", 32)
+    :WOWGUID_array("Currency", 32)
 
-    :structArray("Skill", PlayerSkill, 128)
+    :WOWGUID("m_farsight") -- 0x2318
+    :flag64("KnownTitles1") -- 0x2320
+    :flag64("KnownTitles2") -- 0x2328
+    :flag64("KnownTitles3") -- 0x2330
+    :flag64("KnownCurrencies") -- 0x2338
+    :int32("XP") -- 0x2340
+    :int32("NextLevelXP") -- 0x2344
 
-    :field("FreeTalentPoints", "int32") -- 0x2948
-    :field("MainProfessionFreeSlot", "int32") -- 0x294C
-    :field("TrackCreaturesFlag", "int32") -- 0x2950
-    :field("ResourcesTrackFlags", "int32") -- 0x2954
-    :field("BlockPrecentage", "float") -- 0x2958
-    :field("DodgePercentage", "float") -- 0x295C
-    :field("ParryPercentage", "float") -- 0x2960
-    :field("ExpertiseMainHand", "int32") -- 0x2964
-    :field("ExpertiseOffHand", "int32") -- 0x2968
-    :field("CritPercentageMelee", "float") -- 0x296C
-    :field("CritPercentageRaged", "float") -- 0x2970
-    :field("CritPercentageOffhand", "float") -- 0x2974
-    :field("SpellCritPercentage1", "float") -- 0x2978
-    :field("CritPercentageSpellHoly", "float") -- 0x297C
-    :field("CritPercentageSpellFire", "float") -- 0x2980
-    :field("CritPercentageSpellnature", "float") -- 0x2984
-    :field("CritPercentageSpellFrost", "float") -- 0x2988
-    :field("CritPercentageSpellShadow", "float") -- 0x298C
-    :field("CritPercentageSpellArcane", "float") -- 0x2990
-    :field("BlockDamageValue", "int32") -- 0x2994
-    :field("BlockCritPercentage", "float") -- 0x2998
+    :PlayerSkill_array("m_skill", 128)
 
-    :structArray("ExploredZones", ExploredZones, 64)
+    :int32("FreeTalentPoints") -- 0x2948
+    :int32("MainProfessionFreeSlot") -- 0x294C
+    :int32("TrackCreaturesFlag") -- 0x2950
+    :int32("ResourcesTrackFlags") -- 0x2954
+    :float("BlockPrecentage") -- 0x2958
+    :float("DodgePercentage") -- 0x295C
+    :float("ParryPercentage") -- 0x2960
+    :int32("ExpertiseMainHand") -- 0x2964
+    :int32("ExpertiseOffHand") -- 0x2968
+    :float("CritPercentageMelee") -- 0x296C
+    :float("CritPercentageRaged") -- 0x2970
+    :float("CritPercentageOffhand") -- 0x2974
+    :float("SpellCritPercentage1") -- 0x2978
+    :float("CritPercentageSpellHoly") -- 0x297C
+    :float("CritPercentageSpellFire") -- 0x2980
+    :float("CritPercentageSpellNature") -- 0x2984
+    :float("CritPercentageSpellFrost") -- 0x2988
+    :float("CritPercentageSpellShadow") -- 0x298C
+    :float("CritPercentageSpellArcane") -- 0x2990
+    :int32("BlockDamageValue") -- 0x2994
+    :float("BlockCritPercentage") -- 0x2998
 
-    :field("RestXP", "int32") -- 0x2B9C
-    :field("Money", "int32") -- 0x2BA0
-    :field("UnkField", "int32") -- 0x2BA4
-    :field("SpellPowerHoly", "int32") -- 0x2BA8
-    :field("SpellPowerFire", "int32") -- 0x2BAC
-    :field("SpellPowerNature", "int32") -- 0x2BB0
-    :field("SpellPowerFrost", "int32") -- 0x2BB4
-    :field("SpellPowerShadow", "int32") -- 0x2BB8
-    :field("SpellPowerArcane", "int32") -- 0x2BBC
-    :array("SpellPowerNegative", "int32", 7) -- 0x2BC0
-    :array("UnkDamagePercent", "float", 7) -- 0x2BDC
-    :field("ModHealingDonePos", "int32") -- 0x2BF8
-    :field("HealingPercent", "float") -- 0x2BFC
-    :field("HealingDonePercent", "float") -- 0x2C00
-    :field("TargetResistance", "int32") -- 0x2C04
-    :field("TargetPhysResistance", "int32") -- 0x2C08
-    :field("UnkPad", "int32") -- 0x2C0C
-    :field("AmmotSlotItemId", "int32") -- 0x2C10
-    :field("SelfResSpell", "int32") -- 0x2C14
-    :field("PVPMedals", "int32") -- 0x2C18
-    :array("BuyBackPrice", "int32", 12) -- 0x2C1C
-    :array("BuyBackTimeStamp", "int32", 12) -- 0x2C4C
-    :field("HonorKills", "int32") -- 0x2C7C
-    :field("TodayHonorContribution", "int32") -- 0x2C80
-    :field("YesterdayHonorContribution", "int32") -- 0x2C84
-    :field("LifetimeHonorableKills", "int32") -- 0x2C88
-    :field("bytes2field", "int32") -- 0x2C8C
-    :field("WatchedFactionIndex", "int32") -- 0x2C90
-    :field("UnkCombatRating", "int32") -- 0x2C94
-    :field("DefenceRate", "int32") -- 0x2C98
-    :field("DodgeRate", "int32") -- 0x2C9C
-    :field("ParryRate", "int32") -- 0x2CA0
-    :field("BlockRate", "int32") -- 0x2CA4
-    :field("HitRateMelee", "int32") -- 0x2CA8
-    :field("HitRateRanged", "int32") -- 0x2CAC
-    :field("HitRateSpell", "int32") -- 0x2CB0
-    :field("CritRateMelee", "int32") -- 0x2CB4
-    :field("CritRateRanged", "int32") -- 0x2CB8
-    :field("CritRateSpell", "int32") -- 0x2CBC
-    :field("UnkCombatRating", "int32") -- 0x2CC0
-    :field("UnkCombatRating", "int32") -- 0x2CC4
-    :field("UnkCombatRating", "int32") -- 0x2CC8
-    :field("ResilienceRate_1", "int32") -- 0x2CCC
-    :field("ResilienceRate_2", "int32") -- 0x2CD0
-    :field("ResilienceRate_3", "int32") -- 0x2CD4
-    :field("AttackSpeed_1", "int32") -- 0x2CD8
-    :field("HasteRate_1", "int32") -- 0x2CDC
-    :field("AttackSpeed_2", "int32") -- 0x2CE0
-    :field("HasteRate_2", "int32") -- 0x2CE4
-    :field("AttackSpeed_3", "int32") -- 0x2CE8
-    :field("HasteRate_3", "int32") -- 0x2CEC
-    :field("ExpertiseRate", "int32") -- 0x2CF0
-    :field("ArmorPenetrationRate", "int32") -- 0x2CF4
+    :ExploredZonesBitflied_array("m_exploredZones", 64)
 
-    :structArray("ArenaTeam", ArenaTeam, 3)
+    :int32("RestXP") -- 0x2B9C
+    :int32("Money") -- 0x2BA0
+    :int32("UnkField") -- 0x2BA4
+    :int32("SpellPowerHoly") -- 0x2BA8
+    :int32("SpellPowerFire") -- 0x2BAC
+    :int32("SpellPowerNature") -- 0x2BB0
+    :int32("SpellPowerFrost") -- 0x2BB4
+    :int32("SpellPowerShadow") -- 0x2BB8
+    :int32("SpellPowerArcane") -- 0x2BBC
+    :int32_array("SpellPowerNegative", 7) -- 0x2BC0
+    :float_array("UnkDamagePercent", 7) -- 0x2BDC
+    :int32("ModHealingDonePos") -- 0x2BF8
+    :float("HealingPercent") -- 0x2BFC
+    :float("HealingDonePercent") -- 0x2C00
+    :int32("TargetResistance") -- 0x2C04
+    :int32("TargetPhysResistance") -- 0x2C08
+    :int32("UnkPad") -- 0x2C0C
+    :int32("AmmotSlotItemId") -- 0x2C10
+    :int32("SelfResSpell") -- 0x2C14
+    :int32("PVPMedals") -- 0x2C18
+    :int32_array("BuyBackPrice", 12) -- 0x2C1C
+    :int32_array("BuyBackTimeStamp", 12) -- 0x2C4C
+    :int32("HonorKills") -- 0x2C7C
+    :int32("TodayHonorContribution") -- 0x2C80
+    :int32("YesterdayHonorContribution") -- 0x2C84
+    :int32("LifetimeHonorableKills") -- 0x2C88
+    :int32("bytes2field") -- 0x2C8C
+    :int32("WatchedFactionIndex") -- 0x2C90
+    :int32("UnkCombatRating") -- 0x2C94
+    :int32("DefenceRate") -- 0x2C98
+    :int32("DodgeRate") -- 0x2C9C
+    :int32("ParryRate") -- 0x2CA0
+    :int32("BlockRate") -- 0x2CA4
+    :int32("HitRateMelee") -- 0x2CA8
+    :int32("HitRateRanged") -- 0x2CAC
+    :int32("HitRateSpell") -- 0x2CB0
+    :int32("CritRateMelee") -- 0x2CB4
+    :int32("CritRateRanged") -- 0x2CB8
+    :int32("CritRateSpell") -- 0x2CBC
+    :int32("UnkCombatRating") -- 0x2CC0
+    :int32("UnkCombatRating") -- 0x2CC4
+    :int32("UnkCombatRating") -- 0x2CC8
+    :int32("ResilienceRate_1") -- 0x2CCC
+    :int32("ResilienceRate_2") -- 0x2CD0
+    :int32("ResilienceRate_3") -- 0x2CD4
+    :int32("AttackSpeed_1") -- 0x2CD8
+    :int32("HasteRate_1") -- 0x2CDC
+    :int32("AttackSpeed_2") -- 0x2CE0
+    :int32("HasteRate_2") -- 0x2CE4
+    :int32("AttackSpeed_3") -- 0x2CE8
+    :int32("HasteRate_3") -- 0x2CEC
+    :int32("ExpertiseRate") -- 0x2CF0
+    :int32("ArmorPenetrationRate") -- 0x2CF4
 
-    :field("CurrencyHonor", "int32") -- 0x2D4C
-    :field("CurrencyArenaPoint", "int32") -- 0x2D50
-    :field("MaxLevel", "int32") -- 0x2D54
+    :ArenaTeam_array("m_arenaTeams", 3)
 
-    :structArray("DailyQuest", DailyQuest, 25)
+    :int32("CurrencyHonor") -- 0x2D4C
+    :int32("CurrencyArenaPoint") -- 0x2D50
+    :int32("MaxLevel") -- 0x2D54
 
-    :array("RuneRegen", "float", 4) -- 0x2DBC
-    :array("NoReagenCost", "int32", 3) -- 0x2DCC
-    :array("GlyphSlot", "int32", 6) -- 0x2DD8
-    :array("Glyph", "int32", 6) -- 0x2DF0
-    :field("GlyphsEnabletBitField", "int32") -- 0x2E08
-    :field("PetSpellPower", "int32") -- 0x2E0C
-    :field("UnkFlags", "int32") -- 0x2E10
-    :field("PetSpellBonusDamage", "float") -- 0x2E14
+    :int32_array("m_dailyQuests", 25)
 
-local PlayerCritterArray = Struct("CritterArray")
-    :field("memoryCapacity", "uint32")
-    :field("count", "uint32")
-    :hex("memoryPtr", "uint32")
+    :float_array("RuneRegen", 4) -- 0x2DBC
+    :int32_array("NoReagenCost", 3) -- 0x2DCC
+    :int32_array("GlyphSlot", 6) -- 0x2DD8
+    :int32_array("Glyph", 6) -- 0x2DF0
+    :flag32("GlyphsEnabletBitField") -- 0x2E08
+    :int32("PetSpellPower") -- 0x2E0C
+    :flag32("UnkFlags") -- 0x2E10
+    :float("PetSpellBonusDamage") -- 0x2E14
+
+local VisibleItem = Struct("VisibleItem")
+    :uint8("classID")
+    :uint8("subtypeID")
+    :uint8("soundOverrideSubclassID")
+    :uint8("material")
+    :uint8("inventoryType")
+    :uint8("sheatheType")
+    :uint8("pad1")
+    :uint8("pad2")
 
 local CGPlayer = Struct("CGPlayer", CGUnit)
     :paddingTo(0x1850)
     :field("unk_1850", "int32") -- 0x1850
     :field("unk_1854", "int32") -- 0x1854
-    :field("farSightFlag", "int32") -- 0x1858
-    :ptr("unkTradeSkillObjVtbl") -- 0x185C
-    :field("unk_1860", "int32") -- 0x1860
-    :field("unk_1864", "int32") -- 0x1864
-    :field("unk_1868", "int32") -- 0x1868
-    :field("unk_186C", "int32") -- 0x186C
-    :field("unk_1870", "int32") -- 0x1870
-    :field("unk_1874", "int32") -- 0x1874
-    :field("unk_1878", "int32") -- 0x1878
-    :field("unk_187C", "int32") -- 0x187C
-    :field("unk_1880", "int32") -- 0x1880
-    :ptr("unkTradeSkillObjVptr") -- 0x1884
-    :field("unk_1888", "int32") -- 0x1888
-    :field("unk_188C", "int32") -- 0x188C
-    :field("unk_1890", "int32") -- 0x1890
-    :field("unk_1894", "int32") -- 0x1894
-    :field("unk_1898", "int32") -- 0x1898
-    :field("unk_189C", "int32") -- 0x189C
-    :ptr("unk_18A0") -- 0x18A0
-    :field("unk_18A4", "int32") -- 0x18A4
-    :field("unk_18A8", "int32") -- 0x18A8
+    :flag32("farSightFlag") -- 0x1858
+
+    :TSHashTable("TSHashTable__TRADESKILLLINE") -- 0x185C
+    :TSHashTable("TSHashTable__PROFICIENCYSPELL") -- 0x1884
+
     :field("unk_18AC", "int32") -- 0x18AC
     :field("unk_18B0", "int32") -- 0x18B0
     :field("unk_18B4", "int32") -- 0x18B4
@@ -1555,47 +1650,44 @@ local CGPlayer = Struct("CGPlayer", CGUnit)
     :field("unk_18C4", "int32") -- 0x18C4
     :field("unk_18C8", "int32") -- 0x18C8
 
-    :embed("m_critters", PlayerCritterArray)
+    :TSFixedArray("m_critters")
 
     :field("unk_18D8", "int32") -- 0x18D8
     :field("unk_18DC", "int32") -- 0x18DC
-    :hex("LootTargetGUID", "uint64") -- 0x18E0
+    :WOWGUID("m_lootTarget") -- 0x18E0
     :hex("unkAutoLootFlags", "int32") -- 0x18E8
     :field("unk_18EC", "int32") -- 0x18EC
     :field("unk_18F0", "int32") -- 0x18F0
     :ptr("playerInventoryPtr") -- 0x18F4
-    :field("playerGUID", "int32") -- 0x18F8
+    :uint32("playerGUID_low", {hex = true}) -- 0x18F8
     :field("unk_18FC", "int32") -- 0x18FC
     :hex("unk_1900", "int32") -- 0x1900
     :hex("unk_1904", "int32") -- 0x1904
-    :hex("MainHandVisibleItemClassID", "int32") -- 0x1908
-    :hex("MainHandVisibleItemSubtypeID", "int32") -- 0x190C
-    :hex("OffHandVisibleItemClassID", "int32") -- 0x1910
-    :hex("unkOffHandInventoryType", "int32") -- 0x1914
-    :hex("RangedVisibleItemClassID", "int32") -- 0x1918
-    :hex("unkRangedVisibleItemInventoryType", "int32") -- 0x191C
-    :field("standValue", "int32") -- 0x1920
-    :field("MetaSocketCount", "int32") -- 0x1924
-    :field("RedSocketCount", "int32") -- 0x1928
-    :field("YellowSocketCount", "int32") -- 0x192C
-    :field("BlueSocketCount", "int32") -- 0x1930
+    :VisibleItem_array("m_visibleItem", 3) -- 0x1908
+    :int32("standValue") -- 0x1920
+
+    :int32("MetaSocketCount") -- 0x1924
+    :int32("RedSocketCount") -- 0x1928
+    :int32("YellowSocketCount") -- 0x192C
+    :int32("BlueSocketCount") -- 0x1930
+
     :field("combatModeLastUnitMS", "int32") -- 0x1934
     :hex("combatModeLastUnitGUID", "uint64") -- 0x1938
-    :field("turnOffPVPModeMS", "int32") -- 0x1940
-    :field("unkDanceStudioField1", "int32") -- 0x1944
-    :field("unkDanceStudioField2", "int32") -- 0x1948
-    :field("totalPlayedTimeSeconds", "int32") -- 0x194C
-    :field("lastPlayedCmdTimestamp", "int32") -- 0x1950
+    :int32("turnOffPVPModeMS") -- 0x1940
+    :ptr("unkDanceStudioField1") -- 0x1944
+    :ptr("unkDanceStudioField2") -- 0x1948
+    :int32("totalPlayedTimeSeconds") -- 0x194C
+    :int32("lastPlayedCmdTimestamp") -- 0x1950
     :field("unk_1954", "int32") -- 0x1954
 
-    :embed("objectFields", ObjectFields)
+    :ObjectFields("m_objectFields")
 
-    :embed("unitFields", UnitFields)
+    :UnitFields("m_unitFields")
 
     :field("UnkBeginPlayerStructureField", "uint32")
     :field("unkField", "uint32")
 
-    :embed("playerFields", PlayerFields)
+    :PlayerFields("m_playerFields")
 
 local addr, typ = GetCGObjectAddr(readQword(0xC79D10)) -- local player GUID from game connection class
 if addr then

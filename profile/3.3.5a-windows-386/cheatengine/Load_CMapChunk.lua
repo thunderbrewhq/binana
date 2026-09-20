@@ -41,6 +41,8 @@ local Types = {
     qword   = { ce = CE.vtQword,  size = 8 },
 }
 
+local StructRegistry = {}
+
 function SetPointerSize(bits)
     if bits == 64 then
         Types.ptr = { ce = CE.vtQword, size = 8 }
@@ -65,6 +67,10 @@ function StructDef.new(name, parent)
         self._offset = parent:totalSize()
     else
         self._offset = 0
+    end
+
+    if name then
+        StructRegistry[name] = self
     end
 
     return self
@@ -101,6 +107,30 @@ function StructDef:hex(name, typeName, opts)
     opts = opts or {}
     opts.hex = true
     return self:field(name, typeName, opts)
+end
+
+function StructDef:flag8(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint8", opts)
+end
+
+function StructDef:flag16(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint16", opts)
+end
+
+function StructDef:flag32(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint32", opts)
+end
+
+function StructDef:flag64(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint64", opts)
 end
 
 --- Add string
@@ -759,65 +789,126 @@ function GetCGObjectAddr(guidValue)
     return nil
 end
 
+setmetatable(StructDef, {
+    __index = function(t, key)
+        if Types[key] then
+            local typeName = key
+            local fn = function(self, name, opts)
+                return self:field(name, typeName, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local baseArray, suffixArray = key:match("^(.*)_(array)$")
+        if suffixArray == "array" then
+            if Types[baseArray] then
+                local fn = function(self, name, count, opts)
+                    return self:array(name, baseArray, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            elseif StructRegistry[baseArray] then
+                local struct = StructRegistry[baseArray]
+                local fn = function(self, name, count, opts)
+                    return self:structArray(name, struct, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            end
+        end
+
+        local baseArrayPtr, suffixArrayPtr = key:match("^(.*)_(arrayPtr)$")
+        if suffixArrayPtr == "arrayPtr" then
+            local fn = function(self, name, count, opts)
+                return self:ptrArray(baseArrayPtr, name, count, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local basePtr, suffixPtr = key:match("^(.*)_(ptr)$")
+        if suffixPtr == "ptr" then
+            local fn = function(self, name, opts)
+                return self:ptr(basePtr, name, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local userStruct = StructRegistry[key]
+        if userStruct then
+            local fn = function(self, name, opts)
+                return self:embed(name, userStruct, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        return nil
+    end
+})
+
 local CImVector = Struct("CImVector")
-    :field("r", "uint8")
-    :field("g", "uint8")
-    :field("b", "uint8")
-    :field("a", "uint8")
+    :uint8("r")
+    :uint8("g")
+    :uint8("b")
+    :uint8("a")
 
 local C3Vector = Struct("C3Vector")
-    :field("x", "float")
-    :field("y", "float")
-    :field("z", "float")
+    :float("x")
+    :float("y")
+    :float("z")
 
 local C2iVector = Struct("C2iVector")
-    :field("x", "int32")
-    :field("y", "int32")
+    :int32("x")
+    :int32("y")
 
 local CAaBox = Struct("CAaBox")
-    :embed("top", C3Vector)
-    :embed("bottom", C3Vector)
+    :C3Vector("top")
+    :C3Vector("bottom")
 
 local CAaSphere = Struct("CAaSphere")
-    :embed("center", C3Vector)
-    :field("d", "float")
+    :C3Vector("center")
+    :float("d")
 
 local C44Matrix = Struct("C44Matrix")
-    :array('m', 'float', 16)
+    :float_array("m", 16)
 
 local TSGrowableArray = Struct("TSGrowableArray")
-    :field('m_alloc', 'uint32')
-    :field('m_count', 'uint32')
+    :uint32('m_alloc')
+    :uint32('m_count')
     :ptr('data')
-    :field('m_chunk', 'uint32')
+    :uint32('m_chunk')
 
-local TSExplicitList = Struct("TSExplicitList")
-    :field("m_linkOffset", "uint32")
-    :ptr("ptr1")
-    :ptr("ptr2")
+local TSLink = Struct("TSLink")
+    :TSLink_ptr("m_prevlink")
+    :ptr("m_next")
+
+local TSList = Struct("TSList") -- also TSExplicitList
+    :int32("m_linkoffset")
+    :TSLink("m_terminator")
 
 local CMapBaseObj = Struct("CMapBaseObj")
     :ptr("void*", "vtable")
-    :field("objectIndex", "uint32")
-    :field("type", "uint16")
-    :field("refCount", "uint16")
-    :field("unk_C", "int32")
-    :ptr("prev")
-    :ptr("next")
-    :embed("objLink", TSExplicitList)
+    :uint32("objectIndex")
+    :uint16("type")
+    :uint16("refCount")
+    :uint32("unk_C")
+    :TSLink("m_link")
+    :TSList("m_objLink")
 
 local CMapChunk = Struct('CMapChunk', CMapBaseObj)
-    :embed('aIndex', C2iVector)
-    :embed('sOffset', C2iVector)
-    :embed('cOffset', C2iVector)
-    :embed('center', C3Vector)
-    :field('radius', 'float')
-    :embed('bbox', CAaBox)
-    :embed('bottomRight', C3Vector)
-    :embed('topLeft', C3Vector)
-    :embed('topLeftCoords', C3Vector)
-    :field('distToCamera', 'float')
-    :embed('bbox2', CAaBox)
+    :C2iVector('aIndex')
+    :C2iVector('sOffset')
+    :C2iVector('cOffset')
+    :CAaSphere('sphere')
+    :CAaBox('bbox')
+    :C3Vector('bottomRight')
+    :C3Vector('topLeft')
+    :C3Vector('topLeftCoords')
+    :float('distToCamera')
+    :CAaBox('bbox2')
     :ptr('detailDoodadInst')
     :ptr('renderChunk')
     :field('unk_AC', 'int32')
@@ -826,12 +917,12 @@ local CMapChunk = Struct('CMapChunk', CMapBaseObj)
     :field('unk_B8', 'int32')
     :field('unk_BC', 'int32')
     :field('unk_C0', 'int32')
-    :embed('doodadDefLinkList', TSExplicitList)
-    :embed('mapObjDefLinkList', TSExplicitList)
-    :embed('unkList', TSExplicitList)
-    :embed('lightLinkList', TSExplicitList)
-    :embed('mapSoundEmitterLinkList', TSExplicitList)
-    :embed('liquidChunkLinkList', TSExplicitList)
+    :TSList('doodadDefLinkList')
+    :TSList('mapObjDefLinkList')
+    :TSList('unkList')
+    :TSList('lightLinkList')
+    :TSList('mapSoundEmitterLinkList')
+    :TSList('liquidChunkLinkList')
     :ptr('chunkInfoBeginPtr')
     :ptr('header')
     :ptr('lowQualityTexMap')
@@ -848,7 +939,7 @@ local CMapChunk = Struct('CMapChunk', CMapBaseObj)
     :field('unk_140', 'int32')
     :field('unk_144', 'int32')
     :field('unk_148', 'int32')
-    :field('unk_14C', 'int32')
+    :ptr('unk_14C')
     :field('unk_150', 'int32')
     :field('unk_154', 'int32')
 

@@ -41,6 +41,8 @@ local Types = {
     qword   = { ce = CE.vtQword,  size = 8 },
 }
 
+local StructRegistry = {}
+
 function SetPointerSize(bits)
     if bits == 64 then
         Types.ptr = { ce = CE.vtQword, size = 8 }
@@ -65,6 +67,10 @@ function StructDef.new(name, parent)
         self._offset = parent:totalSize()
     else
         self._offset = 0
+    end
+
+    if name then
+        StructRegistry[name] = self
     end
 
     return self
@@ -101,6 +107,30 @@ function StructDef:hex(name, typeName, opts)
     opts = opts or {}
     opts.hex = true
     return self:field(name, typeName, opts)
+end
+
+function StructDef:flag8(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint8", opts)
+end
+
+function StructDef:flag16(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint16", opts)
+end
+
+function StructDef:flag32(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint32", opts)
+end
+
+function StructDef:flag64(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint64", opts)
 end
 
 --- Add string
@@ -759,70 +789,145 @@ function GetCGObjectAddr(guidValue)
     return nil
 end
 
-local CGObject = Struct("CGObject")
+setmetatable(StructDef, {
+    __index = function(t, key)
+        if Types[key] then
+            local typeName = key
+            local fn = function(self, name, opts)
+                return self:field(name, typeName, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
 
-CGObject:ptr("void*", "VtablePtr") -- 0x0000
-CGObject:unk(4) -- 0x0004
-CGObject:ptr("dataBeginPtr") -- 0x0008
-CGObject:ptr("dataEndPtr") -- 0x000C
-CGObject:hex("unkFlag", "int32") -- 0x0010
-CGObject:field("TypeID", "int32") -- 0x0014
-CGObject:hex("low_GUID", "uint32") -- 0x0018
-CGObject:paddingTo(0x30)
-CGObject:hex("ObjectGuid", "uint64") -- 0x0030
-CGObject:paddingTo(0x98)
-CGObject:field("m_objectSacle1", "float") -- 0x0098
-CGObject:field("m_objectSacle2", "float") -- 0x009C
-CGObject:field("m_objectScalingEndMS", "int32") -- 0x00A0
-CGObject:field("m_objectLastScale", "float") -- 0x00A4
-CGObject:ptr("specialEffectPtr") -- 0x00A8
-CGObject:field("objectHeight", "float") -- 0x00AC
-CGObject:ptr("unkPlayerNamePtr") -- 0x00B0
-CGObject:ptr("CM2Model", "m_model") -- 0x00B4
-CGObject:ptr("cmapEntityPtr") -- 0x00B8
-CGObject:hex("unkMovementFlags", "int32") -- 0x00BC
-CGObject:field("unk_00C0", "int32") -- 0x00C0
-CGObject:field("unk_00C4", "int32") -- 0x00C4
-CGObject:field("m_alpha", "uint8") -- 0x00C8
-CGObject:field("m_startAlpha", "uint8") -- 0x00C9
-CGObject:field("m_endAlpha", "uint8") -- 0x00CA
-CGObject:field("m_maxAlpha", "uint8") -- 0x00CB
-CGObject:ptr("effectManagerPtr") -- 0x00CC
+        local baseArray, suffixArray = key:match("^(.*)_(array)$")
+        if suffixArray == "array" then
+            if Types[baseArray] then
+                local fn = function(self, name, count, opts)
+                    return self:array(name, baseArray, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            elseif StructRegistry[baseArray] then
+                local struct = StructRegistry[baseArray]
+                local fn = function(self, name, count, opts)
+                    return self:structArray(name, struct, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            end
+        end
 
-local Vector3 = Struct("Vector3")
-    :field("x", "float")
-    :field("y", "float")
-    :field("z", "float")
+        local baseArrayPtr, suffixArrayPtr = key:match("^(.*)_(arrayPtr)$")
+        if suffixArrayPtr == "arrayPtr" then
+            local fn = function(self, name, count, opts)
+                return self:ptrArray(baseArrayPtr, name, count, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local basePtr, suffixPtr = key:match("^(.*)_(ptr)$")
+        if suffixPtr == "ptr" then
+            local fn = function(self, name, opts)
+                return self:ptr(basePtr, name, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local userStruct = StructRegistry[key]
+        if userStruct then
+            local fn = function(self, name, opts)
+                return self:embed(name, userStruct, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        return nil
+    end
+})
+
+local WoWGUID = Struct("WOWGUID")
+    :hex("guid", "uint64")
+
+local TSLink = Struct("TSLink")
+    :TSLink_ptr("m_prevlink")
+    :ptr("m_next")
+
+local TSList = Struct("TSList") -- also TSExplicitList
+    :int32("m_linkoffset")
+    :TSLink("m_terminator")
+
+local TSLinkedNode = Struct("TSLinkedNode")
+    :TSLink("m_link")
 
 local ObjectFields = Struct("ObjectFields")
-    :hex("GUID", "uint64")
-    :field("type", "uint32")
-    :field("unk", "uint32")
-    :field("scale", "float")
-    :field("pad", "uint32")
+    :WOWGUID("ObjectGUID")
+    :uint32("type")
+    :uint32("unk")
+    :float("scale")
+    :uint32("pad")
+
+local CGObject = Struct("CGObject")
+    :ptr("void*", "VtablePtr") -- 0x0000
+    :unk(4) -- 0x0004
+    :ptr("dataBeginPtr") -- 0x0008
+    :ptr("dataEndPtr") -- 0x000C
+    :uint32("unkFlag", {hex = true}) -- 0x0010
+    :int32("TypeID") -- 0x0014
+    :uint32("low_GUID", {hex = true}) -- 0x0018
+    :paddingTo(0x30)
+    :WOWGUID("ObjectGuid") -- 0x0030
+    :paddingTo(0x44)
+    :TSList_array("m_list", 6)
+    :paddingTo(0x98)
+    :float("m_objectSacle1") -- 0x0098
+    :float("m_objectSacle2") -- 0x009C
+    :int32("m_objectScalingEndMS") -- 0x00A0
+    :float("m_objectLastScale") -- 0x00A4
+    :ptr("specialEffectPtr") -- 0x00A8
+    :float("objectHeight") -- 0x00AC
+    :ptr("unkPlayerNamePtr") -- 0x00B0
+    :ptr("CM2Model", "m_model") -- 0x00B4
+    :ptr("CMapEntityPtr") -- 0x00B8
+    :int32("unkMovementFlags", {hex = true}) -- 0x00BC
+    :int32("unk_00C0") -- 0x00C0
+    :int32("unk_00C4") -- 0x00C4
+    :uint8("m_alpha") -- 0x00C8
+    :uint8("m_startAlpha") -- 0x00C9
+    :uint8("m_endAlpha") -- 0x00CA
+    :uint8("m_maxAlpha") -- 0x00CB
+    :ptr("effectManagerPtr") -- 0x00CC
+
+local Vector3 = Struct("Vector3")
+    :float("x")
+    :float("y")
+    :float("z")
 
 local CorpseFields = Struct("CorpseFields")
-    :hex("Owner", "uint64")
-    :hex("Party", "uint64")
-    :field("DisplayId", "int32")
-    :array("Item", "int32", 19)
-    :hex("Bytes1", "uint32")
-    :hex("Bytes2", "uint32")
-    :field("Guild", "int32")
-    :field("Flags", "int32")
-    :field("DynamicFlags", "int32")
-    :field("Pad", "int32")
+    :WOWGUID("Owner")
+    :WOWGUID("Party")
+    :int32("DisplayId")
+    :int32_array("Item")
+    :flag32("Bytes1")
+    :flag32("Bytes2")
+    :int32("Guild", "int32")
+    :flag32("Flags")
+    :flag32("DynamicFlags")
+    :int32("Pad")
 
 local CGCorpse = Struct("CGCorpse", CGObject)
     :paddingTo(0xE8)
-    :embed("Position", Vector3) -- 0x0E8
+    :Vector3("m_position") -- 0x0E8
     :paddingTo(0xF8)
-    :field("FacingAngle", "float") -- 0x0F8
+    :float("m_facingAngle") -- 0x0F8
     :paddingTo(0x274)
-    :embed("Scale", Vector3) -- 0x274
+    :Vector3("m_scale") -- 0x274
     :paddingTo(0x290)
-    :embed("ObjectFields", ObjectFields) -- 0x290
-    :embed("CorpseFields", CorpseFields) -- 0x2A8
+    :ObjectFields("m_objectFields") -- 0x290
+    :CorpseFields("m_corpseFields") -- 0x2A8
     :paddingTo(0x338)
 
 local address = 0x51f838 -- at CGGameUI__HandleObjectTrackChange

@@ -1,31 +1,53 @@
 -- #include "StructDef.lua"
 
-local CGObject = Struct("CGObject")
+local WoWGUID = Struct("WOWGUID")
+    :hex("guid", "uint64")
 
-CGObject:ptr("void*", "VtablePtr") -- 0x0000
-CGObject:unk(4) -- 0x0004
-CGObject:ptr("dataBeginPtr") -- 0x0008
-CGObject:ptr("dataEndPtr") -- 0x000C
-CGObject:hex("unkFlag", "int32") -- 0x0010
-CGObject:field("TypeID", "int32") -- 0x0014
-CGObject:hex("low_GUID", "uint32") -- 0x0018
-CGObject:paddingTo(0x30)
-CGObject:hex("ObjectGuid", "uint64") -- 0x0030
-CGObject:paddingTo(0x98)
-CGObject:field("m_objectSacle1", "float") -- 0x0098
-CGObject:field("m_objectSacle2", "float") -- 0x009C
-CGObject:field("m_objectScalingEndMS", "int32") -- 0x00A0
-CGObject:field("m_objectLastScale", "float") -- 0x00A4
-CGObject:ptr("specialEffectPtr") -- 0x00A8
-CGObject:field("objectHeight", "float") -- 0x00AC
-CGObject:ptr("unkPlayerNamePtr") -- 0x00B0
-CGObject:ptr("CM2Model", "m_model") -- 0x00B4
-CGObject:ptr("cmapEntityPtr") -- 0x00B8
-CGObject:hex("unkMovementFlags", "int32") -- 0x00BC
-CGObject:field("unk_00C0", "int32") -- 0x00C0
-CGObject:field("unk_00C4", "int32") -- 0x00C4
-CGObject:field("m_alpha", "uint8") -- 0x00C8
-CGObject:field("m_startAlpha", "uint8") -- 0x00C9
-CGObject:field("m_endAlpha", "uint8") -- 0x00CA
-CGObject:field("m_maxAlpha", "uint8") -- 0x00CB
-CGObject:ptr("effectManagerPtr") -- 0x00CC
+local TSLink = Struct("TSLink")
+    :TSLink_ptr("m_prevlink")
+    :ptr("m_next")
+
+local TSList = Struct("TSList") -- also TSExplicitList
+    :int32("m_linkoffset")
+    :TSLink("m_terminator")
+
+local TSLinkedNode = Struct("TSLinkedNode")
+    :TSLink("m_link")
+
+local ObjectFields = Struct("ObjectFields")
+    :WOWGUID("ObjectGUID")
+    :uint32("type")
+    :uint32("unk")
+    :float("scale")
+    :uint32("pad")
+
+local CGObject = Struct("CGObject")
+    :ptr("void*", "VtablePtr") -- 0x0000
+    :unk(4) -- 0x0004
+    :ptr("dataBeginPtr") -- 0x0008
+    :ptr("dataEndPtr") -- 0x000C
+    :uint32("unkFlag", {hex = true}) -- 0x0010
+    :int32("TypeID") -- 0x0014
+    :uint32("low_GUID", {hex = true}) -- 0x0018
+    :paddingTo(0x30)
+    :WOWGUID("ObjectGuid") -- 0x0030
+    :paddingTo(0x44)
+    :TSList_array("m_list", 6)
+    :paddingTo(0x98)
+    :float("m_objectSacle1") -- 0x0098
+    :float("m_objectSacle2") -- 0x009C
+    :int32("m_objectScalingEndMS") -- 0x00A0
+    :float("m_objectLastScale") -- 0x00A4
+    :ptr("specialEffectPtr") -- 0x00A8
+    :float("objectHeight") -- 0x00AC
+    :ptr("unkPlayerNamePtr") -- 0x00B0
+    :ptr("CM2Model", "m_model") -- 0x00B4
+    :ptr("CMapEntityPtr") -- 0x00B8
+    :int32("unkMovementFlags", {hex = true}) -- 0x00BC
+    :int32("unk_00C0") -- 0x00C0
+    :int32("unk_00C4") -- 0x00C4
+    :uint8("m_alpha") -- 0x00C8
+    :uint8("m_startAlpha") -- 0x00C9
+    :uint8("m_endAlpha") -- 0x00CA
+    :uint8("m_maxAlpha") -- 0x00CB
+    :ptr("effectManagerPtr") -- 0x00CC

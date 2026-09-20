@@ -1,11 +1,14 @@
 -- #include "cmapstaticentity.lua"
 
+local WoWGUID = Struct("WOWGUID")
+    :hex("guid", "uint64")
+
 local CMapEntity = Struct("CMapEntity", CMapStaticEntity)
     :paddingTo(0x98)
-    :hex("GUID", "uint64")
+    :WOWGUID("GUID")
     :paddingTo(0xC0)
-    :embed("ambientTarget", CImVector)
-    :field("dirLightScaleTarget", "float")
+    :CImVector("ambientTarget", CImVector)
+    :float("dirLightScaleTarget", "float")
     :paddingTo(0xD0)
 
 local addr, typ = GetCGObjectAddr(readQword(0x00bd07b0)) -- target guid

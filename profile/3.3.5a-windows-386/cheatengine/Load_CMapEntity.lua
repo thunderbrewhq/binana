@@ -41,6 +41,8 @@ local Types = {
     qword   = { ce = CE.vtQword,  size = 8 },
 }
 
+local StructRegistry = {}
+
 function SetPointerSize(bits)
     if bits == 64 then
         Types.ptr = { ce = CE.vtQword, size = 8 }
@@ -65,6 +67,10 @@ function StructDef.new(name, parent)
         self._offset = parent:totalSize()
     else
         self._offset = 0
+    end
+
+    if name then
+        StructRegistry[name] = self
     end
 
     return self
@@ -101,6 +107,30 @@ function StructDef:hex(name, typeName, opts)
     opts = opts or {}
     opts.hex = true
     return self:field(name, typeName, opts)
+end
+
+function StructDef:flag8(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint8", opts)
+end
+
+function StructDef:flag16(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint16", opts)
+end
+
+function StructDef:flag32(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint32", opts)
+end
+
+function StructDef:flag64(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint64", opts)
 end
 
 --- Add string
@@ -759,75 +789,141 @@ function GetCGObjectAddr(guidValue)
     return nil
 end
 
+setmetatable(StructDef, {
+    __index = function(t, key)
+        if Types[key] then
+            local typeName = key
+            local fn = function(self, name, opts)
+                return self:field(name, typeName, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local baseArray, suffixArray = key:match("^(.*)_(array)$")
+        if suffixArray == "array" then
+            if Types[baseArray] then
+                local fn = function(self, name, count, opts)
+                    return self:array(name, baseArray, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            elseif StructRegistry[baseArray] then
+                local struct = StructRegistry[baseArray]
+                local fn = function(self, name, count, opts)
+                    return self:structArray(name, struct, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            end
+        end
+
+        local baseArrayPtr, suffixArrayPtr = key:match("^(.*)_(arrayPtr)$")
+        if suffixArrayPtr == "arrayPtr" then
+            local fn = function(self, name, count, opts)
+                return self:ptrArray(baseArrayPtr, name, count, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local basePtr, suffixPtr = key:match("^(.*)_(ptr)$")
+        if suffixPtr == "ptr" then
+            local fn = function(self, name, opts)
+                return self:ptr(basePtr, name, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local userStruct = StructRegistry[key]
+        if userStruct then
+            local fn = function(self, name, opts)
+                return self:embed(name, userStruct, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        return nil
+    end
+})
+
 local CImVector = Struct("CImVector")
-    :field("r", "uint8")
-    :field("g", "uint8")
-    :field("b", "uint8")
-    :field("a", "uint8")
+    :uint8("r")
+    :uint8("g")
+    :uint8("b")
+    :uint8("a")
 
 local C3Vector = Struct("C3Vector")
-    :field("x", "float")
-    :field("y", "float")
-    :field("z", "float")
+    :float("x")
+    :float("y")
+    :float("z")
 
 local C2iVector = Struct("C2iVector")
-    :field("x", "int32")
-    :field("y", "int32")
+    :int32("x")
+    :int32("y")
 
 local CAaBox = Struct("CAaBox")
-    :embed("top", C3Vector)
-    :embed("bottom", C3Vector)
+    :C3Vector("top")
+    :C3Vector("bottom")
 
 local CAaSphere = Struct("CAaSphere")
-    :embed("center", C3Vector)
-    :field("d", "float")
+    :C3Vector("center")
+    :float("d")
 
 local C44Matrix = Struct("C44Matrix")
-    :array('m', 'float', 16)
+    :float_array("m", 16)
 
 local TSGrowableArray = Struct("TSGrowableArray")
-    :field('m_alloc', 'uint32')
-    :field('m_count', 'uint32')
+    :uint32('m_alloc')
+    :uint32('m_count')
     :ptr('data')
-    :field('m_chunk', 'uint32')
+    :uint32('m_chunk')
 
-local TSExplicitList = Struct("TSExplicitList")
-    :field("m_linkOffset", "uint32")
-    :ptr("ptr1")
-    :ptr("ptr2")
+local TSLink = Struct("TSLink")
+    :TSLink_ptr("m_prevlink")
+    :ptr("m_next")
+
+local TSList = Struct("TSList") -- also TSExplicitList
+    :int32("m_linkoffset")
+    :TSLink("m_terminator")
 
 local CMapBaseObj = Struct("CMapBaseObj")
     :ptr("void*", "vtable")
-    :field("objectIndex", "uint32")
-    :field("type", "uint16")
-    :field("refCount", "uint16")
-    :field("unk_C", "int32")
-    :ptr("prev")
-    :ptr("next")
-    :embed("objLink", TSExplicitList)
+    :uint32("objectIndex")
+    :uint16("type")
+    :uint16("refCount")
+    :uint32("unk_C")
+    :TSLink("m_link")
+    :TSList("m_objLink")
 
 local CMapStaticEntity = Struct("CMapStaticEntity", CMapBaseObj)
     :paddingTo(0x28)
-    :field("unkFlags", "uint32")
-    :field("unkCounter", "int32")
-    :field("unk_030", "float")
+    :flag32("unkFlags")
+    :int32("unkCounter")
+    :float("unk_030")
     :ptr("CM2Model", "model")
-    :embed("sphere", CAaSphere)
-    :embed("bbox", CAaBox)
-    :embed("vec2", C3Vector)
-    :embed("position", C3Vector)
-    :field("scale", "float")
-    :paddingTo(0x84)
-    :embed("m2AmbietColor", CImVector)
-    :embed("m2DiffuseColor", CImVector)
-    :field("unk_08C", "float")
+    :CAaSphere("sphere")
+    :CAaBox("bbox")
+    :C3Vector("vec2")
+    :C3Vector("position")
+    :float("scale")
+    :paddingTo(0x80)
+    :float("unkFloat")
+    :CImVector("m2AmbietColor")
+    :CImVector("m2DiffuseColor")
+    :float("unk_08C")
+
+local WoWGUID = Struct("WOWGUID")
+    :hex("guid", "uint64")
 
 local CMapEntity = Struct("CMapEntity", CMapStaticEntity)
     :paddingTo(0x98)
-    :hex("GUID", "uint64")
+    :WOWGUID("GUID")
     :paddingTo(0xC0)
-    :embed("ambientTarget", CImVector)
-    :field("dirLightScaleTarget", "float")
+    :CImVector("ambientTarget", CImVector)
+    :float("dirLightScaleTarget", "float")
     :paddingTo(0xD0)
 
 local addr, typ = GetCGObjectAddr(readQword(0x00bd07b0)) -- target guid

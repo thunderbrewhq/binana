@@ -41,6 +41,8 @@ local Types = {
     qword   = { ce = CE.vtQword,  size = 8 },
 }
 
+local StructRegistry = {}
+
 function SetPointerSize(bits)
     if bits == 64 then
         Types.ptr = { ce = CE.vtQword, size = 8 }
@@ -65,6 +67,10 @@ function StructDef.new(name, parent)
         self._offset = parent:totalSize()
     else
         self._offset = 0
+    end
+
+    if name then
+        StructRegistry[name] = self
     end
 
     return self
@@ -101,6 +107,30 @@ function StructDef:hex(name, typeName, opts)
     opts = opts or {}
     opts.hex = true
     return self:field(name, typeName, opts)
+end
+
+function StructDef:flag8(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint8", opts)
+end
+
+function StructDef:flag16(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint16", opts)
+end
+
+function StructDef:flag32(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint32", opts)
+end
+
+function StructDef:flag64(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint64", opts)
 end
 
 --- Add string
@@ -758,3 +788,63 @@ function GetCGObjectAddr(guidValue)
     cleanup()
     return nil
 end
+
+setmetatable(StructDef, {
+    __index = function(t, key)
+        if Types[key] then
+            local typeName = key
+            local fn = function(self, name, opts)
+                return self:field(name, typeName, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local baseArray, suffixArray = key:match("^(.*)_(array)$")
+        if suffixArray == "array" then
+            if Types[baseArray] then
+                local fn = function(self, name, count, opts)
+                    return self:array(name, baseArray, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            elseif StructRegistry[baseArray] then
+                local struct = StructRegistry[baseArray]
+                local fn = function(self, name, count, opts)
+                    return self:structArray(name, struct, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            end
+        end
+
+        local baseArrayPtr, suffixArrayPtr = key:match("^(.*)_(arrayPtr)$")
+        if suffixArrayPtr == "arrayPtr" then
+            local fn = function(self, name, count, opts)
+                return self:ptrArray(baseArrayPtr, name, count, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local basePtr, suffixPtr = key:match("^(.*)_(ptr)$")
+        if suffixPtr == "ptr" then
+            local fn = function(self, name, opts)
+                return self:ptr(basePtr, name, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local userStruct = StructRegistry[key]
+        if userStruct then
+            local fn = function(self, name, opts)
+                return self:embed(name, userStruct, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        return nil
+    end
+})

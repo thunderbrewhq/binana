@@ -41,6 +41,8 @@ local Types = {
     qword   = { ce = CE.vtQword,  size = 8 },
 }
 
+local StructRegistry = {}
+
 function SetPointerSize(bits)
     if bits == 64 then
         Types.ptr = { ce = CE.vtQword, size = 8 }
@@ -65,6 +67,10 @@ function StructDef.new(name, parent)
         self._offset = parent:totalSize()
     else
         self._offset = 0
+    end
+
+    if name then
+        StructRegistry[name] = self
     end
 
     return self
@@ -101,6 +107,30 @@ function StructDef:hex(name, typeName, opts)
     opts = opts or {}
     opts.hex = true
     return self:field(name, typeName, opts)
+end
+
+function StructDef:flag8(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint8", opts)
+end
+
+function StructDef:flag16(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint16", opts)
+end
+
+function StructDef:flag32(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint32", opts)
+end
+
+function StructDef:flag64(name, opts)
+    opts = opts or {}
+    opts.hex = true
+    return self:field(name, "uint64", opts)
 end
 
 --- Add string
@@ -759,78 +789,150 @@ function GetCGObjectAddr(guidValue)
     return nil
 end
 
-local CGObject = Struct("CGObject")
+setmetatable(StructDef, {
+    __index = function(t, key)
+        if Types[key] then
+            local typeName = key
+            local fn = function(self, name, opts)
+                return self:field(name, typeName, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
 
-CGObject:ptr("void*", "VtablePtr") -- 0x0000
-CGObject:unk(4) -- 0x0004
-CGObject:ptr("dataBeginPtr") -- 0x0008
-CGObject:ptr("dataEndPtr") -- 0x000C
-CGObject:hex("unkFlag", "int32") -- 0x0010
-CGObject:field("TypeID", "int32") -- 0x0014
-CGObject:hex("low_GUID", "uint32") -- 0x0018
-CGObject:paddingTo(0x30)
-CGObject:hex("ObjectGuid", "uint64") -- 0x0030
-CGObject:paddingTo(0x98)
-CGObject:field("m_objectSacle1", "float") -- 0x0098
-CGObject:field("m_objectSacle2", "float") -- 0x009C
-CGObject:field("m_objectScalingEndMS", "int32") -- 0x00A0
-CGObject:field("m_objectLastScale", "float") -- 0x00A4
-CGObject:ptr("specialEffectPtr") -- 0x00A8
-CGObject:field("objectHeight", "float") -- 0x00AC
-CGObject:ptr("unkPlayerNamePtr") -- 0x00B0
-CGObject:ptr("CM2Model", "m_model") -- 0x00B4
-CGObject:ptr("cmapEntityPtr") -- 0x00B8
-CGObject:hex("unkMovementFlags", "int32") -- 0x00BC
-CGObject:field("unk_00C0", "int32") -- 0x00C0
-CGObject:field("unk_00C4", "int32") -- 0x00C4
-CGObject:field("m_alpha", "uint8") -- 0x00C8
-CGObject:field("m_startAlpha", "uint8") -- 0x00C9
-CGObject:field("m_endAlpha", "uint8") -- 0x00CA
-CGObject:field("m_maxAlpha", "uint8") -- 0x00CB
-CGObject:ptr("effectManagerPtr") -- 0x00CC
+        local baseArray, suffixArray = key:match("^(.*)_(array)$")
+        if suffixArray == "array" then
+            if Types[baseArray] then
+                local fn = function(self, name, count, opts)
+                    return self:array(name, baseArray, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            elseif StructRegistry[baseArray] then
+                local struct = StructRegistry[baseArray]
+                local fn = function(self, name, count, opts)
+                    return self:structArray(name, struct, count, opts)
+                end
+                rawset(t, key, fn)
+                return fn
+            end
+        end
 
-local ObjectFields = Struct("ObjectFields")
-    :hex("GUID", "uint64")
-    :field("type", "uint32")
-    :field("unk", "uint32")
-    :field("scale", "float")
-    :field("pad", "uint32")
+        local baseArrayPtr, suffixArrayPtr = key:match("^(.*)_(arrayPtr)$")
+        if suffixArrayPtr == "arrayPtr" then
+            local fn = function(self, name, count, opts)
+                return self:ptrArray(baseArrayPtr, name, count, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
 
-local ContainerSlot = Struct("ContainerSlot")
+        local basePtr, suffixPtr = key:match("^(.*)_(ptr)$")
+        if suffixPtr == "ptr" then
+            local fn = function(self, name, opts)
+                return self:ptr(basePtr, name, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        local userStruct = StructRegistry[key]
+        if userStruct then
+            local fn = function(self, name, opts)
+                return self:embed(name, userStruct, opts)
+            end
+            rawset(t, key, fn)
+            return fn
+        end
+
+        return nil
+    end
+})
+
+local WoWGUID = Struct("WOWGUID")
     :hex("guid", "uint64")
 
+local TSLink = Struct("TSLink")
+    :TSLink_ptr("m_prevlink")
+    :ptr("m_next")
+
+local TSList = Struct("TSList") -- also TSExplicitList
+    :int32("m_linkoffset")
+    :TSLink("m_terminator")
+
+local TSLinkedNode = Struct("TSLinkedNode")
+    :TSLink("m_link")
+
+local ObjectFields = Struct("ObjectFields")
+    :WOWGUID("ObjectGUID")
+    :uint32("type")
+    :uint32("unk")
+    :float("scale")
+    :uint32("pad")
+
+local CGObject = Struct("CGObject")
+    :ptr("void*", "VtablePtr") -- 0x0000
+    :unk(4) -- 0x0004
+    :ptr("dataBeginPtr") -- 0x0008
+    :ptr("dataEndPtr") -- 0x000C
+    :uint32("unkFlag", {hex = true}) -- 0x0010
+    :int32("TypeID") -- 0x0014
+    :uint32("low_GUID", {hex = true}) -- 0x0018
+    :paddingTo(0x30)
+    :WOWGUID("ObjectGuid") -- 0x0030
+    :paddingTo(0x44)
+    :TSList_array("m_list", 6)
+    :paddingTo(0x98)
+    :float("m_objectSacle1") -- 0x0098
+    :float("m_objectSacle2") -- 0x009C
+    :int32("m_objectScalingEndMS") -- 0x00A0
+    :float("m_objectLastScale") -- 0x00A4
+    :ptr("specialEffectPtr") -- 0x00A8
+    :float("objectHeight") -- 0x00AC
+    :ptr("unkPlayerNamePtr") -- 0x00B0
+    :ptr("CM2Model", "m_model") -- 0x00B4
+    :ptr("CMapEntityPtr") -- 0x00B8
+    :int32("unkMovementFlags", {hex = true}) -- 0x00BC
+    :int32("unk_00C0") -- 0x00C0
+    :int32("unk_00C4") -- 0x00C4
+    :uint8("m_alpha") -- 0x00C8
+    :uint8("m_startAlpha") -- 0x00C9
+    :uint8("m_endAlpha") -- 0x00CA
+    :uint8("m_maxAlpha") -- 0x00CB
+    :ptr("effectManagerPtr") -- 0x00CC
+
 local ContainerFields = Struct("ContainerFields")
-    :field("NumSlots", "int32")
-    :field("Pad", "int32")
-    :structArray("Slot", ContainerSlot, 36)
+    :int32("NumSlots")
+    :int32("Pad")
+    :WOWGUID_array("Slot", 36)
 
 local ItemEnchantment = Struct("ItemEnchantment")
-    :array("id", "uint32", 3)
+    :uint32_array("id", 3)
 
 local ItemFields = Struct("ItemFields")
-    :hex("Owner", "uint64")
-    :hex("Contained", "uint64")
-    :hex("Creator", "uint64")
-    :hex("GiftCreator", "uint64")
-    :field("StackCount", "int32")
-    :field("Duration", "int32")
-    :array("SpellCharges", "int32", 5)
-    :hex("Flags", "uint32")
-    :structArray("Enchantment", ItemEnchantment, 12)
-    :field("PropertySeed",       "int32")
-    :field("RandomPropertiesID", "int32")
-    :field("Durability", "int32")
-    :field("MaxDurability", "int32")
-    :field("CreatePlayedTime", "int32")
-    :field("Pad", "int32")
+    :WOWGUID("Owner")
+    :WOWGUID("Contained")
+    :WOWGUID("Creator")
+    :WOWGUID("GiftCreator")
+    :int32("StackCount")
+    :int32("Duration")
+    :int32_array("SpellCharges", 5)
+    :flag32("Flags")
+    :ItemEnchantment_array("Enchantment", 12)
+    :int32("PropertySeed")
+    :int32("RandomPropertiesID")
+    :int32("Durability")
+    :int32("MaxDurability")
+    :int32("CreatePlayedTime")
+    :int32("Pad")
 
 local CGContainer = Struct("CGContainer", CGObject)
     :paddingTo(0x778)
-    :embed("ObjectFields", ObjectFields) -- 0x778
-    :embed("ItemFields", ItemFields) -- 0x790
-    :embed("ContainerFields", ContainerFields) -- 0x878
-    :field("itemId", "int32") -- 0x9A0
-    :field("scale", "float") -- 0x9A4
+    :ObjectFields("m_objectFields") -- 0x778
+    :ItemFields("m_itemFields") -- 0x790
+    :ContainerFields("m_containerFields") -- 0x878
+    :int32("itemId") -- 0x9A0
+    :float("scale") -- 0x9A4
     :paddingTo(0xB88)
 
 
