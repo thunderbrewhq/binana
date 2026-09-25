@@ -35,7 +35,7 @@ struct CMapStaticEntity {
     int32_t   unk_024;     // 0x24
     uint32_t  unkFlags_28; // 0x28
     int32_t   unkCounter;  // 0x2C
-    float     unk_030;     // 0x30
+    float     m_distToCamera; // 0x30
     CM2Model* model;
     CAaSphere sphere;
     CAaBox    bbox;

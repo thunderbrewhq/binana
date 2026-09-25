@@ -915,47 +915,36 @@ local RCString = Struct("RCString")
     :uint32("m_refCnt")
     :int8_ptr("m_str")
 
-local CMapBaseObj = Struct("CMapBaseObj")
-    :ptr("void*", "vtable")
-    :uint32("objectIndex")
-    :uint16("type")
-    :uint16("refCount")
-    :uint32("unk_C")
-    :TSLink("m_link")
-    :TSList("m_objLink")
+local CChunkLiquid = Struct("CChunkLiquid")
+    :int32("objectIndex") -- 0x000
+    :int32("unk_004") -- 0x004
+    :int32("unk_008") -- 0x008
+    :C3Vector("topLeftCoords") -- 0x00C
+    :C3Vector("center") -- 0x018
+    :float("radius")  -- 0x024
+    :C2Vector("height") -- 0x028
+    :float("resPurgeTimer") -- 0x030
+    :C2iVector("tileBegin") -- 0x034
+    :C2iVector("tileEnd")   -- 0x03C
+    :ptr("ptr_to_CClientLiquidEnvironment") -- 0x044
+    :ptr("unk_048") -- 0x048 sound ??
+    :int32("unk_04C") -- 0x04C
+    :flag32("unk_050") -- 0x050
+    :ptr("tiles")  -- 0x054
+    :ptr("liquidInstPtr") -- 0x058
+    :ptr("CMapChunk", "owner") -- 0x05C
+    :TSLink("m_link1")   -- 0x060
+    :ptr("unk_068") -- 0x068
+    :ptr("unk_06C") -- 0x06C
+    :TSLink("m_link2") -- 0x070
+    :C3Vector_array("verts", 81) -- 0x078 (81 * 12 = 0x3CC)
+-- sizeof: 0x444
 
-local CMapArea = Struct("CMapArea", CMapBaseObj)
-    :C3Vector("bottomRight")
-    :C3Vector("topLeft")
-    :C3Vector("topLeft2")
-    :C2iVector("index")
-    :C2iVector("tileChunkIndex")
-    :TSGrowableArray("m_textures")
-    :ptr("SMMapHeader", "header")
-    :field("unk_6C", "int32")
-    :ptr("CAsyncObject", "asyncObject")
-    :TSList("chunkLinkList")
-    :ptr("filePtr")
-    :int32("fileSize")
-    :ptr("SMChunkInfo", "chunkInfo")
-    :field("unk_8C", "int32")
-    :ptr("SMDoodadDef", "doodadDef")
-    :ptr("SMMapObjDef", "mapObjDef")
-    :int32("doodadDefCount")
-    :int32("mapObjDefCount")
-    :ptr("m2FileNames")
-    :ptr("wmoFileNames")
-    :ptr("modelFilenamesOffsets")
-    :ptr("wmoFilenamesOffsets")
-    :ptr("flyingBbox")
-    :ptr("textureFlags")
-    :ptr("unk_B8")
-    :ptrArray("CMapChunk", "mapChunk", 256)
-
-local address = 0x007b5c18 -- at CMap__PreUpdateAreas
+local address = 0x00795e25 -- at CWorldScene__LocateViewer3
 debugger_onBreakpoint = nil
 function onBreakpoint()
-    loadStructToTable(CMapArea, ESI)
+    local chunkLiquidPtr = readPointer(ECX + 0x108)
+    loadStructToTable(CChunkLiquid, chunkLiquidPtr)
     debugger_onBreakpoint = nil
     debug_removeBreakpoint(address)
     debug_continueFromBreakpoint(co_run)

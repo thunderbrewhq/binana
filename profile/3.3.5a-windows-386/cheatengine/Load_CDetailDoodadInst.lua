@@ -915,47 +915,40 @@ local RCString = Struct("RCString")
     :uint32("m_refCnt")
     :int8_ptr("m_str")
 
-local CMapBaseObj = Struct("CMapBaseObj")
-    :ptr("void*", "vtable")
-    :uint32("objectIndex")
-    :uint16("type")
-    :uint16("refCount")
-    :uint32("unk_C")
-    :TSLink("m_link")
-    :TSList("m_objLink")
+local CDetailDoodadGeomVertex = Struct("CDetailDoodadGeomVertex")
+    :uint16("unk_00")                                   -- 0x00
+    :uint16("unk_02")                                   -- 0x02
+    :uint32("unk_04")                                   -- 0x04
+    :C3Vector("pos")                                    -- 0x08
+    :float("angle")                                     -- 0x14
+    :float("scale")                                     -- 0x18
+    :C3Vector("unkVec")                                 -- 0x1C
+    :CImVector("color")                                 -- 0x28
+-- sizeof: 0x2C
 
-local CMapArea = Struct("CMapArea", CMapBaseObj)
-    :C3Vector("bottomRight")
-    :C3Vector("topLeft")
-    :C3Vector("topLeft2")
-    :C2iVector("index")
-    :C2iVector("tileChunkIndex")
-    :TSGrowableArray("m_textures")
-    :ptr("SMMapHeader", "header")
-    :field("unk_6C", "int32")
-    :ptr("CAsyncObject", "asyncObject")
-    :TSList("chunkLinkList")
-    :ptr("filePtr")
-    :int32("fileSize")
-    :ptr("SMChunkInfo", "chunkInfo")
-    :field("unk_8C", "int32")
-    :ptr("SMDoodadDef", "doodadDef")
-    :ptr("SMMapObjDef", "mapObjDef")
-    :int32("doodadDefCount")
-    :int32("mapObjDefCount")
-    :ptr("m2FileNames")
-    :ptr("wmoFileNames")
-    :ptr("modelFilenamesOffsets")
-    :ptr("wmoFilenamesOffsets")
-    :ptr("flyingBbox")
-    :ptr("textureFlags")
-    :ptr("unk_B8")
-    :ptrArray("CMapChunk", "mapChunk", 256)
+local CDetailDoodadGeom = Struct("CDetailDoodadGeom")
+    :ptr("CTexture", "texture")                         -- 0x00
+    :int32("unkVertexCount")                            -- 0x04
+    :int32("unkIndexCount")                             -- 0x08
+    :ptr("unkVertBufStream")                            -- 0x0C
+    :ptr("unkIdxBufStream")                             -- 0x10
+    :TSGrowableArray("m_DetailDoodadGeomVertexArray")   -- 0x14
 
-local address = 0x007b5c18 -- at CMap__PreUpdateAreas
+local CDetailDoodadInst = Struct("CDetailDoodadInst")
+    :int32("objectIndex")                               -- 0x00
+    :CDetailDoodadGeom_array("geom", 4)                 -- 0x04
+    :int32("unkCounter")                                -- 0xA4
+    :ptr("CMapChunk", "mapChunkOwner")                  -- 0xA8
+    :int32("unk_09C")                                   -- 0x9C
+    :int32("unk_0A0")                                   -- 0xA0
+-- sizeof: 0xB4
+
+local address = 0x00795e25 -- at CWorldScene__LocateViewer3
 debugger_onBreakpoint = nil
 function onBreakpoint()
-    loadStructToTable(CMapArea, ESI)
+    local detailDoodadInstPtr = readPointer(ECX + 0xa4)
+    loadStructToTable(CDetailDoodadInst, detailDoodadInstPtr)
+
     debugger_onBreakpoint = nil
     debug_removeBreakpoint(address)
     debug_continueFromBreakpoint(co_run)

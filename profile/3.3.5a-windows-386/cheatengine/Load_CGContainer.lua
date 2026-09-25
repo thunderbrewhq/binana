@@ -877,6 +877,9 @@ local TSHashTable = Struct("TSHashTable")
     :TSGrowableArray("m_slotlistarray") -- 000x14
     :flag32("m_slotmask") -- 000x24
 
+local HASHKEY_STRI = Struct("HASHKEY_STRI")
+    :int8_ptr("m_str")
+
 local C2Vector = Struct("C2Vector")
     :float("x")
     :float("y")
@@ -906,6 +909,11 @@ local CAaSphere = Struct("CAaSphere")
 
 local C44Matrix = Struct("C44Matrix")
     :float_array("m", 16)
+
+local RCString = Struct("RCString")
+    :ptr("void*", "vtbl")
+    :uint32("m_refCnt")
+    :int8_ptr("m_str")
 
 local ObjectFields = Struct("ObjectFields")
     :WOWGUID("ObjectGUID")
