@@ -12,6 +12,7 @@
 
 #### Map/World
 | Name | What to do | What to load |
+|---|---|---|
 | CMapArea (ADT) | — | [Load_CMapArea.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CMapArea.lua) |
 | CMapChunk | — | [Load_CMapChunk.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CMapChunk.lua) |
 | CMapEntity | Select a target (unit or player). | [Load_CMapEntity.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CMapEntity.lua) |
