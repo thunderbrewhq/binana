@@ -175,7 +175,8 @@ DECLARE_STRUCT(FMOD__DSPLowPass);
 DECLARE_STRUCT(FMOD__DSPLowPass2);
 DECLARE_STRUCT(FMOD__DSPLowPassSimple);
 DECLARE_STRUCT(FMOD__DSPNet);
-DECLARE_STRUCT(FMOD__DSPNet20);
+DECLARE_STRUCT(FMOD__DSPNetNode);
+DECLARE_STRUCT(FMOD__DSPNetHeader);
 DECLARE_STRUCT(FMOD__DSPNormalize);
 DECLARE_STRUCT(FMOD__DSPOscillator);
 DECLARE_STRUCT(FMOD__DSPParamEq);
@@ -1533,10 +1534,10 @@ struct FMOD_CHANNEL_INFO {
     int32_t                       mLoopCount;        // 0x1C
     bool                          mMute;             // 0x20
     bool                          mPaused;           // 0x21
-    uint32_t                      mDSPClockHi;       // 0x24
-    uint32_t                      mDSPClockLo;       // 0x28
+    uint32_t                      mDelayStart;       // 0x24
+    uint32_t                      mDelayEnd;         // 0x28
     FMOD_REVERB_CHANNELPROPERTIES mReverbProperties; // 0x2C
-    FMOD__DSPI*                   mDSPChain;         // 0x74 invented name
+    FMOD__DSPI*                   mAddDSP;           // 0x74 invented name
     FMOD_MODE                     mMode;             // 0x78
 };
 
@@ -2390,79 +2391,16 @@ struct FMOD__NetFile {
     FMOD__File     _;                 // 0x000
     void*          mHandle;           // 0x1A0
     int32_t        mProtocol;         // 0x1A4
-    uint32_t       unk1A8;            // 0x1A8
-    uint32_t       unk1AC;            // 0x1AC
+    uint32_t       mAbsolutePos;      // 0x1A8
+    int32_t        mHttpStatus;       // 0x1AC
     int32_t        mMetaint;          // 0x1B0
     uint32_t       mBytesBeforeMeta;  // 0x1B4
     char*          mMetabuf;          // 0x1B8
     int32_t        mMetaFormat;       // 0x1BC
     FMOD__Metadata mMetadata;         // 0x1C0
-    uint32_t       unk1EC;            // 0x1EC
-    uint32_t       unk1F0;            // 0x1F0
-    uint32_t       unk1F4;            // 0x1F4
-    uint32_t       unk1F8;            // 0x1F8
-    uint32_t       unk1FC;            // 0x1FC
-    uint32_t       unk200;            // 0x200
-    uint32_t       unk204;            // 0x204
-    uint32_t       unk208;            // 0x208
-    uint32_t       unk20C;            // 0x20C
-    uint32_t       unk210;            // 0x210
-    uint32_t       unk214;            // 0x214
-    uint32_t       unk218;            // 0x218
-    uint32_t       unk21C;            // 0x21C
-    uint32_t       unk220;            // 0x220
-    uint32_t       unk224;            // 0x224
-    uint32_t       unk228;            // 0x228
-    uint32_t       unk22C;            // 0x22C
-    uint32_t       unk230;            // 0x230
-    uint32_t       unk234;            // 0x234
-    uint32_t       unk238;            // 0x238
-    uint32_t       unk23C;            // 0x23C
-    uint32_t       unk240;            // 0x240
-    uint32_t       unk244;            // 0x244
-    uint32_t       unk248;            // 0x248
-    uint32_t       unk24C;            // 0x24C
-    uint32_t       unk250;            // 0x250
-    uint32_t       unk254;            // 0x254
-    uint32_t       unk258;            // 0x258
-    uint32_t       unk25C;            // 0x25C
-    uint32_t       unk260;            // 0x260
-    uint32_t       unk264;            // 0x264
-    uint32_t       unk268;            // 0x268
-    uint32_t       unk26C;            // 0x26C
-    uint32_t       unk270;            // 0x270
-    uint32_t       unk274;            // 0x274
-    uint32_t       unk278;            // 0x278
-    uint32_t       unk27C;            // 0x27C
-    uint32_t       unk280;            // 0x280
-    uint32_t       unk284;            // 0x284
-    uint32_t       unk288;            // 0x288
-    uint32_t       unk28C;            // 0x28C
-    uint32_t       unk290;            // 0x290
-    uint32_t       unk294;            // 0x294
-    uint32_t       unk298;            // 0x298
-    uint32_t       unk29C;            // 0x29C
-    uint32_t       unk2A0;            // 0x2A0
-    uint32_t       unk2A4;            // 0x2A4
-    uint32_t       unk2A8;            // 0x2A8
-    uint32_t       unk2AC;            // 0x2AC
-    uint32_t       unk2B0;            // 0x2B0
-    uint32_t       unk2B4;            // 0x2B4
-    uint32_t       unk2B8;            // 0x2B8
-    uint32_t       unk2BC;            // 0x2BC
-    uint32_t       unk2C0;            // 0x2C0
-    uint32_t       unk2C4;            // 0x2C4
-    uint32_t       unk2C8;            // 0x2C8
-    uint32_t       unk2CC;            // 0x2CC
-    uint32_t       unk2D0;            // 0x2D0
-    uint32_t       unk2D4;            // 0x2D4
-    uint32_t       unk2D8;            // 0x2D8
-    uint32_t       unk2DC;            // 0x2DC
-    uint32_t       unk2E0;            // 0x2E0
-    uint32_t       unk2E4;            // 0x2E4
-    uint32_t       unk2E8;            // 0x2E8
-    uint32_t       unk2EC;            // 0x2EC
-    uint32_t       unk2F0;            // 0x2F0
+    uint16_t       mPort;             // 0x1EC
+    char           mHost[256];        // 0x1F0
+    FMOD_RESULT    mConnectStatus;    // 0x2F0
     bool           mChunked;          // 0x2F4
     uint32_t       mBytesLeftInChunk; // 0x2F8
 };
@@ -2608,7 +2546,7 @@ struct FMOD__Codec {
     uint32_t                  mPCMBufferOffsetBytes; // 0xC0
     uint32_t                  mPCMBufferFilledBytes; // 0xC4
     FMOD_MODE                 mMode;                 // 0xC8
-    FMOD_MODE                 mOriginalMode;         // 0xCC unconfirmed
+    FMOD_MODE                 mOriginalMode;         // 0xCC
     FMOD__Metadata*           mMetadata;             // 0xD0
     FMOD__File*               mFile;                 // 0xD4
 };
@@ -2698,34 +2636,13 @@ struct FMOD__bitstream_info {
 
 // size = 0x48E8
 struct FMOD__CodecMPEG_MemoryBlock {
-    //
-    // uint8_t              mBSSpace[2][2304];    // 0x0000
-    // float                mSynthBuffsMem[1168]; // 0x1200
-    // float*               mSynthBuffs;          // 0x2440
-    // float                mBlock[2][2][576];    // 0x2444
-    // int32_t              mFrameSize;           // 0x4844
-    // int32_t              mFrameSizeOld;        // 0x4848
-    // FMOD__MPEG_FRAME     mFrame;               // 0x484C
-    // uint32_t             mFrameHeader;         // 0x4898
-    // int32_t              mPcmPoint;            // 0x489C
-    // int32_t              mBSNum;               // 0x48A0
-    // int32_t              mSynthBo;             // 0x48A4
-    // FMOD__bitstream_info mBSI;                 // 0x48A8
-    // int32_t              mBlc[2];              // 0x4878 (confirmed)
-    // int32_t              mLayer;               // 0x487C
-    // uint32_t             mNumFrames;           // 0x4880
-    // uint32_t*            mFrameOffset;         // 0x48C0
-    // uint8_t              mXingToc[100];        // 0x4880 (confirmed)
-    // bool                 mHasXingNumFrames;    // 0x48E4 (confirmed)
-    // bool                 mHasXingToc;          // 0x48E5 (confirmed)
-
     int32_t              mFrameSize;           // 0x0000
     int32_t              mFrameSizeOld;        // 0x0004
     FMOD__MPEG_FRAME     mFrame;               // 0x0008
     uint32_t             mFrameHeader;         // 0x0054
     uint32_t             mNumFrames;           // 0x0058
     uint32_t*            mFrameOffset;         // 0x005C
-    int32_t              mPcmPoint;            // 0x0060 deduction
+    int32_t              mPcmPoint;            // 0x0060
     int32_t              mLayer;               // 0x0064
     uint8_t              mBSSpace[2][2304];    // 0x0068
     uint32_t             mBSNum;               // 0x1268
@@ -2775,8 +2692,8 @@ struct FMOD__CodecFSB {
     uint32_t*                      mDataOffset;    // 0x114
     int32_t                        mCurrentIndex;  // 0x118
     FMOD__CodecFSBCache*           mCacheEntry;    // 0x11C
-    char**                         mSyncPointData; // 0x120
-    char**                         unk124;         // 0x124
+    int32_t*                       mNumSyncPoints; // 0x120
+    FMOD__SyncPoint**              mSyncPoint;     // 0x124
     FMOD__CodecWav*                mADPCM;         // 0x128
     bool                           mDecodeADPCM;   // 0x12C
     FMOD__CodecMPEG*               mMPEG;          // 0x130
@@ -3221,7 +3138,7 @@ struct FMOD__SoundI {
     int32_t                      mNumActiveSubSounds;      // 0x8C
     FMOD__SoundI*                mSubSoundParent;          // 0x90
     int32_t                      mSubSoundIndex;           // 0x94
-    FMOD__SoundSentenceEntry*    mSubSoundList;            // 0x98
+    int32_t*                     mSubSoundList;            // 0x98
     int32_t                      mSubSoundListNum;         // 0x9C
     int32_t                      mSubSoundListCurrent;     // 0xA0
     FMOD__SoundI*                mSubSampleParent;         // 0xA4
@@ -3278,7 +3195,7 @@ struct FMOD__SampleSoftware {
     void*        mBufferMemory;              // 0x13C
     char*        mLoopPointDataEnd;          // 0x140
     char         mLoopPointDataEndMemory[8]; // 0x144
-    bool         unk14C;                     // 0x14C
+    bool         mDataEndCopied;             // 0x14C
 };
 
 // size = 0x148
@@ -3309,58 +3226,8 @@ struct FMOD__ChannelPool {
     FMOD__ChannelReal** mChannel;      // 0x10
 };
 
-// size = 0x5C (mac)
-struct FMOD__ChannelGroup {
-    uint32_t unk00; // 0x00
-    uint32_t unk04; // 0x04
-    uint32_t unk08; // 0x08
-    uint32_t unk0C; // 0x0C
-    uint32_t unk10; // 0x10
-    uint32_t unk14; // 0x14
-    uint32_t unk18; // 0x18
-    uint32_t unk1C; // 0x1C
-    uint32_t unk20; // 0x20
-    uint32_t unk24; // 0x24
-    uint32_t unk28; // 0x28
-    uint32_t unk2C; // 0x2C
-    uint32_t unk30; // 0x30
-    uint32_t unk34; // 0x34
-    uint32_t unk38; // 0x38
-    uint32_t unk3C; // 0x3C
-    uint32_t unk40; // 0x40
-    uint32_t unk44; // 0x44
-    uint32_t unk48; // 0x48
-    uint32_t unk4C; // 0x4C
-    uint32_t unk50; // 0x50
-    uint32_t unk54; // 0x54
-    uint32_t unk58; // 0x58
-};
-
 // size = 0x5C
 struct FMOD__ChannelGroupI {
-    // uint32_t unk00; // 0x00
-    // uint32_t unk04; // 0x04
-    // uint32_t unk08; // 0x08
-    // uint32_t unk0C; // 0x0C
-    // uint32_t unk10; // 0x10
-    // uint32_t unk14; // 0x14
-    // uint32_t unk18; // 0x18
-    // uint32_t unk1C; // 0x1C
-    // uint32_t unk20; // 0x20
-    // uint32_t unk24; // 0x24
-    // uint32_t unk28; // 0x28
-    // uint32_t unk2C; // 0x2C
-    // uint32_t unk30; // 0x30
-    // uint32_t unk34; // 0x34
-    // uint32_t unk38; // 0x38
-    // uint32_t unk3C; // 0x3C
-    // uint32_t unk40; // 0x40
-    // uint32_t unk44; // 0x44
-    // uint32_t unk48; // 0x48
-    // uint32_t unk4C; // 0x4C
-    // uint32_t unk50; // 0x50
-    // uint32_t unk54; // 0x54
-    // uint32_t unk58; // 0x58
     FMOD__LinkedListNode _;                          // 0x00
     FMOD__SystemI*       mSystem;                    // 0x0C
     FMOD__DSPI*          mDSPHead;                   // 0x10 confirmed!
@@ -3417,26 +3284,8 @@ struct FMOD__SNDMIXPLUGIN {
 
 // size = 0x30
 struct FMOD__MusicSample {
-    // FMOD__SoundI*     mSound;
-    // uint32_t          mMiddleC;
-    // uint8_t           mDefaultVolume;
-    // uint8_t           mDefaultPan;
-    // uint32_t          mLoopStart;
-    // uint32_t          mLoopLength;
-    // int32_t           mRelative;
-    // int32_t           mFineTune;
-    // uint32_t          mRawLength;
-    // uint8_t           mFlags;
-    // uint8_t           mGlobalVolume;
-    // uint32_t          mSusLoopBegin;
-    // uint32_t          mSusLoopEnd;
-    // uint8_t           mVibSpeed;
-    // uint8_t           mVibDepth;
-    // uint8_t           mVibType;
-    // uint8_t           mVibRate;
-    // FMOD_SOUND_FORMAT mOriginalFormat;
-    FMOD__SoundI* mSound;         // 0x00 confirmed
-    uint32_t      mMiddleC;       // 0x04 confirmed
+    FMOD__SoundI* mSound;         // 0x00
+    uint32_t      mMiddleC;       // 0x04
     uint8_t       mDefaultVolume; // 0x08
     uint8_t       mDefaultPan;    // 0x09
     uint32_t      mLoopStart;     // 0x0C
@@ -3536,14 +3385,14 @@ struct FMOD__ChannelReal__v_table {
     E_METHOD(FMOD_RESULT, _08_start);
     P_METHOD(FMOD_RESULT, _09_update, int32_t delta);
     E_METHOD(FMOD_RESULT, _10_updateStream);
-    P_METHOD(FMOD_RESULT, _11_stop, bool a2, bool a3, bool a4); // TODO
-    P_METHOD(FMOD_RESULT, _12_stop, bool a2, bool a3);          // TODO
+    P_METHOD(FMOD_RESULT, _11_stop, bool ignoreenddelay, bool resetstate, bool force);
+    P_METHOD(FMOD_RESULT, _12_stop, bool ignoreenddelay, bool resetstate);
     P_METHOD(FMOD_RESULT, _13_setPaused, bool paused);
     P_METHOD(FMOD_RESULT, _14_getPaused, bool* paused);
     P_METHOD(FMOD_RESULT, _15_setVolume, float volume);
     P_METHOD(FMOD_RESULT, _16_setFrequency, float frequency);
     P_METHOD(FMOD_RESULT, _17_setPan, float pan, float fbpan);
-    P_METHOD(FMOD_RESULT, _18_setDelay, uint32_t delayhi, uint32_t delaylo);
+    P_METHOD(FMOD_RESULT, _18_setDelay, uint32_t startdelay, uint32_t enddelay);
     P_METHOD(
         FMOD_RESULT,
         _19_setSpeakerMix,
@@ -3610,14 +3459,14 @@ struct FMOD__ChannelOpenAL__v_table {
     E_METHOD(FMOD_RESULT, _08_start);
     P_METHOD(FMOD_RESULT, _09_update, int32_t delta);
     E_METHOD(FMOD_RESULT, _10_updateStream);
-    P_METHOD(FMOD_RESULT, _11_stop, bool a2, bool a3, bool a4); // TODO
-    P_METHOD(FMOD_RESULT, _12_stop, bool a2, bool a3);          // TODO
+    P_METHOD(FMOD_RESULT, _11_stop, bool ignoreenddelay, bool resetstate, bool force);
+    P_METHOD(FMOD_RESULT, _12_stop, bool ignoreenddelay, bool resetstate);
     P_METHOD(FMOD_RESULT, _13_setPaused, bool paused);
     P_METHOD(FMOD_RESULT, _14_getPaused, bool* paused);
     P_METHOD(FMOD_RESULT, _15_setVolume, float volume);
     P_METHOD(FMOD_RESULT, _16_setFrequency, float frequency);
     P_METHOD(FMOD_RESULT, _17_setPan, float pan, float fbpan);
-    P_METHOD(FMOD_RESULT, _18_setDelay, uint32_t delayhi, uint32_t delaylo); // TODO
+    P_METHOD(FMOD_RESULT, _18_setDelay, uint32_t startdelay, uint32_t enddelay);
     P_METHOD(
         FMOD_RESULT,
         _19_setSpeakerMix,
@@ -3708,8 +3557,8 @@ struct FMOD__ChannelReal {
     uint32_t               mLoopStart;       // 0x7C
     uint32_t               mLoopLength;      // 0x80
     uint32_t               mLength;          // 0x84
-    uint32_t               mStartDelay;      // 0x88 invented: implied by mEndDelay
-    uint32_t               mEndDelay;        // 0x8C invented: taken from ChannelI
+    uint32_t               mDelayStart;      // 0x88 invented: implied by mEndDelay
+    uint32_t               mDelayEnd;        // 0x8C invented: taken from ChannelI
     float                  mMaxFrequency;    // 0x90
     float                  mMinFrequency;    // 0x94
 };
@@ -3730,7 +3579,7 @@ struct FMOD__ChannelSoftware {
     FMOD__DSPI*               mDSPLowPass;         // 0x2C4 XREF moveChannelGroup
     FMOD__DSPI*               mDSPReverb;          // 0x2C8
     FMOD__DSPCodec*           mDSPCodec;           // 0x2CC
-    FMOD__DSPI*               unk2D0;              // 0x2D0 TODO type is not certain
+    FMOD__DSPCodec*           mDSPCodecStopped;    // 0x2D0 TODO type is not certain
     FMOD__DSPConnection*      mDSPConnection;      // 0x2D4
 };
 
@@ -3786,23 +3635,22 @@ struct FMOD__ChannelDSoundEAX4 {
 
 // size = 0x328
 struct FMOD__ChannelOpenAL {
-    FMOD__ChannelReal   _;                   // 0x000
-    FMOD__DSPI*         mDSPHead;            // 0x098
-    FMOD__DSPFilter     mDSPHeadMemory;      // 0x09C
-    FMOD__DSPWaveTable* mDSPWaveTable;       // 0x1A0
-    uint32_t            unk1A4;              // 0x1A4
-    FMOD__DSPWaveTable  mDSPWaveTableMemory; // 0x1A8
-    FMOD__DSPResampler* mDSPResampler;       // 0x2C0
-    FMOD__DSPI*         mDSPLowPass;         // 0x2C4
-    FMOD__DSPCodec*     mDSPCodec;           // 0x2C8
-    uint32_t            unk2CC;              // 0x2CC
-    FMOD__OutputOpenAL* mOutputOAL;          // 0x2D0
-    int32_t             mNumSources;         // 0x2D4
-    FMOD__SourceOpenAL* mSources[16];        // 0x2D8
-    int16_t*            mBuffer;             // 0x318
-    float*              mTempBuffer;         // 0x31C
-    bool                mInitialFill;        // 0x320
-    uint32_t            unk324;              // 0x324
+    FMOD__ChannelReal    _;                   // 0x000
+    FMOD__DSPI*          mDSPHead;            // 0x098
+    FMOD__DSPFilter      mDSPHeadMemory;      // 0x09C
+    FMOD__DSPWaveTable*  mDSPWaveTable;       // 0x1A0
+    FMOD__DSPWaveTable   mDSPWaveTableMemory; // 0x1A8
+    FMOD__DSPResampler*  mDSPResampler;       // 0x2C0
+    FMOD__DSPI*          mDSPLowPass;         // 0x2C4
+    FMOD__DSPCodec*      mDSPCodec;           // 0x2C8
+    FMOD__DSPConnection* mDSPConnection;      // 0x2CC
+    FMOD__OutputOpenAL*  mOutputOAL;          // 0x2D0
+    int32_t              mNumSources;         // 0x2D4
+    FMOD__SourceOpenAL*  mSources[16];        // 0x2D8
+    int16_t*             mBuffer;             // 0x318
+    float*               mTempBuffer;         // 0x31C
+    bool                 mInitialFill;        // 0x320
+    uint32_t             mDSPTick;            // 0x324
 };
 
 struct FMOD__ChannelOpenALEAX2 {
@@ -3891,7 +3739,7 @@ struct FMOD__ChannelI {
     float                      m3DPanLevel;            // 0x17C
     float                      m3DDopplerLevel;        // 0x180
     FMOD_CHANNEL_CALLBACK      mCallback[3];           // 0x184
-    int32_t                    mCommand[3];            // 0x190 invented name
+    int32_t                    mCallbackCommand[3];    // 0x190 invented name
 };
 
 // size = [0x240] (implied by CodecMOD::openInternal)
@@ -3939,61 +3787,6 @@ struct FMOD__MusicVirtualChannel {
 
 // size = 0x29C
 struct FMOD__MusicChannel {
-    // FMOD__MusicVirtualChannel mVirtualChannelHead;
-    // uint8_t                   mInstrument;
-    // uint8_t                   mNote;
-    // uint8_t                   mSample;
-    // uint8_t                   mRealNote;
-    // int32_t                   mPeriod;
-    // uint8_t                   mRecentEffect;
-    // int32_t                   mVolume;
-    // int32_t                   mPan;
-    // int32_t                   mVolumeDelta;
-    // uint32_t                  mSampleOffset;
-    // int32_t                   mGlobalVolume;
-    // float                     mMasterVolume;
-    // uint8_t                   mPortaUpDown;
-    // uint8_t                   mPortaDown;
-    // uint8_t                   mPortaUp;
-    // uint8_t                   mXtraPortaDown;
-    // uint8_t                   mXtraPortaUp;
-    // uint8_t                   mVolumeSlide;
-    // uint8_t                   mPanSlide;
-    // uint8_t                   mRetrigX;
-    // uint8_t                   mRetrigY;
-    // uint8_t                   mRetrigCount;
-    // int32_t                   mPortaTarget;
-    // uint8_t                   mPortaSpeed;
-    // uint8_t                   mPortaReached;
-    // int8_t                    mVibPos;
-    // uint8_t                   mVibSpeed;
-    // uint8_t                   mVibDepth;
-    // uint8_t                   mVibType;
-    // int8_t                    mTremoloPosition;
-    // uint8_t                   mTremoloSpeed;
-    // uint8_t                   mTremoloDepth;
-    // int32_t                   mPanbrelloPos;
-    // uint8_t                   mPanbrelloSpeed
-    // uint8_t                   mPanbrelloDepth;
-    // uint8_t                   mTremorPosition;
-    // uint8_t                   mTremorOn;
-    // uint8_t                   mTremorOff;
-    // uint8_t                   mArpeggio;
-    // int32_t                   mPatternLoopRow;
-    // int32_t                   mPatternLoopNumber;
-    // uint8_t                   mChannelVolumeSlide;
-    // uint8_t                   mSpecialParam;
-    // uint8_t                   mWaveControl;
-    // uint8_t                   mWaveControlVibrato;
-    // uint8_t                   mWaveControlTremolo;
-    // uint8_t                   mWaveControlPan;
-    // uint8_t                   mFineVolumeSlideDown;
-    // uint8_t                   mFineVolumeSlideUp;
-    // uint8_t                   mFinePortaUp;
-    // uint8_t                   mFinePortaDown;
-    // uint8_t                   mHighOffset;
-    // uint8_t                   mVolumeColumnVolumeSlide;
-
     FMOD__MusicVirtualChannel mVirtualChannelHead;      // 0x000
     uint8_t                   mInstrument;              // 0x240
     uint8_t                   mNote;                    // 0x241
@@ -4084,75 +3877,8 @@ struct FMOD__MusicNote {
     uint8_t mEffectParam;
 };
 
-// size = [???]
-// size by inference: 0x80C = sizeof(CodecMOD) - (sizeof(MusicSample) * 31)
+// size = 0x80C
 struct FMOD__MusicSong {
-    // FMOD__Codec         _;
-    // char                mSongName[256];
-    // FMOD__MusicPattern* mPattern;
-    // FMOD__DSPI*         mDSPHead;
-    // bool*               mVisited;
-    // uint8_t             mOrderList[256];
-    //
-    // int32_t                    mNumChannels; // 0x2E4 confirmed
-    // FMOD__MusicChannel*        mMusicChannel[64];
-    // int32_t                    mNumVirtualChannels;
-    // FMOD__MusicVirtualChannel* mVirtualChannel;
-    // FMOD__ChannelPool*         mChannelPool;
-    // FMOD__ChannelSoftware*     mChannelSoftware;
-    // FMOD__DSPI**               mLowPass;
-    // FMOD__ChannelGroupI        mChannelGroup;
-    // FMOD__ChannelMusic         mHardwareMusicChannel;
-    //
-    // int32_t  mMixerSamplesLeft;
-    // int32_t  mMixerSamplesPerTick;
-    // uint32_t mPCMOffset;
-    // uint32_t mDSPTick;
-    //
-    // int32_t  mDefaultSpeed;
-    // uint32_t mDefaultBPM;
-    // uint8_t  mDefaultPan[64];
-    // uint8_t  mDefaultVolume[64];
-    // uint8_t  mDefaultGlobalVolume;
-    //
-    // int32_t mNumOrders;
-    // int32_t mNumPatterns;
-    // int32_t mNumPatternsMem;
-    // int32_t mNumInstruments;
-    // int32_t mNumSamples; // 0x500 confirmed
-    //
-    // FMOD__MusicInstrument* mInstrument;
-    // int8_t*                mPatternPtr;
-    // uint8_t                mLastNote[64];
-    // uint8_t                mLastNumber[64];
-    // uint8_t                mLastVolume[64];
-    // uint8_t                mLastEffect[64];
-    // uint8_t                mLastEffectParam[64];
-    // uint8_t                mPreviousMaskVariable[64];
-    // FMOD__MusicNote        mNote[64];
-    //
-    // int32_t  mRestart;
-    // float    mMasterSpeed;   // 0x7D0 confirmed
-    // float    mPanSeparation; // 0x7D4 confirmed
-    // int32_t  mMasterVolume;
-    // int32_t  mGlobalVolume;
-    // uint8_t  mGlobalVolumeSlide;
-    // uint16_t mMusicFlags;
-    // bool     mPlaying;
-    // bool     mFinished;
-    // bool     mLooping;
-    // int32_t  mTick;
-    // int32_t  mSpeed;
-    // int32_t  mBPM;
-    // int32_t  mRow;
-    // int32_t  mOrder;
-    // int32_t  mPatternDelay;
-    // int32_t  mPatternDelayTicks;
-    // int32_t  mNextRow;
-    // int32_t  mNextOrder;
-
-    // ^-- overview of later versions.
-    // v-- the 4.09.07 version (strictly)
     FMOD__Codec                _;                         // 0x000
     char                       mSongName[256];            // 0x0D8
     FMOD__MusicPattern*        mPattern;                  // 0x1D8
@@ -5075,7 +4801,6 @@ struct FMOD__OutputDSound {
     int32_t                    mRecordNumDrivers;            // 0x6A0
     char*                      mRecordDriverName[32];        // 0x6A4
     GUID                       mRecordGUID[32];              // 0x724
-    uint32_t                   unk924;                       // 0x924
 };
 
 // size = 0x4C0
@@ -5134,7 +4859,6 @@ struct FMOD__OutputWinMM {
     uint32_t           mRecordData;          // 0x1320
     uint32_t           mRecordBlockLenBytes; // 0x1324
     uint32_t           mRecordBlockAlign;    // 0x1328
-    uint32_t           unk132C;              // 0x132C
 };
 
 // FMOD::FMOD_WASAPIDriver
@@ -5165,7 +4889,7 @@ struct FMOD__OutputWASAPI {
     float                    mRecordTimerPeriod;   // 0x4B8 invented name
     int32_t                  mRecordWritePosition; // 0x4BC
     bool                     mRecordStereoToMono;  // 0x4C0 from FMOD_WASAPIRecordMembers
-    FMOD_OS_CRITICALSECTION* mRecordTimerCrit;     // 0x4C4 invented name
+    FMOD_OS_CRITICALSECTION* mRecordCrit;          // 0x4C4 invented name
     uint32_t                 mRecordTimerID;       // 0x4C8
 };
 
@@ -5243,13 +4967,6 @@ struct FMOD_REVERB_CHANNELDATA {
     // float                         mPresenceGain;
 };
 
-// unknown if this exists in this version
-// struct FMOD_REVERB_INSTANCE {
-//     FMOD__DSPI*              mDSP;         // DSP which implements the reverb
-//     FMOD_REVERB_CHANNELDATA* mChannelData; // Channeldata for each instance
-//     FMOD_REVERB_PROPERTIES   mProps;       // ID3L2 listener properties determines nature of reverb
-// };
-
 // size = 0xC0
 struct FMOD__ReverbI {
     FMOD__LinkedListNode     _;                       // 0x00
@@ -5320,7 +5037,7 @@ struct FMOD__GeometryI__LineTestData {
     FMOD__GeometryI* geometryI;
 };
 
-// size = [0x10C]
+// size = [0x104]
 struct FMOD__GeometryI {
     FMOD__LinkedListNode          _;                  // 0x000
     FMOD__GeometryMgr*            mGeometryMgr;       // 0x00C
@@ -5345,8 +5062,6 @@ struct FMOD__GeometryI {
     FMOD__Octree                  mOctree;            // 0x0E4 confirmed
     FMOD__GeometryI*              mNextUpdateItem;    // 0x0FC
     bool                          mToBeUpdated;       // 0x100
-    uint32_t                      unk104;             // 0x104
-    uint32_t                      unk108;             // 0x108
 };
 
 // size = [0x18]
@@ -5354,7 +5069,7 @@ struct FMOD__GeometryMgr {
     FMOD__SystemI*   mSystem;          // 0x00
     bool             mMoved;           // 0x04
     FMOD__Octree*    mMainOctree;      // 0x08
-    uint32_t         unk0C;            // 0x0C
+    int32_t          mRefCount;        // 0x0C
     FMOD__GeometryI* mFirstUpdateItem; // 0x10
     float            mWorldSize;       // 0x14
 };
@@ -5371,35 +5086,6 @@ struct FMOD__Listener {
     FMOD_VECTOR mRight;        // 0x60
     bool        mMoved;        // 0x6C
     bool        mRotated;      // 0x6D
-
-    // uint32_t unk00; // 0x00
-    // uint32_t unk04; // 0x04
-    // uint32_t unk08; // 0x08
-    // uint32_t unk0C; // 0x0C
-    // uint32_t unk10; // 0x10
-    // uint32_t unk14; // 0x14
-    // uint32_t unk18; // 0x18
-    // uint32_t unk1C; // 0x1C
-    // uint32_t unk20; // 0x20
-    // uint32_t unk24; // 0x24
-    // uint32_t unk28; // 0x28
-    // uint32_t unk2C; // 0x2C
-    // uint32_t unk30; // 0x30
-    // uint32_t unk34; // 0x34
-    // uint32_t unk38; // 0x38
-    // uint32_t unk3C; // 0x3C
-    // uint32_t unk40; // 0x40
-    // uint32_t unk44; // 0x44
-    // uint32_t unk48; // 0x48
-    // uint32_t unk4C; // 0x4C
-    // uint32_t unk50; // 0x50
-    // uint32_t unk54; // 0x54
-    // uint32_t unk58; // 0x58
-    // uint32_t unk5C; // 0x5C
-    // uint32_t unk60; // 0x60
-    // uint32_t unk64; // 0x64
-    // uint32_t unk68; // 0x68
-    // uint32_t unk6C; // 0x6C
 };
 
 struct FMOD__LevelsInfo {
@@ -5455,23 +5141,31 @@ struct FMOD__DSPConnection {
 // TODO: identify the true name of this
 // this was replaced with the FMOD Profiler in later editions
 struct FMOD__DSPNet {
-    bool            mInitialized;         // 0x00
-    uint32_t        mTimeSinceLastUpdate; // 0x04
-    void*           mListenSocket;        // 0x08
-    void*           mClientSocket;        // 0x0C
-    uint32_t        unk10;                // 0x10 allocated
-    uint32_t        unk14;                // 0x14
-    uint32_t        unk18;                // 0x18
-    uint32_t        unk1C;                // 0x1C allocated
-    FMOD__DSPNet20* unk20;                // 0x20
-    uint32_t        unk24;                // 0x24
-    uint32_t        unk28;                // 0x28
+    bool                mInitialized;         // 0x00
+    uint32_t            mTimeSinceLastUpdate; // 0x04
+    void*               mListenSocket;        // 0x08
+    void*               mClientSocket;        // 0x0C
+    FMOD__DSPI**        mStack;               // 0x10 allocated
+    int32_t             mStackPos;            // 0x14
+    int32_t             mStackSize;           // 0x18
+    char*               mPacket;              // 0x1C
+    FMOD__DSPNetHeader* mHeader;              // 0x20
+    FMOD__DSPNetNode*   mNodes;               // 0x24
+    int32_t             mNumNodes;            // 0x28
 };
 
-struct FMOD__DSPNet20 {
-    int32_t unk00;
-    int32_t unk04;
-    int32_t unk08;
+struct FMOD__DSPNetHeader {
+    int32_t mType;
+    int32_t mSize;
+    int32_t mMore;
+};
+
+struct FMOD__DSPNetNode {
+    FMOD__DSPI* mDSP;
+    char        mName[32];
+    int32_t     mNumInputs;
+    bool        mActive;
+    int32_t     mTreeLevel;
 };
 
 // size = 0x8668
@@ -5507,7 +5201,7 @@ struct FMOD__SystemI {
     FMOD_OS_CRITICALSECTION*   mDSPCrit;                      // 0x934
     FMOD_OS_CRITICALSECTION*   mDSPLockCrit;                  // 0x938
     FMOD_OS_CRITICALSECTION*   mDSPConnectionCrit;            // 0x93C
-    FMOD_OS_CRITICALSECTION*   mDSPFlushingCrit;              // 0x940 invented name
+    FMOD_OS_CRITICALSECTION*   mDSPRequestCrit;               // 0x940 invented name
     bool                       mDSPActive;                    // 0x944
     FMOD__DSPI*                mDSPSoundCard;                 // 0x948
     FMOD__DSPI*                mDSPChannelGroupTarget;        // 0x94C
@@ -5546,7 +5240,7 @@ struct FMOD__SystemI {
     FMOD_DSP_RESAMPLER         mResampleMethod;               // 0x7DB8
     FMOD__MemSingleton         mMultiSubSampleLockBuffer;     // 0x7DBC
     FMOD_OS_CRITICALSECTION*   mMultiSubSampleLockBufferCrit; // 0x7DC4
-    FMOD_OS_CRITICALSECTION*   mSoundLockBufferCrit;          // 0x7DC8 invented name
+    FMOD_OS_CRITICALSECTION*   mReadDataCrit;                 // 0x7DC8 invented name
     FMOD_FILE_OPENCALLBACK     mOpenRiderCallback;            // 0x7DCC
     FMOD_FILE_CLOSECALLBACK    mCloseRiderCallback;           // 0x7DD0
     FMOD_FILE_READCALLBACK     mReadRiderCallback;            // 0x7DD4
