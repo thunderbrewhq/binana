@@ -752,6 +752,7 @@ function GetCGObjectAddr(guidValue)
         [0xA33428] = "item",
         [0xA332D0] = "container",
         [0xA331C8] = "corpse",
+        [0xA34640] = "gameobject"
     }
 
     local memScan   = createMemScan()
@@ -915,6 +916,17 @@ local RCString = Struct("RCString")
     :uint32("m_refCnt")
     :int8_ptr("m_str")
 
+local CPassenger = Struct("CPassenger")
+    :TSLink("m_passangerLink")
+    :WOWGUID("m_transportGUID") -- 0x08
+    :C3Vector("m_position") -- 0x10
+    :ptr("unkPtr") -- 0x1C
+    :float("m_facing") -- 0x20
+    :uint32("unk_24") -- 0x24
+    :ptr("m_data") -- 0x28: CGObject.dataBeginPtr; for aoe spells ptr to DynamicObjectFields
+    :flag8("unkFlag") -- 0x2C
+    :paddingTo(0x30)
+
 local ObjectFields = Struct("ObjectFields")
     :WOWGUID("ObjectGUID")
     :uint32("type")
@@ -953,17 +965,6 @@ local CGObject = Struct("CGObject")
     :uint8("m_maxAlpha") -- 0x00CB
     :ptr("effectManagerPtr") -- 0x00CC
 
-local CPassenger = Struct("CPassenger")
-    :TSLink("m_passangerLink")
-    :WOWGUID("m_transportGUID") -- 0x08
-    :C3Vector("m_position") -- 0x10
-    :ptr("unkPtr") -- 0x1C
-    :float("m_facing") -- 0x20
-    :uint32("unk_24") -- 0x24
-    :ptr("m_data") -- 0x28: CGObject.dataBeginPtr; for aoe spells ptr to DynamicObjectFields
-    :flag8("unkFlag") -- 0x2C
-    :paddingTo(0x30)
-
 local DynamicObjectFields = Struct("DynamicObjectFields")
     :WOWGUID("caster")
     :uint32("bytes")
@@ -981,7 +982,7 @@ local CGDynamicObject_C = Struct("CGDynamicObject_C", CGObject)
     :ptr("m_spellVisual") -- 0x158
     :uint32("unk_15C") -- 0x15C
     :uint32("unk_160") -- 0x160
-    :ptr("unk_SoundVtbl_ptr") -- 0x164 -- ptr at 0x0087bdfc
+    :ptr("unk_SoundVtbl_ptr") -- 0x164 -- ptr to 0x0087bdfc
     :uint32("unk_168") -- 0x168
     :uint32("unk_16C") -- 0x16C
 
@@ -990,7 +991,7 @@ function findAllAddresses()
     if scan then
         for i = 0, scan.Count - 1 do
             local addr = getAddress(scan[i])
-            if not inModule(addr) and i == scan.Count - 1 then
+            if not inModule(addr) then
                 loadStructToTable(CGDynamicObject_C, addr)
             end
         end

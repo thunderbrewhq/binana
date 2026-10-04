@@ -752,6 +752,7 @@ function GetCGObjectAddr(guidValue)
         [0xA33428] = "item",
         [0xA332D0] = "container",
         [0xA331C8] = "corpse",
+        [0xA34640] = "gameobject"
     }
 
     local memScan   = createMemScan()
@@ -915,6 +916,17 @@ local RCString = Struct("RCString")
     :uint32("m_refCnt")
     :int8_ptr("m_str")
 
+local CPassenger = Struct("CPassenger")
+    :TSLink("m_passangerLink")
+    :WOWGUID("m_transportGUID") -- 0x08
+    :C3Vector("m_position") -- 0x10
+    :ptr("unkPtr") -- 0x1C
+    :float("m_facing") -- 0x20
+    :uint32("unk_24") -- 0x24
+    :ptr("m_data") -- 0x28: CGObject.dataBeginPtr; for aoe spells ptr to DynamicObjectFields
+    :flag8("unkFlag") -- 0x2C
+    :paddingTo(0x30)
+
 local ObjectFields = Struct("ObjectFields")
     :WOWGUID("ObjectGUID")
     :uint32("type")
@@ -957,7 +969,7 @@ local CorpseFields = Struct("CorpseFields")
     :WOWGUID("Owner")
     :WOWGUID("Party")
     :int32("DisplayId")
-    :int32_array("Item")
+    :int32_array("Item", 19)
     :flag32("Bytes1")
     :flag32("Bytes2")
     :int32("Guild", "int32")

@@ -752,6 +752,7 @@ function GetCGObjectAddr(guidValue)
         [0xA33428] = "item",
         [0xA332D0] = "container",
         [0xA331C8] = "corpse",
+        [0xA34640] = "gameobject"
     }
 
     local memScan   = createMemScan()

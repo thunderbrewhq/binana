@@ -1,16 +1,5 @@
 -- #include "cgobject.lua"
 
-local CPassenger = Struct("CPassenger")
-    :TSLink("m_passangerLink")
-    :WOWGUID("m_transportGUID") -- 0x08
-    :C3Vector("m_position") -- 0x10
-    :ptr("unkPtr") -- 0x1C
-    :float("m_facing") -- 0x20
-    :uint32("unk_24") -- 0x24
-    :ptr("m_data") -- 0x28: CGObject.dataBeginPtr; for aoe spells ptr to DynamicObjectFields
-    :flag8("unkFlag") -- 0x2C
-    :paddingTo(0x30)
-
 local DynamicObjectFields = Struct("DynamicObjectFields")
     :WOWGUID("caster")
     :uint32("bytes")

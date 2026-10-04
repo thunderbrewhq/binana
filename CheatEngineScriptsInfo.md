@@ -10,6 +10,7 @@
 | CGItem_C (items in the main 16-slot backpack) | — | [Load_CGItem.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGItem.lua) |
 | CGContainers_C (only for equipped bags) | — | [Load_CGContainer.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGContainer.lua) |
 | CGDynamicObject_C (mostly for AoE spells) | Cast an AoE spell (Blizzard, DnD etc) and exec the script. | [Load_CGDynamicObject.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGDynamicObject.lua) |
+| CGGameObject_C | After the script exec hover your mouse cursor over the game object. If there is no game object under the cursor, then there will be a check to see if the player is on the transport (ship, evelator). | [Load_CGGameObject.lua](https://github.com/thunderbrewhq/binana/blob/master/profile/3.3.5a-windows-386/cheatengine/Load_CGGameObject.lua) |
 
 #### Map/World
 | Name | What to do | What to load |
