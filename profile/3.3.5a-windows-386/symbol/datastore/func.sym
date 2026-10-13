@@ -2,7 +2,7 @@ CDataStore__GetData 0047B6A0 f end=0047B6A9 type="CDataStore* __thiscall func(CD
 CDataStore__constructor 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
 CDataStore__FetchWrite 00401070 f end=004010C3 type="int32_t __thiscall func(CDataStore* this, uint32_t pos, uint32_t bytes, char* fileName, int32_t lineNumber)" ; protected: int __thiscall CDataStore::FetchWrite(unsigned int,unsigned int,char const *,int)
 CDataStore__IsRead 004010D0 f end=004010DE type="int32_t __thiscall func(CDataStore* this)" ; CDataStore::IsRead() const
-CDataStore__Reset 004010E0 f end=00401129 type="void__thiscall func(CDataStore* this)" ; CDataStore::Reset()
+CDataStore__Reset 004010E0 f end=00401129 type="void __thiscall func(CDataStore* this)" ; CDataStore::Reset()
 CDataStore__Finalize 00401130 f end=00401138 type="void __thiscall func(CDataStore* this)" ; CDataStore::Finalize()
 CDataStore__destructor 004038A0 f end=004038E2 type="void __thiscall func(CDataStore* this)" ; CDataStore::~CDataStore()
 CDataStore__GetBufferParams 0047ADE0 f end=0047AE0B type="void __thiscall func(CDataStore* this, void** data, uint32_t* size, uint32_t* alloc)" ; CDataStore::GetBufferParams(void const**, unsigned int*, unsigned int*)

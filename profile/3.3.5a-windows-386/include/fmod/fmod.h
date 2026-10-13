@@ -2168,7 +2168,7 @@ struct FMOD__DSPWaveTable {
     FMOD_UINT64P                mPosition;  // 0x0F8
     FMOD_SINT64P                mSpeed;     // 0x100
     FMOD__DSPWAVETABLE_SPEEDDIR mDirection; // 0x108
-    uint32_t                    mFrequency; // 0x10C
+    float                       mFrequency; // 0x10C
     FMOD__ChannelReal*          mChannel;   // 0x110
     FMOD__SoundI*               mSound;     // 0x114
 };
@@ -4637,9 +4637,9 @@ struct FMOD__DSPSfxReverb {
 
 // size = 0x10C
 struct FMOD__DSPSoundCard {
-    FMOD__DSPFilter _;                // 0x000
-    float*          mMixBuffer;       // 0x104 invented the memory-aligned pointer to 0x108
-    float*          mMixBufferMemory; // 0x108 invented: the memory buffer
+    FMOD__DSPFilter _;                    // 0x000
+    float*          mConvertBuffer;       // 0x104 invented the memory-aligned pointer to 0x108
+    float*          mConvertBufferMemory; // 0x108 invented: the memory buffer
 };
 
 // size = 0x270
