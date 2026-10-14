@@ -1,2 +1,4 @@
 BspQuery_Volume__CWFrustum__operator_call 007C7660 f end=007C770B
 QueryCull 007C71E0 f end=007C7226
+BspQuery_SegmentLink__operator_call 007C6600 f end=007C6702
+BspQuery_SegmentLink__GetFaceIndicesUsingCache 007C6790 f end=007C6C25

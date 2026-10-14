@@ -1237,3 +1237,4 @@ WowClientDB_comdat_folded_type_size_0x2C__GetRecordByIndex 0065C2C0 f end=0065C2
 WowClientDB_comdat_folded_type_size_0x20__GetRecordByIndex 0065F690 f end=0065F6C3
 WowClientDB_comdat_folded_type_size_0x1C__GetRecordByIndex 00661FF0 f end=0066202B
 WowClientDB_comdat_folded_type_size_0x18__GetRecordByIndex 00662900 f end=0066294D
+SpellRec__Read 008A65E0 f end=008A7FBD

@@ -115,3 +115,6 @@ CMap__FootprintInitialize 007A03C0 f end=007A048B
 CMap__GetTrisChunk 007A6630 f end=007A682B
 CMap__GetTrisTerrain 007A6830 f end=007A6940
 CMap__RenderFootprints 0079FCC0 f end=007A015D
+CMap__AllocRenderChunk 007C0500 f end=007C060E
+CMap__GetDoodadDefFacets 007A50C0 f end=007A5240
+CMap__LoadTex 007BD540 f end=007BD593

@@ -3,3 +3,4 @@ CGGameObject_C_Type_Text__Use 0070C850 f end=0070C87B
 CGGameObject_C_Type_Text__PostInitWithStats 0070C880 f end=0070C8C0
 CGGameObject_C_Type_Text__CloseInteraction 0070B570 f end=0070B57D
 CGGameObject_C_Type_Text__StartInteraction 0070B560 f end=0070B56D
+CGGameObject_C_Type_Text__CanChangeCursor 0070B540 f end=0070B558

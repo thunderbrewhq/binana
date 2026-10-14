@@ -105,3 +105,6 @@ CreateFrustum 005FF670 f end=005FF8DC
 CGCamera__FOV 005FF500 f end=005FF52B
 CGCamera__UpdatePitch 005FFC20 f end=005FFD1E
 CGCamera__SetDesiredFoVOffset 006030E0 f end=0060322C
+CGCamera__SetDesiredYawAngle 00601410 f end=00601548
+CGCamera__SetDesiredPitchAngle 00601190 f end=006012C8
+CGCamera__SetDesiredDistance 00600E00 f end=00600EF4

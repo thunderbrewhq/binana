@@ -502,3 +502,4 @@ luaK_prefix 00863250 f end=008632DC type="void __stdcall func(FuncState* fs, UnO
 luaK_infix 008632E0 f end=00863346 type="void __stdcall func(FuncState* fs, BinOpr op, expdesc* v)"
 luaK_posfix 00863350 f end=00863541 type="void __stdcall func(FuncState* fs, BinOpr op, expdesc* e1, expdesc* e2)"
 luaK_patchlist 00863580 f end=008635BB type="void __stdcall func(FuncState* fs, int32_t list, int32_t target)"
+os_time 00817650 f end=0081789C

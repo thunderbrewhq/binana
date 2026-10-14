@@ -209,3 +209,4 @@ AutoCompleteOptionUseContextCVarCallback 00512870 f end=00512890
 SetUiScaleCallback 00518B60 f end=00518BC9
 SetUseUiScaleCallback 005237E0 f end=00523898
 
+CGGameUI__CheckThreatTutorial 0052B370 f end=0052B46F

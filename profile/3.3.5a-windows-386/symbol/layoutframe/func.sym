@@ -44,3 +44,6 @@ CLayoutFrame__GetClampRectInsets 00488D20 f end=00488D3D
 CLayoutFrame__GetFirstPointX 00488ED0 f end=00488F05
 CLayoutFrame__AddToResizeList 00489710 f end=004898A8
 SynthesizeCenter 00488C60 f end=00488CE7
+CLayoutFrame__GetSize 00489FF0 f end=0048A12C
+CLayoutFrame__CanBeAnchorFor 0048A160 f end=0048A1CA
+CLayoutFrame__FreePoints 0048A200 f end=0048A254

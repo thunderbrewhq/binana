@@ -40,3 +40,6 @@ CWorldScene__RenderDetailDoodads 0077F010 f end=0077F015
 CWorldScene__GetFrustumCorners 0078FAE0 f end=0078FAF8
 CWorldScene__RenderBarriers 0077F980 f end=0077F99B
 CWorldScene__UpdateObjectFadeouts 00782F20 f end=007830F2
+CWorldScene__FrustumCull 00791120 f end=00791166
+CWorldScene__AllocFrustum 007983B0 f end=00798496
+CWorldOcclusion__ClearVolumes 007CD910 f end=007CD929

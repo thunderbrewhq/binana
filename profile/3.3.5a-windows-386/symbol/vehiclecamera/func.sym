@@ -19,3 +19,4 @@ CVehicleCamera_C__OnPassengerTransitionMotionBegin 0075AF00 f end=0075AF3D
 CVehicleCamera_C__Update 0075AF40 f end=0075B13C
 CVehicleCamera_C__Create 0075B1A0 f end=0075B3DD
 CVehicleCamera_C__IsHierarchyChasingFacing 007597D0 f end=00759879
+CVehicleCamera_C__ConvertFromRawOrOffsetToWorld 00759B50 f end=00759BC8

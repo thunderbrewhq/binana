@@ -32,3 +32,5 @@ EffectDeath__destructor 007EA920 f end=007EA94B
 PassPropagateFog__constructor 007E80B0 f end=007E813C
 PassFogCombine__constructor 007E81B0 f end=007E8294
 PassNetherBlur__constructor 007E8990 f end=007E8B2E
+FFX__Effect__Execute 008C12C0 f end=008C12E8
+FFX__Effect__Valid 008C1270 f end=008C12C0

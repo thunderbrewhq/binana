@@ -2299,3 +2299,5 @@ ResurrectNameQueryCallback 00515900 f end=00515948
 InternalJoinChannel 00507A80 f end=00507D29
 SetPortraitTexture 00618230 f end=0061831B
 GetSlotFromLua 005E7C00 f end=005E7CE9
+Script_UpdateSelectionCustomizationScene 004E2FD0 f end=004E3000
+MoveViewStart 005FF000 f end=005FF07A

@@ -50,3 +50,4 @@ SE2__AddChannelToChannelGroup 00878E50 f end=00878E62
 SE2__SetListenerAttributes 00879320 f end=0087934C
 SE2__SetReverb 008794E0 f end=008794FE
 SE2__DestroyChatSystem 0087C580 f end=0087C66C
+SE2__SetReverbPropertiesAndSpeakerMix 0087B5F0 f end=0087BB63

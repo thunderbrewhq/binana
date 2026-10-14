@@ -140,3 +140,7 @@ CCharacterComponent__UpdateItemFO 004F0420 f end=004F0489
 CCharacterComponent__UpdateItemLL 004F0400 f end=004F041A
 CCharacterComponent__UpdateItem 004EFFA0 f end=004F019E
 ComponentData__constructor 004DFDA0 f end=004DFE84
+CCharacterComponent__GetSectionsRecord 004E76D0 f end=004E76FD
+CCharacterComponent__ItemsLoaded 004ED6D0 f end=004ED8B9
+CCharacterComponent__ComposeHelmModelFilePath 004E7800 f end=004E7937
+GetConditionalGeoset 004EA050 f end=004EA0AD

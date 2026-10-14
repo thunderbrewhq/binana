@@ -35,3 +35,7 @@ CEffect__AddSpecialByPosition 006F93A0 f end=006F94B2
 CEffect__LinkTo 006F76C0 f end=006F7718
 CEffect__AddEffect 006F94C0 f end=006F9604
 CEffect__AddFishingLine 006F97D0 f end=006F9833
+CEffect__AddEffectByPosition 006F7C40 f end=006F7D60
+CEffect__MoveToOrphanList 006F7A00 f end=006F7A0B
+CEffect__AddLootEffect 006FA5B0 f end=006FA68B
+CEffect__AddOrphanedEffect 006F7D60 f end=006F7E3B

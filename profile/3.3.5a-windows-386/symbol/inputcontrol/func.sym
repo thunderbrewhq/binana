@@ -36,3 +36,5 @@ InputControlDestroy 005FD3D0 f end=005FD424
 InputControlDestroy 005FD430 f end=005FD435
 CGInputControl__constructor 005FD1D0 f end=005FD218
 CGInputControl__WowMouseEnabled 005F9750 f end=005F9768
+CGInputControl__CanTurn 005FA0D0 f end=005FA10D
+CGInputControl__CanMove 005FAC90 f end=005FACDF

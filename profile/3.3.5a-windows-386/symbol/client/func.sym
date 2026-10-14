@@ -53,6 +53,9 @@ GameClientCommands__Install 00407870 f end=004078FC type="void __thiscall func(G
 LoadingScreenMiniDisable 00407EF0 f end=00407F37
 LoadingScreenAsyncCallback 0040AEF0 f end=0040AF39
 LoadingScreenWorldCallback 0040AF40 f end=0040AF89
+LoadingScreenEnableEvents 00407B00 f end=00407BC2
+LoadingScreenDisableEvents 00407BD0 f end=00407C48
+LoadSimpleBackgroundTexture 00409ED0 f end=0040A156
 qsort 0040BE50 f end=0040C0F7
 memcpy 0040CB10 f end=0040CE75
 quicksort 0047B800 f ; void __cdecl quicksort(unsigned int, unsigned int, int, int (__cdecl *)(unsigned int, unsigned int, int), int)
@@ -214,3 +217,8 @@ _GetNameInfo 0076DE70 f end=0076E0A9
 ScreenshotFormatCallback 00401B20 f end=00401B33
 ScrnSetScreenshotFormat 004A8480 f end=004A8495
 GetComponentVersionData 004294C0 f end=00429531
+PaintDynamicLoadingBar 00408E10 f end=00409003
+PaintSimpleBackground 004085A0 f end=0040868D
+LoadDynamicBackground 0040A160 f end=0040A265
+SizeEvent 00407AB0 f end=00407AF9
+FrameTime__Update 0077ECB0 f end=0077ED31

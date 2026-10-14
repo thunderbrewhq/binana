@@ -1,3 +1,5 @@
 CGGameObject_C_Type_Mailbox__constructor 00712750 f end=0071276C
 CGGameObject_C_Type_Mailbox__StartInteraction 0070C9F0 f end=0070CA26
 CGGameObject_C_Type_Mailbox__Use 0070C9D0 f end=0070C9E8
+CGGameObject_C_Type_Mailbox__CanChangeCursor 0070B680 f end=0070B698
+CGGameObject_C_Type_Mailbox__destructor 00713D10 f end=00713D61

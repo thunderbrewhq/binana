@@ -7,3 +7,5 @@ CScriptObject__destructor 0048B760 f end=0048B7AD
 CScriptObject__IsA 00482AF0 f end=00482B05
 CScriptObject__IsA 00482B10 f end=00482B32
 CScriptObject__GetObjectTypeName 0048B6B0 f end=0048B6B6
+CScriptObject__GetName 00431E80 f end=00431E84
+CScriptObject__destructor 0048B730 f end=0048B75F

@@ -81,3 +81,5 @@ CGObject_C__AuraDecayHandler 00743230 f end=00743244
 ScaleUpdateHandler 00744E10 f end=00744E4A
 CGObject_C__constructor 004D5E00 f end=004D5E92
 CGObject_C__PlaySpellVisualKit_DelayLightningEffects 00743570 f end=00743575
+CGObject_C__SetData 00743BA0 f end=00743BB3
+CGObject_C__GetTransportGUID 004D5F10 f end=004D5F15

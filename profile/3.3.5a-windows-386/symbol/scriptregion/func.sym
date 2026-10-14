@@ -38,3 +38,6 @@ CScriptRegion__IsA 00482B80 f end=00482BC3
 CScriptRegion__StopAnimating 004888F0 f end=0048893A
 CScriptRegion__destructor 00488B50 f end=00488BA4
 CScriptRegion__destructor 00488BB0 f end=00488BDB
+CFramePoint__GetRelativeRect 0049C830 f end=0049C8F3
+CFramePoint__X 0049C900 f end=0049C980
+CFramePoint__Y 0049C9A0 f end=0049CA23
