@@ -32,7 +32,7 @@ enum VARENUM {
     VT_INT              = 22,
     VT_UINT             = 23,
     VT_VOID             = 24,
-    VT_HRESULT          = 25,
+    VT__HRESULT         = 25,
     VT_PTR              = 26,
     VT_SAFEARRAY        = 27,
     VT_CARRAY           = 28,

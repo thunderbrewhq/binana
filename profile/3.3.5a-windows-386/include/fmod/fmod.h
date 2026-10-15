@@ -813,34 +813,34 @@ enum FMOD__CHANNELREAL_PLAYDIR {
 
 // directsound glue code callbacks
 
-// typedef HRESULT(WINAPI* PFN_DSCREATE)(LPGUID lpguid, LPDIRECTSOUND* ppDS, IUnknown FAR* pUnkOuter);
-DECLARE_CALLBACK(HRESULT, PFN_DSCREATE, LPGUID lpguid, LPDIRECTSOUND* ppDS, IUnknown* pUnkOuter);
+// typedef _HRESULT(WINAPI* PFN_DSCREATE)(LPGUID lpguid, LPDIRECTSOUND* ppDS, IUnknown FAR* pUnkOuter);
+DECLARE_CALLBACK(_HRESULT, PFN_DSCREATE, _LPGUID lpguid, LPDIRECTSOUND* ppDS, IUnknown* pUnkOuter);
 // typedef BOOL(WINAPI* PFN_DSENUMERATE)(LPDSENUMCALLBACKW lpDSEnumCallback, LPVOID lpContext);
 DECLARE_CALLBACK(int32_t, PFN_DSENUMERATE, LPDSENUMCALLBACKA lpDSEnumCallback, void* lpContext);
-// typedef HRESULT(
+// typedef _HRESULT(
 //     WINAPI* PFN_DSCREATE8)(LPCGUID lpcGuidDevice, LPDIRECTSOUND8* ppDS8, LPUNKNOWN pUnkOuter);
 DECLARE_CALLBACK(
-    HRESULT,
+    _HRESULT,
     PFN_DSCREATE8,
-    LPCGUID         lpcGuidDevice,
+    _LPCGUID        lpcGuidDevice,
     LPDIRECTSOUND8* ppDS8,
     LPUNKNOWN       pUnkOuter);
-// typedef HRESULT(
+// typedef _HRESULT(
 //     WINAPI* PFN_DSCCREATE)(LPGUID lpGUID, LPDIRECTSOUNDCAPTURE* lplpDSC, LPUNKNOWN pUnkOuter);
 DECLARE_CALLBACK(
-    HRESULT,
+    _HRESULT,
     PFN_DSCCREATE,
-    LPGUID                lpGUID,
+    _LPGUID               lpGUID,
     LPDIRECTSOUNDCAPTURE* lplpDSC,
     LPUNKNOWN             pUnkOuter);
 // typedef BOOL(WINAPI* PFN_DSCENUMERATE)(LPDSENUMCALLBACKW lpDSEnumCallback, LPVOID lpContext);
 DECLARE_CALLBACK(int32_t, PFN_DSCENUMERATE, LPDSENUMCALLBACKA lpDSEnumCallback, void* lpContext);
-// typedef HRESULT(
+// typedef _HRESULT(
 //     WINAPI* PFN_DSCCREATE8)(LPCGUID lpcGUID, LPDIRECTSOUNDCAPTURE8* lplpDSC, LPUNKNOWN pUnkOuter);
 DECLARE_CALLBACK(
-    HRESULT,
+    _HRESULT,
     PFN_DSCCREATE8,
-    LPCGUID                lpcGUID,
+    _LPCGUID               lpcGUID,
     LPDIRECTSOUNDCAPTURE8* lplpDSC,
     LPUNKNOWN              pUnkOuter);
 
@@ -1193,14 +1193,14 @@ DECLARE_CALLBACK(void, FMOD_THREAD_USERDATACALLBACK, void* userdata);
 
 DECLARE_CALLBACK(float, FMOD_3D_ROLLOFFCALLBACK, FMOD_CHANNEL* channel, float distance);
 
-DECLARE_CALLBACK(ALenum, EAXSet, const GUID*, ALuint, ALuint, ALvoid*, ALuint);
-DECLARE_CALLBACK(ALenum, EAXGet, const GUID*, ALuint, ALuint, ALvoid*, ALuint);
+DECLARE_CALLBACK(ALenum, EAXSet, const __GUID*, ALuint, ALuint, ALvoid*, ALuint);
+DECLARE_CALLBACK(ALenum, EAXGet, const __GUID*, ALuint, ALuint, ALvoid*, ALuint);
 
 DECLARE_CALLBACK(uint32_t, FUNC_SENDASPI32COMMAND, SRB* srb);
 DECLARE_CALLBACK(uint32_t, FUNC_GETASPI32SUPPORTINFO);
 
 DECLARE_CALLBACK(
-    HRESULT,
+    _HRESULT,
     PFN_WMCREATESYNCREADER,
     IUnknown*       pUnkCert,
     uint32_t        dwRights,
@@ -1772,7 +1772,7 @@ struct FMOD_CDDA_NTSCSIDRIVE {
     uint8_t               lun;
     uint8_t               letter;
     bool                  used;
-    HANDLE                device;
+    _HANDLE               device;
     FMOD_CDDA_InquiryData inq_data;
 };
 
@@ -4137,60 +4137,60 @@ struct FMOD__CodecMIDI {
 #define INTERFACE FMOD__CROStream
 struct FMOD__CROStream__v_table {
     // IUnknown methods
-    COM_P_METHOD(HRESULT, _00_QueryInterface, REFIID riid, void** ppvObject);
+    COM_P_METHOD(_HRESULT, _00_QueryInterface, _REFIID riid, void** ppvObject);
     COM_E_METHOD(uint32_t, _01_AddRef);
     COM_E_METHOD(uint32_t, _02_Release);
     // ISequentialStream methods
-    COM_P_METHOD(HRESULT, _03_Read, void* pv, uint32_t cb, uint32_t* pcbRead);
-    // COM_P_METHOD(HRESULT, _04_RemoteRead, uint8_t* pv, uint32_t cb, uint32_t* pcbRead);
-    COM_P_METHOD(HRESULT, _05_Write, const void* pv, uint32_t cb, uint32_t* pcbWritten);
-    // COM_P_METHOD(HRESULT, _06_RemoteWrite, const uint8_t* pv, uint32_t cb, uint32_t* pcbWritten);
+    COM_P_METHOD(_HRESULT, _03_Read, void* pv, uint32_t cb, uint32_t* pcbRead);
+    // COM_P_METHOD(_HRESULT, _04_RemoteRead, uint8_t* pv, uint32_t cb, uint32_t* pcbRead);
+    COM_P_METHOD(_HRESULT, _05_Write, const void* pv, uint32_t cb, uint32_t* pcbWritten);
+    // COM_P_METHOD(_HRESULT, _06_RemoteWrite, const uint8_t* pv, uint32_t cb, uint32_t* pcbWritten);
     // IStream methods
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
         _07_Seek,
-        LARGE_INTEGER   dlibMove,
-        uint32_t        dwOrigin,
-        ULARGE_INTEGER* plibNewPosition);
+        __LARGE_INTEGER   dlibMove,
+        uint32_t          dwOrigin,
+        __ULARGE_INTEGER* plibNewPosition);
     // COM_P_METHOD(
-    //     HRESULT,
+    //     _HRESULT,
     //     _08_RemoteSeek,
-    //     LARGE_INTEGER   dlibMove,
+    //    __LARGE_INTEGER   dlibMove,
     //     uint32_t        dwOrigin,
-    //     ULARGE_INTEGER* plibNewPosition);
-    COM_P_METHOD(HRESULT, _09_SetSize, ULARGE_INTEGER libNewSize);
+    //    __ULARGE_INTEGER* plibNewPosition);
+    COM_P_METHOD(_HRESULT, _09_SetSize, __ULARGE_INTEGER libNewSize);
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
         _10_CopyTo,
-        IStream*        pstm,
-        ULARGE_INTEGER  cb,
-        ULARGE_INTEGER* pcbRead,
-        ULARGE_INTEGER* pcbWritten);
+        IStream*          pstm,
+        __ULARGE_INTEGER  cb,
+        __ULARGE_INTEGER* pcbRead,
+        __ULARGE_INTEGER* pcbWritten);
     // COM_P_METHOD(
-    //     HRESULT,
+    //     _HRESULT,
     //     _11_RemoteCopyTo,
     //     IStream*        pstm,
-    //     ULARGE_INTEGER  cb,
-    //     ULARGE_INTEGER* pcbRead,
-    //     ULARGE_INTEGER* pcbWritten);
-    COM_P_METHOD(HRESULT, _12_Commit, uint32_t grfCommitFlags);
-    COM_E_METHOD(HRESULT, _13_Revert);
+    //    __ULARGE_INTEGER  cb,
+    //    __ULARGE_INTEGER* pcbRead,
+    //    __ULARGE_INTEGER* pcbWritten);
+    COM_P_METHOD(_HRESULT, _12_Commit, uint32_t grfCommitFlags);
+    COM_E_METHOD(_HRESULT, _13_Revert);
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
         _14_LockRegion,
-        ULARGE_INTEGER libOffset,
-        ULARGE_INTEGER cb,
-        uint32_t       dwLockType);
+        __ULARGE_INTEGER libOffset,
+        __ULARGE_INTEGER cb,
+        uint32_t         dwLockType);
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
         _15_UnlockRegion,
-        ULARGE_INTEGER libOffset,
-        ULARGE_INTEGER cb,
-        uint32_t       dwLockType);
-    COM_P_METHOD(HRESULT, _16_Stat, STATSTG* pstatstg, uint32_t grfStatFlag);
-    COM_P_METHOD(HRESULT, _17_Clone, IStream** ppstm);
+        __ULARGE_INTEGER libOffset,
+        __ULARGE_INTEGER cb,
+        uint32_t         dwLockType);
+    COM_P_METHOD(_HRESULT, _16_Stat, STATSTG* pstatstg, uint32_t grfStatFlag);
+    COM_P_METHOD(_HRESULT, _17_Clone, IStream** ppstm);
     // CROStream methods
-    // COM_P_METHOD(HRESULT, _18_Open, const char* ptszURL);
+    // COM_P_METHOD(_HRESULT, _18_Open, const char* ptszURL);
 };
 #undef INTERFACE
 
@@ -4766,8 +4766,8 @@ struct FMOD__OutputDSound {
     bool                       mNeedToCommit;                // 0x3A3
     FMOD_INITFLAGS             mInitFlags;                   // 0x3A4
     int32_t                    mDirectXVersion;              // 0x3A8
-    HMODULE                    mDSoundModule;                // 0x3AC
-    HMODULE                    mDSound3DModule;              // 0x3B0
+    _HMODULE                   mDSoundModule;                // 0x3AC
+    _HMODULE                   mDSound3DModule;              // 0x3B0
     PFN_DSCREATE8              mDirectSoundCreate;           // 0x3B4
     PFN_DSENUMERATE            mDirectSoundEnumerate;        // 0x3B8
     IDirectSound8*             mDirectSound;                 // 0x3BC
@@ -4797,10 +4797,10 @@ struct FMOD__OutputDSound {
     uint32_t                   mBufferMemoryMax;             // 0x418
     int32_t                    mNumDrivers;                  // 0x41C
     char*                      mDriverName[32];              // 0x420
-    GUID                       mGUID[32];                    // 0x4A0
+    __GUID                     mGUID[32];                    // 0x4A0
     int32_t                    mRecordNumDrivers;            // 0x6A0
     char*                      mRecordDriverName[32];        // 0x6A4
-    GUID                       mRecordGUID[32];              // 0x724
+    __GUID                     mRecordGUID[32];              // 0x724
 };
 
 // size = 0x4C0
@@ -4844,13 +4844,13 @@ struct FMOD__SoundBlock {
 struct FMOD__OutputWinMM {
     FMOD__OutputPolled _;                    // 0x0000
     bool               mCoInitialized;       // 0x03A0
-    HWAVEOUT           mHandle;              // 0x03A4
+    __HWAVEOUT         mHandle;              // 0x03A4
     bool               mRunning;             // 0x03A8
     char*              mBuffer;              // 0x03AC
     FMOD__SoundBlock   mBlock[1];            // 0x03B0
     int32_t            mNumBlocks;           // 0x03D4
     uint32_t           mBlockLengthBytes;    // 0x03D8
-    HWAVEIN            mRecordHandle;        // 0x03DC
+    __HWAVEIN          mRecordHandle;        // 0x03DC
     FMOD__Thread       mRecordThread;        // 0x03E0
     bool               mRecording;           // 0x0504
     int32_t            mRecordCurrentBlock;  // 0x0508

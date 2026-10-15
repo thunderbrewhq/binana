@@ -10,12 +10,12 @@ DECLARE_STRUCT(IAudioRenderClient__v_table);
 #define INTERFACE IAudioRenderClient
 struct IAudioRenderClient__v_table {
     // IUnknown methods
-    COM_P_METHOD(HRESULT, _00_QueryInterface, REFIID riid, void** ppvObject);
+    COM_P_METHOD(_HRESULT, _00_QueryInterface, _REFIID riid, void** ppvObject);
     COM_E_METHOD(uint32_t, _01_AddRef);
     COM_E_METHOD(uint32_t, _02_Release);
     // IAudioRenderClient methods
-    COM_P_METHOD(HRESULT, _03_GetBuffer, uint32_t NumFramesRequested, uint8_t** ppData);
-    COM_P_METHOD(HRESULT, _04_ReleaseBuffer, uint32_t NumFramesWritten, uint32_t dwFlags);
+    COM_P_METHOD(_HRESULT, _03_GetBuffer, uint32_t NumFramesRequested, uint8_t** ppData);
+    COM_P_METHOD(_HRESULT, _04_ReleaseBuffer, uint32_t NumFramesWritten, uint32_t dwFlags);
 };
 #undef INTERFACE
 

@@ -10,16 +10,16 @@ DECLARE_STRUCT(IWMMutualExclusion__v_table);
 #define INTERFACE IWMMutualExclusion
 struct IWMMutualExclusion__v_table {
     // IUnknown methods
-    COM_P_METHOD(HRESULT, _00_QueryInterface, REFIID riid, void** ppvObject);
+    COM_P_METHOD(_HRESULT, _00_QueryInterface, _REFIID riid, void** ppvObject);
     COM_E_METHOD(uint32_t, _01_AddRef);
     COM_E_METHOD(uint32_t, _02_Release);
     // IWMStreamList methods
-    COM_P_METHOD(HRESULT, _03_GetStreams, uint16_t* pwStreamNumArray, uint16_t* pcStreams);
-    COM_P_METHOD(HRESULT, _04_AddStream, uint16_t wStreamNum);
-    COM_P_METHOD(HRESULT, _05_RemoveStream, uint16_t wStreamNum);
+    COM_P_METHOD(_HRESULT, _03_GetStreams, uint16_t* pwStreamNumArray, uint16_t* pcStreams);
+    COM_P_METHOD(_HRESULT, _04_AddStream, uint16_t wStreamNum);
+    COM_P_METHOD(_HRESULT, _05_RemoveStream, uint16_t wStreamNum);
     // IWMMutualExclusion methods
-    COM_P_METHOD(HRESULT, _06_GetType, GUID* pguidType);
-    COM_P_METHOD(HRESULT, _07_SetType, REFGUID guidType);
+    COM_P_METHOD(_HRESULT, _06_GetType, __GUID* pguidType);
+    COM_P_METHOD(_HRESULT, _07_SetType, _REFGUID guidType);
 };
 #undef INTERFACE
 

@@ -8,19 +8,19 @@ DECLARE_STRUCT(D3DADAPTER_IDENTIFIER9);
 #include "external/win/largeinteger.h"
 
 struct D3DADAPTER_IDENTIFIER9 {
-  char Driver[512];
-  char Description[512];
-  char DeviceName[32];
-  LARGE_INTEGER DriverVersion;
+    char            Driver[512];
+    char            Description[512];
+    char            DeviceName[32];
+    __LARGE_INTEGER DriverVersion;
 
-  uint32_t VendorId;
-  uint32_t DeviceId;
-  uint32_t SubSysId;
-  uint32_t Revision;
+    uint32_t VendorId;
+    uint32_t DeviceId;
+    uint32_t SubSysId;
+    uint32_t Revision;
 
-  GUID DeviceIdentifier;
+    GUID DeviceIdentifier;
 
-  uint32_t WHQLLevel;
+    uint32_t WHQLLevel;
 };
 
 #endif

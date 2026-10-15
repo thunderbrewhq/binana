@@ -7,12 +7,12 @@ DECLARE_STRUCT(WM_MEDIA_TYPE);
 #include "external/win/iunknown.h"
 
 struct WM_MEDIA_TYPE {
-    GUID      majortype;
-    GUID      subtype;
+    __GUID    majortype;
+    __GUID    subtype;
     int32_t   bFixedSizeSamples;
     int32_t   bTemporalCompression;
     uint32_t  lSampleSize;
-    GUID      formattype;
+    __GUID    formattype;
     IUnknown* pUnk;
     uint32_t  cbFormat;
     uint8_t*  pbFormat;

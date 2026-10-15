@@ -15,26 +15,29 @@ DECLARE_STRUCT(IMMDeviceEnumerator__v_table);
 #define INTERFACE IMMDeviceEnumerator
 struct IMMDeviceEnumerator__v_table {
     // IUnknown methods
-    COM_P_METHOD(HRESULT, _00_QueryInterface, REFIID riid, void** ppvObject);
+    COM_P_METHOD(_HRESULT, _00_QueryInterface, REFIID riid, void** ppvObject);
     COM_E_METHOD(uint32_t, _01_AddRef);
     COM_E_METHOD(uint32_t, _02_Release);
     // IMMDeviceEnumerator methods
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
         _03_EnumAudioEndpoints,
         EDataFlow             dataFlow,
         uint32_t              dwStateMask,
         IMMDeviceCollection** ppDevices);
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
         _04_GetDefaultAudioEndpoint,
         EDataFlow   dataFlow,
         ERole       role,
         IMMDevice** ppEndpoint);
-    COM_P_METHOD(HRESULT, _05_GetDevice, const uint16_t* pwstrId, IMMDevice** ppDevice);
-    COM_P_METHOD(HRESULT, _06_RegisterEndpointNotificationCallback, IMMNotificationClient* pClient);
+    COM_P_METHOD(_HRESULT, _05_GetDevice, const uint16_t* pwstrId, IMMDevice** ppDevice);
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
+        _06_RegisterEndpointNotificationCallback,
+        IMMNotificationClient* pClient);
+    COM_P_METHOD(
+        _HRESULT,
         _07_UnregisterEndpointNotificationCallback,
         IMMNotificationClient* pClient);
 };

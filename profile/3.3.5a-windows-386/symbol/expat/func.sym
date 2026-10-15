@@ -32,7 +32,7 @@ dtdReset 009AE8C0 f end=009AE9CC type="void __usercall func(DTD* p@<edi>, XML_Pa
 dtdDestroy 009AE9D0 f end=009AEAE9 type="void __usercall func(DTD* p@<eax>, XML_Parser parser)"
 poolAppend 009AEAF0 f end=009AEB4F type="XML_Char* __usercall func@<eax>(STRING_POOL* pool@<eax>, ENCODING* enc@<ebx>, char* ptr, char* end@<edi>)"
 poolCopyString 009AEB50 f end=009AEB8C type="XML_Char* __usercall func@<eax>(STRING_POOL* pool@<ecx>, XML_Char* s@<eax>)"
-poolAppendString 009AEB90 f end=009AEBCF type="XML_Char* __usercall func@<eax>(STRING_POOL* pool@<cx>, XML_Char* s@<eax>)"
+poolAppendString 009AEB90 f end=009AEBCF type="XML_Char* __usercall func@<eax>(STRING_POOL* pool@<ecx>, XML_Char* s@<eax>)"
 poolStoreString 009AEBD0 f end=009AEC06 type="XML_Char* __usercall func@<eax>(STRING_POOL* pool@<ecx>, ENCODING* enc@<ebx>, char* ptr@<eax>, char* end@<edi>)"
 getElementType 009AEC10 f end=009AECAC type="ELEMENT_TYPE* __usercall func@<eax>(XML_Parser parser, ENCODING* enc@<edx>, void* ptr@<eax>, char* end@<ecx>)"
 parserInit 009AECB0 f end=009AEE1F type="void __usercall func(XML_Parser parser@<esi>, XML_Char* encodingName@<edi>)"

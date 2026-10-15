@@ -20,36 +20,36 @@ typedef IDirectSoundCapture8* LPDIRECTSOUNDCAPTURE8;
 #define INTERFACE IDirectSoundCapture
 struct IDirectSoundCapture__v_table {
     /*** IUnknown methods ***/
-    COM_P_METHOD(HRESULT, _00_QueryInterface, REFIID riid, void** ppvObject);
+    COM_P_METHOD(_HRESULT, _00_QueryInterface, _REFIID riid, void** ppvObject);
     COM_E_METHOD(uint32_t, _01_AddRef);
     COM_E_METHOD(uint32_t, _02_Release);
     /*** IDirectSoundCapture methods ***/
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
         _03_CreateCaptureBuffer,
         LPCDSCBUFFERDESC            lpcDSCBufferDesc,
         LPDIRECTSOUNDCAPTUREBUFFER* lplpDSCaptureBuffer,
         LPUNKNOWN                   pUnk);
-    COM_P_METHOD(HRESULT, _04_GetCaps, LPDSCCAPS lpDSCCaps);
-    COM_P_METHOD(HRESULT, _05_Initialize, LPCGUID lpcGUID);
+    COM_P_METHOD(_HRESULT, _04_GetCaps, LPDSCCAPS lpDSCCaps);
+    COM_P_METHOD(_HRESULT, _05_Initialize, _LPCGUID lpcGUID);
 };
 #undef INTERFACE
 
 #define INTERFACE IDirectSoundCapture8
 struct IDirectSoundCapture8__v_table {
     /*** IUnknown methods ***/
-    COM_P_METHOD(HRESULT, _00_QueryInterface, REFIID riid, void** ppvObject);
+    COM_P_METHOD(_HRESULT, _00_QueryInterface, _REFIID riid, void** ppvObject);
     COM_E_METHOD(uint32_t, _01_AddRef);
     COM_E_METHOD(uint32_t, _02_Release);
     /*** IDirectSoundCapture methods ***/
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
         _03_CreateCaptureBuffer,
         LPCDSCBUFFERDESC            lpcDSCBufferDesc,
         LPDIRECTSOUNDCAPTUREBUFFER* lplpDSCaptureBuffer,
         LPUNKNOWN                   pUnk);
-    COM_P_METHOD(HRESULT, _04_GetCaps, LPDSCCAPS lpDSCCaps);
-    COM_P_METHOD(HRESULT, _05_Initialize, LPCGUID lpcGUID);
+    COM_P_METHOD(_HRESULT, _04_GetCaps, LPDSCCAPS lpDSCCaps);
+    COM_P_METHOD(_HRESULT, _05_Initialize, _LPCGUID lpcGUID);
 };
 #undef INTERFACE
 

@@ -21,39 +21,39 @@ enum AUDCLNT_SHAREMODE {
 #define INTERFACE IAudioClient
 struct IAudioClient__v_table {
     // IUnknown methods
-    COM_P_METHOD(HRESULT, _00_QueryInterface, REFIID riid, void** ppvObject);
+    COM_P_METHOD(_HRESULT, _00_QueryInterface, _REFIID riid, void** ppvObject);
     COM_E_METHOD(uint32_t, _01_AddRef);
     COM_E_METHOD(uint32_t, _02_Release);
     // IAudioClient methods
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
         _03_Initialize,
         AUDCLNT_SHAREMODE   ShareMode,
         uint32_t            StreamFlags,
         REFERENCE_TIME      hnsBufferDuration,
         REFERENCE_TIME      hnsPeriodicity,
         const WAVEFORMATEX* pFormat,
-        LPCGUID             AudioSessionGuid);
-    COM_P_METHOD(HRESULT, _04_GetBufferSize, uint32_t* pNumBufferFrames);
-    COM_P_METHOD(HRESULT, _05_GetStreamLatency, REFERENCE_TIME* phnsLatency);
-    COM_P_METHOD(HRESULT, _06_GetCurrentPadding, uint32_t* pNumPaddingFrames);
+        _LPCGUID            AudioSessionGuid);
+    COM_P_METHOD(_HRESULT, _04_GetBufferSize, uint32_t* pNumBufferFrames);
+    COM_P_METHOD(_HRESULT, _05_GetStreamLatency, REFERENCE_TIME* phnsLatency);
+    COM_P_METHOD(_HRESULT, _06_GetCurrentPadding, uint32_t* pNumPaddingFrames);
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
         _07_IsFormatSupported,
         AUDCLNT_SHAREMODE   ShareMode,
         const WAVEFORMATEX* pFormat,
         WAVEFORMATEX**      ppClosestMatch);
-    COM_P_METHOD(HRESULT, _08_GetMixFormat, WAVEFORMATEX** ppDeviceFormat);
+    COM_P_METHOD(_HRESULT, _08_GetMixFormat, WAVEFORMATEX** ppDeviceFormat);
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
         _09_GetDevicePeriod,
         REFERENCE_TIME* phnsDefaultDevicePeriod,
         REFERENCE_TIME* phnsMinimumDevicePeriod);
-    COM_E_METHOD(HRESULT, _10_Start);
-    COM_E_METHOD(HRESULT, _11_Stop);
-    COM_E_METHOD(HRESULT, _12_Reset);
-    COM_P_METHOD(HRESULT, _13_SetEventHandle, HANDLE eventHandle);
-    COM_P_METHOD(HRESULT, _14_GetService, REFIID riid, void** ppv);
+    COM_E_METHOD(_HRESULT, _10_Start);
+    COM_E_METHOD(_HRESULT, _11_Stop);
+    COM_E_METHOD(_HRESULT, _12_Reset);
+    COM_P_METHOD(_HRESULT, _13_SetEventHandle, _HANDLE eventHandle);
+    COM_P_METHOD(_HRESULT, _14_GetService, _REFIID riid, void** ppv);
 };
 #undef INTERFACE
 

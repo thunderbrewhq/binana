@@ -84,7 +84,7 @@ struct ASIOCallbacks {
 
 struct ASIODRVSTRUCT {
     int32_t        drvID;
-    CLSID          clsid;
+    _CLSID         clsid;
     char           dllpath[512];
     char           drvname[128];
     void*          asiodrv;
@@ -113,7 +113,7 @@ struct ASIODriverInfo {
 #define INTERFACE IASIO
 struct IASIO__v_table {
     // IUnknown methods
-    COM_P_METHOD(HRESULT, _00_QueryInterface, REFIID riid, void** ppvObject);
+    COM_P_METHOD(_HRESULT, _00_QueryInterface, _REFIID riid, void** ppvObject);
     COM_E_METHOD(uint32_t, _01_AddRef);
     COM_E_METHOD(uint32_t, _02_Release);
     // IASIO methods

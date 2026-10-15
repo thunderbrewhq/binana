@@ -1,16 +1,16 @@
 #ifndef WIN_GUID_H
 #define WIN_GUID_H
 
-DECLARE_STRUCT(GUID);
+DECLARE_STRUCT(__GUID);
 
-typedef GUID CLSID;
+typedef __GUID _CLSID;
 
-typedef const GUID* LPCGUID;
-typedef GUID*       LPGUID;
-typedef const GUID* REFIID; // const IID& (const GUID&)
-typedef GUID*       REFGUID;
+typedef const __GUID* _LPCGUID;
+typedef __GUID*       _LPGUID;
+typedef const __GUID* _REFIID; // const IID& (const GUID&)
+typedef __GUID*       _REFGUID;
 
-struct GUID {
+struct __GUID {
     uint32_t Data1;
     uint16_t Data2;
     uint16_t Data3;

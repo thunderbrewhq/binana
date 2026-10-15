@@ -11,7 +11,7 @@ typedef IUnknown* LPUNKNOWN;
 
 #define INTERFACE IUnknown
 struct IUnknown__v_table {
-    COM_P_METHOD(HRESULT, _00_QueryInterface, REFIID riid, void** ppvObject);
+    COM_P_METHOD(_HRESULT, _00_QueryInterface, _REFIID riid, void** ppvObject);
     COM_E_METHOD(uint32_t, _01_AddRef);
     COM_E_METHOD(uint32_t, _02_Release);
 };

@@ -1,4 +1,4 @@
-CGxDeviceD3d__IUnloadD3dLib 0068E140 f end=0068E174 type="void __stdcall func(HINSTANCE* hInstance, LPDIRECT3D9* d3dLib)" ; void CGxDeviceD3d::IUnloadD3dLib(HINSTANCE& d3dLib, LPDIRECT3D9& d3d)
+CGxDeviceD3d__IUnloadD3dLib 0068E140 f end=0068E174 type="void __stdcall func(_HINSTANCE* hInstance, LPDIRECT3D9* d3dLib)" ; void CGxDeviceD3d::IUnloadD3dLib(HINSTANCE& d3dLib, LPDIRECT3D9& d3d)
 CGxDeviceD3d__ICreateD3dIB 0068E180 f end=0068E1E8 type="LPDIRECT3DINDEXBUFFER9 __thiscall func(CGxDeviceD3d* this, EGxPoolUsage usage, uint32_t size)" ; LPDIRECT3DINDEXBUFFER9 CGxDeviceD3d::ICreateD3dIB(EGxPoolUsage usage, uint32_t size)
 CGxDeviceD3d__IReleaseD3dPool 0068E1F0 f end=0068E247 type="void __thiscall func(CGxDeviceD3d* this, CGxPool* pool)"
 CGxDeviceD3d__ISetPresentParms 0068E250 f end=0068E448 type="void __thiscall func(CGxDeviceD3d* this, D3DPRESENT_PARAMETERS* d3dpp, CGxFormat* format)" ; void CGxDeviceD3d::ISetPresentParms(D3DPRESENT_PARAMETERS& d3dpp, const CGxFormat& format)
@@ -18,7 +18,7 @@ CGxDeviceD3d__QueryBegin 0068EA10 f end=0068EA81 type="bool __thiscall func(CGxD
 CGxDeviceD3d__QueryGetParam 0068EA90 f end=0068EB1D type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query, EGxQueryParam param, uint32_t* data)"
 WindowClassCreate 0068EB20 f end=0068EBA8 type="uint16_t __stdcall func()"
 CGxDeviceD3d__ICreateWindow 0068EBB0 f end=0068ED78 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxFormat* format)"
-CGxDeviceD3d__ILoadD3dLib 0068ED80 f end=0068EE13 type="int32_t __stdcall func(HINSTANCE* hInstance, LPDIRECT3D9* d3dLib)"
+CGxDeviceD3d__ILoadD3dLib 0068ED80 f end=0068EE13 type="int32_t __stdcall func(_HINSTANCE* hInstance, LPDIRECT3D9* d3dLib)"
 CGxDeviceD3d__ISetCaps 0068EE20 f end=0068F36D type="void __thiscall func(CGxDeviceD3d* this, CGxFormat* format)"
 CGxDeviceD3d__ICreateD3dDevice 0068F3D0 f end=0068F692 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxFormat* format)"
 CGxDeviceD3d__Sub68F6A0 0068F6A0 f end=0068F762 type="void __thiscall func(CGxDeviceD3d* this)"
@@ -56,7 +56,7 @@ CGxDeviceD3d__StereoEnabled 006A0130 f end=006A013D type="bool __thiscall func(C
 CGxDeviceD3d__QueryDestroy 006A0190 f end=006A01C0 type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery** query)"
 CGxDeviceD3d__QueryEnd 006A0240 f end=006A0272 type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query)"
 CGxDeviceD3d__QueryGetData 006A0310 f end=006A035F type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query, uint32_t* data)"
-CGxDeviceD3d__WindowProcD3d 006A0360 f end=006A0834 type="LRESULT __stdcall func(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)"
+CGxDeviceD3d__WindowProcD3d 006A0360 f end=006A0834 type="LRESULT __stdcall func(_HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)"
 CGxDeviceD3d__IReleaseD3dQueries 006A1690 f end=006A16CC type="void __thiscall func(CGxDeviceD3d* this, int32_t freeQueries)"
 CGxDeviceD3d__DeviceReadDepths 006A1950 f end=006A19C4 type="void __thiscall func(CGxDeviceD3d* this, CiRect* rect, TSGrowableArray_float* depths)"
 CGxDeviceD3d__IReleaseD3dPools 006A1C60 f end=006A1CDC type="void __thiscall func(CGxDeviceD3d* this, int32_t freePools)"

@@ -26,7 +26,7 @@ struct DSBUFFERDESC {
     uint32_t       dwBufferBytes;
     uint32_t       dwReserved;
     LPWAVEFORMATEX lpwfxFormat;
-    GUID           guid3DAlgorithm;
+    __GUID         guid3DAlgorithm;
 };
 
 #endif

@@ -13,22 +13,26 @@ DECLARE_STRUCT(IDirectSound3DListener__v_table);
 #define INTERFACE IDirectSound3DListener
 struct IDirectSound3DListener__v_table {
     /*** IUnknown methods ***/
-    COM_P_METHOD(HRESULT, _00_QueryInterface, REFIID riid, void** ppvObject);
+    COM_P_METHOD(_HRESULT, _00_QueryInterface, _REFIID riid, void** ppvObject);
     COM_E_METHOD(uint32_t, _01_AddRef);
     COM_E_METHOD(uint32_t, _02_Release);
     /*** IDirectSound3DListener methods ***/
-    COM_P_METHOD(HRESULT, _03_GetAllParameters, LPDS3DLISTENER lpListener);
-    COM_P_METHOD(HRESULT, _04_GetDistanceFactor, LPD3DVALUE lpflDistanceFactor);
-    COM_P_METHOD(HRESULT, _05_GetDopplerFactor, LPD3DVALUE lpflDopplerFactor);
-    COM_P_METHOD(HRESULT, _06_GetOrientation, LPD3DVECTOR lpvOrientFront, LPD3DVECTOR lpvOrientTop);
-    COM_P_METHOD(HRESULT, _07_GetPosition, LPD3DVECTOR lpvPosition);
-    COM_P_METHOD(HRESULT, _08_GetRolloffFactor, LPD3DVALUE lpflRolloffFactor);
-    COM_P_METHOD(HRESULT, _09_GetVelocity, LPD3DVECTOR lpvVelocity);
-    COM_P_METHOD(HRESULT, _10_SetAllParameters, LPCDS3DLISTENER lpcListener, uint32_t dwApply);
-    COM_P_METHOD(HRESULT, _11_SetDistanceFactor, D3DVALUE flDistanceFactor, uint32_t dwApply);
-    COM_P_METHOD(HRESULT, _12_SetDopplerFactor, D3DVALUE flDopplerFactor, uint32_t dwApply);
+    COM_P_METHOD(_HRESULT, _03_GetAllParameters, LPDS3DLISTENER lpListener);
+    COM_P_METHOD(_HRESULT, _04_GetDistanceFactor, LPD3DVALUE lpflDistanceFactor);
+    COM_P_METHOD(_HRESULT, _05_GetDopplerFactor, LPD3DVALUE lpflDopplerFactor);
     COM_P_METHOD(
-        HRESULT,
+        _HRESULT,
+        _06_GetOrientation,
+        LPD3DVECTOR lpvOrientFront,
+        LPD3DVECTOR lpvOrientTop);
+    COM_P_METHOD(_HRESULT, _07_GetPosition, LPD3DVECTOR lpvPosition);
+    COM_P_METHOD(_HRESULT, _08_GetRolloffFactor, LPD3DVALUE lpflRolloffFactor);
+    COM_P_METHOD(_HRESULT, _09_GetVelocity, LPD3DVECTOR lpvVelocity);
+    COM_P_METHOD(_HRESULT, _10_SetAllParameters, LPCDS3DLISTENER lpcListener, uint32_t dwApply);
+    COM_P_METHOD(_HRESULT, _11_SetDistanceFactor, D3DVALUE flDistanceFactor, uint32_t dwApply);
+    COM_P_METHOD(_HRESULT, _12_SetDopplerFactor, D3DVALUE flDopplerFactor, uint32_t dwApply);
+    COM_P_METHOD(
+        _HRESULT,
         _13_SetOrientation,
         D3DVALUE xFront,
         D3DVALUE yFront,
@@ -37,10 +41,10 @@ struct IDirectSound3DListener__v_table {
         D3DVALUE yTop,
         D3DVALUE zTop,
         uint32_t dwApply);
-    COM_P_METHOD(HRESULT, _14_SetPosition, D3DVALUE x, D3DVALUE y, D3DVALUE z, uint32_t dwApply);
-    COM_P_METHOD(HRESULT, _15_SetRolloffFactor, D3DVALUE flRolloffFactor, uint32_t dwApply);
-    COM_P_METHOD(HRESULT, _16_SetVelocity, D3DVALUE x, D3DVALUE y, D3DVALUE z, uint32_t dwApply);
-    COM_E_METHOD(HRESULT, _17_CommitDeferredSettings);
+    COM_P_METHOD(_HRESULT, _14_SetPosition, D3DVALUE x, D3DVALUE y, D3DVALUE z, uint32_t dwApply);
+    COM_P_METHOD(_HRESULT, _15_SetRolloffFactor, D3DVALUE flRolloffFactor, uint32_t dwApply);
+    COM_P_METHOD(_HRESULT, _16_SetVelocity, D3DVALUE x, D3DVALUE y, D3DVALUE z, uint32_t dwApply);
+    COM_E_METHOD(_HRESULT, _17_CommitDeferredSettings);
 };
 
 struct IDirectSound3DListener {

@@ -78,8 +78,6 @@ DECLARE_UNION(Value);
 typedef lua_TValue TValue;
 typedef TValue*    StkId;
 
-typedef Zio ZIO;
-
 // integral types
 
 typedef uint8_t  lu_byte;
@@ -288,7 +286,7 @@ struct LexState {
     Token      lookahead;  /* look ahead token */
     FuncState* fs;         /* `FuncState' is private to the parser */
     lua_State* L;
-    ZIO*       z;        /* input stream */
+    Zio*       z;        /* input stream */
     Mbuffer*   buff;     /* buffer for tokens */
     TString*   source;   /* current source name */
     char       decpoint; /* locale decimal point */

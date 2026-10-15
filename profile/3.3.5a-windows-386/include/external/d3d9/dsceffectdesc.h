@@ -11,8 +11,8 @@ typedef const DSCEFFECTDESC* LPCDSCEFFECTDESC;
 struct DSCEFFECTDESC {
     uint32_t dwSize;
     uint32_t dwFlags;
-    GUID     guidDSCFXClass;
-    GUID     guidDSCFXInstance;
+    __GUID   guidDSCFXClass;
+    __GUID   guidDSCFXInstance;
     uint32_t dwReserved1;
     uint32_t dwReserved2;
 };
