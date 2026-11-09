@@ -1,3 +1,9 @@
 WardenClient_Destroy 007DA420 f end=007DA4B0 ; WardenClient_Destroy()
 WardenClient_Initialize 007DA8C0 f end=007DA92C ; WardenClient_Initialize()
 WardenClient_Process 007DA3D0 f end=007DA412
+ActivateNextModule 007DA360 f end=007DA3CD type="bool __stdcall func()"
+DestroyCurrentModule 007DA300 f end=007DA358 type="void __stdcall func()" ; invented name
+WardenClient_HandlePacket 007DA850 f end=007DA8C0 type="int32_t __stdcall func(void* param, NETMESSAGE msgId, uint32_t time, CDataStore* msg)"
+Warden__RawModule__Destroy 008722C0 f end=0087231D type="void __thiscall func(Warden__RawModule* this)"
+Warden__RawModule__FindExportInternal 00872320 f end=00872349 type="void* __thiscall func(Warden__RawModule* this, int32_t ordinal)"
+Warden__RawModule__Create 00872350 f end=00872670 type="bool __thiscall func(Warden__RawModule* this, void* data, uint32_t size)"

@@ -1,0 +1,8 @@
+s_wardenLock 00D31A60 l type="SCritSect"
+s_stateData 00D31A50 l
+s_stateSize 00D31A54 l
+s_nextModule 00D31A44 l type="Warden__RawModule*"
+s_currentModule 00D31A48 l type="Warden__RawModule*"
+s_defaultModuleKey 00AF298C l
+s_moduleInterface 00D31A4C l type="Warden__ModuleInterface*"
+s_defaultModule 00AF16D8 l type="Warden__RawModule*"
