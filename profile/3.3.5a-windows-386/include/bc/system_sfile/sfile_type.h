@@ -1,0 +1,14 @@
+#ifndef BC_SYSTEM_S_FILE_S_FILE_TYPE_H
+#define BC_SYSTEM_S_FILE_S_FILE_TYPE_H
+
+DECLARE_ENUM(SFILE_TYPE);
+
+enum SFILE_TYPE {
+    SFILE_PLAIN      = 0,
+    SFILE_COMPRESSED = 1,
+    SFILE_PAQ        = 2,
+    SFILE_OLD_SFILE  = 3,
+    SFILE_ZIP_FILE   = 4
+};
+
+#endif

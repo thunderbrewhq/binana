@@ -1,8 +1,40 @@
+System_File__Stacked__Throttle 0042D500 f end=0042D5B5 type="void __cdecl func(int64_t bytes, int64_t elapsed)"
+Blizzard__Streaming__IsStreamingMode 00428000 f end=00428006 type="bool __stdcall func()"
+Blizzard__String__Format 0042E670 f end=0042E6A1 type="int32_t __stdcall func(char* dest, uint32_t maxchars, char* format)"
+Blizzard__Debug__SetAssertHandler 00426FE0 f end=00426FED type="void __cdecl func(Blizzard__Debug__AssertCallback handler)"
+Blizzard__Debug__BreakToDebugger 00427010 f end=0042703E type="void __stdcall func()"
+Blizzard__Time__Milliseconds 00435E20 f end=00435E69 type="int64_t __stdcall func()"
+Blizzard__Time__GetTimestamp 00435D80 f end=00435E20 type="Blizzard__Time__Timestamp __stdcall func()"
+FixUpLongLongFormatSpecifier 00773E10 f end=00773E5B type="void __usercall func(char* specifier@<eax>)"
+TimerFunc 0043DEC0 f end=0043DF81 type="void __stdcall func(void* hwnd, uint32_t message, uintptr_t id, uint32_t time)"
+Blizzard__Process__GetProcessPath 00435C20 f end=00435C7C type="bool __stdcall func(char* buf, int32_t bufMax)"
 operator_new 00401010 f end=00401027 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
+operator_new 0042E3D0 f end=0042E3F4 type="void* __stdcall func(size_t bytes, uint32_t flags, char* fileName, int32_t lineNumber)"
 operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
+operator_delete 004284B0 f end=004284D8 type="void __stdcall func(void* ptr, uint32_t flags, char* fileName, int32_t lineNumber)"
+Blizzard__Memory__Allocate 00428450 f end=0042847B type="void* __stdcall func(void** return_ptr, uint32_t bytes, uint32_t flags, char* fileName, int32_t lineNumber)"
+System_SFile2__OldFindFile 00421CC0 f end=00421F4C type="int32_t __stdcall func(char* filename, char* realname, uint32_t len, uint32_t flags, SFILE_TYPE* type)"
+Blizzard__Process__LaunchChildProcessWithArguments 00440D80 f end=0044116C type="bool __stdcall func(char* path, char* arguments, void* callback, void* param)"
+System_Time__MeasureDrift 00428F60 f end=00428FE2 type="double __cdecl func(int64_t frequency, _LARGE_INTEGER* counter, uint32_t* tickCount)"
+System_SFile2__AddDirectoryToHash 00424280 f end=00424607
+System_SFile2__BuildFileSystemHash 00424690 f end=0042477C
 System_SFile2__FindFile 00424780 f end=00424B0B
+Blizzard__Util__MD5__Process 004250D0 f end=00425846
+Blizzard__Util__Hash32I 00425DA0 f end=00425DDC
+Blizzard__Util__hashlittle2 00425DE0 f end=00425EAC
+System_MPQEncrypt__Hash 004266E0 f end=00426733
+System_SComp__PkwareBufferRead 004268F0 f end=00426903
+System_SComp__PkwareBufferWrite 00426910 f end=00426937
+System_SComp__PkwareDecompress 00426940 f end=00426998
 Blizzard__Mopaq__SFileGetLastError 00426A30 f end=00426A36
-Blizzard__Debug__ErrorStackAsText 004270D0 f end=004270E6
+System_SFile__BitPacked__ReadBits 00426AC0 f end=00426B9B
+System_SFile__BitPacked__WriteBits 00426BA0 f end=00426D25
+Blizzard__URL__DownloadCallback__GetTimeout 00426DA0 f end=00426DA6
+Blizzard__URL__DownloadCallback__GetByteRange 00426DB0 f end=00426DC8
+Blizzard__Mopaq__SFileSetFilePointer 00426EB0 f end=00426F69
+Blizzard__Mopaq__SFileGetFileSize 00426F70 f end=00426F9E
+Blizzard__Debug__ErrorStackRecord__FindCategory 004270A0 f end=004270C1 type="bool __thiscall func(Blizzard__Debug__ErrorStackRecord* this, int32_t category)"
+Blizzard__Debug__ErrorStackAsText 004270D0 f end=004270E6 type="char* __stdcall func(Blizzard__Debug__ErrorStack err)"
 Blizzard__File__Close 004270F0 f end=0042712F
 Blizzard__File__Delete 00427130 f end=0042716F ; Blizzard::File::Delete(char const*)
 Blizzard__File__Exists 00427170 f end=004271C3
@@ -27,14 +59,18 @@ Blizzard__File__SetPos 00427910 f end=00427961 type="bool __stdcall func(Blizzar
 Blizzard__File__SetWorkingDirectory 00427970 f end=004279AF
 Blizzard__File__Write 004279B0 f end=00427A12 type="bool __stdcall func(Blizzard__File__StreamRecord* file, void *data, uint32_t* count)"
 Blizzard__File__Write 00427A20 f end=00427A85 type="bool __stdcall func(Blizzard__File__Stream file, void* buffer, int64_t start, int32_t* amount)"
-System_File__ToNativeAttributes 00427C20 f end=00427C68
-System_File__FromNativeAttributes 00427C70 f end=00427CBC
+System_File__ToNativeAttributes 00427C20 f end=00427C68 type="int32_t __cdecl func(uint8_t attributes)"
+System_File__FromNativeAttributes 00427C70 f end=00427CBC type="uint8_t __cdecl func(int32_t attributes)"
 System_File__ReadP 00427CC0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__WriteP 00427D10 f end=00427D5C type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
-Blizzard__Streaming__IsStreamingMode 00428010 f end=0042802B
+Blizzard__Streaming__ManifestInfo__GetItemTag 00427EC0 f end=00427F43
+CheckIfStreamingAndTrial 00428010 f end=0042802B type="int32_t __stdcall func()"
 Blizzard__File__IsDirectory 004281D0 f end=004281EB
 Blizzard__File__IsFile 004281F0 f end=0042820B
 Blizzard__File__SimpleGlob 00428210 f end=004282F2 type="bool __stdcall func(char* name, char* pattern)"
+Blizzard__Lock__Atomic__Increment 00428300 f end=0042830B
+Blizzard__Lock__Atomic__Decrement 00428310 f end=0042831B type="int32_t __fastcall func(int32_t* val)" ; Blizzard::Lock::Atomic::Decrement(volatile int32_t* val)
+Blizzard__Lock__EventSet 00428340 f end=00428351
 Blizzard__Lock__MutexEnter 004283B0 f end=004283BF
 Blizzard__Lock__MutexLeave 004283C0 f end=004283CF
 Blizzard__Memory__Free 00428480 f end=004284A4
@@ -43,58 +79,114 @@ Blizzard__String__FindExtension 00428600 f end=00428613
 Blizzard__String__FirstPathSeparator 00428640 f end=00428668
 Blizzard__String__Copy 00428670 f end=004286BB type="int32_t __stdcall func(char* dst, char* src, int32_t count)"
 Blizzard__String__Append 004286C0 f end=00428721 type="int32_t __stdcall func(char* dst, char* src, int32_t count)"
+Blizzard__String__Equal 00428730 f end=0042877E
 Blizzard__String__EqualI 00428780 f end=004287A8
 Blizzard__String__Length 004287E0 f end=004287FD
+Blizzard__String__MemCopy 004288E0 f end=00428917
 Blizzard__String__MemFill 00428920 f end=0042893A
 Blizzard__Unicode__ConvertUTF16to8 00428940 f end=00428AFC type="int32_t __stdcall func(uint8_t* dst, uint32_t dstmaxchars, uint16_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
 Blizzard__Unicode__ConvertUTF8to16 00428B00 f end=00428C94 type="int32_t __stdcall func(uint16_t* dst, uint32_t dstmaxchars, uint8_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
 Blizzard__Time__FromFileTime 00428F00 f end=00428F56 type="Blizzard__Time__Timestamp __stdcall func(uint64_t fileTime)"
+Blizzard__Time__BreakTime 00429070 f end=0042916C type="void __cdecl func(Blizzard__Time__Timestamp time, Blizzard__Time__TimeRec* rec)"
+Blizzard__Time__MakeTime 00429170 f end=00429214 type="Blizzard__Time__Timestamp __cdecl func(Blizzard__Time__TimeRec* rec)"
 Blizzard__String__QuickFormat_1024__constructor 00429790 f end=004297C5 type="Blizzard__String__QuickFormat_1024* __stdcall func(Blizzard__String__QuickFormat_1024* this, char* format, ...)" ; Compiler magic converted this OOP constructor into a variadic __stdcall\nBlizzard::String::QuickFormat<1024>::QuickFormat()
 Blizzard__String__MakeUnivPath 0042A9B0 f end=0042A9FB type="void __stdcall func(char* src, char* dst, int32_t count)"
 Blizzard__String__MakeBackslashPath 0042AA00 f end=0042AA4B type="void __stdcall func(char* src, char* dst, int32_t count)"
+Blizzard__Util__MD5__Process 0042B150 f end=0042B271
+Blizzard__Util__MD5__Finish 0042B280 f end=0042B31C
 System_Mopaq__Cache__CleanCacheEntry 0042B4D0 f end=0042B5B5
 Blizzard__Mopaq__SFileUnloadFile 0042BF00 f end=0042BF1C
+System_SFile__HashEntryTable__GetEntry 0042C2F0 f end=0042C3EC
+System_SFile__SearchHashTable 0042C7E0 f end=0042C94D
 Blizzard__File__CreateDirectory 0042CEA0 f end=0042CEE9
+System_File__Shutdown 0042CF50 f end=0042CFA2
 HoistAll 0042CFB0 f end=0042D43E
 System_File__Stacked__file_init 0042D440 f end=0042D4F4 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Close 0042D620 f end=0042D64F type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 Blizzard__Streaming__Manifests__TransportItem__HandleTag 0042D6B0 f end=0042D722
-Blizzard__Memory__Allocate 0042E390 f end=0042E3AE
+Blizzard__Streaming__Manifests__TimeslotItem__ParseTimestamp 0042D730 f end=0042D797
+System_Streaming__HttpCallback__Completed 0042E100 f end=0042E117
+Blizzard__Memory__Allocate 0042E390 f end=0042E3AE type="void* __stdcall func(void** return_ptr, uint32_t size)"
+Blizzard__Memory__Free 0042E3B0 f end=0042E3C7 type="void __stdcall func(void* ptr)"
 Blizzard__String__MakeConsistentPath 0042E420 f end=0042E4AA
 Blizzard__String__ForceTrailingSeparator 0042E4B0 f end=0042E522 type="void __stdcall func(char* dst, int32_t count, char separator)"
+System_String__Duplicate 0042E530 f end=0042E599 type="char* __stdcall func(char* string, char* fileName, int32_t lineNumber)"
+Blizzard__String__FindReverse 0042E5D0 f end=0042E5F5 type="char* __cdecl func(char* string, char search, size_t stringLength)"
 Blizzard__String__FindPathSeparatorReverse 0042E630 f end=0042E663
-Blizzard__String__Format 0042E670 f end=0042E6A1
 System_Using__Intern 0042E910 f end=0042EA05 type="System_Using__UsingRec* __stdcall func(char* name)"
 System_Mopaq__Cache__GetCachedBlock 004308C0 f end=00430A43
+System_SFile__BlockEntryTable__InitializeHashCheckTable 00431700 f end=00431778
+System_SFile__HashEntryTable__constructor 00431780 f end=004317F8
+System_SFile__HashEntryTable__AddEntry 00431860 f end=00431A11
+System_SFile__ARCHIVEREC__ReadAdditionalAttributes 00431B50 f end=00431DAC
 Blizzard__Debug__AddErrorToStack 00432210 f end=004324D3 type="Blizzard__Debug__ErrorStack __stdcall func(Blizzard__Debug__ErrorStack cur, int32_t errCode, char* errStr, int32_t category)"
+Blizzard__Debug__FreeErrorStack 004324E0 f end=0043252F type="void __stdcall func(Blizzard__Debug__ErrorStack err)"
 System_File__GetRootChars 004325C0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 Blizzard__Streaming__Manifests__TimeslotItem__HandleTag 00432720 f end=004327CA
+System_File__LoadFile 00432CF0 f end=00432D8B
+Blizzard__Log__Expand 00432F00 f end=0043321D
+System_Log__Intern 00433220 f end=00433415
 Blizzard__String__JoinPath 00433510 f end=0043356B type="void __stdcall func(char* a1, int32_t a2, char* a3, char* a4)" ; Blizzard::String::JoinPath(char*, int, char const*, char const*)
+Blizzard__String__Duplicate 00433570 f end=0043358B type="char* __stdcall func(char* string)"
 System_File__FromNativeName 00433590 f end=00433650 type="void __stdcall func(uint8_t* buffer, uint32_t buffersize, char* str)"
 Blizzard__StringConversion_CodepageToUTF8__ToNative__constructor 00433650 f end=0043375A type="void __thiscall func(Blizzard__StringConversion_CodepageToUTF8__ToNative* this, char* str)" ; Blizzard::StringConversion_CodepageToUTF8::ToNative::ToNative(const char*)
 System_Thread__AllocateLocalStorage 00433760 f end=004337B7 type="bool __stdcall func(Blizzard__Thread__TLSSlot* slot, Blizzard__Thread__TLSDestructor destructorFn)"
+Blizzard__Using__StartUsing 00433830 f end=00433846
+Blizzard__Using__StopUsing 00433850 f end=0043386A
 Blizzard__Using__DependsOn 00433870 f end=004338E6 type="void __stdcall func(char* me, char* dependsOn)"
 System_File__GetFileInfoByFile 00435580 f end=004356A2 type="void __stdcall func(Blizzard__File__StreamRecord* file)"
 System_File__Exists 004356B0 f end=00435781 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__MakeAbsolutePath 00435790 f end=00435889 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Move 00435890 f end=004359B6 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Delete 004359C0 f end=00435A57 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
-System_Time__Init 00435C80 f end=00435D74
+System_File__LoadFile 00435B30 f end=00435BA4
+System_Time__TimeInit 00435C80 f end=00435D74 type="void __stdcall func()"
+System_Time__InitFrequency 004337C0 f end=00433823 type="bool __cdecl func(_LARGE_INTEGER* frequency)"
+System_Time__CalibrateFrequency 0042E870 f end=0042E90D type="bool __cdecl func(_LARGE_INTEGER* frequency)"
+Blizzard__Time__GetTimestamp 00435D80 f end=00435E20
+Blizzard__Streaming__Transport__ReadFile 00437C20 f end=00437D15
+System_Streaming__HttpCallback__SetTimeOutValue 004383D0 f end=004383DD
 System_Log__DefaultPreamble 004383E0 f end=004384AD
 System_Log__DefaultDayHeader 004384B0 f end=00438555
+System_Log__Reopen 00438560 f end=004387F7
+System_Log__FlushLogs 00438800 f end=004388CF
+System_Log__LogThread 004388D0 f end=004389B9
+Blizzard__Process__GetProcessDirectory 004389C0 f end=00438AC4 type="bool __stdcall func(char* buf, int32_t bufMax)"
+Blizzard__Debug__DefaultCallback 00439880 f end=00439A93
+System_Streaming__HttpCallback__constructor 00439ED0 f end=00439F7F
+System_Streaming__HttpCallback__destructor 00439F80 f end=00439FD3
+System_Log__IVPrintf 00439FE0 f end=0043A06A
 System_Log__Init 0043A070 f end=0043A26F
+System_Streaming__HttpCallback__ReceivedData 0043B060 f end=0043B086
+System_Mopaq__Cache__CleanCache 004408B0 f end=00440910
+System_Mopaq__cache_write 004437D0 f end=00443A88
 System_Thread__AddToRegistry 00448260 f end=00448313 type="void __stdcall func(Blizzard__Thread__Thread thread)"
 System_Thread__NewMainThread 0044B6E0 f end=0044B76E type="void __stdcall func()"
 Blizzard__Streaming__Manifests__FileItem__HandleTag 0044C790 f end=0044C9ED
 Blizzard__Streaming__Manifests__ServerItem__HandleTag 0044C9F0 f end=0044CB8B
 System_Thread__InitThreadSystem 0044CCE0 f end=0044CD27 type="void __stdcall func()"
 Blizzard__File__RemoveDirectoryAndContents__Internal__Callback 0044FA10 f end=0044FB29 type="bool __stdcall func(Blizzard__File__ProcessDirParms* dirwalkparms)" ; Blizzard::File::RemoveDirectoryAndContents(char const*, bool)::Internal::Callback(Blizzard::File::ProcessDirParms const&)
+System_MPQGlobals__Globals__constructor 0044FFF0 f end=004500A8 type="void __thiscall func(System_MPQGlobals__Globals* this)" ; System_MPQGlobals::Globals::Globals()
 Blizzard__Streaming__ManifestInfo__HandleBaseTag 004500B0 f end=0045057A
+Blizzard__Streaming__ManifestInfo__GetRandomServerLocation 00450580 f end=004508AC
+Blizzard__Thread__Create 00450AC0 f end=00450B76
+Blizzard__Lock__ConstructOnce_System_MPQGlobals__Globals__Construct 004511B0 f end=004511F3 type="void __stdcall func(Blizzard__Lock__ConstructOnce_System_MPQGlobals__Globals* param)" ; Blizzard::Lock::ConstructOnce<System_MPQGlobals::Globals>::Construct(void* param)
 Blizzard__File__RemoveDirectoryAndContents 004518C0 f end=004519A7
+System_Log__Acquire 004519B0 f end=00451A29
+Blizzard__Log__Printf 00451BB0 f end=00451C0B
+Blizzard__Log__Flush 00451C10 f end=00451C3A
 System_Thread__InternalSetLocalStorage 00451C40 f end=00451C89 type="void __stdcall func(Blizzard__Thread__TLSSlot* slot, void* value)"
+System_MPQGlobals__GetArchiveList 00451D00 f end=00451D54 type="std__multiset_SystemFile__ARCHIVEREC* __stdcall func()"
+System_MPQGlobals__GetArchiveLock 00451D60 f end=00451DB4 type="Blizzard__Lock__RMutex* __stdcall func()"
+System_MPQGlobals__GetMopaqGlobals 00451DC0 f end=00451E14 type="System_MPQGlobals__MopaqGlobals* __stdcall func()"
+System_MPQGlobals__GetMopaqGlobalsLock 00451E20 f end=00451E74 type="Blizzard__Lock__RMutex* __stdcall func()"
 Blizzard__Streaming__FileManifest__GetIsStreamingTrial 00453480 f end=00453507 type="bool __stdcall func()"
-Blizzard__Mopaq__SFileEnableDirectAccess 00453CB0 f end=00453D04
+Blizzard__Mopaq__SFileEnableDirectAccess 00453CB0 f end=00453D04 type="int32_t __stdcall func(uint32_t enable)"
+System_SFile__ARCHIVEREC__RemoveInternalArchiveRef 00453D10 f end=00453E2F
 System_SFile__OpenDirectPathAsArchive 00453E30 f end=00453FB6
+System_SFile__ConvertRelativePathName 00454070 f end=0045411E
+CheckFileExistsOnDisk 00454120 f end=004541AA
+Blizzard__File__GetLastErrorStack 00454210 f end=0045421E
 Blizzard__File__SetLastErrorStack 00454220 f end=0045424B type="void __stdcall func(Blizzard__Debug__ErrorStack err)" ; Blizzard::File::SetLastErrorStack(Blizzard::Debug::ErrorStackRecord*)
 Blizzard__File__AddToLastErrorStack 00454250 f end=004542A9 type="void __stdcall func(int32_t errCode, char* errStr, int32_t category)"
 System_File__read_overlapped 00454870 f end=00454904
@@ -120,23 +212,44 @@ System_File__SetEOF 00455B10 f end=00455B94 type="int32_t __stdcall func(Blizzar
 System_File__SetAttributes 00455BA0 f end=00455C9A type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__SetPos 00455CA0 f end=00455D13 type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 System_File__Write 00455D20 f end=00455D3E type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
+Blizzard__Streaming__Transport__ReadDirectFileFromBuffer 00455D40 f end=00455F0E
 Blizzard__Streaming__Transport__ReadHttp 00455F10 f end=00456707
 Blizzard__Streaming__ManifestInfo__ReadDirectFile 00456720 f end=004567A0
+Blizzard__Streaming__FileManifest__ReadIndirectFile 004567A0 f end=0045697E
 Blizzard__Streaming__FileManifest__ReadDirectFile 00456980 f end=004569FA
+Blizzard__Streaming__SourceManifest__ReadDirectFileFromBuffer 00456A00 f end=00456DD2
 System_File__read_locked 00457820 f end=00457904
 System_File__write_locked 00457910 f end=004579F4
 System_Mopaq__cache_read 00457A00 f end=00457CF9
 System_SComp__Compress 00458080 f end=0045856F
-Blizzard__Mopaq__SFileCloseArchive 00458980 f end=004589ED
+System_SComp__Decompress 004585F0 f end=004586DD
+Blizzard__Mopaq__SFileSetBasePath 00458730 f end=0045887D
+System_SFile__GetArchivePtr 00458880 f end=00458973 type="System_SFile__ARCHIVEREC* __stdcall func(Blizzard__Mopaq__HSARCHIVE OpaqueArchive, bool addRefcount)"
+Blizzard__Mopaq__SFileCloseArchive 00458980 f end=004589ED type="bool __stdcall func(Blizzard__Mopaq__HSARCHIVE OpaqueArchive)"
 Blizzard__Streaming__Transport__ReadIndirectFile 00459050 f end=0045923E
+Blizzard__Streaming__Transport__ReadDirectFile 00459240 f end=004592A5
 Blizzard__Streaming__SourceManifest__ReadIndirectFile 00459400 f end=004595EE
+Blizzard__Streaming__SourceManifest__ReadDirectFile 004595F0 f end=00459655
 System_File__detect_io_mode 00459910 f end=00459998
 Blizzard__Mopaq__SFileAuthenticateArchiveEx 0045A260 f end=0045A4A9
 Blizzard__Mopaq__SFileReadFile 0045A4B0 f end=0045A607
 Blizzard__Mopaq__SFileLoadFile 0045B5A0 f end=0045B69E
+System_SFile__ARCHIVEREC__FillNewHashTable 0045B6A0 f end=0045B82B
+System_SFile__ARCHIVEREC__ConvertToNewHashTableFormat 0045B830 f end=0045B8B0
+System_SFile__ARCHIVEREC__InitializeTables 0045B8B0 f end=0045BEC4
+System_SFile__s_OpenArchive 0045BFE0 f end=0045C3CE
+Blizzard__Mopaq__SFileOpenArchive 0045C3D0 f end=0045C479
 Blizzard__Mopaq__SFileOpenArchive 0045C480 f end=0045C5BA
+Blizzard__Mopaq__SFileOpenArchiveView 0045C5C0 f end=0045C880
 Blizzard__Streaming__FileManifest__ReadDirectFileFromBuffer 0045D1E0 f end=0045D85E
+System_SFile__RebuildHashTable 0045DC50 f end=0045E080
+FindFileInOneArchive 0045F7D0 f end=0045FA0D
+GetFileBlockEntry 0045FA10 f end=0045FC1D
+Blizzard__Mopaq__SFileFileExists 00460EA0 f end=00460EF7
 Blizzard__Mopaq__SFileGetIsLocalAmount 00461040 f end=004610C7
+Blizzard__Mopaq__SetFileSignature 00461180 f end=00461286
+Blizzard__Streaming__ManifestInfo__ReadDirectFileFromBuffer 00461290 f end=00461427
+Blizzard__Streaming__ManifestInfo__ReadIndirectFile 00461430 f end=00461613
 Blizzard__Streaming__InitializeStreaming 004616A0 f end=00461AF8
 OsCloseFile 00461B00 f end=00461B09 type="void __stdcall func(HOSFILE fileHandle)"
 OsFileExists 00461B10 f end=00461B27 type="int32_t __stdcall func(char* path)"
@@ -160,114 +273,29 @@ OsFileGetDownloadFolder 00461F70 f end=00461F91 type="char* __stdcall func()"
 OsCreateFile 00461FA0 f end=00461FFA type="HOSFILE __stdcall func(char* fileName, uint32_t desiredAccess, uint32_t shareMode, uint32_t createDisposition, uint32_t flagsAndAttributes, uint32_t extendedFileType)"
 OsFileList 00462000 f end=0046209C
 OsNetAddrToStr 00466670 f end=004666C3
-Blizzard__String__VFormat 00773E60 f end=00774182 type="uint32_t __stdcall func(char* dest, uint32_t maxchars, char* format, va_list* arglist)"
-OsBuildFontFilePath 0086BD80 f end=0086BDA3
-OsSecureRandom 0086D640 f end=0086D6A1
-OsNetAddrGetAddress 0086DC20 f end=0086DC4D
-OsNetAddrToStr 0086DC50 f end=0086DC8B
-Blizzard__Util__Hash32I 00425DA0 f end=00425DDC
-Blizzard__Mopaq__SFileGetFileSize 00426F70 f end=00426F9E
-Blizzard__Time__BreakTime 00429070 f end=0042916C
-Blizzard__Time__MakeTime 00429170 f end=00429214
-Blizzard__Streaming__Manifests__TimeslotItem__ParseTimestamp 0042D730 f end=0042D797
-Blizzard__Time__GetTimestamp 00435D80 f end=00435E20
-Blizzard__Streaming__ManifestInfo__GetRandomServerLocation 00450580 f end=004508AC
-Blizzard__Mopaq__SFileSetFilePointer 00426EB0 f end=00426F69
-Blizzard__Using__StartUsing 00433830 f end=00433846
-System_SComp__Decompress 004585F0 f end=004586DD
-Blizzard__Util__MD5__Process 004250D0 f end=00425846
-Blizzard__Util__MD5__Process 0042B150 f end=0042B271
-Blizzard__Using__StopUsing 00433850 f end=0043386A
-Blizzard__File__GetLastErrorStack 00454210 f end=0045421E
 OsCreateDirectory 00667EF0 f end=00667F3E
-OsGetAsyncTimeMs 008C51C0 f end=008C51C5
-OsIMEGetCompositionResult 0086CD90 f end=0086CDAA
-OsIMEGetCompositionString 0086CD70 f end=0086CD87
-OsIMESetLanguageMode 0086D030 f end=0086D096
+SCmdDestroy 007733D0 f end=00773456
+vsnoprintf 00773E60 f end=00774182 type="int32_t __stdcall func(char* out, size_t outSize, char* format, va_list arglist)"
+SCompDestroy 007787A0 f end=007787CB
 OsPathGetRootChars 00779F50 f end=00779FAD
 OsQueuePut 00868D40 f end=00868DAF
-OsTlsSetValue 0086D6E0 f end=0086D6F3
-_AssertAndCrash 008C51D0 f end=008C520D
-Blizzard__Memory__Free 0042E3B0 f end=0042E3C7
-Blizzard__Debug__FreeErrorStack 004324E0 f end=0043252F
 OsQueueGet 00868DB0 f end=00868E25
-Blizzard__Streaming__Transport__ReadFile 00437C20 f end=00437D15
-Blizzard__String__MemCopy 004288E0 f end=00428917
-System_SFile2__OldFindFile 00421CC0 f end=00421F4C
-OsCallDestroy 0086F6E0 f end=0086F760
+OsBuildFontFilePath 0086BD80 f end=0086BDA3
+OsIMEGetCompositionString 0086CD70 f end=0086CD87
+OsIMEGetCompositionResult 0086CD90 f end=0086CDAA
+OsIMESetLanguageMode 0086D030 f end=0086D096
+OsSecureRandom 0086D640 f end=0086D6A1
 OsTlsFree 0086D6C0 f end=0086D6CF
-System_Mopaq__cache_write 004437D0 f end=00443A88
-System_Mopaq__Cache__CleanCache 004408B0 f end=00440910
-System_SFile__GetArchivePtr 00458880 f end=00458973
-System_SFile__ARCHIVEREC__RemoveInternalArchiveRef 00453D10 f end=00453E2F
-Blizzard__Mopaq__SetFileSignature 00461180 f end=00461286
-Blizzard__Mopaq__SFileSetBasePath 00458730 f end=0045887D
-System_SComp__PkwareBufferRead 004268F0 f end=00426903
-System_SComp__PkwareBufferWrite 00426910 f end=00426937
-Blizzard__Debug__ErrorStackRecord__FindCategory 004270A0 f end=004270C1
-System_SComp__PkwareDecompress 00426940 f end=00426998
-Blizzard__URL__DownloadCallback__GetTimeout 00426DA0 f end=00426DA6
-Blizzard__URL__DownloadCallback__GetByteRange 00426DB0 f end=00426DC8
-Blizzard__Streaming__ManifestInfo__GetItemTag 00427EC0 f end=00427F43
-Blizzard__Streaming__ManifestInfo__ReadDirectFileFromBuffer 00461290 f end=00461427
-Blizzard__Streaming__ManifestInfo__ReadIndirectFile 00461430 f end=00461613
-System_MPQEncrypt__Hash 004266E0 f end=00426733
-System_Streaming__HttpCallback__constructor 00439ED0 f end=00439F7F
-System_Streaming__HttpCallback__destructor 00439F80 f end=00439FD3
-System_Streaming__HttpCallback__Completed 0042E100 f end=0042E117
-System_Streaming__HttpCallback__SetTimeOutValue 004383D0 f end=004383DD
-System_Streaming__HttpCallback__ReceivedData 0043B060 f end=0043B086
-System_SFile__SearchHashTable 0042C7E0 f end=0042C94D
-System_SFile__ARCHIVEREC__InitializeTables 0045B8B0 f end=0045BEC4
-System_File__Shutdown 0042CF50 f end=0042CFA2
-Blizzard__Streaming__Transport__ReadDirectFile 00459240 f end=004592A5
-Blizzard__Streaming__Transport__ReadDirectFileFromBuffer 00455D40 f end=00455F0E
-Blizzard__Streaming__SourceManifest__ReadDirectFile 004595F0 f end=00459655
-Blizzard__Streaming__SourceManifest__ReadDirectFileFromBuffer 00456A00 f end=00456DD2
-Blizzard__Streaming__FileManifest__ReadIndirectFile 004567A0 f end=0045697E
-System_SFile__HashEntryTable__constructor 00431780 f end=004317F8
-System_SFile__BlockEntryTable__InitializeHashCheckTable 00431700 f end=00431778
-System_SFile__ARCHIVEREC__ConvertToNewHashTableFormat 0045B830 f end=0045B8B0
-Blizzard__Util__MD5__Finish 0042B280 f end=0042B31C
-System_SFile__HashEntryTable__AddEntry 00431860 f end=00431A11
-System_SFile__BitPacked__ReadBits 00426AC0 f end=00426B9B
-System_SFile__BitPacked__WriteBits 00426BA0 f end=00426D25
-System_SFile__HashEntryTable__GetEntry 0042C2F0 f end=0042C3EC
-System_File__LoadFile 00435B30 f end=00435BA4
-System_File__LoadFile 00432CF0 f end=00432D8B
-Blizzard__Log__Expand 00432F00 f end=0043321D
-System_Log__Reopen 00438560 f end=004387F7
-System_Log__IVPrintf 00439FE0 f end=0043A06A
-System_Log__LogThread 004388D0 f end=004389B9
-System_Log__Acquire 004519B0 f end=00451A29
-System_Log__FlushLogs 00438800 f end=004388CF
-Blizzard__Log__Flush 00451C10 f end=00451C3A
-Blizzard__Log__Printf 00451BB0 f end=00451C0B
-Blizzard__Process__GetProcessDirectory 004389C0 f end=00438AC4
-Blizzard__Mopaq__SFileFileExists 00460EA0 f end=00460EF7
-GetFileBlockEntry 0045FA10 f end=0045FC1D
-CheckFileExistsOnDisk 00454120 f end=004541AA
-FindFileInOneArchive 0045F7D0 f end=0045FA0D
-SCompDestroy 007787A0 f end=007787CB
-SCmdDestroy 007733D0 f end=00773456
-Blizzard__Util__hashlittle2 00425DE0 f end=00425EAC
-Blizzard__Thread__Create 00450AC0 f end=00450B76
-Blizzard__String__Equal 00428730 f end=0042877E
-Blizzard__String__Duplicate 00433570 f end=0043358B
-System_SFile2__BuildFileSystemHash 00424690 f end=0042477C
-System_SFile2__AddDirectoryToHash 00424280 f end=00424607
-System_SFile__RebuildHashTable 0045DC50 f end=0045E080
-Blizzard__Lock__Atomic__Increment 00428300 f end=0042830B
-System_MPQGlobals__GetArchiveLock 00451D60 f end=00451DB4
-System_MPQGlobals__GetArchiveList 00451D00 f end=00451D54
-Blizzard__Mopaq__SFileOpenArchiveView 0045C5C0 f end=0045C880
-Blizzard__Mopaq__SFileOpenArchive 0045C3D0 f end=0045C479
-System_SFile__s_OpenArchive 0045BFE0 f end=0045C3CE
-Blizzard__Lock__EventSet 00428340 f end=00428351
-System_MPQGlobals__GetMopaqGlobals 00451DC0 f end=00451E14
-System_MPQGlobals__GetMopaqGlobalsLock 00451E20 f end=00451E74
-System_SFile__ConvertRelativePathName 00454070 f end=0045411E
-System_SFile__ARCHIVEREC__ReadAdditionalAttributes 00431B50 f end=00431DAC
-System_Log__Intern 00433220 f end=00433415
-Blizzard__Debug__DefaultCallback 00439880 f end=00439A93
-System_SFile__ARCHIVEREC__FillNewHashTable 0045B6A0 f end=0045B82B
+OsTlsSetValue 0086D6E0 f end=0086D6F3
+OsNetAddrGetAddress 0086DC20 f end=0086DC4D
+OsNetAddrToStr 0086DC50 f end=0086DC8B
+OsCallDestroy 0086F6E0 f end=0086F760
+OsGetAsyncTimeMs 008C51C0 f end=008C51C5
+_AssertAndCrash 008C51D0 f end=008C520D
+System_Time__GetTickCount64 00428FF0 f end=00429063 type="uint64_t __stdcall func()"
+System_Debug__ShutdownProc 004321B0 f end=00432208 type="void __stdcall func()"
+Blizzard__Debug__ErrorStackRecord__FindCategoryCode 00427070 f end=00427097 type="bool __thiscall func(Blizzard__Debug__ErrorStackRecord* this, int32_t category, int32_t code)"
+Blizzard__Debug__CanonicalStr 00433420 f end=00433502 type="char* __stdcall func(char* src, char* dst, uint32_t maxchars)"
+Blizzard__Streaming__ScanDirectoryForManifest 00424280 f end=00424607 type="bool __stdcall func(Blizzard__File__ProcessDirParms* parms)"
+StringToLower 00428800 f end=0042882C type="void __stdcall func(char* str)"
+System_File__write_first 0045B490 f end=0045B4DA type="bool __stdcall func(Blizzard__File__Stream file, void* buffer, OVERLAPPED* overlapped, int32_t* count)"

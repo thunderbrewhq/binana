@@ -1,0 +1,6 @@
+#ifndef BC_MOPAQ_ARCHIVE_H
+#define BC_MOPAQ_ARCHIVE_H
+
+DECLARE_HANDLE(Blizzard__Mopaq__HSARCHIVE);
+
+#endif

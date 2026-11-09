@@ -20,7 +20,6 @@ struct System_File__Stacked__FileParms {
     char*                              newpath; // 0x8
     Blizzard__File__Stream             stream;  // 0xC
     Blizzard__File__FileInfo*          info;
-    uint32_t                           extra;
     Blizzard__File__FileInfo           info_;
     Blizzard__File__FileInfoMask       has;
     Blizzard__File__FileInfoMask       want;
@@ -35,8 +34,9 @@ struct System_File__Stacked__FileParms {
     bool                               makeCanonical;
     void*                              cookie;
     Blizzard__File__ProcessDirCallback dircallback;
-    bool sorted; // set to false by Blizzard::File::ProcessDirFast (i suppose it's fast because it doesn't request sorting, though there's
-                 // no underlying code that does this)
+    bool
+        sorted; // set to false by Blizzard::File::ProcessDirFast (i suppose it's fast because it doesn't request sorting, though there's
+                // no underlying code that does this)
     bool overwrite;
     bool grantEveryone; // something that causes a security descriptor to be generated
     bool zeroFillAll;

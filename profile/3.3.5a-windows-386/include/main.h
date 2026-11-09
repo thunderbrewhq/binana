@@ -19,6 +19,7 @@
 
 #include "lua/lua.h"
 
+#include "bc/debug/assert.h"
 #include "bc/debug/errorstack.h"
 #include "bc/file/fileinfo.h"
 #include "bc/file/filesystem.h"
@@ -31,6 +32,7 @@
 #include "bc/file/streaminginfo.h"
 #include "bc/lock/do_once.h"
 #include "bc/lock/mutex.h"
+#include "bc/mopaq/archive.h"
 #include "bc/os/file.h"
 #include "bc/os/file_data.h"
 #include "bc/storage/storageunit.h"
@@ -41,6 +43,9 @@
 #include "bc/stringconversion/utf16toutf8.h"
 #include "bc/system_file/stacked/filefunc.h"
 #include "bc/system_file/stacked/fileparms.h"
+#include "bc/system_mpqglobals/globals.h"
+#include "bc/system_sfile/archiverec.h"
+#include "bc/system_sfile/sfile_type.h"
 #include "bc/system_using/using.h"
 #include "bc/thread/thread.h"
 #include "bc/thread/tls.h"
@@ -219,6 +224,9 @@
 #include "ui/simpletexture.h"
 #include "ui/simpletop.h"
 #include "ui/uiaddon.h"
+
+#include "warden/moduleinterface.h"
+#include "warden/rawmodule.h"
 
 #include "xml/xml.h"
 

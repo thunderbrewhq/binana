@@ -1,3 +1,5 @@
+s_basepath 00B32360 l type="char[260]"
+s_datapath 00B32258 l type="char[260]"
 firstByteMark 009E537C l type="uint32_t[7]"
 bytesFromUTF8 009E5398 l type="uint8_t[256]"
 s_noinfo 009E5630 l type="Blizzard__File__FileInfo"
@@ -20,3 +22,4 @@ System_Thread__s_slotList 00B33730 l type="Blizzard__Thread__TLSSlot[128]"
 System_Thread__s_slotListUsed 00B33948 l type="int32_t"
 System_Thread__s_mainThread 00B33710 l type="Blizzard__Thread__Thread"
 System_Thread__s_ThreadRegistry 00B3394C l
+System_MPQGlobals__s_globals 00B33E58 l type="System_MPQGlobals__Globals"

@@ -4,8 +4,8 @@
 DECLARE_STRUCT(Blizzard__Lock__DoOnceData);
 
 struct Blizzard__Lock__DoOnceData {
-  bool done;
-  int32_t atomic;
+    bool             complete;
+    volatile int32_t counter;
 };
 
 #endif
