@@ -6,3 +6,4 @@ s_currentModule 00D31A48 l type="Warden__RawModule*"
 s_defaultModuleKey 00AF298C l
 s_moduleInterface 00D31A4C l type="Warden__ModuleInterface*"
 s_defaultModule 00AF16D8 l type="Warden__RawModule*"
+Warden__Client__OurLibrary__v_table 00A40788 l type="Warden__Client__OurLibrary__v_table"

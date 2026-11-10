@@ -225,6 +225,7 @@
 #include "ui/simpletop.h"
 #include "ui/uiaddon.h"
 
+#include "warden/client.h"
 #include "warden/moduleinterface.h"
 #include "warden/rawmodule.h"
 

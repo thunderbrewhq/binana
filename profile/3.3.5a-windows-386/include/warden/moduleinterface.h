@@ -11,6 +11,7 @@ struct Warden__ModuleInterface__v_table {
     P_METHOD(void, _02_HandlePacket, void* data, uint32_t size, uint32_t* bytesConsumed);
     P_METHOD(void, _03_Tick, uint32_t size);
 };
+#undef INTERFACE
 
 struct Warden__ModuleInterface {
     Warden__ModuleInterface__v_table* v_table;
